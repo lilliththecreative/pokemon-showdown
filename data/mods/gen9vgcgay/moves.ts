@@ -67,4 +67,12 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		"basePower": 350,
 		recoil: [1,2],
 	},
+	"crabhammer": {
+		"inherit": true,
+		shortDesc: "High Crit Ratio, 30% chance to lower target's speed by 1",
+		secondary: {
+			chance: 30,
+			boosts: {spe: -1},
+		},
+	}
 };

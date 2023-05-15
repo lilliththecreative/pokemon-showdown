@@ -149,6 +149,14 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 		},
 	},
+	runaway: {
+		inherit: true,
+		shortDesc: "Immune to Trapping",
+		onTrapPokemonPriority: -10,
+		onTrapPokemon(pokemon) {
+			pokemon.trapped = pokemon.maybeTrapped = false;
+		},
+	},
 	// New Abilities
 	triplethreat: {
 		isNonstandard: null,
