@@ -2184,7 +2184,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "Drill moves do 1.5x damage",
 		shortDesc: "Drill moves do 1.5x damage",
 	},
-	articrush: {
+	arcticrush: {
 		name: "Arctic Rush",
 		shortDesc: "Doubles Speed and boosts SpDef in Snow and Rain",
 		desc: "Doubles Speed and boosts SpDef in Snow and Rain",

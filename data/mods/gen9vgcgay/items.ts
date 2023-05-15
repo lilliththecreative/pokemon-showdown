@@ -79,4 +79,37 @@ export const Items: {[k: string]: ModdedItemData} = {
 		"inherit": true,
 		isNonstandard: null,
 	},
+	magmarizer: {
+		"inherit": true,
+		onModifyAtkPriority: 1,
+		onModifySpA(spa, pokemon) {
+			if (pokemon.baseSpecies.baseSpecies === 'Magmortar') {
+				return this.chainModify(1.5);
+			}
+		},
+		itemUser: ["Magmortar"],
+		isNonstandard: null,
+	},
+	electrizer: {
+		"inherit": true,
+		onModifyAtkPriority: 1,
+		onModifyAtk(atk, pokemon) {
+			if (pokemon.baseSpecies.baseSpecies === 'Electivire') {
+				return this.chainModify(1.5);
+			}
+		},
+		itemUser: ["Electivire"],
+		isNonstandard: null,
+	},
+	protector: {
+		"inherit": true,
+		onModifyAtkPriority: 1,
+		onModifyDef(def, pokemon) {
+			if (pokemon.baseSpecies.baseSpecies === 'Rhyperior') {
+				return this.chainModify(1.5);
+			}
+		},
+		itemUser: ["Rhyperior"],
+		isNonstandard: null,
+	},
 };

@@ -5245,7 +5245,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 3,
 		num: -8,
 	},
-	articrush: {
+	arcticrush: {
 		isNonstandard: "CAP",
 		name: "Arctic Rush",
 		shortDesc: "Doubles Speed and boosts SpDef in Snow and Rain",

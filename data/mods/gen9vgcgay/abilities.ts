@@ -100,6 +100,56 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 		},
 	},
+	wonderskin: {
+		inherit: true,
+		shortDesc: "This Pokemon is immune to Status moves",
+		onTryHit(target, source, move) {
+			if (move.category === 'Status' && target !== source) {
+				this.add('-immune', target, '[from] ability: Wonder Skin');
+				return null;
+			}
+		},
+	},
+	sandforce: {
+		inherit: true,
+		shortDesc: "This Pokemon's Ground/Rock/Steel attacks do 1.5x in Sandstorm; immunity to it.",
+		onBasePower(basePower, attacker, defender, move) {
+			if (this.field.isWeather('sandstorm')) {
+				if (move.type === 'Rock' || move.type === 'Ground' || move.type === 'Steel') {
+					this.debug('Sand Force boost');
+					return this.chainModify([3, 2]);
+				}
+			}
+		},
+	},
+	galewings: {
+		inherit: true,
+		onModifyPriority(priority, pokemon, target, move) {
+			if (move?.type === 'Flying' && pokemon.hp >= pokemon.maxhp/2) return priority + 1;
+		},
+		shortDesc: "If Pokemon's HP is >= 50%, Flying moves have priority increased by 1",
+	},
+	leafguard: {
+		inherit: true,
+		shortDesc: "Guards Self and Allies from Status Conditions in Sun",
+		onAllySetStatus(status, target, source, effect) {
+			if (['sunnyday', 'desolateland'].includes(target.effectiveWeather())) {
+				if ((effect as Move)?.status) {
+					this.add('-immune', target, '[from] ability: Leaf Guard');
+				}
+				return false;
+			}
+		},
+		onSetStatus(status, target, source, effect) {
+			if (['sunnyday', 'desolateland'].includes(target.effectiveWeather())) {
+				if ((effect as Move)?.status) {
+					this.add('-immune', target, '[from] ability: Leaf Guard');
+				}
+				return false;
+			}
+		},
+	},
+	// New Abilities
 	triplethreat: {
 		isNonstandard: null,
 		onModifyMove(move) {
@@ -153,7 +203,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		rating: 3,
 		num: -8,
 	},
-	articrush: {
+	arcticrush: {
 		isNonstandard: null,
 		onModifySpe(spe, pokemon) {
 			if (this.field.isWeather(['hail', 'snow', 'rain'])) {
