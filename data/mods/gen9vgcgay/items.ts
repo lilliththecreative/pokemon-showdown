@@ -90,7 +90,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 		itemUser: ["Magmortar"],
 		isNonstandard: null,
 	},
-	electrizer: {
+	electirizer: {
 		"inherit": true,
 		onModifyAtkPriority: 1,
 		onModifyAtk(atk, pokemon) {

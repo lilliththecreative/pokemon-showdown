@@ -74,5 +74,19 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			chance: 30,
 			boosts: {spe: -1},
 		},
-	}
+	},
+	payback: {
+		inherit: true,
+		basePowerCallback(pokemon, target) {
+			if (this.queue.willMove(target)) {
+				return 50;
+			}
+			this.debug('BP doubled');
+			return 100;
+		},
+	},
+	gunkshot: {
+		inherit: true,
+		accuracy: 85,
+	},
 };
