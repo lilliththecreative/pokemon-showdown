@@ -81,7 +81,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 	},
 	magmarizer: {
 		"inherit": true,
-		onModifyAtkPriority: 1,
+		onModifySpAPriority: 1,
 		onModifySpA(spa, pokemon) {
 			if (pokemon.baseSpecies.baseSpecies === 'Magmortar') {
 				return this.chainModify(1.5);
@@ -103,7 +103,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 	},
 	protector: {
 		"inherit": true,
-		onModifyAtkPriority: 1,
+		onModifyDefPriority: 1,
 		onModifyDef(def, pokemon) {
 			if (pokemon.baseSpecies.baseSpecies === 'Rhyperior') {
 				return this.chainModify(1.5);
