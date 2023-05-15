@@ -157,6 +157,15 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			pokemon.trapped = pokemon.maybeTrapped = false;
 		},
 	},
+	tanglinghair: {
+		inherit: true,
+		onDamagingHit(damage, target, source, move) {
+			if (this.checkMoveMakesContact(move, source, target, true)) {
+				this.add('-ability', target, 'Tangling Hair');
+				target.tryTrap(true);
+			}
+		}
+	},
 	// New Abilities
 	triplethreat: {
 		isNonstandard: null,
@@ -228,19 +237,4 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		rating: 3,
 		num: -9,
 	},
-	galewings: {
-		inherit: true,
-		onModifyPriority(priority, pokemon, target, move) {
-			if (move?.type === 'Flying' && pokemon.hp > pokemon.maxhp/2) return priority + 1;
-		}
-	},
-	tanglinghair: {
-		inherit: true,
-		onDamagingHit(damage, target, source, move) {
-			if (this.checkMoveMakesContact(move, source, target, true)) {
-				this.add('-ability', target, 'Tangling Hair');
-				target.tryTrap(true);
-			}
-		}
-	}
 };
