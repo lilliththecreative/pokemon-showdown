@@ -173,9 +173,6 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			if (!move.multihit && move.basePower > 0) {
 				move.multihit = 3
 			}
-			// if (move.basePower) {
-			// 	this.chainModify([14, 10])
-			// }
 		},
 		onBasePower(basePower, attacker, defender, move) {
 			return this.chainModify([4, 10]);

@@ -13,7 +13,7 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"technoblast": [
 				"9M"
 			],
-			"zconversion": [
+			"conversion": [
 				"9M"
 			]
 		}
@@ -30,6 +30,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 		"inherit": true,
 		"learnset": {
 			"populationbomb": [
+				"9M"
+			],
+			"honeclaws": [
 				"9M"
 			]
 		}
@@ -112,6 +115,14 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 		"inherit": true,
 		"learnset": {
 			"focusenergy": [
+				"9M"
+			]
+		}
+	},
+	"typhlosionhisui": {
+		"inherit": true,
+		"learnset": {
+			"ominouswind": [
 				"9M"
 			]
 		}

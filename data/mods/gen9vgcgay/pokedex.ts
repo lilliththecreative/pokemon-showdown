@@ -461,25 +461,6 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"inherit": true
 	},
-	"dugtrio": {
-		"types": [
-			"Ground"
-		],
-		"baseStats": {
-			"hp": 35,
-			"atk": 100,
-			"def": 50,
-			"spa": 50,
-			"spd": 70,
-			"spe": 120
-		},
-		"abilities": {
-			"0": "Sand Veil",
-			"1": "Arena Trap",
-			"H": "Sand Force"
-		},
-		"inherit": true
-	},
 	"dugtrioalola": {
 		"types": [
 			"Ground",
@@ -491,7 +472,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"def": 90,
 			"spa": 50,
 			"spd": 100,
-			"spe": 110
+			"spe": 120
 		},
 		"abilities": {
 			"0": "Triple Threat",
@@ -1644,7 +1625,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"abilities": {
 			"0": "Pressure",
-			"1": "Drizzle",
+			"1": "Thunderstorm",
 			"H": "Static"
 		},
 		"inherit": true
@@ -2477,7 +2458,9 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"H": "Intimidate"
 		},
 		"inherit": true,
-		"evos": ["Overqwil"]
+		"evos": [
+			"Overqwil"
+		]
 	},
 	"qwilfishhisui": {
 		"types": [
@@ -7414,7 +7397,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"spe": 50
 		},
 		"abilities": {
-			"0": "Chlorophyll",
+			"0": "Tangling Hair",
 			"1": "Simple",
 			"H": "Regenerator"
 		},
@@ -14716,7 +14699,9 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"spe": 103
 		},
 		"abilities": {
-			"0": "Beast Boost"
+			"0": "Beast Boost",
+			"1": "Levitate",
+			"H": ""
 		},
 		"inherit": true
 	},
@@ -14734,7 +14719,9 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"spe": 79
 		},
 		"abilities": {
-			"0": "Beast Boost"
+			"0": "Beast Boost",
+			"1": "Sheer Force",
+			"H": ""
 		},
 		"inherit": true
 	},
@@ -14752,7 +14739,9 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"spe": 151
 		},
 		"abilities": {
-			"0": "Beast Boost"
+			"0": "Beast Boost",
+			"1": "Technician",
+			"H": ""
 		},
 		"inherit": true
 	},
@@ -14769,7 +14758,9 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"spe": 83
 		},
 		"abilities": {
-			"0": "Beast Boost"
+			"0": "Beast Boost",
+			"1": "Lightning Rod",
+			"H": ""
 		},
 		"inherit": true
 	},
@@ -14787,7 +14778,9 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"spe": 61
 		},
 		"abilities": {
-			"0": "Beast Boost"
+			"0": "Beast Boost",
+			"1": "Flare Boost",
+			"H": ""
 		},
 		"inherit": true
 	},
@@ -14805,7 +14798,9 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"spe": 109
 		},
 		"abilities": {
-			"0": "Beast Boost"
+			"0": "Beast Boost",
+			"1": "Sharpness",
+			"H": ""
 		},
 		"inherit": true
 	},
@@ -14823,7 +14818,9 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"spe": 43
 		},
 		"abilities": {
-			"0": "Beast Boost"
+			"0": "Beast Boost",
+			"1": "Gluttony",
+			"H": ""
 		},
 		"inherit": true
 	},
@@ -14947,7 +14944,9 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"spe": 73
 		},
 		"abilities": {
-			"0": "Beast Boost"
+			"0": "Beast Boost",
+			"1": "Corrosion",
+			"H": ""
 		},
 		"inherit": true
 	},
@@ -14965,7 +14964,9 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"spe": 121
 		},
 		"abilities": {
-			"0": "Beast Boost"
+			"0": "Beast Boost",
+			"1": "Corrosion",
+			"H": ""
 		},
 		"inherit": true
 	},
@@ -14983,7 +14984,9 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"spe": 13
 		},
 		"abilities": {
-			"0": "Beast Boost"
+			"0": "Beast Boost",
+			"1": "Solid Rock",
+			"H": ""
 		},
 		"inherit": true
 	},
@@ -15001,7 +15004,9 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"spe": 107
 		},
 		"abilities": {
-			"0": "Beast Boost"
+			"0": "Beast Boost",
+			"1": "Reckless",
+			"H": ""
 		},
 		"inherit": true
 	},
