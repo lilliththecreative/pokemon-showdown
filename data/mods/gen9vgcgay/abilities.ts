@@ -62,7 +62,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		shortDesc: "This Pokemon's attacks with recoil or crash damage have 1.3x power; not Struggle.",
 		onBasePower(basePower, attacker, defender, move) {
-			if (move.recoil || move.hasCrashDamage) {
+			if (move.recoil || move.hasCrashDamage || move.mindBlownRecoil || move.selfdestruct) {
 				this.debug('Reckless boost');
 				return this.chainModify([13, 10]);
 			}
@@ -162,9 +162,10 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		onDamagingHit(damage, target, source, move) {
 			if (this.checkMoveMakesContact(move, source, target, true)) {
 				this.add('-ability', target, 'Tangling Hair');
-				target.tryTrap(true);
+				target.addVolatile('trapped', source, null, 'trapper');
 			}
-		}
+		},
+		shortDesc: "Traps target on contact"
 	},
 	// New Abilities
 	triplethreat: {

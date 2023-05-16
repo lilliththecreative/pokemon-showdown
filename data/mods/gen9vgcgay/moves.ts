@@ -89,4 +89,64 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		accuracy: 85,
 	},
+	triattack: {
+		inherit: true,
+		basePower: 30,
+		multihit: 3
+	},
+	smartstrike: {
+		inherit: true,
+		flags: {contact: 1, protect: 1, mirror: 1, slicing: 1}
+	},
+	slash: {
+		inherit: true,
+		basePower: 60,
+		willCrit: true
+	},
+	echoedvoice: {
+		num: 497,
+		accuracy: 100,
+		basePower: 50,
+		category: "Special",
+		name: "Echoed Voice",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, sound: 1, bypasssub: 1},
+		secondary: {
+			chance: 100,
+			self: {
+				boosts: {
+					spa: 1,
+				},
+			},
+		},
+		target: "normal",
+		type: "Normal",
+		contestType: "Beautiful"
+	},
+	chargebeam: {
+		inherit: true,
+		accuracy: 100,
+		secondary: {
+			chance: 100,
+			self: {
+				boosts: {
+					spa: 1,
+				},
+			},
+		}
+	},
+	eggbomb: {
+		inherit: true,
+		accuracy: 100,
+		type: "Fire"
+	},
+	healorder: {
+		inherit: true,
+		heal: [1, 1]
+	},
+	milkdrink: {
+		inherit: true,
+		heal: [1, 1]
+	}
 };
