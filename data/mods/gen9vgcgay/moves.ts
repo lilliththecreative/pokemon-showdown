@@ -2,7 +2,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	ominouswind: {
 		inherit: true,
 		"isNonstandard": null,
-		shortDesc: "20% chance to raise all stats by 1 (not acc/eva)",
+		shortDesc: "20% chance to raise all stats by 1 (not acc/eva).",
 		secondary: {
 			chance: 20,
 			self: {
@@ -13,7 +13,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	ancientpower: {
 		inherit: true,
 		"isNonstandard": null,
-		shortDesc: "20% chance to raise all stats by 1 (not acc/eva)",
+		shortDesc: "20% chance to raise all stats by 1 (not acc/eva).",
 		secondary: {
 			chance: 20,
 			self: {
@@ -23,7 +23,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	"silverwind": {
 		"inherit": true,
-		shortDesc: "20% chance to raise all stats by 1 (not acc/eva)",
+		shortDesc: "20% chance to raise all stats by 1 (not acc/eva).",
 		secondary: {
 			chance: 20,
 			self: {
@@ -69,7 +69,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	"crabhammer": {
 		"inherit": true,
-		shortDesc: "High Crit Ratio, 30% chance to lower target's speed by 1",
+		shortDesc: "High Crit Ratio, 30% chance to lower target's speed by 1.",
 		secondary: {
 			chance: 30,
 			boosts: {spe: -1},
@@ -93,7 +93,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		basePower: 30,
 		multihit: 3,
-		shortDesc:"Attacks 3 times, 20% chance to burn/para/freeze"
+		shortDesc:"Attacks 3 times, 20% chance to burn/para/freeze."
 	},
 	smartstrike: {
 		inherit: true,
@@ -102,7 +102,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	slash: {
 		inherit: true,
 		basePower: 60,
-		shortDesc:"Always crits",
+		shortDesc:"Always crits.",
 		willCrit: true
 	},
 	echoedvoice: {
@@ -111,7 +111,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		basePower: 40,
 		category: "Special",
 		name: "Echoed Voice",
-		shortDesc:"Raises Special Attack by 1",
+		shortDesc:"Raises Special Attack by 1.",
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, sound: 1, bypasssub: 1},
@@ -131,7 +131,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		accuracy: 100,
 		basePower: 40,
-		shortDesc:"Raises Special Attack by 1",
+		shortDesc:"Raises Special Attack by 1.",
 		secondary: {
 			chance: 100,
 			self: {
@@ -148,12 +148,12 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	healorder: {
 		inherit: true,
-		shortDesc:"Heals the user by 100% of its max HP",
+		shortDesc:"Heals the user by 100% of its max HP.",
 		heal: [1, 1]
 	},
 	milkdrink: {
 		inherit: true,
-		shortDesc:"Heals the user by 100% of its max HP",
+		shortDesc:"Heals the user by 100% of its max HP.",
 		heal: [1, 1]
 	},
 	technoblast: {
@@ -163,6 +163,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	conversion: {
 		inherit: true,
 		isNonstandard: null,
+		shortDesc:"Charges, hanges user's type to match its first move and boosts all stats turn 2.",
 		boosts: {atk: 1, def: 1, spa: 1, spd: 1, spe: 1},
 		flags: {charge: 1, nonsky: 1, nosleeptalk: 1, failinstruct: 1},
 		onTryMove(attacker, defender, move) {

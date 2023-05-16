@@ -112,4 +112,39 @@ export const Items: {[k: string]: ModdedItemData} = {
 		itemUser: ["Rhyperior"],
 		isNonstandard: null,
 	},
+	dousedrive: {
+		"inherit": true,
+		isNonstandard: null,
+	},
+	shockdrive: {
+		"inherit": true,
+		isNonstandard: null,
+	},
+	burndrive: {
+		"inherit": true,
+		isNonstandard: null,
+	},
+	chilldrive: {
+		"inherit": true,
+		isNonstandard: null,
+	},
+	dubiousdisc: {
+		"inherit": true,
+		isNonstandard: null,
+		onDrive: 'Ghost'
+	},
+	neutralizingorb: {
+		name: "Neutralizing Orb",
+		spritenum: 0,
+		fling: {
+			basePower: 30,
+		},
+		onStart(pokemon){
+			this.add('-endability', pokemon);
+			this.singleEvent('End', pokemon.getAbility(), pokemon.abilityState, pokemon, pokemon, 'neutralizingorb')
+		},
+		shortDesc: "Nullifies the holder's Ability.",
+		num: 1000,
+		gen: 9
+	}
 };

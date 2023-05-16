@@ -79,7 +79,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	berserk: {
 		inherit: true,
-		shortDesc: "Atk and Sp. Atk raised by 1 when it reaches 1/2 or less of max HP",
+		shortDesc: "Atk and Sp. Atk raised by 1 when it reaches 1/2 or less of max HP.",
 		onAfterMoveSecondary(target, source, move) {
 			this.effectState.checkedBerserk = true;
 			if (!source || source === target || !target.hp || !move.totalDamage) return;
@@ -93,7 +93,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	megalauncher: {
 		inherit: true,
-		shortDesc: "Pulse and Cannon moves have 1.5x Power",
+		shortDesc: "Pulse and Cannon moves have 1.5x Power.",
 		onBasePower(basePower, attacker, defender, move) {
 			if (move.flags['pulse'] || move.name.toLowerCase().includes("cannon")) {
 				return this.chainModify(1.5);
@@ -102,7 +102,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	wonderskin: {
 		inherit: true,
-		shortDesc: "This Pokemon is immune to Status moves",
+		shortDesc: "This Pokemon is immune to Status moves.",
 		onTryHit(target, source, move) {
 			if (move.category === 'Status' && target !== source) {
 				this.add('-immune', target, '[from] ability: Wonder Skin');
@@ -127,11 +127,11 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		onModifyPriority(priority, pokemon, target, move) {
 			if (move?.type === 'Flying' && pokemon.hp >= pokemon.maxhp/2) return priority + 1;
 		},
-		shortDesc: "If Pokemon's HP is >= 50%, Flying moves have priority increased by 1",
+		shortDesc: "If Pokemon's HP is >= 50%, Flying moves have priority increased by 1.",
 	},
 	leafguard: {
 		inherit: true,
-		shortDesc: "Guards Self and Allies from Status Conditions in Sun",
+		shortDesc: "Guards Self and Allies from Status Conditions in Sun.",
 		onAllySetStatus(status, target, source, effect) {
 			if (['sunnyday', 'desolateland'].includes(target.effectiveWeather())) {
 				if ((effect as Move)?.status) {
@@ -151,7 +151,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	runaway: {
 		inherit: true,
-		shortDesc: "Immune to Trapping",
+		shortDesc: "Immune to Trapping.",
 		onTrapPokemonPriority: -10,
 		onTrapPokemon(pokemon) {
 			pokemon.trapped = pokemon.maybeTrapped = false;
@@ -162,10 +162,10 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		onDamagingHit(damage, target, source, move) {
 			if (this.checkMoveMakesContact(move, source, target, true)) {
 				this.add('-ability', target, 'Tangling Hair');
-				target.addVolatile('trapped', source, null, 'trapper');
+				source.addVolatile('trapped', source, null, 'trapper');
 			}
 		},
-		shortDesc: "Traps target on contact"
+		shortDesc: "Traps target on contact."
 	},
 	// New Abilities
 	triplethreat: {
@@ -181,15 +181,12 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			if (!move.multihit && move.basePower > 0) {
 				move.multihit = 3
 			}
-			// if (move.basePower) {
-			// 	this.chainModify([14, 10])
-			// }
 		},
 		onBasePower(basePower, attacker, defender, move) {
 			return this.chainModify([4, 10]);
 		},
 		name: "Triple Threat",
-		shortDesc: "Moves hit 3 times at 40% power and 50% effect chance",
+		shortDesc: "Moves hit 3 times at 40% power and 50% effect chance.",
 		rating: 3,
 		num: -5,
 	},
@@ -201,7 +198,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 		},
 		name: "Mind Surfer",
-		shortDesc: "Doubles speed in Psychic Terrain",
+		shortDesc: "Doubles speed in Psychic Terrain.",
 		rating: 3,
 		num: -6,
 	},
@@ -231,12 +228,12 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	arcticrush: {
 		isNonstandard: null,
 		onModifySpe(spe, pokemon) {
-			if (this.field.isWeather(['hail', 'snow', 'rain'])) {
+			if (this.field.isWeather(['hail', 'snow', 'raindance', 'primordialsea'])) {
 				return this.chainModify(2);
 			}
 		},
 		onModifySpD(spd, pokemon) {
-			if (this.field.isWeather(['hail', 'snow', 'rain'])) {
+			if (this.field.isWeather(['hail', 'snow', 'raindance', 'primordialsea'])) {
 				return this.chainModify([3, 2]);
 			}
 		},
