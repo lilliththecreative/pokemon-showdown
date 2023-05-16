@@ -171,6 +171,13 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	triplethreat: {
 		isNonstandard: null,
 		onModifyMove(move) {
+			if (move.secondaries) {
+				this.debug('halving secondary chance');
+				for (const secondary of move.secondaries) {
+					if (secondary.chance) secondary.chance *= 0.5;
+				}
+			}
+			if (move.self?.chance) move.self.chance *= 0.5;
 			if (!move.multihit && move.basePower > 0) {
 				move.multihit = 3
 			}
@@ -182,7 +189,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			return this.chainModify([4, 10]);
 		},
 		name: "Triple Threat",
-		shortDesc: "Moves hit 3 times at 40% power",
+		shortDesc: "Moves hit 3 times at 40% power and 50% effect chance",
 		rating: 3,
 		num: -5,
 	},

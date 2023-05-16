@@ -108,7 +108,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	echoedvoice: {
 		num: 497,
 		accuracy: 100,
-		basePower: 50,
+		basePower: 40,
 		category: "Special",
 		name: "Echoed Voice",
 		shortDesc:"Raises Special Attack by 1",
@@ -130,6 +130,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	chargebeam: {
 		inherit: true,
 		accuracy: 100,
+		basePower: 40,
 		shortDesc:"Raises Special Attack by 1",
 		secondary: {
 			chance: 100,
@@ -154,5 +155,9 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		shortDesc:"Heals the user by 100% of its max HP",
 		heal: [1, 1]
+	},
+	technoblast: {
+		inherit: true,
+		isNonstandard: null
 	}
 };
