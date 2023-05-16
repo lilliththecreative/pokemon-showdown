@@ -112,4 +112,25 @@ export const Items: {[k: string]: ModdedItemData} = {
 		itemUser: ["Rhyperior"],
 		isNonstandard: null,
 	},
+	dousedrive: {
+		"inherit": true,
+		isNonstandard: null,
+	},
+	shockdrive: {
+		"inherit": true,
+		isNonstandard: null,
+	},
+	burndrive: {
+		"inherit": true,
+		isNonstandard: null,
+	},
+	chilldrive: {
+		"inherit": true,
+		isNonstandard: null,
+	},
+	dubiousdisc: {
+		"inherit": true,
+		isNonstandard: null,
+		onDrive: 'Ghost'
+	}
 };
