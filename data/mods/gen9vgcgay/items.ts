@@ -132,5 +132,19 @@ export const Items: {[k: string]: ModdedItemData} = {
 		"inherit": true,
 		isNonstandard: null,
 		onDrive: 'Ghost'
+	},
+	neutralizingorb: {
+		name: "Neutralizing Orb",
+		spritenum: 0,
+		fling: {
+			basePower: 30,
+		},
+		onStart(pokemon){
+			this.add('-endability', pokemon);
+			this.singleEvent('End', pokemon.getAbility(), pokemon.abilityState, pokemon, pokemon, 'neutralizingorb')
+		},
+		shortDesc: "Nullifies the holder's Ability.",
+		num: 1000,
+		gen: 9
 	}
 };
