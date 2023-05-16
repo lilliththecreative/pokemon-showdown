@@ -89,4 +89,92 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		accuracy: 85,
 	},
+	triattack: {
+		inherit: true,
+		basePower: 30,
+		multihit: 3,
+		shortDesc:"Attacks 3 times, 20% chance to burn/para/freeze"
+	},
+	smartstrike: {
+		inherit: true,
+		flags: {contact: 1, protect: 1, mirror: 1, slicing: 1}
+	},
+	slash: {
+		inherit: true,
+		basePower: 60,
+		shortDesc:"Always crits",
+		willCrit: true
+	},
+	echoedvoice: {
+		num: 497,
+		accuracy: 100,
+		basePower: 40,
+		category: "Special",
+		name: "Echoed Voice",
+		shortDesc:"Raises Special Attack by 1",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, sound: 1, bypasssub: 1},
+		secondary: {
+			chance: 100,
+			self: {
+				boosts: {
+					spa: 1,
+				},
+			},
+		},
+		target: "normal",
+		type: "Normal",
+		contestType: "Beautiful"
+	},
+	chargebeam: {
+		inherit: true,
+		accuracy: 100,
+		basePower: 40,
+		shortDesc:"Raises Special Attack by 1",
+		secondary: {
+			chance: 100,
+			self: {
+				boosts: {
+					spa: 1,
+				},
+			},
+		}
+	},
+	eggbomb: {
+		inherit: true,
+		accuracy: 100,
+		type: "Fire"
+	},
+	healorder: {
+		inherit: true,
+		shortDesc:"Heals the user by 100% of its max HP",
+		heal: [1, 1]
+	},
+	milkdrink: {
+		inherit: true,
+		shortDesc:"Heals the user by 100% of its max HP",
+		heal: [1, 1]
+	},
+	technoblast: {
+		inherit: true,
+		isNonstandard: null
+	},
+	conversion: {
+		inherit: true,
+		isNonstandard: null,
+		boosts: {atk: 1, def: 1, spa: 1, spd: 1, spe: 1},
+		flags: {charge: 1, nonsky: 1, nosleeptalk: 1, failinstruct: 1},
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		}
+	}
 };

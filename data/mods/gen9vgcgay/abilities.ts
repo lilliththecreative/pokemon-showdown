@@ -62,7 +62,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		shortDesc: "This Pokemon's attacks with recoil or crash damage have 1.3x power; not Struggle.",
 		onBasePower(basePower, attacker, defender, move) {
-			if (move.recoil || move.hasCrashDamage) {
+			if (move.recoil || move.hasCrashDamage || move.mindBlownRecoil || move.selfdestruct) {
 				this.debug('Reckless boost');
 				return this.chainModify([13, 10]);
 			}
@@ -162,14 +162,22 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		onDamagingHit(damage, target, source, move) {
 			if (this.checkMoveMakesContact(move, source, target, true)) {
 				this.add('-ability', target, 'Tangling Hair');
-				target.tryTrap(true);
+				target.addVolatile('trapped', source, null, 'trapper');
 			}
-		}
+		},
+		shortDesc: "Traps target on contact"
 	},
 	// New Abilities
 	triplethreat: {
 		isNonstandard: null,
 		onModifyMove(move) {
+			if (move.secondaries) {
+				this.debug('halving secondary chance');
+				for (const secondary of move.secondaries) {
+					if (secondary.chance) secondary.chance *= 0.5;
+				}
+			}
+			if (move.self?.chance) move.self.chance *= 0.5;
 			if (!move.multihit && move.basePower > 0) {
 				move.multihit = 3
 			}
@@ -178,7 +186,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			return this.chainModify([4, 10]);
 		},
 		name: "Triple Threat",
-		shortDesc: "Moves hit 3 times at 40% power",
+		shortDesc: "Moves hit 3 times at 40% power and 50% effect chance",
 		rating: 3,
 		num: -5,
 	},
