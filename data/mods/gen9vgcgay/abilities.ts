@@ -167,6 +167,15 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		},
 		shortDesc: "Traps target on contact."
 	},
+	rockhead: {
+		inherit: true,
+		onDamage(damage, target, source, effect) {
+			if (effect.id === 'recoil' || effect.id === 'mindblown' || effect.id === 'selfdestruct') {
+				if (!this.activeMove) throw new Error("Battle.activeMove is null");
+				if (this.activeMove.id !== 'struggle') return null;
+			}
+		}
+	},
 	// New Abilities
 	triplethreat: {
 		isNonstandard: null,

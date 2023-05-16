@@ -49,23 +49,26 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	"swagger": {
 		inherit: true,
 		"accuracy": 100,
+		isNonstandard: null
 	},
 	"falseswipe": {
 		inherit: true,
 		"basePower": 180,
+		isNonstandard: null
 	},
 	"razorwind": {
 		inherit: true,
 		"basePower": 150,
+		isNonstandard: null
 	},
 	"mistyexplosion": {
 		inherit: true,
 		"basePower": 150,
+		isNonstandard: null
 	},
 	"explosion": {
 		inherit: true,
-		"basePower": 350,
-		recoil: [1,2],
+		"basePower": 350
 	},
 	"crabhammer": {
 		"inherit": true,
@@ -97,7 +100,8 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	smartstrike: {
 		inherit: true,
-		flags: {contact: 1, protect: 1, mirror: 1, slicing: 1}
+		flags: {contact: 1, protect: 1, mirror: 1, slicing: 1},
+		isNonstandard: null
 	},
 	slash: {
 		inherit: true,
@@ -144,17 +148,20 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	eggbomb: {
 		inherit: true,
 		accuracy: 100,
-		type: "Fire"
+		type: "Fire",
+		isNonstandard: null
 	},
 	healorder: {
 		inherit: true,
 		shortDesc:"Heals the user by 100% of its max HP.",
-		heal: [1, 1]
+		heal: [1, 1],
+		isNonstandard: null
 	},
 	milkdrink: {
 		inherit: true,
 		shortDesc:"Heals the user by 100% of its max HP.",
-		heal: [1, 1]
+		heal: [1, 1],
+		isNonstandard: null
 	},
 	technoblast: {
 		inherit: true,
@@ -163,7 +170,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	conversion: {
 		inherit: true,
 		isNonstandard: null,
-		shortDesc:"Charges, hanges user's type to match its first move and boosts all stats turn 2.",
+		shortDesc:"Charges, changes user's type to match its first move and boosts all stats turn 2.",
 		boosts: {atk: 1, def: 1, spa: 1, spd: 1, spe: 1},
 		flags: {charge: 1, nonsky: 1, nosleeptalk: 1, failinstruct: 1},
 		onTryMove(attacker, defender, move) {
