@@ -159,5 +159,22 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	technoblast: {
 		inherit: true,
 		isNonstandard: null
+	},
+	conversion: {
+		inherit: true,
+		isNonstandard: null,
+		boosts: {atk: 1, def: 1, spa: 1, spd: 1, spe: 1},
+		flags: {charge: 1, nonsky: 1, nosleeptalk: 1, failinstruct: 1},
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		}
 	}
 };
