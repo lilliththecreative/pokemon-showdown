@@ -162,7 +162,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		onDamagingHit(damage, target, source, move) {
 			if (this.checkMoveMakesContact(move, source, target, true)) {
 				this.add('-ability', target, 'Tangling Hair');
-				target.addVolatile('trapped', source, null, 'trapper');
+				target.addVolatile('trapped', target, null, 'trapper');
 			}
 		},
 		shortDesc: "Traps target on contact"
