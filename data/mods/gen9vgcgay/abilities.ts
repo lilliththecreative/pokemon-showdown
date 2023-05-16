@@ -228,12 +228,12 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	arcticrush: {
 		isNonstandard: null,
 		onModifySpe(spe, pokemon) {
-			if (this.field.isWeather(['hail', 'snow', 'rain'])) {
+			if (this.field.isWeather(['hail', 'snow', 'raindance', 'primordialsea'])) {
 				return this.chainModify(2);
 			}
 		},
 		onModifySpD(spd, pokemon) {
-			if (this.field.isWeather(['hail', 'snow', 'rain'])) {
+			if (this.field.isWeather(['hail', 'snow', 'raindance', 'primordialsea'])) {
 				return this.chainModify([3, 2]);
 			}
 		},
