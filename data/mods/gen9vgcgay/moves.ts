@@ -92,7 +92,8 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	triattack: {
 		inherit: true,
 		basePower: 30,
-		multihit: 3
+		multihit: 3,
+		shortDesc:"Attacks 3 times, 20% chance to burn/para/freeze"
 	},
 	smartstrike: {
 		inherit: true,
@@ -101,6 +102,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	slash: {
 		inherit: true,
 		basePower: 60,
+		shortDesc:"Always crits",
 		willCrit: true
 	},
 	echoedvoice: {
@@ -109,6 +111,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		basePower: 50,
 		category: "Special",
 		name: "Echoed Voice",
+		shortDesc:"Raises Special Attack by 1",
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, sound: 1, bypasssub: 1},
@@ -127,6 +130,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	chargebeam: {
 		inherit: true,
 		accuracy: 100,
+		shortDesc:"Raises Special Attack by 1",
 		secondary: {
 			chance: 100,
 			self: {
@@ -143,10 +147,12 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	healorder: {
 		inherit: true,
+		shortDesc:"Heals the user by 100% of its max HP",
 		heal: [1, 1]
 	},
 	milkdrink: {
 		inherit: true,
+		shortDesc:"Heals the user by 100% of its max HP",
 		heal: [1, 1]
 	}
 };
