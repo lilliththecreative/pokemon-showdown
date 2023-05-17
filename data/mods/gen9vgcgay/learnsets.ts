@@ -13,7 +13,7 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"technoblast": [
 				"9M"
 			],
-			"conversion": [
+			"zconversion": [
 				"9M"
 			]
 		}
@@ -22,6 +22,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 		"inherit": true,
 		"learnset": {
 			"hyperdrill": [
+				"9M"
+			],
+			"eggbomb": [
 				"9M"
 			]
 		}
@@ -98,7 +101,7 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 	"archeops": {
 		"inherit": true,
 		"learnset": {
-			"hurricane": [
+			"eggbomb": [
 				"9M"
 			]
 		}
@@ -123,6 +126,108 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 		"inherit": true,
 		"learnset": {
 			"ominouswind": [
+				"9M"
+			]
+		}
+	},
+	"toucannon": {
+		"inherit": true,
+		"learnset": {
+			"eggbomb": [
+				"9M"
+			]
+		}
+	},
+	"talonflame": {
+		"inherit": true,
+		"learnset": {
+			"eggbomb": [
+				"9M"
+			]
+		}
+	},
+	"mandibuzz": {
+		"inherit": true,
+		"learnset": {
+			"eggbomb": [
+				"9M"
+			]
+		}
+	},
+	"braviary": {
+		"inherit": true,
+		"learnset": {
+			"eggbomb": [
+				"9M"
+			]
+		}
+	},
+	"unfezant": {
+		"inherit": true,
+		"learnset": {
+			"eggbomb": [
+				"9M"
+			]
+		}
+	},
+	"togekiss": {
+		"inherit": true,
+		"learnset": {
+			"eggbomb": [
+				"9M"
+			]
+		}
+	},
+	"chatot": {
+		"inherit": true,
+		"learnset": {
+			"eggbomb": [
+				"9M"
+			]
+		}
+	},
+	"murkrow": {
+		"inherit": true,
+		"learnset": {
+			"eggbomb": [
+				"9M"
+			]
+		}
+	},
+	"staraptor": {
+		"inherit": true,
+		"learnset": {
+			"eggbomb": [
+				"9M"
+			]
+		}
+	},
+	"swellow": {
+		"inherit": true,
+		"learnset": {
+			"eggbomb": [
+				"9M"
+			]
+		}
+	},
+	"blaziken": {
+		"inherit": true,
+		"learnset": {
+			"eggbomb": [
+				"9M"
+			]
+		}
+	},
+	"pidgeot": {
+		"inherit": true,
+		"learnset": {
+			"eggbomb": [
+				"9M"
+			],
+			"hypervoice": [
+				"9M"
+			],
+			"echoedvoice": [
 				"9M"
 			]
 		}

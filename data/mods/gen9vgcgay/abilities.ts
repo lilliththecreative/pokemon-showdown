@@ -176,6 +176,23 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 		}
 	},
+	flowergift: {
+		inherit: true,
+		shortDesc: "If Sunny Day active, it and allies' Atk, SpA, Def, and SpDef are 1.5x",
+		onAllyModifySpAPriority: 3,
+		onAllyModifySpA(atk, pokemon) {
+			if (this.effectState.target.baseSpecies.baseSpecies !== 'Cherrim') return;
+			if (['sunnyday', 'desolateland'].includes(pokemon.effectiveWeather())) {
+				return this.chainModify(1.5);
+			}
+		},
+		onAllyModifyDef(spd, pokemon) {
+			if (this.effectState.target.baseSpecies.baseSpecies !== 'Cherrim') return;
+			if (['sunnyday', 'desolateland'].includes(pokemon.effectiveWeather())) {
+				return this.chainModify(1.5);
+			}
+		},
+	},
 	// New Abilities
 	triplethreat: {
 		isNonstandard: null,

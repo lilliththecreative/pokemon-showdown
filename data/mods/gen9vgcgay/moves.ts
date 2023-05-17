@@ -184,5 +184,9 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			attacker.addVolatile('twoturnmove', defender);
 			return null;
 		}
-	}
+	},
+	infernalparade: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
