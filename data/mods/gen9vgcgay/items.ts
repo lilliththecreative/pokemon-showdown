@@ -133,7 +133,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 		isNonstandard: null,
 		onDrive: 'Ghost'
 	},
-	beserkgene: {
+	berserkgene: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -148,7 +148,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 			this.singleEvent('End', pokemon.getAbility(), pokemon.abilityState, pokemon, pokemon, 'neutralizingorb')
 		},
 		shortDesc: "Nullifies the holder's Ability.",
-		num: 2000,
+		num: -3,
 		gen: 9
 	},
 };
