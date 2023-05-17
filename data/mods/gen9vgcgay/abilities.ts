@@ -218,7 +218,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			this.field.setTerrain('electricterrain');
 		},
 		name: "Thunderstorm",
-		shortDesc: "Sets Rain and Electric Terrain",
+		shortDesc: "Sets Rain and Electric Terrain.",
 		rating: 4,
 		num: -7,
 	},
@@ -229,8 +229,14 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 				return this.chainModify([3, 2]);
 			}
 		},
+		onAnyAccuracy(accuracy, target, source, move) {
+			if (move.name === "Horn Drill") {
+				return 45;
+			}
+			return accuracy;
+		},
 		name: "Just the Tip",
-		shortDesc: "Drill moves do 1.5x damage",
+		shortDesc: "Drill moves do 1.5x damage.",
 		rating: 3,
 		num: -8,
 	},
@@ -247,7 +253,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 		},
 		name: "Arctic Rush",
-		shortDesc: "Doubles Speed and boosts SpDef in Snow and Rain",
+		shortDesc: "Doubles Speed and boosts SpDef in Snow and Rain.",
 		rating: 3,
 		num: -9,
 	},
