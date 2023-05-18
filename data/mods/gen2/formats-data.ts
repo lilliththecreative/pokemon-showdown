@@ -339,7 +339,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "OU",
 	},
 	tyrogue: {
-		tier: "8U",
+		tier: "9U",
 	},
 	hitmonlee: {
 		tier: "NU",
@@ -537,7 +537,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "NUBL",
 	},
 	sentret: {
-		tier: "8U",
+		tier: "9U",
 	},
 	furret: {
 		tier: "PU",
@@ -588,7 +588,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "UU",
 	},
 	marill: {
-		tier: "8U",
+		tier: "9U",
 	},
 	azumarill: {
 		tier: "NU",
@@ -669,7 +669,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "PU",
 	},
 	teddiursa: {
-		tier: "6U",
+		tier: "ZU",
 	},
 	ursaring: {
 		tier: "UUBL",

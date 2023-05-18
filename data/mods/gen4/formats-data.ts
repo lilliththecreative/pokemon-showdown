@@ -111,7 +111,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "LC",
 	},
 	clefairy: {
-		tier: "8U",
+		tier: "7U",
 	},
 	clefable: {
 		tier: "UU",
@@ -339,7 +339,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "UU",
 	},
 	cubone: {
-		tier: "8U",
+		tier: "7U",
 	},
 	marowak: {
 		tier: "PU",
@@ -600,7 +600,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "7U",
 	},
 	chinchou: {
-		tier: "8U",
+		tier: "7U",
 	},
 	lanturn: {
 		tier: "UU",
@@ -901,7 +901,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "NU",
 	},
 	taillow: {
-		tier: "8U",
+		tier: "7U",
 	},
 	swellow: {
 		tier: "UU",

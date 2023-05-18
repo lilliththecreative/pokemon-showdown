@@ -163,6 +163,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			if (this.checkMoveMakesContact(move, source, target, true)) {
 				this.add('-ability', target, 'Tangling Hair');
 				source.addVolatile('trapped', source, null, 'trapper');
+				this.boost({spe: -1}, source, target, null, true);
 			}
 		},
 		shortDesc: "Traps target on contact."
