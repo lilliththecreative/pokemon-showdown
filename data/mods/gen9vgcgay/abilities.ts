@@ -166,7 +166,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 				this.boost({spe: -1}, source, target, null, true);
 			}
 		},
-		shortDesc: "Traps target on contact."
+		shortDesc: "Traps target and -1 speed on contact."
 	},
 	rockhead: {
 		inherit: true,

@@ -27,19 +27,9 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		shortDesc: "Has 33% Recoil, 30% flinch, High Crit Rate",
 		accuracy: 85,
 		basePower: 105,
-		category: "Physical",
-		name: "Sky Attack",
-		pp: 5,
-		priority: 0,
-		flags: {protect: 1, mirror: 1, distance: 1},
-		critRatio: 2,
-		secondary: {
-			chance: 30,
-			volatileStatus: 'flinch',
+		onTryMove(attacker, defender, move) {
 		},
 		"recoil": [1, 3],
-		target: "any",
-		type: "Flying",
 	},
 	acid: {
 		inherit: true,

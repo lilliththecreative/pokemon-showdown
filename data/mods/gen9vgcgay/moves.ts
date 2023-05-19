@@ -34,6 +34,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	ragefist: {
 		inherit: true,
+		shortDesc: "+50 power for each time user was hit. Max: 1000bp",
 		basePowerCallback(pokemon) {
 			return Math.min(1000, 50 + 50 * pokemon.timesAttacked);
 		},
@@ -72,7 +73,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	"crabhammer": {
 		"inherit": true,
-		shortDesc: "High Crit Ratio, 30% chance to lower target's speed by 1.",
+		shortDesc: "High Crit Ratio, 30% chance to lower speed by 1.",
 		secondary: {
 			chance: 30,
 			boosts: {spe: -1},
@@ -96,7 +97,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		basePower: 30,
 		multihit: 3,
-		shortDesc:"Attacks 3 times, 20% chance to burn/para/freeze."
+		shortDesc:"Attacks 3 times, 10% chance to burn/para/freeze each."
 	},
 	smartstrike: {
 		inherit: true,
@@ -110,15 +111,8 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		willCrit: true
 	},
 	echoedvoice: {
-		num: 497,
-		accuracy: 100,
-		basePower: 40,
-		category: "Special",
-		name: "Echoed Voice",
+		inherit: true,
 		shortDesc:"Raises Special Attack by 1.",
-		pp: 15,
-		priority: 0,
-		flags: {protect: 1, mirror: 1, sound: 1, bypasssub: 1},
 		secondary: {
 			chance: 100,
 			self: {
@@ -127,9 +121,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 				},
 			},
 		},
-		target: "normal",
-		type: "Normal",
-		contestType: "Beautiful"
 	},
 	chargebeam: {
 		inherit: true,
@@ -188,5 +179,20 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	infernalparade: {
 		inherit: true,
 		isNonstandard: null,
+	},
+	shadowbone: {
+		inherit: true,
+		isNonstandard: null,
+		basePower: 50,
+		multihit: 2,
+	},
+	diamondstorm: {
+		inherit: true,
+		isNonstandard: null,
+		onModifyMove(move, source, target) {
+			if (this.field.isWeather('sandstorm')) {
+				move.target = 'allAdjacentFoes';
+			}
+		},
 	},
 };
