@@ -97,7 +97,20 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		basePower: 30,
 		multihit: 3,
-		shortDesc:"Attacks 3 times, 10% chance to burn/para/freeze each."
+		shortDesc:"Attacks 3 times, 10% chance to burn/para/freeze each.",
+		secondary: {
+			chance: 10,
+			onHit(target, source) {
+				const result = this.random(3);
+				if (result === 0) {
+					target.trySetStatus('brn', source);
+				} else if (result === 1) {
+					target.trySetStatus('par', source);
+				} else {
+					target.trySetStatus('fst', source);
+				}
+			},
+		},
 	},
 	smartstrike: {
 		inherit: true,
@@ -154,10 +167,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		heal: [1, 1],
 		isNonstandard: null
 	},
-	technoblast: {
-		inherit: true,
-		isNonstandard: null
-	},
 	conversion: {
 		inherit: true,
 		isNonstandard: null,
@@ -176,10 +185,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			return null;
 		}
 	},
-	infernalparade: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	shadowbone: {
 		inherit: true,
 		isNonstandard: null,
@@ -189,10 +194,75 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	diamondstorm: {
 		inherit: true,
 		isNonstandard: null,
+		shortDesc:"Hits both in sandstorm, 50% raise defense by 1",
+		target: "normal",
 		onModifyMove(move, source, target) {
 			if (this.field.isWeather('sandstorm')) {
 				move.target = 'allAdjacentFoes';
 			}
 		},
+		self: {
+			chance: 50,
+			boosts: {
+				def: 1,
+			},
+		},
+	},
+	doubleshock: {
+		inherit: true,
+		basePower: 130
+	},
+	spiritshackle: {
+		inherit: true,
+		basePower: 100,
+	},
+	// Freeze -> Frostbite
+	blizzard: {
+		inherit: true,
+		secondary: { chance: 20, status: 'fst'},
+	},
+	icebeam: {
+		inherit: true,
+		secondary: { chance: 10, status: 'fst'},
+	},
+	freezedry: {
+		inherit: true,
+		secondary: { chance: 10, status: 'fst'},
+	},
+	freezingglare: {
+		inherit: true,
+		secondary: { chance: 10, status: 'fst'},
+	},
+	icepunch: {
+		inherit: true,
+		secondary: { chance: 10, status: 'fst'},
+	},
+	icefang: {
+		inherit: true,
+		secondaries: [
+			{ chance: 10, status: 'fst'},
+			{ chance: 10, volatileStatus: 'flinch'},
+		],
+	},
+	// Making Standard
+	technoblast: {
+		inherit: true,
+		isNonstandard: null
+	},
+	infernalparade: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	sketch: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	purifyingwater: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	divinesmite: {
+		inherit: true,
+		isNonstandard: null,
 	},
 };

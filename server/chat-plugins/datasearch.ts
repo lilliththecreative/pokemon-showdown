@@ -1240,7 +1240,7 @@ function runMovesearch(target: string, cmd: string, canAll: boolean, message: st
 		'highcrit', 'multihit', 'ohko', 'protection', 'secondary',
 		'zmove', 'maxmove', 'gmaxmove',
 	];
-	const allStatus = ['psn', 'tox', 'brn', 'par', 'frz', 'slp'];
+	const allStatus = ['psn', 'tox', 'brn', 'par', 'frz', 'slp', 'fst'];
 	const allVolatileStatus = ['flinch', 'confusion', 'partiallytrapped'];
 	const allBoosts = ['hp', 'atk', 'def', 'spa', 'spd', 'spe', 'accuracy', 'evasion'];
 	const allTargets: {[k: string]: string} = {

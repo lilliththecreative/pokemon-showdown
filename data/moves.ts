@@ -21595,4 +21595,42 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Electric",
 		contestType: "Cool",
 	},
+	// VGC Gay moves
+	purifyingwater: {
+		num: 0,
+		accuracy: 100,
+		basePower: 95,
+		category: "Special",
+		isNonstandard: "CAP",
+		name: "Purifying Water",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 50,
+			status: 'fst',
+		},
+		target: "normal",
+		type: "Water",
+		contestType: "Cool",
+	},
+	divinesmite: {
+		num: 0,
+		accuracy: 100,
+		basePower: 95,
+		category: "Special",
+		isNonstandard: "CAP",
+		name: "Divine Smite",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 50,
+			status: 'prz',
+		},
+		target: "normal",
+		type: "Electric",
+		contestType: "Cool",
+	},
+
 };
