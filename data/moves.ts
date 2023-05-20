@@ -21598,8 +21598,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 	// VGC Gay moves
 	purifyingwater: {
 		num: 0,
-		accuracy: 100,
-		basePower: 95,
+		basePower: 100,
+		accuracy: 95,
 		category: "Special",
 		isNonstandard: "CAP",
 		name: "Purifying Water",
@@ -21616,8 +21616,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	divinesmite: {
 		num: 0,
-		accuracy: 100,
-		basePower: 95,
+		basePower: 100,
+		accuracy: 95,
 		category: "Special",
 		isNonstandard: "CAP",
 		name: "Divine Smite",

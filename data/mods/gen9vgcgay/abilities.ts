@@ -70,10 +70,10 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	ironfist: {
 		inherit: true,
-		shortDesc: "This Pokemon's punch-based attacks have 1.5x power. Sucker Punch is not boosted.",
+		shortDesc: "This Pokemon's punch-based attacks have 1.4x power. Sucker Punch is not boosted.",
 		onBasePower(basePower, attacker, defender, move) {
 			if (move.flags['punch']) {
-				return this.chainModify([15, 10]);
+				return this.chainModify([14, 10]);
 			}
 		},
 	},

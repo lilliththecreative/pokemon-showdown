@@ -13,7 +13,7 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"technoblast": [
 				"9M"
 			],
-			"zconversion": [
+			"conversion": [
 				"9M"
 			]
 		}
@@ -228,6 +228,71 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"echoedvoice": [
+				"9M"
+			]
+		}
+	},
+	"decidueye": {
+		"inherit": true,
+		"learnset": {
+			"thousandarrows": [
+				"9M"
+			]
+		}
+	},
+	"carbink": {
+		"inherit": true,
+		"learnset": {
+			"diamondstorm": [
+				"9M"
+			]
+		}
+	},
+	"gigalith": {
+		"inherit": true,
+		"learnset": {
+			"diamondstorm": [
+				"9M"
+			]
+		}
+	},
+	"suicune": {
+		"inherit": true,
+		"learnset": {
+			"purifyingwater": [
+				"9M"
+			]
+		}
+	},
+	"raikou": {
+		"inherit": true,
+		"learnset": {
+			"divinesmite": [
+				"9M"
+			]
+		}
+	},
+	"noctowl": {
+		"inherit": true,
+		"learnset": {
+			"trickroom": [
+				"9M"
+			]
+		}
+	},
+	"ledian": {
+		"inherit": true,
+		"learnset": {
+			"firepunch": [
+				"9M"
+			],
+			"bulletpunch": [
+				"9M"
+			],
+			"jetpunch": [
+				"9M"
+			],
+			"shadowpunch": [
 				"9M"
 			]
 		}
