@@ -61,7 +61,7 @@ export const Formats: FormatList = [
 		searchShow: true,
 		mod: 'gen4vgcplat',
 		gameType: 'doubles',
-		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Draft Timer', 'VGC Plat Pokedex', 'TB Legality', '!Obtainable Abilities', 'Ability Clause = 1', '!Obtainable Abilities', 'STABmons Move Legality'],
+		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Draft Timer', 'VGC Plat Pokedex', 'TB Legality', '!Obtainable Abilities', 'Ability Clause = 1', 'STABmons Move Legality'],
 	},
 	{
 		name: "[Gen 9] VGC Gay",
