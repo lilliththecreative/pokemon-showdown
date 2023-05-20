@@ -47,6 +47,46 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		"type": "Psychic",
 		"isNonstandard": null,
 	},
+	"cometpunch": {
+		"inherit": true,
+		"accuracy": 100,
+		"basePower": 25,
+		"category": "Physical",
+		"type": "Fairy",
+		"isNonstandard": null,
+	},
+	"spikecannon": {
+		"inherit": true,
+		"accuracy": 100,
+		"basePower": 25,
+		"category": "Physical",
+		"type": "Steel",
+		"isNonstandard": null,
+	},
+	"furyattack": {
+		"inherit": true,
+		"accuracy": 100,
+		"basePower": 25,
+		"category": "Physical",
+		"type": "Flying",
+		"isNonstandard": null,
+	},
+	"flameburst": {
+		"inherit": true,
+		"accuracy": 100,
+		"basePower": 25,
+		"category": "Special",
+		"type": "Fire",
+		"isNonstandard": null,
+	},
+	rockblast: {
+		"inherit": true,
+		"accuracy": 95,
+	},
+	armthrust: {
+		"inherit": true,
+		basePower: 25
+	},
 	"swagger": {
 		inherit: true,
 		"accuracy": 100,
@@ -215,6 +255,15 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	spiritshackle: {
 		inherit: true,
 		basePower: 100,
+	},
+	megapunch: {
+		inherit: true,
+		basePower: 90,
+		accuracy: 100
+	},
+	megakick: {
+		inherit: true,
+		basePower: 130,
 	},
 	// Freeze -> Frostbite
 	blizzard: {
