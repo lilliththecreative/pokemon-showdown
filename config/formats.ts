@@ -47,7 +47,7 @@ export const Formats: FormatList = [
 		searchShow: true,
 		mod: 'gen4vgcplat',
 		gameType: 'doubles',
-		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Draft Timer', 'VGC Plat Pokedex', 'TB Legality',],
+		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Draft Timer', 'VGC Plat Pokedex', 'STABmons Move Legality'],
 	},
 	{
 		name: "[Gen 9] VGC Plat Tera AAA",
@@ -57,7 +57,7 @@ export const Formats: FormatList = [
 		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Draft Timer', 'VGC Plat Pokedex', '!Obtainable Abilities', 'Ability Clause = 1'],
 	},
 	{
-		name: "[Gen 9] VGC Plat Tera Staabmons",
+		name: "[Gen 9] VGC Plat Tera Staaabmons",
 		searchShow: true,
 		mod: 'gen4vgcplat',
 		gameType: 'doubles',
