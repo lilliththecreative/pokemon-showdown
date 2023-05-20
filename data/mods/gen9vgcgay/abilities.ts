@@ -209,6 +209,12 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 		},
 	},
+	protean: {
+		inherit: true,
+		onDamagingHit(damage, target, source, move) {
+			source.setType(move.type)
+		},
+	},
 	// New Abilities
 	triplethreat: {
 		isNonstandard: null,
