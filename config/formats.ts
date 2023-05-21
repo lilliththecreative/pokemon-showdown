@@ -55,6 +55,7 @@ export const Formats: FormatList = [
 		mod: 'gen4vgcplat',
 		gameType: 'doubles',
 		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Draft Timer', 'VGC Plat Pokedex', '!Obtainable Abilities', 'Ability Clause = 1'],
+		banlist: ['Huge Power', 'Pure Power', 'Wonder Guard', 'Imposter', 'Shadow Tag', 'Arena Trap'],
 	},
 	{
 		name: "[Gen 9] VGC Plat Tera Staaabmons",
@@ -62,13 +63,15 @@ export const Formats: FormatList = [
 		mod: 'gen4vgcplat',
 		gameType: 'doubles',
 		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Draft Timer', 'VGC Plat Pokedex', '!Obtainable Abilities', 'Ability Clause = 1', 'STABmons Move Legality'],
+		banlist: ['Huge Power', 'Pure Power', 'Wonder Guard', 'Imposter', 'Shadow Tag', 'Arena Trap'],
 	},
 	{
 		name: "[Gen 9] VGC Gay",
 		searchShow: true,
 		mod: 'gen9vgcgay',
 		gameType: 'doubles',
-		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Draft Timer', 'TB Legality'],
+		ruleset: [ 'Standard NatDex', 'Flat Rules', '!! Adjust Level = 50'],
+		// ruleset: ['Flat Rules', '!! Adjust Level = 50'],
 	},
 	{
 		section: "Gen 4 Lower Tiers",
@@ -228,6 +231,7 @@ export const Formats: FormatList = [
 
 	{
 		section: "S/V Singles",
+		column: 2,
 	},
 	{
 		name: "[Gen 9] Random Battle",
@@ -2553,7 +2557,7 @@ export const Formats: FormatList = [
 
 	{
 		section: "Metronome Battle",
-		column: 4,
+		column: 3,
 	},
 	{
 		name: '[Gen 9] Metronome Battle',
@@ -2654,7 +2658,7 @@ export const Formats: FormatList = [
 
 	{
 		section: "RoA Spotlight",
-		column: 5,
+		column: 4,
 	},
 	{
 		name: "[Gen 6] UU",
@@ -2704,7 +2708,7 @@ export const Formats: FormatList = [
 
 	{
 		section: "Past Gens OU",
-		column: 5,
+		column: 4,
 	},
 	{
 		name: "[Gen 8] OU",
@@ -2804,7 +2808,7 @@ export const Formats: FormatList = [
 
 	{
 		section: "Past Gens Doubles OU",
-		column: 5,
+		column: 4,
 	},
 	{
 		name: "[Gen 8] Doubles OU",
@@ -2888,7 +2892,7 @@ export const Formats: FormatList = [
 
 	{
 		section: "Sw/Sh Singles",
-		column: 5,
+		column: 4,
 	},
 	{
 		name: "[Gen 8] Ubers",
@@ -3119,7 +3123,7 @@ export const Formats: FormatList = [
 
 	{
 		section: "Sw/Sh Doubles",
-		column: 6,
+		column: 5,
 	},
 	{
 		name: "[Gen 8] Doubles Ubers",
@@ -3214,7 +3218,7 @@ export const Formats: FormatList = [
 	///////////////////////////////////////////////////////////////////
 	{
 		section: "US/UM Singles",
-		column: 6,
+		column: 5,
 	},
 	{
 		name: "[Gen 7] Ubers",
@@ -3385,7 +3389,7 @@ export const Formats: FormatList = [
 
 	{
 		section: "US/UM Doubles",
-		column: 6,
+		column: 5,
 	},
 	{
 		name: "[Gen 7] Doubles UU",
@@ -3500,7 +3504,7 @@ export const Formats: FormatList = [
 
 	{
 		section: "OR/AS Singles",
-		column: 7,
+		column: 6,
 	},
 	{
 		name: "[Gen 6] Ubers",
@@ -3666,7 +3670,7 @@ export const Formats: FormatList = [
 
 	{
 		section: "OR/AS Doubles/Triples",
-		column: 7,
+		column: 6,
 	},
 	{
 		name: "[Gen 6] VGC 2016",
@@ -3761,7 +3765,7 @@ export const Formats: FormatList = [
 
 	{
 		section: "B2/W2 Singles",
-		column: 7,
+		column: 6,
 	},
 	{
 		name: "[Gen 5] Ubers",
@@ -3912,7 +3916,7 @@ export const Formats: FormatList = [
 
 	{
 		section: 'B2/W2 Doubles',
-		column: 7,
+		column: 6,
 	},
 	{
 		name: "[Gen 5] VGC 2013",
@@ -3969,7 +3973,7 @@ export const Formats: FormatList = [
 
 	{
 		section: "DPP Singles",
-		column: 8,
+		column: 7,
 	},
 	{
 		name: "[Gen 4] Ubers",
@@ -4107,7 +4111,7 @@ export const Formats: FormatList = [
 
 	{
 		section: "DPP Doubles",
-		column: 8,
+		column: 7,
 	},
 	{
 		name: "[Gen 4] VGC 2010",
@@ -4145,7 +4149,7 @@ export const Formats: FormatList = [
 
 	{
 		section: "Past Generations",
-		column: 8,
+		column: 7,
 	},
 	{
 		name: "[Gen 3] Ubers",

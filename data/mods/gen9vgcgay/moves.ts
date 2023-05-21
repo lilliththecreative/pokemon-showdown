@@ -347,4 +347,8 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	dualchop: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
