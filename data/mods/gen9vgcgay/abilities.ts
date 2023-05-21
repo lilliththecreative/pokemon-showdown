@@ -211,8 +211,92 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	protean: {
 		inherit: true,
-		onDamagingHit(damage, target, source, move) {
-			source.setType(move.type)
+		shortDesc: "Changes type to be perfect offensive and defensive type",
+		onPrepareHit(source, target, move) {
+			if (move.hasBounced || move.flags['futuremove'] || move.sourceEffect === 'snatch') return;
+			const type = move.type;
+			if (type && type !== '???' && source.getTypes().join() !== type) {
+				if (!source.setType(type)) return;
+				this.effectState.protean = true;
+				this.add('-start', source, 'typechange', type, '[from] ability: Protean');
+			}
+		},
+		onSourceBeforeMove(source, target, move) {
+			let type = move.type
+			switch (type) {
+			case 'Normal':
+				type = 'Ghost';
+				break;
+			case 'Fighting':
+				type = 'Ghost';
+				break;
+			case 'Flying':
+				type = 'Rock';
+				break;
+			case 'Poison':
+				type = 'Steel';
+				break;
+			case 'Ground':
+				type = 'Flying';
+				break;
+			case 'Rock':
+				type = 'Fighting';
+				break;
+			case 'Bug':
+				type = 'Poison';
+				break;
+			case 'Ghost':
+				type = 'Normal';
+				break;
+			case 'Steel':
+				type = 'Electric';
+				break;
+			case 'Fire':
+				type = 'Water';
+				break;
+			case 'Water':
+				type = 'Grass';
+				break;
+			case 'Grass':
+				type = 'Fire';
+				break;
+			case 'Electric':
+				type = 'Ground';
+				break;
+			case 'Psychic':
+				type = 'Dark';
+				break;
+			case 'Ice':
+				type = 'Ice';
+				break;
+			case 'Dragon':
+				type = 'Fairy';
+				break;
+			case 'Dark':
+				type = 'Fighting';
+				break;
+			case 'Fairy':
+				type = 'Poison';
+				break;
+			}
+			target.setType(type)
+			this.add('-start', target, 'typechange', type, '[from] ability: Protean');
+		},
+	},
+	normalize: {
+		inherit: true,
+		shortDesc: "All moves are normal, but are 1.2x power and ignore immunities and resistances",
+		onModifyMove(move) {
+			if (!move.ignoreImmunity) move.ignoreImmunity = {};
+			if (move.ignoreImmunity !== true) {
+				move.ignoreImmunity['Fighting'] = true;
+				move.ignoreImmunity['Normal'] = true;
+			}
+		},
+		onModifyDamage(damage, source, target, move) {
+			if (target.getMoveHitData(move).typeMod < 0) {
+				return this.chainModify(1/target.getMoveHitData(move).typeMod);
+			}
 		},
 	},
 	// New Abilities

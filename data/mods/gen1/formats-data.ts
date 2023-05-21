@@ -42,7 +42,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "10U",
 	},
 	beedrill: {
-		tier: "6U",
+		tier: "7U",
 	},
 	pidgey: {
 		tier: "9U",
@@ -87,7 +87,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "9U",
 	},
 	nidorina: {
-		tier: "6U",
+		tier: "7U",
 	},
 	nidoqueen: {
 		tier: "PU",
@@ -96,7 +96,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "8U",
 	},
 	nidorino: {
-		tier: "7U",
+		tier: "6U",
 	},
 	nidoking: {
 		tier: "NU",
@@ -249,7 +249,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "7U",
 	},
 	doduo: {
-		tier: "6U",
+		tier: "7U",
 	},
 	dodrio: {
 		tier: "UU",
@@ -318,13 +318,13 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "6U",
 	},
 	hitmonchan: {
-		tier: "6U",
+		tier: "7U",
 	},
 	lickitung: {
 		tier: "6U",
 	},
 	koffing: {
-		tier: "6U",
+		tier: "7U",
 	},
 	weezing: {
 		tier: "ZU",

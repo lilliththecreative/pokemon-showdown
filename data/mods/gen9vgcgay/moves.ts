@@ -265,6 +265,35 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		basePower: 130,
 	},
+	present: {
+		inherit: true,
+		shortDesc: "100, 130, 160 power, if target ally, heals 50% instead",
+		accuracy: 100,
+		onTryHit(target, source, move) {
+			if (source.isAlly(target)) {
+				move.basePower = 0;
+				move.infiltrates = true;
+			}
+		},
+		onHit(target, source) {
+			if (source.isAlly(target)) {
+				if (!this.heal(Math.floor(target.baseMaxhp * 0.5))) {
+					this.add('-immune', target);
+					return this.NOT_FAIL;
+				}
+			}
+		},
+		onModifyMove(move, pokemon, target) {
+			const rand = this.random(3);
+			if (rand < 1) {
+				move.basePower = 100;
+			} else if (rand < 2) {
+				move.basePower = 130;
+			} else {
+				move.basePower = 160;
+			}
+		},
+	},
 	// Freeze -> Frostbite
 	blizzard: {
 		inherit: true,
@@ -311,6 +340,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 	},
 	divinesmite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	lightofruin: {
 		inherit: true,
 		isNonstandard: null,
 	},

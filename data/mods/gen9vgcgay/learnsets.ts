@@ -296,5 +296,55 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			]
 		}
+	},
+	"bellossom": {
+		"inherit": true,
+		"learnset": {
+			"moonblast": [
+				"9M"
+			],
+			"dazzlinggleam": [
+				"9M"
+			],
+			"quiverdance": [
+				"9M"
+			]
+		}
+	},
+	"sceptile": {
+		"inherit": true,
+		"learnset": {
+			"dualchop": [
+				"9M"
+			]
+		}
+	},
+	"donphan": {
+		"inherit": true,
+		"learnset": {
+			"headlongrush": [
+				"9M"
+			]
+		}
+	},
+	"luvdisc": {
+		"inherit": true,
+		"learnset": {
+			"moonblast": [
+				"9M"
+			],
+			"dazzlinggleam": [
+				"9M"
+			],
+			"waterspout": [
+				"9M"
+			],
+			"mistyexplosion": [
+				"9M"
+			],
+			"lightofruin": [
+				"9M"
+			]
+		}
 	}
 };
