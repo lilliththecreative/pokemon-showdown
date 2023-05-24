@@ -55,7 +55,7 @@ export const Formats: FormatList = [
 		mod: 'gen4vgcplat',
 		gameType: 'doubles',
 		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Draft Timer', 'VGC Plat Pokedex', '!Obtainable Abilities', 'Ability Clause = 1'],
-		banlist: ['Huge Power', 'Pure Power', 'Wonder Guard', 'Imposter', 'Shadow Tag', 'Arena Trap', 'Ice Scales', 'Good as Gold'],
+		banlist: ['Huge Power', 'Pure Power', 'Wonder Guard', 'Imposter', 'Shadow Tag', 'Arena Trap', 'Ice Scales', 'Fur Coat', 'No Guard', 'Magic Bounce'],
 	},
 	{
 		name: "[Gen 9] VGC Plat Tera Staaabmons",
@@ -63,7 +63,7 @@ export const Formats: FormatList = [
 		mod: 'gen4vgcplat',
 		gameType: 'doubles',
 		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Draft Timer', 'VGC Plat Pokedex', '!Obtainable Abilities', 'Ability Clause = 1', 'STABmons Move Legality'],
-		banlist: ['Huge Power', 'Pure Power', 'Wonder Guard', 'Imposter', 'Shadow Tag', 'Arena Trap', 'Ice Scales', 'Good as Gold'],
+		banlist: ['Huge Power', 'Pure Power', 'Wonder Guard', 'Imposter', 'Shadow Tag', 'Arena Trap', 'Ice Scales', 'Fur Coat', 'No Guard', 'Magic Bounce'],
 	},
 	{
 		name: "[Gen 9] VGC Gay",

@@ -294,6 +294,14 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			}
 		},
 	},
+	wildcharge: {
+		inherit: true,
+		basePower: 100,
+	},
+	revelationdance: {
+		inherit: true,
+		basePower: 100,
+	},
 	// Freeze -> Frostbite
 	blizzard: {
 		inherit: true,

@@ -5251,5 +5251,11 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		shortDesc: "Doubles Speed and boosts SpDef in Snow and Rain",
 		rating: 3,
 		num: -9,
-	}
+	},
+	cloakchange: {
+		isNonstandard: "CAP",
+		name: "Cloak Change",
+		rating: 4,
+		num: -10,
+	},
 };

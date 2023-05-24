@@ -2189,4 +2189,9 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		shortDesc: "Doubles Speed and boosts SpDef in Snow and Rain",
 		desc: "Doubles Speed and boosts SpDef in Snow and Rain",
 	},
+	cloakchange: {
+		name: "Cloak Change",
+		shortDesc: "Changes forms depending on attack used",
+		desc: "Changes forms depending on attack used",
+	},
 };

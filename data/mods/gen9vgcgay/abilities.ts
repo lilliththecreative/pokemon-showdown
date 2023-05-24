@@ -301,6 +301,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	// New Abilities
 	triplethreat: {
+		inherit: true,
 		isNonstandard: null,
 		onModifyMove(move) {
 			if (move.secondaries) {
@@ -317,24 +318,18 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		onBasePower(basePower, attacker, defender, move) {
 			return this.chainModify([4, 10]);
 		},
-		name: "Triple Threat",
-		shortDesc: "Moves hit 3 times at 40% power and 50% effect chance.",
-		rating: 3,
-		num: -5,
 	},
 	mindsurfer: {
+		inherit: true,
 		isNonstandard: null,
 		onModifySpe(spe) {
 			if (this.field.isTerrain('psychicterrain')) {
 				return this.chainModify(2);
 			}
 		},
-		name: "Mind Surfer",
-		shortDesc: "Doubles speed in Psychic Terrain.",
-		rating: 3,
-		num: -6,
 	},
 	thunderstorm: {
+		inherit: true,
 		isNonstandard: null,
 		onStart(source) {
 			this.field.setWeather('raindance');
@@ -346,6 +341,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		num: -7,
 	},
 	justthetip: {
+		inherit: true,
 		isNonstandard: null,
 		onBasePower(basePower, attacker, defender, move) {
 			if (move.name.toLowerCase().includes("drill")) {
@@ -358,12 +354,9 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 			return accuracy;
 		},
-		name: "Just the Tip",
-		shortDesc: "Drill moves do 1.5x damage.",
-		rating: 3,
-		num: -8,
 	},
 	arcticrush: {
+		inherit: true,
 		isNonstandard: null,
 		onModifySpe(spe, pokemon) {
 			if (this.field.isWeather(['hail', 'snow', 'raindance', 'primordialsea'])) {
@@ -375,9 +368,17 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 				return this.chainModify([3, 2]);
 			}
 		},
-		name: "Arctic Rush",
-		shortDesc: "Doubles Speed and boosts SpDef in Snow and Rain.",
-		rating: 3,
-		num: -9,
+	},
+	cloakchange: {
+		inherit: true,
+		isNonstandard: null,
+		onModifyMovePriority: 1,
+		onModifyMove(move, attacker, defender) {
+			if (attacker.species.baseSpecies !== 'Wormadam' || attacker.transformed) return;
+			if (move.category === 'Status') attacker.formeChange('Wormadam-Sandy');
+			if (move.category === 'Physical') attacker.formeChange('Wormadam-Sandy');
+			if (move.category === 'Special') attacker.formeChange('Wormadam');
+		},
+		isPermanent: true,
 	},
 };
