@@ -585,7 +585,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "LC",
 	},
 	noctowl: {
-		tier: "7U",
+		tier: "6U",
 	},
 	ledyba: {
 		tier: "LC",

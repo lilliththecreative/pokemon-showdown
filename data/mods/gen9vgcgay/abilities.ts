@@ -212,7 +212,12 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	protean: {
 		inherit: true,
 		shortDesc: "Changes type to be perfect offensive and defensive type",
+		onResidualOrder: 29,
+		onResidual(pokemon) {
+			this.effectState.protean = false;
+		},
 		onPrepareHit(source, target, move) {
+			if (this.effectState.protean) return;
 			if (move.hasBounced || move.flags['futuremove'] || move.sourceEffect === 'snatch') return;
 			const type = move.type;
 			if (type && type !== '???' && source.getTypes().join() !== type) {
@@ -222,6 +227,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 		},
 		onSourceBeforeMove(source, target, move) {
+			if (this.effectState.protean) return;
 			let type = move.type
 			switch (type) {
 			case 'Normal':
@@ -280,6 +286,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 				break;
 			}
 			target.setType(type)
+			this.effectState.protean = true;
 			this.add('-start', target, 'typechange', type, '[from] ability: Protean');
 		},
 	},
@@ -375,7 +382,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		onModifyMovePriority: 1,
 		onModifyMove(move, attacker, defender) {
 			if (attacker.species.baseSpecies !== 'Wormadam' || attacker.transformed) return;
-			if (move.category === 'Status') attacker.formeChange('Wormadam-Sandy');
+			if (move.category === 'Status') attacker.formeChange('Wormadam-Trash');
 			if (move.category === 'Physical') attacker.formeChange('Wormadam-Sandy');
 			if (move.category === 'Special') attacker.formeChange('Wormadam');
 		},

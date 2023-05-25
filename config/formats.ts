@@ -95,6 +95,7 @@ export const Formats: FormatList = [
 		searchShow: true,
 		ruleset: ['[Gen 4] 6U'],
 		banlist: ['6U'],
+		unbanlist: ['Damp Rock']
 	},
 	{
 		name: "[Gen 4] 8U",

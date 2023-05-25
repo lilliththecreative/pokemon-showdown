@@ -359,4 +359,20 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	tailglow: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	aeroblast: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	anchorshot: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	aurawheel: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
