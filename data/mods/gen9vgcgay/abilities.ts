@@ -306,6 +306,86 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 		},
 	},
+	mimicry: {
+		inherit: true,
+		shortDesc: "Sets primary type to terrain, Sets terrain if use move of corresponding type",
+		onPrepareHit(source, target, move) {
+			if (move.hasBounced || move.flags['futuremove'] || move.sourceEffect === 'snatch') return;
+			const type = move.type;
+			if (type == "Electric") this.field.setTerrain('electricterrain');
+			if (type == "Grass") this.field.setTerrain('grassyterrain');
+			if (type == "Psychic") this.field.setTerrain('psychicterrain');
+			if (type == "Fairy") this.field.setTerrain('mistyterrain');
+		},
+		onTerrainChange(pokemon) {
+			let types;
+			switch (this.field.terrain) {
+			case 'electricterrain':
+				types = ['Electric', 'Steel'];
+				break;
+			case 'grassyterrain':
+				types = ['Grass', 'Steel'];
+				break;
+			case 'mistyterrain':
+				types = ['Fairy', 'Steel'];
+				break;
+			case 'psychicterrain':
+				types = ['Psychic', 'Steel'];
+				break;
+			default:
+				types = pokemon.baseSpecies.types;
+			}
+			const oldTypes = pokemon.getTypes();
+			if (oldTypes.join() === types.join() || !pokemon.setType(types)) return;
+			if (this.field.terrain || pokemon.transformed) {
+				this.add('-start', pokemon, 'typechange', types.join('/'), '[from] ability: Mimicry');
+				if (!this.field.terrain) this.hint("Transform Mimicry changes you to your original un-transformed types.");
+			} else {
+				this.add('-activate', pokemon, 'ability: Mimicry');
+				this.add('-end', pokemon, 'typechange', '[silent]');
+			}
+		},
+	},
+	magmaarmor: {
+		inherit: true,
+		shortDesc: "Reduces Contact damage by 25%, 30% Chance to burn",
+		onSourceModifyDamage(damage, source, target, move) {
+			let mod = 1;
+			if (move.flags['contact']) mod /= 1.5;
+			return this.chainModify(mod);
+		},
+		onDamagingHit(damage, target, source, move) {
+			if (this.checkMoveMakesContact(move, source, target)) {
+				if (this.randomChance(3, 10)) {
+					source.trySetStatus('brn', target);
+				}
+			}
+		},
+	},
+	tangledfeet: {
+		inherit: true,
+		shortDesc: "Doubles Speed if confused",
+		onModifySpe(spe, pokemon) {
+			if (pokemon?.volatiles['confusion']) {
+				return this.chainModify(2);
+			}
+		},
+	},
+	flamebody: {
+		inherit: true,
+		shortDesc: "30% to burn on any contact",
+		onModifyMove(move) {
+			if (!move?.flags['contact'] || move.target === 'self') return;
+			if (!move.secondaries) {
+				move.secondaries = [];
+			}
+			move.secondaries.push({
+				chance: 30,
+				status: 'brn',
+				ability: this.dex.abilities.get('flamebody'),
+			});
+		},
+	},
 	// New Abilities
 	triplethreat: {
 		inherit: true,
@@ -388,4 +468,14 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		},
 		isPermanent: true,
 	},
+	bigballs: {
+		inherit: true,
+		isNonstandard: null,
+		onAnyModifyCritRatio(relayVar, source, target, move) {
+			move.willCrit = true
+		},
+		onFoeModifyCritRatio(relayVar, source, target, move) {
+			move.willCrit = true
+		},
+	}
 };

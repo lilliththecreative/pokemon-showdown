@@ -2194,4 +2194,9 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		shortDesc: "Changes forms depending on attack used",
 		desc: "Changes forms depending on attack used",
 	},
+	bigballs: {
+		name: "Big Balls",
+		shortDesc: "All moves used by and on target will crit",
+		desc: "All moves used by and on target will crit",
+	},
 };

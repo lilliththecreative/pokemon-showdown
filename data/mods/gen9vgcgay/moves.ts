@@ -302,6 +302,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		basePower: 100,
 	},
+	doublekick: {
+		inherit: true,
+		basePower: 40,
+	},
 	// Freeze -> Frostbite
 	blizzard: {
 		inherit: true,
