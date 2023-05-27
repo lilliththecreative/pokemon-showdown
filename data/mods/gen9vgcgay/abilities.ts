@@ -348,7 +348,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	magmaarmor: {
 		inherit: true,
-		shortDesc: "Reduces Contact damage by 25%, 30% Chance to burn",
+		shortDesc: "Reduces Contact damage by 25%, 30% Chance to burn on contact moves",
 		onSourceModifyDamage(damage, source, target, move) {
 			let mod = 1;
 			if (move.flags['contact']) mod /= 1.5;
@@ -384,6 +384,49 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 				status: 'brn',
 				ability: this.dex.abilities.get('flamebody'),
 			});
+		},
+	},
+	liquidooze: {
+		inherit: true,
+		shortDesc: "Deals damage instead of draining, replaces items with Black Sludges on hit",
+		onModifyMove(move) {
+			move.secondaries?.push({
+				chance: 100,
+				onHit(target) {
+					if (target.item === "leftovers" || target.item.endsWith("berry")) {
+						this.add('message', 'Item replaced with Liquid Ooze')
+						target.setItem("blacksludge")
+					}
+				}
+			})
+		}
+	},
+	quickfeet: {
+		inherit: true,
+		shortDesc: "1.5x speed if statused or has stat drops",
+		onModifySpe(spe, pokemon) {
+			if (pokemon.status) {
+				return this.chainModify(1.5);
+			}
+			let boost: BoostID;
+			for (boost in pokemon.boosts) {
+				if (pokemon.boosts[boost] < 0) return this.chainModify(1.5);
+			}
+		},
+	},
+	zenmode: {
+		inherit: true,
+		shortDesc: "Switches to Zen move if less than 75% health",
+		onResidual(pokemon) {
+			if (pokemon.baseSpecies.baseSpecies !== 'Darmanitan' || pokemon.transformed) {
+				return;
+			}
+			if (pokemon.hp <= pokemon.maxhp * 3 / 4 && !['Zen', 'Galar-Zen'].includes(pokemon.species.forme)) {
+				pokemon.addVolatile('zenmode');
+			} else if (pokemon.hp > pokemon.maxhp * 3 / 4 && ['Zen', 'Galar-Zen'].includes(pokemon.species.forme)) {
+				pokemon.addVolatile('zenmode'); // in case of base Darmanitan-Zen
+				pokemon.removeVolatile('zenmode');
+			}
 		},
 	},
 	// New Abilities
@@ -471,11 +514,17 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	bigballs: {
 		inherit: true,
 		isNonstandard: null,
-		onAnyModifyCritRatio(relayVar, source, target, move) {
+		onStart(pokemon) {
+			if (this.suppressingAbility(pokemon)) return;
+			this.add('-ability', pokemon, 'Has BIG BALLS');
+		},
+		onModifyCritRatio(relayVar, source, target, move) {
 			move.willCrit = true
 		},
 		onFoeModifyCritRatio(relayVar, source, target, move) {
-			move.willCrit = true
+			if (target.ability === 'bigballs') {
+				move.willCrit = true
+			}
 		},
 	}
 };

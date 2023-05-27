@@ -306,6 +306,16 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		basePower: 40,
 	},
+	shadowpunch: {
+		inherit: true,
+		basePower: 80
+	},
+	snaptrap: {
+		inherit: true,
+		isNonstandard: null,
+		basePower: 90,
+		type: "Steel",
+	},
 	// Freeze -> Frostbite
 	blizzard: {
 		inherit: true,
@@ -376,6 +386,14 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 	},
 	aurawheel: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	poweruppunch: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	dizzypunch: {
 		inherit: true,
 		isNonstandard: null,
 	},
