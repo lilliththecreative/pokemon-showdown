@@ -669,7 +669,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "PU",
 	},
 	teddiursa: {
-		tier: "6U",
+		tier: "ZU",
 	},
 	ursaring: {
 		tier: "UUBL",

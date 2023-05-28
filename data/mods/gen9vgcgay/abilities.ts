@@ -429,6 +429,114 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 		},
 	},
+	healer: {
+		inherit: true,
+		shortDesc: "Heals ally by 1/16th, Also 30% to heal ally status",
+		onResidual(pokemon) {
+			for (const allyActive of pokemon.adjacentAllies()) {
+				if (allyActive.status && this.randomChance(3, 10)) {
+					this.add('-activate', pokemon, 'ability: Healer');
+					allyActive.cureStatus();
+				}
+				allyActive.heal(allyActive.baseMaxhp / 16)
+			}
+		},
+	},
+	longreach: {
+		inherit: true,
+		shortDesc: "Additionally Moves targetting this pokemon have -1 priority",
+		onAnyModifyPriority(relayVar, source, target, move) {
+			if (target.ability === "longreach" && move.priority > -5) {
+				move.priority = move.priority - 1
+			}
+		},
+	},
+	// Ruin Nerf
+	swordofruin: {
+		inherit: true,
+		shortDesc: "Active Pokemon without this ability have their Def multiplied by .8",
+		onAnyModifyDef(def, target, source, move) {
+			const abilityHolder = this.effectState.target;
+			if (target.hasAbility('Sword of Ruin')) return;
+			if (!move.ruinedDef?.hasAbility('Sword of Ruin')) move.ruinedDef = abilityHolder;
+			if (move.ruinedDef !== abilityHolder) return;
+			this.debug('Sword of Ruin Def drop');
+			return this.chainModify(0.8);
+		},
+	},
+	tabletsofruin: {
+		inherit: true,
+		shortDesc: "Active Pokemon without this ability have their Atk multiplied by .8",
+		onAnyModifyAtk(atk, source, target, move) {
+			const abilityHolder = this.effectState.target;
+			if (source.hasAbility('Tablets of Ruin')) return;
+			if (!move.ruinedAtk) move.ruinedAtk = abilityHolder;
+			if (move.ruinedAtk !== abilityHolder) return;
+			this.debug('Tablets of Ruin Atk drop');
+			return this.chainModify(0.8);
+		},
+	},
+	vesselofruin: {
+		inherit: true,
+		shortDesc: "Active Pokemon without this ability have their SpAtk multiplied by .8",
+		onAnyModifySpA(spa, source, target, move) {
+			const abilityHolder = this.effectState.target;
+			if (source.hasAbility('Vessel of Ruin')) return;
+			if (!move.ruinedSpA) move.ruinedSpA = abilityHolder;
+			if (move.ruinedSpA !== abilityHolder) return;
+			this.debug('Vessel of Ruin SpA drop');
+			return this.chainModify(0.8);
+		},
+	},
+	beadsofruin: {
+		inherit: true,
+		shortDesc: "Active Pokemon without this ability have their SpDef multiplied by .8",
+		onAnyModifySpD(spd, target, source, move) {
+			const abilityHolder = this.effectState.target;
+			if (target.hasAbility('Beads of Ruin')) return;
+			if (!move.ruinedSpD?.hasAbility('Beads of Ruin')) move.ruinedSpD = abilityHolder;
+			if (move.ruinedSpD !== abilityHolder) return;
+			this.debug('Beads of Ruin SpD drop');
+			return this.chainModify(0.8);
+		},
+	},
+	// Weather Nerf
+	swiftswim: {
+		inherit: true,
+		shortDesc: "1.5x speed in Rain",
+		onModifySpe(spe, pokemon) {
+			if (['raindance', 'primordialsea'].includes(pokemon.effectiveWeather())) {
+				return this.chainModify(1.5);
+			}
+		},
+	},
+	chlorophyll: {
+		inherit: true,
+		shortDesc: "1.5x speed in Sun",
+		onModifySpe(spe, pokemon) {
+			if (['sunnyday', 'desolateland'].includes(pokemon.effectiveWeather())) {
+				return this.chainModify(1.5);
+			}
+		},
+	},
+	slushrush: {
+		inherit: true,
+		shortDesc: "1.5x speed in Hail/Snow",
+		onModifySpe(spe, pokemon) {
+			if (this.field.isWeather(['hail', 'snow'])) {
+				return this.chainModify(1.5);
+			}
+		},
+	},
+	sandrush: {
+		inherit: true,
+		shortDesc: "1.5x speed in Sand",
+		onModifySpe(spe, pokemon) {
+			if (this.field.isWeather('sandstorm')) {
+				return this.chainModify(1.5);
+			}
+		},
+	},
 	// New Abilities
 	triplethreat: {
 		inherit: true,

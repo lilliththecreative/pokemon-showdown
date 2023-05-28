@@ -316,6 +316,35 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		basePower: 90,
 		type: "Steel",
 	},
+	tailwind: {
+		inherit: true,
+		shortDesc: "1.5x speed for your side for 4 turns",
+		condition: {
+			duration: 4,
+			durationCallback(target, source, effect) {
+				if (source?.hasAbility('persistent')) {
+					this.add('-activate', source, 'ability: Persistent', '[move] Tailwind');
+					return 6;
+				}
+				return 4;
+			},
+			onSideStart(side, source) {
+				if (source?.hasAbility('persistent')) {
+					this.add('-sidestart', side, 'move: Tailwind', '[persistent]');
+				} else {
+					this.add('-sidestart', side, 'move: Tailwind');
+				}
+			},
+			onModifySpe(spe, pokemon) {
+				return this.chainModify(1.5);
+			},
+			onSideResidualOrder: 26,
+			onSideResidualSubOrder: 5,
+			onSideEnd(side) {
+				this.add('-sideend', side, 'move: Tailwind');
+			},
+		},
+	},
 	// Freeze -> Frostbite
 	blizzard: {
 		inherit: true,
