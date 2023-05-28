@@ -2199,4 +2199,9 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		shortDesc: "All moves used by and on target will crit",
 		desc: "All moves used by and on target will crit",
 	},
+	oddkeystone: {
+		name: "Odd Keystone",
+		shortDesc: "All moves will fail until this pokemon attacks",
+		desc: "All moves will fail until this pokemon attacks",
+	},
 };

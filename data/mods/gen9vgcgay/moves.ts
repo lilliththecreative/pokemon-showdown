@@ -310,6 +310,11 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		basePower: 80
 	},
+	chatter: {
+		inherit: true,
+		isNonstandard: null,
+		basePower: 80
+	},
 	snaptrap: {
 		inherit: true,
 		isNonstandard: null,

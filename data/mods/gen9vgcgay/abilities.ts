@@ -20,44 +20,6 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			},
 		},
 	},
-	pastelveil: {
-		inherit: true,
-		onStart(pokemon) {
-			for (const ally of pokemon.alliesAndSelf()) {
-				if (['psn', 'tox', 'brn', 'slp'].includes(ally.status)) {
-					this.add('-activate', pokemon, 'ability: Pastel Veil');
-					ally.cureStatus();
-				}
-			}
-		},
-		onUpdate(pokemon) {
-			if (['psn', 'tox', 'brn', 'slp'].includes(pokemon.status)) {
-				this.add('-activate', pokemon, 'ability: Pastel Veil');
-				pokemon.cureStatus();
-			}
-		},
-		onAllySwitchIn(pokemon) {
-			if (['psn', 'tox', 'brn', 'slp'].includes(pokemon.status)) {
-				this.add('-activate', this.effectState.target, 'ability: Pastel Veil');
-				pokemon.cureStatus();
-			}
-		},
-		onSetStatus(status, target, source, effect) {
-			if (!['psn', 'tox', 'brn', 'slp'].includes(status.id)) return;
-			if ((effect as Move)?.status) {
-				this.add('-immune', target, '[from] ability: Pastel Veil');
-			}
-			return false;
-		},
-		onAllySetStatus(status, target, source, effect) {
-			if (!['psn', 'tox', 'brn', 'slp'].includes(status.id)) return;
-			if ((effect as Move)?.status) {
-				const effectHolder = this.effectState.target;
-				this.add('-block', target, 'ability: Pastel Veil', '[of] ' + effectHolder);
-			}
-			return false;
-		},
-	},
 	reckless: {
 		inherit: true,
 		shortDesc: "This Pokemon's attacks with recoil or crash damage have 1.3x power; not Struggle.",
@@ -122,13 +84,6 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 		},
 	},
-	galewings: {
-		inherit: true,
-		onModifyPriority(priority, pokemon, target, move) {
-			if (move?.type === 'Flying' && pokemon.hp >= pokemon.maxhp/2) return priority + 1;
-		},
-		shortDesc: "If Pokemon's HP is >= 50%, Flying moves have priority increased by 1.",
-	},
 	leafguard: {
 		inherit: true,
 		shortDesc: "Guards Self and Allies from Status Conditions in Sun.",
@@ -177,23 +132,6 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 		}
 	},
-	flowergift: {
-		inherit: true,
-		shortDesc: "If Sunny Day active, it and allies' Atk, SpA, Def, and SpDef are 1.5x",
-		onAllyModifySpAPriority: 3,
-		onAllyModifySpA(atk, pokemon) {
-			if (this.effectState.target.baseSpecies.baseSpecies !== 'Cherrim') return;
-			if (['sunnyday', 'desolateland'].includes(pokemon.effectiveWeather())) {
-				return this.chainModify(1.5);
-			}
-		},
-		onAllyModifyDef(spd, pokemon) {
-			if (this.effectState.target.baseSpecies.baseSpecies !== 'Cherrim') return;
-			if (['sunnyday', 'desolateland'].includes(pokemon.effectiveWeather())) {
-				return this.chainModify(1.5);
-			}
-		},
-	},
 	rivalry: {
 		inherit: true,
 		shortDesc: "1.5x damage on same gender, 0.9x damage on opposite gender",
@@ -206,143 +144,6 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 					this.debug('Rivalry weaken');
 					return this.chainModify(0.9);
 				}
-			}
-		},
-	},
-	protean: {
-		inherit: true,
-		shortDesc: "Changes type to be perfect offensive and defensive type",
-		onResidualOrder: 29,
-		onResidual(pokemon) {
-			this.effectState.protean = false;
-		},
-		onPrepareHit(source, target, move) {
-			if (this.effectState.protean) return;
-			if (move.hasBounced || move.flags['futuremove'] || move.sourceEffect === 'snatch') return;
-			const type = move.type;
-			if (type && type !== '???' && source.getTypes().join() !== type) {
-				if (!source.setType(type)) return;
-				this.effectState.protean = true;
-				this.add('-start', source, 'typechange', type, '[from] ability: Protean');
-			}
-		},
-		onSourceBeforeMove(source, target, move) {
-			if (this.effectState.protean) return;
-			let type = move.type
-			switch (type) {
-			case 'Normal':
-				type = 'Ghost';
-				break;
-			case 'Fighting':
-				type = 'Ghost';
-				break;
-			case 'Flying':
-				type = 'Rock';
-				break;
-			case 'Poison':
-				type = 'Steel';
-				break;
-			case 'Ground':
-				type = 'Flying';
-				break;
-			case 'Rock':
-				type = 'Fighting';
-				break;
-			case 'Bug':
-				type = 'Poison';
-				break;
-			case 'Ghost':
-				type = 'Normal';
-				break;
-			case 'Steel':
-				type = 'Electric';
-				break;
-			case 'Fire':
-				type = 'Water';
-				break;
-			case 'Water':
-				type = 'Grass';
-				break;
-			case 'Grass':
-				type = 'Fire';
-				break;
-			case 'Electric':
-				type = 'Ground';
-				break;
-			case 'Psychic':
-				type = 'Dark';
-				break;
-			case 'Ice':
-				type = 'Ice';
-				break;
-			case 'Dragon':
-				type = 'Fairy';
-				break;
-			case 'Dark':
-				type = 'Fighting';
-				break;
-			case 'Fairy':
-				type = 'Poison';
-				break;
-			}
-			target.setType(type)
-			this.effectState.protean = true;
-			this.add('-start', target, 'typechange', type, '[from] ability: Protean');
-		},
-	},
-	normalize: {
-		inherit: true,
-		shortDesc: "All moves are normal, but are 1.2x power and ignore immunities and resistances",
-		onModifyMove(move) {
-			if (!move.ignoreImmunity) move.ignoreImmunity = {};
-			if (move.ignoreImmunity !== true) {
-				move.ignoreImmunity['Fighting'] = true;
-				move.ignoreImmunity['Normal'] = true;
-			}
-		},
-		onModifyDamage(damage, source, target, move) {
-			if (target.getMoveHitData(move).typeMod < 0) {
-				return this.chainModify(1/target.getMoveHitData(move).typeMod);
-			}
-		},
-	},
-	mimicry: {
-		inherit: true,
-		shortDesc: "Sets primary type to terrain, Sets terrain if use move of corresponding type",
-		onPrepareHit(source, target, move) {
-			if (move.hasBounced || move.flags['futuremove'] || move.sourceEffect === 'snatch') return;
-			const type = move.type;
-			if (type == "Electric") this.field.setTerrain('electricterrain');
-			if (type == "Grass") this.field.setTerrain('grassyterrain');
-			if (type == "Psychic") this.field.setTerrain('psychicterrain');
-			if (type == "Fairy") this.field.setTerrain('mistyterrain');
-		},
-		onTerrainChange(pokemon) {
-			let types;
-			switch (this.field.terrain) {
-			case 'electricterrain':
-				types = ['Electric', 'Steel'];
-				break;
-			case 'grassyterrain':
-				types = ['Grass', 'Steel'];
-				break;
-			case 'mistyterrain':
-				types = ['Fairy', 'Steel'];
-				break;
-			case 'psychicterrain':
-				types = ['Psychic', 'Steel'];
-				break;
-			default:
-				types = pokemon.baseSpecies.types;
-			}
-			const oldTypes = pokemon.getTypes();
-			if (oldTypes.join() === types.join() || !pokemon.setType(types)) return;
-			if (this.field.terrain || pokemon.transformed) {
-				this.add('-start', pokemon, 'typechange', types.join('/'), '[from] ability: Mimicry');
-				if (!this.field.terrain) this.hint("Transform Mimicry changes you to your original un-transformed types.");
-			} else {
-				this.add('-activate', pokemon, 'ability: Mimicry');
-				this.add('-end', pokemon, 'typechange', '[silent]');
 			}
 		},
 	},
@@ -414,6 +215,224 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 		},
 	},
+	healer: {
+		inherit: true,
+		shortDesc: "Heals ally by 1/16th, Also 30% to heal ally status",
+		onResidual(pokemon) {
+			for (const allyActive of pokemon.adjacentAllies()) {
+				if (allyActive.status && this.randomChance(3, 10)) {
+					this.add('-activate', pokemon, 'ability: Healer');
+					allyActive.cureStatus();
+				}
+				allyActive.heal(allyActive.baseMaxhp / 16)
+			}
+		},
+	},
+	bigpecks: {
+		inherit: true,
+		shortDesc: "Immune to defense lowering, Omniboost if intimidated",
+		onTryBoost(boost, target, source, effect) {
+			// if (source && target === source) return;
+			if (boost.def && boost.def < 0) {
+				delete boost.def;
+				if (!(effect as ActiveMove).secondaries && effect.id !== 'octolock') {
+					this.add("-fail", target, "unboost", "Defense", "[from] ability: Big Pecks", "[of] " + target);
+				}
+			}
+			if (effect.name === 'Intimidate' && boost.atk) {
+				this.add('-fail', target, 'unboost', 'Attack', '[from] ability: Big Pecks', '[of] ' + target);
+				boost.atk = 1
+				boost.def = 1
+				boost.spa = 1
+				boost.spd = 1
+				boost.spe = 1
+			}
+		},
+	},
+	// Signature Ability Buffs
+	galewings: {
+		inherit: true,
+		onModifyPriority(priority, pokemon, target, move) {
+			if (move?.type === 'Flying' && pokemon.hp >= pokemon.maxhp/2) return priority + 1;
+		},
+		shortDesc: "If Pokemon's HP is >= 50%, Flying moves have priority increased by 1.",
+	},
+	flowergift: {
+		inherit: true,
+		shortDesc: "If Sunny Day active, it and allies' Atk, SpA, Def, and SpDef are 1.5x",
+		onAllyModifySpAPriority: 3,
+		onAllyModifySpA(atk, pokemon) {
+			if (this.effectState.target.baseSpecies.baseSpecies !== 'Cherrim') return;
+			if (['sunnyday', 'desolateland'].includes(pokemon.effectiveWeather())) {
+				return this.chainModify(1.5);
+			}
+		},
+		onAllyModifyDef(spd, pokemon) {
+			if (this.effectState.target.baseSpecies.baseSpecies !== 'Cherrim') return;
+			if (['sunnyday', 'desolateland'].includes(pokemon.effectiveWeather())) {
+				return this.chainModify(1.5);
+			}
+		},
+	},
+	colorchange: {
+		inherit: true,
+		shortDesc: "Changes type to be perfect offensive and defensive type once per turn",
+		onResidualOrder: 29,
+		onResidual(pokemon) {
+			this.effectState.colorChange = false;
+		},
+		onSwitchIn(pokemon) {
+			delete this.effectState.colorChange;
+		},
+		onPrepareHit(source, target, move) {
+			if (this.effectState.colorChange) return;
+			if (move.hasBounced || move.flags['futuremove'] || move.sourceEffect === 'snatch') return;
+			const type = move.type;
+			if (type && type !== '???' && source.getTypes().join() !== type) {
+				if (!source.setType(type)) return;
+				this.effectState.colorChange = true;
+				this.add('-start', source, 'typechange', type, '[from] ability: Color Change');
+			}
+		},
+		onSourceBeforeMove(source, target, move) {
+			if (this.effectState.colorChange) return;
+			let type = move.type
+			switch (type) {
+			case 'Normal':
+				type = 'Ghost';
+				break;
+			case 'Fighting':
+				type = 'Ghost';
+				break;
+			case 'Flying':
+				type = 'Rock';
+				break;
+			case 'Poison':
+				type = 'Steel';
+				break;
+			case 'Ground':
+				type = 'Flying';
+				break;
+			case 'Rock':
+				type = 'Fighting';
+				break;
+			case 'Bug':
+				type = 'Poison';
+				break;
+			case 'Ghost':
+				type = 'Normal';
+				break;
+			case 'Steel':
+				type = 'Electric';
+				break;
+			case 'Fire':
+				type = 'Water';
+				break;
+			case 'Water':
+				type = 'Grass';
+				break;
+			case 'Grass':
+				type = 'Fire';
+				break;
+			case 'Electric':
+				type = 'Ground';
+				break;
+			case 'Psychic':
+				type = 'Dark';
+				break;
+			case 'Ice':
+				type = 'Ice';
+				break;
+			case 'Dragon':
+				type = 'Fairy';
+				break;
+			case 'Dark':
+				type = 'Fighting';
+				break;
+			case 'Fairy':
+				type = 'Poison';
+				break;
+			}
+			target.setType(type)
+			this.effectState.colorChange = true;
+			this.add('-start', target, 'typechange', type, '[from] ability: Color Change');
+		},
+	},
+	normalize: {
+		inherit: true,
+		shortDesc: "All moves are normal, but are 1.2x power and ignore immunities and resistances",
+		onModifyMove(move) {
+			if (!move.ignoreImmunity) move.ignoreImmunity = {};
+			if (move.ignoreImmunity !== true) {
+				move.ignoreImmunity['Fighting'] = true;
+				move.ignoreImmunity['Normal'] = true;
+			}
+		},
+		onModifyDamage(damage, source, target, move) {
+			if (target.getMoveHitData(move).typeMod < 0) {
+				return this.chainModify(1/target.getMoveHitData(move).typeMod);
+			}
+		},
+	},
+	mimicry: {
+		inherit: true,
+		shortDesc: "Sets primary type to terrain, Sets terrain if use move of corresponding type",
+		onPrepareHit(source, target, move) {
+			if (move.hasBounced || move.flags['futuremove'] || move.sourceEffect === 'snatch') return;
+			const type = move.type;
+			if (type == "Electric") this.field.setTerrain('electricterrain');
+			if (type == "Grass") this.field.setTerrain('grassyterrain');
+			if (type == "Psychic") this.field.setTerrain('psychicterrain');
+			if (type == "Fairy") this.field.setTerrain('mistyterrain');
+		},
+		onTerrainChange(pokemon) {
+			let types;
+			switch (this.field.terrain) {
+			case 'electricterrain':
+				types = ['Electric', 'Steel'];
+				break;
+			case 'grassyterrain':
+				types = ['Grass', 'Steel'];
+				break;
+			case 'mistyterrain':
+				types = ['Fairy', 'Steel'];
+				break;
+			case 'psychicterrain':
+				types = ['Psychic', 'Steel'];
+				break;
+			default:
+				types = pokemon.baseSpecies.types;
+			}
+			const oldTypes = pokemon.getTypes();
+			if (oldTypes.join() === types.join() || !pokemon.setType(types)) return;
+			if (this.field.terrain || pokemon.transformed) {
+				this.add('-start', pokemon, 'typechange', types.join('/'), '[from] ability: Mimicry');
+				if (!this.field.terrain) this.hint("Transform Mimicry changes you to your original un-transformed types.");
+			} else {
+				this.add('-activate', pokemon, 'ability: Mimicry');
+				this.add('-end', pokemon, 'typechange', '[silent]');
+			}
+		},
+	},
+	longreach: {
+		inherit: true,
+		shortDesc: "Additionally Moves targetting this pokemon have -1 priority",
+		onAnyModifyPriority(relayVar, source, target, move) {
+			if (target.ability === "longreach" && move.priority > -5) {
+				move.priority = move.priority - 1
+			}
+		},
+	},
+	punkrock: {
+		inherit: true,
+		shortDesc: "This Pokemon receives 1/2 damage from sound moves. Its own have 1.5x power.",
+		onBasePower(basePower, attacker, defender, move) {
+			if (move.flags['sound']) {
+				this.debug('Punk Rock boost');
+				return this.chainModify([3, 2]);
+			}
+		},
+	},
 	zenmode: {
 		inherit: true,
 		shortDesc: "Switches to Zen move if less than 75% health",
@@ -429,26 +448,74 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 		},
 	},
-	healer: {
+	gulpmissile: {
 		inherit: true,
-		shortDesc: "Heals ally by 1/16th, Also 30% to heal ally status",
-		onResidual(pokemon) {
-			for (const allyActive of pokemon.adjacentAllies()) {
-				if (allyActive.status && this.randomChance(3, 10)) {
-					this.add('-activate', pokemon, 'ability: Healer');
-					allyActive.cureStatus();
+		shortDesc: "When hit after Surf/Dive and start, attacker takes 33% and -1 Def or Para",
+		onSwitchIn(pokemon) {
+			if (
+				pokemon.hasAbility('gulpmissile') && pokemon.species.name === 'Cramorant'
+			) {
+				const forme = pokemon.hp <= pokemon.maxhp / 2 ? 'cramorantgorging' : 'cramorantgulping';
+				pokemon.formeChange(forme);
+			}
+		},
+		onDamagingHit(damage, target, source, move) {
+			if (!source.hp || !source.isActive || target.transformed || target.isSemiInvulnerable()) return;
+			if (['cramorantgulping', 'cramorantgorging'].includes(target.species.id)) {
+				this.damage(source.baseMaxhp / 3, source, target);
+				if (target.species.id === 'cramorantgulping') {
+					this.boost({def: -1}, source, target, null, true);
+				} else {
+					source.trySetStatus('par', target, move);
 				}
-				allyActive.heal(allyActive.baseMaxhp / 16)
+				target.formeChange('cramorant', move);
 			}
 		},
 	},
-	longreach: {
+	pastelveil: {
 		inherit: true,
-		shortDesc: "Additionally Moves targetting this pokemon have -1 priority",
-		onAnyModifyPriority(relayVar, source, target, move) {
-			if (target.ability === "longreach" && move.priority > -5) {
-				move.priority = move.priority - 1
+		onStart(pokemon) {
+			for (const ally of pokemon.alliesAndSelf()) {
+				if (['psn', 'tox', 'brn', 'slp'].includes(ally.status)) {
+					this.add('-activate', pokemon, 'ability: Pastel Veil');
+					ally.cureStatus();
+				}
 			}
+		},
+		onUpdate(pokemon) {
+			if (['psn', 'tox', 'brn', 'slp'].includes(pokemon.status)) {
+				this.add('-activate', pokemon, 'ability: Pastel Veil');
+				pokemon.cureStatus();
+			}
+		},
+		onAllySwitchIn(pokemon) {
+			if (['psn', 'tox', 'brn', 'slp'].includes(pokemon.status)) {
+				this.add('-activate', this.effectState.target, 'ability: Pastel Veil');
+				pokemon.cureStatus();
+			}
+		},
+		onSetStatus(status, target, source, effect) {
+			if (!['psn', 'tox', 'brn', 'slp'].includes(status.id)) return;
+			if ((effect as Move)?.status) {
+				this.add('-immune', target, '[from] ability: Pastel Veil');
+			}
+			return false;
+		},
+		onAllySetStatus(status, target, source, effect) {
+			if (!['psn', 'tox', 'brn', 'slp'].includes(status.id)) return;
+			if ((effect as Move)?.status) {
+				const effectHolder = this.effectState.target;
+				this.add('-block', target, 'ability: Pastel Veil', '[of] ' + effectHolder);
+			}
+			return false;
+		},
+	},
+	grasspelt: {
+		inherit: true,
+		shortDesc: "If Grassy Terrain is up, Defense and Special Defense are multiplied by 1.5.",
+		onModifySpDPriority: 6,
+		onModifySpD(pokemon) {
+			if (this.field.isTerrain('grassyterrain')) return this.chainModify(1.5);
 		},
 	},
 	// Ruin Nerf
@@ -632,6 +699,23 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		onFoeModifyCritRatio(relayVar, source, target, move) {
 			if (target.ability === 'bigballs') {
 				move.willCrit = true
+			}
+		},
+	},
+	oddkeystone: {
+		inherit: true,
+		isNonstandard: null,
+		isBreakable: true,
+		onSwitchIn(pokemon) {
+			this.effectState.oddKeystone = true;
+		},
+		onPrepareHit(source, target, move) {
+			this.effectState.oddKeystone = false;
+		},
+		onTryHit(target, source, move) {
+			if (target !== source && this.effectState.oddKeystone) {
+				this.add('-immune', target, '[from] ability: Odd Keystone');
+				return null
 			}
 		},
 	}

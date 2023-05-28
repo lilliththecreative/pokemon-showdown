@@ -5264,4 +5264,10 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 0,
 		num: -11,
 	},
+	oddkeystone: {
+		isNonstandard: "CAP",
+		name: "Odd Keystone",
+		rating: 4,
+		num: -12,
+	}
 };
