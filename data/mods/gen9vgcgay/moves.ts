@@ -94,7 +94,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	"falseswipe": {
 		inherit: true,
-		"basePower": 180,
+		"basePower": 160,
 		isNonstandard: null
 	},
 	"razorwind": {
@@ -110,6 +110,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	"explosion": {
 		inherit: true,
 		"basePower": 350
+	},
+	"selfdestruct": {
+		inherit: true,
+		"basePower": 275
 	},
 	"crabhammer": {
 		"inherit": true,
@@ -310,6 +314,15 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		basePower: 80
 	},
+	volttackle: {
+		inherit: true,
+		basePower: 130
+	},
+	belch: {
+		inherit: true,
+		basePower: 130,
+		accuracy: 100
+	},
 	chatter: {
 		inherit: true,
 		isNonstandard: null,
@@ -349,6 +362,37 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 				this.add('-sideend', side, 'move: Tailwind');
 			},
 		},
+	},
+	// Pledges
+	firepledge: {
+		inherit: true,
+		basePowerCallback(target, source, move) {
+			if (['grasspledge', 'waterpledge'].includes(move.sourceEffect)) {
+				this.add('-combine');
+				return 200;
+			}
+			return 80;
+		}
+	},
+	waterpledge: {
+		inherit: true,
+		basePowerCallback(target, source, move) {
+			if (['grasspledge', 'firepledge'].includes(move.sourceEffect)) {
+				this.add('-combine');
+				return 200;
+			}
+			return 80;
+		}
+	},
+	grasspledge: {
+		inherit: true,
+		basePowerCallback(target, source, move) {
+			if (['firepledge', 'waterpledge'].includes(move.sourceEffect)) {
+				this.add('-combine');
+				return 200;
+			}
+			return 80;
+		}
 	},
 	// Freeze -> Frostbite
 	blizzard: {
@@ -431,4 +475,8 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	electrify: {
+		inherit: true,
+		isNonstandard: null,
+	}
 };

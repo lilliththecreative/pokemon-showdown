@@ -224,10 +224,8 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"tier": "Illegal"
 	},
 	"sandslash": {
-		"isNonstandard": null,
-		"tier": "OU",
-		"natDexTier": "OU",
-		"doublesTier": "DOU"
+		"isNonstandard": "Past",
+		"tier": "Illegal"
 	},
 	"sandslashalola": {
 		"isNonstandard": null,
@@ -274,10 +272,8 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"doublesTier": "DOU"
 	},
 	"clefable": {
-		"isNonstandard": null,
-		"tier": "OU",
-		"natDexTier": "OU",
-		"doublesTier": "DOU"
+		"isNonstandard": "Past",
+		"tier": "Illegal"
 	},
 	"vulpix": {
 		"isNonstandard": "Past",
@@ -736,10 +732,8 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"tier": "Illegal"
 	},
 	"electrode": {
-		"isNonstandard": null,
-		"tier": "OU",
-		"natDexTier": "OU",
-		"doublesTier": "DOU"
+		"isNonstandard": "Past",
+		"tier": "Illegal"
 	},
 	"electrodehisui": {
 		"isNonstandard": null,
@@ -1042,10 +1036,8 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"doublesTier": "DOU"
 	},
 	"eevee": {
-		"isNonstandard": null,
-		"tier": "OU",
-		"natDexTier": "OU",
-		"doublesTier": "DOU"
+		"isNonstandard": "Past",
+		"tier": "Illegal"
 	},
 	"eeveestarter": {
 		"isNonstandard": "Past",
@@ -3152,10 +3144,8 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"doublesTier": "DOU"
 	},
 	"woobat": {
-		"isNonstandard": null,
-		"tier": "OU",
-		"natDexTier": "OU",
-		"doublesTier": "DOU"
+		"isNonstandard": "Past",
+		"tier": "Illegal"
 	},
 	"swoobat": {
 		"isNonstandard": null,
@@ -3346,10 +3336,8 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"doublesTier": "DOU"
 	},
 	"scraggy": {
-		"isNonstandard": null,
-		"tier": "OU",
-		"natDexTier": "OU",
-		"doublesTier": "DOU"
+		"isNonstandard": "Past",
+		"tier": "Illegal"
 	},
 	"scrafty": {
 		"isNonstandard": null,
@@ -3384,10 +3372,8 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"doublesTier": "DOU"
 	},
 	"tirtouga": {
-		"isNonstandard": null,
-		"tier": "OU",
-		"natDexTier": "OU",
-		"doublesTier": "DOU"
+		"isNonstandard": "Past",
+		"tier": "Illegal"
 	},
 	"carracosta": {
 		"isNonstandard": null,
@@ -3868,10 +3854,8 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"tier": "Illegal"
 	},
 	"genesect": {
-		"isNonstandard": null,
-		"tier": "OU",
-		"natDexTier": "OU",
-		"doublesTier": "DOU"
+		"isNonstandard": "Past",
+		"tier": "Illegal"
 	},
 	"genesectburn": {
 		"isNonstandard": "Past",
@@ -4038,10 +4022,8 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"doublesTier": "DOU"
 	},
 	"espurr": {
-		"isNonstandard": null,
-		"tier": "OU",
-		"natDexTier": "OU",
-		"doublesTier": "DOU"
+		"isNonstandard": "Past",
+		"tier": "Illegal"
 	},
 	"meowstic": {
 		"isNonstandard": null,
@@ -4050,10 +4032,8 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"doublesTier": "DOU"
 	},
 	"meowsticf": {
-		"isNonstandard": null,
-		"tier": "OU",
-		"natDexTier": "OU",
-		"doublesTier": "DOU"
+		"isNonstandard": "Past",
+		"tier": "Illegal"
 	},
 	"honedge": {
 		"isNonstandard": "Past",
@@ -4130,10 +4110,8 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"doublesTier": "DOU"
 	},
 	"helioptile": {
-		"isNonstandard": null,
-		"tier": "OU",
-		"natDexTier": "OU",
-		"doublesTier": "DOU"
+		"isNonstandard": "Past",
+		"tier": "Illegal"
 	},
 	"heliolisk": {
 		"isNonstandard": null,
@@ -4868,10 +4846,8 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"doublesTier": "DOU"
 	},
 	"skwovet": {
-		"isNonstandard": null,
-		"tier": "OU",
-		"natDexTier": "OU",
-		"doublesTier": "DOU"
+		"isNonstandard": "Past",
+		"tier": "Illegal"
 	},
 	"greedent": {
 		"isNonstandard": null,
@@ -4908,10 +4884,8 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"doublesTier": "DOU"
 	},
 	"nickit": {
-		"isNonstandard": null,
-		"tier": "OU",
-		"natDexTier": "OU",
-		"doublesTier": "DOU"
+		"isNonstandard": "Past",
+		"tier": "Illegal"
 	},
 	"thievul": {
 		"isNonstandard": null,
@@ -4920,10 +4894,8 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"doublesTier": "DOU"
 	},
 	"gossifleur": {
-		"isNonstandard": null,
-		"tier": "OU",
-		"natDexTier": "OU",
-		"doublesTier": "DOU"
+		"isNonstandard": "Past",
+		"tier": "Illegal"
 	},
 	"eldegoss": {
 		"isNonstandard": null,
@@ -4932,10 +4904,8 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"doublesTier": "DOU"
 	},
 	"wooloo": {
-		"isNonstandard": null,
-		"tier": "OU",
-		"natDexTier": "OU",
-		"doublesTier": "DOU"
+		"isNonstandard": "Past",
+		"tier": "Illegal"
 	},
 	"dubwool": {
 		"isNonstandard": null,
@@ -4944,10 +4914,8 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"doublesTier": "DOU"
 	},
 	"chewtle": {
-		"isNonstandard": null,
-		"tier": "OU",
-		"natDexTier": "OU",
-		"doublesTier": "DOU"
+		"isNonstandard": "Past",
+		"tier": "Illegal"
 	},
 	"drednaw": {
 		"isNonstandard": null,
@@ -5056,10 +5024,8 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"doublesTier": "DOU"
 	},
 	"sinistea": {
-		"isNonstandard": null,
-		"tier": "OU",
-		"natDexTier": "OU",
-		"doublesTier": "DOU"
+		"isNonstandard": "Past",
+		"tier": "Illegal"
 	},
 	"sinisteaantique": {
 		"isNonstandard": "Past",
@@ -5248,10 +5214,8 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"tier": "Illegal"
 	},
 	"zarude": {
-		"isNonstandard": null,
-		"tier": "OU",
-		"natDexTier": "OU",
-		"doublesTier": "DOU"
+		"isNonstandard": "Past",
+		"tier": "Illegal"
 	},
 	"zarudedada": {
 		"isNonstandard": "Past",
@@ -5348,10 +5312,8 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"doublesTier": "DOU"
 	},
 	"lechonk": {
-		"isNonstandard": null,
-		"tier": "OU",
-		"natDexTier": "OU",
-		"doublesTier": "DOU"
+		"isNonstandard": "Past",
+		"tier": "Illegal"
 	},
 	"oinkologne": {
 		"isNonstandard": null,
@@ -5360,10 +5322,8 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"doublesTier": "DOU"
 	},
 	"oinkolognef": {
-		"isNonstandard": null,
-		"tier": "OU",
-		"natDexTier": "OU",
-		"doublesTier": "DOU"
+		"isNonstandard": "Past",
+		"tier": "Illegal"
 	},
 	"tarountula": {
 		"isNonstandard": "Past",
@@ -5468,10 +5428,8 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"doublesTier": "DOU"
 	},
 	"capsakid": {
-		"isNonstandard": null,
-		"tier": "OU",
-		"natDexTier": "OU",
-		"doublesTier": "DOU"
+		"isNonstandard": "Past",
+		"tier": "Illegal"
 	},
 	"scovillain": {
 		"isNonstandard": null,
@@ -5490,10 +5448,8 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"doublesTier": "DOU"
 	},
 	"varoom": {
-		"isNonstandard": null,
-		"tier": "OU",
-		"natDexTier": "OU",
-		"doublesTier": "DOU"
+		"isNonstandard": "Past",
+		"tier": "Illegal"
 	},
 	"revavroom": {
 		"isNonstandard": null,
@@ -5632,10 +5588,8 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"doublesTier": "DOU"
 	},
 	"shroodle": {
-		"isNonstandard": null,
-		"tier": "OU",
-		"natDexTier": "OU",
-		"doublesTier": "DOU"
+		"isNonstandard": "Past",
+		"tier": "Illegal"
 	},
 	"grafaiai": {
 		"isNonstandard": null,

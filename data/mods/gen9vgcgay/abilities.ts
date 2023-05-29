@@ -416,11 +416,17 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	longreach: {
 		inherit: true,
-		shortDesc: "Additionally Moves targetting this pokemon have -1 priority",
-		onAnyModifyPriority(relayVar, source, target, move) {
-			if (target && target.ability === "longreach" && move.priority > -5) {
-				move.priority = move.priority - 1
+		shortDesc: "Contact moves no longer make contact, Ranged moves do 1.5x",
+		onBasePower(basePower, attacker, defender, move) {
+			if (!move.flags['contact']) {
+				this.debug('Long Reach boost');
+				return this.chainModify([3, 2]);
 			}
+			else {
+				delete move.flags['contact'];
+			}
+		},
+		onModifyMove(move) {
 		},
 	},
 	punkrock: {
@@ -713,7 +719,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			this.effectState.oddKeystone = false;
 		},
 		onTryHit(target, source, move) {
-			if (target !== source && this.effectState.oddKeystone) {
+			if (target !== source && this.effectState.oddKeystone && move.category !== 'Status') {
 				this.add('-immune', target, '[from] ability: Odd Keystone');
 				return null
 			}
