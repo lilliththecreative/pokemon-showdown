@@ -418,7 +418,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		shortDesc: "Additionally Moves targetting this pokemon have -1 priority",
 		onAnyModifyPriority(relayVar, source, target, move) {
-			if (target.ability === "longreach" && move.priority > -5) {
+			if (target && target.ability === "longreach" && move.priority > -5) {
 				move.priority = move.priority - 1
 			}
 		},
@@ -691,7 +691,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		isNonstandard: null,
 		onStart(pokemon) {
 			if (this.suppressingAbility(pokemon)) return;
-			this.add('-ability', pokemon, 'Has BIG BALLS');
+			this.add('-ability', pokemon, 'Big Balls');
 		},
 		onModifyCritRatio(relayVar, source, target, move) {
 			move.willCrit = true
