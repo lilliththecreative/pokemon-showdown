@@ -418,15 +418,10 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		shortDesc: "Contact moves no longer make contact, Ranged moves do 1.5x",
 		onBasePower(basePower, attacker, defender, move) {
-			if (!move.flags['contact']) {
+			if (['Triple Arrows', 'Thousand Arrows', 'Spirit Shackle'].includes(move.name)) {
 				this.debug('Long Reach boost');
 				return this.chainModify([3, 2]);
 			}
-			else {
-				delete move.flags['contact'];
-			}
-		},
-		onModifyMove(move) {
 		},
 	},
 	punkrock: {
@@ -700,11 +695,11 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			this.add('-ability', pokemon, 'Big Balls');
 		},
 		onModifyCritRatio(relayVar, source, target, move) {
-			move.willCrit = true
+			move.willCrit = true;
 		},
 		onFoeModifyCritRatio(relayVar, source, target, move) {
 			if (target.ability === 'bigballs') {
-				move.willCrit = true
+				move.willCrit = true;
 			}
 		},
 	},
@@ -721,7 +716,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		onTryHit(target, source, move) {
 			if (target !== source && this.effectState.oddKeystone && move.category !== 'Status') {
 				this.add('-immune', target, '[from] ability: Odd Keystone');
-				return null
+				return null;
 			}
 		},
 	}

@@ -74,6 +74,20 @@ export const Formats: FormatList = [
 		ruleset: ['Flat Rules', '!! Adjust Level = 50'],
 	},
 	{
+		name: "[Gen 9] Free-For-All NatDex",
+		mod: 'gen9',
+		gameType: 'freeforall',
+		rated: false,
+		tournamentShow: false,
+		ruleset: ['Standard NatDex', '!Evasion Items Clause'],
+		banlist: [
+			'Annihilape', 'Arceus', 'Calyrex-Ice', 'Calyrex-Shadow', 'Chi-Yu', 'Dialga', 'Dialga-Origin', 'Flutter Mane', 'Giratina', 'Giratina-Origin', 'Groudon',
+			'Iron Bundle', 'Koraidon', 'Kyogre', 'Landorus-Base', 'Magearna', 'Mewtwo', 'Miraidon', 'Palafin', 'Palkia', 'Palkia-Origin', 'Rayquaza', 'Spectrier',
+			'Urshifu-Base', 'Zacian', 'Zacian-Crowned', 'Moody', 'Shadow Tag', 'Toxic Debris', 'Acupressure', 'Aromatic Mist', 'Baton Pass', 'Court Change',
+			'Final Gambit', 'Flatter', 'Follow Me', 'Heal Pulse', 'Last Respects', 'Poison Fang', 'Rage Powder', 'Spicy Extract', 'Swagger', 'Toxic', 'Toxic Spikes',
+		],
+	},
+	{
 		section: "Gen 4 Lower Tiers",
 	},
 	{
@@ -152,6 +166,12 @@ export const Formats: FormatList = [
 		searchShow: true,
 		ruleset: ['[Gen 1] 9U'],
 		banlist: ['9U'],
+	},
+	{
+		name: "[Gen 1] 10U Tradebacks",
+		mod: 'gen1',
+		searchShow: true,
+		ruleset: ['[Gen 1] 10U', 'Allow Tradeback'],
 	},
 	{
 		section: "Gen 2 Lower Tiers",
