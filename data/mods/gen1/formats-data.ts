@@ -288,7 +288,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "PU",
 	},
 	hypno: {
-		tier: "UU",
+		tier: "UUBL",
 	},
 	krabby: {
 		tier: "7U",
@@ -390,7 +390,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "UU",
 	},
 	lapras: {
-		tier: "UU",
+		tier: "UUBL",
 	},
 	ditto: {
 		tier: "10U",
