@@ -79,7 +79,7 @@ export const Formats: FormatList = [
 		gameType: 'freeforall',
 		rated: false,
 		tournamentShow: false,
-		ruleset: ['Standard NatDex', '!Evasion Items Clause'],
+		ruleset: ['Standard NatDex'],
 		banlist: [
 			'Annihilape', 'Arceus', 'Calyrex-Ice', 'Calyrex-Shadow', 'Chi-Yu', 'Dialga', 'Dialga-Origin', 'Flutter Mane', 'Giratina', 'Giratina-Origin', 'Groudon',
 			'Iron Bundle', 'Koraidon', 'Kyogre', 'Landorus-Base', 'Magearna', 'Mewtwo', 'Miraidon', 'Palafin', 'Palkia', 'Palkia-Origin', 'Rayquaza', 'Spectrier',
