@@ -216,7 +216,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "UU",
 	},
 	machop: {
-		tier: "LC",
+		tier: "8U",
 	},
 	machoke: {
 		tier: "PU",
@@ -417,7 +417,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "OU",
 	},
 	mimejr: {
-		tier: "LC",
+		tier: "8U",
 	},
 	mrmime: {
 		tier: "PU",
@@ -1057,7 +1057,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "PU",
 	},
 	spoink: {
-		tier: "LC",
+		tier: "8U",
 	},
 	grumpig: {
 		tier: "NU",
@@ -1270,7 +1270,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "UU",
 	},
 	chimchar: {
-		tier: "LC",
+		tier: "8U",
 	},
 	monferno: {
 		tier: "PU",

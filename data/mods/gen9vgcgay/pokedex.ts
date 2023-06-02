@@ -5235,7 +5235,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"inherit": true
 	},
-	"rotomcut": {
+	"rotommow": {
 		"types": [
 			"Electric",
 			"Grass"

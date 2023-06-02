@@ -2026,5 +2026,69 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	"arceus": {
 		"isNonstandard": "Unobtainable",
 		"tier": "Unreleased"
-	}
+	},
+	"arceusbug": {
+		"isNonstandard": "Past",
+		"tier": "Illegal"
+	},
+	"arceusdark": {
+		"isNonstandard": "Past",
+		"tier": "Illegal"
+	},
+	"arceusdragon": {
+		"isNonstandard": "Past",
+		"tier": "Illegal"
+	},
+	"arceuselectric": {
+		"isNonstandard": "Past",
+		"tier": "Illegal"
+	},
+	"arceusfairy": {
+		"isNonstandard": "Past",
+		"tier": "Illegal"
+	},
+	"arceusfighting": {
+		"isNonstandard": "Past",
+		"tier": "Illegal"
+	},
+	"arceusfire": {
+		"isNonstandard": "Past",
+		"tier": "Illegal"
+	},
+	"arceusflying": {
+		"isNonstandard": "Past",
+		"tier": "Illegal"
+	},
+	"arceusghost": {
+		"isNonstandard": "Past",
+		"tier": "Illegal"
+	},
+	"arceusgrass": {
+		"isNonstandard": "Past",
+		"tier": "Illegal"
+	},
+	"arceusground": {
+		"isNonstandard": "Past",
+		"tier": "Illegal"
+	},
+	"arceusice": {
+		"isNonstandard": "Past",
+		"tier": "Illegal"
+	},
+	"arceuspoison": {
+		"isNonstandard": "Past",
+		"tier": "Illegal"
+	},
+	"arceuspsychic": {
+		"isNonstandard": "Past",
+		"tier": "Illegal"
+	},
+	"arceusrock": {
+		"isNonstandard": "Past",
+		"tier": "Illegal"
+	},
+	"arceussteel": {
+		"isNonstandard": "Past",
+		"tier": "Illegal"
+	},
 };
