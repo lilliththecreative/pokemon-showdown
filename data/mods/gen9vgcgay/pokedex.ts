@@ -5502,15 +5502,16 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Grass"
 		],
 		"baseStats": {
-			"hp": 75,
-			"atk": 98,
-			"def": 63,
-			"spa": 98,
-			"spd": 63,
-			"spe": 101
+			"hp": 85,
+			"atk": 103,
+			"def": 73,
+			"spa": 103,
+			"spd": 73,
+			"spe": 106
 		},
 		"abilities": {
-			"0": "Gluttony",
+			"0": "Gorilla Tactics",
+			"1": "Monkey Tactics",
 			"H": "Overgrow"
 		},
 		"inherit": true
@@ -5520,15 +5521,16 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Fire"
 		],
 		"baseStats": {
-			"hp": 75,
-			"atk": 98,
-			"def": 63,
-			"spa": 98,
-			"spd": 63,
-			"spe": 101
+			"hp": 85,
+			"atk": 103,
+			"def": 73,
+			"spa": 103,
+			"spd": 73,
+			"spe": 106
 		},
 		"abilities": {
-			"0": "Gluttony",
+			"0": "Gorilla Tactics",
+			"1": "Monkey Tactics",
 			"H": "Blaze"
 		},
 		"inherit": true
@@ -5538,15 +5540,16 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Water"
 		],
 		"baseStats": {
-			"hp": 75,
-			"atk": 98,
-			"def": 63,
-			"spa": 98,
-			"spd": 63,
-			"spe": 101
+			"hp": 85,
+			"atk": 103,
+			"def": 73,
+			"spa": 103,
+			"spd": 73,
+			"spe": 106
 		},
 		"abilities": {
-			"0": "Gluttony",
+			"0": "Gorilla Tactics",
+			"1": "Monkey Tactics",
 			"H": "Torrent"
 		},
 		"inherit": true
@@ -5973,8 +5976,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"spe": 55
 		},
 		"abilities": {
-			"0": "Sheer Force",
-			"H": "Zen Mode"
+			"0": "Zen Mode"
 		},
 		"inherit": true
 	},
@@ -6010,8 +6012,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"spe": 140
 		},
 		"abilities": {
-			"0": "Gorilla Tactics",
-			"H": "Zen Mode"
+			"0": "Zen Mode"
 		},
 		"inherit": true
 	},
@@ -6564,8 +6565,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"abilities": {
 			"0": "Snow Cloak",
-			"1": "Slush Rush",
-			"H": "Swift Swim"
+			"1": "Arctic Rush",
+			"H": "Overcoat"
 		},
 		"inherit": true
 	},
@@ -6594,7 +6595,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"hp": 80,
 			"atk": 70,
 			"def": 40,
-			"spa": 130,
+			"spa": 100,
 			"spd": 60,
 			"spe": 145
 		},

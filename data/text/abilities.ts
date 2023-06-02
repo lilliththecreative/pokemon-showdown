@@ -2204,4 +2204,9 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		shortDesc: "All non-status will fail until this pokemon attacks",
 		desc: "All non-status will fail until this pokemon attacks",
 	},
+	monkeytactics: {
+		name: "Monkey Tactics",
+		shortDesc: "This Pokemon's SpA is 1.5x, but it can only select the first move it executes",
+		desc: "This Pokemon's SpA is 1.5x, but it can only select the first move it executes",
+	},
 };

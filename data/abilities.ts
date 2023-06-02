@@ -5268,5 +5268,11 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Odd Keystone",
 		rating: 4,
 		num: -12,
-	}
+	},
+	monkeytactics: {
+		isNonstandard: "CAP",
+		name: "Monkey Tactics",
+		rating: 4,
+		num: -13,
+	},
 };
