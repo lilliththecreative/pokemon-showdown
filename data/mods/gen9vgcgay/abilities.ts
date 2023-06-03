@@ -202,6 +202,35 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			})
 		}
 	},
+	stickyhold: {
+		inherit: true,
+		shortDesc: "Any contact with this pokemon makes their items sticky and unusable",
+		onModifyMove(move) {
+			move.secondaries?.push({
+				chance: 100,
+				onHit(target) {
+					if (!target.item || target.itemState.knockedOff) return;
+					if (target.ability === 'multitype') return;
+					if (move.flags['contact']) {
+						const item = target.getItem();
+						if (this.runEvent('TakeItem', target, null, move, item)) {
+							target.itemState.knockedOff = true;
+							this.add('-enditem', target, item.name, '[from] ability: Sticky Hold');
+						}
+					}
+				}
+			})
+		},
+		onDamagingHit(damage, target, source, move) {
+			if (this.checkMoveMakesContact(move, source, target)) {
+				const item = target.getItem();
+				if (this.runEvent('TakeItem', target, null, move, item)) {
+					target.itemState.knockedOff = true;
+					this.add('-enditem', target, item.name, '[from] ability: Sticky Hold');
+				}
+			}
+		},
+	},
 	quickfeet: {
 		inherit: true,
 		shortDesc: "1.5x speed if statused or has stat drops",

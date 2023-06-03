@@ -479,49 +479,4 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	bleakwindstorm: {
-		inherit: true,
-		onModifyMove(move, pokemon, target) {
-			switch (target?.effectiveWeather()) {
-			case 'raindance':
-			case 'primordialsea':
-				move.accuracy = true;
-				break;
-			case 'sunnyday':
-			case 'desolateland':
-				move.accuracy = 50;
-				break;
-			}
-		}
-	},
-	sandsearstorm: {
-		inherit: true,
-		onModifyMove(move, pokemon, target) {
-			switch (target?.effectiveWeather()) {
-			case 'raindance':
-			case 'primordialsea':
-				move.accuracy = true;
-				break;
-			case 'sunnyday':
-			case 'desolateland':
-				move.accuracy = 50;
-				break;
-			}
-		}
-	},
-	windboltstorm: {
-		inherit: true,
-		onModifyMove(move, pokemon, target) {
-			switch (target?.effectiveWeather()) {
-			case 'raindance':
-			case 'primordialsea':
-				move.accuracy = true;
-				break;
-			case 'sunnyday':
-			case 'desolateland':
-				move.accuracy = 50;
-				break;
-			}
-		}
-	}
 };

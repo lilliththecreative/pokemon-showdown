@@ -79,7 +79,7 @@ export const Formats: FormatList = [
 		gameType: 'freeforall',
 		rated: false,
 		tournamentShow: false,
-		ruleset: ['Standard NatDex'],
+		ruleset: ['Standard NatDex', 'Item Clause'],
 		banlist: [
 			'Arceus', 'Calyrex-Ice', 'Calyrex-Shadow', 'Chi-Yu', 'Dialga', 'Dialga-Origin', 'Flutter Mane', 'Giratina', 'Giratina-Origin', 'Groudon',
 			'Iron Bundle', 'Koraidon', 'Kyogre', 'Landorus-Base', 'Magearna', 'Mewtwo', 'Miraidon', 'Palafin', 'Palkia', 'Palkia-Origin', 'Rayquaza', 'Spectrier',
@@ -93,12 +93,12 @@ export const Formats: FormatList = [
 		gameType: 'freeforall',
 		rated: false,
 		tournamentShow: false,
-		ruleset: ['Standard', '!Evasion Items Clause'],
+		ruleset: ['Standard', '!Evasion Items Clause', 'Item Clause'],
 		banlist: [
 			'Arceus', 'Calyrex-Ice', 'Calyrex-Shadow', 'Chi-Yu', 'Dialga', 'Dialga-Origin', 'Flutter Mane', 'Giratina', 'Giratina-Origin', 'Groudon',
 			'Iron Bundle', 'Koraidon', 'Kyogre', 'Landorus-Base', 'Magearna', 'Mewtwo', 'Miraidon', 'Palafin', 'Palkia', 'Palkia-Origin', 'Rayquaza', 'Spectrier',
-			'Urshifu-Base', 'Zacian', 'Zacian-Crowned', 'Moody', 'Shadow Tag', 'Toxic Debris', 'Acupressure', 'Aromatic Mist', 'Baton Pass', 'Court Change',
-			'Final Gambit', 'Flatter', 'Follow Me', 'Heal Pulse', 'Last Respects', 'Poison Fang', 'Rage Powder', 'Spicy Extract', 'Swagger', 'Toxic', 'Toxic Spikes',
+			'Urshifu-Base', 'Zacian', 'Zacian-Crowned', 'Moody', 'Shadow Tag', 'Toxic Debris',
+			'Regenerator>1'
 		],
 		onValidateSet(set) {
 			if (set.moves.length !== 1 || this.dex.moves.get(set.moves[0]).id !== 'metronome') {
@@ -133,12 +133,19 @@ export const Formats: FormatList = [
 	{
 		name: "[Gen 4] 8U",
 		threads: [
-			`&bullet; <a href="https://docs.google.com/document/d/1j7SjNhxv1H5NuYRDIuSULh_znkbH6wqm_wn2a5PUC7Y">DPP 8U</a>`,
+			`&bullet; <a href="https://docs.google.com/document/d/1QIoxXWKK8nMM28qwzDvn-V0eY-BRnPkXpZPuHL-6wqI/edit?usp=sharing">DPP 8U</a>`,
 		],
 		mod: 'gen4',
 		searchShow: true,
 		ruleset: ['[Gen 4] 7U'],
 		banlist: ['7U'],
+	},
+	{
+		name: "[Gen 4] 9U",
+		mod: 'gen4',
+		searchShow: true,
+		ruleset: ['[Gen 4] 8U'],
+		banlist: ['8U'],
 	},
 	{
 		section: "Gen 1 Lower Tiers",
