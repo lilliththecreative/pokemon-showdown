@@ -137,4 +137,12 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	deepseascale: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	deepseatooth: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

@@ -751,6 +751,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	monkeytactics: {
 		inherit: true,
+		isNonstandard: null,
 		onStart(pokemon) {
 			pokemon.abilityState.choiceLock = "";
 		},
@@ -791,6 +792,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	wideeyed: {
 		inherit: true,
+		isNonstandard: null,
 		onModifyMove(move, pokemon, target) {
 			if (move.category === "Status" && move.target === "normal" && !target?.isAlly(pokemon)) {
 				move.target = "allAdjacentFoes";
@@ -799,6 +801,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	snaketrap: {
 		inherit: true,
+		isNonstandard: null,
 		onAfterMoveSecondary(target, source, move) {
 			if (move.flags['contact']) {
 				this.add('-ability', target, 'Snake Trap');
@@ -808,6 +811,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	heatsink: {
 		inherit: true,
+		isNonstandard: null,
 		onTryHit(target, source, move) {
 			if (target !== source && move.type === 'Fire') {
 				if (!this.boost({spa: 1})) {
