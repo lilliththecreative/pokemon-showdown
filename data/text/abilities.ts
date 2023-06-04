@@ -2209,4 +2209,19 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		shortDesc: "This Pokemon's SpA is 1.5x, but it can only select the first move it executes",
 		desc: "This Pokemon's SpA is 1.5x, but it can only select the first move it executes",
 	},
+	wideeyed: {
+		name: "Wide Eyed",
+		shortDesc: "All Status moves this pokemon on an enemy will hit both",
+		desc: "All Status moves this pokemon on an enemy will hit both",
+	},
+	snaketrap: {
+		name: "Snake Trap",
+		shortDesc: "All contact moves this pokemon use will trap the opponent",
+		desc: "All contact moves this pokemon use will trap the opponent",
+	},
+	heatsink: {
+		name: "Heat Sink",
+		shortDesc: "This Pokemon draws Fire moves to itself to raise SpA by 1; Fire Immunity",
+		desc: "This Pokemon draws Fire moves to itself to raise SpA by 1; Fire Immunity",
+	},
 };

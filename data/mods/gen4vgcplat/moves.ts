@@ -5075,6 +5075,12 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		"pp": 10,
 		"type": "Electric",
 		"priority": 0,
+		secondary: {
+			chance: 75,
+			self: {
+				boosts: {spa: 1},
+			},
+		},
 		"isNonstandard": null,
 		"target": "normal"
 	},

@@ -5275,4 +5275,22 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 4,
 		num: -13,
 	},
+	wideeyed: {
+		isNonstandard: "CAP",
+		name: "Wide Eyed",
+		rating: 4,
+		num: -14,
+	},
+	snaketrap: {
+		isNonstandard: "CAP",
+		name: "Snake Trap",
+		rating: 4,
+		num: -15,
+	},
+	heatsink: {
+		isNonstandard: "CAP",
+		name: "Heat Sink",
+		rating: 4,
+		num: -16,
+	},
 };
