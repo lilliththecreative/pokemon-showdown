@@ -735,7 +735,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "OU",
 	},
 	larvitar: {
-		tier: "7U",
+		tier: "6U",
 	},
 	pupitar: {
 		tier: "NU",
