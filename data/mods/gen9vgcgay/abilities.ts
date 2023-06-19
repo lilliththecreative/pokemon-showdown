@@ -831,5 +831,16 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 				return this.effectState.target;
 			}
 		},
+	},
+	captivatingsong: {
+		inherit: true,
+		isNonstandard: null,
+		onAfterMoveSecondary(target, source, move) {
+			if (move.flags['sound'] && !target.isAlly) {
+				this.add('-ability', target, 'Captivating Song');
+				target.addVolatile('trapped', target, move, 'trapper');
+			}
+		},
+
 	}
 };

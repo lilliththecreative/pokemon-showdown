@@ -262,6 +262,13 @@ export const Formats: FormatList = [
 		banlist: ['ZU'],
 	},
 	{
+		name: "[Gen 5] 8U",
+		mod: 'gen5',
+		searchShow: true,
+		ruleset: ['[Gen 5] 7U'],
+		banlist: ['7U'],
+	},
+	{
 		name: "[Gen 6] 7U",
 		mod: 'gen6',
 		searchShow: true,
@@ -2546,7 +2553,7 @@ export const Formats: FormatList = [
 		gameType: 'doubles',
 		team: 'random',
 		searchShow: false,
-		challengeShow: false,
+		challengeShow: true,
 		ruleset: ['Obtainable', 'HP Percentage Mod', 'Cancel Mod'],
 	},
 	{
@@ -2651,7 +2658,7 @@ export const Formats: FormatList = [
 		mod: 'gen1',
 		team: 'randomCC',
 		searchShow: false,
-		challengeShow: false,
+		challengeShow: true,
 		ruleset: ['Obtainable', 'HP Percentage Mod', 'Cancel Mod', 'Desync Clause Mod', 'Sleep Clause Mod', 'Freeze Clause Mod'],
 	},
 	{
@@ -2661,7 +2668,7 @@ export const Formats: FormatList = [
 		mod: 'gen1',
 		team: 'randomHC',
 		searchShow: false,
-		challengeShow: false,
+		challengeShow: true,
 		ruleset: ['HP Percentage Mod', 'Cancel Mod', 'Desync Clause Mod', 'Sleep Clause Mod', 'Freeze Clause Mod', 'Team Type Preview'],
 		banlist: ['Nonexistent'],
 		onModifySpecies(species, target, source, effect) {

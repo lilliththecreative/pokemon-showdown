@@ -427,10 +427,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null
 	},
-	infernalparade: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	sketch: {
 		inherit: true,
 		isNonstandard: null,
@@ -476,6 +472,14 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 	},
 	electrify: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	topsyturvy: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	return: {
 		inherit: true,
 		isNonstandard: null,
 	},

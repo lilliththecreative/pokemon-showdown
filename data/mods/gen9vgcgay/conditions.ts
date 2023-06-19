@@ -31,4 +31,22 @@ export const Conditions: {[k: string]: ModdedConditionData} = {
 			}
 		},
 	},
+	slp: {
+		onStart(target, source, sourceEffect) {
+			if (sourceEffect && sourceEffect.effectType === 'Ability') {
+				this.add('-status', target, 'slp', '[from] ability: ' + sourceEffect.name, '[of] ' + source);
+			} else if (sourceEffect && sourceEffect.effectType === 'Move') {
+				this.add('-status', target, 'slp', '[from] move: ' + sourceEffect.name);
+			} else {
+				this.add('-status', target, 'slp');
+			}
+			// 1-2 turns
+			this.effectState.startTime = this.random(2, 4);
+			this.effectState.time = this.effectState.startTime;
+
+			if (target.removeVolatile('nightmare')) {
+				this.add('-end', target, 'Nightmare', '[silent]');
+			}
+		},
+	},
 };

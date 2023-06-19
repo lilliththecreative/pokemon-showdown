@@ -2227,4 +2227,9 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		shortDesc: "This Pokemon draws Fire moves to itself to raise SpA by 1; Fire Immunity",
 		desc: "This Pokemon draws Fire moves to itself to raise SpA by 1; Fire Immunity",
 	},
+	captivatingsong: {
+		name: "Captivating Song",
+		shortDesc: "All sound moves used by this pokemon trap enemies",
+		desc: "All sound moves used by this pokemon trap enemies",
+	},
 };
