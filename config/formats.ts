@@ -98,7 +98,7 @@ export const Formats: FormatList = [
 			'Arceus', 'Calyrex-Ice', 'Calyrex-Shadow', 'Chi-Yu', 'Dialga', 'Dialga-Origin', 'Flutter Mane', 'Giratina', 'Giratina-Origin', 'Groudon',
 			'Iron Bundle', 'Koraidon', 'Kyogre', 'Landorus-Base', 'Magearna', 'Mewtwo', 'Miraidon', 'Palafin', 'Palkia', 'Palkia-Origin', 'Rayquaza', 'Spectrier',
 			'Urshifu-Base', 'Zacian', 'Zacian-Crowned', 'Moody', 'Shadow Tag', 'Toxic Debris',
-			'Regenerator>1'
+			'Regenerator>1',
 		],
 		onValidateSet(set) {
 			if (set.moves.length !== 1 || this.dex.moves.get(set.moves[0]).id !== 'metronome') {
@@ -128,7 +128,7 @@ export const Formats: FormatList = [
 		searchShow: true,
 		ruleset: ['[Gen 4] 6U'],
 		banlist: ['6U'],
-		unbanlist: ['Damp Rock']
+		unbanlist: ['Damp Rock'],
 	},
 	{
 		name: "[Gen 4] 8U",
@@ -184,7 +184,7 @@ export const Formats: FormatList = [
 		searchShow: true,
 		ruleset: ['[Gen 1] 8U'],
 		banlist: ['8U'],
-		unbanlist: ['Confuse Ray']
+		unbanlist: ['Confuse Ray'],
 	},
 	{
 		name: "[Gen 1] 10U",

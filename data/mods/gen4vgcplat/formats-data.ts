@@ -1,7 +1,7 @@
 export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	"bulbasaur": {
 		"tier": "1",
-		"doublesTier": "1"
+		"doublesTier": "1",
 	},
 	"ivysaur": {
 		"tier": "3",
@@ -9,23 +9,23 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	},
 	"venusaur": {
 		"doublesTier": "16",
-		"tier": "16"
+		"tier": "16",
 	},
 	"charmander": {
 		"tier": "1",
-		"doublesTier": "1"
+		"doublesTier": "1",
 	},
 	"charmeleon": {
 		"tier": "3",
-		"doublesTier": "3"
+		"doublesTier": "3",
 	},
 	"charizard": {
 		"doublesTier": "11",
-		"tier": "11"
+		"tier": "11",
 	},
 	"squirtle": {
 		"tier": "1",
-		"doublesTier": "1"
+		"doublesTier": "1",
 	},
 	"wartortle": {
 		"tier": "2",

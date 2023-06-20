@@ -1,4 +1,8 @@
 export const Moves: {[k: string]: ModdedMoveData} = {
+	struggle: {
+		inherit: true,
+		basePower: 80,
+	},
 	ominouswind: {
 		inherit: true,
 		"isNonstandard": null,
@@ -211,27 +215,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		heal: [1, 1],
 		isNonstandard: null
 	},
-	conversion: {
-		inherit: true,
-		isNonstandard: null,
-		shortDesc:"Charges, changes user's type to match its first move and boosts all stats turn 2.",
-		boosts: {atk: 1, def: 1, spa: 1, spd: 1, spe: 1},
-		flags: {charge: 1, nonsky: 1, nosleeptalk: 1, failinstruct: 1},
-		onTryMove(attacker, defender, move) {
-			if (attacker.removeVolatile(move.id)) {
-				return;
-			}
-			this.add('-prepare', attacker, move.name);
-			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
-				return;
-			}
-			attacker.addVolatile('twoturnmove', defender);
-			return null;
-		}
-	},
 	shadowbone: {
 		inherit: true,
 		isNonstandard: null,
+		shortDesc:"Hits Twice, 20% to drop defense",
 		basePower: 50,
 		multihit: 2,
 	},
@@ -334,6 +321,11 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		basePower: 90,
 		type: "Steel",
 	},
+	shelltrap: {
+		inherit: true,
+		isNonstandard: null,
+		basePower: 160,
+	},
 	tailwind: {
 		inherit: true,
 		shortDesc: "1.5x speed for your side for 4 turns",
@@ -362,6 +354,76 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 				this.add('-sideend', side, 'move: Tailwind');
 			},
 		},
+	},
+	// Z Moves
+	trickortreat: {
+		inherit: true,
+		isNonstandard: null,
+		shortDesc:"Charges, adds Ghost to target's type, boosts all stats turn 2.",
+		boosts: {atk: 1, def: 1, spa: 1, spd: 1, spe: 1},
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		}
+	},
+	forestcurse: {
+		inherit: true,
+		isNonstandard: null,
+		shortDesc:"Charges, adds Grass to target's type, boosts all stats turn 2.",
+		boosts: {atk: 1, def: 1, spa: 1, spd: 1, spe: 1},
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		}
+	},
+	conversion: {
+		inherit: true,
+		isNonstandard: null,
+		shortDesc: "Charges, changes user's type to match its first move and boosts all stats turn 2.",
+		boosts: {atk: 1, def: 1, spa: 1, spd: 1, spe: 1},
+		flags: {charge: 1, nonsky: 1, nosleeptalk: 1, failinstruct: 1},
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		}
+	},
+	sinisterarrowraid: {
+		inherit: true,
+		isNonstandard: null,
+		isZ: false,
+		shortDesc: "Charges, changes user's type to match its first move and boosts all stats turn 2.",
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		}
 	},
 	// Pledges
 	firepledge: {
@@ -480,6 +542,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 	},
 	return: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	hiddenpower: {
 		inherit: true,
 		isNonstandard: null,
 	},

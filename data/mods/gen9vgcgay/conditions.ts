@@ -32,6 +32,7 @@ export const Conditions: {[k: string]: ModdedConditionData} = {
 		},
 	},
 	slp: {
+		inherit: true,
 		onStart(target, source, sourceEffect) {
 			if (sourceEffect && sourceEffect.effectType === 'Ability') {
 				this.add('-status', target, 'slp', '[from] ability: ' + sourceEffect.name, '[of] ' + source);

@@ -249,11 +249,11 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		shortDesc: "Heals ally by 1/16th, Also 30% to heal ally status",
 		onResidual(pokemon) {
 			for (const allyActive of pokemon.adjacentAllies()) {
+				this.add('-activate', pokemon, 'ability: Healer');
+				allyActive.heal(allyActive.baseMaxhp / 16, pokemon);
 				if (allyActive.status && this.randomChance(3, 10)) {
-					this.add('-activate', pokemon, 'ability: Healer');
 					allyActive.cureStatus();
 				}
-				allyActive.heal(allyActive.baseMaxhp / 16)
 			}
 		},
 	},
@@ -275,6 +275,15 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 				boost.spa = 1
 				boost.spd = 1
 				boost.spe = 1
+			}
+		},
+	},
+	aftermath: {
+		inherit: true,
+		shortDesc: "If this Pokemon is KOed with a contact move, that move's user loses 1/3 its max HP.",
+		onDamagingHit(damage, target, source, move) {
+			if (!target.hp && this.checkMoveMakesContact(move, source, target, true)) {
+				this.damage(source.baseMaxhp / 3, source, target);
 			}
 		},
 	},
@@ -445,7 +454,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	longreach: {
 		inherit: true,
-		shortDesc: "Contact moves no longer make contact, Ranged moves do 1.5x",
+		shortDesc: "Moves no longer make contact, Arrow moves do 1.5x",
 		onBasePower(basePower, attacker, defender, move) {
 			if (['Triple Arrows', 'Thousand Arrows', 'Spirit Shackle'].includes(move.name)) {
 				this.debug('Long Reach boost');
@@ -546,6 +555,31 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		onModifySpDPriority: 6,
 		onModifySpD(pokemon) {
 			if (this.field.isTerrain('grassyterrain')) return this.chainModify(1.5);
+		},
+	},
+	comatose: {
+		inherit: true,
+		shortDesc: "Is considered to be asleep, Sleep Talk gets +1 priority",
+		onModifyPriority(priority, pokemon, target, move) {
+			if (move.name === "Sleep Talk") {
+				return priority + 1;
+			}
+		},
+	},
+	receiver: {
+		inherit: true,
+		shortDesc: "Inherits ability and boosts from ally faint",
+		onAllyFaint(target) {
+			if (!this.effectState.target.hp) return;
+			const ability = target.getAbility();
+			const additionalBannedAbilities = [
+				'noability', 'flowergift', 'forecast', 'hungerswitch', 'illusion', 'imposter', 'neutralizinggas', 'powerofalchemy', 'receiver', 'trace', 'wonderguard',
+			];
+			if (target.getAbility().isPermanent || additionalBannedAbilities.includes(target.ability)) return;
+			if (this.effectState.target.setAbility(ability)) {
+				this.boost(target.boosts)
+				this.add('-ability', this.effectState.target, ability, '[from] ability: Receiver', '[of] ' + target);
+			}
 		},
 	},
 	// Ruin Nerf

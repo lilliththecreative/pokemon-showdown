@@ -18,7 +18,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "NU",
 	},
 	squirtle: {
-		tier: "LC",
+		tier: "8U",
 	},
 	wartortle: {
 		tier: "6U",
