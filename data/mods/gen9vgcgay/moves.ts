@@ -63,6 +63,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		"inherit": true,
 		"accuracy": 100,
 		"basePower": 25,
+		multihit: [2, 5],
 		"category": "Physical",
 		"type": "Steel",
 		"isNonstandard": null,
@@ -71,6 +72,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		"inherit": true,
 		"accuracy": 100,
 		"basePower": 25,
+		multihit: [2, 5],
 		"category": "Physical",
 		"type": "Flying",
 		"isNonstandard": null,
@@ -78,6 +80,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	"flameburst": {
 		"inherit": true,
 		"accuracy": 100,
+		multihit: [2, 5],
 		"basePower": 25,
 		"category": "Special",
 		"type": "Fire",
@@ -206,12 +209,14 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	healorder: {
 		inherit: true,
 		shortDesc:"Heals the user by 100% of its max HP.",
+		pp: 5,
 		heal: [1, 1],
 		isNonstandard: null
 	},
 	milkdrink: {
 		inherit: true,
 		shortDesc:"Heals the user by 100% of its max HP.",
+		pp: 5,
 		heal: [1, 1],
 		isNonstandard: null
 	},

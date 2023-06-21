@@ -744,10 +744,8 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"doublesTier": "DOU"
 	},
 	"exeggutoralola": {
-		"isNonstandard": null,
-		"tier": "OU",
-		"natDexTier": "OU",
-		"doublesTier": "DOU"
+		"isNonstandard": "Past",
+		"tier": "Illegal"
 	},
 	"cubone": {
 		"isNonstandard": "Past",
@@ -3430,10 +3428,8 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"tier": "Illegal"
 	},
 	"lilligant": {
-		"isNonstandard": null,
-		"tier": "OU",
-		"natDexTier": "OU",
-		"doublesTier": "DOU"
+		"isNonstandard": "Past",
+		"tier": "Illegal"
 	},
 	"lilliganthisui": {
 		"isNonstandard": null,
@@ -3442,10 +3438,8 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"doublesTier": "DOU"
 	},
 	"basculin": {
-		"isNonstandard": null,
-		"tier": "OU",
-		"natDexTier": "OU",
-		"doublesTier": "DOU"
+		"isNonstandard": "Past",
+		"tier": "Illegal"
 	},
 	"basculinbluestriped": {
 		"isNonstandard": "Past",
@@ -4432,10 +4426,8 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"tier": "Illegal"
 	},
 	"avalugg": {
-		"isNonstandard": null,
-		"tier": "OU",
-		"natDexTier": "OU",
-		"doublesTier": "DOU"
+		"isNonstandard": "Past",
+		"tier": "Illegal"
 	},
 	"avalugghisui": {
 		"isNonstandard": null,
@@ -4642,10 +4634,8 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"tier": "Illegal"
 	},
 	"rockruff": {
-		"isNonstandard": null,
-		"tier": "OU",
-		"natDexTier": "OU",
-		"doublesTier": "DOU"
+		"isNonstandard": "Past",
+		"tier": "Illegal"
 	},
 	"lycanroc": {
 		"isNonstandard": "Past",
@@ -4816,10 +4806,8 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"doublesTier": "DOU"
 	},
 	"typenull": {
-		"isNonstandard": null,
-		"tier": "OU",
-		"natDexTier": "OU",
-		"doublesTier": "DOU"
+		"isNonstandard": "Past",
+		"tier": "Illegal"
 	},
 	"silvally": {
 		"isNonstandard": null,

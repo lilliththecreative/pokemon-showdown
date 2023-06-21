@@ -250,7 +250,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		onResidual(pokemon) {
 			for (const allyActive of pokemon.adjacentAllies()) {
 				this.add('-activate', pokemon, 'ability: Healer');
-				allyActive.heal(allyActive.baseMaxhp / 16, pokemon);
+				this.heal(allyActive.baseMaxhp / 16, allyActive, pokemon);
 				if (allyActive.status && this.randomChance(3, 10)) {
 					allyActive.cureStatus();
 				}
