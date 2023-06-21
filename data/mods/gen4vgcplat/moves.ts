@@ -4447,6 +4447,11 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		"category": "Physical",
 		"pp": 10,
 		"type": "Fighting",
+		shortDesc: "40% chance to paralyze target",
+		secondary: {
+			chance: 40,
+			status: 'par',
+		},
 		"priority": 0,
 		"isNonstandard": null,
 		"target": "normal"

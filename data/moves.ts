@@ -6098,7 +6098,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: {
-			chance: 40,
+			chance: 30,
 			status: 'par',
 		},
 		target: "normal",
