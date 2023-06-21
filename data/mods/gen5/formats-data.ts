@@ -1290,7 +1290,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData; } = {
 		doublesTier: "DUU",
 	},
 	seviper: {
-		tier: "8U",
+		tier: "7U",
 		doublesTier: "DUU",
 	},
 	lunatone: {
@@ -1948,7 +1948,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData; } = {
 		tier: "NFE",
 	},
 	unfezant: {
-		tier: "8U",
+		tier: "7U",
 		doublesTier: "DUU",
 	},
 	blitzle: {
