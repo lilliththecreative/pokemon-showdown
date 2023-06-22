@@ -347,6 +347,11 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 		basePower: 160,
 	},
+	beakblast: {
+		inherit: true,
+		isNonstandard: null,
+		basePower: 120,
+	},
 	tailwind: {
 		inherit: true,
 		shortDesc: "1.5x speed for your side for 4 turns",

@@ -327,7 +327,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "7U",
 	},
 	weezing: {
-		tier: "ZU",
+		tier: "6U",
 	},
 	rhyhorn: {
 		tier: "6U",
