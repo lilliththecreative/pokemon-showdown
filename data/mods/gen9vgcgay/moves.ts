@@ -77,11 +77,23 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		"type": "Flying",
 		"isNonstandard": null,
 	},
+	furyswipes: {
+		"inherit": true,
+		"accuracy": 100,
+		"basePower": 25,
+	},
+	tailslap: {
+		"inherit": true,
+		"accuracy": 100,
+		shortDesc: "Hits 3-5 Times",
+		multihit: [3, 5],
+	},
 	"flameburst": {
 		"inherit": true,
 		"accuracy": 100,
 		multihit: [2, 5],
-		"basePower": 25,
+		shortDesc: "Hits 2-5 Times, does 1/16 each to other enemy",
+		"basePower": 20,
 		"category": "Special",
 		"type": "Fire",
 		"isNonstandard": null,
@@ -243,6 +255,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 				def: 1,
 			},
 		},
+	},
+	feint: {
+		inherit: true,
+		basePower: 40
 	},
 	doubleshock: {
 		inherit: true,

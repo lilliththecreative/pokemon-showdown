@@ -5297,4 +5297,10 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 4,
 		num: -17,
 	},
+	transphobia: {
+		isNonstandard: "CAP",
+		name: "Transphobia",
+		rating: 3,
+		num: -18,
+	},
 };

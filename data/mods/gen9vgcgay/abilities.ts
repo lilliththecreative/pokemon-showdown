@@ -569,7 +569,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	receiver: {
 		inherit: true,
 		shortDesc: "Inherits ability and boosts from ally faint",
-		onAllyFaint(target) {
+		onAllyFaint(target, source, effect) {
 			if (!this.effectState.target.hp) return;
 			const ability = target.getAbility();
 			const additionalBannedAbilities = [
@@ -577,6 +577,10 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			];
 			if (target.getAbility().isPermanent || additionalBannedAbilities.includes(target.ability)) return;
 			if (this.effectState.target.setAbility(ability)) {
+				let i: BoostID;
+				for (i in target.boosts) {
+					source.boosts[i] = target.boosts[i];
+				}
 				this.boost(target.boosts)
 				this.add('-ability', this.effectState.target, ability, '[from] ability: Receiver', '[of] ' + target);
 			}
@@ -632,42 +636,42 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		},
 	},
 	// Weather Nerf
-	swiftswim: {
-		inherit: true,
-		shortDesc: "1.5x speed in Rain",
-		onModifySpe(spe, pokemon) {
-			if (['raindance', 'primordialsea'].includes(pokemon.effectiveWeather())) {
-				return this.chainModify(1.5);
-			}
-		},
-	},
-	chlorophyll: {
-		inherit: true,
-		shortDesc: "1.5x speed in Sun",
-		onModifySpe(spe, pokemon) {
-			if (['sunnyday', 'desolateland'].includes(pokemon.effectiveWeather())) {
-				return this.chainModify(1.5);
-			}
-		},
-	},
-	slushrush: {
-		inherit: true,
-		shortDesc: "1.5x speed in Hail/Snow",
-		onModifySpe(spe, pokemon) {
-			if (this.field.isWeather(['hail', 'snow'])) {
-				return this.chainModify(1.5);
-			}
-		},
-	},
-	sandrush: {
-		inherit: true,
-		shortDesc: "1.5x speed in Sand",
-		onModifySpe(spe, pokemon) {
-			if (this.field.isWeather('sandstorm')) {
-				return this.chainModify(1.5);
-			}
-		},
-	},
+	// swiftswim: {
+	// 	inherit: true,
+	// 	shortDesc: "1.5x speed in Rain",
+	// 	onModifySpe(spe, pokemon) {
+	// 		if (['raindance', 'primordialsea'].includes(pokemon.effectiveWeather())) {
+	// 			return this.chainModify(1.5);
+	// 		}
+	// 	},
+	// },
+	// chlorophyll: {
+	// 	inherit: true,
+	// 	shortDesc: "1.5x speed in Sun",
+	// 	onModifySpe(spe, pokemon) {
+	// 		if (['sunnyday', 'desolateland'].includes(pokemon.effectiveWeather())) {
+	// 			return this.chainModify(1.5);
+	// 		}
+	// 	},
+	// },
+	// slushrush: {
+	// 	inherit: true,
+	// 	shortDesc: "1.5x speed in Hail/Snow",
+	// 	onModifySpe(spe, pokemon) {
+	// 		if (this.field.isWeather(['hail', 'snow'])) {
+	// 			return this.chainModify(1.5);
+	// 		}
+	// 	},
+	// },
+	// sandrush: {
+	// 	inherit: true,
+	// 	shortDesc: "1.5x speed in Sand",
+	// 	onModifySpe(spe, pokemon) {
+	// 		if (this.field.isWeather('sandstorm')) {
+	// 			return this.chainModify(1.5);
+	// 		}
+	// 	},
+	// },
 	// New Abilities
 	triplethreat: {
 		inherit: true,
@@ -869,12 +873,24 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	captivatingsong: {
 		inherit: true,
 		isNonstandard: null,
-		onAfterMoveSecondary(target, source, move) {
-			if (move.flags['sound'] && !target.isAlly) {
+		onHit(target, source, move) {
+			if (move.flags['sound'] && !source.isAlly) {
 				this.add('-ability', target, 'Captivating Song');
-				target.addVolatile('trapped', target, move, 'trapper');
+				return target.addVolatile('trapped', source, move, 'trapper');
 			}
 		},
-
+	},
+	transphobia: {
+		inherit: true,
+		isNonstandard: null,
+		onStart(pokemon) {
+			if (this.suppressingAbility(pokemon)) return;
+			this.add('-ability', pokemon, 'Transphobia');
+		},
+		onBasePower(basePower, attacker, defender, move) {
+			if (defender.gender === 'N' || defender.gender === '') {
+				return this.chainModify(1.3);
+			}
+		},
 	}
 };

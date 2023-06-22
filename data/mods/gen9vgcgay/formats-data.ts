@@ -2206,16 +2206,22 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"doublesTier": "DOU"
 	},
 	"castformsunny": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "OU",
+		"natDexTier": "OU",
+		"doublesTier": "DOU"
 	},
 	"castformrainy": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "OU",
+		"natDexTier": "OU",
+		"doublesTier": "DOU"
 	},
 	"castformsnowy": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "OU",
+		"natDexTier": "OU",
+		"doublesTier": "DOU"
 	},
 	"kecleon": {
 		"isNonstandard": null,
@@ -2308,10 +2314,8 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"doublesTier": "DOU"
 	},
 	"huntail": {
-		"isNonstandard": null,
-		"tier": "OU",
-		"natDexTier": "OU",
-		"doublesTier": "DOU"
+		"isNonstandard": "Past",
+		"tier": "Illegal"
 	},
 	"gorebyss": {
 		"isNonstandard": null,
@@ -3878,10 +3882,8 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"tier": "Illegal"
 	},
 	"braviary": {
-		"isNonstandard": null,
-		"tier": "OU",
-		"natDexTier": "OU",
-		"doublesTier": "DOU"
+		"isNonstandard": "Past",
+		"tier": "Illegal"
 	},
 	"braviaryhisui": {
 		"isNonstandard": null,

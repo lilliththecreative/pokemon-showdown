@@ -2232,4 +2232,9 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		shortDesc: "All sound moves used by this pokemon trap enemies",
 		desc: "All sound moves used by this pokemon trap enemies",
 	},
+	transphobia: {
+		name: "Transphobia",
+		shortDesc: "Does 1.3x damage to gender neutral enemies",
+		desc: "Does 1.3x damage to gender neutral enemies",
+	},
 };

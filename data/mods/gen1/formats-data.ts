@@ -48,7 +48,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "9U",
 	},
 	pidgeotto: {
-		tier: "7U",
+		tier: "8U",
 	},
 	pidgeot: {
 		tier: "ZU",
@@ -219,7 +219,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "UU",
 	},
 	geodude: {
-		tier: "8U",
+		tier: "7U",
 	},
 	graveler: {
 		tier: "PU",
@@ -261,7 +261,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "UU",
 	},
 	grimer: {
-		tier: "8U",
+		tier: "7U",
 	},
 	muk: {
 		tier: "ZU",
