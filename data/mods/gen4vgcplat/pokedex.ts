@@ -2606,6 +2606,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Dragon",
 			"Flying"
 		],
+		genderRatio: {M: 1, F: 0},
 		"baseStats": {
 			"hp": 91,
 			"atk": 134,
@@ -3592,6 +3593,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Grass",
 			"Steel"
 		],
+		genderRatio: {M: 1, F: 0},
 		"baseStats": {
 			"hp": 74,
 			"atk": 94,
@@ -4020,6 +4022,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Dark",
 			"Fire"
 		],
+		genderRatio: {M: 1, F: 0},
 		"baseStats": {
 			"hp": 75,
 			"atk": 100,
@@ -4350,6 +4353,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Rock",
 			"Dark"
 		],
+		genderRatio: {M: 1, F: 0},
 		"baseStats": {
 			"hp": 100,
 			"atk": 134,
@@ -5023,6 +5027,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Grass",
 			"Fighting"
 		],
+		genderRatio: {M: 1, F: 0},
 		"baseStats": {
 			"hp": 60,
 			"atk": 130,

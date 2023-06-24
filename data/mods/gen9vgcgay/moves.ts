@@ -352,6 +352,37 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 		basePower: 120,
 	},
+	zingzap: {
+		inherit: true,
+		isNonstandard: null,
+		basePower: 90,
+	},
+	futuresight: {
+		inherit: true,
+		isNonstandard: null,
+		basePower: 150,
+	},
+	doomdesire: {
+		inherit: true,
+		isNonstandard: null,
+		basePower: 160,
+	},
+	mysticalpower: {
+		inherit: true,
+		isNonstandard: null,
+		type: "Fairy",
+	},
+	finalgambit: {
+		inherit: true,
+		damageCallback(pokemon) {
+			var damage = pokemon.hp;
+			pokemon.faint();
+			if (pokemon.hasAbility('reckless')) {
+				damage *= 1.3
+			}
+			return damage;
+		},
+	},
 	tailwind: {
 		inherit: true,
 		shortDesc: "1.5x speed for your side for 4 turns",
@@ -527,6 +558,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	sacredfire: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	lightofruin: {
 		inherit: true,
 		isNonstandard: null,
@@ -572,6 +607,30 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 	},
 	hiddenpower: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	mindblown: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	fishiousrend: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	boltbeak: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	seedflare: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	aromatherapy: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	pursuit: {
 		inherit: true,
 		isNonstandard: null,
 	},
