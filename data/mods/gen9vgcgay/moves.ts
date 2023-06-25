@@ -82,6 +82,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		"accuracy": 100,
 		"basePower": 25,
 	},
+	pinmissile: {
+		"inherit": true,
+		"accuracy": 100,
+	},
 	tailslap: {
 		"inherit": true,
 		"accuracy": 100,
@@ -256,6 +260,15 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			},
 		},
 	},
+	spark: {
+		inherit: true,
+		basePower: 80,
+	},
+	poisontail: {
+		inherit: true,
+		target: "allAdjacentFoes",
+		basePower: 80,
+	},
 	feint: {
 		inherit: true,
 		basePower: 40
@@ -267,6 +280,14 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	spiritshackle: {
 		inherit: true,
 		basePower: 100,
+	},
+	firefang: {
+		inherit: true,
+		basePower: 75
+	},
+	thunderfang: {
+		inherit: true,
+		basePower: 75
 	},
 	megapunch: {
 		inherit: true,
@@ -365,13 +386,40 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	doomdesire: {
 		inherit: true,
 		isNonstandard: null,
-		basePower: 160,
+		basePower: 150,
 	},
 	mysticalpower: {
 		inherit: true,
 		isNonstandard: null,
 		type: "Fairy",
 	},
+	// spotlight: {
+	// 	inherit: true,
+	// 	isNonstandard: null,
+	// 	pp: 2,
+	// 	condition: {
+	// 		duration: 1,
+	// 		onStart(pokemon) {
+	// 			this.add('-singleturn', pokemon, 'move: Spotlight');
+	// 		},
+	// 		onRedirectTargetPriority: 2,
+	// 		onRedirectTarget(target, source, source2, move) {
+	// 			this.debug("Try spotlight target");
+	// 			if (this.validTarget(this.effectState.target, source, move.target)) {
+	// 				this.debug("Spotlight redirected target of move");
+	// 				return this.effectState.target;
+	// 			}
+	// 		},
+	// 		onFoeRedirectTarget(target, source, source2, move) {
+	// 			this.debug("Try spotlight foe");
+	// 			if (this.validTarget(this.effectState.target, source, move.target)) {
+	// 				this.debug("Spotlight redirected target of move");
+	// 				return this.effectState.target;
+	// 			}
+	// 			return;
+	// 		},
+	// 	},
+	// },
 	finalgambit: {
 		inherit: true,
 		damageCallback(pokemon) {
@@ -536,6 +584,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	icefang: {
 		inherit: true,
+		basePower: 75,
 		secondaries: [
 			{ chance: 10, status: 'fst'},
 			{ chance: 10, volatileStatus: 'flinch'},
@@ -634,4 +683,24 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	kingsshield: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	moongeistbeam: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	sunsteelstrike: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	matblock: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	spotlight: {
+		inherit: true,
+		isNonstandard: null,
+	}
 };

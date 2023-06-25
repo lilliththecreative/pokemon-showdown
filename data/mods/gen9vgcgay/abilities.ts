@@ -163,15 +163,15 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 		},
 	},
-	tangledfeet: {
-		inherit: true,
-		shortDesc: "Doubles Speed if confused",
-		onModifySpe(spe, pokemon) {
-			if (pokemon?.volatiles['confusion']) {
-				return this.chainModify(2);
-			}
-		},
-	},
+	// tangledfeet: {
+	// 	inherit: true,
+	// 	shortDesc: "Doubles Speed if confused",
+	// 	onModifySpe(spe, pokemon) {
+	// 		if (pokemon?.volatiles['confusion']) {
+	// 			return this.chainModify(2);
+	// 		}
+	// 	},
+	// },
 	flamebody: {
 		inherit: true,
 		shortDesc: "30% to burn on any contact",
@@ -331,6 +331,9 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 				this.effectState.colorChange = true;
 				this.add('-start', source, 'typechange', type, '[from] ability: Color Change');
 			}
+		},
+		onAfterMoveSecondary(target, source, move) {
+			return;
 		},
 		onSourceBeforeMove(source, target, move) {
 			if (this.effectState.colorChange) return;
@@ -513,35 +516,36 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	pastelveil: {
 		inherit: true,
+		shortDesc: "This pokemon and its allies cannot be statused, cure on switch in",
 		onStart(pokemon) {
 			for (const ally of pokemon.alliesAndSelf()) {
-				if (['psn', 'tox', 'brn', 'slp'].includes(ally.status)) {
+				if (['psn', 'tox', 'brn', 'slp', 'fst'].includes(ally.status)) {
 					this.add('-activate', pokemon, 'ability: Pastel Veil');
 					ally.cureStatus();
 				}
 			}
 		},
 		onUpdate(pokemon) {
-			if (['psn', 'tox', 'brn', 'slp'].includes(pokemon.status)) {
+			if (['psn', 'tox', 'brn', 'slp', 'fst'].includes(pokemon.status)) {
 				this.add('-activate', pokemon, 'ability: Pastel Veil');
 				pokemon.cureStatus();
 			}
 		},
 		onAllySwitchIn(pokemon) {
-			if (['psn', 'tox', 'brn', 'slp'].includes(pokemon.status)) {
+			if (['psn', 'tox', 'brn', 'slp', 'fst'].includes(pokemon.status)) {
 				this.add('-activate', this.effectState.target, 'ability: Pastel Veil');
 				pokemon.cureStatus();
 			}
 		},
 		onSetStatus(status, target, source, effect) {
-			if (!['psn', 'tox', 'brn', 'slp'].includes(status.id)) return;
+			if (!['psn', 'tox', 'brn', 'slp', 'fst'].includes(status.id)) return;
 			if ((effect as Move)?.status) {
 				this.add('-immune', target, '[from] ability: Pastel Veil');
 			}
 			return false;
 		},
 		onAllySetStatus(status, target, source, effect) {
-			if (!['psn', 'tox', 'brn', 'slp'].includes(status.id)) return;
+			if (!['psn', 'tox', 'brn', 'slp', 'fst'].includes(status.id)) return;
 			if ((effect as Move)?.status) {
 				const effectHolder = this.effectState.target;
 				this.add('-block', target, 'ability: Pastel Veil', '[of] ' + effectHolder);
@@ -566,23 +570,37 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 		},
 	},
-	receiver: {
+	// receiver: {
+	// 	inherit: true,
+	// 	shortDesc: "Inherits ability and boosts from ally faint",
+	// 	onAllyFaint(target, source, effect) {
+	// 		if (!this.effectState.target.hp) return;
+	// 		const ability = target.getAbility();
+	// 		const additionalBannedAbilities = [
+	// 			'noability', 'flowergift', 'forecast', 'hungerswitch', 'illusion', 'imposter', 'neutralizinggas', 'powerofalchemy', 'receiver', 'trace', 'wonderguard',
+	// 		];
+	// 		if (target.getAbility().isPermanent || additionalBannedAbilities.includes(target.ability)) return;
+	// 		if (this.effectState.target.setAbility(ability)) {
+	// 			let i: BoostID;
+	// 			for (i in target.boosts) {
+	// 				source.boosts[i] = target.boosts[i];
+	// 			}
+	// 			this.boost(target.boosts, source)
+	// 			this.add('-ability', this.effectState.target, ability, '[from] ability: Receiver', '[of] ' + target);
+	// 		}
+	// 	},
+	// },
+	battlebond: {
 		inherit: true,
-		shortDesc: "Inherits ability and boosts from ally faint",
-		onAllyFaint(target, source, effect) {
-			if (!this.effectState.target.hp) return;
-			const ability = target.getAbility();
-			const additionalBannedAbilities = [
-				'noability', 'flowergift', 'forecast', 'hungerswitch', 'illusion', 'imposter', 'neutralizinggas', 'powerofalchemy', 'receiver', 'trace', 'wonderguard',
-			];
-			if (target.getAbility().isPermanent || additionalBannedAbilities.includes(target.ability)) return;
-			if (this.effectState.target.setAbility(ability)) {
-				let i: BoostID;
-				for (i in target.boosts) {
-					source.boosts[i] = target.boosts[i];
-				}
-				this.boost(target.boosts)
-				this.add('-ability', this.effectState.target, ability, '[from] ability: Receiver', '[of] ' + target);
+		shortDesc: "After KOing a pokemon, +1 Atk, SpA, Spe and Transform",
+		onSourceAfterFaint(length, target, source, effect) {
+			if (effect?.effectType !== 'Move') return;
+			if (source.abilityState.battleBondTriggered) return;
+			if (source.species.id === 'greninjabond' && source.hp && !source.transformed && source.side.foePokemonLeft()) {
+				this.boost({atk: 1, spa: 1, spe: 1}, source, source, this.effect);
+				source.formeChange('Greninja-Ash', this.effect, true);
+				this.add('-activate', source, 'ability: Battle Bond');
+				source.abilityState.battleBondTriggered = true;
 			}
 		},
 	},
@@ -873,12 +891,44 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	captivatingsong: {
 		inherit: true,
 		isNonstandard: null,
-		onHit(target, source, move) {
-			if (move.flags['sound'] && !source.isAlly) {
-				this.add('-ability', target, 'Captivating Song');
+		// onHit(target, source, move) {
+		// 	this.add('-ability', target, 'Captivating Song');
+		// 	if (source.isActive) {
+		// 		target.addVolatile('trapped', source, move, 'trapper');
+		// 	}
+		// },
+		// onAfterMoveSecondarySelf(source, target, move) {
+		// onAfterMove(source, target, move) {
+		// onTryHit(source, target, move) {
+		// onTryMove(source, target, move) {
+		onAnyTryHit(target, source, move) {
+			// Hack to get around the fact that perish song doesnt hit
+			if (move.id === "perishsong") {
+				if (move.flags['sound'] && !source.alliesAndSelf().includes(target)) {
+					// this.add('-ability', source, 'Captivating Song');
+					target.addVolatile('trapped', source, move, 'trapper');
+				}
+
+			}
+		},
+		onSourceHit(target, source, move) {
+		// onHit(target, source, move) {
+			if (move.flags['sound'] && !source.alliesAndSelf().includes(target)) {
+				// this.add('-ability', source, 'Captivating Song');
 				return target.addVolatile('trapped', source, move, 'trapper');
 			}
 		},
+		// onModifyMove(move) {
+		// 	move.secondaries?.push({
+		// 		chance: 100,
+		// 		onHit(target, source, move) {
+		// 			if (move.flags['sound']) {
+		// 				this.add('-ability', source, 'Captivating Song');
+		// 				return target.addVolatile('trapped', source, move, 'trapper');
+		// 			}
+		// 		}
+		// 	})
+		// },
 	},
 	transphobia: {
 		inherit: true,
@@ -890,6 +940,24 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		onBasePower(basePower, attacker, defender, move) {
 			if (defender.gender === 'N' || defender.gender === '') {
 				return this.chainModify(1.3);
+			}
+		},
+	},
+	homophobia: {
+		inherit: true,
+		isNonstandard: null,
+		onStart(pokemon) {
+			if (this.suppressingAbility(pokemon)) return;
+			this.add('-ability', pokemon, 'Homophobia');
+		},
+		onBasePower(basePower, attacker, defender, move) {
+			const gender = defender.gender
+			if (defender.allies().length > 0) {
+				for (const opp of defender.allies()) {
+					if (opp.gender === gender) {
+						return this.chainModify(1.3);
+					}
+				}
 			}
 		},
 	}

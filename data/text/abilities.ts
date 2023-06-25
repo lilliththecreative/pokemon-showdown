@@ -2237,4 +2237,9 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		shortDesc: "Does 1.3x damage to gender neutral enemies",
 		desc: "Does 1.3x damage to gender neutral enemies",
 	},
+	homophobia: {
+		name: "Homophobia",
+		shortDesc: "Does 1.3x damage if both enemy pokemon are the same gender",
+		desc: "Does 1.3x damage if both enemy pokemon are the same gender",
+	},
 };
