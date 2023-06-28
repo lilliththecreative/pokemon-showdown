@@ -255,6 +255,13 @@ export const Formats: FormatList = [
 		section: "Alt Lower Tiers",
 	},
 	{
+		name: "[Gen 3] ZU",
+		mod: 'gen3',
+		searchShow: true,
+		ruleset: ['[Gen 3] PU'],
+		banlist: ['PU'],
+	},
+	{
 		name: "[Gen 3] 6U",
 		mod: 'gen3',
 		searchShow: true,

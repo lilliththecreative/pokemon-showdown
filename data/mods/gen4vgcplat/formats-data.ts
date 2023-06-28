@@ -5,7 +5,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	},
 	"ivysaur": {
 		"tier": "3",
-		"doublesTier": "3"
+		"doublesTier": "3",
 	},
 	"venusaur": {
 		"doublesTier": "16",
@@ -29,15 +29,15 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	},
 	"wartortle": {
 		"tier": "2",
-		"doublesTier": "2"
+		"doublesTier": "2",
 	},
 	"blastoise": {
 		"doublesTier": "7",
-		"tier": "7"
+		"tier": "7",
 	},
 	"caterpie": {
 		"isNonstandard": "Unobtainable",
-		"tier": "Unreleased"
+		"tier": "Unreleased",
 	},
 	"metapod": {
 		"isNonstandard": "Unobtainable",
