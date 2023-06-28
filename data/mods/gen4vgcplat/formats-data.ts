@@ -2091,4 +2091,8 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"isNonstandard": "Past",
 		"tier": "Illegal"
 	},
+	"arceuswater": {
+		"isNonstandard": "Past",
+		"tier": "Illegal"
+	},
 };
