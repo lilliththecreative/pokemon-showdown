@@ -591,11 +591,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		],
 	},
 	// Making Standard
-	technoblast: {
-		inherit: true,
-		isNonstandard: null
-	},
-	sketch: {
+	firewall: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -608,6 +604,14 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 	},
 	sacredfire: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	technoblast: {
+		inherit: true,
+		isNonstandard: null
+	},
+	sketch: {
 		inherit: true,
 		isNonstandard: null,
 	},

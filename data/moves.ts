@@ -21651,8 +21651,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		num: 0,
 		accuracy: true,
 		basePower: 0,
+		isNonstandard: "CAP",
 		category: "Status",
-		name: "Spiky Shield",
+		name: "Firewall",
 		pp: 10,
 		priority: 4,
 		flags: {noassist: 1, failcopycat: 1},
@@ -21695,13 +21696,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 			},
 			onHit(target, source, move) {
 				if (move.isZOrMaxPowered && this.checkMoveMakesContact(move, source, target)) {
-					this.damage(source.baseMaxhp / 8, source, target);
+					source.trySetStatus('brn', target, move);
 				}
 			},
 		},
 		secondary: null,
 		target: "self",
-		type: "Grass",
+		type: "Fire",
 		zMove: {boost: {def: 1}},
 		contestType: "Tough",
 	},

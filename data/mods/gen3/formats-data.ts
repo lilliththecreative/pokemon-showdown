@@ -1041,7 +1041,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "UU",
 	},
 	anorith: {
-		tier: "LC",
+		tier: "PU",
 	},
 	armaldo: {
 		tier: "UUBL",

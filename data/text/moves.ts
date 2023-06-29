@@ -7454,4 +7454,9 @@ export const MovesText: {[k: string]: MoveText} = {
 		shortDesc: "50% chance to Paralyze",
 		desc: "50% chance to Paralyze",
 	},
+	firewall: {
+		name: "Firewall",
+		shortDesc: "Protects from damaging attacks. Contact: Burn",
+		desc: "Protects from damaging attacks. Contact: Burn",
+	},
 };
