@@ -18,7 +18,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "UUBL",
 	},
 	squirtle: {
-		tier: "8U",
+		tier: "7U",
 	},
 	wartortle: {
 		tier: "PU",
@@ -555,7 +555,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "NU",
 	},
 	spinarak: {
-		tier: "8U",
+		tier: "7U",
 	},
 	ariados: {
 		tier: "PU",
@@ -675,13 +675,13 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "UUBL",
 	},
 	slugma: {
-		tier: "7U",
+		tier: "8U",
 	},
 	magcargo: {
 		tier: "PU",
 	},
 	swinub: {
-		tier: "7U",
+		tier: "8U",
 	},
 	piloswine: {
 		tier: "UU",

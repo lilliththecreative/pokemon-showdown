@@ -531,7 +531,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "LC",
 	},
 	croconaw: {
-		tier: "ZU",
+		tier: "6U",
 	},
 	feraligatr: {
 		tier: "UU",

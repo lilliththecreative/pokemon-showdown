@@ -378,6 +378,11 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 		basePower: 90,
 	},
+	stormthrow: {
+		inherit: true,
+		isNonstandard: null,
+		basePower: 75,
+	},
 	futuresight: {
 		inherit: true,
 		isNonstandard: null,
@@ -392,6 +397,17 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 		type: "Fairy",
+	},
+	rollingkick: {
+		inherit: true,
+		isNonstandard: null,
+		shortDesc: "100% chance to lower speed by 1.",
+		basePower: 70,
+		accuracy: 100,
+		secondary: {
+			chance: 100,
+			boosts: {spe: -1},
+		},
 	},
 	// spotlight: {
 	// 	inherit: true,
@@ -706,5 +722,25 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	spotlight: {
 		inherit: true,
 		isNonstandard: null,
-	}
+	},
+	octolock: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	strangesteam: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	decorate: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	floralhealing: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	craftyshield: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

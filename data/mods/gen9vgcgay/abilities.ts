@@ -960,5 +960,24 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 				}
 			}
 		},
-	}
+	},
+	ilvaticano: {
+		inherit: true,
+		isNonstandard: null,
+		onBasePower(basePower, attacker, defender, move) {
+			if (defender.position != attacker.position) {
+				this.add('-ability', attacker, 'Il Vaticano');
+				return this.chainModify(1.3);
+			}
+		},
+	},
+	lawnsurfer: {
+		inherit: true,
+		isNonstandard: null,
+		onModifySpe(spe) {
+			if (this.field.isTerrain('grassyterrain')) {
+				return this.chainModify(2);
+			}
+		},
+	},
 };

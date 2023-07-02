@@ -5309,4 +5309,16 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 3,
 		num: -19,
 	},
+	ilvaticano: {
+		isNonstandard: "CAP",
+		name: "Il Vaticano",
+		rating: 3,
+		num: -20,
+	},
+	lawnsurfer: {
+		isNonstandard: "CAP",
+		name: "Lawn Surfer",
+		rating: 3,
+		num: -21,
+	},
 };

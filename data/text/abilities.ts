@@ -2242,4 +2242,14 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		shortDesc: "Does 1.3x damage if both enemy pokemon are the same gender",
 		desc: "Does 1.3x damage if both enemy pokemon are the same gender",
 	},
+	ilvaticano: {
+		name: "Il Vaticano",
+		shortDesc: "Does 1.3x damage when attacking across the field",
+		desc: "Does 1.3x damage when attacking across the field",
+	},
+	lawnsurfer: {
+		name: "Il Vaticano",
+		desc: "Doubles speed in Grassy Terrain",
+		shortDesc: "Doubles speed in Grassy Terrain",
+	},
 };

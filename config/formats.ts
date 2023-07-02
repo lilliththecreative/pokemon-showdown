@@ -252,7 +252,7 @@ export const Formats: FormatList = [
 		banlist: ['9U'],
 	},
 	{
-		section: "Alt Lower Tiers",
+		section: "Gen 3 Lower Tiers",
 	},
 	{
 		name: "[Gen 3] ZU",
@@ -276,6 +276,9 @@ export const Formats: FormatList = [
 		banlist: ['6U'],
 	},
 	{
+		section: "Gen 5 Lower Tiers",
+	},
+	{
 		name: "[Gen 5] 7U",
 		mod: 'gen5',
 		searchShow: true,
@@ -288,6 +291,9 @@ export const Formats: FormatList = [
 		searchShow: true,
 		ruleset: ['[Gen 5] 7U'],
 		banlist: ['7U'],
+	},
+	{
+		section: "Alt Lower Tiers",
 	},
 	{
 		name: "[Gen 6] 7U",
@@ -303,7 +309,6 @@ export const Formats: FormatList = [
 		ruleset: ['[Gen 7] ZU'],
 		banlist: ['ZU'],
 	},
-
 	{
 		section: "S/V Singles",
 		column: 2,
