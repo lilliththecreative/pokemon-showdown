@@ -604,6 +604,22 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 		},
 	},
+	powerofalchemy: {
+		inherit: true,
+		shortDesc: "Inherits ability and gains +1 atk and spA when ally faints",
+		onAllyFaint(target) {
+			if (!this.effectState.target.hp) return;
+			const ability = target.getAbility();
+			const additionalBannedAbilities = [
+				'noability', 'flowergift', 'forecast', 'hungerswitch', 'illusion', 'imposter', 'neutralizinggas', 'powerofalchemy', 'receiver', 'trace', 'wonderguard',
+			];
+			if (target.getAbility().isPermanent || additionalBannedAbilities.includes(target.ability)) return;
+			if (this.effectState.target.setAbility(ability)) {
+				this.boost({atk: 1, spa: 1}, null, null, this.effect);
+				this.add('-ability', this.effectState.target, ability, '[from] ability: Power of Alchemy', '[of] ' + target);
+			}
+		},
+	},
 	// Ruin Nerf
 	swordofruin: {
 		inherit: true,
@@ -965,9 +981,9 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 		onBasePower(basePower, attacker, defender, move) {
-			if (defender.position != attacker.position) {
+			if (defender.position === attacker.position) {
 				this.add('-ability', attacker, 'Il Vaticano');
-				return this.chainModify(1.3);
+				return this.chainModify(1.4);
 			}
 		},
 	},

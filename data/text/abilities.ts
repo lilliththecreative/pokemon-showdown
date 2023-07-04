@@ -2244,11 +2244,11 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	ilvaticano: {
 		name: "Il Vaticano",
-		shortDesc: "Does 1.3x damage when attacking across the field",
-		desc: "Does 1.3x damage when attacking across the field",
+		shortDesc: "Does 1.4x damage when attacking across the field",
+		desc: "Does 1.4x damage when attacking across the field",
 	},
 	lawnsurfer: {
-		name: "Il Vaticano",
+		name: "Lawn Surfer",
 		desc: "Doubles speed in Grassy Terrain",
 		shortDesc: "Doubles speed in Grassy Terrain",
 	},

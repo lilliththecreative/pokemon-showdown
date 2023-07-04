@@ -618,7 +618,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "6U",
 	},
 	wooper: {
-		tier: "9U",
+		tier: "8U",
 	},
 	quagsire: {
 		tier: "UU",

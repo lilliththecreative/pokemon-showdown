@@ -21648,7 +21648,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	firewall: {
-		num: 0,
+		num: 596,
 		accuracy: true,
 		basePower: 0,
 		isNonstandard: "CAP",
@@ -21658,7 +21658,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 4,
 		flags: {noassist: 1, failcopycat: 1},
 		stallingMove: true,
-		volatileStatus: 'spikyshield',
+		volatileStatus: 'firewall',
 		onPrepareHit(pokemon) {
 			return !!this.queue.willAct() && this.runEvent('StallMove', pokemon);
 		},
@@ -21690,7 +21690,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 					}
 				}
 				if (this.checkMoveMakesContact(move, source, target)) {
-					this.damage(source.baseMaxhp / 8, source, target);
+					source.trySetStatus('brn', target, move);
 				}
 				return this.NOT_FAIL;
 			},
