@@ -625,6 +625,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	hyperbeam: {
 		inherit: true,
 		self: null,
+		shortDesc: "User cannot move next turn if it fails to KO.",
 		onHit(target, source) {
 			if (!target.hp) {
 				source.addVolatile('mustrecharge');
@@ -634,6 +635,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	gigaimpact: {
 		inherit: true,
 		self: null,
+		shortDesc: "User cannot move next turn if it fails to KO.",
 		onHit(target, source) {
 			if (!target.hp) {
 				source.addVolatile('mustrecharge');
@@ -643,6 +645,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	frenzyplant: {
 		inherit: true,
 		self: null,
+		shortDesc: "User cannot move next turn if it fails to KO.",
 		onHit(target, source) {
 			if (!target.hp) {
 				source.addVolatile('mustrecharge');
@@ -652,6 +655,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	hydrocannon: {
 		inherit: true,
 		self: null,
+		shortDesc: "User cannot move next turn if it fails to KO.",
 		onHit(target, source) {
 			if (!target.hp) {
 				source.addVolatile('mustrecharge');
@@ -661,6 +665,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	blastburn: {
 		inherit: true,
 		self: null,
+		shortDesc: "User cannot move next turn if it fails to KO.",
 		onHit(target, source) {
 			if (!target.hp) {
 				source.addVolatile('mustrecharge');
@@ -670,6 +675,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	rockwrecker: {
 		inherit: true,
 		self: null,
+		shortDesc: "User cannot move next turn if it fails to KO.",
 		onHit(target, source) {
 			if (!target.hp) {
 				source.addVolatile('mustrecharge');
@@ -679,6 +685,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	meteorassault: {
 		inherit: true,
 		self: null,
+		shortDesc: "User cannot move next turn if it fails to KO.",
 		onHit(target, source) {
 			if (!target.hp) {
 				source.addVolatile('mustrecharge');
