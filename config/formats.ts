@@ -70,8 +70,7 @@ export const Formats: FormatList = [
 		searchShow: true,
 		mod: 'gen9vgcgay',
 		gameType: 'doubles',
-		// ruleset: [ 'Standard NatDex', 'Flat Rules', '!! Adjust Level = 50'],
-		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'TB Legality', 'HP Legality'],
+		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'HP TB Legality'],
 	},
 	{
 		name: "[Gen 9] Free-For-All NatDex",
