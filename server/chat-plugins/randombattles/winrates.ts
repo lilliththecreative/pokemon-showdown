@@ -46,11 +46,13 @@ function getDefaultStats() {
 			// so i'm not spending the time to add commands to toggle this
 			gen9randombattle: {mons: {}},
 			gen9randomdoublesbattle: {mons: {}},
+			gen8randombattle: {mons: {}},
 			gen7randombattle: {mons: {}},
 			gen6randombattle: {mons: {}},
 			gen5randombattle: {mons: {}},
 			gen4randombattle: {mons: {}},
 			gen3randombattle: {mons: {}},
+			gen2randombattle: {mons: {}},
 			gen1randombattle: {mons: {}},
 		},
 	} as Stats;
@@ -88,6 +90,12 @@ function getSpeciesName(set: PokemonSet, format: Format) {
 		return 'Dudunsparce';
 	} else if (species === "Maushold-Four") {
 		return 'Maushold';
+	} else if (species === "Greninja-Bond") {
+		return 'Greninja';
+	} else if (species === "Keldeo-Resolute") {
+		return 'Keldeo';
+	} else if (species === "Zarude-Dada") {
+		return 'Zarude';
 	} else if (species === "Squawkabilly-Blue") {
 		return "Squawkabilly";
 	} else if (species === "Squawkabilly-White") {
@@ -151,7 +159,8 @@ async function collectStats(battle: RoomBattle, winner: ID, players: ID[]) {
 	if (format.mod !== `gen${Dex.gen}`) {
 		eloFloor = 1300;
 	} else if (format.gameType === 'doubles') {
-		eloFloor = 1400;
+		// may need to be raised again if doubles ladder takes off
+		eloFloor = 1300;
 	}
 	if (!formatData || battle.rated < eloFloor) return;
 	checkRollover();
