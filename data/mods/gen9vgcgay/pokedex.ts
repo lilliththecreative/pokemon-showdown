@@ -1978,11 +1978,11 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Steel"
 		],
 		"baseStats": {
-			"hp": 75,
+			"hp": 80,
 			"atk": 110,
 			"def": 140,
 			"spa": 60,
-			"spd": 60,
+			"spd": 70,
 			"spe": 20
 		},
 		"abilities": {
@@ -2391,17 +2391,17 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Fighting"
 		],
 		"baseStats": {
-			"hp": 50,
+			"hp": 55,
 			"atk": 95,
 			"def": 95,
-			"spa": 35,
-			"spd": 110,
+			"spa": 55,
+			"spd": 115,
 			"spe": 70
 		},
 		"abilities": {
 			"0": "Intimidate",
 			"1": "Technician",
-			"H": "Steadfast"
+			"H": "Contrary"
 		},
 		"inherit": true
 	},
@@ -6965,7 +6965,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		],
 		"baseStats": {
 			"hp": 95,
-			"atk": 124,
+			"atk": 119,
 			"def": 78,
 			"spa": 69,
 			"spd": 71,
@@ -9088,7 +9088,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Steel"
 		],
 		"baseStats": {
-			"hp": 70,
+			"hp": 75,
 			"atk": 110,
 			"def": 100,
 			"spa": 50,
@@ -9516,7 +9516,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"inherit": true
 	},
-	"urshifusinglestrikestyle": {
+	"urshifu": {
 		"types": [
 			"Fighting",
 			"Dark"
@@ -9534,7 +9534,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"inherit": true
 	},
-	"urshifurapidstrikestyle": {
+	"urshifurapidstrike": {
 		"types": [
 			"Fighting",
 			"Water"
@@ -9557,10 +9557,10 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Electric"
 		],
 		"baseStats": {
-			"hp": 80,
-			"atk": 95,
+			"hp": 70,
+			"atk": 100,
 			"def": 50,
-			"spa": 95,
+			"spa": 100,
 			"spd": 50,
 			"spe": 200
 		},
@@ -10170,7 +10170,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Ghost"
 		],
 		"baseStats": {
-			"hp": 55,
+			"hp": 65,
 			"atk": 115,
 			"def": 70,
 			"spa": 80,
