@@ -71,7 +71,7 @@ export const Formats: FormatList = [
 		mod: 'gen9vgcgay',
 		gameType: 'doubles',
 		// ruleset: [ 'Standard NatDex', 'Flat Rules', '!! Adjust Level = 50'],
-		ruleset: ['Flat Rules', '!! Adjust Level = 50'],
+		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'TB Legality', 'HP Legality'],
 	},
 	{
 		name: "[Gen 9] Free-For-All NatDex",
@@ -274,6 +274,13 @@ export const Formats: FormatList = [
 		searchShow: true,
 		ruleset: ['[Gen 3] 6U'],
 		banlist: ['6U'],
+	},
+	{
+		name: "[Gen 3] 8U",
+		mod: 'gen3',
+		searchShow: true,
+		ruleset: ['[Gen 3] 7U'],
+		banlist: ['7U'],
 	},
 	{
 		section: "Gen 5 Lower Tiers",

@@ -383,6 +383,21 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 		basePower: 75,
 	},
+	moonblast: {
+		inherit: true,
+		isNonstandard: null,
+		basePower: 90,
+	},
+	aircutter: {
+		inherit: true,
+		isNonstandard: null,
+		basePower: 70,
+	},
+	tripledive: {
+		inherit: true,
+		isNonstandard: null,
+		basePower: 80,
+	},
 	futuresight: {
 		inherit: true,
 		isNonstandard: null,
@@ -605,6 +620,79 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			{ chance: 10, status: 'fst'},
 			{ chance: 10, volatileStatus: 'flinch'},
 		],
+	},
+	// Recharge moves
+	hyperbeam: {
+		inherit: true,
+		self: null,
+		onHit(target, source) {
+			if (!target.hp) {
+				source.addVolatile('mustrecharge');
+			}
+		},
+	},
+	gigaimpact: {
+		inherit: true,
+		self: null,
+		onHit(target, source) {
+			if (!target.hp) {
+				source.addVolatile('mustrecharge');
+			}
+		},
+	},
+	frenzyplant: {
+		inherit: true,
+		self: null,
+		onHit(target, source) {
+			if (!target.hp) {
+				source.addVolatile('mustrecharge');
+			}
+		},
+	},
+	hydrocannon: {
+		inherit: true,
+		self: null,
+		onHit(target, source) {
+			if (!target.hp) {
+				source.addVolatile('mustrecharge');
+			}
+		},
+	},
+	blastburn: {
+		inherit: true,
+		self: null,
+		onHit(target, source) {
+			if (!target.hp) {
+				source.addVolatile('mustrecharge');
+			}
+		},
+	},
+	rockwrecker: {
+		inherit: true,
+		self: null,
+		onHit(target, source) {
+			if (!target.hp) {
+				source.addVolatile('mustrecharge');
+			}
+		},
+	},
+	meteorassault: {
+		inherit: true,
+		self: null,
+		onHit(target, source) {
+			if (!target.hp) {
+				source.addVolatile('mustrecharge');
+			}
+		},
+	},
+	// pp changes
+	flamethrower: {
+		inherit: true,
+		pp: 16
+	},
+	thunderbolt: {
+		inherit: true,
+		pp: 16
 	},
 	// Making Standard
 	firewall: {

@@ -294,7 +294,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "OU",
 	},
 	gastly: {
-		tier: "NU",
+		tier: "PU",
 	},
 	haunter: {
 		tier: "UU",

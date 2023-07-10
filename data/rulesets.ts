@@ -24,7 +24,18 @@ export const Rulesets: {[k: string]: FormatData} = {
 		name: 'TB Legality',
 		desc: "Allow every Pokemon to learn Tera Blast",
 		checkCanLearn(move, species, setSources, set){
-			if (move.id === "terablast") return null;
+			const unincluded = ["wobbuffet", "cosmog", "cosmoem"];
+			if (move.id === "terablast" && unincluded.includes(species.id)) return null;
+			return this.checkCanLearn(move, species, setSources, set);
+		},
+	},
+	hplegality: {
+		effectType: 'ValidatorRule',
+		name: 'HP Legality',
+		desc: "Allow every Pokemon to learn Hidden Power",
+		checkCanLearn(move, species, setSources, set){
+			const unincluded = ["ditto", "wobbuffet", "cosmog", "cosmoem"];
+			if (move.id === "hiddenpower" && unincluded.includes(species.id)) return null;
 			return this.checkCanLearn(move, species, setSources, set);
 		},
 	},

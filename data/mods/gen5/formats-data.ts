@@ -477,7 +477,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData; } = {
 		doublesTier: "DUU",
 	},
 	staryu: {
-		tier: "6U",
+		tier: "ZU",
 	},
 	starmie: {
 		tier: "OU",
