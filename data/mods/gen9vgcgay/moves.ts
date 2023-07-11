@@ -424,6 +424,46 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			boosts: {spe: -1},
 		},
 	},
+	auroraveil: {
+		inherit: true,
+		onTry(source) {
+			return this.field.isWeather(['hail', 'snow']) || source.hasAbility("trueaurora");
+		},
+		condition: {
+			duration: 5,
+			durationCallback(target, source, effect) {
+				var numTurns = 5
+				if (source?.hasItem('lightclay')) {
+					numTurns += 3
+				}
+				if (source?.hasAbility('trueaurora')) {
+					numTurns += 3
+				}
+				return numTurns;
+			},
+			onAnyModifyDamage(damage, source, target, move) {
+				if (target !== source && this.effectState.target.hasAlly(target)) {
+					if ((target.side.getSideCondition('reflect') && this.getCategory(move) === 'Physical') ||
+							(target.side.getSideCondition('lightscreen') && this.getCategory(move) === 'Special')) {
+						return;
+					}
+					if (!target.getMoveHitData(move).crit && !move.infiltrates) {
+						this.debug('Aurora Veil weaken');
+						if (this.activePerHalf > 1) return this.chainModify([2732, 4096]);
+						return this.chainModify(0.5);
+					}
+				}
+			},
+			onSideStart(side) {
+				this.add('-sidestart', side, 'move: Aurora Veil');
+			},
+			onSideResidualOrder: 26,
+			onSideResidualSubOrder: 10,
+			onSideEnd(side) {
+				this.add('-sideend', side, 'move: Aurora Veil');
+			},
+		},
+	},
 	// spotlight: {
 	// 	inherit: true,
 	// 	isNonstandard: null,
@@ -509,7 +549,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			return null;
 		}
 	},
-	forestcurse: {
+	forestscurse: {
 		inherit: true,
 		isNonstandard: null,
 		shortDesc:"Charges, adds Grass to target's type, boosts all stats turn 2.",
@@ -774,6 +814,77 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	"hiddenpowerbug": {
+		"inherit": true,
+		"category": "Physical",
+		"isNonstandard": null,
+	},
+	"hiddenpowerdark": {
+		"inherit": true,
+		"isNonstandard": null,
+	},
+	"hiddenpowerdragon": {
+		"inherit": true,
+		"isNonstandard": null,
+	},
+	"hiddenpowerelectric": {
+		"inherit": true,
+		"isNonstandard": null,
+	},
+	"hiddenpowerfighting": {
+		"inherit": true,
+		"category": "Physical",
+		"isNonstandard": null,
+	},
+	"hiddenpowerfire": {
+		"inherit": true,
+		"isNonstandard": null,
+	},
+	"hiddenpowerflying": {
+		"inherit": true,
+		"category": "Physical",
+		"isNonstandard": null,
+	},
+	"hiddenpowerghost": {
+		"inherit": true,
+		"category": "Physical",
+		"isNonstandard": null,
+	},
+	"hiddenpowergrass": {
+		"inherit": true,
+		"isNonstandard": null,
+	},
+	"hiddenpowerice": {
+		"inherit": true,
+		"isNonstandard": null,
+	},
+	"hiddenpowerpoison": {
+		"inherit": true,
+		"isNonstandard": null,
+	},
+	"hiddenpowerpsychic": {
+		"inherit": true,
+		"isNonstandard": null,
+	},
+	"hiddenpowerrock": {
+		"inherit": true,
+		"category": "Physical",
+		"isNonstandard": null,
+	},
+	"hiddenpowersteel": {
+		"inherit": true,
+		"category": "Physical",
+		"isNonstandard": null,
+	},
+	"hiddenpowerwater": {
+		"inherit": true,
+		"isNonstandard": null,
+	},
+	"hiddenpowerground": {
+		"inherit": true,
+		"category": "Physical",
+		"isNonstandard": null,
+	},
 	mindblown: {
 		inherit: true,
 		isNonstandard: null,
@@ -835,6 +946,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 	},
 	craftyshield: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	plasmafists: {
 		inherit: true,
 		isNonstandard: null,
 	},

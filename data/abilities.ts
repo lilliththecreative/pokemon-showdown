@@ -5279,9 +5279,9 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 4,
 		num: -14,
 	},
-	snaketrap: {
+	constrictor: {
 		isNonstandard: "CAP",
-		name: "Snake Trap",
+		name: "Constrictor",
 		rating: 4,
 		num: -15,
 	},
@@ -5320,5 +5320,11 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Lawn Surfer",
 		rating: 3,
 		num: -21,
+	},
+	trueaurora: {
+		isNonstandard: "CAP",
+		name: "True Aurora",
+		rating: 3,
+		num: -22,
 	},
 };

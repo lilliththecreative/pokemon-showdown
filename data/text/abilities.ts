@@ -2217,8 +2217,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		shortDesc: "All Status moves this pokemon on an enemy will hit both",
 		desc: "All Status moves this pokemon on an enemy will hit both",
 	},
-	snaketrap: {
-		name: "Snake Trap",
+	constrictor: {
+		name: "Constrictor",
 		shortDesc: "All contact moves this pokemon use will trap the opponent",
 		desc: "All contact moves this pokemon use will trap the opponent",
 	},
@@ -2251,5 +2251,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Lawn Surfer",
 		desc: "Doubles speed in Grassy Terrain",
 		shortDesc: "Doubles speed in Grassy Terrain",
+	},
+	trueaurora: {
+		name: "True Aurora",
+		desc: "Can set up Aurora Veil outside of snow and it lasts 3 extra turns",
+		shortDesc: "Can set up Aurora Veil outside of snow and it lasts 3 extra turns",
 	},
 };

@@ -620,6 +620,32 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 		},
 	},
+	transistor: {
+		inherit: true,
+		shortDesc: "This Pokemon's offensive stat is 1.2x while using an Electric-type attack.",
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Electric') {
+				this.debug('Transistor boost');
+				return this.chainModify([6, 5]);
+			}
+		},
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Electric') {
+				this.debug('Transistor boost');
+				return this.chainModify([6, 5]);
+			}
+		},
+	},
+	supremeoverlord: {
+		inherit: true,
+		shortDesc: "20% more power per fainted ally, Max 60%",
+		onBasePower(basePower, attacker, defender, move) {
+			if (this.effectState.fallen) {
+				const powMod = [5, 6, 7, 8, 8, 8];
+				return this.chainModify([powMod[this.effectState.fallen], 5]);
+			}
+		},
+	},
 	// Ruin Nerf
 	swordofruin: {
 		inherit: true,
@@ -871,12 +897,12 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 		},
 	},
-	snaketrap: {
+	constrictor: {
 		inherit: true,
 		isNonstandard: null,
 		onAfterMoveSecondary(target, source, move) {
 			if (move.flags['contact']) {
-				this.add('-ability', target, 'Snake Trap');
+				this.add('-ability', target, 'Constrictor');
 				target.addVolatile('trapped', target, move, 'trapper');
 			}
 		},
@@ -996,4 +1022,9 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 		},
 	},
+	// Implemented in Aurora Veil
+	// trueaurora: {
+	// 	inherit: true,
+	// 	isNonstandard: null,
+	// },
 };

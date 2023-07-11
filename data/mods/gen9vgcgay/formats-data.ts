@@ -5650,12 +5650,16 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"tier": "Illegal"
 	},
 	"urshifu": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "OU",
+		"natDexTier": "OU",
+		"doublesTier": "DOU"
 	},
 	"urshifurapidstrike": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "OU",
+		"natDexTier": "OU",
+		"doublesTier": "DOU"
 	},
 	"urshifugmax": {
 		"isNonstandard": "Past",
