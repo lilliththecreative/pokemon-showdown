@@ -2257,4 +2257,9 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "Can set up Aurora Veil outside of snow and it lasts 3 extra turns",
 		shortDesc: "Can set up Aurora Veil outside of snow and it lasts 3 extra turns",
 	},
+	singularity: {
+		name: "Singularity",
+		desc: "All Moves used while this pokemon is active can have maximum 0 priority",
+		shortDesc: "All Moves used while this pokemon is active can have maximum 0 priority",
+	},
 };

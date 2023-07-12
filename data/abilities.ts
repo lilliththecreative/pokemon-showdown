@@ -5327,4 +5327,10 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 3,
 		num: -22,
 	},
+	singularity: {
+		isNonstandard: "CAP",
+		name: "Singularity",
+		rating: 3,
+		num: -23,
+	},
 };

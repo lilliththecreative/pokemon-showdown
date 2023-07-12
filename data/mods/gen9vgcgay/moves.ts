@@ -298,6 +298,11 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		basePower: 130,
 	},
+	twinneedle: {
+		inherit: true,
+		isNonstandard: null,
+		basePower: 35,
+	},
 	present: {
 		inherit: true,
 		shortDesc: "100, 130, 160 power, if target ally, heals 50% instead",
@@ -667,7 +672,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		self: null,
 		shortDesc: "User cannot move next turn if it fails to KO.",
 		onHit(target, source) {
-			if (!target.hp) {
+			if (target.hp) {
 				source.addVolatile('mustrecharge');
 			}
 		},
@@ -677,7 +682,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		self: null,
 		shortDesc: "User cannot move next turn if it fails to KO.",
 		onHit(target, source) {
-			if (!target.hp) {
+			if (target.hp) {
 				source.addVolatile('mustrecharge');
 			}
 		},
@@ -687,7 +692,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		self: null,
 		shortDesc: "User cannot move next turn if it fails to KO.",
 		onHit(target, source) {
-			if (!target.hp) {
+			if (target.hp) {
 				source.addVolatile('mustrecharge');
 			}
 		},
@@ -697,7 +702,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		self: null,
 		shortDesc: "User cannot move next turn if it fails to KO.",
 		onHit(target, source) {
-			if (!target.hp) {
+			if (target.hp) {
 				source.addVolatile('mustrecharge');
 			}
 		},
@@ -707,7 +712,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		self: null,
 		shortDesc: "User cannot move next turn if it fails to KO.",
 		onHit(target, source) {
-			if (!target.hp) {
+			if (target.hp) {
 				source.addVolatile('mustrecharge');
 			}
 		},
@@ -717,7 +722,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		self: null,
 		shortDesc: "User cannot move next turn if it fails to KO.",
 		onHit(target, source) {
-			if (!target.hp) {
+			if (target.hp) {
 				source.addVolatile('mustrecharge');
 			}
 		},
@@ -727,7 +732,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		self: null,
 		shortDesc: "User cannot move next turn if it fails to KO.",
 		onHit(target, source) {
-			if (!target.hp) {
+			if (target.hp) {
 				source.addVolatile('mustrecharge');
 			}
 		},

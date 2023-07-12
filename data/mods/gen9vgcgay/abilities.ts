@@ -287,6 +287,24 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 		},
 	},
+	illuminate: {
+		inherit: true,
+		shortDesc: "On switch-in, this Pokemon lowers the Evasion of opponents by 1 stage.",
+		onStart(pokemon) {
+			let activated = false;
+			for (const target of pokemon.adjacentFoes()) {
+				if (!activated) {
+					this.add('-ability', pokemon, 'Illuminate', 'boost');
+					activated = true;
+				}
+				if (target.volatiles['substitute']) {
+					this.add('-immune', target);
+				} else {
+					this.boost({evasion: -1}, target, pokemon, null, true);
+				}
+			}
+		},
+	},
 	// Signature Ability Buffs
 	galewings: {
 		inherit: true,
@@ -645,6 +663,26 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 				return this.chainModify([powMod[this.effectState.fallen], 5]);
 			}
 		},
+	},
+	magician: {
+		inherit: true,
+		shortDesc: "Sets Magic Room on entrance, steals item with attack",
+		onStart(source) {
+			this.field.addPseudoWeather('magicroom')
+		},
+	},
+	watercompaction: {
+		inherit: true,
+		shortDesc: "This Pokemon's defense is raised by 2 stages if hit by a Water move; Water Immunity.",
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Water') {
+				if (!this.boost({def: 2})) {
+					this.add('-immune', target, '[from] ability: Water Compaction');
+				}
+				return null;
+			}
+		},
+		isBreakable: true,
 	},
 	// Ruin Nerf
 	swordofruin: {
@@ -1023,8 +1061,17 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		},
 	},
 	// Implemented in Aurora Veil
-	// trueaurora: {
-	// 	inherit: true,
-	// 	isNonstandard: null,
-	// },
+	trueaurora: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	singularity: {
+		inherit: true,
+		isNonstandard: null,
+		onAnyModifyPriority(relayVar, source, target, move) {
+			if (move.priority > 0) {
+				move.priority = 0
+			}
+		},
+	},
 };
