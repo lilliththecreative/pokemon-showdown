@@ -298,10 +298,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		basePower: 130,
 	},
-	twinneedle: {
+	twineedle: {
 		inherit: true,
 		isNonstandard: null,
-		basePower: 35,
+		basePower: 45,
 	},
 	present: {
 		inherit: true,
@@ -429,6 +429,27 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			boosts: {spe: -1},
 		},
 	},
+	icehammer: {
+		inherit: true,
+		basePower: 110
+	},
+	meditate: {
+		inherit: true,
+		isNonstandard: null,
+		shortDesc: "Boosts Atk and SpDef by 1",
+		boosts: {
+			atk: 1,
+			spd: 1
+		},
+	},
+	charge: {
+		inherit: true,
+		isNonstandard: null,
+		shortDesc: "Doubles next Electric attack and heals 33%",
+		heal: [1, 3],
+		boosts: null,
+	},
+	// Moves edited for abilities
 	auroraveil: {
 		inherit: true,
 		onTry(source) {
@@ -469,6 +490,17 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			},
 		},
 	},
+	finalgambit: {
+		inherit: true,
+		damageCallback(pokemon) {
+			var damage = pokemon.hp;
+			pokemon.faint();
+			if (pokemon.hasAbility('reckless')) {
+				damage *= 1.3
+			}
+			return damage;
+		},
+	},
 	// spotlight: {
 	// 	inherit: true,
 	// 	isNonstandard: null,
@@ -496,46 +528,35 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	// 		},
 	// 	},
 	// },
-	finalgambit: {
-		inherit: true,
-		damageCallback(pokemon) {
-			var damage = pokemon.hp;
-			pokemon.faint();
-			if (pokemon.hasAbility('reckless')) {
-				damage *= 1.3
-			}
-			return damage;
-		},
-	},
-	tailwind: {
-		inherit: true,
-		shortDesc: "1.5x speed for your side for 4 turns",
-		condition: {
-			duration: 4,
-			durationCallback(target, source, effect) {
-				if (source?.hasAbility('persistent')) {
-					this.add('-activate', source, 'ability: Persistent', '[move] Tailwind');
-					return 6;
-				}
-				return 4;
-			},
-			onSideStart(side, source) {
-				if (source?.hasAbility('persistent')) {
-					this.add('-sidestart', side, 'move: Tailwind', '[persistent]');
-				} else {
-					this.add('-sidestart', side, 'move: Tailwind');
-				}
-			},
-			onModifySpe(spe, pokemon) {
-				return this.chainModify(1.5);
-			},
-			onSideResidualOrder: 26,
-			onSideResidualSubOrder: 5,
-			onSideEnd(side) {
-				this.add('-sideend', side, 'move: Tailwind');
-			},
-		},
-	},
+	// tailwind: {
+	// 	inherit: true,
+	// 	shortDesc: "1.5x speed for your side for 4 turns",
+	// 	condition: {
+	// 		duration: 4,
+	// 		durationCallback(target, source, effect) {
+	// 			if (source?.hasAbility('persistent')) {
+	// 				this.add('-activate', source, 'ability: Persistent', '[move] Tailwind');
+	// 				return 6;
+	// 			}
+	// 			return 4;
+	// 		},
+	// 		onSideStart(side, source) {
+	// 			if (source?.hasAbility('persistent')) {
+	// 				this.add('-sidestart', side, 'move: Tailwind', '[persistent]');
+	// 			} else {
+	// 				this.add('-sidestart', side, 'move: Tailwind');
+	// 			}
+	// 		},
+	// 		onModifySpe(spe, pokemon) {
+	// 			return this.chainModify(1.5);
+	// 		},
+	// 		onSideResidualOrder: 26,
+	// 		onSideResidualSubOrder: 5,
+	// 		onSideEnd(side) {
+	// 			this.add('-sideend', side, 'move: Tailwind');
+	// 		},
+	// 	},
+	// },
 	// Z Moves
 	trickortreat: {
 		inherit: true,

@@ -684,6 +684,31 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		},
 		isBreakable: true,
 	},
+	emergencyexit: {
+		inherit: true,
+		onEmergencyExit(target) {
+			if (!this.canSwitch(target.side) || target.forceSwitchFlag || target.switchFlag) return;
+			for (const action of this.queue.list as MoveAction[]) {
+				if (
+					!action.move || !action.pokemon?.isActive ||
+					action.pokemon.fainted || action.maxMove || action.zmove
+				) {
+					continue;
+				}
+				if (action.pokemon === target) {
+					this.add('-activate', target, 'ability: Emergency Exit');
+					this.queue.prioritizeAction(action);
+					(action.move.selfSwitch as boolean) = true;
+					break;
+				}
+			}
+			for (const side of this.sides) {
+				for (const active of side.active) {
+					active.switchFlag = false;
+				}
+			}
+		},
+	},
 	// Ruin Nerf
 	swordofruin: {
 		inherit: true,

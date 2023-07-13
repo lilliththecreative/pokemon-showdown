@@ -45,7 +45,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "PU",
 	},
 	pidgey: {
-		tier: "9U",
+		tier: "8U",
 	},
 	pidgeotto: {
 		tier: "6U",
@@ -105,7 +105,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "OU",
 	},
 	cleffa: {
-		tier: "8U",
+		tier: "9U",
 	},
 	clefairy: {
 		tier: "PU",
@@ -588,7 +588,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "UU",
 	},
 	marill: {
-		tier: "9U",
+		tier: "8U",
 	},
 	azumarill: {
 		tier: "NU",
@@ -633,7 +633,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "9U",
 	},
 	wobbuffet: {
-		tier: "8U",
+		tier: "9U",
 	},
 	girafarig: {
 		tier: "UU",
