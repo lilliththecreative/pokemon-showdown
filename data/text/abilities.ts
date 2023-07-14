@@ -2169,58 +2169,58 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	// GAY
 	triplethreat: {
 		name: "Triple Threat",
-		desc: "Moves hit 3 times at 40% power",
-		shortDesc: "Moves hit 3 times at 40% power",
+		desc: "Moves hit 3 times at 40% power.",
+		shortDesc: "Moves hit 3 times at 40% power.",
 	},
 	mindsurfer: {
 		name: "Mind Surfer",
-		desc: "Doubles speed in Psychic Terrain",
-		shortDesc: "Doubles speed in Psychic Terrain",
+		desc: "Doubles speed in Psychic Terrain.",
+		shortDesc: "Doubles speed in Psychic Terrain.",
 	},
 	thunderstorm: {
 		name: "Thunderstorm",
-		desc: "Sets Rain and Electric Terrain",
-		shortDesc: "Sets Rain and Electric Terrain",
+		desc: "Sets Rain and Electric Terrain.",
+		shortDesc: "Sets Rain and Electric Terrain.",
 	},
 	justthetip: {
 		name: "Just the Tip",
-		desc: "Drill moves do 1.5x damage",
-		shortDesc: "Drill moves do 1.5x damage",
+		desc: "Drill moves do 1.5x damage.",
+		shortDesc: "Drill moves do 1.5x damage.",
 	},
 	arcticrush: {
 		name: "Arctic Rush",
-		shortDesc: "Doubles Speed and boosts SpDef in Snow and Rain",
-		desc: "Doubles Speed and boosts SpDef in Snow and Rain",
+		shortDesc: "Doubles Speed and boosts SpDef in Snow and Rain.",
+		desc: "Doubles Speed and boosts SpDef in Snow and Rain.",
 	},
 	cloakchange: {
 		name: "Cloak Change",
-		shortDesc: "Changes forms depending on attack used",
-		desc: "Changes forms depending on attack used",
+		shortDesc: "Changes forms depending on attack used.",
+		desc: "Changes forms depending on attack used.",
 	},
 	bigballs: {
 		name: "Big Balls",
-		shortDesc: "All moves used by and on target will crit",
-		desc: "All moves used by and on target will crit",
+		shortDesc: "All moves used by and on target will crit.",
+		desc: "All moves used by and on target will crit.",
 	},
 	oddkeystone: {
 		name: "Odd Keystone",
-		shortDesc: "All attacking moves will fail on this pokemon until this pokemon moves",
-		desc: "All attacking moves will fail on this pokemon until this pokemon moves",
+		shortDesc: "All attacking moves will fail on this pokemon until this pokemon moves.",
+		desc: "All attacking moves will fail on this pokemon until this pokemon moves.",
 	},
 	monkeytactics: {
 		name: "Monkey Tactics",
-		shortDesc: "This Pokemon's SpA is 1.5x, but it can only select the first move it executes",
-		desc: "This Pokemon's SpA is 1.5x, but it can only select the first move it executes",
+		shortDesc: "This Pokemon's SpA is 1.5x, but it can only select the first move it executes.",
+		desc: "This Pokemon's SpA is 1.5x, but it can only select the first move it executes.",
 	},
 	wideeyed: {
 		name: "Wide Eyed",
-		shortDesc: "All Status moves this pokemon on an enemy will hit both",
-		desc: "All Status moves this pokemon on an enemy will hit both",
+		shortDesc: "All Status moves this pokemon uses on an enemy will hit both opponents.",
+		desc: "All Status moves this pokemon uses on an enemy will hit both opponents.",
 	},
 	constrictor: {
 		name: "Constrictor",
-		shortDesc: "All contact moves this pokemon use will trap the opponent",
-		desc: "All contact moves this pokemon use will trap the opponent",
+		shortDesc: "All contact moves this pokemon use will trap the opponent.",
+		desc: "All contact moves this pokemon use will trap the opponent.",
 	},
 	heatsink: {
 		name: "Heat Sink",
@@ -2229,8 +2229,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	captivatingsong: {
 		name: "Captivating Song",
-		shortDesc: "All sound moves used by this pokemon trap enemies",
-		desc: "All sound moves used by this pokemon trap enemies",
+		shortDesc: "All sound moves used by this Pokemon trap enemies",
+		desc: "All sound moves used by this Pokemon trap enemies",
 	},
 	transphobia: {
 		name: "Transphobia",
@@ -2259,7 +2259,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	singularity: {
 		name: "Singularity",
-		desc: "All Moves used while this pokemon is active can have maximum 0 priority",
-		shortDesc: "All Moves used while this pokemon is active can have maximum 0 priority",
+		desc: "All Moves >= -5 Priority used while this pokemon is active have 0 priority.",
+		shortDesc: "All Moves >= -5 Priority used while this pokemon is active have 0 priority.",
 	},
 };

@@ -573,7 +573,11 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	grasspelt: {
 		inherit: true,
-		shortDesc: "If Grassy Terrain is up, Defense and Special Defense are multiplied by 1.5.",
+		shortDesc: "If Grassy Terrain is up, Atk, Def, and SpDef are multiplied by 1.5.",
+		onModifyAtkPriority: 6,
+		onModifyAtk(pokemon) {
+			if (this.field.isTerrain('grassyterrain')) return this.chainModify(1.5);
+		},
 		onModifySpDPriority: 6,
 		onModifySpD(pokemon) {
 			if (this.field.isTerrain('grassyterrain')) return this.chainModify(1.5);
@@ -686,6 +690,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	emergencyexit: {
 		inherit: true,
+		shortDesc: "When reaches >= 50% HP, Immediately attacks and then switches out",
 		onEmergencyExit(target) {
 			if (!this.canSwitch(target.side) || target.forceSwitchFlag || target.switchFlag) return;
 			for (const action of this.queue.list as MoveAction[]) {
@@ -1094,7 +1099,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 		onAnyModifyPriority(relayVar, source, target, move) {
-			if (move.priority > 0) {
+			if (move.priority >= -5) {
 				move.priority = 0
 			}
 		},
