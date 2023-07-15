@@ -449,6 +449,17 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		heal: [1, 3],
 		boosts: null,
 	},
+	steamroller: {
+		inherit: true,
+		isNonstandard: null,
+		basePower: 85,
+	},
+	toxicthread: {
+		inherit: true,
+		isNonstandard: null,
+		target: "allAdjacentFoes",
+		shortDesc: "Lowers the both enemies' Speed by 1 and poisons them."
+	},
 	// Moves edited for abilities
 	auroraveil: {
 		inherit: true,
@@ -740,6 +751,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	rockwrecker: {
 		inherit: true,
+		isNonstandard: null,
 		self: null,
 		shortDesc: "User cannot move next turn if it fails to KO.",
 		onHit(target, source) {
@@ -750,6 +762,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	meteorassault: {
 		inherit: true,
+		isNonstandard: null,
 		self: null,
 		shortDesc: "User cannot move next turn if it fails to KO.",
 		onHit(target, source) {
@@ -976,6 +989,18 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 	},
 	plasmafists: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	signalbeam: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	powder: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	psychoboost: {
 		inherit: true,
 		isNonstandard: null,
 	},

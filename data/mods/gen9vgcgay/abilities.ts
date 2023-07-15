@@ -1110,39 +1110,35 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		isNonstandard: null,
 		onAnyModifyPriority(relayVar, source, target, move) {
 			if (move.priority >= -5) {
-				move.priority = 0
+				return 0;
 			}
 		},
 	},
 	catscradle: {
 		inherit: true,
 		isNonstandard: null,
-		condition: {
-			duration: 1,
-			onBeforeSwitchOut(pokemon) {
-				this.debug('Pursuit start');
-				let alreadyAdded = false;
-				pokemon.removeVolatile('destinybond');
-				for (const source of this.effectState.sources) {
-					if (!source.isAdjacent(pokemon) || !this.queue.cancelMove(source) || !source.hp) continue;
-					if (!alreadyAdded) {
-						this.add('-activate', pokemon, 'move: Pursuit');
-						alreadyAdded = true;
-					}
-					// Run through each action in queue to check if the Pursuit user is supposed to Mega Evolve this turn.
-					// If it is, then Mega Evolve before moving.
-					if (source.canMegaEvo || source.canUltraBurst) {
-						for (const [actionIndex, action] of this.queue.entries()) {
-							if (action.pokemon === source && action.choice === 'megaEvo') {
-								this.actions.runMegaEvo(source);
-								this.queue.list.splice(actionIndex, 1);
-								break;
-							}
-						}
-					}
-					this.actions.runMove('pursuit', source, source.getLocOf(pokemon));
+		onAnyBeforeSwitchOut(pokemon) {
+			this.debug('Pursuit start');
+			pokemon.removeVolatile('destinybond');
+			for (const [actionIndex, action] of this.queue.entries()) {
+				const moveAction = action as MoveAction;
+				if (
+					!moveAction.move || !moveAction.pokemon?.isActive ||
+					moveAction.pokemon.fainted
+				) {
+					continue;
 				}
-			},
+				if (moveAction.pokemon.hasAbility('catscradle')) {
+					const targets = ["allAdjacent", "allAdjacentFoes"]
+					if (moveAction.originalTarget === pokemon || targets.includes(moveAction.move.target)) {
+						this.add('-ability', moveAction.pokemon, "Cat's Cradle");
+						(moveAction.move.basePower as number) = moveAction.move.basePower * 2;
+						this.actions.runMove(moveAction.move, moveAction.pokemon, moveAction.targetLoc)
+						this.queue.list.splice(actionIndex, 1);
+						break;
+					}
+				}
+			}
 		},
 	},
 	extraluck: {
