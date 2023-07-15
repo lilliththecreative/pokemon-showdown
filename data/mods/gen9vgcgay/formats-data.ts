@@ -862,10 +862,8 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"doublesTier": "DOU"
 	},
 	"scyther": {
-		"isNonstandard": null,
-		"tier": "OU",
-		"natDexTier": "OU",
-		"doublesTier": "DOU"
+		"isNonstandard": "Past",
+		"tier": "Illegal"
 	},
 	"jynx": {
 		"isNonstandard": null,
@@ -2764,10 +2762,8 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"tier": "Illegal"
 	},
 	"riolu": {
-		"isNonstandard": null,
-		"tier": "OU",
-		"natDexTier": "OU",
-		"doublesTier": "DOU"
+		"isNonstandard": "Past",
+		"tier": "Illegal"
 	},
 	"lucario": {
 		"isNonstandard": null,
@@ -4146,14 +4142,14 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"tier": "Illegal"
 	},
 	"floetteeternal": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
-	},
-	"florges": {
 		"isNonstandard": null,
 		"tier": "OU",
 		"natDexTier": "OU",
 		"doublesTier": "DOU"
+	},
+	"florges": {
+		"isNonstandard": "Past",
+		"tier": "Illegal"
 	},
 	"skiddo": {
 		"isNonstandard": "Past",

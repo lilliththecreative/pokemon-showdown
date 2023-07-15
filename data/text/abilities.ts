@@ -2262,4 +2262,14 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "All Moves >= -5 Priority used while this pokemon is active have 0 priority.",
 		shortDesc: "All Moves >= -5 Priority used while this pokemon is active have 0 priority.",
 	},
+	catscradle: {
+		name: "Cat's Cradle",
+		desc: "If Opponent Tries to switch out, this pokemon attacks immediately at 2x power",
+		shortDesc: "If Opponent Tries to switch out, this pokemon attacks immediately at 2x power",
+	},
+	extraluck: {
+		name: "Extra Luck",
+		desc: "This Pokemon's critical hit ratio is raised by 2 stages.",
+		shortDesc: "This Pokemon's critical hit ratio is raised by 2 stages.",
+	},
 };

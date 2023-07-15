@@ -714,6 +714,16 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 		},
 	},
+	corrosion: {
+		inherit: true,
+		shortDesc: "Can poison regardless of typing, Poison moves hit Steel.",
+		onModifyMove(move) {
+			if (!move.ignoreImmunity) move.ignoreImmunity = {};
+			if (move.ignoreImmunity !== true) {
+				move.ignoreImmunity['Steel'] = true;
+			}
+		},
+	},
 	// Ruin Nerf
 	swordofruin: {
 		inherit: true,
@@ -1102,6 +1112,44 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			if (move.priority >= -5) {
 				move.priority = 0
 			}
+		},
+	},
+	catscradle: {
+		inherit: true,
+		isNonstandard: null,
+		condition: {
+			duration: 1,
+			onBeforeSwitchOut(pokemon) {
+				this.debug('Pursuit start');
+				let alreadyAdded = false;
+				pokemon.removeVolatile('destinybond');
+				for (const source of this.effectState.sources) {
+					if (!source.isAdjacent(pokemon) || !this.queue.cancelMove(source) || !source.hp) continue;
+					if (!alreadyAdded) {
+						this.add('-activate', pokemon, 'move: Pursuit');
+						alreadyAdded = true;
+					}
+					// Run through each action in queue to check if the Pursuit user is supposed to Mega Evolve this turn.
+					// If it is, then Mega Evolve before moving.
+					if (source.canMegaEvo || source.canUltraBurst) {
+						for (const [actionIndex, action] of this.queue.entries()) {
+							if (action.pokemon === source && action.choice === 'megaEvo') {
+								this.actions.runMegaEvo(source);
+								this.queue.list.splice(actionIndex, 1);
+								break;
+							}
+						}
+					}
+					this.actions.runMove('pursuit', source, source.getLocOf(pokemon));
+				}
+			},
+		},
+	},
+	extraluck: {
+		inherit: true,
+		isNonstandard: null,
+		onModifyCritRatio(critRatio) {
+			return critRatio + 2;
 		},
 	},
 };
