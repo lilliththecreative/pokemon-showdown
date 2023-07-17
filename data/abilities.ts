@@ -5267,9 +5267,9 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 4,
 		num: -12,
 	},
-	monkeytactics: {
+	monkeybusiness: {
 		isNonstandard: "CAP",
-		name: "Monkey Tactics",
+		name: "Monkey Business",
 		rating: 4,
 		num: -13,
 	},
@@ -5344,5 +5344,11 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Extra Luck",
 		rating: 3,
 		num: -25,
+	},
+	largewingspan: {
+		isNonstandard: "CAP",
+		name: "Large Wingspan",
+		rating: 3,
+		num: -26,
 	},
 };

@@ -117,7 +117,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	"falseswipe": {
 		inherit: true,
-		"basePower": 160,
+		"basePower": 140,
 		isNonstandard: null
 	},
 	"razorwind": {
@@ -260,6 +260,12 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			},
 		},
 	},
+	gmaxmalador: {
+		inherit: true,
+		isNonstandard: null,
+		isMax: false,
+		basePower: 90,
+	},
 	spark: {
 		inherit: true,
 		basePower: 80,
@@ -267,6 +273,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	poisontail: {
 		inherit: true,
 		target: "allAdjacentFoes",
+		shortDesc: "Hits both foes, High Crit Rate, 10% to poison.",
 		basePower: 80,
 	},
 	feint: {
@@ -460,6 +467,32 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		target: "allAdjacentFoes",
 		shortDesc: "Lowers the both enemies' Speed by 1 and poisons them."
 	},
+	snatch: {
+		inherit: true,
+		isNonstandard: null,
+		shortDesc: "User steals certain support moves for it and allies to use.",
+		condition: {
+			duration: 1,
+			onStart(pokemon) {
+				this.add('-singleturn', pokemon, 'Snatch');
+			},
+			onAnyPrepareHitPriority: -1,
+			onAnyPrepareHit(source, target, move) {
+				const snatchUser = this.effectState.source;
+				if (snatchUser.isSkyDropped()) return;
+				if (!move || move.isZ || move.isMax || !move.flags['snatch'] || move.sourceEffect === 'snatch') {
+					return;
+				}
+				snatchUser.removeVolatile('snatch');
+				this.add('-activate', snatchUser, 'move: Snatch', '[of] ' + source);
+				this.actions.useMove(move.id, snatchUser);
+				for (const ally of (snatchUser as Pokemon).adjacentAllies()) {
+					this.actions.useMove(move.id, ally);
+				}
+				return null;
+			},
+		},
+	},
 	// Moves edited for abilities
 	auroraveil: {
 		inherit: true,
@@ -510,6 +543,19 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 				damage *= 1.3
 			}
 			return damage;
+		},
+	},
+	furycutter: {
+		inherit: true,
+		accuracy: 100,
+		shortDesc: "Power doubles with each hit, up to 640.",
+		basePowerCallback(pokemon, target, move) {
+			if (!pokemon.volatiles['furycutter'] || move.hit === 1) {
+				pokemon.addVolatile('furycutter');
+			}
+			const bp = this.clampIntRange(move.basePower * pokemon.volatiles['furycutter'].multiplier, 1, 640);
+			this.debug('BP: ' + bp);
+			return bp;
 		},
 	},
 	// spotlight: {
@@ -703,6 +749,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		self: null,
 		shortDesc: "User cannot move next turn if it fails to KO.",
+		basePower: 140,
 		onHit(target, source) {
 			if (target.hp) {
 				source.addVolatile('mustrecharge');
@@ -713,6 +760,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		self: null,
 		shortDesc: "User cannot move next turn if it fails to KO.",
+		basePower: 140,
 		onHit(target, source) {
 			if (target.hp) {
 				source.addVolatile('mustrecharge');
@@ -723,6 +771,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		self: null,
 		shortDesc: "User cannot move next turn if it fails to KO.",
+		basePower: 140,
 		onHit(target, source) {
 			if (target.hp) {
 				source.addVolatile('mustrecharge');
@@ -733,6 +782,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		self: null,
 		shortDesc: "User cannot move next turn if it fails to KO.",
+		basePower: 140,
 		onHit(target, source) {
 			if (target.hp) {
 				source.addVolatile('mustrecharge');
@@ -743,6 +793,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		self: null,
 		shortDesc: "User cannot move next turn if it fails to KO.",
+		basePower: 140,
 		onHit(target, source) {
 			if (target.hp) {
 				source.addVolatile('mustrecharge');
@@ -754,6 +805,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 		self: null,
 		shortDesc: "User cannot move next turn if it fails to KO.",
+		basePower: 140,
 		onHit(target, source) {
 			if (target.hp) {
 				source.addVolatile('mustrecharge');
@@ -765,6 +817,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 		self: null,
 		shortDesc: "User cannot move next turn if it fails to KO.",
+		basePower: 150,
 		onHit(target, source) {
 			if (target.hp) {
 				source.addVolatile('mustrecharge');

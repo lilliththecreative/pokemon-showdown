@@ -45248,6 +45248,12 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"strangesteam": [
 				"9M"
+			],
+			"mist": [
+				"9M"
+			],
+			"aromaticmist": [
+				"9M"
 			]
 		}
 	},
@@ -45650,6 +45656,1863 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"faketears": [
+				"9M"
+			]
+		}
+	},
+	"froslass": {
+		"inherit": true,
+		"learnset": {
+			"allyswitch": [
+				"8M",
+				"7T"
+			],
+			"astonish": [
+				"9L1",
+				"8L1",
+				"7L19",
+				"6L1",
+				"5L1",
+				"4L1"
+			],
+			"attract": [
+				"8M",
+				"7M",
+				"6M",
+				"5M",
+				"4M"
+			],
+			"auroraveil": [
+				"9L54",
+				"8L54",
+				"7M"
+			],
+			"avalanche": [
+				"9M",
+				"8M",
+				"4M"
+			],
+			"bite": [
+				"9L1",
+				"8L1"
+			],
+			"blizzard": [
+				"9M",
+				"9L68",
+				"8M",
+				"8L68",
+				"7M",
+				"7L48",
+				"6M",
+				"6L48",
+				"5M",
+				"5L51",
+				"4M",
+				"4L51"
+			],
+			"block": [
+				"7T",
+				"6T",
+				"5T",
+				"4T"
+			],
+			"bodyslam": [
+				"9M",
+				"8M"
+			],
+			"captivate": [
+				"7L41",
+				"6L31",
+				"5L31",
+				"4M",
+				"4L31"
+			],
+			"charm": [
+				"9M",
+				"8M"
+			],
+			"chillingwater": [
+				"9M"
+			],
+			"confide": [
+				"7M",
+				"6M"
+			],
+			"confuseray": [
+				"9M",
+				"9L35",
+				"8L35",
+				"7L32",
+				"6L19",
+				"5L19",
+				"4L19"
+			],
+			"crunch": [
+				"9M",
+				"9L1",
+				"8M",
+				"8L1"
+			],
+			"destinybond": [
+				"9L1",
+				"8L1",
+				"7L1",
+				"6L1",
+				"5L59",
+				"4L59"
+			],
+			"doubleteam": [
+				"9L1",
+				"8L1",
+				"7M",
+				"7L1",
+				"6M",
+				"6L1",
+				"5M",
+				"5L1",
+				"4M",
+				"4L1"
+			],
+			"drainingkiss": [
+				"9M",
+				"9L20",
+				"8M",
+				"8L20",
+				"7L23",
+				"6L23"
+			],
+			"dreameater": [
+				"7M",
+				"6M",
+				"5M",
+				"4M"
+			],
+			"embargo": [
+				"7M",
+				"6M",
+				"5M",
+				"4M"
+			],
+			"endure": [
+				"9M",
+				"8M",
+				"4M"
+			],
+			"facade": [
+				"9M",
+				"8M",
+				"7M",
+				"6M",
+				"5M",
+				"4M"
+			],
+			"faketears": [
+				"9M",
+				"8M"
+			],
+			"flash": [
+				"6M",
+				"5M",
+				"4M"
+			],
+			"fling": [
+				"9M",
+				"8M",
+				"7M",
+				"6M",
+				"5M",
+				"4M"
+			],
+			"frostbreath": [
+				"9L30",
+				"8L30",
+				"7M",
+				"6M",
+				"5M"
+			],
+			"frustration": [
+				"7M",
+				"6M",
+				"5M",
+				"4M"
+			],
+			"gigaimpact": [
+				"9M",
+				"8M",
+				"7M",
+				"6M",
+				"5M",
+				"4M"
+			],
+			"hail": [
+				"8M",
+				"8L40",
+				"7M",
+				"7L54",
+				"6M",
+				"6L40",
+				"5M",
+				"5L40",
+				"4M",
+				"4L40"
+			],
+			"headbutt": [
+				"9L1",
+				"8L1",
+				"4T"
+			],
+			"helpinghand": [
+				"9M"
+			],
+			"hex": [
+				"9M",
+				"9L0",
+				"8M",
+				"8L0"
+			],
+			"hiddenpower": [
+				"7M",
+				"6M",
+				"5M",
+				"4M"
+			],
+			"hyperbeam": [
+				"9M",
+				"8M",
+				"7M",
+				"6M",
+				"5M",
+				"4M"
+			],
+			"icebeam": [
+				"9M",
+				"8M",
+				"7M",
+				"6M",
+				"5M",
+				"4M"
+			],
+			"icefang": [
+				"9M",
+				"9L1",
+				"8M",
+				"8L1"
+			],
+			"icepunch": [
+				"9M",
+				"8M",
+				"7T",
+				"6T",
+				"5T",
+				"4T"
+			],
+			"iceshard": [
+				"9L15",
+				"8L15",
+				"7L1",
+				"6L1",
+				"5L37",
+				"4L37"
+			],
+			"icespinner": [
+				"9M"
+			],
+			"iciclespear": [
+				"8M"
+			],
+			"icywind": [
+				"9M",
+				"9L25",
+				"8M",
+				"8L25",
+				"7T",
+				"7L14",
+				"6T",
+				"6L13",
+				"5T",
+				"5L13",
+				"4T",
+				"4L13"
+			],
+			"imprison": [
+				"9M",
+				"8M"
+			],
+			"laserfocus": [
+				"7T"
+			],
+			"leer": [
+				"9L1",
+				"8L1",
+				"7L1",
+				"6L1",
+				"5L1",
+				"4L1"
+			],
+			"lightscreen": [
+				"9M",
+				"8M",
+				"7M",
+				"6M",
+				"5M",
+				"4M"
+			],
+			"mudslap": [
+				"4T"
+			],
+			"naturalgift": [
+				"4M"
+			],
+			"nightshade": [
+				"9M"
+			],
+			"ominouswind": [
+				"7L1",
+				"6L22",
+				"5L22",
+				"4T",
+				"4L22"
+			],
+			"painsplit": [
+				"7T",
+				"6T",
+				"5T",
+				"4T"
+			],
+			"payback": [
+				"8M",
+				"7M",
+				"6M",
+				"5M",
+				"4M"
+			],
+			"poltergeist": [
+				"8T"
+			],
+			"powdersnow": [
+				"9L1",
+				"8L1",
+				"7L1",
+				"6L1",
+				"5L1",
+				"4L1"
+			],
+			"protect": [
+				"9M",
+				"9L1",
+				"8M",
+				"8L1",
+				"7M",
+				"6M",
+				"5M",
+				"4M"
+			],
+			"psychic": [
+				"9M",
+				"8M",
+				"7M",
+				"6M",
+				"5M",
+				"4M"
+			],
+			"psychup": [
+				"7M",
+				"6M",
+				"5M",
+				"4M"
+			],
+			"raindance": [
+				"9M",
+				"8M",
+				"7M",
+				"6M",
+				"5M",
+				"4M"
+			],
+			"reflect": [
+				"9M",
+				"8M"
+			],
+			"rest": [
+				"9M",
+				"8M",
+				"7M",
+				"6M",
+				"5M",
+				"4M"
+			],
+			"return": [
+				"7M",
+				"6M",
+				"5M",
+				"4M"
+			],
+			"rollout": [
+				"4T"
+			],
+			"round": [
+				"8M",
+				"7M",
+				"6M",
+				"5M"
+			],
+			"safeguard": [
+				"8M",
+				"7M",
+				"6M",
+				"5M",
+				"4M"
+			],
+			"scaryface": [
+				"9M"
+			],
+			"secretpower": [
+				"6M",
+				"4M"
+			],
+			"shadowball": [
+				"9M",
+				"9L61",
+				"8M",
+				"8L61",
+				"7M",
+				"7L42",
+				"6M",
+				"6L42",
+				"5M",
+				"4M"
+			],
+			"shockwave": [
+				"7T",
+				"6T",
+				"4M"
+			],
+			"signalbeam": [
+				"7T",
+				"6T",
+				"5T",
+				"4T"
+			],
+			"sleeptalk": [
+				"9M",
+				"8M",
+				"7M",
+				"6M",
+				"5T",
+				"4M"
+			],
+			"snatch": [
+				"7T",
+				"6T",
+				"5T",
+				"4M"
+			],
+			"snore": [
+				"8M",
+				"7T",
+				"6T",
+				"5T",
+				"4T"
+			],
+			"snowscape": [
+				"9M",
+				"9L40"
+			],
+			"spikes": [
+				"9M",
+				"8M"
+			],
+			"spite": [
+				"7T",
+				"6T",
+				"5T",
+				"4T"
+			],
+			"substitute": [
+				"9M",
+				"8M",
+				"7M",
+				"6M",
+				"5M",
+				"4M"
+			],
+			"suckerpunch": [
+				"4T"
+			],
+			"swagger": [
+				"7M",
+				"6M",
+				"5M",
+				"4M"
+			],
+			"takedown": [
+				"9M"
+			],
+			"taunt": [
+				"9M",
+				"8M",
+				"7M",
+				"6M",
+				"5M",
+				"4M"
+			],
+			"telekinesis": [
+				"7T",
+				"5M"
+			],
+			"terablast": [
+				"9M"
+			],
+			"thunder": [
+				"9M",
+				"8M",
+				"7M",
+				"6M",
+				"5M",
+				"4M"
+			],
+			"thunderbolt": [
+				"9M",
+				"8M",
+				"7M",
+				"6M",
+				"5M",
+				"4M"
+			],
+			"thunderwave": [
+				"9M",
+				"8M",
+				"7M",
+				"6M",
+				"5M",
+				"4M"
+			],
+			"torment": [
+				"7M",
+				"6M",
+				"5M",
+				"4M"
+			],
+			"toxic": [
+				"7M",
+				"6M",
+				"5M",
+				"4M"
+			],
+			"trick": [
+				"9M",
+				"8M",
+				"7T",
+				"6T",
+				"5T",
+				"4T"
+			],
+			"tripleaxel": [
+				"8T"
+			],
+			"wakeupslap": [
+				"7L37",
+				"6L28",
+				"5L28",
+				"4L28"
+			],
+			"waterpulse": [
+				"9M",
+				"7T",
+				"6T",
+				"4M"
+			],
+			"weatherball": [
+				"8M"
+			],
+			"willowisp": [
+				"9M",
+				"9L47",
+				"8M",
+				"8L47",
+				"7M",
+				"7L28"
+			],
+			"perishsong": [
+				"9M"
+			],
+			"haze": [
+				"9M"
+			],
+			"freezedry": [
+				"9M"
+			],
+			"sheercold": [
+				"9M"
+			]
+		}
+	},
+	"wobbuffet": {
+		"inherit": true,
+		"learnset": {
+			"amnesia": [
+				"8M",
+				"8L1"
+			],
+			"charm": [
+				"8M",
+				"8L1",
+				"5D"
+			],
+			"counter": [
+				"8L0",
+				"7L1",
+				"7V",
+				"6L1",
+				"6S2",
+				"6S3",
+				"5L1",
+				"4L1",
+				"3L1",
+				"3S0",
+				"3S1"
+			],
+			"destinybond": [
+				"8L0",
+				"7L1",
+				"7V",
+				"6L1",
+				"5L1",
+				"4L1",
+				"3L1",
+				"3S0",
+				"3S1"
+			],
+			"encore": [
+				"8M",
+				"8L1",
+				"5D"
+			],
+			"mirrorcoat": [
+				"8L0",
+				"7L1",
+				"7V",
+				"6L1",
+				"6S3",
+				"5L1",
+				"5D",
+				"4L1",
+				"3L1",
+				"3S0",
+				"3S1"
+			],
+			"safeguard": [
+				"8M",
+				"8L0",
+				"7M",
+				"7L1",
+				"7V",
+				"6M",
+				"6L1",
+				"5L1",
+				"4L1",
+				"3L1",
+				"3S0",
+				"3S1"
+			],
+			"splash": [
+				"8L1"
+			],
+			"comeuppance": [
+				"9M"
+			]
+		}
+	},
+	"furfrou": {
+		"inherit": true,
+		"learnset": {
+			"attract": [
+				"7M",
+				"6M"
+			],
+			"babydolleyes": [
+				"7L9",
+				"6L9"
+			],
+			"bite": [
+				"7L22",
+				"6L22"
+			],
+			"captivate": [
+				"7E",
+				"6E"
+			],
+			"chargebeam": [
+				"7M",
+				"6M"
+			],
+			"charm": [
+				"7L38",
+				"6L38"
+			],
+			"confide": [
+				"7M",
+				"6M"
+			],
+			"cottonguard": [
+				"7L48",
+				"6L48"
+			],
+			"darkpulse": [
+				"7M",
+				"6M"
+			],
+			"dig": [
+				"6M"
+			],
+			"doubleteam": [
+				"7M",
+				"6M"
+			],
+			"echoedvoice": [
+				"7M",
+				"6M"
+			],
+			"endeavor": [
+				"7T",
+				"6T"
+			],
+			"facade": [
+				"7M",
+				"6M"
+			],
+			"flash": [
+				"6M"
+			],
+			"frustration": [
+				"7M",
+				"6M"
+			],
+			"gigaimpact": [
+				"7M",
+				"6M"
+			],
+			"grassknot": [
+				"7M",
+				"6M"
+			],
+			"growl": [
+				"7L1",
+				"6L1"
+			],
+			"headbutt": [
+				"7L12",
+				"6L12"
+			],
+			"helpinghand": [
+				"7T",
+				"6T"
+			],
+			"hiddenpower": [
+				"7M",
+				"6M"
+			],
+			"hypervoice": [
+				"7T",
+				"6T"
+			],
+			"irontail": [
+				"7T",
+				"6T"
+			],
+			"lastresort": [
+				"7T",
+				"6T"
+			],
+			"mimic": [
+				"7E",
+				"6E"
+			],
+			"odorsleuth": [
+				"7L27",
+				"6L27"
+			],
+			"protect": [
+				"7M",
+				"6M"
+			],
+			"raindance": [
+				"7M",
+				"6M"
+			],
+			"refresh": [
+				"7E",
+				"6E"
+			],
+			"rest": [
+				"7M",
+				"6M"
+			],
+			"retaliate": [
+				"7L33",
+				"6M",
+				"6L33"
+			],
+			"return": [
+				"7M",
+				"6M"
+			],
+			"roar": [
+				"7M",
+				"6M"
+			],
+			"rocksmash": [
+				"6M"
+			],
+			"roleplay": [
+				"7T",
+				"7E",
+				"6T",
+				"6E"
+			],
+			"round": [
+				"7M",
+				"6M"
+			],
+			"sandattack": [
+				"7L5",
+				"6L5"
+			],
+			"secretpower": [
+				"6M"
+			],
+			"sleeptalk": [
+				"7M",
+				"6M"
+			],
+			"snarl": [
+				"7M",
+				"6M"
+			],
+			"snore": [
+				"7T",
+				"6T"
+			],
+			"substitute": [
+				"7M",
+				"6M"
+			],
+			"suckerpunch": [
+				"7L42",
+				"6L42"
+			],
+			"sunnyday": [
+				"7M",
+				"6M"
+			],
+			"surf": [
+				"7M",
+				"6M"
+			],
+			"swagger": [
+				"7M",
+				"6M"
+			],
+			"tackle": [
+				"7L1",
+				"6L1"
+			],
+			"tailwhip": [
+				"7L15",
+				"6L15"
+			],
+			"takedown": [
+				"7L35",
+				"6L35"
+			],
+			"thunderwave": [
+				"7M",
+				"6M"
+			],
+			"toxic": [
+				"7M",
+				"6M"
+			],
+			"uproar": [
+				"7T",
+				"6T"
+			],
+			"uturn": [
+				"7M",
+				"6M"
+			],
+			"wildcharge": [
+				"7M",
+				"6M"
+			],
+			"workup": [
+				"7M",
+				"7E",
+				"6E"
+			],
+			"zenheadbutt": [
+				"7T",
+				"6T"
+			],
+			"howl": [
+				"9M"
+			],
+			"bodypress": [
+				"9M"
+			],
+			"followme": [
+				"9M"
+			]
+		}
+	},
+	"crawdaunt": {
+		"inherit": true,
+		"learnset": {
+			"aerialace": [
+				"7M",
+				"6M",
+				"5M",
+				"4M",
+				"3M"
+			],
+			"ancientpower": [
+				"4T"
+			],
+			"attract": [
+				"8M",
+				"7M",
+				"6M",
+				"5M",
+				"4M",
+				"3M"
+			],
+			"avalanche": [
+				"8M",
+				"4M"
+			],
+			"blizzard": [
+				"8M",
+				"7M",
+				"6M",
+				"5M",
+				"4M",
+				"3M"
+			],
+			"bodyslam": [
+				"8M",
+				"3T"
+			],
+			"brickbreak": [
+				"8M",
+				"7M",
+				"6M",
+				"5M",
+				"4M",
+				"3M"
+			],
+			"bubble": [
+				"7L1",
+				"6L1",
+				"5L1",
+				"4L1",
+				"3L1"
+			],
+			"bubblebeam": [
+				"8L12",
+				"7L14",
+				"6L14",
+				"5L20",
+				"4L20",
+				"3L19"
+			],
+			"captivate": [
+				"4M"
+			],
+			"closecombat": [
+				"8M"
+			],
+			"confide": [
+				"7M",
+				"6M"
+			],
+			"counter": [
+				"3T"
+			],
+			"crabhammer": [
+				"8L52",
+				"7L48",
+				"6L44",
+				"5L44",
+				"4L44",
+				"3L38",
+				"3S0",
+				"3S1"
+			],
+			"crunch": [
+				"8M",
+				"8L46",
+				"7L43",
+				"6L43",
+				"5L57",
+				"4L57",
+				"3L51"
+			],
+			"cut": [
+				"6M",
+				"5M",
+				"4M",
+				"3M"
+			],
+			"darkpulse": [
+				"8M",
+				"7M",
+				"6M",
+				"5T",
+				"4M"
+			],
+			"dig": [
+				"8M",
+				"6M",
+				"5M",
+				"4M",
+				"3M"
+			],
+			"dive": [
+				"8M",
+				"6M",
+				"5M",
+				"4T",
+				"3M"
+			],
+			"doubleedge": [
+				"3T"
+			],
+			"doublehit": [
+				"8L20",
+				"7L20",
+				"6L20"
+			],
+			"doubleteam": [
+				"7M",
+				"6M",
+				"5M",
+				"4M",
+				"3M"
+			],
+			"dragondance": [
+				"8M"
+			],
+			"endeavor": [
+				"8L58",
+				"7T",
+				"6T",
+				"5T",
+				"4T"
+			],
+			"endure": [
+				"8M",
+				"4M",
+				"3T"
+			],
+			"facade": [
+				"8M",
+				"7M",
+				"6M",
+				"5M",
+				"4M",
+				"3M"
+			],
+			"falseswipe": [
+				"8M",
+				"7M",
+				"6M",
+				"5M",
+				"4M"
+			],
+			"fling": [
+				"8M",
+				"7M",
+				"6M",
+				"5M",
+				"4M"
+			],
+			"frustration": [
+				"7M",
+				"6M",
+				"5M",
+				"4M",
+				"3M"
+			],
+			"furycutter": [
+				"4T",
+				"3T"
+			],
+			"gigaimpact": [
+				"8M",
+				"7M",
+				"6M",
+				"5M",
+				"4M"
+			],
+			"guillotine": [
+				"8L64",
+				"7L54",
+				"6L1",
+				"5L65",
+				"4L65",
+				"3L52",
+				"3S0"
+			],
+			"hail": [
+				"8M",
+				"7M",
+				"6M",
+				"5M",
+				"4M",
+				"3M"
+			],
+			"harden": [
+				"8L1",
+				"7L1",
+				"6L1",
+				"5L1",
+				"4L1",
+				"3L1"
+			],
+			"hiddenpower": [
+				"7M",
+				"6M",
+				"5M",
+				"4M",
+				"3M"
+			],
+			"honeclaws": [
+				"6M",
+				"5M"
+			],
+			"hydropump": [
+				"8M"
+			],
+			"hyperbeam": [
+				"8M",
+				"7M",
+				"6M",
+				"5M",
+				"4M",
+				"3M"
+			],
+			"icebeam": [
+				"8M",
+				"7M",
+				"6M",
+				"5M",
+				"4M",
+				"3M"
+			],
+			"icywind": [
+				"8M",
+				"7T",
+				"6T",
+				"5T",
+				"4T",
+				"3T"
+			],
+			"irondefense": [
+				"8M",
+				"7T",
+				"6T",
+				"5T",
+				"4T"
+			],
+			"knockoff": [
+				"8L16",
+				"7T",
+				"7L23",
+				"6T",
+				"6L23",
+				"5T",
+				"5L26",
+				"4T",
+				"4L26",
+				"3L25",
+				"3S1"
+			],
+			"lashout": [
+				"8T"
+			],
+			"leer": [
+				"8L1",
+				"7L1",
+				"6L1",
+				"5L1",
+				"4L1",
+				"3L1"
+			],
+			"liquidation": [
+				"8M",
+				"7T"
+			],
+			"mimic": [
+				"3T"
+			],
+			"muddywater": [
+				"8M"
+			],
+			"mudshot": [
+				"8M"
+			],
+			"mudslap": [
+				"4T",
+				"3T"
+			],
+			"nastyplot": [
+				"8M"
+			],
+			"naturalgift": [
+				"4M"
+			],
+			"naturepower": [
+				"7M",
+				"6M"
+			],
+			"nightslash": [
+				"8L28",
+				"7L26",
+				"6L26",
+				"5L39",
+				"4L39"
+			],
+			"payback": [
+				"8M",
+				"7M",
+				"6M",
+				"5M",
+				"4M"
+			],
+			"protect": [
+				"8M",
+				"8L24",
+				"7M",
+				"7L17",
+				"6M",
+				"6L17",
+				"5M",
+				"5L23",
+				"4M",
+				"4L23",
+				"3M",
+				"3L22"
+			],
+			"raindance": [
+				"8M",
+				"7M",
+				"6M",
+				"5M",
+				"4M",
+				"3M"
+			],
+			"razorshell": [
+				"8M",
+				"8L34",
+				"7L32",
+				"6L32"
+			],
+			"rest": [
+				"8M",
+				"7M",
+				"6M",
+				"5M",
+				"4M",
+				"3M"
+			],
+			"retaliate": [
+				"8M",
+				"6M",
+				"5M"
+			],
+			"return": [
+				"7M",
+				"6M",
+				"5M",
+				"4M",
+				"3M"
+			],
+			"revenge": [
+				"8M"
+			],
+			"rockslide": [
+				"8M",
+				"7M",
+				"6M",
+				"5M",
+				"4M"
+			],
+			"rocksmash": [
+				"6M",
+				"5M",
+				"4M",
+				"3M"
+			],
+			"rocktomb": [
+				"8M",
+				"7M",
+				"6M",
+				"5M",
+				"4M",
+				"3M"
+			],
+			"round": [
+				"8M",
+				"7M",
+				"6M",
+				"5M"
+			],
+			"scald": [
+				"8M",
+				"7M",
+				"6M",
+				"5M"
+			],
+			"secretpower": [
+				"6M",
+				"4M",
+				"3M"
+			],
+			"sleeptalk": [
+				"8M",
+				"7M",
+				"6M",
+				"5T",
+				"4M",
+				"3T"
+			],
+			"sludgebomb": [
+				"8M",
+				"7M",
+				"6M",
+				"5M",
+				"4M",
+				"3M"
+			],
+			"sludgewave": [
+				"8M",
+				"7M",
+				"6M",
+				"5M"
+			],
+			"snarl": [
+				"8M",
+				"7M",
+				"6M",
+				"5M"
+			],
+			"snore": [
+				"8M",
+				"7T",
+				"6T",
+				"5T",
+				"4T",
+				"3T"
+			],
+			"spite": [
+				"7T",
+				"6T",
+				"5T",
+				"4T"
+			],
+			"strength": [
+				"6M",
+				"5M",
+				"4M",
+				"3M"
+			],
+			"substitute": [
+				"8M",
+				"7M",
+				"6M",
+				"5M",
+				"4M",
+				"3T"
+			],
+			"superpower": [
+				"8M",
+				"7T",
+				"6T",
+				"5T",
+				"4T"
+			],
+			"surf": [
+				"8M",
+				"7M",
+				"6M",
+				"5M",
+				"4M",
+				"3M"
+			],
+			"swagger": [
+				"7M",
+				"6M",
+				"5M",
+				"4M",
+				"3T"
+			],
+			"swift": [
+				"8M",
+				"8L0",
+				"7L1",
+				"6L30",
+				"5L30",
+				"4T",
+				"4L30",
+				"3T"
+			],
+			"swordsdance": [
+				"8M",
+				"8L40",
+				"7M",
+				"7L40",
+				"6M",
+				"6L40",
+				"5M",
+				"5L52",
+				"4M",
+				"4L52",
+				"3T",
+				"3L43",
+				"3S0",
+				"3S1"
+			],
+			"taunt": [
+				"8M",
+				"8L1",
+				"7M",
+				"7L36",
+				"6M",
+				"6L34",
+				"5M",
+				"5L34",
+				"4M",
+				"4L34",
+				"3M",
+				"3L33",
+				"3S0",
+				"3S1"
+			],
+			"toxic": [
+				"7M",
+				"6M",
+				"5M",
+				"4M",
+				"3M"
+			],
+			"visegrip": [
+				"7L1",
+				"6L1",
+				"5L1",
+				"4L1",
+				"3L1"
+			],
+			"waterfall": [
+				"8M",
+				"7M",
+				"6M",
+				"5M",
+				"4M",
+				"3M"
+			],
+			"watergun": [
+				"8L1"
+			],
+			"waterpulse": [
+				"7T",
+				"6T",
+				"4M",
+				"3M"
+			],
+			"whirlpool": [
+				"8M",
+				"4M"
+			],
+			"xscissor": [
+				"8M",
+				"7M",
+				"6M",
+				"5M",
+				"4M"
+			],
+			"wavecrash": [
+				"9M"
+			]
+		}
+	},
+	"garbodor": {
+		"inherit": true,
+		"learnset": {
+			"acidspray": [
+				"8L1",
+				"7L12",
+				"6L12",
+				"5L12"
+			],
+			"amnesia": [
+				"8M",
+				"8L9",
+				"7L46",
+				"6L46",
+				"5L46"
+			],
+			"attract": [
+				"8M",
+				"7M",
+				"6M",
+				"5M"
+			],
+			"belch": [
+				"8L33",
+				"7L49",
+				"6L49"
+			],
+			"bodypress": [
+				"8M"
+			],
+			"bodyslam": [
+				"8M",
+				"8L24",
+				"7L25",
+				"6L25",
+				"5L25"
+			],
+			"clearsmog": [
+				"8L12",
+				"7L34",
+				"6L34",
+				"5L34"
+			],
+			"confide": [
+				"7M",
+				"6M"
+			],
+			"corrosivegas": [
+				"8T"
+			],
+			"crosspoison": [
+				"8M"
+			],
+			"darkpulse": [
+				"8M",
+				"7M",
+				"6M",
+				"5T"
+			],
+			"doubleslap": [
+				"7L14",
+				"6L14",
+				"5L14"
+			],
+			"doubleteam": [
+				"7M",
+				"6M",
+				"5M"
+			],
+			"drainpunch": [
+				"8M",
+				"7T",
+				"6T",
+				"5T"
+			],
+			"endure": [
+				"8M"
+			],
+			"explosion": [
+				"8L48",
+				"7M",
+				"7L59",
+				"6M",
+				"6L59",
+				"5M",
+				"5L59"
+			],
+			"facade": [
+				"8M",
+				"7M",
+				"6M",
+				"5M"
+			],
+			"fling": [
+				"8M",
+				"7M",
+				"6M",
+				"5M"
+			],
+			"focusblast": [
+				"8M",
+				"7M",
+				"6M",
+				"5M"
+			],
+			"frustration": [
+				"7M",
+				"6M",
+				"5M"
+			],
+			"gigadrain": [
+				"8M",
+				"7T",
+				"6T",
+				"5T"
+			],
+			"gigaimpact": [
+				"8M",
+				"7M",
+				"6M",
+				"5M"
+			],
+			"gunkshot": [
+				"8M",
+				"8L43",
+				"7T",
+				"7L54",
+				"6T",
+				"6L54",
+				"5T",
+				"5L54"
+			],
+			"hiddenpower": [
+				"7M",
+				"6M",
+				"5M"
+			],
+			"hyperbeam": [
+				"8M",
+				"7M",
+				"6M",
+				"5M"
+			],
+			"infestation": [
+				"7M",
+				"6M"
+			],
+			"metalclaw": [
+				"8L1"
+			],
+			"painsplit": [
+				"8L39",
+				"7T",
+				"6T",
+				"5T"
+			],
+			"payback": [
+				"8M",
+				"7M",
+				"6M",
+				"5M"
+			],
+			"poisongas": [
+				"8L1",
+				"7L1",
+				"6L1",
+				"5L1"
+			],
+			"pound": [
+				"8L1",
+				"7L1",
+				"6L1",
+				"5L1"
+			],
+			"protect": [
+				"8M",
+				"7M",
+				"6M",
+				"5M"
+			],
+			"psychic": [
+				"8M",
+				"7M",
+				"6M",
+				"5M"
+			],
+			"raindance": [
+				"8M",
+				"7M",
+				"6M",
+				"5M"
+			],
+			"recycle": [
+				"8L1",
+				"7T",
+				"7L1",
+				"6T",
+				"6L1",
+				"5T",
+				"5L1"
+			],
+			"rest": [
+				"8M",
+				"7M",
+				"6M",
+				"5M"
+			],
+			"return": [
+				"7M",
+				"6M",
+				"5M"
+			],
+			"rockblast": [
+				"8M"
+			],
+			"rockpolish": [
+				"7M",
+				"6M",
+				"5M"
+			],
+			"round": [
+				"8M",
+				"7M",
+				"6M",
+				"5M"
+			],
+			"screech": [
+				"8M"
+			],
+			"secretpower": [
+				"6M"
+			],
+			"seedbomb": [
+				"8M",
+				"7T",
+				"6T",
+				"5T"
+			],
+			"selfdestruct": [
+				"8M"
+			],
+			"sleeptalk": [
+				"8M",
+				"7M",
+				"6M",
+				"5T"
+			],
+			"sludge": [
+				"8L18",
+				"7L18",
+				"6L18",
+				"5L18"
+			],
+			"sludgebomb": [
+				"8M",
+				"8L27",
+				"7M",
+				"7L29",
+				"6M",
+				"6L29",
+				"5M",
+				"5L29"
+			],
+			"sludgewave": [
+				"8M",
+				"7M",
+				"6M",
+				"5M"
+			],
+			"smackdown": [
+				"7M",
+				"6M",
+				"5M"
+			],
+			"snore": [
+				"8M",
+				"7T",
+				"6T",
+				"5T"
+			],
+			"solarbeam": [
+				"8M",
+				"7M",
+				"6M",
+				"5M"
+			],
+			"spikes": [
+				"8M"
+			],
+			"spite": [
+				"7T",
+				"6T",
+				"5T"
+			],
+			"stockpile": [
+				"8L21",
+				"7L23",
+				"6L23",
+				"5L23"
+			],
+			"stompingtantrum": [
+				"8M",
+				"7T"
+			],
+			"substitute": [
+				"8M",
+				"7M",
+				"6M",
+				"5M"
+			],
+			"sunnyday": [
+				"8M",
+				"7M",
+				"6M",
+				"5M"
+			],
+			"swagger": [
+				"7M",
+				"6M",
+				"5M"
+			],
+			"swallow": [
+				"8L21",
+				"7L23",
+				"6L23",
+				"5L23"
+			],
+			"takedown": [
+				"8L1"
+			],
+			"thief": [
+				"8M",
+				"7M",
+				"6M",
+				"5M"
+			],
+			"thunderbolt": [
+				"8M",
+				"7M",
+				"6M",
+				"5M"
+			],
+			"toxic": [
+				"8L30",
+				"7M",
+				"7L39",
+				"6M",
+				"6L39",
+				"5M",
+				"5L39"
+			],
+			"toxicspikes": [
+				"8M",
+				"8L15",
+				"7L1",
+				"6L1",
+				"5L1"
+			],
+			"venomdrench": [
+				"8M"
+			],
+			"venoshock": [
+				"8M",
+				"7M",
+				"6M",
+				"5M"
+			],
+			"gmaxmalador": [
 				"9M"
 			]
 		}

@@ -2207,8 +2207,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		shortDesc: "All attacking moves will fail on this pokemon until this pokemon moves.",
 		desc: "All attacking moves will fail on this pokemon until this pokemon moves.",
 	},
-	monkeytactics: {
-		name: "Monkey Tactics",
+	monkeybusiness: {
+		name: "Monkey Business",
 		shortDesc: "This Pokemon's SpA is 1.5x, but it can only select the first move it executes.",
 		desc: "This Pokemon's SpA is 1.5x, but it can only select the first move it executes.",
 	},
@@ -2271,5 +2271,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Extra Luck",
 		desc: "This Pokemon's critical hit ratio is raised by 2 stages.",
 		shortDesc: "This Pokemon's critical hit ratio is raised by 2 stages.",
+	},
+	largewingspan: {
+		name: "Large Wingspan",
+		desc: "This pokemon's Flying moves hit both opponents",
+		shortDesc: "This pokemon's Flying moves hit both opponents",
 	},
 };

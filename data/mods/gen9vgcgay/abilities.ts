@@ -724,6 +724,38 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 		},
 	},
+	honeygather: {
+		inherit: true,
+		shortDesc: "Boosts Pollen Puff damage and healing by 50%",
+		onBasePower(basePower, attacker, defender, move) {
+			if (move.name === "Pollen Puff"){
+				return this.chainModify([3, 2]);
+			}
+		},
+	},
+	windrider: {
+		inherit: true,
+		shortDesc: "Attack raised by 2 if hit by a wind move or Tailwind begins. Wind move immunity.",
+		onStart(pokemon) {
+			if (pokemon.side.sideConditions['tailwind']) {
+				this.boost({atk: 2}, pokemon, pokemon);
+			}
+		},
+		onTryHit(target, source, move) {
+			if (target !== source && move.flags['wind']) {
+				if (!this.boost({atk: 2}, target, target)) {
+					this.add('-immune', target, '[from] ability: Wind Rider');
+				}
+				return null;
+			}
+		},
+		onAllySideConditionStart(target, source, sideCondition) {
+			const pokemon = this.effectState.target;
+			if (sideCondition.id === 'tailwind') {
+				this.boost({atk: 2}, pokemon, pokemon);
+			}
+		},
+	},
 	// Ruin Nerf
 	swordofruin: {
 		inherit: true,
@@ -925,7 +957,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 		},
 	},
-	monkeytactics: {
+	monkeybusiness: {
 		inherit: true,
 		isNonstandard: null,
 		onStart(pokemon) {
@@ -950,7 +982,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		onModifySpA(atk, pokemon) {
 			if (pokemon.volatiles['dynamax']) return;
 			// PLACEHOLDER
-			this.debug('Monkey Tactics SpA Boost');
+			this.debug('Monkey Business SpA Boost');
 			return this.chainModify(1.5);
 		},
 		onDisableMove(pokemon) {
@@ -1146,6 +1178,15 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		isNonstandard: null,
 		onModifyCritRatio(critRatio) {
 			return critRatio + 2;
+		},
+	},
+	largewingspan: {
+		inherit: true,
+		isNonstandard: null,
+		onModifyMove(move, source, target) {
+			if (move.type === "Flying" && move.target === "normal" && !target?.isAlly(source)) {
+				move.target = 'allAdjacentFoes';
+			}
 		},
 	},
 };
