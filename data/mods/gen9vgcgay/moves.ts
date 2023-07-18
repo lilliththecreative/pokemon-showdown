@@ -260,7 +260,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			},
 		},
 	},
-	gmaxmalador: {
+	gmaxmalodor: {
 		inherit: true,
 		isNonstandard: null,
 		isMax: false,
@@ -420,6 +420,11 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 		basePower: 150,
 	},
+	geargrid: {
+		inherit: true,
+		basePower: 55,
+		accuracy: 90
+	},
 	mysticalpower: {
 		inherit: true,
 		isNonstandard: null,
@@ -490,6 +495,31 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 					this.actions.useMove(move.id, ally);
 				}
 				return null;
+			},
+		},
+	},
+	octolock: {
+		inherit: true,
+		isNonstandard: null,
+		volatileStatus: 'octolock',
+		condition: {
+			onStart(pokemon, source) {
+				this.add('-start', pokemon, 'move: Octolock', '[of] ' + source);
+				this.effectState.boundDivisor = source.hasItem('bindingband') ? 6 : 8;
+			},
+			onResidualOrder: 14,
+			onResidual(pokemon) {
+				const source = this.effectState.source;
+				if (source && (!source.isActive || source.hp <= 0 || !source.activeTurns)) {
+					delete pokemon.volatiles['octolock'];
+					this.add('-end', pokemon, 'Octolock', '[partiallytrapped]', '[silent]');
+					return;
+				}
+				this.boost({def: -1, spd: -1}, pokemon, source, this.dex.getActiveMove('octolock'));
+				this.damage(pokemon.baseMaxhp / this.effectState.boundDivisor);
+			},
+			onTrapPokemon(pokemon) {
+				if (this.effectState.source && this.effectState.source.isActive) pokemon.tryTrap();
 			},
 		},
 	},
@@ -1021,10 +1051,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	octolock: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	strangesteam: {
 		inherit: true,
 		isNonstandard: null,
@@ -1054,6 +1080,18 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 	},
 	psychoboost: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	clangingscales: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	clangoroussoul: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	obstruct: {
 		inherit: true,
 		isNonstandard: null,
 	},

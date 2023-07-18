@@ -688,7 +688,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Ice"
 		],
 		"baseStats": {
-			"hp": 95,
+			"hp": 100,
 			"atk": 75,
 			"def": 85,
 			"spa": 75,
@@ -2159,10 +2159,10 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Rock"
 		],
 		"baseStats": {
-			"hp": 80,
-			"atk": 70,
+			"hp": 85,
+			"atk": 75,
 			"def": 110,
-			"spa": 80,
+			"spa": 85,
 			"spd": 110,
 			"spe": 40
 		},
@@ -2217,7 +2217,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		],
 		"baseStats": {
 			"hp": 80,
-			"atk": 110,
+			"atk": 105,
 			"def": 55,
 			"spa": 80,
 			"spd": 55,
@@ -2352,10 +2352,10 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Normal"
 		],
 		"baseStats": {
-			"hp": 60,
-			"atk": 25,
+			"hp": 55,
+			"atk": 30,
 			"def": 35,
-			"spa": 25,
+			"spa": 30,
 			"spd": 45,
 			"spe": 75
 		},
@@ -2390,11 +2390,11 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Normal"
 		],
 		"baseStats": {
-			"hp": 95,
-			"atk": 110,
-			"def": 105,
+			"hp": 100,
+			"atk": 100,
+			"def": 110,
 			"spa": 40,
-			"spd": 70,
+			"spd": 75,
 			"spe": 100
 		},
 		"abilities": {
@@ -4194,8 +4194,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Water"
 		],
 		"baseStats": {
-			"hp": 95,
-			"atk": 110,
+			"hp": 90,
+			"atk": 115,
 			"def": 55,
 			"spa": 85,
 			"spd": 50,
@@ -4833,7 +4833,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Flying"
 		],
 		"baseStats": {
-			"hp": 80,
+			"hp": 85,
 			"atk": 95,
 			"def": 125,
 			"spa": 45,
@@ -4872,7 +4872,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Normal"
 		],
 		"baseStats": {
-			"hp": 85,
+			"hp": 90,
 			"atk": 80,
 			"def": 70,
 			"spa": 135,
@@ -5557,12 +5557,12 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Fighting"
 		],
 		"baseStats": {
-			"hp": 75,
-			"atk": 125,
+			"hp": 40,
+			"atk": 135,
 			"def": 75,
 			"spa": 30,
 			"spd": 75,
-			"spe": 85
+			"spe": 115
 		},
 		"abilities": {
 			"0": "Sturdy",
@@ -5657,12 +5657,12 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Dark"
 		],
 		"baseStats": {
-			"hp": 95,
+			"hp": 100,
 			"atk": 117,
 			"def": 80,
 			"spa": 65,
 			"spd": 70,
-			"spe": 92
+			"spe": 97
 		},
 		"abilities": {
 			"0": "Intimidate",
@@ -6285,11 +6285,11 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		],
 		"baseStats": {
 			"hp": 100,
-			"atk": 135,
-			"def": 85,
-			"spa": 75,
-			"spd": 85,
-			"spe": 60
+			"atk": 130,
+			"def": 80,
+			"spa": 70,
+			"spd": 80,
+			"spe": 50
 		},
 		"abilities": {
 			"0": "Snow Cloak",
@@ -6359,9 +6359,9 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		"baseStats": {
 			"hp": 70,
 			"atk": 125,
-			"def": 60,
+			"def": 65,
 			"spa": 95,
-			"spd": 60,
+			"spd": 65,
 			"spe": 105
 		},
 		"abilities": {
@@ -8098,6 +8098,295 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"inherit": true
 	},
+	"silvallybug": {
+		"types": [
+			"Bug"
+		],
+		"baseStats": {
+			"hp": 99,
+			"atk": 99,
+			"def": 99,
+			"spa": 99,
+			"spd": 99,
+			"spe": 99
+		},
+		"abilities": {
+			"0": "RKS System"
+		},
+		"inherit": true
+	},
+	"silvallydark": {
+		"types": [
+			"Dark"
+		],
+		"baseStats": {
+			"hp": 99,
+			"atk": 99,
+			"def": 99,
+			"spa": 99,
+			"spd": 99,
+			"spe": 99
+		},
+		"abilities": {
+			"0": "RKS System"
+		},
+		"inherit": true
+	},
+	"silvallydragon": {
+		"types": [
+			"Dragon"
+		],
+		"baseStats": {
+			"hp": 99,
+			"atk": 99,
+			"def": 99,
+			"spa": 99,
+			"spd": 99,
+			"spe": 99
+		},
+		"abilities": {
+			"0": "RKS System"
+		},
+		"inherit": true
+	},
+	"silvallyelectric": {
+		"types": [
+			"Electric"
+		],
+		"baseStats": {
+			"hp": 99,
+			"atk": 99,
+			"def": 99,
+			"spa": 99,
+			"spd": 99,
+			"spe": 99
+		},
+		"abilities": {
+			"0": "RKS System"
+		},
+		"inherit": true
+	},
+	"silvallyfairy": {
+		"types": [
+			"Fairy"
+		],
+		"baseStats": {
+			"hp": 99,
+			"atk": 99,
+			"def": 99,
+			"spa": 99,
+			"spd": 99,
+			"spe": 99
+		},
+		"abilities": {
+			"0": "RKS System"
+		},
+		"inherit": true
+	},
+	"silvallyfighting": {
+		"types": [
+			"Fighting"
+		],
+		"baseStats": {
+			"hp": 99,
+			"atk": 99,
+			"def": 99,
+			"spa": 99,
+			"spd": 99,
+			"spe": 99
+		},
+		"abilities": {
+			"0": "RKS System"
+		},
+		"inherit": true
+	},
+	"silvallyfire": {
+		"types": [
+			"Fire"
+		],
+		"baseStats": {
+			"hp": 99,
+			"atk": 99,
+			"def": 99,
+			"spa": 99,
+			"spd": 99,
+			"spe": 99
+		},
+		"abilities": {
+			"0": "RKS System"
+		},
+		"inherit": true
+	},
+	"silvallyflying": {
+		"types": [
+			"Flying"
+		],
+		"baseStats": {
+			"hp": 99,
+			"atk": 99,
+			"def": 99,
+			"spa": 99,
+			"spd": 99,
+			"spe": 99
+		},
+		"abilities": {
+			"0": "RKS System"
+		},
+		"inherit": true
+	},
+	"silvallyghost": {
+		"types": [
+			"Ghost"
+		],
+		"baseStats": {
+			"hp": 99,
+			"atk": 99,
+			"def": 99,
+			"spa": 99,
+			"spd": 99,
+			"spe": 99
+		},
+		"abilities": {
+			"0": "RKS System"
+		},
+		"inherit": true
+	},
+	"silvallygrass": {
+		"types": [
+			"Grass"
+		],
+		"baseStats": {
+			"hp": 99,
+			"atk": 99,
+			"def": 99,
+			"spa": 99,
+			"spd": 99,
+			"spe": 99
+		},
+		"abilities": {
+			"0": "RKS System"
+		},
+		"inherit": true
+	},
+	"silvallyground": {
+		"types": [
+			"Ground"
+		],
+		"baseStats": {
+			"hp": 99,
+			"atk": 99,
+			"def": 99,
+			"spa": 99,
+			"spd": 99,
+			"spe": 99
+		},
+		"abilities": {
+			"0": "RKS System"
+		},
+		"inherit": true
+	},
+	"silvallyice": {
+		"types": [
+			"Ice"
+		],
+		"baseStats": {
+			"hp": 99,
+			"atk": 99,
+			"def": 99,
+			"spa": 99,
+			"spd": 99,
+			"spe": 99
+		},
+		"abilities": {
+			"0": "RKS System"
+		},
+		"inherit": true
+	},
+	"silvallypoison": {
+		"types": [
+			"Poison"
+		],
+		"baseStats": {
+			"hp": 99,
+			"atk": 99,
+			"def": 99,
+			"spa": 99,
+			"spd": 99,
+			"spe": 99
+		},
+		"abilities": {
+			"0": "RKS System"
+		},
+		"inherit": true
+	},
+	"silvallypsychic": {
+		"types": [
+			"Psychic"
+		],
+		"baseStats": {
+			"hp": 99,
+			"atk": 99,
+			"def": 99,
+			"spa": 99,
+			"spd": 99,
+			"spe": 99
+		},
+		"abilities": {
+			"0": "RKS System"
+		},
+		"inherit": true
+	},
+	"silvallyrock": {
+		"types": [
+			"Rock"
+		],
+		"baseStats": {
+			"hp": 99,
+			"atk": 99,
+			"def": 99,
+			"spa": 99,
+			"spd": 99,
+			"spe": 99
+		},
+		"abilities": {
+			"0": "RKS System"
+		},
+		"inherit": true
+	},
+	"silvallysteel": {
+		"types": [
+			"Steel"
+		],
+		"baseStats": {
+			"hp": 99,
+			"atk": 99,
+			"def": 99,
+			"spa": 99,
+			"spd": 99,
+			"spe": 99
+		},
+		"abilities": {
+			"0": "RKS System"
+		},
+		"inherit": true
+	},
+	"silvallywater": {
+		"types": [
+			"Water"
+		],
+		"baseStats": {
+			"hp": 99,
+			"atk": 99,
+			"def": 99,
+			"spa": 99,
+			"spd": 99,
+			"spe": 99
+		},
+		"abilities": {
+			"0": "RKS System"
+		},
+		"inherit": true
+	},
 	"miniormeteor": {
 		"types": [
 			"Rock",
@@ -8956,11 +9245,11 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Fighting"
 		],
 		"baseStats": {
-			"hp": 90,
+			"hp": 100,
 			"atk": 118,
-			"def": 95,
+			"def": 100,
 			"spa": 70,
-			"spd": 85,
+			"spd": 90,
 			"spe": 42
 		},
 		"abilities": {

@@ -47512,7 +47512,7 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"6M",
 				"5M"
 			],
-			"gmaxmalador": [
+			"gmaxmalodor": [
 				"9M"
 			]
 		}

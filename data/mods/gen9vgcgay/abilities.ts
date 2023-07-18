@@ -305,13 +305,20 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 		},
 	},
+	cheekpouch: {
+		inherit: true,
+		shortDesc: "If this Pokemon eats a Berry, it restores 1/2 of its max HP after the Berry's effect.",
+		onEatItem(item, pokemon) {
+			this.heal(pokemon.baseMaxhp / 2);
+		},
+	},
 	// Signature Ability Buffs
 	galewings: {
 		inherit: true,
+		shortDesc: "If Pokemon's HP is >= 50%, Flying moves have priority increased by 1.",
 		onModifyPriority(priority, pokemon, target, move) {
 			if (move?.type === 'Flying' && pokemon.hp >= pokemon.maxhp/2) return priority + 1;
 		},
-		shortDesc: "If Pokemon's HP is >= 50%, Flying moves have priority increased by 1.",
 	},
 	flowergift: {
 		inherit: true,
