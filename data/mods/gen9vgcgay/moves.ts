@@ -523,6 +523,48 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			},
 		},
 	},
+	furycutter: {
+		inherit: true,
+		accuracy: 100,
+		shortDesc: "Power doubles with each hit, up to 640.",
+		basePowerCallback(pokemon, target, move) {
+			if (!pokemon.volatiles['furycutter'] || move.hit === 1) {
+				pokemon.addVolatile('furycutter');
+			}
+			const bp = this.clampIntRange(move.basePower * pokemon.volatiles['furycutter'].multiplier, 1, 640);
+			this.debug('BP: ' + bp);
+			return bp;
+		},
+	},
+	filletaway: {
+		inherit: true,
+		shortDesc: "+2 Attack, Sp. Atk, Speed for 1/3 user's max HP, Ally Heals 1/3.",
+		onTry(source) {
+			if (source.hp <= source.maxhp / 3 || source.maxhp === 1) return false;
+		},
+		onHit(pokemon) {
+			this.directDamage(pokemon.maxhp / 3);
+			for (const allyActive of pokemon.adjacentAllies()) {
+				this.heal(allyActive.baseMaxhp / 3, allyActive, pokemon);
+			}
+		},
+	},
+	dragonclaw: {
+		inherit: true,
+		shortDesc: "10% chance to reduce opponents defense by 1",
+		secondary: {
+			chance: 10,
+			boosts: {
+				def: -1,
+			},
+		},
+	},
+	smellingsalts: {
+		inherit: true,
+		isNonstandard: null,
+		onHit(target) {
+		},
+	},
 	// Moves edited for abilities
 	auroraveil: {
 		inherit: true,
@@ -573,19 +615,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 				damage *= 1.3
 			}
 			return damage;
-		},
-	},
-	furycutter: {
-		inherit: true,
-		accuracy: 100,
-		shortDesc: "Power doubles with each hit, up to 640.",
-		basePowerCallback(pokemon, target, move) {
-			if (!pokemon.volatiles['furycutter'] || move.hit === 1) {
-				pokemon.addVolatile('furycutter');
-			}
-			const bp = this.clampIntRange(move.basePower * pokemon.volatiles['furycutter'].multiplier, 1, 640);
-			this.debug('BP: ' + bp);
-			return bp;
 		},
 	},
 	// spotlight: {
@@ -649,13 +678,14 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 		shortDesc:"Charges, adds Ghost to target's type, boosts all stats turn 2.",
-		boosts: {atk: 1, def: 1, spa: 1, spd: 1, spe: 1},
 		onTryMove(attacker, defender, move) {
 			if (attacker.removeVolatile(move.id)) {
+				this.boost({atk: 1, def: 1, spa: 1, spd: 1, spe: 1}, attacker, attacker, move)
 				return;
 			}
 			this.add('-prepare', attacker, move.name);
 			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				this.boost({atk: 1, def: 1, spa: 1, spd: 1, spe: 1}, attacker, attacker, move)
 				return;
 			}
 			attacker.addVolatile('twoturnmove', defender);
@@ -666,13 +696,14 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 		shortDesc:"Charges, adds Grass to target's type, boosts all stats turn 2.",
-		boosts: {atk: 1, def: 1, spa: 1, spd: 1, spe: 1},
 		onTryMove(attacker, defender, move) {
 			if (attacker.removeVolatile(move.id)) {
+				this.boost({atk: 1, def: 1, spa: 1, spd: 1, spe: 1}, attacker, attacker, move)
 				return;
 			}
 			this.add('-prepare', attacker, move.name);
 			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				this.boost({atk: 1, def: 1, spa: 1, spd: 1, spe: 1}, attacker, attacker, move)
 				return;
 			}
 			attacker.addVolatile('twoturnmove', defender);
@@ -701,7 +732,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 		isZ: false,
-		shortDesc: "Charges, changes user's type to match its first move and boosts all stats turn 2.",
+		shortDesc: "Charges, uses move turn 2",
 		onTryMove(attacker, defender, move) {
 			if (attacker.removeVolatile(move.id)) {
 				return;
@@ -1095,4 +1126,8 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	multiattack: {
+		inherit: true,
+		isNonstandard: null,
+	}
 };

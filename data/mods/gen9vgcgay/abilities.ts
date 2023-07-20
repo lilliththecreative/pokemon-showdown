@@ -189,7 +189,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	liquidooze: {
 		inherit: true,
-		shortDesc: "Deals damage instead of draining, replaces items with Black Sludges on hit",
+		shortDesc: "Deals damage instead of draining, Replaces foods with Black Sludges on hit",
 		onModifyMove(move) {
 			move.secondaries?.push({
 				chance: 100,

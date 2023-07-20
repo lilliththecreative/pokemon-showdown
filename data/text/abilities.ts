@@ -2244,8 +2244,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	ilvaticano: {
 		name: "Il Vaticano",
-		shortDesc: "Does 1.4x damage when attacking across the field",
-		desc: "Does 1.4x damage when attacking across the field",
+		shortDesc: "Does 1.4x damage when attacking diagonally across the field",
+		desc: "Does 1.4x damage when attacking diagonally across the field",
 	},
 	lawnsurfer: {
 		name: "Lawn Surfer",

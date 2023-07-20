@@ -248,7 +248,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		doublesTier: "(DUU)",
 	},
 	bellossom: {
-		tier: "ZU",
+		tier: "7U",
 		doublesTier: "(DUU)",
 	},
 	paras: {
@@ -297,7 +297,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "LC",
 	},
 	golduck: {
-		tier: "ZU",
+		tier: "7U",
 		doublesTier: "(DUU)",
 	},
 	mankey: {
@@ -444,7 +444,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "LC",
 	},
 	grimeralola: {
-		tier: "LC",
+		tier: "7U",
 	},
 	muk: {
 		tier: "ZU",
@@ -553,7 +553,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "LC",
 	},
 	lickilicky: {
-		tier: "7U",
+		tier: "ZU",
 		doublesTier: "(DUU)",
 	},
 	koffing: {
@@ -695,7 +695,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		doublesTier: "DUU",
 	},
 	lapras: {
-		tier: "7U",
+		tier: "ZU",
 		doublesTier: "(DUU)",
 	},
 	ditto: {
@@ -1307,7 +1307,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "LC",
 	},
 	vigoroth: {
-		tier: "ZU",
+		tier: "7U",
 	},
 	slaking: {
 		tier: "7U",
@@ -1345,7 +1345,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "LC",
 	},
 	probopass: {
-		tier: "7U",
+		tier: "ZU",
 		doublesTier: "(DUU)",
 	},
 	skitty: {
@@ -1499,7 +1499,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "LC",
 	},
 	cacturne: {
-		tier: "ZU",
+		tier: "7U",
 		doublesTier: "(DUU)",
 	},
 	swablu: {
@@ -1554,7 +1554,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "LC",
 	},
 	cradily: {
-		tier: "7U",
+		tier: "ZU",
 		doublesTier: "(DUU)",
 	},
 	anorith: {
@@ -1702,7 +1702,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		doublesTier: "(DUU)",
 	},
 	regice: {
-		tier: "7U",
+		tier: "ZU",
 		doublesTier: "(DUU)",
 	},
 	registeel: {
@@ -1904,7 +1904,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "NFE",
 	},
 	drifblim: {
-		tier: "7U",
+		tier: "ZU",
 		doublesTier: "(DUU)",
 	},
 	buneary: {
@@ -2197,7 +2197,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "LC",
 	},
 	simisage: {
-		tier: "ZU",
+		tier: "7U",
 		doublesTier: "(DUU)",
 	},
 	pansear: {
@@ -2847,18 +2847,18 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		doublesTier: "(DUU)",
 	},
 	furfrou: {
-		tier: "ZU",
+		tier: "7U",
 		doublesTier: "(DUU)",
 	},
 	espurr: {
 		tier: "LC",
 	},
 	meowstic: {
-		tier: "7U",
+		tier: "ZU",
 		doublesTier: "(DUU)",
 	},
 	meowsticf: {
-		tier: "7U",
+		tier: "ZU",
 		doublesTier: "(DUU)",
 	},
 	honedge: {
@@ -3166,7 +3166,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		doublesTier: "(DUU)",
 	},
 	lycanrocmidnight: {
-		tier: "7U",
+		tier: "ZU",
 		doublesTier: "(DUU)",
 	},
 	lycanrocdusk: {
@@ -3301,7 +3301,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		doublesTier: "(DUU)",
 	},
 	silvallyelectric: {
-		tier: "ZU",
+		tier: "7U",
 		doublesTier: "(DUU)",
 	},
 	silvallyfairy: {
@@ -3325,7 +3325,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		doublesTier: "(DUU)",
 	},
 	silvallygrass: {
-		tier: "ZU",
+		tier: "7U",
 		doublesTier: "(DUU)",
 	},
 	silvallyground: {
@@ -3337,7 +3337,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		doublesTier: "(DUU)",
 	},
 	silvallypoison: {
-		tier: "ZU",
+		tier: "7U",
 		doublesTier: "(DUU)",
 	},
 	silvallypsychic: {

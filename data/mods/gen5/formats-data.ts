@@ -47,7 +47,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData; } = {
 		tier: "NFE",
 	},
 	beedrill: {
-		tier: "7U",
+		tier: "8U",
 		doublesTier: "DUU",
 	},
 	pidgey: {
@@ -174,7 +174,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData; } = {
 		tier: "LC",
 	},
 	parasect: {
-		tier: "7U",
+		tier: "8U",
 		doublesTier: "DUU",
 	},
 	venonat: {
@@ -1604,7 +1604,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData; } = {
 		tier: "LC",
 	},
 	vespiquen: {
-		tier: "7U",
+		tier: "8U",
 		doublesTier: "DUU",
 	},
 	pachirisu: {
