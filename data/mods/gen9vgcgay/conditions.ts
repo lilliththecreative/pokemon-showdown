@@ -1,6 +1,15 @@
 export const Conditions: {[k: string]: ModdedConditionData} = {
 	raindance: {
 		inherit: true,
+		durationCallback(source, effect) {
+			if (effect.ability === 'thunderstorm') {
+				return 3;
+			}
+			if (source?.hasItem('damprock')) {
+				return 8;
+			}
+			return 5;
+		},
 		onWeatherModifyDamage(damage, attacker, defender, move) {
 			if (defender.hasItem('utilityumbrella')) return;
 			if (move.type === 'Water') {

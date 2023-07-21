@@ -763,6 +763,24 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 		},
 	},
+	guarddog: {
+		inherit: true,
+		shortDesc: "Takes an attack directed at ally once per turn, Reverses Intim",
+		onResidual(pokemon) {
+			this.effectState.guardDog = false;
+		},
+		onSwitchIn(pokemon) {
+			delete this.effectState.guardDog;
+		},
+		onFoeRedirectTarget(target, source, source2, move) {
+			if (this.effectState.guardDog) return;
+			if (!this.effectState.target.isSkyDropped() && this.validTarget(this.effectState.target, source, move.target)) {
+				if (move.smartTarget) move.smartTarget = false;
+				this.debug("Follow Me redirected target of move");
+				return this.effectState.target;
+			}
+		},
+	},
 	// Ruin Nerf
 	swordofruin: {
 		inherit: true,

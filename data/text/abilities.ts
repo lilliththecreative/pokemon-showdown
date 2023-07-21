@@ -2179,8 +2179,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	thunderstorm: {
 		name: "Thunderstorm",
-		desc: "Sets Rain and Electric Terrain.",
-		shortDesc: "Sets Rain and Electric Terrain.",
+		desc: "Sets Rain and Electric Terrain for unextandable 3 turns.",
+		shortDesc: "Sets Rain and Electric Terrain for unextandable 3 turns.",
 	},
 	justthetip: {
 		name: "Just the Tip",

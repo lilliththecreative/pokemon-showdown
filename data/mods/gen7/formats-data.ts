@@ -2551,7 +2551,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "LC",
 	},
 	fraxure: {
-		tier: "ZU",
+		tier: "7U",
 	},
 	haxorus: {
 		tier: "UU",
