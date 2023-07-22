@@ -2267,8 +2267,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "If Opponent Tries to switch out, this pokemon attacks immediately at 2x power",
 		shortDesc: "If Opponent Tries to switch out, this pokemon attacks immediately at 2x power",
 	},
-	extraluck: {
-		name: "Extra Luck",
+	superduperluck: {
+		name: "Super Duper Luck",
 		desc: "This Pokemon's critical hit ratio is raised by 2 stages.",
 		shortDesc: "This Pokemon's critical hit ratio is raised by 2 stages.",
 	},

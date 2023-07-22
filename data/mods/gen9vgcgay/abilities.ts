@@ -765,18 +765,16 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	guarddog: {
 		inherit: true,
-		shortDesc: "Takes an attack directed at ally once per turn, Reverses Intim",
-		onResidual(pokemon) {
-			this.effectState.guardDog = false;
-		},
+		shortDesc: "Takes an attack directed at ally once per switch in, Reverses Intim",
 		onSwitchIn(pokemon) {
-			delete this.effectState.guardDog;
+			this.effectState.guardDog = false;
 		},
 		onFoeRedirectTarget(target, source, source2, move) {
 			if (this.effectState.guardDog) return;
 			if (!this.effectState.target.isSkyDropped() && this.validTarget(this.effectState.target, source, move.target)) {
 				if (move.smartTarget) move.smartTarget = false;
-				this.debug("Follow Me redirected target of move");
+				this.add('-activate', source, 'ability: Guard Dog');
+				this.effectState.guardDog = true;
 				return this.effectState.target;
 			}
 		},
@@ -896,6 +894,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 		},
 	},
+	// Set as 3 turns in conditions
 	thunderstorm: {
 		inherit: true,
 		isNonstandard: null,
@@ -903,10 +902,6 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			this.field.setWeather('raindance');
 			this.field.setTerrain('electricterrain');
 		},
-		name: "Thunderstorm",
-		shortDesc: "Sets Rain and Electric Terrain.",
-		rating: 4,
-		num: -7,
 	},
 	justthetip: {
 		inherit: true,
@@ -1198,7 +1193,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 		},
 	},
-	extraluck: {
+	superduperluck: {
 		inherit: true,
 		isNonstandard: null,
 		onModifyCritRatio(critRatio) {

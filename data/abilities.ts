@@ -5339,9 +5339,9 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 3,
 		num: -24,
 	},
-	extraluck: {
+	superduperluck: {
 		isNonstandard: "CAP",
-		name: "Extra Luck",
+		name: "Super Duper Luck",
 		rating: 3,
 		num: -25,
 	},

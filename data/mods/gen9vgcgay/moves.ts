@@ -260,13 +260,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			},
 		},
 	},
-	gmaxmalodor: {
-		inherit: true,
-		isNonstandard: null,
-		isMax: false,
-		basePower: 90,
-		shortDesc: "Poisons both foes after successful use."
-	},
 	spark: {
 		inherit: true,
 		basePower: 80,
@@ -795,6 +788,28 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			return null;
 		}
 	},
+	// Max Moves
+	gmaxmalodor: {
+		inherit: true,
+		isNonstandard: null,
+		isMax: false,
+		basePower: 90,
+		shortDesc: "Poisons both foes after successful use."
+	},
+	gmaxsteelsurge: {
+		inherit: true,
+		isNonstandard: null,
+		isMax: false,
+		basePower: 100,
+		shortDesc: "Sets up a Steel Hazard"
+	},
+	gmaxgravitas: {
+		inherit: true,
+		isNonstandard: null,
+		isMax: false,
+		basePower: 90,
+		shortDesc: "Sets up Gravity after succesful use"
+	},
 	// Pledges
 	firepledge: {
 		inherit: true,
@@ -1177,6 +1192,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 	},
 	multiattack: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	psychoshift: {
 		inherit: true,
 		isNonstandard: null,
 	}

@@ -346,7 +346,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "LC",
 	},
 	machoke: {
-		tier: "ZU",
+		tier: "7U",
 	},
 	machamp: {
 		tier: "RU",
@@ -3129,7 +3129,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		doublesTier: "(DUU)",
 	},
 	oricorio: {
-		tier: "ZU",
+		tier: "7U",
 		doublesTier: "(DUU)",
 	},
 	oricoriopompom: {

@@ -1304,10 +1304,8 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"tier": "Illegal"
 	},
 	"quagsire": {
-		"isNonstandard": null,
-		"tier": "OU",
-		"natDexTier": "OU",
-		"doublesTier": "DOU"
+		"isNonstandard": "Past",
+		"tier": "Illegal"
 	},
 	"espeon": {
 		"isNonstandard": null,
@@ -4622,8 +4620,10 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"tier": "Illegal"
 	},
 	"lycanroc": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "OU",
+		"natDexTier": "OU",
+		"doublesTier": "DOU"
 	},
 	"lycanrocmidnight": {
 		"isNonstandard": null,
