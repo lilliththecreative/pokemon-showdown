@@ -1209,4 +1209,79 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 		},
 	},
+	theflock: {
+		inherit: true,
+		isNonstandard: null,
+		onStart(pokemon) {
+			let activated = false;
+			for (const target of pokemon.adjacentFoes()) {
+				if (!activated) {
+					this.add('-ability', pokemon, 'Intimidate', 'boost');
+					activated = true;
+				}
+				if (target.volatiles['substitute']) {
+					this.add('-immune', target);
+				} else {
+					(this.event.name as string) = "Intimidate"
+					this.boost({atk: -1}, target, pokemon, null, true);
+				}
+			}
+		},
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, pokemon) {
+			if (pokemon.status) {
+				return this.chainModify(1.5);
+			}
+		},
+		onModifyMove(move, pokemon) {
+			if (move.secondaries) {
+				delete move.secondaries;
+				// Technically not a secondary effect, but it is negated
+				delete move.self;
+				if (move.id === 'clangoroussoulblaze') delete move.selfBoost;
+				// Actual negation of `AfterMoveSecondary` effects implemented in scripts.js
+				move.hasSheerForce = true;
+			}
+		},
+		onBasePowerPriority: 21,
+		onBasePower(basePower, pokemon, target, move) {
+			if (move.hasSheerForce) return this.chainModify([5325, 4096]);
+		},
+	},
+	growingpumpkin: {
+		inherit: true,
+		isNonstandard: null,
+		onResidual(pokemon) {
+			if (pokemon.baseSpecies.baseSpecies !== 'Gourgeist' || !pokemon.hp) return;
+			if (pokemon.species.id === 'gourgeistsuper') return;
+			this.add('-activate', pokemon, 'ability: Growing Pumpkin');
+			if (pokemon.species.id === 'gourgeistsmall')
+				pokemon.formeChange('Gourgeist', this.effect, true);
+			if (pokemon.species.id === 'gourgeist')
+				pokemon.formeChange('Gourgeist-Large', this.effect, true);
+			if (pokemon.species.id === 'gourgeistlarge')
+				pokemon.formeChange('Gourgeist-Super', this.effect, true);
+			pokemon.baseMaxhp = Math.floor(Math.floor(
+				2 * pokemon.species.baseStats['hp'] + pokemon.set.ivs['hp'] + Math.floor(pokemon.set.evs['hp'] / 4) + 100
+			) * pokemon.level / 100 + 10);
+			const newMaxHP = pokemon.volatiles['dynamax'] ? (2 * pokemon.baseMaxhp) : pokemon.baseMaxhp;
+			pokemon.hp = newMaxHP - (pokemon.maxhp - pokemon.hp);
+			pokemon.maxhp = newMaxHP;
+			this.add('-heal', pokemon, pokemon.getHealth, '[silent]');
+		},
+		isPermanent: true,
+	},
+	doubledown: {
+		inherit: true,
+		isNonstandard: null,
+		onChangeBoost(boost, target, source, effect) {
+			if (effect && effect.id === 'zpower') return;
+			let i: BoostID;
+			for (i in boost) {
+				boost[i]! *= -2;
+			}
+		},
+		isBreakable: true,
+	}
+
 };

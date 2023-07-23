@@ -2277,4 +2277,19 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "This pokemon's Flying moves hit both opponents",
 		shortDesc: "This pokemon's Flying moves hit both opponents",
 	},
+	theflock: {
+		name: "The Flock",
+		desc: "Intimidate, Guts, and Sheer Force",
+		shortDesc: "Intimidate, Guts, and Sheer Force",
+	},
+	growingpumpkin: {
+		name: "Growing Pumpkin",
+		desc: "Gets Larger and increases form each turn",
+		shortDesc: "Gets Larger and increases form each turn",
+	},
+	doubledown: {
+		name: "Double Down",
+		desc: "All Stat changes this pokemon recieves are reversed and doubled.",
+		shortDesc: "All Stat changes this pokemon recieves are reversed and doubled.",
+	},
 };

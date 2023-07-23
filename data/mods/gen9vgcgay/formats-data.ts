@@ -746,10 +746,8 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"tier": "Illegal"
 	},
 	"marowak": {
-		"isNonstandard": null,
-		"tier": "OU",
-		"natDexTier": "OU",
-		"doublesTier": "DOU"
+		"isNonstandard": "Past",
+		"tier": "Illegal"
 	},
 	"marowakalola": {
 		"isNonstandard": null,
@@ -942,8 +940,10 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"doublesTier": "DOU"
 	},
 	"eevee": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "OU",
+		"natDexTier": "OU",
+		"doublesTier": "DOU"
 	},
 	"eeveestarter": {
 		"isNonstandard": "Past",

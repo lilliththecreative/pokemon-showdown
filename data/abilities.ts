@@ -5336,7 +5336,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	catscradle: {
 		isNonstandard: "CAP",
 		name: "Cat's Cradle",
-		rating: 3,
+		rating: 4,
 		num: -24,
 	},
 	superduperluck: {
@@ -5350,5 +5350,23 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Large Wingspan",
 		rating: 3,
 		num: -26,
+	},
+	theflock: {
+		isNonstandard: "CAP",
+		name: "The Flock",
+		rating: 3,
+		num: -27,
+	},
+	growingpumpkin: {
+		isNonstandard: "CAP",
+		name: "Growing Pumpkin",
+		rating: 4,
+		num: -28,
+	},
+	doubledown: {
+		isNonstandard: "CAP",
+		name: "Double Down",
+		rating: 4,
+		num: -29,
 	},
 };

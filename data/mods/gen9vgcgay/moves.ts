@@ -414,10 +414,17 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 		basePower: 150,
 	},
-	geargrid: {
+	geargrind: {
 		inherit: true,
+		isNonstandard: null,
 		basePower: 55,
 		accuracy: 90
+	},
+	steelwing: {
+		inherit: true,
+		isNonstandard: null,
+		basePower: 75,
+		accuracy: 95
 	},
 	mysticalpower: {
 		inherit: true,
@@ -495,7 +502,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	octolock: {
 		inherit: true,
 		isNonstandard: null,
-		volatileStatus: 'octolock',
+		shortDesc: "Traps target, lowers Def and SpD by 1  and does 1/8 dmg each turn.",
 		condition: {
 			onStart(pokemon, source) {
 				this.add('-start', pokemon, 'move: Octolock', '[of] ' + source);
@@ -532,7 +539,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	filletaway: {
 		inherit: true,
-		shortDesc: "+2 Attack, Sp. Atk, Speed for 1/3 user's max HP, Ally Heals 1/3.",
+		shortDesc: "+2 Atk, SpAtk, Spe for 1/3 user's max HP, Ally Heals 1/3.",
 		onTry(source) {
 			if (source.hp <= source.maxhp / 3 || source.maxhp === 1) return false;
 		},
@@ -557,6 +564,29 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 		onHit(target) {
+		},
+	},
+	frostbreath: {
+		inherit: true,
+		isNonstandard: null,
+		basePower: 55,
+		accuracy: 100
+	},
+	psychoshift: {
+		inherit: true,
+		isNonstandard: null,
+		shortDesc: "Transfers the user's status ailment to the target. Cures Ally Status.",
+		onTryHit(target, source, move) {
+			if (!source.status) return false;
+			move.status = source.status;
+		},
+		self: {
+			onHit(pokemon) {
+				pokemon.cureStatus();
+				for (const allyActive of pokemon.adjacentAllies()) {
+					allyActive.cureStatus()
+				}
+			},
 		},
 	},
 	// Moves edited for abilities
@@ -788,6 +818,31 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			return null;
 		}
 	},
+	extremeevoboost: {
+		inherit: true,
+		isNonstandard: null,
+		isZ: false,
+		shortDesc: "Eevee Only, Charges, Double Omniboosts turn 2",
+		onTry(source, target, move) {
+			if (source.species.name === 'Eevee' || move.hasBounced) {
+				return;
+			}
+			this.add('-fail', source, 'move: Extreme Evoboost');
+			this.hint("Only a Pokemon whose form is Eevee can use this move.");
+			return null;
+		},
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		}
+	},
 	// Max Moves
 	gmaxmalodor: {
 		inherit: true,
@@ -807,6 +862,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 		isMax: false,
+		category: "Special",
 		basePower: 90,
 		shortDesc: "Sets up Gravity after succesful use"
 	},
@@ -844,22 +900,27 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	// Freeze -> Frostbite
 	blizzard: {
 		inherit: true,
-		secondary: { chance: 20, status: 'fst'},
+		shortDesc: "15% chance to frostbite foes. Can't miss in Snow",
+		secondary: { chance: 15, status: 'fst'},
 	},
 	icebeam: {
 		inherit: true,
+		shortDesc: "10% chance of Frostbite",
 		secondary: { chance: 10, status: 'fst'},
 	},
 	freezedry: {
 		inherit: true,
+		shortDesc: "10% chance of Frostbite",
 		secondary: { chance: 10, status: 'fst'},
 	},
 	freezingglare: {
 		inherit: true,
-		secondary: { chance: 10, status: 'fst'},
+		shortDesc: "20% chance of Frostbite",
+		secondary: { chance: 20, status: 'fst'},
 	},
 	icepunch: {
 		inherit: true,
+		shortDesc: "10% chance of Frostbite",
 		secondary: { chance: 10, status: 'fst'},
 	},
 	icefang: {
@@ -1195,8 +1256,16 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	psychoshift: {
+	thousandarrows: {
 		inherit: true,
 		isNonstandard: null,
-	}
+	},
+	magiccoat: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	nightmare: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
