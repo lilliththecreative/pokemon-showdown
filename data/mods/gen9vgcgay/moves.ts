@@ -280,7 +280,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	spiritshackle: {
 		inherit: true,
-		basePower: 100,
+		basePower: 95,
 	},
 	firefang: {
 		inherit: true,
@@ -539,7 +539,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	filletaway: {
 		inherit: true,
-		shortDesc: "+2 Atk, SpAtk, Spe for 1/3 user's max HP, Ally Heals 1/3.",
+		shortDesc: "+2 Atk, SpAtk, Spe for 1/3 user HP, Ally Heals 1/3.",
 		onTry(source) {
 			if (source.hp <= source.maxhp / 3 || source.maxhp === 1) return false;
 		},

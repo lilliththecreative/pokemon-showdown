@@ -7340,7 +7340,11 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		"abilities": {
 			"0": "Growing Pumpkin"
 		},
-		"inherit": true
+		"inherit": true,
+		"requiredAbility": "Growing Pumpkin",
+		"battleOnly": [
+			"Gourgeist-Small"
+		]
 	},
 	"gourgeistsmall": {
 		"types": [
@@ -7358,11 +7362,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		"abilities": {
 			"0": "Growing Pumpkin"
 		},
-		"inherit": true,
-		"requiredAbility": "Growing Pumpkin",
-		"battleOnly": [
-			"Gourgeist"
-		]
+		"inherit": true
 	},
 	"gourgeistlarge": {
 		"types": [
@@ -7383,7 +7383,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		"inherit": true,
 		"requiredAbility": "Growing Pumpkin",
 		"battleOnly": [
-			"Gourgeist"
+			"Gourgeist-Small"
 		]
 	},
 	"gourgeistsuper": {
@@ -7405,7 +7405,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		"inherit": true,
 		"requiredAbility": "Growing Pumpkin",
 		"battleOnly": [
-			"Gourgeist"
+			"Gourgeist-Small"
 		]
 	},
 	"avalugghisui": {

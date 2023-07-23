@@ -1230,7 +1230,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		onModifyAtkPriority: 5,
 		onModifyAtk(atk, pokemon) {
 			if (pokemon.status) {
-				return this.chainModify(1.5);
+				return this.chainModify(3);
 			}
 		},
 		onModifyMove(move, pokemon) {
@@ -1257,9 +1257,9 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			this.add('-activate', pokemon, 'ability: Growing Pumpkin');
 			if (pokemon.species.id === 'gourgeistsmall')
 				pokemon.formeChange('Gourgeist', this.effect, true);
-			if (pokemon.species.id === 'gourgeist')
+			else if (pokemon.species.id === 'gourgeist')
 				pokemon.formeChange('Gourgeist-Large', this.effect, true);
-			if (pokemon.species.id === 'gourgeistlarge')
+			else if (pokemon.species.id === 'gourgeistlarge')
 				pokemon.formeChange('Gourgeist-Super', this.effect, true);
 			pokemon.baseMaxhp = Math.floor(Math.floor(
 				2 * pokemon.species.baseStats['hp'] + pokemon.set.ivs['hp'] + Math.floor(pokemon.set.evs['hp'] / 4) + 100
