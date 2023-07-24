@@ -41,131 +41,131 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	},
 	"metapod": {
 		"isNonstandard": "Unobtainable",
-		"tier": "Unreleased"
+		"tier": "Unreleased",
 	},
 	"butterfree": {
 		"isNonstandard": "Unobtainable",
-		"tier": "Unreleased"
+		"tier": "Unreleased",
 	},
 	"weedle": {
 		"tier": "1",
-		"doublesTier": "1"
+		"doublesTier": "1",
 	},
 	"kakuna": {
 		"tier": "2",
-		"doublesTier": "2"
+		"doublesTier": "2",
 	},
 	"beedrill": {
 		"doublesTier": "13",
-		"tier": "13"
+		"tier": "13",
 	},
 	"beedrillmega": {
 		"isNonstandard": "Unobtainable",
-		"tier": "Unreleased"
+		"tier": "Unreleased",
 	},
 	"pidgey": {
 		"tier": "1",
-		"doublesTier": "1"
+		"doublesTier": "1",
 	},
 	"pidgeotto": {
 		"tier": "3",
-		"doublesTier": "3"
+		"doublesTier": "3",
 	},
 	"pidgeot": {
 		"doublesTier": "7",
-		"tier": "7"
+		"tier": "7",
 	},
 	"pidgeotmega": {
 		"isNonstandard": "Unobtainable",
-		"tier": "Unreleased"
+		"tier": "Unreleased",
 	},
 	"rattata": {
 		"isNonstandard": "Unobtainable",
-		"tier": "Unreleased"
+		"tier": "Unreleased",
 	},
 	"raticate": {
 		"isNonstandard": "Unobtainable",
-		"tier": "Unreleased"
+		"tier": "Unreleased",
 	},
 	"spearow": {
 		"isNonstandard": "Unobtainable",
-		"tier": "Unreleased"
+		"tier": "Unreleased",
 	},
 	"fearow": {
 		"isNonstandard": "Unobtainable",
-		"tier": "Unreleased"
+		"tier": "Unreleased",
 	},
 	"ekans": {
 		"tier": "1",
-		"doublesTier": "1"
+		"doublesTier": "1",
 	},
 	"arbok": {
 		"doublesTier": "9",
-		"tier": "9"
+		"tier": "9",
 	},
 	"pichu": {
 		"tier": "2",
-		"doublesTier": "2"
+		"doublesTier": "2",
 	},
 	"pikachu": {
 		"tier": "4",
-		"doublesTier": "4"
+		"doublesTier": "4",
 	},
 	"raichu": {
 		"doublesTier": "12",
-		"tier": "12"
+		"tier": "12",
 	},
 	"sandshrew": {
 		"tier": "1",
-		"doublesTier": "1"
+		"doublesTier": "1",
 	},
 	"sandslash": {
 		"doublesTier": "4",
-		"tier": "4"
+		"tier": "4",
 	},
 	"nidoranf": {
 		"isNonstandard": "Unobtainable",
-		"tier": "Unreleased"
+		"tier": "Unreleased",
 	},
 	"nidorina": {
 		"isNonstandard": "Unobtainable",
-		"tier": "Unreleased"
+		"tier": "Unreleased",
 	},
 	"nidoqueen": {
 		"isNonstandard": "Unobtainable",
-		"tier": "Unreleased"
+		"tier": "Unreleased",
 	},
 	"nidoranm": {
 		"tier": "1",
-		"doublesTier": "1"
+		"doublesTier": "1",
 	},
 	"nidorino": {
 		"tier": "2",
-		"doublesTier": "2"
+		"doublesTier": "2",
 	},
 	"nidoking": {
 		"doublesTier": "7",
-		"tier": "7"
+		"tier": "7",
 	},
 	"cleffa": {
 		"isNonstandard": "Unobtainable",
-		"tier": "Unreleased"
+		"tier": "Unreleased",
 	},
 	"clefairy": {
 		"isNonstandard": "Unobtainable",
-		"tier": "Unreleased"
+		"tier": "Unreleased",
 	},
 	"clefable": {
 		"isNonstandard": "Unobtainable",
-		"tier": "Unreleased"
+		"tier": "Unreleased",
 	},
 	"vulpix": {
 		"tier": "5",
-		"doublesTier": "5"
+		"doublesTier": "5",
 	},
 	"ninetales": {
 		"doublesTier": "14",
-		"tier": "14"
+		"tier": "14",
 	},
 	"igglybuff": {
 		"isNonstandard": "Unobtainable",

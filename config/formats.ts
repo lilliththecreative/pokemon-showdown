@@ -71,7 +71,7 @@ export const Formats: FormatList = [
 		mod: 'gen9vgcgay',
 		gameType: 'doubles',
 		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'HP TB Legality'],
-		unbanlist: ['Greninja-Bond']
+		unbanlist: ['Greninja-Bond'],
 	},
 	{
 		name: "[Gen 9] Free-For-All NatDex",

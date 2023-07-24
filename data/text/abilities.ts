@@ -2279,8 +2279,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	theflock: {
 		name: "The Flock",
-		desc: "Intimidate, Guts, and Sheer Force",
-		shortDesc: "Intimidate, Guts, and Sheer Force",
+		desc: "Intimidate, Guts, Hustle, and Sheer Force",
+		shortDesc: "Intimidate, Guts, Hustle, and Sheer Force",
 	},
 	growingpumpkin: {
 		name: "Growing Pumpkin",

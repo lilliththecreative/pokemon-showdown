@@ -52560,5 +52560,383 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			]
 		}
+	},
+	"spidops": {
+		"inherit": true,
+		"learnset": {
+			"aerialace": [
+				"9M"
+			],
+			"assurance": [
+				"9L8"
+			],
+			"block": [
+				"9L19"
+			],
+			"bodyslam": [
+				"9M"
+			],
+			"brickbreak": [
+				"9M"
+			],
+			"bugbite": [
+				"9L14"
+			],
+			"bugbuzz": [
+				"9M"
+			],
+			"bulletseed": [
+				"9M"
+			],
+			"circlethrow": [
+				"9L41"
+			],
+			"counter": [
+				"9L24"
+			],
+			"endure": [
+				"9M"
+			],
+			"facade": [
+				"9M"
+			],
+			"falseswipe": [
+				"9M"
+			],
+			"feint": [
+				"9L11"
+			],
+			"fling": [
+				"9M"
+			],
+			"gastroacid": [
+				"9L37"
+			],
+			"gigadrain": [
+				"9M"
+			],
+			"gigaimpact": [
+				"9M"
+			],
+			"grassknot": [
+				"9M"
+			],
+			"headbutt": [
+				"9L28"
+			],
+			"leechlife": [
+				"9M"
+			],
+			"lowkick": [
+				"9M"
+			],
+			"poisonjab": [
+				"9M"
+			],
+			"pounce": [
+				"9M"
+			],
+			"protect": [
+				"9M"
+			],
+			"raindance": [
+				"9M"
+			],
+			"rest": [
+				"9M"
+			],
+			"reversal": [
+				"9M"
+			],
+			"rocktomb": [
+				"9M"
+			],
+			"scaryface": [
+				"9M"
+			],
+			"shadowclaw": [
+				"9M"
+			],
+			"silktrap": [
+				"9L0"
+			],
+			"skittersmack": [
+				"9L49"
+			],
+			"sleeptalk": [
+				"9M"
+			],
+			"spikes": [
+				"9M"
+			],
+			"stickyweb": [
+				"9L33"
+			],
+			"stringshot": [
+				"9L1"
+			],
+			"strugglebug": [
+				"9M",
+				"9L5"
+			],
+			"substitute": [
+				"9M"
+			],
+			"sunnyday": [
+				"9M"
+			],
+			"tackle": [
+				"9L1"
+			],
+			"takedown": [
+				"9M"
+			],
+			"taunt": [
+				"9M"
+			],
+			"terablast": [
+				"9M"
+			],
+			"thief": [
+				"9M"
+			],
+			"throatchop": [
+				"9L45"
+			],
+			"toxicspikes": [
+				"9M"
+			],
+			"trailblaze": [
+				"9M"
+			],
+			"uturn": [
+				"9M"
+			],
+			"xscissor": [
+				"9M"
+			],
+			"pursuit": [
+				"9M"
+			],
+			"foulplay": [
+				"9M"
+			]
+		}
+	},
+	"eiscue": {
+		"inherit": true,
+		"learnset": {
+			"agility": [
+				"9M",
+				"8M"
+			],
+			"amnesia": [
+				"9M",
+				"9L30",
+				"8M",
+				"8L30"
+			],
+			"aquaring": [
+				"9E",
+				"8E"
+			],
+			"attract": [
+				"8M"
+			],
+			"auroraveil": [
+				"9L48",
+				"8L48"
+			],
+			"avalanche": [
+				"9M",
+				"8M"
+			],
+			"bellydrum": [
+				"9E",
+				"8E"
+			],
+			"blizzard": [
+				"9M",
+				"9L60",
+				"8M",
+				"8L60"
+			],
+			"bodyslam": [
+				"9M"
+			],
+			"brine": [
+				"8M"
+			],
+			"chillingwater": [
+				"9M"
+			],
+			"dive": [
+				"8M"
+			],
+			"doubleedge": [
+				"9E",
+				"8E"
+			],
+			"endure": [
+				"9M",
+				"8M"
+			],
+			"facade": [
+				"9M",
+				"8M"
+			],
+			"freezedry": [
+				"9L36",
+				"8L36"
+			],
+			"gigaimpact": [
+				"9M"
+			],
+			"hail": [
+				"8M",
+				"8L42"
+			],
+			"headbutt": [
+				"9L24",
+				"8L24"
+			],
+			"headsmash": [
+				"9E",
+				"8E"
+			],
+			"hydropump": [
+				"9M",
+				"8M"
+			],
+			"hyperbeam": [
+				"9M"
+			],
+			"icebeam": [
+				"9M",
+				"8M"
+			],
+			"icepunch": [
+				"9M",
+				"8M"
+			],
+			"icespinner": [
+				"9M"
+			],
+			"iciclecrash": [
+				"9E",
+				"8E"
+			],
+			"iciclespear": [
+				"8M"
+			],
+			"icywind": [
+				"9M",
+				"9L18",
+				"8M",
+				"8L18"
+			],
+			"irondefense": [
+				"9M",
+				"8M"
+			],
+			"ironhead": [
+				"9M",
+				"8M"
+			],
+			"liquidation": [
+				"9M",
+				"8M"
+			],
+			"mist": [
+				"9L6",
+				"8L6"
+			],
+			"powdersnow": [
+				"9L1",
+				"8L1"
+			],
+			"protect": [
+				"9M",
+				"8M"
+			],
+			"raindance": [
+				"9M"
+			],
+			"reflect": [
+				"9M",
+				"8M"
+			],
+			"rest": [
+				"9M",
+				"8M"
+			],
+			"reversal": [
+				"9M",
+				"8M"
+			],
+			"round": [
+				"8M"
+			],
+			"sleeptalk": [
+				"9M",
+				"8M"
+			],
+			"snore": [
+				"8M"
+			],
+			"snowscape": [
+				"9M",
+				"9L42"
+			],
+			"soak": [
+				"9E",
+				"8E"
+			],
+			"substitute": [
+				"9M",
+				"8M"
+			],
+			"surf": [
+				"9M",
+				"9L54",
+				"8M",
+				"8L54"
+			],
+			"tackle": [
+				"9L1",
+				"8L1"
+			],
+			"takedown": [
+				"9M"
+			],
+			"terablast": [
+				"9M"
+			],
+			"waterfall": [
+				"9M",
+				"8M"
+			],
+			"waterpulse": [
+				"9M"
+			],
+			"weatherball": [
+				"9L12",
+				"8M",
+				"8L12"
+			],
+			"whirlpool": [
+				"8M"
+			],
+			"zenheadbutt": [
+				"9M",
+				"8M"
+			],
+			"iceshard": [
+				"9M"
+			],
+			"aquajet": [
+				"9M"
+			]
+		}
 	}
 };

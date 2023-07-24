@@ -589,6 +589,20 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			},
 		},
 	},
+	fairylock: {
+		inherit: true,
+		isNonstandard: null,
+		shortDesc: "Prevents all Pokemon from switching for next 3 turns.",
+		condition: {
+			duration: 4,
+			onFieldStart(target) {
+				this.add('-fieldactivate', 'move: Fairy Lock');
+			},
+			onTrapPokemon(pokemon) {
+				pokemon.tryTrap();
+			},
+		},
+	},
 	// Moves edited for abilities
 	auroraveil: {
 		inherit: true,
@@ -750,7 +764,8 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	trickortreat: {
 		inherit: true,
 		isNonstandard: null,
-		shortDesc:"Charges, adds Ghost to target's type, boosts all stats turn 2.",
+		shortDesc:"Charges, +Ghost to target's type, omniboost turn 2.",
+		flags: {charge: 1, protect: 1, reflectable: 1, mirror: 1, allyanim: 1},
 		onTryMove(attacker, defender, move) {
 			if (attacker.removeVolatile(move.id)) {
 				this.boost({atk: 1, def: 1, spa: 1, spd: 1, spe: 1}, attacker, attacker, move)
@@ -768,7 +783,8 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	forestscurse: {
 		inherit: true,
 		isNonstandard: null,
-		shortDesc:"Charges, adds Grass to target's type, boosts all stats turn 2.",
+		shortDesc:"Charges, +Grass to target's type, omniboost turn 2.",
+		flags: {charge: 1, protect: 1, reflectable: 1, mirror: 1, allyanim: 1},
 		onTryMove(attacker, defender, move) {
 			if (attacker.removeVolatile(move.id)) {
 				this.boost({atk: 1, def: 1, spa: 1, spd: 1, spe: 1}, attacker, attacker, move)
@@ -786,7 +802,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	conversion: {
 		inherit: true,
 		isNonstandard: null,
-		shortDesc: "Charges, changes user's type to match its first move and boosts all stats turn 2.",
+		shortDesc: "Charges, User's type to first move, Omniboost turn 2.",
 		boosts: {atk: 1, def: 1, spa: 1, spd: 1, spe: 1},
 		flags: {charge: 1, nonsky: 1, nosleeptalk: 1, failinstruct: 1},
 		onTryMove(attacker, defender, move) {
@@ -805,6 +821,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 		isZ: false,
+		flags: {charge: 1},
 		shortDesc: "Charges, uses move turn 2",
 		onTryMove(attacker, defender, move) {
 			if (attacker.removeVolatile(move.id)) {
@@ -849,14 +866,14 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 		isMax: false,
 		basePower: 90,
-		shortDesc: "Poisons both foes after successful use."
+		shortDesc: "Poisons both foes after successful use.",
 	},
 	gmaxsteelsurge: {
 		inherit: true,
 		isNonstandard: null,
 		isMax: false,
 		basePower: 100,
-		shortDesc: "Sets up a Steel Hazard"
+		shortDesc: "Sets up a Steel Hazard after use.",
 	},
 	gmaxgravitas: {
 		inherit: true,
@@ -864,11 +881,12 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isMax: false,
 		category: "Special",
 		basePower: 90,
-		shortDesc: "Sets up Gravity after succesful use"
+		shortDesc: "Sets up Gravity after succesful use.",
 	},
 	// Pledges
 	firepledge: {
 		inherit: true,
+		shortDesc: "Use with other pledge for 200bp combined attack.",
 		basePowerCallback(target, source, move) {
 			if (['grasspledge', 'waterpledge'].includes(move.sourceEffect)) {
 				this.add('-combine');
@@ -879,6 +897,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	waterpledge: {
 		inherit: true,
+		shortDesc: "Use with other pledge for 200bp combined attack.",
 		basePowerCallback(target, source, move) {
 			if (['grasspledge', 'firepledge'].includes(move.sourceEffect)) {
 				this.add('-combine');
@@ -889,6 +908,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	grasspledge: {
 		inherit: true,
+		shortDesc: "Use with other pledge for 200bp combined attack.",
 		basePowerCallback(target, source, move) {
 			if (['firepledge', 'waterpledge'].includes(move.sourceEffect)) {
 				this.add('-combine');
@@ -905,27 +925,28 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	icebeam: {
 		inherit: true,
-		shortDesc: "10% chance of Frostbite",
+		shortDesc: "10% chance to Frostbite",
 		secondary: { chance: 10, status: 'fst'},
 	},
 	freezedry: {
 		inherit: true,
-		shortDesc: "10% chance of Frostbite",
+		shortDesc: "10% chance to Frostbite",
 		secondary: { chance: 10, status: 'fst'},
 	},
 	freezingglare: {
 		inherit: true,
-		shortDesc: "20% chance of Frostbite",
+		shortDesc: "20% chance to Frostbite",
 		secondary: { chance: 20, status: 'fst'},
 	},
 	icepunch: {
 		inherit: true,
-		shortDesc: "10% chance of Frostbite",
+		shortDesc: "10% chance to Frostbite",
 		secondary: { chance: 10, status: 'fst'},
 	},
 	icefang: {
 		inherit: true,
 		basePower: 75,
+		shortDesc: "10% chance to Frostbite, 10% to Flinch.",
 		secondaries: [
 			{ chance: 10, status: 'fst'},
 			{ chance: 10, volatileStatus: 'flinch'},

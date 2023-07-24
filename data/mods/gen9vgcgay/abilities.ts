@@ -1,25 +1,25 @@
 export const Abilities: {[k: string]: ModdedAbilityData} = {
-	slowstart: {
-		inherit: true,
-		condition: {
-			duration: 3,
-			onResidualOrder: 28,
-			onResidualSubOrder: 2,
-			onStart(target) {
-				this.add('-start', target, 'ability: Slow Start');
-			},
-			onModifyAtkPriority: 5,
-			onModifyAtk(atk, pokemon) {
-				return this.chainModify(0.5);
-			},
-			onModifySpe(spe, pokemon) {
-				return this.chainModify(0.5);
-			},
-			onEnd(target) {
-				this.add('-end', target, 'Slow Start');
-			},
-		},
-	},
+	// slowstart: {
+	// 	inherit: true,
+	// 	condition: {
+	// 		duration: 3,
+	// 		onResidualOrder: 28,
+	// 		onResidualSubOrder: 2,
+	// 		onStart(target) {
+	// 			this.add('-start', target, 'ability: Slow Start');
+	// 		},
+	// 		onModifyAtkPriority: 5,
+	// 		onModifyAtk(atk, pokemon) {
+	// 			return this.chainModify(0.5);
+	// 		},
+	// 		onModifySpe(spe, pokemon) {
+	// 			return this.chainModify(0.5);
+	// 		},
+	// 		onEnd(target) {
+	// 			this.add('-end', target, 'Slow Start');
+	// 		},
+	// 	},
+	// },
 	reckless: {
 		inherit: true,
 		shortDesc: "This Pokemon's attacks with recoil or crash damage have 1.3x power; not Struggle.",
@@ -310,6 +310,21 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		shortDesc: "If this Pokemon eats a Berry, it restores 1/2 of its max HP after the Berry's effect.",
 		onEatItem(item, pokemon) {
 			this.heal(pokemon.baseMaxhp / 2);
+		},
+	},
+	justified: {
+		inherit: true,
+		shortDesc: "Immune to Intimidate, +1 Atk, SpA after damaged by a Dark-type move.",
+		onDamagingHit(damage, target, source, move) {
+			if (move.type === 'Dark') {
+				this.boost({atk: 1, spa: 1});
+			}
+		},
+		onTryBoost(boost, target, source, effect) {
+			if (effect.name === 'Intimidate' && boost.atk) {
+				delete boost.atk;
+				this.add('-fail', target, 'unboost', 'Attack', '[from] ability: Justified', '[of] ' + target);
+			}
 		},
 	},
 	// Signature Ability Buffs
@@ -1230,7 +1245,15 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		onModifyAtkPriority: 5,
 		onModifyAtk(atk, pokemon) {
 			if (pokemon.status) {
-				return this.chainModify(3);
+				return this.chainModify(2.25);
+			}
+			else {
+				return this.chainModify(1.5);
+			}
+		},
+		onSourceModifyAccuracy(accuracy, target, source, move) {
+			if (move.category === 'Physical' && typeof accuracy === 'number') {
+				return this.chainModify([3277, 4096]);
 			}
 		},
 		onModifyMove(move, pokemon) {

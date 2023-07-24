@@ -5119,9 +5119,9 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		],
 		"baseStats": {
 			"hp": 91,
-			"atk": 90,
+			"atk": 95,
 			"def": 106,
-			"spa": 130,
+			"spa": 125,
 			"spd": 106,
 			"spe": 77
 		},
@@ -5367,7 +5367,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"def": 85,
 			"spa": 85,
 			"spd": 60,
-			"spe": 98
+			"spe": 103
 		},
 		"abilities": {
 			"0": "Big Pecks",
@@ -7330,9 +7330,9 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Grass"
 		],
 		"baseStats": {
-			"hp": 75,
+			"hp": 70,
 			"atk": 95,
-			"def": 132,
+			"def": 127,
 			"spa": 63,
 			"spd": 80,
 			"spe": 69
@@ -7342,9 +7342,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"inherit": true,
 		"requiredAbility": "Growing Pumpkin",
-		"battleOnly": [
-			"Gourgeist-Small"
-		]
+		"battleOnly": "Gourgeist-Small"
 	},
 	"gourgeistsmall": {
 		"types": [
@@ -7352,7 +7350,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Grass"
 		],
 		"baseStats": {
-			"hp": 60,
+			"hp": 55,
 			"atk": 85,
 			"def": 122,
 			"spa": 58,
@@ -7370,9 +7368,9 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Grass"
 		],
 		"baseStats": {
-			"hp": 90,
+			"hp": 85,
 			"atk": 105,
-			"def": 142,
+			"def": 132,
 			"spa": 68,
 			"spd": 85,
 			"spe": 84
@@ -7382,9 +7380,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"inherit": true,
 		"requiredAbility": "Growing Pumpkin",
-		"battleOnly": [
-			"Gourgeist-Small"
-		]
+		"battleOnly": "Gourgeist-Small"
 	},
 	"gourgeistsuper": {
 		"types": [
@@ -7392,9 +7388,9 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Grass"
 		],
 		"baseStats": {
-			"hp": 105,
+			"hp": 100,
 			"atk": 115,
-			"def": 152,
+			"def": 137,
 			"spa": 73,
 			"spd": 90,
 			"spe": 99
@@ -7404,9 +7400,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"inherit": true,
 		"requiredAbility": "Growing Pumpkin",
-		"battleOnly": [
-			"Gourgeist-Small"
-		]
+		"battleOnly": "Gourgeist-Small"
 	},
 	"avalugghisui": {
 		"types": [
@@ -8925,7 +8919,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Psychic"
 		],
 		"baseStats": {
-			"hp": 60,
+			"hp": 70,
 			"atk": 45,
 			"def": 110,
 			"spa": 80,
@@ -9588,10 +9582,10 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Dark"
 		],
 		"baseStats": {
-			"hp": 78,
-			"atk": 105,
+			"hp": 83,
+			"atk": 110,
 			"def": 68,
-			"spa": 70,
+			"spa": 75,
 			"spd": 68,
 			"spe": 117
 		},
@@ -9606,10 +9600,10 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Dark"
 		],
 		"baseStats": {
-			"hp": 78,
-			"atk": 105,
+			"hp": 83,
+			"atk": 110,
 			"def": 68,
-			"spa": 70,
+			"spa": 75,
 			"spd": 68,
 			"spe": 117
 		},
@@ -9832,7 +9826,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		],
 		"baseStats": {
 			"hp": 95,
-			"atk": 140,
+			"atk": 145,
 			"def": 130,
 			"spa": 65,
 			"spd": 110,
@@ -9851,7 +9845,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"hp": 95,
 			"atk": 65,
 			"def": 60,
-			"spa": 140,
+			"spa": 145,
 			"spd": 80,
 			"spe": 130
 		},
@@ -10214,10 +10208,10 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Normal"
 		],
 		"baseStats": {
-			"hp": 78,
+			"hp": 83,
 			"atk": 69,
 			"def": 90,
-			"spa": 125,
+			"spa": 130,
 			"spd": 109,
 			"spe": 39
 		},
@@ -10242,8 +10236,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"spe": 92
 		},
 		"abilities": {
-			"0": "The Flock",
-			"H": "Hustle"
+			"0": "The Flock"
 		},
 		"inherit": true
 	},
@@ -10446,10 +10439,10 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Fire"
 		],
 		"baseStats": {
-			"hp": 65,
-			"atk": 108,
+			"hp": 70,
+			"atk": 113,
 			"def": 65,
-			"spa": 108,
+			"spa": 113,
 			"spd": 65,
 			"spe": 75
 		},
@@ -10730,7 +10723,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Psychic"
 		],
 		"baseStats": {
-			"hp": 90,
+			"hp": 95,
 			"atk": 102,
 			"def": 73,
 			"spa": 78,
@@ -10952,7 +10945,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"abilities": {
 			"0": "Protosynthesis",
-			"H": "Effect Spore"
+			"H": "Poison Touch"
 		},
 		"inherit": true
 	},
@@ -10971,7 +10964,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"abilities": {
 			"0": "Protosynthesis",
-			"H": "Infiltrator"
+			"H": "Cursed Body"
 		},
 		"inherit": true
 	},
@@ -11291,7 +11284,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"abilities": {
 			"0": "Protosynthesis",
-			"H": "Surge Surfer"
+			"H": "Inner Focus"
 		},
 		"inherit": true
 	},
@@ -11310,7 +11303,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"abilities": {
 			"0": "Quark Drive",
-			"H": "Chlorophyll"
+			"H": "Justified"
 		},
 		"inherit": true
 	}

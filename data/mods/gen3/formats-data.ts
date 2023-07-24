@@ -12,7 +12,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "6U",
 	},
 	charmeleon: {
-		tier: "PU"
+		tier: "PU",
 	},
 	charizard: {
 		tier: "OU",
