@@ -52,7 +52,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "NFE",
 	},
 	butterfree: {
-		tier: "7U",
+		tier: "ZU",
 		doublesTier: "(DUU)",
 	},
 	weedle: {
@@ -90,7 +90,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "LC",
 	},
 	raticate: {
-		tier: "ZU",
+		tier: "7U",
 		doublesTier: "(DUU)",
 	},
 	raticatealola: {
@@ -164,7 +164,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "LC",
 	},
 	sandslash: {
-		tier: "7U",
+		tier: "ZU",
 		doublesTier: "(DUU)",
 	},
 	sandslashalola: {
@@ -386,7 +386,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		doublesTier: "(DUU)",
 	},
 	golemalola: {
-		tier: "ZU",
+		tier: "7U",
 		doublesTier: "(DUU)",
 	},
 	ponyta: {
@@ -505,7 +505,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "LC",
 	},
 	electrode: {
-		tier: "ZU",
+		tier: "7U",
 		doublesTier: "(DUU)",
 	},
 	exeggcute: {
@@ -730,7 +730,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		doublesTier: "(DUU)",
 	},
 	glaceon: {
-		tier: "ZU",
+		tier: "7U",
 		doublesTier: "(DUU)",
 	},
 	porygon: {
@@ -1022,7 +1022,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		doublesTier: "(DUU)",
 	},
 	shuckle: {
-		tier: "ZU",
+		tier: "7U",
 		doublesTier: "(DUU)",
 	},
 	heracross: {
@@ -1463,7 +1463,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "LC",
 	},
 	camerupt: {
-		tier: "ZU",
+		tier: "7U",
 		doublesTier: "(DUU)",
 	},
 	cameruptmega: {
@@ -2252,7 +2252,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "LC",
 	},
 	swoobat: {
-		tier: "ZU",
+		tier: "7U",
 		doublesTier: "(DUU)",
 	},
 	drilbur: {

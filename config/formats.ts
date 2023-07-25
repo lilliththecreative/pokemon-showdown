@@ -276,13 +276,6 @@ export const Formats: FormatList = [
 		banlist: ['6U'],
 	},
 	{
-		name: "[Gen 3] 8U",
-		mod: 'gen3',
-		searchShow: true,
-		ruleset: ['[Gen 3] 7U'],
-		banlist: ['7U'],
-	},
-	{
 		section: "Gen 5 Lower Tiers",
 	},
 	{
