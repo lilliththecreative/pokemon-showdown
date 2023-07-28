@@ -276,6 +276,13 @@ export const Formats: FormatList = [
 		banlist: ['6U'],
 	},
 	{
+		name: "[Gen 3] Lol",
+		mod: 'gen3',
+		searchShow: true,
+		ruleset: ['[Gen 3] 7U'],
+		banlist: ['7U', '8U', 'NFE', 'LC', 'Leftovers'],
+	},
+	{
 		section: "Gen 5 Lower Tiers",
 	},
 	{
@@ -307,6 +314,13 @@ export const Formats: FormatList = [
 		mod: 'gen7',
 		searchShow: true,
 		ruleset: ['[Gen 7] ZU'],
+		banlist: ['ZU'],
+	},
+	{
+		name: "[Gen 9] SU",
+		mod: 'gen9',
+		searchShow: true,
+		ruleset: ['[Gen 9] ZU'],
 		banlist: ['ZU'],
 	},
 	{

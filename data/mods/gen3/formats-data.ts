@@ -27,19 +27,19 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "UU",
 	},
 	caterpie: {
-		tier: "LC",
+		tier: "10U",
 	},
 	metapod: {
-		tier: "NFE",
+		tier: "10U",
 	},
 	butterfree: {
 		tier: "ZU",
 	},
 	weedle: {
-		tier: "LC",
+		tier: "10U",
 	},
 	kakuna: {
-		tier: "NFE",
+		tier: "10U",
 	},
 	beedrill: {
 		tier: "PU",
@@ -432,7 +432,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "UUBL",
 	},
 	magikarp: {
-		tier: "LC",
+		tier: "10U",
 	},
 	gyarados: {
 		tier: "OU",
@@ -441,7 +441,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "UUBL",
 	},
 	ditto: {
-		tier: "8U",
+		tier: "10U",
 	},
 	eevee: {
 		tier: "7U",
@@ -798,16 +798,16 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "UUBL",
 	},
 	wurmple: {
-		tier: "LC",
+		tier: "10U",
 	},
 	silcoon: {
-		tier: "NFE",
+		tier: "10U",
 	},
 	beautifly: {
 		tier: "6U",
 	},
 	cascoon: {
-		tier: "NFE",
+		tier: "10U",
 	},
 	dustox: {
 		tier: "ZU",
