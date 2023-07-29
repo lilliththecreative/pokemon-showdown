@@ -44,14 +44,14 @@ export const Formats: FormatList = [
 	},
 	{
 		name: "[Gen 9] VGC Plat Tera Stabmons",
-		searchShow: true,
+		searchShow: false,
 		mod: 'gen4vgcplat',
 		gameType: 'doubles',
 		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Draft Timer', 'VGC Plat Pokedex', 'STABmons Move Legality'],
 	},
 	{
 		name: "[Gen 9] VGC Plat Tera AAA",
-		searchShow: true,
+		searchShow: false,
 		mod: 'gen4vgcplat',
 		gameType: 'doubles',
 		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Draft Timer', 'VGC Plat Pokedex', '!Obtainable Abilities', 'Ability Clause = 1'],
@@ -59,7 +59,7 @@ export const Formats: FormatList = [
 	},
 	{
 		name: "[Gen 9] VGC Plat Tera Staaabmons",
-		searchShow: true,
+		searchShow: false,
 		mod: 'gen4vgcplat',
 		gameType: 'doubles',
 		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Draft Timer', 'VGC Plat Pokedex', '!Obtainable Abilities', 'Ability Clause = 1', 'STABmons Move Legality'],
@@ -280,7 +280,7 @@ export const Formats: FormatList = [
 		mod: 'gen3',
 		searchShow: true,
 		ruleset: ['[Gen 3] 7U'],
-		banlist: ['7U', '8U', 'NFE', 'LC', 'Leftovers'],
+		banlist: ['7U', '8U', '9U', 'NFE', 'LC', 'Leftovers'],
 	},
 	{
 		section: "Gen 5 Lower Tiers",

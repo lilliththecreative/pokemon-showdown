@@ -2292,4 +2292,9 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "All Stat changes this pokemon recieves are reversed and doubled.",
 		shortDesc: "All Stat changes this pokemon recieves are reversed and doubled.",
 	},
+	sinnohiangrit: {
+		name: "Sinnohian Grit",
+		desc: "This pokemon does not take recoil or stat drops from its own moves",
+		shortDesc: "This pokemon does not take recoil or stat drops from its own moves",
+	},
 };

@@ -126,7 +126,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	rockhead: {
 		inherit: true,
 		onDamage(damage, target, source, effect) {
-			if (effect.id === 'recoil' || effect.id === 'mindblown' || effect.id === 'selfdestruct') {
+			if (effect.id === 'recoil' || effect.id === 'mindblown' || effect.id === 'steelbeam') {
 				if (!this.activeMove) throw new Error("Battle.activeMove is null");
 				if (this.activeMove.id !== 'struggle') return null;
 			}
@@ -742,7 +742,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		onModifyMove(move) {
 			if (!move.ignoreImmunity) move.ignoreImmunity = {};
 			if (move.ignoreImmunity !== true) {
-				move.ignoreImmunity['Steel'] = true;
+				move.ignoreImmunity['Poison'] = true;
 			}
 		},
 	},
@@ -792,6 +792,15 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 				this.effectState.guardDog = true;
 				return this.effectState.target;
 			}
+		},
+	},
+	perishbody: {
+		inherit: true,
+		shortDesc: "Attacking this Pokemon starts the Perish Song effect for the attacker.",
+		onDamagingHit(damage, target, source, move) {
+			if (source.volatiles['perishsong']) return;
+			this.add('-ability', target, 'Perish Body');
+			source.addVolatile('perishsong');
 		},
 	},
 	// Ruin Nerf
@@ -1305,6 +1314,30 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 		},
 		isBreakable: true,
+	},
+	sinnohiangrit: {
+		inherit: true,
+		isNonstandard: null,
+		onDamage(damage, target, source, effect) {
+			if (effect.id === 'recoil' || effect.id === 'mindblown' || effect.id === 'steelbeam') {
+				if (!this.activeMove) throw new Error("Battle.activeMove is null");
+				if (this.activeMove.id !== 'struggle') return null;
+			}
+		},
+		onTryBoost(boost, target, source, effect) {
+			if (source && target === source) {
+				let showMsg = false;
+				let i: BoostID;
+				for (i in boost) {
+					if (boost[i]! < 0) {
+						delete boost[i];
+						showMsg = true;
+					}
+				}
+				if (showMsg) {
+					this.add("-fail", target, "unboost", "[from] ability: Sinnohian Grit");
+				}
+			}
+		},
 	}
-
 };

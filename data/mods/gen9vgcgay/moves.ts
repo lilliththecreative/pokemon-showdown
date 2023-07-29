@@ -262,7 +262,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	spark: {
 		inherit: true,
-		basePower: 80,
+		basePower: 75,
 	},
 	poisontail: {
 		inherit: true,
@@ -347,27 +347,32 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	shadowpunch: {
 		inherit: true,
-		basePower: 80
+		basePower: 75,
 	},
 	volttackle: {
 		inherit: true,
-		basePower: 130
+		basePower: 130,
 	},
 	belch: {
 		inherit: true,
 		basePower: 130,
-		accuracy: 100
+		accuracy: 100,
 	},
 	chatter: {
 		inherit: true,
 		isNonstandard: null,
-		basePower: 80
+		basePower: 80,
 	},
 	snaptrap: {
 		inherit: true,
 		isNonstandard: null,
 		basePower: 90,
 		type: "Steel",
+	},
+	anchorshot: {
+		inherit: true,
+		isNonstandard: null,
+		basePower: 85,
 	},
 	shelltrap: {
 		inherit: true,
@@ -550,19 +555,14 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			}
 		},
 	},
-	dragonclaw: {
+	dragonrush: {
 		inherit: true,
-		shortDesc: "10% chance to reduce opponents defense by 1",
-		secondary: {
-			chance: 10,
-			boosts: {
-				def: -1,
-			},
-		},
+		accuracy: 80,
 	},
 	smellingsalts: {
 		inherit: true,
 		isNonstandard: null,
+		shortDesc: "Power doubles if target is paralyzed, Does not Cure.",
 		onHit(target) {
 		},
 	},
@@ -883,6 +883,14 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		basePower: 90,
 		shortDesc: "Sets up Gravity after succesful use.",
 	},
+	gmaxfinale: {
+		inherit: true,
+		isNonstandard: null,
+		isMax: false,
+		category: "Special",
+		basePower: 90,
+		shortDesc: "Heals self and allies by 1/6th",
+	},
 	// Pledges
 	firepledge: {
 		inherit: true,
@@ -1079,10 +1087,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 	},
 	aeroblast: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	anchorshot: {
 		inherit: true,
 		isNonstandard: null,
 	},
