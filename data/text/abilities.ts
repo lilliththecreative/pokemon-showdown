@@ -2224,38 +2224,38 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	heatsink: {
 		name: "Heat Sink",
-		shortDesc: "This Pokemon draws Fire moves to itself to raise SpA by 1; Fire Immunity",
-		desc: "This Pokemon draws Fire moves to itself to raise SpA by 1; Fire Immunity",
+		shortDesc: "This Pokemon draws Fire moves to itself to raise SpA by 1; Fire Immunity.",
+		desc: "This Pokemon draws Fire moves to itself to raise SpA by 1; Fire Immunity.",
 	},
 	captivatingsong: {
 		name: "Captivating Song",
-		shortDesc: "All sound moves used by this Pokemon trap enemies",
-		desc: "All sound moves used by this Pokemon trap enemies",
+		shortDesc: "All sound moves used by this Pokemon trap enemies.",
+		desc: "All sound moves used by this Pokemon trap enemies.",
 	},
 	transphobia: {
 		name: "Transphobia",
-		shortDesc: "Does 1.3x damage to gender neutral enemies",
-		desc: "Does 1.3x damage to gender neutral enemies",
+		shortDesc: "Does 1.3x damage to gender unknown Pokemon.",
+		desc: "Does 1.3x damage to gender unknown Pokemon.",
 	},
 	homophobia: {
 		name: "Homophobia",
-		shortDesc: "Does 1.3x damage if both enemy pokemon are the same gender",
-		desc: "Does 1.3x damage if both enemy pokemon are the same gender",
+		shortDesc: "Does 1.3x damage if both enemy pokemon are the same gender.",
+		desc: "Does 1.3x damage if both enemy pokemon are the same gender.",
 	},
 	ilvaticano: {
 		name: "Il Vaticano",
-		shortDesc: "Does 1.4x damage when attacking diagonally across the field",
-		desc: "Does 1.4x damage when attacking diagonally across the field",
+		shortDesc: "Does 1.4x damage when attacking diagonally across the field.",
+		desc: "Does 1.4x damage when attacking diagonally across the field.",
 	},
 	lawnsurfer: {
 		name: "Lawn Surfer",
-		desc: "Doubles speed in Grassy Terrain",
-		shortDesc: "Doubles speed in Grassy Terrain",
+		desc: "Doubles speed in Grassy Terrain.",
+		shortDesc: "Doubles speed in Grassy Terrain.",
 	},
 	trueaurora: {
 		name: "True Aurora",
-		desc: "Can set up Aurora Veil outside of snow and it lasts 3 extra turns",
-		shortDesc: "Can set up Aurora Veil outside of snow and it lasts 3 extra turns",
+		desc: "Can set up Aurora Veil outside of snow and it lasts 3 extra turns.",
+		shortDesc: "Can set up Aurora Veil outside of snow and it lasts 3 extra turns.",
 	},
 	singularity: {
 		name: "Singularity",
@@ -2264,8 +2264,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	catscradle: {
 		name: "Cat's Cradle",
-		desc: "If Opponent Tries to switch out, this pokemon attacks immediately at 2x power",
-		shortDesc: "If Opponent Tries to switch out, this pokemon attacks immediately at 2x power",
+		desc: "If the opponent tries to switch out, this pokemon attacks immediately at 2x power",
+		shortDesc: "If the opponent tries to switch out, this pokemon attacks immediately at 2x power",
 	},
 	superduperluck: {
 		name: "Super Duper Luck",
@@ -2279,13 +2279,13 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	theflock: {
 		name: "The Flock",
-		desc: "Intimidate, Guts, Hustle, and Sheer Force",
-		shortDesc: "Intimidate, Guts, Hustle, and Sheer Force",
+		desc: "Intimidate, Guts, Hustle, and Sheer Force simultaneously/",
+		shortDesc: "Intimidate, Guts, Hustle, and Sheer Force simultaneously.",
 	},
 	growingpumpkin: {
 		name: "Growing Pumpkin",
-		desc: "Gets Larger and increases form each turn",
-		shortDesc: "Gets Larger and increases form each turn",
+		desc: "Gets Larger and increases form each turn.",
+		shortDesc: "Gets Larger and increases form each turn.",
 	},
 	doubledown: {
 		name: "Double Down",
@@ -2294,7 +2294,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	sinnohiangrit: {
 		name: "Sinnohian Grit",
-		desc: "This pokemon does not take recoil or stat drops from its own moves",
-		shortDesc: "This pokemon does not take recoil or stat drops from its own moves",
+		desc: "This pokemon does not take recoil or stat drops from its own moves.",
+		shortDesc: "This pokemon does not take recoil or stat drops from its own moves.",
 	},
 };

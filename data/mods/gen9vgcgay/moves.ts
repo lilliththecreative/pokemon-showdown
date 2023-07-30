@@ -986,33 +986,85 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	frenzyplant: {
 		inherit: true,
 		self: null,
-		shortDesc: "User cannot move next turn if it fails to KO.",
+		shortDesc: "User cannot move next turn if it fails to KO. Physical if it would be stronger.",
 		basePower: 140,
-		onHit(target, source) {
+		onHit(target, source, move) {
 			if (target.hp) {
 				source.addVolatile('mustrecharge');
 			}
+			if (!source.isAlly(target)) this.hint(move.category + " Frenzy Plant");
 		},
+		onAfterSubDamage(damage, target, source, move) {
+			if (!source.isAlly(target)) this.hint(move.category + " Frenzy Plant");
+		},
+		onModifyMove(move, pokemon, target) {
+			if (!target) return;
+			const atk = pokemon.getStat('atk', false, true);
+			const spa = pokemon.getStat('spa', false, true);
+			const def = target.getStat('def', false, true);
+			const spd = target.getStat('spd', false, true);
+			const physical = Math.floor(Math.floor(Math.floor(Math.floor(2 * pokemon.level / 5 + 2) * 90 * atk) / def) / 50);
+			const special = Math.floor(Math.floor(Math.floor(Math.floor(2 * pokemon.level / 5 + 2) * 90 * spa) / spd) / 50);
+			if (physical > special || (physical === special && this.random(2) === 0)) {
+				move.category = 'Physical';
+				move.flags.contact = 1;
+			}
+		},
+		
 	},
 	hydrocannon: {
 		inherit: true,
 		self: null,
-		shortDesc: "User cannot move next turn if it fails to KO.",
+		shortDesc: "User cannot move next turn if it fails to KO. Physical if it would be stronger.",
 		basePower: 140,
-		onHit(target, source) {
+		onHit(target, source, move) {
 			if (target.hp) {
 				source.addVolatile('mustrecharge');
+			}
+			if (!source.isAlly(target)) this.hint(move.category + " Hydro Cannon");
+		},
+		onAfterSubDamage(damage, target, source, move) {
+			if (!source.isAlly(target)) this.hint(move.category + " Hydro Cannon");
+		},
+		onModifyMove(move, pokemon, target) {
+			if (!target) return;
+			const atk = pokemon.getStat('atk', false, true);
+			const spa = pokemon.getStat('spa', false, true);
+			const def = target.getStat('def', false, true);
+			const spd = target.getStat('spd', false, true);
+			const physical = Math.floor(Math.floor(Math.floor(Math.floor(2 * pokemon.level / 5 + 2) * 90 * atk) / def) / 50);
+			const special = Math.floor(Math.floor(Math.floor(Math.floor(2 * pokemon.level / 5 + 2) * 90 * spa) / spd) / 50);
+			if (physical > special || (physical === special && this.random(2) === 0)) {
+				move.category = 'Physical';
+				move.flags.contact = 1;
 			}
 		},
 	},
 	blastburn: {
 		inherit: true,
 		self: null,
-		shortDesc: "User cannot move next turn if it fails to KO.",
+		shortDesc: "User cannot move next turn if it fails to KO. Physical if it would be stronger.",
 		basePower: 140,
-		onHit(target, source) {
+		onHit(target, source, move) {
 			if (target.hp) {
 				source.addVolatile('mustrecharge');
+			}
+			if (!source.isAlly(target)) this.hint(move.category + " Blast Burn");
+		},
+		onAfterSubDamage(damage, target, source, move) {
+			if (!source.isAlly(target)) this.hint(move.category + " Blast Burn");
+		},
+		onModifyMove(move, pokemon, target) {
+			if (!target) return;
+			const atk = pokemon.getStat('atk', false, true);
+			const spa = pokemon.getStat('spa', false, true);
+			const def = target.getStat('def', false, true);
+			const spd = target.getStat('spd', false, true);
+			const physical = Math.floor(Math.floor(Math.floor(Math.floor(2 * pokemon.level / 5 + 2) * 90 * atk) / def) / 50);
+			const special = Math.floor(Math.floor(Math.floor(Math.floor(2 * pokemon.level / 5 + 2) * 90 * spa) / spd) / 50);
+			if (physical > special || (physical === special && this.random(2) === 0)) {
+				move.category = 'Physical';
+				move.flags.contact = 1;
 			}
 		},
 	},
