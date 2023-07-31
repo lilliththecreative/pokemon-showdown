@@ -3,6 +3,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		basePower: 80,
 	},
+	// Omniboost moves
 	ominouswind: {
 		inherit: true,
 		"isNonstandard": null,
@@ -36,13 +37,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		},
 		"isNonstandard": null,
 	},
-	ragefist: {
-		inherit: true,
-		shortDesc: "+50 power for each time user was hit. Max: 1000bp",
-		basePowerCallback(pokemon) {
-			return Math.min(1000, 50 + 50 * pokemon.timesAttacked);
-		},
-	},
+	// Multi Hits
 	"barrage": {
 		"inherit": true,
 		"accuracy": 100,
@@ -120,11 +115,24 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		"basePower": 140,
 		isNonstandard: null
 	},
+	// Multi Turn
 	"razorwind": {
 		inherit: true,
 		"basePower": 150,
 		isNonstandard: null
 	},
+	"fly": {
+		inherit: true,
+		isNonstandard: null,
+		basePower: 100,
+		accuracy: 100,
+	},
+	"dig": {
+		inherit: true,
+		isNonstandard: null,
+		basePower: 100,
+	},
+	// Explosions
 	"mistyexplosion": {
 		inherit: true,
 		"basePower": 150,
@@ -222,6 +230,43 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		type: "Fire",
 		isNonstandard: null
 	},
+	// Some signature Moves
+	chatter: {
+		inherit: true,
+		isNonstandard: null,
+		basePower: 80,
+	},
+	snaptrap: {
+		inherit: true,
+		isNonstandard: null,
+		basePower: 90,
+		type: "Steel",
+	},
+	anchorshot: {
+		inherit: true,
+		isNonstandard: null,
+		basePower: 85,
+	},
+	shelltrap: {
+		inherit: true,
+		isNonstandard: null,
+		basePower: 160,
+	},
+	beakblast: {
+		inherit: true,
+		isNonstandard: null,
+		basePower: 120,
+	},
+	zingzap: {
+		inherit: true,
+		isNonstandard: null,
+		basePower: 90,
+	},
+	stormthrow: {
+		inherit: true,
+		isNonstandard: null,
+		basePower: 75,
+	},
 	healorder: {
 		inherit: true,
 		shortDesc:"Heals the user by 100% of its max HP.",
@@ -242,6 +287,23 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		shortDesc:"Hits Twice, 20% to drop defense",
 		basePower: 50,
 		multihit: 2,
+	},
+	ragefist: {
+		inherit: true,
+		shortDesc: "+50 power for each time user was hit. Max: 1000bp",
+		basePowerCallback(pokemon) {
+			return Math.min(1000, 50 + 50 * pokemon.timesAttacked);
+		},
+	},
+	dragondarts: {
+		inherit: true,
+		basePower: 55
+	},
+	twinbeam: {
+		inherit: true,
+		shortDesc: "Hits twice. Doubles: Tries to hit each foe once.",
+		basePower: 55,
+		smartTarget: true,
 	},
 	diamondstorm: {
 		inherit: true,
@@ -357,42 +419,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		basePower: 130,
 		accuracy: 100,
-	},
-	chatter: {
-		inherit: true,
-		isNonstandard: null,
-		basePower: 80,
-	},
-	snaptrap: {
-		inherit: true,
-		isNonstandard: null,
-		basePower: 90,
-		type: "Steel",
-	},
-	anchorshot: {
-		inherit: true,
-		isNonstandard: null,
-		basePower: 85,
-	},
-	shelltrap: {
-		inherit: true,
-		isNonstandard: null,
-		basePower: 160,
-	},
-	beakblast: {
-		inherit: true,
-		isNonstandard: null,
-		basePower: 120,
-	},
-	zingzap: {
-		inherit: true,
-		isNonstandard: null,
-		basePower: 90,
-	},
-	stormthrow: {
-		inherit: true,
-		isNonstandard: null,
-		basePower: 75,
 	},
 	moonblast: {
 		inherit: true,

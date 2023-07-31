@@ -88,25 +88,6 @@ export const Formats: FormatList = [
 		],
 	},
 	{
-		name: "[Gen 9] Metronome Free-For-All",
-		mod: 'gen9',
-		gameType: 'freeforall',
-		rated: false,
-		tournamentShow: false,
-		ruleset: ['Standard', '!Evasion Items Clause', 'Item Clause'],
-		banlist: [
-			'Arceus', 'Calyrex-Ice', 'Calyrex-Shadow', 'Chi-Yu', 'Dialga', 'Dialga-Origin', 'Flutter Mane', 'Giratina', 'Giratina-Origin', 'Groudon',
-			'Iron Bundle', 'Koraidon', 'Kyogre', 'Landorus-Base', 'Magearna', 'Mewtwo', 'Miraidon', 'Palafin', 'Palkia', 'Palkia-Origin', 'Rayquaza', 'Spectrier',
-			'Urshifu-Base', 'Zacian', 'Zacian-Crowned', 'Moody', 'Shadow Tag', 'Toxic Debris',
-			'Regenerator>1',
-		],
-		onValidateSet(set) {
-			if (set.moves.length !== 1 || this.dex.moves.get(set.moves[0]).id !== 'metronome') {
-				return [`${set.name || set.species} has illegal moves.`, `(Pok\u00e9mon can only have one Metronome in their moveset)`];
-			}
-		},
-	},
-	{
 		name: "[Gen 9] Metronome FFA OU",
 		mod: 'gen9metronome',
 		gameType: 'freeforall',
@@ -115,6 +96,38 @@ export const Formats: FormatList = [
 		ruleset: ['Standard', '!Evasion Items Clause', 'Item Clause'],
 		banlist: [
 			'Moody', 'Shadow Tag', 'Toxic Debris', 'Regenerator>1',
+		],
+		onValidateSet(set) {
+			if (set.moves.length !== 1 || this.dex.moves.get(set.moves[0]).id !== 'metronome') {
+				return [`${set.name || set.species} has illegal moves.`, `(Pok\u00e9mon can only have one Metronome in their moveset)`];
+			}
+		},
+	},
+	{
+		name: "[Gen 9] Metronome FFA UU",
+		mod: 'gen9metronome',
+		gameType: 'freeforall',
+		rated: false,
+		tournamentShow: false,
+		ruleset: ['Standard', '!Evasion Items Clause', 'Item Clause'],
+		banlist: [
+			'Moody', 'Shadow Tag', 'Toxic Debris', 'Regenerator>1', "OU"
+		],
+		onValidateSet(set) {
+			if (set.moves.length !== 1 || this.dex.moves.get(set.moves[0]).id !== 'metronome') {
+				return [`${set.name || set.species} has illegal moves.`, `(Pok\u00e9mon can only have one Metronome in their moveset)`];
+			}
+		},
+	},
+	{
+		name: "[Gen 9] Metronome FFA RU",
+		mod: 'gen9metronome',
+		gameType: 'freeforall',
+		rated: false,
+		tournamentShow: false,
+		ruleset: ['Standard', '!Evasion Items Clause', 'Item Clause'],
+		banlist: [
+			'Moody', 'Shadow Tag', 'Toxic Debris', 'Regenerator>1', "OU", "UU"
 		],
 		onValidateSet(set) {
 			if (set.moves.length !== 1 || this.dex.moves.get(set.moves[0]).id !== 'metronome') {
