@@ -1084,7 +1084,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 40,
 		priority: 0,
 		flags: {},
-		onTryHit(target) {
+		onHit(target) {
 			if (!this.canSwitch(target.side) || target.volatiles['commanded']) {
 				this.attrLastMove('[still]');
 				this.add('-fail', target);
@@ -9539,11 +9539,15 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		onHit() {
-			this.field.clearTerrain();
+		onAfterHit(target, source) {
+			if (source.hp) {
+				this.field.clearTerrain();
+			}
 		},
-		onAfterSubDamage() {
-			this.field.clearTerrain();
+		onAfterSubDamage(damage, target, source) {
+			if (source.hp) {
+				this.field.clearTerrain();
+			}
 		},
 		secondary: null,
 		target: "normal",
@@ -16476,7 +16480,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {},
 		volatileStatus: 'substitute',
 		onTryHit(source) {
-			if (!this.canSwitch(source.side)) {
+			if (!this.canSwitch(source.side) || source.volatiles['commanded']) {
 				this.add('-fail', source);
 				return this.NOT_FAIL;
 			}
