@@ -92,7 +92,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData; } = {
 		doublesTier: "DUU",
 	},
 	sandshrew: {
-		tier: "LC",
+		tier: "7U",
 	},
 	sandslash: {
 		tier: "RU",
