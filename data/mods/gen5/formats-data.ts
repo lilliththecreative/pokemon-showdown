@@ -610,7 +610,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData; } = {
 		doublesTier: "DUU",
 	},
 	munchlax: {
-		tier: "ZU",
+		tier: "7UBL",
 	},
 	snorlax: {
 		tier: "UU",
