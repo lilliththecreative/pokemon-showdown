@@ -7461,7 +7461,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	stalacbite: {
 		name: "Stalacbite",
-		shortDesc: "10% chance to lower Defence by 1. 10% chance to flinch.",
+		shortDesc: "10% to lower Defence. 10% chance to flinch.",
 		desc: "10% chance to lower Defence by 1. 10% chance to flinch.",
 	},
 };

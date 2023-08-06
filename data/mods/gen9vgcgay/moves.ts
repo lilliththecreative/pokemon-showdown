@@ -274,7 +274,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	mountaingale: {
 		inherit: true,
-		shortDesc:"Hits both opponents, 20% chance to frostbite",
+		shortDesc:"Hits both opponents. 20% chance to frostbite.",
 		isNonstandard: null,
 		basePower: 90,
 		secondary: { chance: 20, status: 'fst'},
@@ -1001,28 +1001,28 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	icebeam: {
 		inherit: true,
-		shortDesc: "10% chance to Frostbite",
+		shortDesc: "10% chance to frostbite.",
 		secondary: { chance: 10, status: 'fst'},
 	},
 	freezedry: {
 		inherit: true,
-		shortDesc: "10% chance to Frostbite",
+		shortDesc: "10% chance to frostbite.",
 		secondary: { chance: 10, status: 'fst'},
 	},
 	freezingglare: {
 		inherit: true,
-		shortDesc: "20% chance to Frostbite",
+		shortDesc: "20% chance to frostbite.",
 		secondary: { chance: 20, status: 'fst'},
 	},
 	icepunch: {
 		inherit: true,
-		shortDesc: "10% chance to Frostbite",
+		shortDesc: "10% chance to frostbite.",
 		secondary: { chance: 10, status: 'fst'},
 	},
 	icefang: {
 		inherit: true,
 		basePower: 75,
-		shortDesc: "10% chance to Frostbite, 10% to Flinch.",
+		shortDesc: "10% chance to frostbite. 10% to flinch.",
 		secondaries: [
 			{ chance: 10, status: 'fst'},
 			{ chance: 10, volatileStatus: 'flinch'},
@@ -1382,4 +1382,12 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	sparklingaria: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	stalacbite: {
+		inherit: true,
+		isNonstandard: null
+	}
 };
