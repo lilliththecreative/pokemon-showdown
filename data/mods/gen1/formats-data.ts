@@ -45,7 +45,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "7U",
 	},
 	pidgey: {
-		tier: "9U",
+		tier: "10UBL",
 	},
 	pidgeotto: {
 		tier: "8U",
