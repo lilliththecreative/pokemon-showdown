@@ -83,6 +83,10 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"isNonstandard": null,
 		"tier": "UU"
 	},
+	"marill": {
+		"isNonstandard": null,
+		"tier": "NFE"
+	},
 	"azumarill": {
 		"isNonstandard": null,
 		"tier": "UU"
@@ -1340,10 +1344,6 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"tier": "Illegal"
 	},
 	"bellossom": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
-	},
-	"marill": {
 		"isNonstandard": "Past",
 		"tier": "Illegal"
 	},

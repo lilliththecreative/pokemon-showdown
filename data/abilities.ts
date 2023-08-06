@@ -5375,4 +5375,16 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 3,
 		num: -30,
 	},
+	hammertime: {
+		isNonstandard: "CAP",
+		name: "Hammer Time",
+		rating: 3,
+		num: -31,
+	},
+	rampage: {
+		isNonstandard: "CAP",
+		name: "Rampage",
+		rating: 3,
+		num: -32,
+	},
 };

@@ -21620,6 +21620,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 			chance: 50,
 			status: 'fst',
 		},
+		onPrepareHit(target, source, move) {
+			this.attrLastMove('[still]');
+			this.add('-anim', source, "Chilling Water", target);
+		},
 		target: "normal",
 		type: "Water",
 		contestType: "Cool",
@@ -21638,6 +21642,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 			chance: 50,
 			status: 'prz',
 		},
+		onPrepareHit(target, source, move) {
+			this.attrLastMove('[still]');
+			this.add('-anim', source, "Thunder", target);
+		},
 		target: "normal",
 		type: "Electric",
 		contestType: "Cool",
@@ -21655,6 +21663,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		stallingMove: true,
 		volatileStatus: 'firewall',
 		onPrepareHit(pokemon) {
+			this.attrLastMove('[still]');
+			this.add('-anim', pokemon, "Spiky Shield", pokemon);
 			return !!this.queue.willAct() && this.runEvent('StallMove', pokemon);
 		},
 		onHit(pokemon) {
@@ -21700,5 +21710,34 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Fire",
 		zMove: {boost: {def: 1}},
 		contestType: "Tough",
+	},
+	stalacbite: {
+		num: 424,
+		accuracy: 95,
+		basePower: 75,
+		category: "Physical",
+		name: "Stalacbite",
+		isNonstandard: "CAP",
+		pp: 15,
+		priority: 0,
+		onPrepareHit(target, source, move) {
+			this.attrLastMove('[still]');
+			this.add('-anim', source, "Crunch", target);
+		},
+		flags: {bite: 1, contact: 1, protect: 1, mirror: 1},
+		secondaries: [
+			{
+				chance: 10,
+				boosts: {
+					def: -1,
+				},
+			}, {
+				chance: 10,
+				volatileStatus: 'flinch',
+			},
+		],
+		target: "normal",
+		type: "Rock",
+		contestType: "Cool",
 	},
 };

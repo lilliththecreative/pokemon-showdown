@@ -272,6 +272,38 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 		basePower: 90,
 	},
+	mountaingale: {
+		inherit: true,
+		shortDesc:"Hits both opponents, 20% chance to frostbite",
+		isNonstandard: null,
+		basePower: 90,
+		secondary: { chance: 20, status: 'fst'},
+	},
+	gravapple: {
+		inherit: true,
+		shortDesc: "Target: 100% -2 Def. During Gravity: 2x power.",
+		onBasePower(basePower) {
+			if (this.field.getPseudoWeather('gravity')) {
+				return this.chainModify(2);
+			}
+		},
+		secondary: {
+			chance: 100,
+			boosts: {
+				def: -2,
+			},
+		},
+	},
+	appleacid: {
+		inherit: true,
+		shortDesc: "100% chance to lower the target's Sp. Def by 2.",
+		secondary: {
+			chance: 100,
+			boosts: {
+				spd: -2,
+			},
+		},
+	},
 	stormthrow: {
 		inherit: true,
 		isNonstandard: null,
@@ -512,7 +544,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 		target: "allAdjacentFoes",
-		shortDesc: "Lowers the both enemies' Speed by 1 and poisons them."
+		shortDesc: "Lowers the both enemies' Spd by 1 and poisons."
 	},
 	snatch: {
 		inherit: true,
@@ -543,11 +575,11 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	octolock: {
 		inherit: true,
 		isNonstandard: null,
-		shortDesc: "Traps target, lowers Def and SpD by 1  and does 1/8 dmg each turn.",
+		shortDesc: "Traps target, lowers Def and SpD by 1, 1/6 dmg each turn.",
 		condition: {
 			onStart(pokemon, source) {
 				this.add('-start', pokemon, 'move: Octolock', '[of] ' + source);
-				this.effectState.boundDivisor = source.hasItem('bindingband') ? 6 : 8;
+				this.effectState.boundDivisor = source.hasItem('bindingband') ? 4 : 6;
 			},
 			onResidualOrder: 14,
 			onResidual(pokemon) {
@@ -1022,7 +1054,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	frenzyplant: {
 		inherit: true,
 		self: null,
-		shortDesc: "User cannot move next turn if it fails to KO. Physical if it would be stronger.",
+		shortDesc: "User recharges doesn't KO. Physical if user's Atk > SpA.",
 		basePower: 140,
 		onHit(target, source, move) {
 			if (target.hp) {
@@ -1033,25 +1065,14 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		onAfterSubDamage(damage, target, source, move) {
 			if (!source.isAlly(target)) this.hint(move.category + " Frenzy Plant");
 		},
-		onModifyMove(move, pokemon, target) {
-			if (!target) return;
-			const atk = pokemon.getStat('atk', false, true);
-			const spa = pokemon.getStat('spa', false, true);
-			const def = target.getStat('def', false, true);
-			const spd = target.getStat('spd', false, true);
-			const physical = Math.floor(Math.floor(Math.floor(Math.floor(2 * pokemon.level / 5 + 2) * 90 * atk) / def) / 50);
-			const special = Math.floor(Math.floor(Math.floor(Math.floor(2 * pokemon.level / 5 + 2) * 90 * spa) / spd) / 50);
-			if (physical > special || (physical === special && this.random(2) === 0)) {
-				move.category = 'Physical';
-				move.flags.contact = 1;
-			}
+		onModifyMove(move, pokemon) {
+			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
 		},
-		
 	},
 	hydrocannon: {
 		inherit: true,
 		self: null,
-		shortDesc: "User cannot move next turn if it fails to KO. Physical if it would be stronger.",
+		shortDesc: "User recharges doesn't KO. Physical if user's Atk > SpA.",
 		basePower: 140,
 		onHit(target, source, move) {
 			if (target.hp) {
@@ -1062,24 +1083,14 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		onAfterSubDamage(damage, target, source, move) {
 			if (!source.isAlly(target)) this.hint(move.category + " Hydro Cannon");
 		},
-		onModifyMove(move, pokemon, target) {
-			if (!target) return;
-			const atk = pokemon.getStat('atk', false, true);
-			const spa = pokemon.getStat('spa', false, true);
-			const def = target.getStat('def', false, true);
-			const spd = target.getStat('spd', false, true);
-			const physical = Math.floor(Math.floor(Math.floor(Math.floor(2 * pokemon.level / 5 + 2) * 90 * atk) / def) / 50);
-			const special = Math.floor(Math.floor(Math.floor(Math.floor(2 * pokemon.level / 5 + 2) * 90 * spa) / spd) / 50);
-			if (physical > special || (physical === special && this.random(2) === 0)) {
-				move.category = 'Physical';
-				move.flags.contact = 1;
-			}
+		onModifyMove(move, pokemon) {
+			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
 		},
 	},
 	blastburn: {
 		inherit: true,
 		self: null,
-		shortDesc: "User cannot move next turn if it fails to KO. Physical if it would be stronger.",
+		shortDesc: "User recharges doesn't KO. Physical if user's Atk > SpA.",
 		basePower: 140,
 		onHit(target, source, move) {
 			if (target.hp) {
@@ -1090,18 +1101,8 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		onAfterSubDamage(damage, target, source, move) {
 			if (!source.isAlly(target)) this.hint(move.category + " Blast Burn");
 		},
-		onModifyMove(move, pokemon, target) {
-			if (!target) return;
-			const atk = pokemon.getStat('atk', false, true);
-			const spa = pokemon.getStat('spa', false, true);
-			const def = target.getStat('def', false, true);
-			const spd = target.getStat('spd', false, true);
-			const physical = Math.floor(Math.floor(Math.floor(Math.floor(2 * pokemon.level / 5 + 2) * 90 * atk) / def) / 50);
-			const special = Math.floor(Math.floor(Math.floor(Math.floor(2 * pokemon.level / 5 + 2) * 90 * spa) / spd) / 50);
-			if (physical > special || (physical === special && this.random(2) === 0)) {
-				move.category = 'Physical';
-				move.flags.contact = 1;
-			}
+		onModifyMove(move, pokemon) {
+			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
 		},
 	},
 	rockwrecker: {
@@ -1374,6 +1375,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 	},
 	nightmare: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	dragonhammer: {
 		inherit: true,
 		isNonstandard: null,
 	},

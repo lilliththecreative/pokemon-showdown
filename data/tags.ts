@@ -172,25 +172,49 @@ export const Tags: {[id: string]: TagData} = {
 		name: "ZU",
 		speciesFilter: species => species.tier === '(PU)' || species.tier === 'ZU',
 	},
+	"6ubl": {
+		name: "6UBL",
+		speciesFilter: species => species.tier === '6UBL',
+	},
 	"6u": {
 		name: "6U",
 		speciesFilter: species => species.tier === '6U',
+	},
+	"7ubl": {
+		name: "7UBL",
+		speciesFilter: species => species.tier === '7UBL',
 	},
 	"7u": {
 		name: "7U",
 		speciesFilter: species => species.tier === '7U',
 	},
+	"8ubl": {
+		name: "8UBL",
+		speciesFilter: species => species.tier === '8UBL',
+	},
 	"8u": {
 		name: "8U",
 		speciesFilter: species => species.tier === '8U',
+	},
+	"9ubl": {
+		name: "9UBL",
+		speciesFilter: species => species.tier === '9UBL',
 	},
 	"9u": {
 		name: "9U",
 		speciesFilter: species => species.tier === '9U',
 	},
+	"10ubl": {
+		name: "10UBL",
+		speciesFilter: species => species.tier === '10UBL',
+	},
 	"10u": {
 		name: "10U",
 		speciesFilter: species => species.tier === '10U',
+	},
+	"11ubl": {
+		name: "11UBL",
+		speciesFilter: species => species.tier === '11UBL',
 	},
 	"11u": {
 		name: "11U",

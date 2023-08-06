@@ -111,7 +111,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "LC",
 	},
 	clefairy: {
-		tier: "7U",
+		tier: "6U",
 	},
 	clefable: {
 		tier: "UU",
@@ -519,7 +519,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "OU",
 	},
 	munchlax: {
-		tier: "7UBL",
+		tier: "6U",
 	},
 	snorlax: {
 		tier: "(OU)",
@@ -585,7 +585,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "LC",
 	},
 	noctowl: {
-		tier: "7UBL",
+		tier: "6U",
 	},
 	ledyba: {
 		tier: "LC",
@@ -841,7 +841,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "LC",
 	},
 	combusken: {
-		tier: "7UBL",
+		tier: "6U",
 	},
 	blaziken: {
 		tier: "UU",

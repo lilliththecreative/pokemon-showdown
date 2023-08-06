@@ -3,6 +3,10 @@ export const Items: {[k: string]: ModdedItemData} = {
 		"inherit": true,
 		isNonstandard: null,
 	},
+	leek: {
+		"inherit": true,
+		isNonstandard: null,
+	},
 	custapberry: {
 		"inherit": true,
 		isNonstandard: null,

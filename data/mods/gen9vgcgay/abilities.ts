@@ -803,6 +803,34 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			source.addVolatile('perishsong');
 		},
 	},
+	mummy: {
+		inherit: true,
+		shortDesc: "On contact: Ability changed to Mummy; 0.8x Atk, SpAtk to non-Cofagrigus.",
+		onModifyAtkPriority: 6,
+		onModifyAtk(atk,pokemon){
+			if (pokemon.species.baseSpecies == "Cofagrigus") return this.modify(atk, 1);
+			return this.modify(atk, 0.8);
+		},
+		onModifySpAPriority: 6,
+		onModifySpA(spa,pokemon){
+			if (pokemon.species.baseSpecies == "Cofagrigus") return this.modify(spa, 1);
+			return this.modify(spa, 0.8);
+		}
+	},
+	wanderingspirit: {
+		inherit: true,
+		shortDesc: "On contact: Abilities swapped; 0.8x Def, SpDef to non-Runerigus.",
+		onModifyDefPriority: 6,
+		onModifyDef(def,pokemon){
+			if (pokemon.species.baseSpecies == "Runerigus") return this.modify(def, 1);
+			return this.modify(def, 0.8);
+		},
+		onModifySpDPriority: 6,
+		onModifySpD(spd,pokemon){
+			if (pokemon.species.baseSpecies == "Runerigus") return this.modify(spd, 1);
+			return this.modify(spd, 0.8);
+		}
+	},
 	// Ruin Nerf
 	swordofruin: {
 		inherit: true,
@@ -851,34 +879,6 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			this.debug('Beads of Ruin SpD drop');
 			return this.chainModify(0.8);
 		},
-	},
-	mummy: {
-		inherit: true,
-		shortDesc: "On contact: Ability changed to Mummy; 0.8x Atk, SpAtk to non-Cofagrigus.",
-		onModifyAtkPriority: 6,
-		onModifyAtk(atk,pokemon){
-			if (pokemon.species.baseSpecies == "Cofagrigus") return this.modify(atk, 1);
-			return this.modify(atk, 0.8);
-		},
-		onModifySpAPriority: 6,
-		onModifySpA(spa,pokemon){
-			if (pokemon.species.baseSpecies == "Cofagrigus") return this.modify(spa, 1);
-			return this.modify(spa, 0.8);
-		}
-	},
-	wanderingspirit: {
-		inherit: true,
-		shortDesc: "On contact: Abilities swapped; 0.8x Def, SpDef to non-Runerigus.",
-		onModifyDefPriority: 6,
-		onModifyDef(def,pokemon){
-			if (pokemon.species.baseSpecies == "Runerigus") return this.modify(def, 1);
-			return this.modify(def, 0.8);
-		},
-		onModifySpDPriority: 6,
-		onModifySpD(spd,pokemon){
-			if (pokemon.species.baseSpecies == "Runerigus") return this.modify(spd, 1);
-			return this.modify(spd, 0.8);
-		}
 	},
 	// Weather Nerf
 	// swiftswim: {
@@ -1370,10 +1370,24 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	hammertime: {
 		inherit: true,
+		isNonstandard: null,
 		onBasePower(basePower, attacker, defender, move) {
 			if (move.name.toLowerCase().includes("hammer")) {
 				return this.chainModify(1.5);
 			}
 		},
-	}
+	},
+	rampage: {
+		inherit: true,
+		isNonstandard: null,
+		onDamage(damage, target, source, effect) {
+			if (!target.hp) {
+				this.add('-activate', source, 'ability: Rampage');
+				if (effect.id === 'recoil') {
+					if (!this.activeMove) throw new Error("Battle.activeMove is null");
+					if (this.activeMove.id !== 'struggle') return null;
+				}
+			}
+		},
+	},
 };

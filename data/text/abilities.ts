@@ -2302,4 +2302,9 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "Hammer-based moves deal 1.5x damage.",
 		shortDesc: "Hammer-based moves deal 1.5x damage.",
 	},
+	rampage: {
+		name: "Rampage",
+		desc: "If user KOs with move, negative effects from that move are negated.",
+		shortDesc: "If user KOs with move, negative effects from that move are negated.",
+	},
 };

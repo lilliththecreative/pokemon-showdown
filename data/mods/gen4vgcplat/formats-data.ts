@@ -169,27 +169,27 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	},
 	"igglybuff": {
 		"isNonstandard": "Unobtainable",
-		"tier": "Unreleased"
+		"tier": "Unreleased",
 	},
 	"jigglypuff": {
 		"isNonstandard": "Unobtainable",
-		"tier": "Unreleased"
+		"tier": "Unreleased",
 	},
 	"wigglytuff": {
 		"isNonstandard": "Unobtainable",
-		"tier": "Unreleased"
+		"tier": "Unreleased",
 	},
 	"zubat": {
 		"tier": "2",
-		"doublesTier": "2"
+		"doublesTier": "2",
 	},
 	"golbat": {
 		"tier": "7",
-		"doublesTier": "7"
+		"doublesTier": "7",
 	},
 	"crobat": {
 		"doublesTier": "14",
-		"tier": "14"
+		"tier": "14",
 	},
 	"oddish": {
 		"isNonstandard": "Unobtainable",
@@ -197,83 +197,83 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	},
 	"gloom": {
 		"isNonstandard": "Unobtainable",
-		"tier": "Unreleased"
+		"tier": "Unreleased",
 	},
 	"vileplume": {
 		"isNonstandard": "Unobtainable",
-		"tier": "Unreleased"
+		"tier": "Unreleased",
 	},
 	"bellossom": {
 		"isNonstandard": "Unobtainable",
-		"tier": "Unreleased"
+		"tier": "Unreleased",
 	},
 	"paras": {
 		"tier": "1",
-		"doublesTier": "1"
+		"doublesTier": "1",
 	},
 	"parasect": {
 		"doublesTier": "9",
-		"tier": "9"
+		"tier": "9",
 	},
 	"venonat": {
 		"isNonstandard": "Unobtainable",
-		"tier": "Unreleased"
+		"tier": "Unreleased",
 	},
 	"venomoth": {
 		"isNonstandard": "Unobtainable",
-		"tier": "Unreleased"
+		"tier": "Unreleased",
 	},
 	"diglett": {
 		"isNonstandard": "Unobtainable",
-		"tier": "Unreleased"
+		"tier": "Unreleased",
 	},
 	"dugtrio": {
 		"isNonstandard": "Unobtainable",
-		"tier": "Unreleased"
+		"tier": "Unreleased",
 	},
 	"meowth": {
 		"isNonstandard": "Unobtainable",
-		"tier": "Unreleased"
+		"tier": "Unreleased",
 	},
 	"persian": {
 		"isNonstandard": "Unobtainable",
-		"tier": "Unreleased"
+		"tier": "Unreleased",
 	},
 	"psyduck": {
 		"isNonstandard": "Unobtainable",
-		"tier": "Unreleased"
+		"tier": "Unreleased",
 	},
 	"golduck": {
 		"isNonstandard": "Unobtainable",
-		"tier": "Unreleased"
+		"tier": "Unreleased",
 	},
 	"mankey": {
 		"tier": "1",
-		"doublesTier": "1"
+		"doublesTier": "1",
 	},
 	"primeape": {
 		"doublesTier": "7",
-		"tier": "7"
+		"tier": "7",
 	},
 	"growlithe": {
 		"tier": "2",
-		"doublesTier": "2"
+		"doublesTier": "2",
 	},
 	"arcanine": {
 		"doublesTier": "18",
-		"tier": "18"
+		"tier": "18",
 	},
 	"poliwag": {
 		"tier": "4",
-		"doublesTier": "4"
+		"doublesTier": "4",
 	},
 	"poliwhirl": {
 		"tier": "5",
-		"doublesTier": "5"
+		"doublesTier": "5",
 	},
 	"poliwrath": {
 		"doublesTier": "6",
-		"tier": "6"
+		"tier": "6",
 	},
 	"politoed": {
 		"doublesTier": "14",
