@@ -609,7 +609,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "PU",
 	},
 	sunkern: {
-		tier: "9U",
+		tier: "10UBL",
 	},
 	sunflora: {
 		tier: "PU",
