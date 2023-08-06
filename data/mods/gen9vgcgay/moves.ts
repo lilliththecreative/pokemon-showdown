@@ -231,6 +231,16 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null
 	},
 	// Some signature Moves
+	technoblast: {
+		inherit: true,
+		isNonstandard: null,
+		onModifyType(move, pokemon) {
+			if (pokemon.ignoringItem()) return;
+			const item = pokemon.getItem();
+			if (!item.onDrive) return;
+			move.type = item.onDrive;
+		}
+	},
 	chatter: {
 		inherit: true,
 		isNonstandard: null,
@@ -1143,10 +1153,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	sacredfire: {
 		inherit: true,
 		isNonstandard: null,
-	},
-	technoblast: {
-		inherit: true,
-		isNonstandard: null
 	},
 	sketch: {
 		inherit: true,

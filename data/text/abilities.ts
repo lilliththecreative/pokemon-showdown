@@ -2279,7 +2279,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	theflock: {
 		name: "The Flock",
-		desc: "Intimidate, Guts, Hustle, and Sheer Force simultaneously/",
+		desc: "Intimidate, Guts, Hustle, and Sheer Force simultaneously.",
 		shortDesc: "Intimidate, Guts, Hustle, and Sheer Force simultaneously.",
 	},
 	growingpumpkin: {
@@ -2296,5 +2296,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Sinnohian Grit",
 		desc: "This pokemon does not take recoil or stat drops from its own moves.",
 		shortDesc: "This pokemon does not take recoil or stat drops from its own moves.",
+	},
+	hammertime: {
+		name: "Hammer Time",
+		desc: "Hammer-based moves deal 1.5x damage.",
+		shortDesc: "Hammer-based moves deal 1.5x damage.",
 	},
 };

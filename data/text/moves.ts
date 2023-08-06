@@ -7446,17 +7446,22 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	purifyingwater: {
 		name: "Purifying Water",
-		shortDesc: "50% chance to Frostbite",
-		desc: "50% chance to Frostbite",
+		shortDesc: "50% chance to Frostbite.",
+		desc: "50% chance to Frostbite.",
 	},
 	divinesmite: {
 		name: "Divine Smite",
-		shortDesc: "50% chance to Paralyze",
-		desc: "50% chance to Paralyze",
+		shortDesc: "50% chance to Paralyze.",
+		desc: "50% chance to Paralyze.",
 	},
 	firewall: {
 		name: "Firewall",
 		shortDesc: "Protects from damaging attacks. Contact: Burn",
 		desc: "Protects from damaging attacks. Contact: Burn",
+	},
+	stalacbite: {
+		name: "Stalacbite",
+		shortDesc: "10% chance to lower Defence by 1. 10% chance to flinch.",
+		desc: "10% chance to lower Defence by 1. 10% chance to flinch.",
 	},
 };
