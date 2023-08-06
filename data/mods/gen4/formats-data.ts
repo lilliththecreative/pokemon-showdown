@@ -519,7 +519,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "OU",
 	},
 	munchlax: {
-		tier: "6U",
+		tier: "7UBL",
 	},
 	snorlax: {
 		tier: "(OU)",
@@ -579,13 +579,13 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "LC",
 	},
 	furret: {
-		tier: "6U",
+		tier: "7UBL",
 	},
 	hoothoot: {
 		tier: "LC",
 	},
 	noctowl: {
-		tier: "6U",
+		tier: "7UBL",
 	},
 	ledyba: {
 		tier: "LC",
@@ -666,7 +666,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "8U",
 	},
 	yanma: {
-		tier: "ZU",
+		tier: "6UBL",
 	},
 	yanmega: {
 		tier: "UUBL",
@@ -708,7 +708,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "OU",
 	},
 	dunsparce: {
-		tier: "ZU",
+		tier: "6UBL",
 	},
 	gligar: {
 		tier: "NU",
@@ -766,7 +766,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "8U",
 	},
 	octillery: {
-		tier: "6U",
+		tier: "7UBL",
 	},
 	delibird: {
 		tier: "7U",
@@ -841,7 +841,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "LC",
 	},
 	combusken: {
-		tier: "6U",
+		tier: "7UBL",
 	},
 	blaziken: {
 		tier: "UU",
