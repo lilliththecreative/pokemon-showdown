@@ -39,7 +39,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "10U",
 	},
 	kakuna: {
-		tier: "10U",
+		tier: "NFE",
 	},
 	beedrill: {
 		tier: "PU",
