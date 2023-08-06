@@ -222,11 +222,11 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			})
 		},
 		onDamagingHit(damage, target, source, move) {
-			if (this.checkMoveMakesContact(move, source, target)) {
-				const item = target.getItem();
-				if (this.runEvent('TakeItem', target, null, move, item)) {
-					target.itemState.knockedOff = true;
-					this.add('-enditem', target, item.name, '[from] ability: Sticky Hold');
+			if (this.checkMoveMakesContact(move, target, source)) {
+				const item = source.getItem();
+				if (this.runEvent('TakeItem', source, null, move, item)) {
+					source.itemState.knockedOff = true;
+					this.add('-enditem', source, item.name, '[from] ability: Sticky Hold');
 				}
 			}
 		},
@@ -1386,11 +1386,14 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		onResidual(pokemon) {
 			this.effectState.rampage = false;
 		},
-		onSourceAfterFaint(length, target, source, effect) {
-			this.effectState.rampage = true
-			const lockedmove = source.getVolatile('lockedmove');
-			if (lockedmove) {
-				delete source.volatiles['lockedmove'];
+		onAnyDamage(damage, target, source, effect) {
+			if (source.ability === "rampage" && damage >= target.hp) {
+				this.effectState.rampage = true
+				const lockedmove = source.getVolatile('lockedmove');
+				if (lockedmove) {
+					this.add('-activate', source, 'ability: Rampage');
+					delete source.volatiles['lockedmove'];
+				}
 			}
 		},
 		onDamage(damage, target, source, effect) {
