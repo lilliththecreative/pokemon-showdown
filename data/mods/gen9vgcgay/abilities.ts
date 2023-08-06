@@ -208,7 +208,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		onModifyMove(move) {
 			move.secondaries?.push({
 				chance: 100,
-				onHit(target) {
+				onHit(target, source, move) {
 					if (!target.item || target.itemState.knockedOff) return;
 					if (target.ability === 'multitype') return;
 					if (move.flags['contact']) {
@@ -1380,12 +1380,41 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	rampage: {
 		inherit: true,
 		isNonstandard: null,
+		onSwitchIn(pokemon) {
+			this.effectState.rampage = false;
+		},
+		onResidual(pokemon) {
+			this.effectState.rampage = false;
+		},
+		onSourceAfterFaint(length, target, source, effect) {
+			this.effectState.rampage = true
+			const lockedmove = source.getVolatile('lockedmove');
+			if (lockedmove) {
+				delete source.volatiles['lockedmove'];
+			}
+		},
 		onDamage(damage, target, source, effect) {
-			if (!target.hp) {
-				this.add('-activate', source, 'ability: Rampage');
-				if (effect.id === 'recoil') {
+			if (this.effectState.rampage) {
+				if (effect.id === 'recoil' || effect.id === 'mindblown' || effect.id === 'steelbeam') {
 					if (!this.activeMove) throw new Error("Battle.activeMove is null");
+					this.add('-activate', source, 'ability: Rampage');
 					if (this.activeMove.id !== 'struggle') return null;
+				}
+				this.effectState.rampage = false
+			}
+		},
+		onTryBoost(boost, target, source, effect) {
+			if (source && target === source && this.effectState.rampage) {
+				let showMsg = false;
+				let i: BoostID;
+				for (i in boost) {
+					if (boost[i]! < 0) {
+						delete boost[i];
+						showMsg = true;
+					}
+				}
+				if (showMsg) {
+					this.add("-fail", target, "unboost", "[from] ability: Rampage");
 				}
 			}
 		},

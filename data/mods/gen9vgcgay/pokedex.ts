@@ -7148,6 +7148,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"abilities": {
 			"0": "Strong Jaw",
+			"1": "Rampage",
 			"H": "Rock Head"
 		},
 		"inherit": true
@@ -7978,7 +7979,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		],
 		"baseStats": {
 			"hp": 90,
-			"atk": 60,
+			"atk": 70,
 			"def": 80,
 			"spa": 90,
 			"spd": 110,
@@ -7998,9 +7999,9 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		"baseStats": {
 			"hp": 100,
 			"atk": 120,
-			"def": 90,
+			"def": 95,
 			"spa": 40,
-			"spd": 60,
+			"spd": 65,
 			"spe": 80
 		},
 		"abilities": {
@@ -9378,26 +9379,6 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"inherit": true
 	},
-	"mrrime": {
-		"types": [
-			"Ice",
-			"Psychic"
-		],
-		"baseStats": {
-			"hp": 80,
-			"atk": 85,
-			"def": 75,
-			"spa": 110,
-			"spd": 100,
-			"spe": 70
-		},
-		"abilities": {
-			"0": "Tangled Feet",
-			"1": "Screen Cleaner",
-			"H": "Ice Body"
-		},
-		"inherit": true
-	},
 	"runerigus": {
 		"types": [
 			"Rock",
@@ -9732,8 +9713,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"spe": 85
 		},
 		"abilities": {
-			"0": "Light Metal",
-			"1": "Heavy Metal",
+			"0": "Pressure",
+			"1": "Rampage",
 			"H": "Stalwart"
 		},
 		"inherit": true
@@ -11312,5 +11293,5 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"H": "Justified"
 		},
 		"inherit": true
-	},
+	}
 };
