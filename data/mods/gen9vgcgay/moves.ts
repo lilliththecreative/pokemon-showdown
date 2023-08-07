@@ -241,6 +241,11 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			move.type = item.onDrive;
 		}
 	},
+	headcharge: {
+		inherit: true,
+		isNonstandard: null,
+		basePower: 125,
+	},
 	chatter: {
 		inherit: true,
 		isNonstandard: null,
@@ -959,6 +964,14 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		basePower: 90,
 		shortDesc: "Heals self and allies by 1/6th",
 	},
+	gmaxdepletion: {
+		inherit: true,
+		isNonstandard: null,
+		isMax: false,
+		category: "Special",
+		basePower: 85,
+		shortDesc: "Foes: last move -2 PP.",
+	},
 	// Pledges
 	firepledge: {
 		inherit: true,
@@ -1140,6 +1153,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	// Making Standard
 	firewall: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	stalacbite: {
 		inherit: true,
 		isNonstandard: null,
 	},

@@ -3873,7 +3873,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"abilities": {
 			"0": "Overgrow",
-			"1": "Sinnohian Grit",
+			"1": "Sinnohan Grit",
 			"H": "Shell Armor"
 		},
 		"inherit": true
@@ -3893,7 +3893,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"abilities": {
 			"0": "Blaze",
-			"1": "Sinnohian Grit",
+			"1": "Sinnohan Grit",
 			"H": "Iron Fist"
 		},
 		"inherit": true
@@ -3913,7 +3913,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"abilities": {
 			"0": "Torrent",
-			"1": "Sinnohian Grit",
+			"1": "Sinnohan Grit",
 			"H": "Defiant"
 		},
 		"inherit": true

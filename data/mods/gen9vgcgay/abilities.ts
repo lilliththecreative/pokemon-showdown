@@ -1343,7 +1343,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		},
 		isBreakable: true,
 	},
-	sinnohiangrit: {
+	sinnohangrit: {
 		inherit: true,
 		isNonstandard: null,
 		onDamage(damage, target, source, effect) {
@@ -1363,7 +1363,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 					}
 				}
 				if (showMsg) {
-					this.add("-fail", target, "unboost", "[from] ability: Sinnohian Grit");
+					this.add("-fail", target, "unboost", "[from] ability: Sinnohan Grit");
 				}
 			}
 		},
@@ -1387,7 +1387,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			this.effectState.rampage = false;
 		},
 		onAnyDamage(damage, target, source, effect) {
-			if (source.ability === "rampage" && damage >= target.hp) {
+			if (source && source.ability === "rampage" && damage >= target.hp) {
 				this.effectState.rampage = true
 				const lockedmove = source.getVolatile('lockedmove');
 				if (lockedmove) {

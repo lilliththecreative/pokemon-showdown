@@ -5369,9 +5369,9 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 4,
 		num: -29,
 	},
-	sinnohiangrit: {
+	sinnohangrit: {
 		isNonstandard: "CAP",
-		name: "Sinnohian Grit",
+		name: "Sinnohan Grit",
 		rating: 3,
 		num: -30,
 	},
