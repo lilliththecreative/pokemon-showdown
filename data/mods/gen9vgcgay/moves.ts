@@ -1402,9 +1402,5 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	sparklingaria: {
 		inherit: true,
 		isNonstandard: null,
-	},
-	stalacbite: {
-		inherit: true,
-		isNonstandard: null
 	}
 };
