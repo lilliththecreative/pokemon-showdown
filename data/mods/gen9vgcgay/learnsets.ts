@@ -55576,6 +55576,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"junglehealing": [
 				"9M"
+			],
+			"ragepowder": [
+				"9M"
 			]
 		}
 	},

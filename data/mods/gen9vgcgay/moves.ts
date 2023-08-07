@@ -1142,6 +1142,24 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			}
 		},
 	},
+	clamp: {
+		num: 128,
+		accuracy: 100,
+		basePower: 25,
+		category: "Physical",
+		isNonstandard: null,
+		name: "Clamp",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		multihit: [2,5],
+		secondary: null,
+		desc: "Hits two to five times. Has a 35% chance to hit two or three times and a 15% chance to hit four or five times. If one of the hits breaks the target's substitute, it will take damage for the remaining hits. If the user has the Skill Link Ability, this move will always hit five times.",
+		shortDesc: "Hits 2-5 times in one turn.",
+		target: "normal",
+		type: "Water",
+		contestType: "Tough",
+	},
 	// pp changes
 	flamethrower: {
 		inherit: true,

@@ -831,6 +831,42 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			return this.modify(spd, 0.8);
 		}
 	},
+	fullmetalbody: {
+		inherit: true,
+		shortDesc: "Prevents stat lowering. Adds Steel STAB.",
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Steel') {
+				this.debug('Steelworker boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Steel') {
+				this.debug('Steelworker boost');
+				return this.chainModify(1.5);
+			}
+		},
+	},
+	shadowshield: {
+		inherit: true,
+		shortDesc: "Halves damage at full health. Adds Ghost STAB.",
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Ghost') {
+				this.debug('Steelworker boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Ghost') {
+				this.debug('Steelworker boost');
+				return this.chainModify(1.5);
+			}
+		},
+	},
 	// Ruin Nerf
 	swordofruin: {
 		inherit: true,
