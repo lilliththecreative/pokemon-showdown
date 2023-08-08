@@ -3,6 +3,25 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		basePower: 80,
 	},
+	// Sleep Nerf
+	spore: {
+		inherit: true,
+		pp: 5,
+		shortDesc: "Puts target to sleep. Fails if priority",
+		onTryMove(attacker, defender, move) {
+			if (move.pranksterBoosted) {
+				this.add('-fail', attacker, 'move: Spore');
+			}
+		},
+	},
+	hypnosis: {
+		inherit: true,
+		pp: 10,
+	},
+	sleeppowder: {
+		inherit: true,
+		pp: 10,
+	},
 	// Omniboost moves
 	ominouswind: {
 		inherit: true,
@@ -131,6 +150,28 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 		basePower: 100,
+		condition: {
+			duration: 2,
+			onImmunity(type, pokemon) {
+				if (type === 'sandstorm' || type === 'hail') return false;
+			},
+			onInvulnerability(target, source, move) {
+				if (['earthquake', 'magnitude'].includes(move.id)) {
+					return;
+				}
+				return false;
+			},
+			onSourceModifyDamage(damage, source, target, move) {
+				if (move.id === 'earthquake' || move.id === 'magnitude') {
+					return this.chainModify(2);
+				}
+			},
+			onResidual(pokemon) {
+				if (pokemon.ability === 'eartheater') {
+					this.heal(pokemon.baseMaxhp / 4);
+				}
+			},
+		},
 	},
 	// Explosions
 	"mistyexplosion": {
@@ -245,6 +286,22 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 		basePower: 125,
+	},
+	snipeshot: {
+		inherit: true,
+		basePower: 75,
+		willCrit: true,
+	},
+	spicyextract: {
+		inherit: true,
+		shortDesc: "Raises target's Atk by 2 and lowers its Def by 2.",
+		boosts: {atk: 3, def: -3,},
+	},
+	mysticalpower: {
+		inherit: true,
+		basePower: 60,
+		accuracy: 100,
+		type: "Fairy",
 	},
 	chatter: {
 		inherit: true,
@@ -503,11 +560,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 		basePower: 75,
 		accuracy: 95
-	},
-	mysticalpower: {
-		inherit: true,
-		isNonstandard: null,
-		type: "Fairy",
 	},
 	rollingkick: {
 		inherit: true,
@@ -777,62 +829,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			},
 		},
 	},
-	// spotlight: {
-	// 	inherit: true,
-	// 	isNonstandard: null,
-	// 	pp: 2,
-	// 	condition: {
-	// 		duration: 1,
-	// 		onStart(pokemon) {
-	// 			this.add('-singleturn', pokemon, 'move: Spotlight');
-	// 		},
-	// 		onRedirectTargetPriority: 2,
-	// 		onRedirectTarget(target, source, source2, move) {
-	// 			this.debug("Try spotlight target");
-	// 			if (this.validTarget(this.effectState.target, source, move.target)) {
-	// 				this.debug("Spotlight redirected target of move");
-	// 				return this.effectState.target;
-	// 			}
-	// 		},
-	// 		onFoeRedirectTarget(target, source, source2, move) {
-	// 			this.debug("Try spotlight foe");
-	// 			if (this.validTarget(this.effectState.target, source, move.target)) {
-	// 				this.debug("Spotlight redirected target of move");
-	// 				return this.effectState.target;
-	// 			}
-	// 			return;
-	// 		},
-	// 	},
-	// },
-	// tailwind: {
-	// 	inherit: true,
-	// 	shortDesc: "1.5x speed for your side for 4 turns",
-	// 	condition: {
-	// 		duration: 4,
-	// 		durationCallback(target, source, effect) {
-	// 			if (source?.hasAbility('persistent')) {
-	// 				this.add('-activate', source, 'ability: Persistent', '[move] Tailwind');
-	// 				return 6;
-	// 			}
-	// 			return 4;
-	// 		},
-	// 		onSideStart(side, source) {
-	// 			if (source?.hasAbility('persistent')) {
-	// 				this.add('-sidestart', side, 'move: Tailwind', '[persistent]');
-	// 			} else {
-	// 				this.add('-sidestart', side, 'move: Tailwind');
-	// 			}
-	// 		},
-	// 		onModifySpe(spe, pokemon) {
-	// 			return this.chainModify(1.5);
-	// 		},
-	// 		onSideResidualOrder: 26,
-	// 		onSideResidualSubOrder: 5,
-	// 		onSideEnd(side) {
-	// 			this.add('-sideend', side, 'move: Tailwind');
-	// 		},
-	// 	},
-	// },
 	// Z Moves
 	trickortreat: {
 		inherit: true,
@@ -894,8 +890,26 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 		isZ: false,
-		flags: {charge: 1},
+		flags: {protect: 1, mirror: 1, charge: 1},
 		shortDesc: "Charges, uses move turn 2",
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		}
+	},
+	splinteredstormshards: {
+		inherit: true,
+		isNonstandard: null,
+		isZ: false,
+		flags: {protect: 1, mirror: 1, charge: 1},
+		shortDesc: "Charges, uses move turn 2, ends terrain",
 		onTryMove(attacker, defender, move) {
 			if (attacker.removeVolatile(move.id)) {
 				return;
@@ -1420,5 +1434,25 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	sparklingaria: {
 		inherit: true,
 		isNonstandard: null,
-	}
+	},
+	blazingtorque: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	noxioustorque: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	magicaltorque: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	combattorque: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	wickedtorque: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

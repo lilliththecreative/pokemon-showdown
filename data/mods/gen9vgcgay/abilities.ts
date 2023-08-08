@@ -204,23 +204,23 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	stickyhold: {
 		inherit: true,
-		shortDesc: "Any contact with this pokemon makes their items sticky and unusable",
-		onModifyMove(move) {
-			move.secondaries?.push({
-				chance: 100,
-				onHit(target, source, move) {
-					if (!target.item || target.itemState.knockedOff) return;
-					if (target.ability === 'multitype') return;
-					if (move.flags['contact']) {
-						const item = target.getItem();
-						if (this.runEvent('TakeItem', target, null, move, item)) {
-							target.itemState.knockedOff = true;
-							this.add('-enditem', target, item.name, '[from] ability: Sticky Hold');
-						}
-					}
-				}
-			})
-		},
+		shortDesc: "Contact moves the attacker's items sticky and unusable",
+		// onModifyMove(move) {
+		// 	move.secondaries?.push({
+		// 		chance: 100,
+		// 		onHit(target, source, move) {
+		// 			if (!target.item || target.itemState.knockedOff) return;
+		// 			if (target.ability === 'multitype') return;
+		// 			if (move.flags['contact']) {
+		// 				const item = target.getItem();
+		// 				if (this.runEvent('TakeItem', target, null, move, item)) {
+		// 					target.itemState.knockedOff = true;
+		// 					this.add('-enditem', target, item.name, '[from] ability: Sticky Hold');
+		// 				}
+		// 			}
+		// 		}
+		// 	})
+		// },
 		onDamagingHit(damage, target, source, move) {
 			if (this.checkMoveMakesContact(move, target, source)) {
 				const item = source.getItem();
@@ -867,6 +867,32 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 		},
 	},
+	lingeringaroma: {
+		inherit: true,
+		shortDesc: "On contact: Abilities swapped; -1 Priority to non-Oinkologne",
+		onModifyPriority(priority, pokemon, target, move) {
+			if (pokemon.species.baseSpecies !== "Oinkologne") {
+				return priority - 1
+			}
+		},
+	},
+
+	angershell: {
+		onDamage(damage, target, source, effect) {
+		},
+		onTryEatItem(item) {
+		},
+		onAfterMoveSecondary(target, source, move) {
+		},
+		onDamagingHit(damage, target, source, move) {
+			if (move.type === 'Water') {
+				this.boost({atk: 1, spa: 1, spe: 1, def: -1, spd: -1}, target, target);
+			}
+		},
+		name: "Anger Shell",
+		rating: 3,
+		num: 271,
+	},
 	// Ruin Nerf
 	swordofruin: {
 		inherit: true,
@@ -1249,7 +1275,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 		onAnyModifyPriority(relayVar, source, target, move) {
-			if (move.priority >= -5) {
+			if (move.priority >= -2) {
 				return 0;
 			}
 		},
