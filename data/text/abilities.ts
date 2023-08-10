@@ -2199,8 +2199,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	bigballs: {
 		name: "Big Balls",
-		shortDesc: "All moves used by and on target will crit.",
-		desc: "All moves used by and on target will crit.",
+		shortDesc: "All non-priority moves used by and on target will crit.",
+		desc: "All non-priority moves used by and on target will crit.",
 	},
 	oddkeystone: {
 		name: "Odd Keystone",

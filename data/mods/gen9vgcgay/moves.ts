@@ -30,7 +30,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		secondary: {
 			chance: 20,
 			self: {
-				boosts: { atk: 1, def: 1, spa: 1, spd: 1, spe: 1},
+				boosts: {atk: 1, def: 1, spa: 1, spd: 1, spe: 1},
 			},
 		},
 	},
@@ -41,7 +41,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		secondary: {
 			chance: 20,
 			self: {
-				boosts: { atk: 1, def: 1, spa: 1, spd: 1, spe: 1},
+				boosts: {atk: 1, def: 1, spa: 1, spd: 1, spe: 1},
 			},
 		},
 	},
@@ -51,7 +51,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		secondary: {
 			chance: 20,
 			self: {
-				boosts: { atk: 1, def: 1, spa: 1, spd: 1, spe: 1},
+				boosts: {atk: 1, def: 1, spa: 1, spd: 1, spe: 1},
 			},
 		},
 		"isNonstandard": null,
@@ -213,7 +213,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		basePower: 30,
 		multihit: 3,
-		shortDesc:"Attacks 3 times, 10% chance to burn/para/freeze each.",
+		shortDesc: "Attacks 3 times, 10% chance to burn/para/freeze each.",
 		secondary: {
 			chance: 10,
 			onHit(target, source) {
@@ -236,12 +236,12 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	slash: {
 		inherit: true,
 		basePower: 60,
-		shortDesc:"Always crits.",
+		shortDesc: "Always crits.",
 		willCrit: true
 	},
 	echoedvoice: {
 		inherit: true,
-		shortDesc:"Raises Special Attack by 1.",
+		shortDesc: "Raises Special Attack by 1.",
 		secondary: {
 			chance: 100,
 			self: {
@@ -255,7 +255,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		accuracy: 100,
 		basePower: 40,
-		shortDesc:"Raises Special Attack by 1.",
+		shortDesc: "Raises Special Attack by 1.",
 		secondary: {
 			chance: 100,
 			self: {
@@ -295,7 +295,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	spicyextract: {
 		inherit: true,
 		shortDesc: "Raises target's Atk by 2 and lowers its Def by 2.",
-		boosts: {atk: 3, def: -3,},
+		boosts: {atk: 3, def: -3},
 	},
 	mysticalpower: {
 		inherit: true,
@@ -336,10 +336,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	mountaingale: {
 		inherit: true,
-		shortDesc:"Hits both opponents. 20% chance to frostbite.",
+		shortDesc: "Hits both opponents. 20% chance to frostbite.",
 		isNonstandard: null,
 		basePower: 90,
-		secondary: { chance: 20, status: 'fst'},
+		secondary: {chance: 20, status: 'fst'},
 	},
 	gravapple: {
 		inherit: true,
@@ -373,14 +373,14 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	healorder: {
 		inherit: true,
-		shortDesc:"Heals the user by 100% of its max HP.",
+		shortDesc: "Heals the user by 100% of its max HP.",
 		pp: 5,
 		heal: [1, 1],
 		isNonstandard: null
 	},
 	milkdrink: {
 		inherit: true,
-		shortDesc:"Heals the user by 100% of its max HP.",
+		shortDesc: "Heals the user by 100% of its max HP.",
 		pp: 5,
 		heal: [1, 1],
 		isNonstandard: null
@@ -388,7 +388,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	shadowbone: {
 		inherit: true,
 		isNonstandard: null,
-		shortDesc:"Hits Twice, 20% to drop defense",
+		shortDesc: "Hits Twice, 20% to drop defense",
 		basePower: 50,
 		multihit: 2,
 	},
@@ -412,7 +412,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	diamondstorm: {
 		inherit: true,
 		isNonstandard: null,
-		shortDesc:"Hits both in sandstorm, 50% raise defense by 1",
+		shortDesc: "Hits both in sandstorm, 50% raise defense by 1",
 		target: "normal",
 		onModifyMove(move, source, target) {
 			if (this.field.isWeather('sandstorm')) {
@@ -709,7 +709,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			onHit(pokemon) {
 				pokemon.cureStatus();
 				for (const allyActive of pokemon.adjacentAllies()) {
-					allyActive.cureStatus()
+					allyActive.cureStatus();
 				}
 			},
 		},
@@ -737,12 +737,12 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		condition: {
 			duration: 5,
 			durationCallback(target, source, effect) {
-				var numTurns = 5
+				let numTurns = 5;
 				if (source?.hasItem('lightclay')) {
-					numTurns += 3
+					numTurns += 3;
 				}
 				if (source?.hasAbility('trueaurora')) {
-					numTurns += 3
+					numTurns += 3;
 				}
 				return numTurns;
 			},
@@ -772,10 +772,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	finalgambit: {
 		inherit: true,
 		damageCallback(pokemon) {
-			var damage = pokemon.hp;
+			let damage = pokemon.hp;
 			pokemon.faint();
 			if (pokemon.hasAbility('reckless')) {
-				damage *= 1.3
+				damage *= 1.3;
 			}
 			return damage;
 		},
@@ -833,16 +833,16 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	trickortreat: {
 		inherit: true,
 		isNonstandard: null,
-		shortDesc:"Charges, +Ghost to target's type, omniboost turn 2.",
+		shortDesc: "Charges, +Ghost to target's type, omniboost turn 2.",
 		flags: {charge: 1, protect: 1, reflectable: 1, mirror: 1, allyanim: 1},
 		onTryMove(attacker, defender, move) {
 			if (attacker.removeVolatile(move.id)) {
-				this.boost({atk: 1, def: 1, spa: 1, spd: 1, spe: 1}, attacker, attacker, move)
+				this.boost({atk: 1, def: 1, spa: 1, spd: 1, spe: 1}, attacker, attacker, move);
 				return;
 			}
 			this.add('-prepare', attacker, move.name);
 			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
-				this.boost({atk: 1, def: 1, spa: 1, spd: 1, spe: 1}, attacker, attacker, move)
+				this.boost({atk: 1, def: 1, spa: 1, spd: 1, spe: 1}, attacker, attacker, move);
 				return;
 			}
 			attacker.addVolatile('twoturnmove', defender);
@@ -852,16 +852,16 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	forestscurse: {
 		inherit: true,
 		isNonstandard: null,
-		shortDesc:"Charges, +Grass to target's type, omniboost turn 2.",
+		shortDesc: "Charges, +Grass to target's type, omniboost turn 2.",
 		flags: {charge: 1, protect: 1, reflectable: 1, mirror: 1, allyanim: 1},
 		onTryMove(attacker, defender, move) {
 			if (attacker.removeVolatile(move.id)) {
-				this.boost({atk: 1, def: 1, spa: 1, spd: 1, spe: 1}, attacker, attacker, move)
+				this.boost({atk: 1, def: 1, spa: 1, spd: 1, spe: 1}, attacker, attacker, move);
 				return;
 			}
 			this.add('-prepare', attacker, move.name);
 			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
-				this.boost({atk: 1, def: 1, spa: 1, spd: 1, spe: 1}, attacker, attacker, move)
+				this.boost({atk: 1, def: 1, spa: 1, spd: 1, spe: 1}, attacker, attacker, move);
 				return;
 			}
 			attacker.addVolatile('twoturnmove', defender);
@@ -1024,35 +1024,35 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	blizzard: {
 		inherit: true,
 		shortDesc: "15% chance to frostbite foes. Can't miss in Snow",
-		secondary: { chance: 15, status: 'fst'},
+		secondary: {chance: 15, status: 'fst'},
 	},
 	icebeam: {
 		inherit: true,
 		shortDesc: "10% chance to frostbite.",
-		secondary: { chance: 10, status: 'fst'},
+		secondary: {chance: 10, status: 'fst'},
 	},
 	freezedry: {
 		inherit: true,
 		shortDesc: "10% chance to frostbite.",
-		secondary: { chance: 10, status: 'fst'},
+		secondary: {chance: 10, status: 'fst'},
 	},
 	freezingglare: {
 		inherit: true,
 		shortDesc: "20% chance to frostbite.",
-		secondary: { chance: 20, status: 'fst'},
+		secondary: {chance: 20, status: 'fst'},
 	},
 	icepunch: {
 		inherit: true,
 		shortDesc: "10% chance to frostbite.",
-		secondary: { chance: 10, status: 'fst'},
+		secondary: {chance: 10, status: 'fst'},
 	},
 	icefang: {
 		inherit: true,
 		basePower: 75,
 		shortDesc: "10% chance to frostbite. 10% to flinch.",
 		secondaries: [
-			{ chance: 10, status: 'fst'},
-			{ chance: 10, volatileStatus: 'flinch'},
+			{chance: 10, status: 'fst'},
+			{chance: 10, volatileStatus: 'flinch'},
 		],
 	},
 	// Recharge moves
@@ -1166,7 +1166,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		multihit: [2,5],
+		multihit: [2, 5],
 		secondary: null,
 		desc: "Hits two to five times. Has a 35% chance to hit two or three times and a 15% chance to hit four or five times. If one of the hits breaks the target's substitute, it will take damage for the remaining hits. If the user has the Skill Link Ability, this move will always hit five times.",
 		shortDesc: "Hits 2-5 times in one turn.",
@@ -1177,11 +1177,19 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	// pp changes
 	flamethrower: {
 		inherit: true,
-		pp: 16
+		pp: 10,
 	},
 	thunderbolt: {
 		inherit: true,
-		pp: 16
+		pp: 10,
+	},
+	allyswitch: {
+		inherit: true,
+		pp: 5,
+	},
+	protect: {
+		inherit: true,
+		pp: 5,
 	},
 	// Making Standard
 	firewall: {

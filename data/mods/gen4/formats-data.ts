@@ -766,7 +766,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "8U",
 	},
 	octillery: {
-		tier: "7UBL",
+		tier: "6U",
 	},
 	delibird: {
 		tier: "7U",

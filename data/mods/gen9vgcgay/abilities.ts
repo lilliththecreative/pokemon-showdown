@@ -195,11 +195,11 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 				chance: 100,
 				onHit(target) {
 					if (target.item === "leftovers" || target.item.endsWith("berry")) {
-						this.add('message', 'Item replaced with Liquid Ooze')
-						target.setItem("blacksludge")
+						this.add('message', 'Item replaced with Liquid Ooze');
+						target.setItem("blacksludge");
 					}
 				}
-			})
+			});
 		}
 	},
 	stickyhold: {
@@ -270,11 +270,11 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 			if (effect.name === 'Intimidate' && boost.atk) {
 				this.add('-fail', target, 'unboost', 'Attack', '[from] ability: Big Pecks', '[of] ' + target);
-				boost.atk = 1
-				boost.def = 1
-				boost.spa = 1
-				boost.spd = 1
-				boost.spe = 1
+				boost.atk = 1;
+				boost.def = 1;
+				boost.spa = 1;
+				boost.spd = 1;
+				boost.spe = 1;
 			}
 		},
 	},
@@ -332,7 +332,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		shortDesc: "If Pokemon's HP is >= 50%, Flying moves have priority increased by 1.",
 		onModifyPriority(priority, pokemon, target, move) {
-			if (move?.type === 'Flying' && pokemon.hp >= pokemon.maxhp/2) return priority + 1;
+			if (move?.type === 'Flying' && pokemon.hp >= pokemon.maxhp / 2) return priority + 1;
 		},
 	},
 	flowergift: {
@@ -377,7 +377,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		},
 		onSourceBeforeMove(source, target, move) {
 			if (this.effectState.colorChange) return;
-			let type = move.type
+			let type = move.type;
 			switch (type) {
 			case 'Normal':
 				type = 'Ghost';
@@ -434,7 +434,10 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 				type = 'Poison';
 				break;
 			}
-			target.setType(type)
+			if (move.pranksterBoosted) {
+				type = 'Dark';
+			}
+			target.setType(type);
 			this.effectState.colorChange = true;
 			this.add('-start', target, 'typechange', type, '[from] ability: Color Change');
 		},
@@ -451,7 +454,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		},
 		onModifyDamage(damage, source, target, move) {
 			if (target.getMoveHitData(move).typeMod < 0) {
-				return this.chainModify(1/target.getMoveHitData(move).typeMod);
+				return this.chainModify(1 / target.getMoveHitData(move).typeMod);
 			}
 		},
 	},
@@ -461,10 +464,10 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		onPrepareHit(source, target, move) {
 			if (move.hasBounced || move.flags['futuremove'] || move.sourceEffect === 'snatch') return;
 			const type = move.type;
-			if (type == "Electric") this.field.setTerrain('electricterrain');
-			if (type == "Grass") this.field.setTerrain('grassyterrain');
-			if (type == "Psychic") this.field.setTerrain('psychicterrain');
-			if (type == "Fairy") this.field.setTerrain('mistyterrain');
+			if (type === "Electric") this.field.setTerrain('electricterrain');
+			if (type === "Grass") this.field.setTerrain('grassyterrain');
+			if (type === "Psychic") this.field.setTerrain('psychicterrain');
+			if (type === "Fairy") this.field.setTerrain('mistyterrain');
 		},
 		onTerrainChange(pokemon) {
 			let types;
@@ -636,12 +639,12 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	// },
 	battlebond: {
 		inherit: true,
-		shortDesc: "After KOing a pokemon, +1 Atk, SpA, Spe and Transform",
+		shortDesc: "After KOing a pokemon, Transform to Ash-Gren",
 		onSourceAfterFaint(length, target, source, effect) {
 			if (effect?.effectType !== 'Move') return;
 			if (source.abilityState.battleBondTriggered) return;
 			if (source.species.id === 'greninjabond' && source.hp && !source.transformed && source.side.foePokemonLeft()) {
-				this.boost({atk: 1, spa: 1, spe: 1}, source, source, this.effect);
+				// this.boost({atk: 1, spa: 1, spe: 1}, source, source, this.effect);
 				source.formeChange('Greninja-Ash', this.effect, true);
 				this.add('-activate', source, 'ability: Battle Bond');
 				source.abilityState.battleBondTriggered = true;
@@ -694,7 +697,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		shortDesc: "Sets Magic Room on entrance, steals item with attack",
 		onStart(source) {
-			this.field.addPseudoWeather('magicroom')
+			this.field.addPseudoWeather('magicroom');
 		},
 	},
 	watercompaction: {
@@ -750,7 +753,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		shortDesc: "Boosts Pollen Puff damage and healing by 50%",
 		onBasePower(basePower, attacker, defender, move) {
-			if (move.name === "Pollen Puff"){
+			if (move.name === "Pollen Puff") {
 				return this.chainModify([3, 2]);
 			}
 		},
@@ -807,28 +810,32 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		shortDesc: "On contact: Ability changed to Mummy; 0.8x Atk, SpAtk to non-Cofagrigus.",
 		onModifyAtkPriority: 6,
-		onModifyAtk(atk,pokemon){
-			if (pokemon.species.baseSpecies == "Cofagrigus") return this.modify(atk, 1);
-			return this.modify(atk, 0.8);
+		onModifyAtk(atk, pokemon) {
+			if (pokemon.species.baseSpecies !== "Cofagrigus") {
+				return this.chainModify([4, 5]);
+			}
 		},
 		onModifySpAPriority: 6,
-		onModifySpA(spa,pokemon){
-			if (pokemon.species.baseSpecies == "Cofagrigus") return this.modify(spa, 1);
-			return this.modify(spa, 0.8);
+		onModifySpA(spa, pokemon) {
+			if (pokemon.species.baseSpecies !== "Cofagrigus") {
+				return this.chainModify([4, 5]);
+			}
 		}
 	},
 	wanderingspirit: {
 		inherit: true,
 		shortDesc: "On contact: Abilities swapped; 0.8x Def, SpDef to non-Runerigus.",
 		onModifyDefPriority: 6,
-		onModifyDef(def,pokemon){
-			if (pokemon.species.baseSpecies == "Runerigus") return this.modify(def, 1);
-			return this.modify(def, 0.8);
+		onModifyDef(def, pokemon) {
+			if (pokemon.species.baseSpecies !== "Runerigus") {
+				return this.chainModify([4, 5]);
+			}
 		},
 		onModifySpDPriority: 6,
-		onModifySpD(spd,pokemon){
-			if (pokemon.species.baseSpecies == "Runerigus") return this.modify(spd, 1);
-			return this.modify(spd, 0.8);
+		onModifySpD(spd, pokemon) {
+			if (pokemon.species.baseSpecies !== "Runerigus") {
+				return this.chainModify([4, 5]);
+			}
 		}
 	},
 	fullmetalbody: {
@@ -872,7 +879,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		shortDesc: "On contact: Abilities swapped; -1 Priority to non-Oinkologne",
 		onModifyPriority(priority, pokemon, target, move) {
 			if (pokemon.species.baseSpecies !== "Oinkologne") {
-				return priority - 1
+				return priority - 1;
 			}
 		},
 	},
@@ -992,7 +999,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 			if (move.self?.chance) move.self.chance *= 0.5;
 			if (!move.multihit && move.basePower > 0) {
-				move.multihit = 3
+				move.multihit = 3;
 			}
 		},
 		onBasePower(basePower, attacker, defender, move) {
@@ -1066,11 +1073,15 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			this.add('-ability', pokemon, 'Big Balls');
 		},
 		onModifyCritRatio(relayVar, source, target, move) {
-			move.willCrit = true;
+			if (move.priority === 0) {
+				move.willCrit = true;
+			}
 		},
 		onFoeModifyCritRatio(relayVar, source, target, move) {
 			if (target.ability === 'bigballs') {
-				move.willCrit = true;
+				if (move.priority === 0) {
+					move.willCrit = true;
+				}
 			}
 		},
 	},
@@ -1194,7 +1205,6 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 					// this.add('-ability', source, 'Captivating Song');
 					target.addVolatile('trapped', source, move, 'trapper');
 				}
-
 			}
 		},
 		onSourceHit(target, source, move) {
@@ -1237,7 +1247,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			this.add('-ability', pokemon, 'Homophobia');
 		},
 		onBasePower(basePower, attacker, defender, move) {
-			const gender = defender.gender
+			const gender = defender.gender;
 			if (defender.allies().length > 0) {
 				for (const opp of defender.allies()) {
 					if (opp.gender === gender) {
@@ -1295,11 +1305,11 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 					continue;
 				}
 				if (moveAction.pokemon.hasAbility('catscradle')) {
-					const targets = ["allAdjacent", "allAdjacentFoes"]
+					const targets = ["allAdjacent", "allAdjacentFoes"];
 					if (moveAction.originalTarget === pokemon || targets.includes(moveAction.move.target)) {
 						this.add('-ability', moveAction.pokemon, "Cat's Cradle");
 						(moveAction.move.basePower as number) = moveAction.move.basePower * 2;
-						this.actions.runMove(moveAction.move, moveAction.pokemon, moveAction.targetLoc)
+						this.actions.runMove(moveAction.move, moveAction.pokemon, moveAction.targetLoc);
 						this.queue.list.splice(actionIndex, 1);
 						break;
 					}
@@ -1336,7 +1346,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 				if (target.volatiles['substitute']) {
 					this.add('-immune', target);
 				} else {
-					(this.event.name as string) = "Intimidate"
+					(this.event.name as string) = "Intimidate";
 					this.boost({atk: -1}, target, pokemon, null, true);
 				}
 			}
@@ -1345,8 +1355,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		onModifyAtk(atk, pokemon) {
 			if (pokemon.status) {
 				return this.chainModify(2.25);
-			}
-			else {
+			} else {
 				return this.chainModify(1.5);
 			}
 		},
@@ -1377,12 +1386,13 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			if (pokemon.baseSpecies.baseSpecies !== 'Gourgeist' || !pokemon.hp) return;
 			if (pokemon.species.id === 'gourgeistsuper') return;
 			this.add('-activate', pokemon, 'ability: Growing Pumpkin');
-			if (pokemon.species.id === 'gourgeistsmall')
+			if (pokemon.species.id === 'gourgeistsmall') {
 				pokemon.formeChange('Gourgeist', this.effect, true);
-			else if (pokemon.species.id === 'gourgeist')
+			} else if (pokemon.species.id === 'gourgeist') {
 				pokemon.formeChange('Gourgeist-Large', this.effect, true);
-			else if (pokemon.species.id === 'gourgeistlarge')
+			} else if (pokemon.species.id === 'gourgeistlarge') {
 				pokemon.formeChange('Gourgeist-Super', this.effect, true);
+			}
 			pokemon.baseMaxhp = Math.floor(Math.floor(
 				2 * pokemon.species.baseStats['hp'] + pokemon.set.ivs['hp'] + Math.floor(pokemon.set.evs['hp'] / 4) + 100
 			) * pokemon.level / 100 + 10);
@@ -1450,7 +1460,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		},
 		onAnyDamage(damage, target, source, effect) {
 			if (source && source.ability === "rampage" && damage >= target.hp) {
-				this.effectState.rampage = true
+				this.effectState.rampage = true;
 				const lockedmove = source.getVolatile('lockedmove');
 				if (lockedmove) {
 					this.add('-activate', source, 'ability: Rampage');
@@ -1465,7 +1475,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 					this.add('-activate', source, 'ability: Rampage');
 					if (this.activeMove.id !== 'struggle') return null;
 				}
-				this.effectState.rampage = false
+				this.effectState.rampage = false;
 			}
 		},
 		onTryBoost(boost, target, source, effect) {

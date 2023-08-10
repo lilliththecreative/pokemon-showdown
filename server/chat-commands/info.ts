@@ -1749,7 +1749,7 @@ export const commands: Chat.ChatCommands = {
 		const SUPPORTED_BATTLESPOT_FORMATS = [
 			'gen5gbusingles', 'gen5gbudoubles', 'gen6battlespotsingles', 'gen6battlespotdoubles', 'gen6battlespottriples', 'gen7battlespotsingles', 'gen7battlespotdoubles', 'gen7bssfactory',
 		];
-		if (room?.battle?.format == "gen9vgcplat") {
+		if (room?.battle?.format === "gen9vgcplat") {
 			return this.sendReplyBox(
 				`VGC Plat damage calculator. (Courtesy of StaraptorOP)<br />` +
 				`- <a href="https://shivad173.github.io">VGC Plat Damage Calculator</a>`

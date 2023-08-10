@@ -6,7 +6,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		secondary: {
 			chance: 20,
 			self: {
-				boosts: { atk: 1, def: 1, spa: 1, spd: 1, spe: 1},
+				boosts: {atk: 1, def: 1, spa: 1, spd: 1, spe: 1},
 			},
 		},
 	},
@@ -17,7 +17,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		secondary: {
 			chance: 20,
 			self: {
-				boosts: { atk: 1, def: 1, spa: 1, spd: 1, spe: 1},
+				boosts: {atk: 1, def: 1, spa: 1, spd: 1, spe: 1},
 			},
 		},
 	},
@@ -3623,7 +3623,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		secondary: {
 			chance: 20,
 			self: {
-				boosts: { atk: 1, def: 1, spa: 1, spd: 1, spe: 1},
+				boosts: {atk: 1, def: 1, spa: 1, spd: 1, spe: 1},
 			},
 		},
 		"accuracy": 100,

@@ -629,7 +629,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "LC",
 	},
 	mrmime: {
-		tier:"ZU",
+		tier: "ZU",
 		doublesTier: "(DUU)",
 	},
 	scyther: {
@@ -1600,7 +1600,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "LC",
 	},
 	dusclops: {
-		tier:"ZU",
+		tier: "ZU",
 	},
 	dusknoir: {
 		tier: "7U",
@@ -2446,7 +2446,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "LC",
 	},
 	swanna: {
-		tier:"ZU",
+		tier: "ZU",
 		doublesTier: "(DUU)",
 	},
 	vanillite: {
