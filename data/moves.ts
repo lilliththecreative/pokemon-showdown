@@ -21651,7 +21651,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	firewall: {
-		num: 596,
+		num: 0,
 		accuracy: true,
 		basePower: 0,
 		isNonstandard: "CAP",
@@ -21712,7 +21712,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	stalacbite: {
-		num: 424,
+		num: 0,
 		accuracy: 95,
 		basePower: 75,
 		category: "Physical",
@@ -21739,5 +21739,56 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Rock",
 		contestType: "Cool",
+	},
+	divebomb: {
+		num: 0,
+		accuracy: 90,
+		basePower: 130,
+		category: "Physical",
+		name: "Dive Bomb",
+		isNonstandard: "CAP",
+		pp: 10,
+		priority: 0,
+		onPrepareHit(target, source, move) {
+			this.attrLastMove('[still]');
+			this.add('-anim', source, "Brave Bird", target);
+		},
+		flags: {contact: 1, protect: 1, mirror: 1, gravity: 1},
+		hasCrashDamage: true,
+		onMoveFail(target, source, move) {
+			this.damage(source.baseMaxhp / 2, source, source, this.dex.conditions.get('High Jump Kick'));
+		},
+		secondary: null,
+		target: "normal",
+		type: "Flying",
+		contestType: "Cool",
+	},
+	psychout: {
+		num: 0,
+		accuracy: 100,
+		basePower: 40,
+		category: "Special",
+		name: "Psych Out",
+		isNonstandard: "CAP",
+		pp: 10,
+		priority: 3,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		onPrepareHit(target, source, move) {
+			this.attrLastMove('[still]');
+			this.add('-anim', source, "Fake Out", target);
+		},
+		onTry(source) {
+			if (source.activeMoveActions > 1) {
+				this.hint("Psych Out only works on your first turn out.");
+				return false;
+			}
+		},
+		secondary: {
+			chance: 100,
+			volatileStatus: 'flinch',
+		},
+		target: "normal",
+		type: "Psychic",
+		contestType: "Cute",
 	},
 };

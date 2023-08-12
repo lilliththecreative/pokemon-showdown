@@ -339,7 +339,7 @@ export const Formats: FormatList = [
 		banlist: ['ZU', '7UBL'],
 	},
 	{
-		name: "[Gen 7] 7U",
+		name: "[Gen 7] SU",
 		mod: 'gen7',
 		searchShow: true,
 		ruleset: ['[Gen 7] ZU'],

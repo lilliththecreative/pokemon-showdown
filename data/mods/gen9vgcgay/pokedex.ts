@@ -203,7 +203,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"hp": 70,
 			"atk": 85,
 			"def": 50,
-			"spa": 100,
+			"spa": 105,
 			"spd": 85,
 			"spe": 110
 		},
@@ -835,6 +835,26 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"abilities": {
 			"0": "Chlorophyll",
+			"H": "Harvest"
+		},
+		"inherit": true
+	},
+	"exeggutoralola": {
+		"types": [
+			"Grass",
+			"Dragon"
+		],
+		"baseStats": {
+			"hp": 95,
+			"atk": 110,
+			"def": 90,
+			"spa": 130,
+			"spd": 80,
+			"spe": 40
+		},
+		"abilities": {
+			"0": "Frisk",
+			"1": "Hammer Time",
 			"H": "Harvest"
 		},
 		"inherit": true
@@ -3085,12 +3105,12 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Water"
 		],
 		"baseStats": {
-			"hp": 150,
+			"hp": 160,
 			"atk": 90,
 			"def": 45,
 			"spa": 90,
 			"spd": 45,
-			"spe": 60
+			"spe": 50
 		},
 		"abilities": {
 			"0": "Water Veil",
@@ -3885,9 +3905,9 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		],
 		"baseStats": {
 			"hp": 80,
-			"atk": 110,
+			"atk": 105,
 			"def": 71,
-			"spa": 110,
+			"spa": 105,
 			"spd": 71,
 			"spe": 108
 		},
@@ -3904,7 +3924,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Steel"
 		],
 		"baseStats": {
-			"hp": 89,
+			"hp": 94,
 			"atk": 86,
 			"def": 88,
 			"spa": 111,
@@ -3943,8 +3963,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Water"
 		],
 		"baseStats": {
-			"hp": 99,
-			"atk": 120,
+			"hp": 104,
+			"atk": 115,
 			"def": 75,
 			"spa": 70,
 			"spd": 75,
@@ -4328,7 +4348,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Flying"
 		],
 		"baseStats": {
-			"hp": 105,
+			"hp": 100,
 			"atk": 125,
 			"def": 52,
 			"spa": 105,
@@ -4387,7 +4407,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Psychic"
 		],
 		"baseStats": {
-			"hp": 67,
+			"hp": 72,
 			"atk": 89,
 			"def": 116,
 			"spa": 79,
@@ -4700,7 +4720,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Electric"
 		],
 		"baseStats": {
-			"hp": 80,
+			"hp": 75,
 			"atk": 123,
 			"def": 67,
 			"spa": 95,
@@ -4719,7 +4739,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Fire"
 		],
 		"baseStats": {
-			"hp": 80,
+			"hp": 75,
 			"atk": 95,
 			"def": 67,
 			"spa": 125,
@@ -5368,7 +5388,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"hp": 85,
 			"atk": 115,
 			"def": 85,
-			"spa": 85,
+			"spa": 115,
 			"spd": 60,
 			"spe": 103
 		},
@@ -6410,7 +6430,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"abilities": {
 			"0": "Defiant",
-			"1": "Inner Focus",
+			"1": "Sharpness",
 			"H": "Il Vaticano"
 		},
 		"inherit": true
@@ -6743,7 +6763,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"hp": 80,
 			"atk": 69,
 			"def": 72,
-			"spa": 115,
+			"spa": 119,
 			"spd": 100,
 			"spe": 104
 		},
@@ -9706,7 +9726,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Dragon"
 		],
 		"baseStats": {
-			"hp": 75,
+			"hp": 70,
 			"atk": 95,
 			"def": 115,
 			"spa": 120,
@@ -10136,25 +10156,6 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"inherit": true
 	},
-	"maushold": {
-		"types": [
-			"Normal"
-		],
-		"baseStats": {
-			"hp": 73,
-			"atk": 74,
-			"def": 69,
-			"spa": 64,
-			"spd": 74,
-			"spe": 110
-		},
-		"abilities": {
-			"0": "Friend Guard",
-			"1": "Cheek Pouch",
-			"H": "Technician"
-		},
-		"inherit": true
-	},
 	"mausholdfour": {
 		"types": [
 			"Normal"
@@ -10527,8 +10528,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Dark"
 		],
 		"baseStats": {
-			"hp": 75,
-			"atk": 108,
+			"hp": 80,
+			"atk": 113,
 			"def": 90,
 			"spa": 65,
 			"spd": 90,
@@ -10826,36 +10827,17 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"inherit": true
 	},
-	"dudunsparce": {
-		"types": [
-			"Normal"
-		],
-		"baseStats": {
-			"hp": 125,
-			"atk": 100,
-			"def": 80,
-			"spa": 85,
-			"spd": 75,
-			"spe": 55
-		},
-		"abilities": {
-			"0": "Serene Grace",
-			"1": "Just the Tip",
-			"H": "Rattled"
-		},
-		"inherit": true
-	},
 	"dudunsparcethreesegment": {
 		"types": [
 			"Normal"
 		],
 		"baseStats": {
-			"hp": 126,
-			"atk": 101,
-			"def": 81,
-			"spa": 86,
-			"spd": 76,
-			"spe": 56
+			"hp": 130,
+			"atk": 100,
+			"def": 80,
+			"spa": 85,
+			"spd": 75,
+			"spe": 55
 		},
 		"abilities": {
 			"0": "Serene Grace",
@@ -10899,7 +10881,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"abilities": {
 			"0": "Protosynthesis",
-			"H": "Guts"
+			"H": "Rampage"
 		},
 		"inherit": true
 	},

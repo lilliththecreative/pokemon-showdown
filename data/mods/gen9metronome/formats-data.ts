@@ -325,7 +325,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	},
 	"pawmot": {
 		"isNonstandard": null,
-		"tier": "UU"
+		"tier": "RU"
 	},
 	"arboliva": {
 		"isNonstandard": null,

@@ -117,16 +117,26 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		"isNonstandard": null,
 	},
 	rockblast: {
-		"inherit": true,
-		"accuracy": 95,
+		inherit: true,
+		accuracy: 95,
 	},
 	armthrust: {
-		"inherit": true,
+		inherit: true,
 		basePower: 25
+	},
+	clamp: {
+		inherit: true,
+		isNonstandard: null,
+		basePower: 25,
+		accuracy: 100,
+		volatileStatus: undefined,
+		multihit: [2, 5],
+		desc: "Hits two to five times. Has a 35% chance to hit two or three times and a 15% chance to hit four or five times. If one of the hits breaks the target's substitute, it will take damage for the remaining hits. If the user has the Skill Link Ability, this move will always hit five times.",
+		shortDesc: "Hits 2-5 times in one turn.",
 	},
 	"swagger": {
 		inherit: true,
-		"accuracy": 100,
+		"accuracy": 95,
 		isNonstandard: null
 	},
 	"falseswipe": {
@@ -601,7 +611,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 		target: "allAdjacentFoes",
-		shortDesc: "Lowers the both enemies' Spd by 1 and poisons."
+		shortDesc: "Lowers both enemies' Spe by 1 and poisons."
 	},
 	snatch: {
 		inherit: true,
@@ -726,6 +736,46 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			onTrapPokemon(pokemon) {
 				pokemon.tryTrap();
 			},
+		},
+	},
+	freezingglare: {
+		inherit: true,
+		shortDesc: "20% chance to frostbite, +Ice Type",
+		secondary: {chance: 20, status: 'fst'},
+		onEffectiveness(typeMod, target, type, move) {
+			return typeMod + this.dex.getEffectiveness('Ice', type);
+		},
+	},
+	thunderouskick: {
+		inherit: true,
+		shortDesc: "Lowers Def by 1, +Elec Type",
+		onEffectiveness(typeMod, target, type, move) {
+			return typeMod + this.dex.getEffectiveness('Electric', type);
+		},
+	},
+	fierywrath: {
+		inherit: true,
+		shortDesc: "20% to make foe(s) flinch, +Fire Type",
+		onEffectiveness(typeMod, target, type, move) {
+			return typeMod + this.dex.getEffectiveness('Fire', type);
+		},
+	},
+	lusterpurge: {
+		inherit: true,
+		isNonstandard: null,
+		shortDesc: "100% chance to reduce SpDef by 1",
+		basePower: 80,
+		secondary: {
+			chance: 100, boosts: {spd: -1},
+		},
+	},
+	mistball: {
+		inherit: true,
+		isNonstandard: null,
+		shortDesc: "100% chance to reduce SpA by 1",
+		basePower: 80,
+		secondary: {
+			chance: 100, boosts: {spa: -1},
 		},
 	},
 	// Moves edited for abilities
@@ -983,7 +1033,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 		isMax: false,
 		category: "Special",
-		basePower: 85,
+		basePower: 90,
 		shortDesc: "Foes: last move -2 PP.",
 	},
 	// Pledges
@@ -1035,11 +1085,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		shortDesc: "10% chance to frostbite.",
 		secondary: {chance: 10, status: 'fst'},
-	},
-	freezingglare: {
-		inherit: true,
-		shortDesc: "20% chance to frostbite.",
-		secondary: {chance: 20, status: 'fst'},
 	},
 	icepunch: {
 		inherit: true,
@@ -1156,24 +1201,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			}
 		},
 	},
-	clamp: {
-		num: 128,
-		accuracy: 100,
-		basePower: 25,
-		category: "Physical",
-		isNonstandard: null,
-		name: "Clamp",
-		pp: 15,
-		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
-		multihit: [2, 5],
-		secondary: null,
-		desc: "Hits two to five times. Has a 35% chance to hit two or three times and a 15% chance to hit four or five times. If one of the hits breaks the target's substitute, it will take damage for the remaining hits. If the user has the Skill Link Ability, this move will always hit five times.",
-		shortDesc: "Hits 2-5 times in one turn.",
-		target: "normal",
-		type: "Water",
-		contestType: "Tough",
-	},
 	// pp changes
 	flamethrower: {
 		inherit: true,
@@ -1197,6 +1224,14 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 	},
 	stalacbite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	divebomb: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	psychout: {
 		inherit: true,
 		isNonstandard: null,
 	},

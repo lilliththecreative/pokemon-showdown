@@ -7464,4 +7464,14 @@ export const MovesText: {[k: string]: MoveText} = {
 		shortDesc: "10% to lower Defence. 10% chance to flinch.",
 		desc: "10% chance to lower Defence by 1. 10% chance to flinch.",
 	},
+	divebomb: {
+		name: "Dive Bomb",
+		desc: "If this attack is not successful, the user loses half of its maximum HP, rounded down, as crash damage. Pokemon with the Magic Guard Ability are unaffected by crash damage.",
+		shortDesc: "User is hurt by 50% of its max HP if it misses.",
+	},
+	psychout: {
+		name: "Psych Out",
+		desc: "Has a 100% chance to make the target flinch. Fails unless it is the user's first turn on the field.",
+		shortDesc: "Hits first. First turn out only. 100% flinch chance.",
+	},
 };
