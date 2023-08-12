@@ -183,6 +183,16 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			},
 		},
 	},
+	futuresight: {
+		inherit: true,
+		isNonstandard: null,
+		basePower: 150,
+	},
+	doomdesire: {
+		inherit: true,
+		isNonstandard: null,
+		basePower: 150,
+	},
 	// Explosions
 	"mistyexplosion": {
 		inherit: true,
@@ -197,14 +207,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		"basePower": 275
 	},
-	"crabhammer": {
-		"inherit": true,
-		shortDesc: "High Crit Ratio, 30% chance to lower speed by 1.",
-		secondary: {
-			chance: 30,
-			boosts: {spe: -1},
-		},
-	},
+	// Regular Moves
 	payback: {
 		inherit: true,
 		basePowerCallback(pokemon, target) {
@@ -281,6 +284,128 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		type: "Fire",
 		isNonstandard: null
 	},
+	aurorabeam: {
+		inherit: true,
+		basePower: 80,
+	},
+	powder: {
+		inherit: true,
+		isNonstandard: null,
+		shortDesc: "If using a Fire move, target loses 1/2 max HP.",
+		condition: {
+			duration: 1,
+			onStart(target) {
+				this.add('-singleturn', target, 'Powder');
+			},
+			onTryMovePriority: -1,
+			onTryMove(pokemon, target, move) {
+				if (move.type === 'Fire') {
+					this.add('-activate', pokemon, 'move: Powder');
+					this.damage(this.clampIntRange(Math.round(pokemon.maxhp / 2), 1));
+					this.attrLastMove('[still]');
+					return false;
+				}
+			},
+		},
+	},
+	spark: {
+		inherit: true,
+		basePower: 75,
+	},
+	poisontail: {
+		inherit: true,
+		target: "allAdjacentFoes",
+		shortDesc: "Hits both foes, High Crit Rate, 10% to poison.",
+		basePower: 80,
+	},
+	feint: {
+		inherit: true,
+		basePower: 40
+	},
+	megapunch: {
+		inherit: true,
+		basePower: 90,
+		accuracy: 100
+	},
+	megakick: {
+		inherit: true,
+		basePower: 130,
+	},
+	twineedle: {
+		inherit: true,
+		isNonstandard: null,
+		basePower: 45,
+	},
+	wildcharge: {
+		inherit: true,
+		basePower: 100,
+	},
+	belch: {
+		inherit: true,
+		basePower: 130,
+		accuracy: 100,
+	},
+	moonblast: {
+		inherit: true,
+		isNonstandard: null,
+		basePower: 90,
+	},
+	aircutter: {
+		inherit: true,
+		isNonstandard: null,
+		basePower: 70,
+	},
+	doublekick: {
+		inherit: true,
+		basePower: 40,
+	},
+	shadowpunch: {
+		inherit: true,
+		basePower: 75,
+	},
+	steelwing: {
+		inherit: true,
+		isNonstandard: null,
+		basePower: 75,
+		accuracy: 95
+	},
+	rollingkick: {
+		inherit: true,
+		isNonstandard: null,
+		shortDesc: "100% chance to lower speed by 1.",
+		basePower: 70,
+		accuracy: 100,
+		secondary: {chance: 100, boosts: {spe: -1}},
+	},
+	frostbreath: {
+		inherit: true,
+		isNonstandard: null,
+		basePower: 55,
+		accuracy: 100
+	},
+	// Fang Buff
+	hyperfang: {
+		inherit: true,
+		basePower: 90,
+		accuracy: 100,
+	},
+	firefang: {
+		inherit: true,
+		basePower: 75
+	},
+	thunderfang: {
+		inherit: true,
+		basePower: 75
+	},
+	icefang: {
+		inherit: true,
+		basePower: 75,
+		shortDesc: "10% chance to frostbite. 10% to flinch.",
+		secondaries: [
+			{chance: 10, status: 'fst'},
+			{chance: 10, volatileStatus: 'flinch'},
+		],
+	},
 	// Some signature Moves
 	technoblast: {
 		inherit: true,
@@ -291,6 +416,14 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			if (!item.onDrive) return;
 			move.type = item.onDrive;
 		}
+	},
+	crabhammer: {
+		inherit: true,
+		shortDesc: "High Crit Ratio, 30% chance to lower speed by 1.",
+		secondary: {
+			chance: 30,
+			boosts: {spe: -1},
+		},
 	},
 	headcharge: {
 		inherit: true,
@@ -436,20 +569,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			},
 		},
 	},
-	spark: {
-		inherit: true,
-		basePower: 75,
-	},
-	poisontail: {
-		inherit: true,
-		target: "allAdjacentFoes",
-		shortDesc: "Hits both foes, High Crit Rate, 10% to poison.",
-		basePower: 80,
-	},
-	feint: {
-		inherit: true,
-		basePower: 40
-	},
 	doubleshock: {
 		inherit: true,
 		basePower: 130
@@ -457,28 +576,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	spiritshackle: {
 		inherit: true,
 		basePower: 95,
-	},
-	firefang: {
-		inherit: true,
-		basePower: 75
-	},
-	thunderfang: {
-		inherit: true,
-		basePower: 75
-	},
-	megapunch: {
-		inherit: true,
-		basePower: 90,
-		accuracy: 100
-	},
-	megakick: {
-		inherit: true,
-		basePower: 130,
-	},
-	twineedle: {
-		inherit: true,
-		isNonstandard: null,
-		basePower: 45,
 	},
 	present: {
 		inherit: true,
@@ -509,78 +606,24 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			}
 		},
 	},
-	wildcharge: {
-		inherit: true,
-		basePower: 100,
-	},
 	revelationdance: {
 		inherit: true,
 		basePower: 100,
 	},
-	doublekick: {
-		inherit: true,
-		basePower: 40,
-	},
-	shadowpunch: {
-		inherit: true,
-		basePower: 75,
-	},
 	volttackle: {
 		inherit: true,
 		basePower: 130,
-	},
-	belch: {
-		inherit: true,
-		basePower: 130,
-		accuracy: 100,
-	},
-	moonblast: {
-		inherit: true,
-		isNonstandard: null,
-		basePower: 90,
-	},
-	aircutter: {
-		inherit: true,
-		isNonstandard: null,
-		basePower: 70,
 	},
 	tripledive: {
 		inherit: true,
 		isNonstandard: null,
 		basePower: 80,
 	},
-	futuresight: {
-		inherit: true,
-		isNonstandard: null,
-		basePower: 150,
-	},
-	doomdesire: {
-		inherit: true,
-		isNonstandard: null,
-		basePower: 150,
-	},
 	geargrind: {
 		inherit: true,
 		isNonstandard: null,
 		basePower: 55,
 		accuracy: 90
-	},
-	steelwing: {
-		inherit: true,
-		isNonstandard: null,
-		basePower: 75,
-		accuracy: 95
-	},
-	rollingkick: {
-		inherit: true,
-		isNonstandard: null,
-		shortDesc: "100% chance to lower speed by 1.",
-		basePower: 70,
-		accuracy: 100,
-		secondary: {
-			chance: 100,
-			boosts: {spe: -1},
-		},
 	},
 	icehammer: {
 		inherit: true,
@@ -701,12 +744,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		onHit(target) {
 		},
 	},
-	frostbreath: {
-		inherit: true,
-		isNonstandard: null,
-		basePower: 55,
-		accuracy: 100
-	},
 	psychoshift: {
 		inherit: true,
 		isNonstandard: null,
@@ -778,6 +815,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			chance: 100, boosts: {spa: -1},
 		},
 	},
+	accelerock: {
+		inherit: true,
+		basePower: 60,
+	},
 	// Moves edited for abilities
 	auroraveil: {
 		inherit: true,
@@ -788,10 +829,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			duration: 5,
 			durationCallback(target, source, effect) {
 				let numTurns = 5;
-				if (source?.hasItem('lightclay')) {
-					numTurns += 3;
-				}
-				if (source?.hasAbility('trueaurora')) {
+				if (source?.hasItem('lightclay') || source?.hasAbility('trueaurora')) {
 					numTurns += 3;
 				}
 				return numTurns;
@@ -1090,15 +1128,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		shortDesc: "10% chance to frostbite.",
 		secondary: {chance: 10, status: 'fst'},
-	},
-	icefang: {
-		inherit: true,
-		basePower: 75,
-		shortDesc: "10% chance to frostbite. 10% to flinch.",
-		secondaries: [
-			{chance: 10, status: 'fst'},
-			{chance: 10, volatileStatus: 'flinch'},
-		],
 	},
 	// Recharge moves
 	hyperbeam: {
@@ -1434,10 +1463,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	powder: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	psychoboost: {
 		inherit: true,
 		isNonstandard: null,
@@ -1495,6 +1520,14 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 	},
 	wickedtorque: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	secretsword: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	skyuppercut: {
 		inherit: true,
 		isNonstandard: null,
 	},

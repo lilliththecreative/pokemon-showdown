@@ -231,19 +231,19 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 		},
 	},
-	quickfeet: {
-		inherit: true,
-		shortDesc: "1.5x speed if statused or has stat drops",
-		onModifySpe(spe, pokemon) {
-			if (pokemon.status) {
-				return this.chainModify(1.5);
-			}
-			let boost: BoostID;
-			for (boost in pokemon.boosts) {
-				if (pokemon.boosts[boost] < 0) return this.chainModify(1.5);
-			}
-		},
-	},
+	// quickfeet: {
+	// 	inherit: true,
+	// 	shortDesc: "1.5x speed if statused or has stat drops",
+	// 	onModifySpe(spe, pokemon) {
+	// 		if (pokemon.status) {
+	// 			return this.chainModify(1.5);
+	// 		}
+	// 		let boost: BoostID;
+	// 		for (boost in pokemon.boosts) {
+	// 			if (pokemon.boosts[boost] < 0) return this.chainModify(1.5);
+	// 		}
+	// 	},
+	// },
 	healer: {
 		inherit: true,
 		shortDesc: "Heals ally by 1/16th, Also 30% to heal ally status",
@@ -261,7 +261,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		shortDesc: "Immune to defense lowering, Omniboost if intimidated",
 		onTryBoost(boost, target, source, effect) {
-			// if (source && target === source) return;
+			if (source && target === source) return;
 			if (boost.def && boost.def < 0) {
 				delete boost.def;
 				if (!(effect as ActiveMove).secondaries && effect.id !== 'octolock') {
@@ -407,13 +407,13 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 				type = 'Electric';
 				break;
 			case 'Fire':
-				type = 'Water';
+				type = 'Fire';
 				break;
 			case 'Water':
-				type = 'Grass';
+				type = 'Water';
 				break;
 			case 'Grass':
-				type = 'Fire';
+				type = 'Grass';
 				break;
 			case 'Electric':
 				type = 'Ground';
@@ -617,26 +617,22 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 		},
 	},
-	// receiver: {
-	// 	inherit: true,
-	// 	shortDesc: "Inherits ability and boosts from ally faint",
-	// 	onAllyFaint(target, source, effect) {
-	// 		if (!this.effectState.target.hp) return;
-	// 		const ability = target.getAbility();
-	// 		const additionalBannedAbilities = [
-	// 			'noability', 'flowergift', 'forecast', 'hungerswitch', 'illusion', 'imposter', 'neutralizinggas', 'powerofalchemy', 'receiver', 'trace', 'wonderguard',
-	// 		];
-	// 		if (target.getAbility().isPermanent || additionalBannedAbilities.includes(target.ability)) return;
-	// 		if (this.effectState.target.setAbility(ability)) {
-	// 			let i: BoostID;
-	// 			for (i in target.boosts) {
-	// 				source.boosts[i] = target.boosts[i];
-	// 			}
-	// 			this.boost(target.boosts, source)
-	// 			this.add('-ability', this.effectState.target, ability, '[from] ability: Receiver', '[of] ' + target);
-	// 		}
-	// 	},
-	// },
+	receiver: {
+		inherit: true,
+		shortDesc: "Inherits ability and boosts from ally faint",
+		onAllyFaint(target, source, effect) {
+			if (!this.effectState.target.hp) return;
+			const ability = target.getAbility();
+			const additionalBannedAbilities = [
+				'noability', 'flowergift', 'forecast', 'hungerswitch', 'illusion', 'imposter', 'neutralizinggas', 'powerofalchemy', 'receiver', 'trace', 'wonderguard',
+			];
+			if (target.getAbility().isPermanent || additionalBannedAbilities.includes(target.ability)) return;
+			if (this.effectState.target.setAbility(ability)) {
+				this.boost(target.boosts, this.effectState.target, this.effectState.target);
+				this.add('-ability', this.effectState.target, ability, '[from] ability: Receiver', '[of] ' + target);
+			}
+		},
+	},
 	battlebond: {
 		inherit: true,
 		shortDesc: "After KOing a pokemon, Transform to Ash-Gren",
@@ -716,6 +712,53 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	emergencyexit: {
 		inherit: true,
 		shortDesc: "When reaches >= 50% HP, Immediately attacks and then switches out",
+		onEmergencyExit(target) {
+			if (!this.canSwitch(target.side) || target.forceSwitchFlag || target.switchFlag) return;
+			for (const action of this.queue.list as MoveAction[]) {
+				if (
+					!action.move || !action.pokemon?.isActive ||
+					action.pokemon.fainted || action.maxMove || action.zmove
+				) {
+					continue;
+				}
+				if (action.pokemon === target) {
+					this.add('-activate', target, 'ability: Emergency Exit');
+					this.queue.prioritizeAction(action);
+					(action.move.selfSwitch as boolean) = true;
+					break;
+				}
+			}
+			for (const side of this.sides) {
+				for (const active of side.active) {
+					active.switchFlag = false;
+				}
+			}
+		},
+	},
+	calmbeforestorm: {
+		inherit: true,
+		shortDesc: "When hit by water move or Rain is set up",
+		onWeatherChange(pokemon) {
+			if (!pokemon.isActive) return;
+			if (!pokemon.hp) return;
+			if (!this.canSwitch(pokemon.side) || pokemon.forceSwitchFlag || pokemon.switchFlag) return;
+			if (['raindance', 'primordialsea'].includes(pokemon.effectiveWeather())) {
+				for (const action of this.queue.list as MoveAction[]) {
+					if (
+						!action.move || !action.pokemon?.isActive ||
+						action.pokemon.fainted || action.maxMove || action.zmove
+					) {
+						continue;
+					}
+					if (action.pokemon === pokemon) {
+						this.add('-activate', pokemon, 'ability: Emergency Exit');
+						this.queue.prioritizeAction(action);
+						(action.move.selfSwitch as boolean) = true;
+						break;
+					}
+				}
+			}
+		},
 		onEmergencyExit(target) {
 			if (!this.canSwitch(target.side) || target.forceSwitchFlag || target.switchFlag) return;
 			for (const action of this.queue.list as MoveAction[]) {
@@ -883,7 +926,25 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 		},
 	},
-
+	schooling: {
+		inherit: true,
+		onResidual(pokemon) {
+			if (
+				pokemon.baseSpecies.baseSpecies !== 'Wishiwashi' || pokemon.level < 20 ||
+				pokemon.transformed || !pokemon.hp
+			) return;
+			this.heal(pokemon.baseMaxhp / 16);
+			if (pokemon.hp > pokemon.maxhp / 4) {
+				if (pokemon.species.id === 'wishiwashi') {
+					pokemon.formeChange('Wishiwashi-School');
+				}
+			} else {
+				if (pokemon.species.id === 'wishiwashischool') {
+					pokemon.formeChange('Wishiwashi');
+				}
+			}
+		},
+	},
 	angershell: {
 		onDamage(damage, target, source, effect) {
 		},
@@ -1276,10 +1337,15 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 		},
 	},
-	// Implemented in Aurora Veil
 	trueaurora: {
 		inherit: true,
 		isNonstandard: null,
+		// Implemented in Aurora Veil
+		onBasePower(relayVar, source, target, move) {
+			if (move.id === 'auroraveil') {
+				this.chainModify([3, 2]);
+			}
+		},
 	},
 	singularity: {
 		inherit: true,
@@ -1308,7 +1374,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 					const targets = ["allAdjacent", "allAdjacentFoes"];
 					if (moveAction.originalTarget === pokemon || targets.includes(moveAction.move.target)) {
 						this.add('-ability', moveAction.pokemon, "Cat's Cradle");
-						(moveAction.move.basePower as number) = moveAction.move.basePower * 2;
+						(moveAction.move.basePower as any) = moveAction.move.basePower * 2;
 						this.actions.runMove(moveAction.move, moveAction.pokemon, moveAction.targetLoc);
 						this.queue.list.splice(actionIndex, 1);
 						break;

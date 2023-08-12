@@ -2254,8 +2254,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	trueaurora: {
 		name: "True Aurora",
-		desc: "Can set up Aurora Veil outside of snow and it lasts 3 extra turns.",
-		shortDesc: "Can set up Aurora Veil outside of snow and it lasts 3 extra turns.",
+		desc: "Can set up Aurora Veil outside of snow and it lasts 3 extra turns, 1.5x Aurora Beam.",
+		shortDesc: "Aurora Veil: +3 turns, doesn't fail, 1.5x Aurora Beam ",
 	},
 	singularity: {
 		name: "Singularity",
