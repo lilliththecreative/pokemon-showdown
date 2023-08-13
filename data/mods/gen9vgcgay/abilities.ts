@@ -735,53 +735,6 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 		},
 	},
-	calmbeforestorm: {
-		inherit: true,
-		shortDesc: "When hit by water move or Rain is set up",
-		onWeatherChange(pokemon) {
-			if (!pokemon.isActive) return;
-			if (!pokemon.hp) return;
-			if (!this.canSwitch(pokemon.side) || pokemon.forceSwitchFlag || pokemon.switchFlag) return;
-			if (['raindance', 'primordialsea'].includes(pokemon.effectiveWeather())) {
-				for (const action of this.queue.list as MoveAction[]) {
-					if (
-						!action.move || !action.pokemon?.isActive ||
-						action.pokemon.fainted || action.maxMove || action.zmove
-					) {
-						continue;
-					}
-					if (action.pokemon === pokemon) {
-						this.add('-activate', pokemon, 'ability: Emergency Exit');
-						this.queue.prioritizeAction(action);
-						(action.move.selfSwitch as boolean) = true;
-						break;
-					}
-				}
-			}
-		},
-		onEmergencyExit(target) {
-			if (!this.canSwitch(target.side) || target.forceSwitchFlag || target.switchFlag) return;
-			for (const action of this.queue.list as MoveAction[]) {
-				if (
-					!action.move || !action.pokemon?.isActive ||
-					action.pokemon.fainted || action.maxMove || action.zmove
-				) {
-					continue;
-				}
-				if (action.pokemon === target) {
-					this.add('-activate', target, 'ability: Emergency Exit');
-					this.queue.prioritizeAction(action);
-					(action.move.selfSwitch as boolean) = true;
-					break;
-				}
-			}
-			for (const side of this.sides) {
-				for (const active of side.active) {
-					active.switchFlag = false;
-				}
-			}
-		},
-	},
 	corrosion: {
 		inherit: true,
 		shortDesc: "Can poison regardless of typing, Poison moves hit Steel.",
@@ -960,6 +913,25 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		name: "Anger Shell",
 		rating: 3,
 		num: 271,
+	},
+	curiousmedicine: {
+		inherit: true,
+		shortDesc: "On switch-in, all pokemon have their stat stages reset to 0.",
+		onStart(pokemon) {
+			for (const pokemon of this.getAllActive()) {
+				pokemon.clearBoosts();
+				this.add('-clearboost', pokemon, '[from] ability: Curious Medicine', '[of] ' + pokemon);
+			}
+		},
+	},
+	stancechange: {
+		inherit: true,
+		onModifyMove(move, attacker, defender) {
+			if (attacker.species.baseSpecies !== 'Aegislash' || attacker.transformed) return;
+			if (move.category === 'Status' && move.id !== 'kingsshield') return;
+			const targetForme = ((move.id === 'kingsshield' || move.id === 'behemothblade') ? 'Aegislash' : 'Aegislash-Blade');
+			if (attacker.species.name !== targetForme) attacker.formeChange(targetForme);
+		},
 	},
 	// Ruin Nerf
 	swordofruin: {
@@ -1559,5 +1531,65 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 				}
 			}
 		},
+	},
+	calmbeforestorm: {
+		inherit: true,
+		isNonstandard: null,
+		onWeatherChange(pokemon) {
+			if (!pokemon.isActive) return;
+			if (!pokemon.hp) return;
+			if (!this.canSwitch(pokemon.side) || pokemon.forceSwitchFlag || pokemon.switchFlag) return;
+			if (['raindance', 'primordialsea'].includes(pokemon.effectiveWeather())) {
+				for (const action of this.queue.list as MoveAction[]) {
+					if (
+						!action.move || !action.pokemon?.isActive ||
+						action.pokemon.fainted || action.maxMove || action.zmove
+					) {
+						continue;
+					}
+					if (action.pokemon === pokemon) {
+						this.add('-activate', pokemon, 'ability: Calm Before Storm');
+						this.queue.prioritizeAction(action);
+						(action.move.selfSwitch as boolean) = true;
+						break;
+					}
+				}
+			}
+		},
+		// onEmergencyExit(target) {
+		// 	if (!this.canSwitch(target.side) || target.forceSwitchFlag || target.switchFlag) return;
+		// 	for (const action of this.queue.list as MoveAction[]) {
+		// 		if (
+		// 			!action.move || !action.pokemon?.isActive ||
+		// 			action.pokemon.fainted || action.maxMove || action.zmove
+		// 		) {
+		// 			continue;
+		// 		}
+		// 		if (action.pokemon === target) {
+		// 			this.add('-activate', target, 'ability: Emergency Exit');
+		// 			this.queue.prioritizeAction(action);
+		// 			(action.move.selfSwitch as boolean) = true;
+		// 			break;
+		// 		}
+		// 	}
+		// 	for (const side of this.sides) {
+		// 		for (const active of side.active) {
+		// 			active.switchFlag = false;
+		// 		}
+		// 	}
+		// },
+	},
+	lavacrust: {
+		inherit: true,
+		isNonstandard: null,
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Water') {
+				if (!this.boost({def: 1})) {
+					this.add('-immune', target, '[from] ability: Lava Crist');
+				}
+				return null;
+			}
+		},
+		isBreakable: true,
 	},
 };

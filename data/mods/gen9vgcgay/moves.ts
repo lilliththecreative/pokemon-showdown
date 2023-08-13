@@ -432,8 +432,9 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	snipeshot: {
 		inherit: true,
+		shortDesc: "+2 critical hit ratio. Cannot be redirected.",
 		basePower: 75,
-		willCrit: true,
+		critRatio: 3,
 	},
 	spicyextract: {
 		inherit: true,
@@ -654,7 +655,16 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 		target: "allAdjacentFoes",
-		shortDesc: "Lowers both enemies' Spe by 1 and poisons."
+		shortDesc: "Lowers both enemies' Spe by 1 and poisons.",
+		onHit(target, source, move) {
+			const foe = source.side.foe;
+			foe.addSideCondition('toxicspikes');
+			// if (!foe.getSideCondition('toxicspikes')) {
+			// }
+			if (!foe.getSideCondition('stickyweb')) {
+				foe.addSideCondition('stickyweb');
+			}
+		},
 	},
 	snatch: {
 		inherit: true,
@@ -818,6 +828,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	accelerock: {
 		inherit: true,
 		basePower: 60,
+	},
+	attackorder: {
+		inherit: true,
+		accuracy: true,
 	},
 	// Moves edited for abilities
 	auroraveil: {
@@ -1528,6 +1542,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 	},
 	skyuppercut: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	purify: {
 		inherit: true,
 		isNonstandard: null,
 	},

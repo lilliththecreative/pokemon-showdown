@@ -2307,4 +2307,14 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "If user KOs with move, negative effects from that move are negated.",
 		shortDesc: "If user KOs with move, negative effects from that move are negated.",
 	},
+	calmbeforestorm: {
+		name: "Calm Before Storm",
+		shortDesc: "When hit by water move or Rain is set up, Attacks and switches",
+		desc: "When hit by water move or Rain is set up, Attacks and switches",
+	},
+	lavacrust: {
+		name: "Lava Crust",
+		desc: "This Pokemon's Defense is raised by 1 if hit by a Water move; Water immunity.",
+		shortDesc: "This Pokemon's Defense is raised by 1 if hit by a Water move; Water immunity.",
+	},
 };
