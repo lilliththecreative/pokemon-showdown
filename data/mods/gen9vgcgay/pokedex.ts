@@ -1671,7 +1671,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		],
 		"baseStats": {
 			"hp": 90,
-			"atk": 85,
+			"atk": 90,
 			"def": 80,
 			"spa": 85,
 			"spd": 80,
@@ -9079,8 +9079,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"abilities": {
 			"0": "Steam Engine",
-			"1": "Rocky Payload",
-			"H": "Flash Fire"
+			"1": "Magma Armor",
+			"H": "Rocky Payload"
 		},
 		"inherit": true
 	},

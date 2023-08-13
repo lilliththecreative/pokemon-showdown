@@ -433,8 +433,12 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	snipeshot: {
 		inherit: true,
 		shortDesc: "+2 critical hit ratio. Cannot be redirected.",
-		basePower: 75,
 		critRatio: 3,
+	},
+	shelter: {
+		inherit: true,
+		shortDesc: "Raises the user's Defense and Sp. Def by 1.",
+		boosts: {def: 1, spd: 1},
 	},
 	spicyextract: {
 		inherit: true,
@@ -524,10 +528,25 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	milkdrink: {
 		inherit: true,
-		shortDesc: "Heals the user by 100% of its max HP.",
+		isNonstandard: null,
+		shortDesc: "Heals Ally by 50% or self by 100%",
 		pp: 5,
-		heal: [1, 1],
-		isNonstandard: null
+		heal: null,
+		onHit(target, source) {
+			let healAmt = Math.floor(target.baseMaxhp * 0.5);
+			if (target === source) {
+				healAmt = target.baseMaxhp;
+			}
+			if (!this.heal(healAmt)) {
+				this.add('-immune', target);
+				return this.NOT_FAIL;
+			}
+		},
+		target: "adjacentAllyOrSelf",
+	},
+	originpulse: {
+		inherit: true,
+		basePower: 100,
 	},
 	shadowbone: {
 		inherit: true,
@@ -929,6 +948,30 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			onFieldEnd() {
 				this.add('-fieldend', 'move: Electric Terrain');
 			},
+		},
+	},
+	pollenpuff: {
+		inherit: true,
+		onHit(target, source) {
+			if (source.isAlly(target)) {
+				let healAmt = Math.floor(target.baseMaxhp * 0.5);
+				if (source.hasAbility('honeygather')) {
+					healAmt = Math.floor(target.baseMaxhp * 0.75);
+				}
+				if (!this.heal(healAmt)) {
+					this.add('-immune', target);
+					return this.NOT_FAIL;
+				}
+			}
+		},
+	},
+	superfang: {
+		inherit: true,
+		damageCallback(pokemon, target) {
+			if (pokemon.ability === 'strongjaw') {
+				return this.clampIntRange(target.getUndynamaxedHP() * 3 / 4, 1);
+			}
+			return this.clampIntRange(target.getUndynamaxedHP() / 2, 1);
 		},
 	},
 	// Z Moves
@@ -1546,6 +1589,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 	},
 	purify: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	bonemerang: {
 		inherit: true,
 		isNonstandard: null,
 	},

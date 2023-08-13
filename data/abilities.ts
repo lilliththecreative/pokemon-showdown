@@ -5393,4 +5393,10 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 3,
 		num: -33,
 	},
+	lavacrust: {
+		isNonstandard: "CAP",
+		name: "Lava Crust",
+		rating: 3,
+		num: -34,
+	},
 };

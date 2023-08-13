@@ -917,7 +917,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	curiousmedicine: {
 		inherit: true,
 		shortDesc: "On switch-in, all pokemon have their stat stages reset to 0.",
-		onStart(pokemon) {
+		onStart(source) {
 			for (const pokemon of this.getAllActive()) {
 				pokemon.clearBoosts();
 				this.add('-clearboost', pokemon, '[from] ability: Curious Medicine', '[of] ' + pokemon);
@@ -1556,28 +1556,24 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 				}
 			}
 		},
-		// onEmergencyExit(target) {
-		// 	if (!this.canSwitch(target.side) || target.forceSwitchFlag || target.switchFlag) return;
-		// 	for (const action of this.queue.list as MoveAction[]) {
-		// 		if (
-		// 			!action.move || !action.pokemon?.isActive ||
-		// 			action.pokemon.fainted || action.maxMove || action.zmove
-		// 		) {
-		// 			continue;
-		// 		}
-		// 		if (action.pokemon === target) {
-		// 			this.add('-activate', target, 'ability: Emergency Exit');
-		// 			this.queue.prioritizeAction(action);
-		// 			(action.move.selfSwitch as boolean) = true;
-		// 			break;
-		// 		}
-		// 	}
-		// 	for (const side of this.sides) {
-		// 		for (const active of side.active) {
-		// 			active.switchFlag = false;
-		// 		}
-		// 	}
-		// },
+		onDamagingHit(damage, target, source, move) {
+			if (move.type === 'Water') {
+				for (const action of this.queue.list as MoveAction[]) {
+					if (
+						!action.move || !action.pokemon?.isActive ||
+						action.pokemon.fainted || action.maxMove || action.zmove
+					) {
+						continue;
+					}
+					if (action.pokemon === target) {
+						this.add('-activate', target, 'ability: Calm Before Storm');
+						this.queue.prioritizeAction(action);
+						(action.move.selfSwitch as boolean) = true;
+						break;
+					}
+				}
+			}
+		},
 	},
 	lavacrust: {
 		inherit: true,
@@ -1585,7 +1581,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		onTryHit(target, source, move) {
 			if (target !== source && move.type === 'Water') {
 				if (!this.boost({def: 1})) {
-					this.add('-immune', target, '[from] ability: Lava Crist');
+					this.add('-immune', target, '[from] ability: Lava Crust');
 				}
 				return null;
 			}
