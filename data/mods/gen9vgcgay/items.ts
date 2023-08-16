@@ -83,39 +83,39 @@ export const Items: {[k: string]: ModdedItemData} = {
 		"inherit": true,
 		isNonstandard: null,
 	},
-	magmarizer: {
-		"inherit": true,
-		onModifySpAPriority: 1,
-		onModifySpA(spa, pokemon) {
-			if (pokemon.baseSpecies.baseSpecies === 'Magmortar') {
-				return this.chainModify(1.5);
-			}
-		},
-		itemUser: ["Magmortar"],
-		isNonstandard: null,
-	},
-	electirizer: {
-		"inherit": true,
-		onModifyAtkPriority: 1,
-		onModifyAtk(atk, pokemon) {
-			if (pokemon.baseSpecies.baseSpecies === 'Electivire') {
-				return this.chainModify(1.5);
-			}
-		},
-		itemUser: ["Electivire"],
-		isNonstandard: null,
-	},
-	protector: {
-		"inherit": true,
-		onModifyDefPriority: 1,
-		onModifyDef(def, pokemon) {
-			if (pokemon.baseSpecies.baseSpecies === 'Rhyperior') {
-				return this.chainModify(1.5);
-			}
-		},
-		itemUser: ["Rhyperior"],
-		isNonstandard: null,
-	},
+	// magmarizer: {
+	// 	"inherit": true,
+	// 	onModifySpAPriority: 1,
+	// 	onModifySpA(spa, pokemon) {
+	// 		if (pokemon.baseSpecies.baseSpecies === 'Magmortar') {
+	// 			return this.chainModify(1.5);
+	// 		}
+	// 	},
+	// 	itemUser: ["Magmortar"],
+	// 	isNonstandard: null,
+	// },
+	// electirizer: {
+	// 	"inherit": true,
+	// 	onModifyAtkPriority: 1,
+	// 	onModifyAtk(atk, pokemon) {
+	// 		if (pokemon.baseSpecies.baseSpecies === 'Electivire') {
+	// 			return this.chainModify(1.5);
+	// 		}
+	// 	},
+	// 	itemUser: ["Electivire"],
+	// 	isNonstandard: null,
+	// },
+	// protector: {
+	// 	"inherit": true,
+	// 	onModifyDefPriority: 1,
+	// 	onModifyDef(def, pokemon) {
+	// 		if (pokemon.baseSpecies.baseSpecies === 'Rhyperior') {
+	// 			return this.chainModify(1.5);
+	// 		}
+	// 	},
+	// 	itemUser: ["Rhyperior"],
+	// 	isNonstandard: null,
+	// },
 	dousedrive: {
 		"inherit": true,
 		isNonstandard: null,

@@ -319,7 +319,7 @@ export const Formats: FormatList = [
 		mod: 'gen5',
 		searchShow: true,
 		ruleset: ['[Gen 5] ZU'],
-		banlist: ['ZU', '7UBL'],
+		banlist: ['ZU', '7UBL', 'Heat Rock'],
 	},
 	{
 		name: "[Gen 5] 8U",
@@ -350,7 +350,7 @@ export const Formats: FormatList = [
 		mod: 'gen9',
 		searchShow: true,
 		ruleset: ['[Gen 9] ZU'],
-		banlist: ['ZU'],
+		banlist: ['ZU', 'ZUBL', 'SUBL'],
 	},
 	{
 		section: "S/V Singles",

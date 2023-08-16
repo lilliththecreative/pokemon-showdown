@@ -386,6 +386,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	// Fang Buff
 	hyperfang: {
 		inherit: true,
+		isNonstandard: null,
 		basePower: 90,
 		accuracy: 100,
 	},
@@ -577,6 +578,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 		shortDesc: "Hits both in sandstorm, 50% raise defense by 1",
 		target: "normal",
+		category: "Special",
 		onModifyMove(move, source, target) {
 			if (this.field.isWeather('sandstorm')) {
 				move.target = 'allAdjacentFoes';
@@ -584,9 +586,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		},
 		self: {
 			chance: 50,
-			boosts: {
-				def: 1,
-			},
+			boosts: {def: 1},
 		},
 	},
 	doubleshock: {
@@ -675,15 +675,15 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 		target: "allAdjacentFoes",
 		shortDesc: "Lowers both enemies' Spe by 1 and poisons.",
-		onHit(target, source, move) {
-			const foe = source.side.foe;
-			foe.addSideCondition('toxicspikes');
-			// if (!foe.getSideCondition('toxicspikes')) {
-			// }
-			if (!foe.getSideCondition('stickyweb')) {
-				foe.addSideCondition('stickyweb');
-			}
-		},
+		// onHit(target, source, move) {
+		// 	const foe = source.side.foe;
+		// 	foe.addSideCondition('toxicspikes');
+		// 	// if (!foe.getSideCondition('toxicspikes')) {
+		// 	// }
+		// 	if (!foe.getSideCondition('stickyweb')) {
+		// 		foe.addSideCondition('stickyweb');
+		// 	}
+		// },
 	},
 	snatch: {
 		inherit: true,
@@ -1593,6 +1593,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 	},
 	bonemerang: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	jumpkick: {
 		inherit: true,
 		isNonstandard: null,
 	},

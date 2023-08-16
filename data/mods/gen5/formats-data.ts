@@ -37,7 +37,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "NFE",
 	},
 	butterfree: {
-		tier: "7U",
+		tier: "7UBL",
 		doublesTier: "DUU",
 	},
 	weedle: {
@@ -1597,7 +1597,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		doublesTier: "DUU",
 	},
 	mothim: {
-		tier: "7U",
+		tier: "7UBL",
 		doublesTier: "DUU",
 	},
 	combee: {

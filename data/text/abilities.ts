@@ -2307,8 +2307,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "If user KOs with move, negative effects from that move are negated.",
 		shortDesc: "If user KOs with move, negative effects from that move are negated.",
 	},
-	calmbeforestorm: {
-		name: "Calm Before Storm",
+	calmb4storm: {
+		name: "Calm B4 Storm",
 		shortDesc: "When hit by water move or Rain is set up, Attacks and switches",
 		desc: "When hit by water move or Rain is set up, Attacks and switches",
 	},

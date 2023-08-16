@@ -3,7 +3,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "LC",
 	},
 	ivysaur: {
-		tier: "8U",
+		tier: "6U",
 	},
 	venusaur: {
 		tier: "UU",
@@ -411,7 +411,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "6U",
 	},
 	staryu: {
-		tier: "6U",
+		tier: "7U",
 	},
 	starmie: {
 		tier: "OU",
@@ -495,7 +495,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "PU",
 	},
 	porygon: {
-		tier: "6U",
+		tier: "7U",
 	},
 	porygon2: {
 		tier: "NU",
@@ -570,7 +570,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "9U",
 	},
 	croconaw: {
-		tier: "6U",
+		tier: "7U",
 	},
 	feraligatr: {
 		tier: "UU",
@@ -727,7 +727,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "UU",
 	},
 	shuckle: {
-		tier: "6U",
+		tier: "7U",
 	},
 	heracross: {
 		tier: "UUBL",
@@ -1018,7 +1018,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "8U",
 	},
 	illumise: {
-		tier: "6U",
+		tier: "7U",
 	},
 	budew: {
 		tier: "6U",
@@ -1066,7 +1066,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "9U",
 	},
 	trapinch: {
-		tier: "8U",
+		tier: "6U",
 	},
 	vibrava: {
 		tier: "6U",
@@ -1159,7 +1159,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "(OU)",
 	},
 	tropius: {
-		tier: "7U",
+		tier: "6U",
 	},
 	chingling: {
 		tier: "9U",
@@ -1189,7 +1189,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "PU",
 	},
 	clamperl: {
-		tier: "6U",
+		tier: "7U",
 	},
 	huntail: {
 		tier: "ZU",
@@ -1282,7 +1282,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "9U",
 	},
 	prinplup: {
-		tier: "7U",
+		tier: "6U",
 	},
 	empoleon: {
 		tier: "OU",
@@ -1363,7 +1363,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "LC",
 	},
 	cherrim: {
-		tier: "7U",
+		tier: "6U",
 	},
 	cherrimsunshine: {
 	},

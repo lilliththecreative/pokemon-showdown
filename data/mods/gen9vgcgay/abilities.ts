@@ -756,7 +756,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	windrider: {
 		inherit: true,
-		shortDesc: "Attack raised by 2 if hit by a wind move or Tailwind begins. Wind move immunity.",
+		shortDesc: "+1 Atk when Tailwind begins, +2 Attack if hit by a wind move. Wind move immunity.",
 		onStart(pokemon) {
 			if (pokemon.side.sideConditions['tailwind']) {
 				this.boost({atk: 2}, pokemon, pokemon);
@@ -924,12 +924,70 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 		},
 	},
+	analytic: {
+		inherit: true,
+		shortDesc: "1.3x power and 1.1x accuracy if it is the last to move in a turn.",
+		onModifyAccuracyPriority: -2,
+		onModifyAccuracy(accuracy, target, source, move) {
+			if (typeof accuracy !== 'number') return;
+			let boosted = true;
+			for (const pokemon of this.getAllActive()) {
+				if (pokemon === source) continue;
+				if (this.queue.willMove(pokemon)) {
+					boosted = false;
+					break;
+				}
+			}
+			if (boosted) {
+				return this.chainModify([11, 10]);
+			}
+		},
+	},
+	sandveil: {
+		inherit: true,
+		shortDesc: "1.2x Defense in Sandstorm",
+		onModifyAccuracy(accuracy) {
+		},
+		onModifyDefPriority: 6,
+		onModifyDef(def) {
+			if (this.field.isWeather('sandstorm')) {
+				return this.chainModify(1.2);
+			}
+		},
+	},
+	snowcloak: {
+		inherit: true,
+		shortDesc: "1.2x Special Defense in Snow",
+		onModifyAccuracy(accuracy) {
+		},
+		onModifySpDPriority: 6,
+		onModifySpD(spd) {
+			if (this.field.isWeather(['hail', 'snow'])) {
+				return this.chainModify(1.2);
+			}
+		},
+	},
+	defeatist: {
+		inherit: true,
+		shortDesc: "While this Pokemon has > 1/3 max HP, its Attack and Sp. Atk are halved.",
+		onModifyAtk(atk, pokemon) {
+			if (pokemon.hp <= pokemon.maxhp / 3) {
+				return this.chainModify(0.5);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, pokemon) {
+			if (pokemon.hp <= pokemon.maxhp / 3) {
+				return this.chainModify(0.5);
+			}
+		},
+	},
 	stancechange: {
 		inherit: true,
 		onModifyMove(move, attacker, defender) {
 			if (attacker.species.baseSpecies !== 'Aegislash' || attacker.transformed) return;
 			if (move.category === 'Status' && move.id !== 'kingsshield') return;
-			const targetForme = ((move.id === 'kingsshield' || move.id === 'behemothblade') ? 'Aegislash' : 'Aegislash-Blade');
+			const targetForme = ((move.id === 'kingsshield' || move.id === 'behemothbash') ? 'Aegislash' : 'Aegislash-Blade');
 			if (attacker.species.name !== targetForme) attacker.formeChange(targetForme);
 		},
 	},
@@ -1532,7 +1590,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 		},
 	},
-	calmbeforestorm: {
+	calmb4storm: {
 		inherit: true,
 		isNonstandard: null,
 		onWeatherChange(pokemon) {
