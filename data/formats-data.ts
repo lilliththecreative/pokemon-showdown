@@ -185,6 +185,8 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	pikachu: {
 		tier: "ZU",
+		doublesTier: "NFE",
+		natDexTier: "RU",
 	},
 	pikachucosplay: {
 		isNonstandard: "Past",
@@ -5821,7 +5823,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	kingambit: {
 		tier: "OU",
 		doublesTier: "DOU",
-		natDexTier: "OU",
+		natDexTier: "Uber",
 	},
 	clodsire: {
 		tier: "OU",
@@ -6126,6 +6128,14 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	saharaja: {
 		isNonstandard: "CAP",
 		tier: "CAP",
+	},
+	ababo: {
+		isNonstandard: "CAP",
+		tier: "CAP LC",
+	},
+	scattervein: {
+		isNonstandard: "CAP",
+		tier: "CAP NFE",
 	},
 	hemogoblin: {
 		isNonstandard: "CAP",
