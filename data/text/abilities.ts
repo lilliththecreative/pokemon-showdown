@@ -2309,8 +2309,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	calmb4storm: {
 		name: "Calm B4 Storm",
-		shortDesc: "When hit by water move or Rain is set up, Attacks and switches",
-		desc: "When hit by water move or Rain is set up, Attacks and switches",
+		shortDesc: "When hit by water move or Rain is set up, Attacks and switches.",
+		desc: "When hit by water move or Rain is set up, Attacks and switches.",
 	},
 	lavacrust: {
 		name: "Lava Crust",

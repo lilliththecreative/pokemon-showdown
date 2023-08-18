@@ -177,6 +177,13 @@ export const Formats: FormatList = [
 		banlist: ['8U', '9UBL'],
 	},
 	{
+		name: "[Gen 4] Lol",
+		mod: 'gen4',
+		searchShow: true,
+		ruleset: ['[Gen 4] 9U'],
+		banlist: ['9U', '10UBL', '10U', '11UBL', 'NFE', 'LC'],
+	},
+	{
 		section: "Gen 1 Lower Tiers",
 	},
 	{
@@ -344,6 +351,13 @@ export const Formats: FormatList = [
 		searchShow: true,
 		ruleset: ['[Gen 7] ZU'],
 		banlist: ['ZU', '7UBL'],
+	},
+	{
+		name: "[Gen 8] SU",
+		mod: 'gen8',
+		searchShow: true,
+		ruleset: ['[Gen 8] ZU'],
+		banlist: ['ZU', 'ZUBL', 'SUBL'],
 	},
 	{
 		name: "[Gen 9] SU",

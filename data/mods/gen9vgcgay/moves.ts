@@ -776,7 +776,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	psychoshift: {
 		inherit: true,
 		isNonstandard: null,
-		shortDesc: "Transfers the user's status ailment to the target. Cures Ally Status.",
+		shortDesc: "Transfers user's status to the target. Cures Ally Status.",
 		onTryHit(target, source, move) {
 			if (!source.status) return false;
 			move.status = source.status;

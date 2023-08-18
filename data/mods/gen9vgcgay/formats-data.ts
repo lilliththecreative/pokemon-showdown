@@ -1132,12 +1132,12 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"tier": "Illegal"
 	},
 	"slowking": {
-		"isNonstandard": null,
-		"tier": "OU"
-	},
-	"slowkinggalar": {
 		"isNonstandard": "Past",
 		"tier": "Illegal"
+	},
+	"slowkinggalar": {
+		"isNonstandard": null,
+		"tier": "OU"
 	},
 	"misdreavus": {
 		"isNonstandard": "Past",
@@ -2872,12 +2872,12 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"tier": "Illegal"
 	},
 	"darmanitan": {
-		"isNonstandard": null,
-		"tier": "OU"
+		"isNonstandard": "Past",
+		"tier": "Illegal"
 	},
 	"darmanitanzen": {
-		"isNonstandard": null,
-		"tier": "OU"
+		"isNonstandard": "Past",
+		"tier": "Illegal"
 	},
 	"darmanitangalar": {
 		"isNonstandard": null,
