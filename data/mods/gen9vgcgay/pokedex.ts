@@ -2039,11 +2039,11 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Poison"
 		],
 		"baseStats": {
-			"hp": 90,
+			"hp": 85,
 			"atk": 95,
 			"def": 90,
 			"spa": 55,
-			"spd": 80,
+			"spd": 75,
 			"spe": 85
 		},
 		"abilities": {
@@ -2062,11 +2062,11 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Poison"
 		],
 		"baseStats": {
-			"hp": 90,
+			"hp": 85,
 			"atk": 95,
 			"def": 90,
 			"spa": 55,
-			"spd": 80,
+			"spd": 75,
 			"spe": 85
 		},
 		"abilities": {
@@ -2744,11 +2744,11 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		],
 		"baseStats": {
 			"hp": 80,
-			"atk": 60,
-			"def": 62,
-			"spa": 100,
-			"spd": 82,
-			"spe": 80
+			"atk": 65,
+			"def": 67,
+			"spa": 105,
+			"spd": 87,
+			"spe": 90
 		},
 		"abilities": {
 			"0": "Intimidate",
@@ -3229,14 +3229,15 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		],
 		"baseStats": {
 			"hp": 80,
-			"atk": 120,
-			"def": 70,
-			"spa": 120,
-			"spd": 70,
+			"atk": 130,
+			"def": 65,
+			"spa": 130,
+			"spd": 65,
 			"spe": 60
 		},
 		"abilities": {
 			"0": "Sand Veil",
+			"1": "Grassy Surge",
 			"H": "Water Absorb"
 		},
 		"inherit": true
@@ -3364,7 +3365,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		],
 		"baseStats": {
 			"hp": 73,
-			"atk": 125,
+			"atk": 130,
 			"def": 90,
 			"spa": 90,
 			"spd": 60,
@@ -3950,11 +3951,11 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Flying"
 		],
 		"baseStats": {
-			"hp": 95,
+			"hp": 85,
 			"atk": 130,
-			"def": 70,
+			"def": 75,
 			"spa": 50,
-			"spd": 60,
+			"spd": 65,
 			"spe": 110
 		},
 		"abilities": {
@@ -4439,7 +4440,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"hp": 86,
 			"atk": 70,
 			"def": 55,
-			"spa": 107,
+			"spa": 112,
 			"spd": 52,
 			"spe": 106
 		},
@@ -4632,7 +4633,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Ice"
 		],
 		"baseStats": {
-			"hp": 70,
+			"hp": 75,
 			"atk": 125,
 			"def": 65,
 			"spa": 45,
@@ -5723,18 +5724,19 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	},
 	"maractus": {
 		"types": [
-			"Grass"
+			"Grass",
+			"Fairy"
 		],
 		"baseStats": {
 			"hp": 85,
-			"atk": 96,
+			"atk": 91,
 			"def": 77,
-			"spa": 116,
+			"spa": 115,
 			"spd": 77,
-			"spe": 70
+			"spe": 65
 		},
 		"abilities": {
-			"0": "Water Absorb",
+			"0": "Rough Skin",
 			"1": "Chlorophyll",
 			"H": "Storm Drain"
 		},
@@ -5930,7 +5932,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	},
 	"gothitelle": {
 		"types": [
-			"Psychic"
+			"Psychic",
+			"Dark"
 		],
 		"baseStats": {
 			"hp": 70,
@@ -6011,12 +6014,12 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Grass"
 		],
 		"baseStats": {
-			"hp": 85,
+			"hp": 90,
 			"atk": 105,
 			"def": 75,
 			"spa": 65,
 			"spd": 75,
-			"spe": 100
+			"spe": 110
 		},
 		"abilities": {
 			"0": "Chlorophyll",
@@ -7430,12 +7433,12 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Dragon"
 		],
 		"baseStats": {
-			"hp": 85,
+			"hp": 90,
 			"atk": 70,
 			"def": 80,
 			"spa": 97,
 			"spd": 80,
-			"spe": 123
+			"spe": 128
 		},
 		"abilities": {
 			"0": "Frisk",
@@ -8051,10 +8054,10 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Water"
 		],
 		"baseStats": {
-			"hp": 85,
-			"atk": 60,
+			"hp": 90,
+			"atk": 220,
 			"def": 130,
-			"spa": 30,
+			"spa": 25,
 			"spd": 130,
 			"spe": 5
 		},

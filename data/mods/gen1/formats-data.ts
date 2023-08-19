@@ -81,7 +81,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "6U",
 	},
 	sandslash: {
-		tier: "PU",
+		tier: "ZUBL",
 	},
 	nidoranf: {
 		tier: "9U",
@@ -174,7 +174,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "9U",
 	},
 	arcanine: {
-		tier: "PU",
+		tier: "ZUBL",
 	},
 	poliwag: {
 		tier: "ZU",

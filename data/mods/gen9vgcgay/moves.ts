@@ -1,7 +1,7 @@
 export const Moves: {[k: string]: ModdedMoveData} = {
 	struggle: {
 		inherit: true,
-		basePower: 80,
+		basePower: 90,
 	},
 	// Sleep Nerf
 	spore: {
@@ -218,6 +218,16 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			return 100;
 		},
 	},
+	growth: {
+		inherit: true,
+		shortDesc: "User's Atk and SpA +1; +2 in Sun/Grassy Terrain.",
+		onModifyMove(move, pokemon) {
+			if (['sunnyday', 'desolateland'].includes(pokemon.effectiveWeather()) ||
+				this.field.isTerrain('grassyterrain') && pokemon.isGrounded()) {
+				move.boosts = {atk: 2, spa: 2};
+			}
+		},
+	},
 	gunkshot: {
 		inherit: true,
 		accuracy: 85,
@@ -417,6 +427,11 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			if (!item.onDrive) return;
 			move.type = item.onDrive;
 		}
+	},
+	needlearm: {
+		inherit: true,
+		isNonstandard: null,
+		basePower: 80
 	},
 	crabhammer: {
 		inherit: true,

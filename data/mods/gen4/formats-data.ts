@@ -877,7 +877,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "8U",
 	},
 	cascoon: {
-		tier: "NFE",
+		tier: "11U",
 	},
 	dustox: {
 		tier: "6U",

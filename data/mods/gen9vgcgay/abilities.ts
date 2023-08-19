@@ -327,6 +327,49 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 		},
 	},
+	analytic: {
+		inherit: true,
+		shortDesc: "1.3x power and 1.1x accuracy if it is the last to move in a turn.",
+		onModifyAccuracyPriority: -2,
+		onModifyAccuracy(accuracy, target, source, move) {
+			if (typeof accuracy !== 'number') return;
+			let boosted = true;
+			for (const pokemon of this.getAllActive()) {
+				if (pokemon === source) continue;
+				if (this.queue.willMove(pokemon)) {
+					boosted = false;
+					break;
+				}
+			}
+			if (boosted) {
+				return this.chainModify([11, 10]);
+			}
+		},
+	},
+	sandveil: {
+		inherit: true,
+		shortDesc: "1.2x Defense in Sandstorm. Immune to Sandstorm.",
+		onModifyAccuracy(accuracy) {
+		},
+		onModifyDefPriority: 6,
+		onModifyDef(def) {
+			if (this.field.isWeather('sandstorm')) {
+				return this.chainModify(1.2);
+			}
+		},
+	},
+	snowcloak: {
+		inherit: true,
+		shortDesc: "1.2x Special Defense in Snow",
+		onModifyAccuracy(accuracy) {
+		},
+		onModifySpDPriority: 6,
+		onModifySpD(spd) {
+			if (this.field.isWeather(['hail', 'snow'])) {
+				return this.chainModify(1.2);
+			}
+		},
+	},
 	// Signature Ability Buffs
 	galewings: {
 		inherit: true,
@@ -924,46 +967,19 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 		},
 	},
-	analytic: {
+	cottondown: {
 		inherit: true,
-		shortDesc: "1.3x power and 1.1x accuracy if it is the last to move in a turn.",
-		onModifyAccuracyPriority: -2,
-		onModifyAccuracy(accuracy, target, source, move) {
-			if (typeof accuracy !== 'number') return;
-			let boosted = true;
+		shortDesc: "If this Pokemon is hit, gets +1 Def, All other Pokemon: -1 Speed",
+		onDamagingHit(damage, target, source, move) {
+			let activated = false;
 			for (const pokemon of this.getAllActive()) {
-				if (pokemon === source) continue;
-				if (this.queue.willMove(pokemon)) {
-					boosted = false;
-					break;
+				if (pokemon === target || pokemon.fainted) continue;
+				if (!activated) {
+					this.add('-ability', target, 'Cotton Down');
+					this.boost({def: 1}, target, target);
+					activated = true;
 				}
-			}
-			if (boosted) {
-				return this.chainModify([11, 10]);
-			}
-		},
-	},
-	sandveil: {
-		inherit: true,
-		shortDesc: "1.2x Defense in Sandstorm",
-		onModifyAccuracy(accuracy) {
-		},
-		onModifyDefPriority: 6,
-		onModifyDef(def) {
-			if (this.field.isWeather('sandstorm')) {
-				return this.chainModify(1.2);
-			}
-		},
-	},
-	snowcloak: {
-		inherit: true,
-		shortDesc: "1.2x Special Defense in Snow",
-		onModifyAccuracy(accuracy) {
-		},
-		onModifySpDPriority: 6,
-		onModifySpD(spd) {
-			if (this.field.isWeather(['hail', 'snow'])) {
-				return this.chainModify(1.2);
+				this.boost({spe: -1}, pokemon, target, null, true);
 			}
 		},
 	},

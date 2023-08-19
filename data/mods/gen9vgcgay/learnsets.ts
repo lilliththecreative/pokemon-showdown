@@ -55570,6 +55570,15 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"terablast": [
 				"9M"
+			],
+			"ancientpower": [
+				"9M"
+			],
+			"cosmicpower": [
+				"9M"
+			],
+			"storedpower": [
+				"9M"
 			]
 		}
 	},
@@ -78964,6 +78973,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"5L54",
 				"4L54",
 				"3L53"
+			],
+			"flipturn": [
+				"9M"
 			]
 		}
 	},
@@ -93470,6 +93482,15 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"4T"
 			],
 			"zenheadbutt": [
+				"9M"
+			],
+			"grassyglide": [
+				"9M"
+			],
+			"machpunch": [
+				"9M"
+			],
+			"vacuumwave": [
 				"9M"
 			]
 		}
@@ -153133,6 +153154,18 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"terablast": [
 				"9M"
+			],
+			"followme": [
+				"9M"
+			],
+			"moonblast": [
+				"9M"
+			],
+			"fairywind": [
+				"9M"
+			],
+			"charm": [
+				"9M"
 			]
 		}
 	},
@@ -159196,6 +159229,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"blazekick": [
+				"9M"
+			],
+			"rockslide": [
 				"9M"
 			]
 		}
@@ -193365,12 +193401,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"watersport": [
 				"7L1"
 			],
-			"hiddenpower": [
-				"9M"
-			],
-			"terablast": [
-				"9M"
-			],
 			"allyswitch": [
 				"9M"
 			],
@@ -219612,6 +219642,12 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"hiddenpower": [
+				"9M"
+			],
+			"echoedvoice": [
+				"9M"
+			],
+			"eeriespell": [
 				"9M"
 			]
 		}
