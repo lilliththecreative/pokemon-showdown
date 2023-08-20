@@ -88,6 +88,22 @@ export const Formats: FormatList = [
 		],
 	},
 	{
+		name: "[Gen 9] Metronome FFA Ubers",
+		mod: 'gen9metronome',
+		gameType: 'freeforall',
+		rated: false,
+		tournamentShow: false,
+		ruleset: ['Standard', '!Evasion Items Clause', 'Item Clause'],
+		banlist: [
+			'Moody', 'Shadow Tag', 'Toxic Debris', 'Regenerator>1'
+		],
+		onValidateSet(set) {
+			if (set.moves.length !== 1 || this.dex.moves.get(set.moves[0]).id !== 'metronome') {
+				return [`${set.name || set.species} has illegal moves.`, `(Pok\u00e9mon can only have one Metronome in their moveset)`];
+			}
+		},
+	},
+	{
 		name: "[Gen 9] Metronome FFA OU",
 		mod: 'gen9metronome',
 		gameType: 'freeforall',
@@ -95,7 +111,7 @@ export const Formats: FormatList = [
 		tournamentShow: false,
 		ruleset: ['Standard', '!Evasion Items Clause', 'Item Clause'],
 		banlist: [
-			'Moody', 'Shadow Tag', 'Toxic Debris', 'Regenerator>1',
+			'Moody', 'Shadow Tag', 'Toxic Debris', 'Regenerator>1', 'Ubers'
 		],
 		onValidateSet(set) {
 			if (set.moves.length !== 1 || this.dex.moves.get(set.moves[0]).id !== 'metronome') {
@@ -139,14 +155,14 @@ export const Formats: FormatList = [
 		section: "Gen 4 Lower Tiers",
 	},
 	{
-		name: "[Gen 4] 6U",
+		name: "[Gen 4] SU",
 		threads: [
 			`&bullet; <a href="https://docs.google.com/document/d/12yUO1jg2NGDvVynDbc3oUupXx7K0i0jwRmfRJ76f_Jg">DPP 6U</a>`,
 		],
 		mod: 'gen4',
 		searchShow: true,
 		ruleset: ['[Gen 4] ZU'],
-		banlist: ['ZU', '6UBL'],
+		banlist: ['ZU', 'SUBL'],
 	},
 	{
 		name: "[Gen 4] 7U",
@@ -155,8 +171,8 @@ export const Formats: FormatList = [
 		],
 		mod: 'gen4',
 		searchShow: true,
-		ruleset: ['[Gen 4] 6U'],
-		banlist: ['6U', '7UBL'],
+		ruleset: ['[Gen 4] SU'],
+		banlist: ['SU', '7UBL'],
 		unbanlist: ['Damp Rock'],
 	},
 	{
@@ -194,18 +210,18 @@ export const Formats: FormatList = [
 		banlist: ['PU'],
 	},
 	{
-		name: "[Gen 1] 6U",
+		name: "[Gen 1] SU",
 		mod: 'gen1',
 		searchShow: true,
 		ruleset: ['[Gen 1] ZU', 'APT Clause'],
-		banlist: ['ZU', '6UBL', 'Confuse Ray'],
+		banlist: ['ZU', 'SUBL', 'Confuse Ray'],
 	},
 	{
 		name: "[Gen 1] 7U",
 		mod: 'gen1',
 		searchShow: true,
-		ruleset: ['[Gen 1] 6U'],
-		banlist: ['6U', '7UBL'],
+		ruleset: ['[Gen 1] SU'],
+		banlist: ['SU', '7UBL'],
 	},
 	{
 		name: "[Gen 1] 8U",
@@ -253,18 +269,18 @@ export const Formats: FormatList = [
 		banlist: ['PU'],
 	},
 	{
-		name: "[Gen 2] 6U",
+		name: "[Gen 2] SU",
 		mod: 'gen2',
 		searchShow: true,
 		ruleset: ['[Gen 2] ZU'],
-		banlist: ['ZU', '6UBL'],
+		banlist: ['ZU', 'SUBL'],
 	},
 	{
 		name: "[Gen 2] 7U",
 		mod: 'gen2',
 		searchShow: true,
-		ruleset: ['[Gen 2] 6U'],
-		banlist: ['6U', '7UBL'],
+		ruleset: ['[Gen 2] SU'],
+		banlist: ['SU', '7UBL'],
 	},
 	{
 		name: "[Gen 2] 8U",
@@ -298,18 +314,18 @@ export const Formats: FormatList = [
 		banlist: ['PU'],
 	},
 	{
-		name: "[Gen 3] 6U",
+		name: "[Gen 3] SU",
 		mod: 'gen3',
 		searchShow: true,
 		ruleset: ['[Gen 3] ZU'],
-		banlist: ['ZU', '6UBL'],
+		banlist: ['ZU', 'SUBL'],
 	},
 	{
 		name: "[Gen 3] 7U",
 		mod: 'gen3',
 		searchShow: true,
-		ruleset: ['[Gen 3] 6U'],
-		banlist: ['6U', '7UBL'],
+		ruleset: ['[Gen 3] SU'],
+		banlist: ['SU', '7UBL'],
 	},
 	{
 		name: "[Gen 3] Lol",
@@ -322,49 +338,49 @@ export const Formats: FormatList = [
 		section: "Gen 5 Lower Tiers",
 	},
 	{
-		name: "[Gen 5] 7U",
+		name: "[Gen 5] SU",
 		mod: 'gen5',
 		searchShow: true,
 		ruleset: ['[Gen 5] ZU'],
-		banlist: ['ZU', '7UBL', 'Heat Rock'],
+		banlist: ['ZU', 'SUBL', 'Heat Rock'],
 	},
 	{
 		name: "[Gen 5] 8U",
 		mod: 'gen5',
 		searchShow: true,
-		ruleset: ['[Gen 5] 7U'],
-		banlist: ['7U', '8UBL'],
+		ruleset: ['[Gen 5] SU'],
+		banlist: ['SU', '8UBL'],
 	},
 	{
 		section: "Alt Lower Tiers",
 	},
 	{
-		name: "[Gen 6] 7U",
+		name: "[Gen 6] SU",
 		mod: 'gen6',
 		searchShow: true,
 		ruleset: ['[Gen 6] ZU'],
-		banlist: ['ZU', '7UBL'],
+		banlist: ['ZU', 'SUBL'],
 	},
 	{
 		name: "[Gen 7] SU",
 		mod: 'gen7',
 		searchShow: true,
 		ruleset: ['[Gen 7] ZU'],
-		banlist: ['ZU', '7UBL'],
+		banlist: ['ZU', 'SUBL'],
 	},
 	{
 		name: "[Gen 8] SU",
 		mod: 'gen8',
 		searchShow: true,
 		ruleset: ['[Gen 8] ZU'],
-		banlist: ['ZU', 'ZUBL', 'SUBL'],
+		banlist: ['ZU', 'SUBL'],
 	},
 	{
 		name: "[Gen 9] SU",
 		mod: 'gen9',
 		searchShow: true,
 		ruleset: ['[Gen 9] ZU'],
-		banlist: ['ZU', 'ZUBL', 'SUBL'],
+		banlist: ['ZU', 'SUBL'],
 	},
 	{
 		section: "S/V Singles",
