@@ -21791,4 +21791,81 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Psychic",
 		contestType: "Cute",
 	},
+	quarry: {
+		num: 392,
+		isNonstandard: "CAP",
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Quarry",
+		pp: 20,
+		priority: 0,
+		flags: {snatch: 1},
+		volatileStatus: 'quarry',
+		condition: {
+			onStart(pokemon) {
+				this.add('-start', pokemon, 'Quarry');
+			},
+			onResidualOrder: 6,
+			onResidual(pokemon) {
+				this.heal(pokemon.baseMaxhp / 8);
+			},
+		},
+		secondary: null,
+		target: "self",
+		type: "Rock",
+		zMove: {boost: {def: 1}},
+		contestType: "Beautiful",
+	},
+	smeltery: {
+		num: 392,
+		isNonstandard: "CAP",
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Smeltery",
+		pp: 20,
+		priority: 0,
+		flags: {snatch: 1},
+		volatileStatus: 'Smeltery',
+		condition: {
+			onStart(pokemon) {
+				this.add('-start', pokemon, 'Smeltery');
+			},
+			onResidualOrder: 6,
+			onResidual(pokemon) {
+				this.heal(pokemon.baseMaxhp / 8);
+			},
+		},
+		secondary: null,
+		target: "self",
+		type: "Steel",
+		zMove: {boost: {def: 1}},
+		contestType: "Beautiful",
+	},
+	icerink: {
+		num: 392,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Ice Rink",
+		pp: 20,
+		priority: 0,
+		flags: {snatch: 1},
+		volatileStatus: 'Ice Rink',
+		condition: {
+			onStart(pokemon) {
+				this.add('-start', pokemon, 'Ice Rink');
+			},
+			onResidualOrder: 6,
+			onResidual(pokemon) {
+				this.heal(pokemon.baseMaxhp / 8);
+			},
+		},
+		secondary: null,
+		target: "self",
+		type: "Ice",
+		zMove: {boost: {def: 1}},
+		contestType: "Beautiful",
+	},
 };

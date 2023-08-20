@@ -502,7 +502,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		shortDesc: "Hits both opponents. 20% chance to frostbite.",
 		isNonstandard: null,
-		basePower: 90,
+		accuracy: 90,
 		secondary: {chance: 20, status: 'fst'},
 	},
 	gravapple: {
@@ -1320,6 +1320,18 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		pp: 5,
 	},
 	// Making Standard
+	icerink: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	quarry: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	smeltery: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	firewall: {
 		inherit: true,
 		isNonstandard: null,

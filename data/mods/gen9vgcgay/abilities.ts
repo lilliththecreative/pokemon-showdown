@@ -249,9 +249,12 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		shortDesc: "Heals ally by 1/16th, Also 30% to heal ally status",
 		onResidual(pokemon) {
 			for (const allyActive of pokemon.adjacentAllies()) {
-				this.add('-activate', pokemon, 'ability: Healer');
-				this.heal(allyActive.baseMaxhp / 16, allyActive, pokemon);
+				if (allyActive.maxhp < allyActive.hp) {
+					this.add('-activate', pokemon, 'ability: Healer');
+					this.heal(allyActive.baseMaxhp / 16, allyActive, pokemon);
+				}
 				if (allyActive.status && this.randomChance(3, 10)) {
+					this.add('-activate', pokemon, 'ability: Healer');
 					allyActive.cureStatus();
 				}
 			}
@@ -367,6 +370,17 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		onModifySpD(spd) {
 			if (this.field.isWeather(['hail', 'snow'])) {
 				return this.chainModify(1.2);
+			}
+		},
+	},
+	icebody: {
+		inherit: true,
+		shortDesc: "Heals 1/16 in Snow. 30% to frostbite on contact",
+		onDamagingHit(damage, target, source, move) {
+			if (this.checkMoveMakesContact(move, source, target)) {
+				if (this.randomChance(3, 10)) {
+					source.trySetStatus('fst', target);
+				}
 			}
 		},
 	},
@@ -1662,4 +1676,14 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		},
 		isBreakable: true,
 	},
+	lifetaker: {
+		inherit: true,
+		isNonstandard: null,
+		onSourceAfterFaint(length, target, source, effect) {
+			if (effect && effect.effectType === 'Move') {
+				this.add('-activate', source, 'ability: Lifetaker');
+				this.heal(source.baseMaxhp / 2);
+			}
+		},
+	}
 };

@@ -7474,4 +7474,25 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Has a 100% chance to make the target flinch. Fails unless it is the user's first turn on the field.",
 		shortDesc: "Hits first. First turn out only. 100% flinch chance.",
 	},
+	quarry: {
+		name: "Quarry",
+		desc: "The user has 1/8 of its maximum HP, rounded down, restored at the end of each turn while it remains active. If Big Root is held by the user, the HP recovered is 1.3x normal, rounded half down. If the user uses Baton Pass, the replacement will receive the healing effect.",
+		shortDesc: "User recovers 1/8 max HP per turn.",
+		start: "  [POKEMON] surrounded itself with a rock quarry!",
+		heal: "  A veil of rocks restored [POKEMON]'s HP!",
+	},
+	smeltery: {
+		name: "Smeltery",
+		desc: "The user has 1/8 of its maximum HP, rounded down, restored at the end of each turn while it remains active. If Big Root is held by the user, the HP recovered is 1.3x normal, rounded half down. If the user uses Baton Pass, the replacement will receive the healing effect.",
+		shortDesc: "User recovers 1/8 max HP per turn.",
+		start: "  [POKEMON] surrounded itself with a steel smeltery!",
+		heal: "  A veil of steel restored [POKEMON]'s HP!",
+	},
+	icerink: {
+		name: "Ice Rink",
+		desc: "The user has 1/8 of its maximum HP, rounded down, restored at the end of each turn while it remains active. If Big Root is held by the user, the HP recovered is 1.3x normal, rounded half down. If the user uses Baton Pass, the replacement will receive the healing effect.",
+		shortDesc: "User recovers 1/8 max HP per turn.",
+		start: "  [POKEMON] surrounded itself with a ice rink!",
+		heal: "  A veil of ice restored [POKEMON]'s HP!",
+	},
 };

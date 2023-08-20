@@ -2317,4 +2317,9 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "This Pokemon's Defense is raised by 1 if hit by a Water move; Water immunity.",
 		shortDesc: "This Pokemon's Defense is raised by 1 if hit by a Water move; Water immunity.",
 	},
+	lifetaker: {
+		name: "Lifetaker",
+		desc: "This Pokemon's restores 50% HP if it attacks and KOes another Pokemon.",
+		shortDesc: "This Pokemon's restores 50% HP if it attacks and KOes another Pokemon.",
+	},
 };

@@ -5401,4 +5401,10 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 3,
 		num: -34,
 	},
+	lifetaker: {
+		isNonstandard: "CAP",
+		name: "Life Taker",
+		rating: 3,
+		num: -35,
+	},
 };

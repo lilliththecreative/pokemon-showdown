@@ -13982,6 +13982,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"partingshot": [
 				"9M"
+			],
+			"makeitrain": [
+				"9M"
 			]
 		}
 	},
@@ -60525,12 +60528,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"3S0"
 			],
 			"terablast": [
-				"9M"
-			],
-			"stalacbite": [
-				"9M"
-			],
-			"growl": [
 				"9M"
 			]
 		}
@@ -108883,6 +108880,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"terablast": [
 				"9M"
+			],
+			"quarry": [
+				"9M"
 			]
 		}
 	},
@@ -109441,6 +109441,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"3L49"
 			],
 			"terablast": [
+				"9M"
+			],
+			"icerink": [
 				"9M"
 			]
 		}
@@ -110030,6 +110033,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"3L49"
 			],
 			"terablast": [
+				"9M"
+			],
+			"smeltery": [
 				"9M"
 			]
 		}

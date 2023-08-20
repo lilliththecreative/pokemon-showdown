@@ -578,7 +578,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		"abilities": {
 			"0": "Chlorophyll",
 			"1": "Lawn Surfer",
-			"H": "Gluttony"
+			"H": "Lifetaker"
 		},
 		"inherit": true
 	},
@@ -1680,7 +1680,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		"abilities": {
 			"0": "Inner Focus",
 			"1": "Merciless",
-			"H": "Infiltrator"
+			"H": "Lifetaker"
 		},
 		"inherit": true
 	},
@@ -4378,7 +4378,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		],
 		"baseStats": {
 			"hp": 81,
-			"atk": 87,
+			"atk": 97,
 			"def": 74,
 			"spa": 74,
 			"spd": 69,
@@ -4583,7 +4583,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"abilities": {
 			"0": "Levitate",
-			"1": "Lawn Surfer",
+			"1": "Lifetaker",
 			"H": "Adaptability"
 		},
 		"inherit": true
@@ -4855,7 +4855,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"spe": 95
 		},
 		"abilities": {
-			"0": "Hyper Cutter",
+			"0": "Lifetaker",
 			"1": "Sand Veil",
 			"H": "Poison Heal"
 		},
@@ -6478,14 +6478,14 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		],
 		"baseStats": {
 			"hp": 95,
-			"atk": 97,
+			"atk": 112,
 			"def": 71,
 			"spa": 115,
 			"spd": 71,
 			"spe": 65
 		},
 		"abilities": {
-			"0": "Gluttony",
+			"0": "Lifetaker",
 			"1": "Drought",
 			"H": "White Smoke"
 		},
@@ -8766,6 +8766,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"abilities": {
 			"0": "Beast Boost",
+			"1": "Lifetaker",
 			"H": "Singularity"
 		},
 		"inherit": true
