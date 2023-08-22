@@ -159,7 +159,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "UU",
 	},
 	psyduck: {
-		tier: "SU",
+		tier: "7U",
 	},
 	golduck: {
 		tier: "NUBL",
@@ -204,7 +204,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "PU",
 	},
 	bellsprout: {
-		tier: "7U",
+		tier: "SU",
 	},
 	weepinbell: {
 		tier: "ZU",
@@ -267,7 +267,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "ZU",
 	},
 	shellder: {
-		tier: "SU",
+		tier: "7U",
 	},
 	cloyster: {
 		tier: "OU",
@@ -345,7 +345,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "UU",
 	},
 	horsea: {
-		tier: "SU",
+		tier: "7U",
 	},
 	seadra: {
 		tier: "NU",
