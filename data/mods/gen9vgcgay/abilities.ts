@@ -434,6 +434,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		},
 		onSourceBeforeMove(source, target, move) {
 			if (this.effectState.colorChange) return;
+			if (source === target) return;
 			let type = move.type;
 			switch (type) {
 			case 'Normal':

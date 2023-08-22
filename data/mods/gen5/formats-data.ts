@@ -1547,7 +1547,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "LC",
 	},
 	bibarel: {
-		tier: "SU",
+		tier: "ZU",
 		doublesTier: "DUU",
 	},
 	kricketot: {

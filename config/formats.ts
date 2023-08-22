@@ -152,54 +152,6 @@ export const Formats: FormatList = [
 		},
 	},
 	{
-		section: "Gen 4 Lower Tiers",
-	},
-	{
-		name: "[Gen 4] SU",
-		threads: [
-			`&bullet; <a href="https://docs.google.com/document/d/12yUO1jg2NGDvVynDbc3oUupXx7K0i0jwRmfRJ76f_Jg">DPP 6U</a>`,
-		],
-		mod: 'gen4',
-		searchShow: true,
-		ruleset: ['[Gen 4] ZU'],
-		banlist: ['ZU', 'SUBL'],
-	},
-	{
-		name: "[Gen 4] 7U",
-		threads: [
-			`&bullet; <a href="https://docs.google.com/document/d/1Ff5EmG9LQvwO3iQINTgz00YVbdlnz8MJFcISNdePo0U">DPP 7U</a>`,
-		],
-		mod: 'gen4',
-		searchShow: true,
-		ruleset: ['[Gen 4] SU'],
-		banlist: ['SU', '7UBL'],
-		unbanlist: ['Damp Rock'],
-	},
-	{
-		name: "[Gen 4] 8U",
-		threads: [
-			`&bullet; <a href="https://docs.google.com/document/d/1QIoxXWKK8nMM28qwzDvn-V0eY-BRnPkXpZPuHL-6wqI/edit?usp=sharing">DPP 8U</a>`,
-		],
-		mod: 'gen4',
-		searchShow: true,
-		ruleset: ['[Gen 4] 7U'],
-		banlist: ['7U', '8UBL'],
-	},
-	{
-		name: "[Gen 4] 9U",
-		mod: 'gen4',
-		searchShow: true,
-		ruleset: ['[Gen 4] 8U'],
-		banlist: ['8U', '9UBL'],
-	},
-	{
-		name: "[Gen 4] Lol",
-		mod: 'gen4',
-		searchShow: true,
-		ruleset: ['[Gen 4] 9U'],
-		banlist: ['9U', '10UBL', '10U', '11UBL', 'NFE', 'LC'],
-	},
-	{
 		section: "Gen 1 Lower Tiers",
 	},
 	{
@@ -334,6 +286,54 @@ export const Formats: FormatList = [
 		searchShow: true,
 		ruleset: ['[Gen 3] 7U'],
 		banlist: ['7U', '8UBL', '8U', '9UBL', '9U', '10UBL', '10U', '11UBL', 'NFE', 'LC', 'Leftovers'],
+	},
+	{
+		section: "Gen 4 Lower Tiers",
+	},
+	{
+		name: "[Gen 4] SU",
+		threads: [
+			`&bullet; <a href="https://docs.google.com/document/d/12yUO1jg2NGDvVynDbc3oUupXx7K0i0jwRmfRJ76f_Jg">DPP 6U</a>`,
+		],
+		mod: 'gen4',
+		searchShow: true,
+		ruleset: ['[Gen 4] ZU'],
+		banlist: ['ZU', 'SUBL'],
+	},
+	{
+		name: "[Gen 4] 7U",
+		threads: [
+			`&bullet; <a href="https://docs.google.com/document/d/1Ff5EmG9LQvwO3iQINTgz00YVbdlnz8MJFcISNdePo0U">DPP 7U</a>`,
+		],
+		mod: 'gen4',
+		searchShow: true,
+		ruleset: ['[Gen 4] SU'],
+		banlist: ['SU', '7UBL'],
+		unbanlist: ['Damp Rock'],
+	},
+	{
+		name: "[Gen 4] 8U",
+		threads: [
+			`&bullet; <a href="https://docs.google.com/document/d/1QIoxXWKK8nMM28qwzDvn-V0eY-BRnPkXpZPuHL-6wqI/edit?usp=sharing">DPP 8U</a>`,
+		],
+		mod: 'gen4',
+		searchShow: true,
+		ruleset: ['[Gen 4] 7U'],
+		banlist: ['7U', '8UBL'],
+	},
+	{
+		name: "[Gen 4] 9U",
+		mod: 'gen4',
+		searchShow: true,
+		ruleset: ['[Gen 4] 8U'],
+		banlist: ['8U', '9UBL'],
+	},
+	{
+		name: "[Gen 4] Lol",
+		mod: 'gen4',
+		searchShow: true,
+		ruleset: ['[Gen 4] 9U'],
+		banlist: ['9U', '10UBL', '10U', '11UBL', 'NFE', 'LC'],
 	},
 	{
 		section: "Gen 5 Lower Tiers",
