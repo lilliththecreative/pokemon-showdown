@@ -3348,7 +3348,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "LC",
 	},
 	krokorok: {
-		tier: "7U",
+		tier: "SU",
 	},
 	krookodile: {
 		tier: "RU",

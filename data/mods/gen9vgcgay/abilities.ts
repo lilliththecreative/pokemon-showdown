@@ -249,7 +249,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		shortDesc: "Heals ally by 1/16th, Also 30% to heal ally status",
 		onResidual(pokemon) {
 			for (const allyActive of pokemon.adjacentAllies()) {
-				if (allyActive.maxhp < allyActive.hp) {
+				if (allyActive.maxhp > allyActive.hp) {
 					this.add('-activate', pokemon, 'ability: Healer');
 					this.heal(allyActive.baseMaxhp / 16, allyActive, pokemon);
 				}

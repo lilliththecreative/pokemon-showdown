@@ -1017,7 +1017,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "LC",
 	},
 	mightyena: {
-		tier: "7U",
+		tier: "SU",
 		doublesTier: "DUU",
 	},
 	zigzagoon: {
@@ -2029,7 +2029,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "LC",
 	},
 	whirlipede: {
-		tier: "NFE",
+		tier: "ZUBL",
 	},
 	scolipede: {
 		tier: "NUBL",
