@@ -21845,6 +21845,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	icerink: {
 		num: 392,
+		isNonstandard: "CAP",
 		accuracy: true,
 		basePower: 0,
 		category: "Status",

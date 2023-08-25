@@ -1319,6 +1319,11 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		pp: 5,
 	},
+	trumpcard: {
+		inherit: true,
+		isNonstandard: null,
+		pp: 2
+	},
 	// Making Standard
 	icerink: {
 		inherit: true,
@@ -1624,6 +1629,22 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 	},
 	jumpkick: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	mefirst: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	laserfocus: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	luckychant: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	searingshot: {
 		inherit: true,
 		isNonstandard: null,
 	},
