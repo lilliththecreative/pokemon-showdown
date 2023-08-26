@@ -31,20 +31,20 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		doublesTier: "DUU",
 	},
 	caterpie: {
-		tier: "LC",
+		tier: "11U",
 	},
 	metapod: {
-		tier: "NFE",
+		tier: "11U",
 	},
 	butterfree: {
 		tier: "SUBL",
 		doublesTier: "DUU",
 	},
 	weedle: {
-		tier: "LC",
+		tier: "11U",
 	},
 	kakuna: {
-		tier: "NFE",
+		tier: "11U",
 	},
 	beedrill: {
 		tier: "SU",
@@ -535,7 +535,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		doublesTier: "DUU",
 	},
 	magikarp: {
-		tier: "LC",
+		tier: "11U",
 	},
 	gyarados: {
 		tier: "OU",
@@ -774,7 +774,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		doublesTier: "DUU",
 	},
 	sunkern: {
-		tier: "LC",
+		tier: "11U",
 	},
 	sunflora: {
 		tier: "8U",
@@ -1028,17 +1028,17 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		doublesTier: "DUU",
 	},
 	wurmple: {
-		tier: "LC",
+		tier: "11U",
 	},
 	silcoon: {
-		tier: "NFE",
+		tier: "11U",
 	},
 	beautifly: {
 		tier: "8U",
 		doublesTier: "DUU",
 	},
 	cascoon: {
-		tier: "NFE",
+		tier: "11U",
 	},
 	dustox: {
 		tier: "8U",
@@ -1551,7 +1551,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		doublesTier: "DUU",
 	},
 	kricketot: {
-		tier: "LC",
+		tier: "11U",
 	},
 	kricketune: {
 		tier: "8U",
@@ -1582,7 +1582,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		doublesTier: "DUU",
 	},
 	burmy: {
-		tier: "LC",
+		tier: "11U",
 	},
 	wormadam: {
 		tier: "8U",
@@ -1601,7 +1601,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		doublesTier: "DUU",
 	},
 	combee: {
-		tier: "LC",
+		tier: "11U",
 	},
 	vespiquen: {
 		tier: "8U",
@@ -2243,7 +2243,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		doublesTier: "DUU",
 	},
 	tynamo: {
-		tier: "LC",
+		tier: "11U",
 	},
 	eelektrik: {
 		tier: "SU",

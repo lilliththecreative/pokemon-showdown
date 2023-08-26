@@ -716,7 +716,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			];
 			if (target.getAbility().isPermanent || additionalBannedAbilities.includes(target.ability)) return;
 			if (this.effectState.target.setAbility(ability)) {
-				this.boost({atk: 1, spa: 1}, null, null, this.effect);
+				this.boost({atk: 1, spa: 1}, this.effectState.target, this.effectState.target);
 				this.add('-ability', this.effectState.target, ability, '[from] ability: Power of Alchemy', '[of] ' + target);
 			}
 		},

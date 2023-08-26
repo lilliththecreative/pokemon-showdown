@@ -11,6 +11,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		onTryMove(attacker, defender, move) {
 			if (move.pranksterBoosted) {
 				this.add('-fail', attacker, 'move: Spore');
+				return null;
 			}
 		},
 	},
@@ -427,6 +428,27 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			if (!item.onDrive) return;
 			move.type = item.onDrive;
 		}
+	},
+	wringout: {
+		inherit: true,
+		isNonstandard: null,
+		category: "Physical",
+		shortDesc: "More power the more %HP the target has, Max 141BP.",
+		basePowerCallback(pokemon, target, move) {
+			const hp = target.hp;
+			const maxHP = target.maxhp;
+			const bp = Math.floor(Math.floor((140 * (100 * Math.floor(hp * 4096 / maxHP)) + 2048 - 1) / 4096) / 100) || 1;
+			this.debug('BP for ' + hp + '/' + maxHP + " HP: " + bp);
+			return bp;
+		},
+	},
+	stuffcheeks: {
+		inherit: true,
+		shortDesc: "User Eats berry, gains +1 Atk, +2 Def.",
+		onHit(pokemon) {
+			if (!this.boost({atk: 1, def: 2})) return null;
+			pokemon.eatItem(true);
+		},
 	},
 	needlearm: {
 		inherit: true,

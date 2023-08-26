@@ -1081,7 +1081,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		natDexTier: "RU",
 	},
 	magikarp: {
-		tier: "LC",
+		tier: "11U",
 	},
 	gyarados: {
 		tier: "RUBL",
@@ -1456,7 +1456,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		natDexTier: "RU",
 	},
 	sunkern: {
-		tier: "LC",
+		tier: "11U",
 	},
 	sunflora: {
 		tier: "SU",
@@ -2663,7 +2663,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		natDexTier: "RU",
 	},
 	kricketot: {
-		tier: "LC",
+		tier: "11U",
 	},
 	kricketune: {
 		tier: "SU",
@@ -2727,7 +2727,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		natDexTier: "RU",
 	},
 	combee: {
-		tier: "LC",
+		tier: "11U",
 	},
 	vespiquen: {
 		tier: "ZU",
@@ -3348,7 +3348,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "LC",
 	},
 	krokorok: {
-		tier: "SU",
+		tier: "ZU",
 	},
 	krookodile: {
 		tier: "RU",
@@ -3624,7 +3624,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		natDexTier: "RU",
 	},
 	tynamo: {
-		tier: "LC",
+		tier: "11U",
 	},
 	eelektrik: {
 		tier: "SU",
@@ -3960,10 +3960,10 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		natDexTier: "RU",
 	},
 	scatterbug: {
-		tier: "LC",
+		tier: "11U",
 	},
 	spewpa: {
-		tier: "NFE",
+		tier: "11U",
 	},
 	vivillon: {
 		tier: "NU",
@@ -5047,7 +5047,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 	},
 	applin: {
-		tier: "LC",
+		tier: "11U",
 	},
 	flapple: {
 		tier: "PU",
@@ -5099,7 +5099,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		natDexTier: "RU",
 	},
 	toxel: {
-		tier: "LC",
+		tier: "11U",
 	},
 	toxtricity: {
 		tier: "RU",
@@ -5203,7 +5203,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		natDexTier: "RU",
 	},
 	snom: {
-		tier: "LC",
+		tier: "11U",
 	},
 	frosmoth: {
 		tier: "RU",

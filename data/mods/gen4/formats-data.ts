@@ -1330,7 +1330,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "SU",
 	},
 	burmy: {
-		tier: "11U",
+		tier: "11UBL",
 	},
 	wormadam: {
 		tier: "8U",
@@ -1345,7 +1345,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "7U",
 	},
 	combee: {
-		tier: "LC",
+		tier: "11UBL",
 	},
 	vespiquen: {
 		tier: "SU",

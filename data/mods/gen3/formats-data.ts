@@ -444,7 +444,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "11U",
 	},
 	eevee: {
-		tier: "7U",
+		tier: "8U",
 	},
 	vaporeon: {
 		tier: "UUBL",
@@ -612,7 +612,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "ZU",
 	},
 	sunkern: {
-		tier: "LC",
+		tier: "11UBL",
 	},
 	sunflora: {
 		tier: "ZU",

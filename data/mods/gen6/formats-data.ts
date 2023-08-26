@@ -46,20 +46,20 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		doublesTier: "DUU",
 	},
 	caterpie: {
-		tier: "LC",
+		tier: "11U",
 	},
 	metapod: {
-		tier: "NFE",
+		tier: "11U",
 	},
 	butterfree: {
 		tier: "SU",
 		doublesTier: "(DUU)",
 	},
 	weedle: {
-		tier: "LC",
+		tier: "11U",
 	},
 	kakuna: {
-		tier: "NFE",
+		tier: "11U",
 	},
 	beedrill: {
 		tier: "SU",
@@ -610,7 +610,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		doublesTier: "(DUU)",
 	},
 	magikarp: {
-		tier: "LC",
+		tier: "11U",
 	},
 	gyarados: {
 		tier: "UU",
@@ -1146,17 +1146,17 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		doublesTier: "(DUU)",
 	},
 	wurmple: {
-		tier: "LC",
+		tier: "11U",
 	},
 	silcoon: {
-		tier: "NFE",
+		tier: "11U",
 	},
 	beautifly: {
 		tier: "SU",
 		doublesTier: "(DUU)",
 	},
 	cascoon: {
-		tier: "NFE",
+		tier: "11U",
 	},
 	dustox: {
 		tier: "ZU",
@@ -1419,7 +1419,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "LC",
 	},
 	vibrava: {
-		tier: "NFE",
+		tier: "ZU",
 	},
 	flygon: {
 		tier: "RU",
@@ -1777,7 +1777,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		doublesTier: "(DUU)",
 	},
 	burmy: {
-		tier: "LC",
+		tier: "11U",
 	},
 	wormadam: {
 		tier: "SU",
@@ -1796,7 +1796,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		doublesTier: "(DUU)",
 	},
 	combee: {
-		tier: "LC",
+		tier: "11U",
 	},
 	vespiquen: {
 		tier: "SU",
@@ -2243,7 +2243,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "LC",
 	},
 	whirlipede: {
-		tier: "NFE",
+		tier: "ZU",
 	},
 	scolipede: {
 		tier: "UUBL",
@@ -2451,7 +2451,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		doublesTier: "(DUU)",
 	},
 	tynamo: {
-		tier: "LC",
+		tier: "11U",
 	},
 	eelektrik: {
 		tier: "NFE",
@@ -2718,10 +2718,10 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		doublesTier: "DOU",
 	},
 	scatterbug: {
-		tier: "LC",
+		tier: "11U",
 	},
 	spewpa: {
-		tier: "NFE",
+		tier: "11U",
 	},
 	vivillon: {
 		tier: "NU",
