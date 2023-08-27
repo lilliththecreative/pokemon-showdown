@@ -2322,4 +2322,9 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "This Pokemon's restores 50% HP if it attacks and KOes another Pokemon.",
 		shortDesc: "This Pokemon's restores 50% HP if it attacks and KOes another Pokemon.",
 	},
+	vantage: {
+		name: "Vantage",
+		desc: "If <50% HP, attacks right before first attack targetted at user.",
+		shortDesc: "If <50% HP, attacks right before first attack targetted at user.",
+	},
 };

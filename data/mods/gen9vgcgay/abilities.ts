@@ -617,7 +617,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	pastelveil: {
 		inherit: true,
-		shortDesc: "This pokemon and its allies cannot be statused, cure on switch in",
+		shortDesc: "This pokemon and its allies cannot be statused, cure on switch in.",
 		onStart(pokemon) {
 			for (const ally of pokemon.alliesAndSelf()) {
 				if (['psn', 'tox', 'brn', 'slp', 'fst'].includes(ally.status)) {
@@ -817,7 +817,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		shortDesc: "+1 Atk when Tailwind begins, +2 Attack if hit by a wind move. Wind move immunity.",
 		onStart(pokemon) {
 			if (pokemon.side.sideConditions['tailwind']) {
-				this.boost({atk: 2}, pokemon, pokemon);
+				this.boost({atk: 1}, pokemon, pokemon);
 			}
 		},
 		onTryHit(target, source, move) {
@@ -831,7 +831,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		onAllySideConditionStart(target, source, sideCondition) {
 			const pokemon = this.effectState.target;
 			if (sideCondition.id === 'tailwind') {
-				this.boost({atk: 2}, pokemon, pokemon);
+				this.boost({atk: 1}, pokemon, pokemon);
 			}
 		},
 	},
@@ -1637,7 +1637,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 						continue;
 					}
 					if (action.pokemon === pokemon) {
-						this.add('-activate', pokemon, 'ability: Calm Before Storm');
+						this.add('-activate', pokemon, 'ability: Calm B4 Storm');
 						this.queue.prioritizeAction(action);
 						(action.move.selfSwitch as boolean) = true;
 						break;

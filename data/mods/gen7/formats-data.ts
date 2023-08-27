@@ -931,7 +931,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "NFE",
 	},
 	jumpluff: {
-		tier: "ZU",
+		tier: "SU",
 		doublesTier: "(DUU)",
 	},
 	aipom: {
@@ -1067,7 +1067,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		doublesTier: "DUU",
 	},
 	corsola: {
-		tier: "ZU",
+		tier: "SU",
 		doublesTier: "(DUU)",
 	},
 	remoraid: {

@@ -5407,4 +5407,27 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 3,
 		num: -35,
 	},
+	vantage: {
+		isNonstandard: "CAP",
+		name: "Vantage",
+		onFoeBeforeMove(source, target, move) {
+			if (target.ability === "Vantage" && source.side != target.side) {
+				for (const action of this.queue.list as MoveAction[]) {
+					if (
+						!action.move || !action.pokemon?.isActive ||
+						action.pokemon.fainted || action.maxMove || action.zmove
+					) {
+						continue;
+					}
+					if (action.pokemon === target) {
+						this.add('-activate', target, 'ability: Vantage');
+						this.queue.prioritizeAction(action);
+						break;
+					}
+				}
+			}
+		},
+		rating: 3,
+		num: -36,
+	},
 };

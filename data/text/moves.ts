@@ -7495,4 +7495,9 @@ export const MovesText: {[k: string]: MoveText} = {
 		start: "  [POKEMON] surrounded itself with a ice rink!",
 		heal: "  A veil of ice restored [POKEMON]'s HP!",
 	},
+	flashfreeze: {
+		name: "Flash Freeze",
+		desc: "Frostbites the target, halving SpA and doing 1/16th each turn.",
+		shortDesc: "Frostbites the target.",
+	},
 };

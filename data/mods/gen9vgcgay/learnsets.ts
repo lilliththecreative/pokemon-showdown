@@ -11361,6 +11361,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"moonlight": [
 				"9M"
+			],
+			"aurasphere": [
+				"9M"
 			]
 		}
 	},
@@ -17132,6 +17135,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"4T"
 			],
 			"terablast": [
+				"9M"
+			],
+			"aurasphere": [
 				"9M"
 			]
 		}
@@ -32023,6 +32029,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"psychout": [
 				"9M"
+			],
+			"flashfreeze": [
+				"9M"
 			]
 		}
 	},
@@ -32786,6 +32795,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"psychout": [
+				"9M"
+			],
+			"aurasphere": [
 				"9M"
 			]
 		}
@@ -53819,6 +53831,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"overheat": [
+				"9M"
+			],
+			"weatherball": [
 				"9M"
 			]
 		}
@@ -139198,6 +139213,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"sheercold": [
 				"9M"
+			],
+			"flashfreeze": [
+				"9M"
 			]
 		}
 	},
@@ -156713,6 +156731,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"6L1",
 				"5M",
 				"5L1"
+			],
+			"aurasphere": [
+				"9M"
 			]
 		}
 	},
@@ -158309,6 +158330,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"5T"
 			],
 			"terablast": [
+				"9M"
+			],
+			"aurasphere": [
 				"9M"
 			]
 		}
@@ -161103,6 +161127,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"zenheadbutt": [
 				"9M"
+			],
+			"lifedew": [
+				"9M"
 			]
 		}
 	},
@@ -162207,6 +162234,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"terablast": [
 				"9M"
+			],
+			"steamroller": [
+				"9M"
 			]
 		}
 	},
@@ -162654,6 +162684,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"6L1"
 			],
 			"zenheadbutt": [
+				"9M"
+			],
+			"gunkshot": [
 				"9M"
 			]
 		}
@@ -163969,6 +164002,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"6M",
 				"5M",
 				"5S0"
+			],
+			"dragonrush": [
+				"9M"
 			]
 		}
 	},
@@ -164911,6 +164947,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"faketears": [
+				"9M"
+			],
+			"flashfreeze": [
 				"9M"
 			]
 		}
@@ -174148,6 +174187,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M",
 				"7T",
 				"6T"
+			],
+			"aurasphere": [
+				"9M"
 			]
 		}
 	},
@@ -176414,6 +176456,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M",
 				"7T",
 				"6T"
+			],
+			"grassyglide": [
+				"9M"
 			]
 		}
 	},
@@ -180384,6 +180429,15 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"6M"
 			],
 			"terablast": [
+				"9M"
+			],
+			"aurasphere": [
+				"9M"
+			],
+			"terrainpulse": [
+				"9M"
+			],
+			"overheat": [
 				"9M"
 			]
 		}
@@ -185163,6 +185217,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"8M",
 				"7M",
 				"6M"
+			],
+			"aurasphere": [
+				"9M"
 			]
 		}
 	},
@@ -185971,6 +186028,10 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"7M"
 			],
 			"uturn": [
+				"8M",
+				"7M"
+			],
+			"willowisp": [
 				"8M",
 				"7M"
 			],
@@ -195860,6 +195921,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"7M"
 			],
 			"terablast": [
+				"9M"
+			],
+			"aurasphere": [
 				"9M"
 			]
 		}
@@ -210659,6 +210723,36 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"8L1"
 			],
 			"hiddenpower": [
+				"9M"
+			],
+			"dragondarts": [
+				"9M"
+			],
+			"dragonhammer": [
+				"9M"
+			],
+			"glaiverush": [
+				"9M"
+			],
+			"orderup": [
+				"9M"
+			],
+			"clangingscales": [
+				"9M"
+			],
+			"dragonrush": [
+				"9M"
+			],
+			"dragontail": [
+				"9M"
+			],
+			"dualchop": [
+				"9M"
+			],
+			"spacialrend": [
+				"9M"
+			],
+			"roaroftime": [
 				"9M"
 			]
 		}

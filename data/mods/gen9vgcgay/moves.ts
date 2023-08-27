@@ -23,6 +23,11 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		pp: 10,
 	},
+	sing: {
+		inherit: true,
+		accuracy: 60,
+		pp: 10,
+	},
 	// Omniboost moves
 	ominouswind: {
 		inherit: true,
