@@ -234,6 +234,21 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			}
 		},
 	},
+	screech: {
+		inherit: true,
+		accuracy: 100,
+	},
+	metalsound: {
+		inherit: true,
+		accuracy: 100,
+	},
+	rage: {
+		inherit: true,
+		shortDesc: "+25 power for each time user was hit. Max: 1000bp",
+		basePowerCallback(pokemon) {
+			return Math.min(1000, 25 + 25 * pokemon.timesAttacked);
+		},
+	},
 	gunkshot: {
 		inherit: true,
 		accuracy: 85,
@@ -326,7 +341,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	spark: {
 		inherit: true,
-		basePower: 75,
+		basePower: 70,
 	},
 	poisontail: {
 		inherit: true,
@@ -600,9 +615,21 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	ragefist: {
 		inherit: true,
-		shortDesc: "+50 power for each time user was hit. Max: 1000bp",
+		shortDesc: "+40 power for each time user was hit. Max: 1000bp",
 		basePowerCallback(pokemon) {
-			return Math.min(1000, 50 + 50 * pokemon.timesAttacked);
+			return Math.min(1000, 40 + 40 * pokemon.timesAttacked);
+		},
+	},
+	esperwing: {
+		inherit: true,
+		shortDesc: "100% chance to raise user Speed by 2. High crit.",
+		secondary: {
+			chance: 100,
+			self: {
+				boosts: {
+					spe: 2,
+				},
+			},
 		},
 	},
 	dragondarts: {
@@ -684,7 +711,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	geargrind: {
 		inherit: true,
 		isNonstandard: null,
-		basePower: 55,
+		basePower: 50,
 		accuracy: 90
 	},
 	icehammer: {

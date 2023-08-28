@@ -5403,7 +5403,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	lifetaker: {
 		isNonstandard: "CAP",
-		name: "Life Taker",
+		name: "Lifetaker",
 		rating: 3,
 		num: -35,
 	},
@@ -5411,7 +5411,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		isNonstandard: "CAP",
 		name: "Vantage",
 		onFoeBeforeMove(source, target, move) {
-			if (target.ability === "Vantage" && source.side != target.side) {
+			if (target.ability === "Vantage" && source.side !== target.side) {
 				for (const action of this.queue.list as MoveAction[]) {
 					if (
 						!action.move || !action.pokemon?.isActive ||

@@ -21872,6 +21872,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	flashfreeze: {
 		num: 0,
 		accuracy: 85,
+		isNonstandard: "CAP",
 		basePower: 0,
 		category: "Status",
 		name: "Flash Freeze",

@@ -123,11 +123,11 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		],
 		"baseStats": {
 			"hp": 70,
-			"atk": 91,
-			"def": 65,
+			"atk": 111,
+			"def": 80,
 			"spa": 55,
 			"spd": 75,
-			"spe": 102
+			"spe": 112
 		},
 		"abilities": {
 			"0": "Run Away",
@@ -162,11 +162,11 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Dark"
 		],
 		"baseStats": {
-			"hp": 65,
+			"hp": 85,
 			"atk": 100,
-			"def": 69,
+			"def": 89,
 			"spa": 65,
-			"spd": 89,
+			"spd": 109,
 			"spe": 90
 		},
 		"abilities": {
@@ -218,15 +218,16 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Steel"
 		],
 		"baseStats": {
-			"hp": 80,
-			"atk": 105,
-			"def": 125,
-			"spa": 30,
+			"hp": 85,
+			"atk": 115,
+			"def": 120,
+			"spa": 25,
 			"spd": 70,
 			"spe": 70
 		},
 		"abilities": {
 			"0": "Snow Cloak",
+			"1": "Tough Claws",
 			"H": "Slush Rush"
 		},
 		"inherit": true
@@ -276,9 +277,9 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Fairy"
 		],
 		"baseStats": {
-			"hp": 70,
+			"hp": 75,
 			"atk": 45,
-			"def": 48,
+			"def": 53,
 			"spa": 60,
 			"spd": 65,
 			"spe": 35
@@ -292,7 +293,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	},
 	"ninetales": {
 		"types": [
-			"Fire"
+			"Fire",
+			"Fairy"
 		],
 		"baseStats": {
 			"hp": 73,
@@ -392,7 +394,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Poison"
 		],
 		"baseStats": {
-			"hp": 75,
+			"hp": 80,
 			"atk": 70,
 			"def": 65,
 			"spa": 100,
@@ -412,11 +414,11 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Steel"
 		],
 		"baseStats": {
-			"hp": 70,
+			"hp": 65,
 			"atk": 100,
-			"def": 90,
+			"def": 80,
 			"spa": 50,
-			"spd": 100,
+			"spd": 90,
 			"spe": 120
 		},
 		"abilities": {
@@ -451,12 +453,12 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Psychic"
 		],
 		"baseStats": {
-			"hp": 90,
+			"hp": 95,
 			"atk": 87,
 			"def": 83,
-			"spa": 105,
+			"spa": 110,
 			"spd": 85,
-			"spe": 90
+			"spe": 95
 		},
 		"abilities": {
 			"0": "Damp",
@@ -2152,7 +2154,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		"abilities": {
 			"0": "Magma Armor",
 			"1": "Lava Crust",
-			"H": "Solid Rock"
+			"H": "Drought"
 		},
 		"inherit": true
 	},
@@ -6039,7 +6041,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"def": 70,
 			"spa": 105,
 			"spd": 70,
-			"spe": 128
+			"spe": 133
 		},
 		"abilities": {
 			"0": "Static",
@@ -6093,17 +6095,17 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Ghost"
 		],
 		"baseStats": {
-			"hp": 100,
+			"hp": 110,
 			"atk": 60,
-			"def": 70,
-			"spa": 85,
-			"spd": 105,
+			"def": 80,
+			"spa": 90,
+			"spd": 110,
 			"spe": 60
 		},
 		"abilities": {
 			"0": "Water Absorb",
 			"1": "Cursed Body",
-			"H": "Damp"
+			"H": "Clear Body"
 		},
 		"inherit": true
 	},
@@ -6180,7 +6182,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"abilities": {
 			"0": "Levitate",
-			"1": "Sturdy",
+			"1": "Technician",
 			"H": "Clear Body"
 		},
 		"inherit": true
@@ -6193,7 +6195,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"hp": 90,
 			"atk": 125,
 			"def": 90,
-			"spa": 105,
+			"spa": 125,
 			"spd": 90,
 			"spe": 50
 		},
@@ -6227,16 +6229,16 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Fire"
 		],
 		"baseStats": {
-			"hp": 55,
+			"hp": 65,
 			"atk": 55,
 			"def": 90,
-			"spa": 140,
+			"spa": 150,
 			"spd": 90,
-			"spe": 75
+			"spe": 80
 		},
 		"abilities": {
 			"0": "Flash Fire",
-			"1": "Shadow Tag",
+			"1": "Flame Body",
 			"H": "Infiltrator"
 		},
 		"inherit": true
@@ -6284,7 +6286,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Ice"
 		],
 		"baseStats": {
-			"hp": 90,
+			"hp": 80,
 			"atk": 55,
 			"def": 55,
 			"spa": 100,
@@ -6293,6 +6295,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"abilities": {
 			"0": "Levitate",
+			"1": "Ice Scales",
 			"H": "Magic Bounce"
 		},
 		"inherit": true
@@ -6441,9 +6444,9 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"hp": 115,
 			"atk": 83,
 			"def": 75,
-			"spa": 112,
+			"spa": 127,
 			"spd": 75,
-			"spe": 70
+			"spe": 50
 		},
 		"abilities": {
 			"0": "Keen Eye",
@@ -6478,15 +6481,15 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		],
 		"baseStats": {
 			"hp": 95,
-			"atk": 112,
+			"atk": 132,
 			"def": 71,
-			"spa": 115,
+			"spa": 95,
 			"spd": 71,
 			"spe": 65
 		},
 		"abilities": {
 			"0": "Lifetaker",
-			"1": "Drought",
+			"1": "Tough Claws",
 			"H": "White Smoke"
 		},
 		"inherit": true
@@ -6634,7 +6637,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"spe": 121
 		},
 		"abilities": {
-			"0": "Regenerator"
+			"0": "Regenerator",
+			"H": "Aerilate"
 		},
 		"inherit": true
 	},
@@ -6671,7 +6675,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"spe": 101
 		},
 		"abilities": {
-			"0": "Volt Absorb"
+			"0": "Volt Absorb",
+			"H": "Static"
 		},
 		"inherit": true
 	},
@@ -6708,7 +6713,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"spe": 91
 		},
 		"abilities": {
-			"0": "Intimidate"
+			"0": "Intimidate",
+			"H": "Levitate"
 		},
 		"inherit": true
 	},
