@@ -513,7 +513,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		],
 		"baseStats": {
 			"hp": 100,
-			"atk": 105,
+			"atk": 100,
 			"def": 95,
 			"spa": 75,
 			"spd": 95,
@@ -626,12 +626,12 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	},
 	"rapidashgalar": {
 		"types": [
-			"Psychic",
+			"Ground",
 			"Fairy"
 		],
 		"baseStats": {
 			"hp": 75,
-			"atk": 100,
+			"atk": 105,
 			"def": 75,
 			"spa": 80,
 			"spd": 85,
@@ -867,7 +867,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Ghost"
 		],
 		"baseStats": {
-			"hp": 60,
+			"hp": 65,
 			"atk": 80,
 			"def": 110,
 			"spa": 50,
@@ -4399,12 +4399,12 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Dark"
 		],
 		"baseStats": {
-			"hp": 108,
-			"atk": 98,
-			"def": 77,
-			"spa": 81,
-			"spd": 71,
-			"spe": 94
+			"hp": 103,
+			"atk": 103,
+			"def": 67,
+			"spa": 71,
+			"spd": 61,
+			"spe": 84
 		},
 		"abilities": {
 			"0": "Stench",

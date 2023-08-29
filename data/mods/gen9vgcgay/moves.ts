@@ -244,9 +244,21 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	rage: {
 		inherit: true,
+		isNonstandard: null,
 		shortDesc: "+25 power for each time user was hit. Max: 1000bp",
 		basePowerCallback(pokemon) {
 			return Math.min(1000, 25 + 25 * pokemon.timesAttacked);
+		},
+	},
+	punishment: {
+		inherit: true,
+		isNonstandard: null,
+		shortDesc: "60 power +20 for each of target's boosts, Max: 300BP.",
+		basePowerCallback(pokemon, target) {
+			let power = 60 + 20 * target.positiveBoosts();
+			if (power > 300) power = 300;
+			this.debug('BP: ' + power);
+			return power;
 		},
 	},
 	gunkshot: {
@@ -413,6 +425,16 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 		basePower: 55,
 		accuracy: 100
+	},
+	skyuppercut: {
+		inherit: true,
+		isNonstandard: null,
+		shortDesc: "Super effective on Flying. Hits Flying Enemies.",
+		onEffectiveness(typeMod, target, type) {
+			if (type === 'Flying') return 1;
+		},
+		basePower: 70,
+		accuracy: 100,
 	},
 	// Fang Buff
 	hyperfang: {
@@ -615,9 +637,9 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	ragefist: {
 		inherit: true,
-		shortDesc: "+40 power for each time user was hit. Max: 1000bp",
+		shortDesc: "+50 power for each time user was hit. Max: 1000bp",
 		basePowerCallback(pokemon) {
-			return Math.min(1000, 40 + 40 * pokemon.timesAttacked);
+			return Math.min(1000, 50 + 50 * pokemon.timesAttacked);
 		},
 	},
 	esperwing: {
@@ -713,6 +735,22 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 		basePower: 50,
 		accuracy: 90
+	},
+	gearup: {
+		inherit: true,
+		isNonstandard: null,
+		shortDesc: "Raises Atk, Sp. Atk of allies by 1.",
+		onHitSide(side, source, move) {
+			const targets = side.allies().filter(target => (
+				!target.volatiles['maxguard'] || this.runEvent('TryHit', target, source, move)
+			));
+			if (!targets.length) return false;
+			let didSomething = false;
+			for (const target of targets) {
+				didSomething = this.boost({atk: 1, spa: 1}, target, source, move, false, true) || didSomething;
+			}
+			return didSomething;
+		},
 	},
 	icehammer: {
 		inherit: true,
@@ -1667,10 +1705,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 	},
 	secretsword: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	skyuppercut: {
 		inherit: true,
 		isNonstandard: null,
 	},
