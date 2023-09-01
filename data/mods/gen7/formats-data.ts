@@ -52,7 +52,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "11U",
 	},
 	butterfree: {
-		tier: "ZU",
+		tier: "SU",
 		doublesTier: "(DUU)",
 	},
 	weedle: {
@@ -699,7 +699,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		doublesTier: "(DUU)",
 	},
 	ditto: {
-		tier: "ZU",
+		tier: "SU",
 		doublesTier: "(DUU)",
 	},
 	eevee: {
@@ -1813,7 +1813,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "LC",
 	},
 	bibarel: {
-		tier: "ZU",
+		tier: "SU",
 		doublesTier: "(DUU)",
 	},
 	kricketot: {
@@ -2950,7 +2950,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		doublesTier: "(DUU)",
 	},
 	carbink: {
-		tier: "ZU",
+		tier: "SU",
 		doublesTier: "(DUU)",
 	},
 	goomy: {
