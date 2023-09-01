@@ -28,6 +28,19 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		accuracy: 60,
 		pp: 10,
 	},
+	// Sleeping Moves
+	snore: {
+		inherit: true,
+		basePower: 110,
+	},
+	dreameater: {
+		inherit: true,
+		shortDesc: "User or Target must be sleeping. Heal 50%.",
+		onTryImmunity(target, source) {
+			return target.status === 'slp' || target.hasAbility('comatose') ||
+					source.status === 'slp' || source.hasAbility('comatose');
+		},
+	},
 	// Omniboost moves
 	ominouswind: {
 		inherit: true,
@@ -234,6 +247,30 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			}
 		},
 	},
+	acupressure: {
+		inherit: true,
+		basePower: 10,
+		category: 'Physical',
+		shortDesc: "Raises a non-acc random stat of the user/ally by 2.",
+		onHit(target) {
+			const stats: BoostID[] = [];
+			let stat: BoostID;
+			for (stat in target.boosts) {
+				if (stat === 'accuracy' || stat === 'evasion') continue;
+				if (target.boosts[stat] < 6) {
+					stats.push(stat);
+				}
+			}
+			if (stats.length) {
+				const randomStat = this.sample(stats);
+				const boost: SparseBoostsTable = {};
+				boost[randomStat] = 2;
+				this.boost(boost);
+			} else {
+				return false;
+			}
+		},
+	},
 	screech: {
 		inherit: true,
 		accuracy: 100,
@@ -246,6 +283,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 		shortDesc: "+25 power for each time user was hit. Max: 1000bp",
+		basePower: 25,
 		basePowerCallback(pokemon) {
 			return Math.min(1000, 25 + 25 * pokemon.timesAttacked);
 		},
@@ -359,7 +397,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		target: "allAdjacentFoes",
 		shortDesc: "Hits both foes, High Crit Rate, 10% to poison.",
-		basePower: 80,
+		basePower: 75,
 	},
 	feint: {
 		inherit: true,
@@ -637,7 +675,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	ragefist: {
 		inherit: true,
-		shortDesc: "+50 power for each time user was hit. Max: 1000bp",
+		shortDesc: "+50 power each time user was hit. Max: 1000bp",
 		basePowerCallback(pokemon) {
 			return Math.min(1000, 50 + 50 * pokemon.timesAttacked);
 		},
@@ -1204,6 +1242,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 		isMax: false,
+		flags: {protect: 1, mirror: 1},
 		basePower: 90,
 		shortDesc: "Poisons both foes after successful use.",
 	},
@@ -1211,13 +1250,15 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 		isMax: false,
-		basePower: 100,
+		flags: {protect: 1, mirror: 1},
+		basePower: 90,
 		shortDesc: "Sets up a Steel Hazard after use.",
 	},
 	gmaxgravitas: {
 		inherit: true,
 		isNonstandard: null,
 		isMax: false,
+		flags: {protect: 1, mirror: 1},
 		category: "Special",
 		basePower: 90,
 		shortDesc: "Sets up Gravity after succesful use.",
@@ -1226,14 +1267,16 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 		isMax: false,
+		flags: {protect: 1, mirror: 1},
 		category: "Special",
 		basePower: 90,
-		shortDesc: "Heals self and allies by 1/6th",
+		shortDesc: "Heals self and allies by 1/6th.",
 	},
 	gmaxdepletion: {
 		inherit: true,
 		isNonstandard: null,
 		isMax: false,
+		flags: {protect: 1, mirror: 1},
 		category: "Special",
 		basePower: 90,
 		shortDesc: "Foes: last move -2 PP.",
@@ -1417,6 +1460,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		pp: 2
 	},
 	// Making Standard
+	flashfreeze: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	icerink: {
 		inherit: true,
 		isNonstandard: null,
@@ -1733,6 +1780,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 	},
 	searingshot: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	shellsidearm: {
 		inherit: true,
 		isNonstandard: null,
 	},

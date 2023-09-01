@@ -484,12 +484,12 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"tier": "Illegal"
 	},
 	"golem": {
-		"isNonstandard": null,
-		"tier": "OU"
-	},
-	"golemalola": {
 		"isNonstandard": "Past",
 		"tier": "Illegal"
+	},
+	"golemalola": {
+		"isNonstandard": null,
+		"tier": "OU"
 	},
 	"ponyta": {
 		"isNonstandard": "Past",

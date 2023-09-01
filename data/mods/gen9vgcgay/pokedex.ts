@@ -186,7 +186,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"def": 50,
 			"spa": 75,
 			"spd": 60,
-			"spe": 90
+			"spe": 120
 		},
 		"abilities": {
 			"0": "Static",
@@ -570,12 +570,12 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Poison"
 		],
 		"baseStats": {
-			"hp": 80,
-			"atk": 115,
-			"def": 65,
-			"spa": 105,
-			"spd": 70,
-			"spe": 70
+			"hp": 85,
+			"atk": 125,
+			"def": 70,
+			"spa": 120,
+			"spd": 75,
+			"spe": 75
 		},
 		"abilities": {
 			"0": "Chlorophyll",
@@ -604,23 +604,23 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"inherit": true
 	},
-	"golem": {
+	"golemalola": {
 		"types": [
 			"Rock",
-			"Ground"
+			"Electric"
 		],
 		"baseStats": {
-			"hp": 80,
-			"atk": 120,
-			"def": 130,
-			"spa": 55,
-			"spd": 65,
-			"spe": 45
+			"hp": 90,
+			"atk": 130,
+			"def": 135,
+			"spa": 60,
+			"spd": 70,
+			"spe": 50
 		},
 		"abilities": {
-			"0": "Rock Head",
+			"0": "Surge Surfer",
 			"1": "Sturdy",
-			"H": "Sand Veil"
+			"H": "Galvanize"
 		},
 		"inherit": true
 	},
@@ -640,7 +640,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		"abilities": {
 			"0": "Run Away",
 			"1": "Pastel Veil",
-			"H": "Anticipation"
+			"H": "Just the Tip"
 		},
 		"inherit": true
 	},
@@ -730,7 +730,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Ice"
 		],
 		"baseStats": {
-			"hp": 50,
+			"hp": 55,
 			"atk": 95,
 			"def": 180,
 			"spa": 85,
@@ -751,15 +751,15 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		],
 		"baseStats": {
 			"hp": 60,
-			"atk": 70,
+			"atk": 65,
 			"def": 60,
-			"spa": 125,
+			"spa": 130,
 			"spd": 75,
 			"spe": 110
 		},
 		"abilities": {
 			"0": "Cursed Body",
-			"1": "Shadow Tag",
+			"1": "Shadow Tagged",
 			"H": "Levitate"
 		},
 		"inherit": true
@@ -777,7 +777,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"spe": 72
 		},
 		"abilities": {
-			"0": "Insomnia",
+			"0": "Bad Dreams",
 			"1": "Mind Surfer",
 			"H": "Inner Focus"
 		},
@@ -1003,12 +1003,12 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Electric"
 		],
 		"baseStats": {
-			"hp": 95,
-			"atk": 112,
-			"def": 75,
-			"spa": 75,
-			"spd": 90,
-			"spe": 78
+			"hp": 85,
+			"atk": 67,
+			"def": 70,
+			"spa": 70,
+			"spd": 85,
+			"spe": 73
 		},
 		"abilities": {
 			"0": "Swift Swim",
@@ -1043,10 +1043,10 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Fairy"
 		],
 		"baseStats": {
-			"hp": 40,
+			"hp": 45,
 			"atk": 45,
 			"def": 65,
-			"spa": 100,
+			"spa": 115,
 			"spd": 120,
 			"spe": 90
 		},
@@ -1055,7 +1055,10 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"1": "Filter",
 			"H": "Technician"
 		},
-		"inherit": true
+		"inherit": true,
+		"evos": [
+			"Mr. Rime"
+		]
 	},
 	"mrmimegalar": {
 		"types": [
@@ -1063,11 +1066,11 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Psychic"
 		],
 		"baseStats": {
-			"hp": 50,
+			"hp": 55,
 			"atk": 65,
-			"def": 65,
-			"spa": 90,
-			"spd": 90,
+			"def": 70,
+			"spa": 95,
+			"spd": 95,
 			"spe": 100
 		},
 		"abilities": {
@@ -1080,7 +1083,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	"jynx": {
 		"types": [
 			"Ice",
-			"Psychic"
+			"Fairy"
 		],
 		"baseStats": {
 			"hp": 75,
@@ -1142,8 +1145,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Fire"
 		],
 		"baseStats": {
-			"hp": 75,
-			"atk": 110,
+			"hp": 80,
+			"atk": 115,
 			"def": 105,
 			"spa": 30,
 			"spd": 70,
@@ -1162,8 +1165,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Water"
 		],
 		"baseStats": {
-			"hp": 75,
-			"atk": 110,
+			"hp": 80,
+			"atk": 115,
 			"def": 105,
 			"spa": 30,
 			"spd": 70,
@@ -1240,12 +1243,12 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Normal"
 		],
 		"baseStats": {
-			"hp": 55,
-			"atk": 55,
-			"def": 50,
-			"spa": 45,
-			"spd": 65,
-			"spe": 55
+			"hp": 65,
+			"atk": 75,
+			"def": 70,
+			"spa": 65,
+			"spd": 85,
+			"spe": 75
 		},
 		"abilities": {
 			"0": "Run Away",
@@ -1384,7 +1387,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"spe": 30
 		},
 		"abilities": {
-			"0": "Immunity",
+			"0": "Comatose",
 			"1": "Thick Fat",
 			"H": "Gluttony"
 		},
@@ -2898,12 +2901,12 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Ghost"
 		],
 		"baseStats": {
-			"hp": 60,
-			"atk": 75,
-			"def": 75,
-			"spa": 65,
-			"spd": 65,
-			"spe": 50
+			"hp": 50,
+			"atk": 85,
+			"def": 105,
+			"spa": 40,
+			"spd": 95,
+			"spe": 20
 		},
 		"abilities": {
 			"0": "Keen Eye",
@@ -2919,7 +2922,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		],
 		"baseStats": {
 			"hp": 50,
-			"atk": 85,
+			"atk": 80,
 			"def": 95,
 			"spa": 55,
 			"spd": 65,
@@ -3230,7 +3233,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Dark"
 		],
 		"baseStats": {
-			"hp": 80,
+			"hp": 75,
 			"atk": 130,
 			"def": 65,
 			"spa": 130,
@@ -4537,12 +4540,12 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Dark"
 		],
 		"baseStats": {
-			"hp": 65,
-			"atk": 85,
-			"def": 110,
+			"hp": 75,
+			"atk": 95,
+			"def": 115,
 			"spa": 60,
-			"spd": 75,
-			"spe": 95
+			"spd": 80,
+			"spe": 100
 		},
 		"abilities": {
 			"0": "Battle Armor",
@@ -4671,7 +4674,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	},
 	"lickilicky": {
 		"types": [
-			"Normal"
+			"Normal",
+			"Poison"
 		],
 		"baseStats": {
 			"hp": 110,
@@ -5513,7 +5517,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	},
 	"conkeldurr": {
 		"types": [
-			"Fighting"
+			"Fighting",
+			"Rock"
 		],
 		"baseStats": {
 			"hp": 105,
@@ -7499,9 +7504,9 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		"baseStats": {
 			"hp": 70,
 			"atk": 85,
-			"def": 50,
+			"def": 55,
 			"spa": 80,
-			"spd": 50,
+			"spd": 55,
 			"spe": 90
 		},
 		"abilities": {
@@ -9617,9 +9622,9 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		],
 		"baseStats": {
 			"hp": 132,
-			"atk": 130,
+			"atk": 135,
 			"def": 74,
-			"spa": 80,
+			"spa": 85,
 			"spd": 74,
 			"spe": 30
 		},

@@ -409,6 +409,16 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 		},
 	},
+	quickdraw: {
+		inherit: true,
+		shortDesc: "This Pokemon has a 50% chance to move first in its priority bracket with attacking move.",
+		onFractionalPriority(priority, pokemon, target, move) {
+			if (move.category !== "Status" && this.randomChance(5, 10)) {
+				this.add('-activate', pokemon, 'ability: Quick Draw');
+				return 0.1;
+			}
+		},
+	},
 	colorchange: {
 		inherit: true,
 		shortDesc: "Changes type to be perfect offensive and defensive type once per turn",
@@ -666,23 +676,14 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			if (this.field.isTerrain('grassyterrain')) return this.chainModify(1.5);
 		},
 	},
-	comatose: {
-		inherit: true,
-		shortDesc: "Is considered to be asleep, Sleep Talk gets +1 priority",
-		onModifyPriority(priority, pokemon, target, move) {
-			if (move.name === "Sleep Talk") {
-				return priority + 1;
-			}
-		},
-	},
 	receiver: {
 		inherit: true,
-		shortDesc: "Inherits ability and boosts from ally faint",
+		shortDesc: "Inherits ability and boosts when ally faints.",
 		onAllyFaint(target, source, effect) {
 			if (!this.effectState.target.hp) return;
 			const ability = target.getAbility();
 			const additionalBannedAbilities = [
-				'noability', 'flowergift', 'forecast', 'hungerswitch', 'illusion', 'imposter', 'neutralizinggas', 'powerofalchemy', 'receiver', 'trace', 'wonderguard',
+				'noability', 'flowergift', 'forecast', 'hungerswitch', 'illusion', 'imposter', 'neutralizinggas', 'powerofalchemy', 'receiver', 'trace', 'wonderguard', 'colorchange', 'doubledown'
 			];
 			if (target.getAbility().isPermanent || additionalBannedAbilities.includes(target.ability)) return;
 			if (this.effectState.target.setAbility(ability)) {
@@ -707,12 +708,12 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	powerofalchemy: {
 		inherit: true,
-		shortDesc: "Inherits ability and gains +1 atk and spA when ally faints",
+		shortDesc: "Inherits ability and gains +1 Atk and SpA when ally faints.",
 		onAllyFaint(target) {
 			if (!this.effectState.target.hp) return;
 			const ability = target.getAbility();
 			const additionalBannedAbilities = [
-				'noability', 'flowergift', 'forecast', 'hungerswitch', 'illusion', 'imposter', 'neutralizinggas', 'powerofalchemy', 'receiver', 'trace', 'wonderguard',
+				'noability', 'flowergift', 'forecast', 'hungerswitch', 'illusion', 'imposter', 'neutralizinggas', 'powerofalchemy', 'receiver', 'trace', 'wonderguard', 'colorchange', 'doubledown'
 			];
 			if (target.getAbility().isPermanent || additionalBannedAbilities.includes(target.ability)) return;
 			if (this.effectState.target.setAbility(ability)) {

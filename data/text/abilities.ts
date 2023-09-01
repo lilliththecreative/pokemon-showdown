@@ -2327,4 +2327,9 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "If <50% HP, attacks right before first attack targetted at user.",
 		shortDesc: "If <50% HP, attacks right before first attack targetted at user.",
 	},
+	shadowtagged: {
+		name: "Shadow Tagged",
+		desc: "Traps Target and -1 evasion on contact.",
+		shortDesc: "Traps Target and -1 evasion on contact.",
+	},
 };

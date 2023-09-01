@@ -5362,6 +5362,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	growingpumpkin: {
 		isNonstandard: "CAP",
 		name: "Growing Pumpkin",
+		isPermanent: true,
 		rating: 4,
 		num: -28,
 	},
@@ -5429,5 +5430,17 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		rating: 3,
 		num: -36,
+	},
+	shadowtagged: {
+		onDamagingHit(damage, target, source, move) {
+			if (this.checkMoveMakesContact(move, source, target, true)) {
+				this.add('-ability', target, 'Shadow Tagged');
+				source.addVolatile('trapped', source, null, 'trapper');
+				this.boost({evasion: -1}, source, target, null, true);
+			}
+		},
+		name: "Shadow Tagged",
+		rating: 2,
+		num: 221,
 	},
 };
