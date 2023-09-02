@@ -32,6 +32,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	snore: {
 		inherit: true,
 		basePower: 110,
+		category: 'Physical',
 	},
 	dreameater: {
 		inherit: true,
