@@ -18,7 +18,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "OU",
 	},
 	squirtle: {
-		tier: "LC",
+		tier: "8U",
 	},
 	wartortle: {
 		tier: "PU",
@@ -99,7 +99,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "LC",
 	},
 	nidorino: {
-		tier: "7U",
+		tier: "ZU",
 	},
 	nidoking: {
 		tier: "UU",
@@ -150,10 +150,10 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "NU",
 	},
 	paras: {
-		tier: "LC",
+		tier: "7U",
 	},
 	parasect: {
-		tier: "7U",
+		tier: "SU",
 	},
 	venonat: {
 		tier: "8U",
@@ -510,7 +510,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "Uber",
 	},
 	chikorita: {
-		tier: "LC",
+		tier: "7U",
 	},
 	bayleef: {
 		tier: "ZU",
@@ -531,7 +531,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "LC",
 	},
 	croconaw: {
-		tier: "SU",
+		tier: "ZU",
 	},
 	feraligatr: {
 		tier: "UU",
@@ -591,7 +591,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "LC",
 	},
 	marill: {
-		tier: "NFE",
+		tier: "8U",
 	},
 	azumarill: {
 		tier: "UU",
@@ -804,7 +804,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "11U",
 	},
 	beautifly: {
-		tier: "SU",
+		tier: "7U",
 	},
 	cascoon: {
 		tier: "11U",
@@ -855,7 +855,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "7U",
 	},
 	masquerain: {
-		tier: "ZU",
+		tier: "SU",
 	},
 	shroomish: {
 		tier: "7U",
@@ -960,7 +960,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "UU",
 	},
 	wailmer: {
-		tier: "SU",
+		tier: "ZU",
 	},
 	wailord: {
 		tier: "NU",
@@ -1029,7 +1029,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "NU",
 	},
 	baltoy: {
-		tier: "7U",
+		tier: "SU",
 	},
 	claydol: {
 		tier: "OU",
@@ -1116,7 +1116,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "NU",
 	},
 	luvdisc: {
-		tier: "SU",
+		tier: "ZU",
 	},
 	bagon: {
 		tier: "SU",
