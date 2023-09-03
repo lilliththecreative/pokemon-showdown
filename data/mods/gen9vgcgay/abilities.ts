@@ -392,6 +392,18 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			if (move?.type === 'Flying' && pokemon.hp >= pokemon.maxhp / 2) return priority + 1;
 		},
 	},
+	truant: {
+		inherit: true,
+		shortDesc: "This Pokemon heals 25% every other turn instead of using a move.",
+		onBeforeMove(pokemon) {
+			if (pokemon.removeVolatile('truant')) {
+				this.heal(pokemon.baseMaxhp / 4);
+				this.add('cant', pokemon, 'ability: Truant');
+				return false;
+			}
+			pokemon.addVolatile('truant');
+		},
+	},
 	flowergift: {
 		inherit: true,
 		shortDesc: "If Sunny Day active, it and allies' Atk, SpA, Def, and SpDef are 1.5x",
@@ -676,6 +688,20 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			if (this.field.isTerrain('grassyterrain')) return this.chainModify(1.5);
 		},
 	},
+	battlebond: {
+		inherit: true,
+		shortDesc: "After KOing a Pokemon: becomes Ash-Greninja, Water Shuriken: 20 power, hits 3x.",
+		onSourceAfterFaint(length, target, source, effect) {
+			if (effect?.effectType !== 'Move') return;
+			if (source.abilityState.battleBondTriggered) return;
+			if (source.species.id === 'greninjabond' && source.hp && !source.transformed && source.side.foePokemonLeft()) {
+				// this.boost({atk: 1, spa: 1, spe: 1}, source, source, this.effect);
+				source.formeChange('Greninja-Ash', this.effect, true);
+				this.add('-activate', source, 'ability: Battle Bond');
+				source.abilityState.battleBondTriggered = true;
+			}
+		},
+	},
 	receiver: {
 		inherit: true,
 		shortDesc: "Inherits ability and boosts when ally faints.",
@@ -689,20 +715,6 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			if (this.effectState.target.setAbility(ability)) {
 				this.boost(target.boosts, this.effectState.target, this.effectState.target);
 				this.add('-ability', this.effectState.target, ability, '[from] ability: Receiver', '[of] ' + target);
-			}
-		},
-	},
-	battlebond: {
-		inherit: true,
-		shortDesc: "After KOing a pokemon, Transform to Ash-Gren",
-		onSourceAfterFaint(length, target, source, effect) {
-			if (effect?.effectType !== 'Move') return;
-			if (source.abilityState.battleBondTriggered) return;
-			if (source.species.id === 'greninjabond' && source.hp && !source.transformed && source.side.foePokemonLeft()) {
-				// this.boost({atk: 1, spa: 1, spe: 1}, source, source, this.effect);
-				source.formeChange('Greninja-Ash', this.effect, true);
-				this.add('-activate', source, 'ability: Battle Bond');
-				source.abilityState.battleBondTriggered = true;
 			}
 		},
 	},

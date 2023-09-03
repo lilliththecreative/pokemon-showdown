@@ -130,7 +130,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		"inherit": true,
 		"accuracy": 100,
 		multihit: [2, 5],
-		shortDesc: "Hits 2-5 Times, does 1/16 each to other enemy",
+		shortDesc: "Hits 2-5 Times, does 1/16 each to other enemy.",
 		"basePower": 20,
 		"category": "Special",
 		"type": "Fire",
@@ -594,7 +594,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	beakblast: {
 		inherit: true,
 		isNonstandard: null,
-		basePower: 120,
+		basePower: 130,
 	},
 	zingzap: {
 		inherit: true,
@@ -729,7 +729,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	present: {
 		inherit: true,
-		shortDesc: "100, 130, 160 power, if target ally, heals 50% instead",
+		shortDesc: "80, 110, 140 power, if target ally, heals 50%.",
 		accuracy: 100,
 		onTryHit(target, source, move) {
 			if (source.isAlly(target)) {
@@ -748,11 +748,11 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		onModifyMove(move, pokemon, target) {
 			const rand = this.random(3);
 			if (rand < 1) {
-				move.basePower = 100;
+				move.basePower = 80;
 			} else if (rand < 2) {
-				move.basePower = 130;
+				move.basePower = 110;
 			} else {
-				move.basePower = 160;
+				move.basePower = 140;
 			}
 		},
 	},

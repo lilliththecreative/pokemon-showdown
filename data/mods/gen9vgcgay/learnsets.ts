@@ -31087,7 +31087,7 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"3M"
 			],
 			"followme": [
-				"3S0"
+				"9M"
 			],
 			"foulplay": [
 				"8M",
@@ -32073,6 +32073,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"flashfreeze": [
+				"9M"
+			],
+			"followme": [
 				"9M"
 			]
 		}
@@ -40580,6 +40583,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"headsmash": [
+				"9M"
+			],
+			"bravebird": [
 				"9M"
 			]
 		}
@@ -55666,6 +55672,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"storedpower": [
 				"9M"
+			],
+			"earthpower": [
+				"9M"
 			]
 		}
 	},
@@ -55741,6 +55750,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"8L1"
 			],
 			"comeuppance": [
+				"9M"
+			],
+			"followme": [
 				"9M"
 			]
 		}

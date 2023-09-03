@@ -2572,10 +2572,10 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		"baseStats": {
 			"hp": 100,
 			"atk": 110,
-			"def": 100,
+			"def": 95,
 			"spa": 75,
-			"spd": 90,
-			"spe": 85
+			"spd": 85,
+			"spe": 80
 		},
 		"abilities": {
 			"0": "Intimidate",
@@ -3254,9 +3254,9 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		],
 		"baseStats": {
 			"hp": 75,
-			"atk": 110,
-			"def": 110,
-			"spa": 110,
+			"atk": 105,
+			"def": 105,
+			"spa": 105,
 			"spd": 105,
 			"spe": 80
 		},
@@ -5385,9 +5385,9 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		"baseStats": {
 			"hp": 116,
 			"atk": 55,
-			"def": 85,
-			"spa": 107,
-			"spd": 95,
+			"def": 90,
+			"spa": 112,
+			"spd": 100,
 			"spe": 29
 		},
 		"abilities": {
@@ -7783,7 +7783,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Water"
 		],
 		"baseStats": {
-			"hp": 50,
+			"hp": 45,
 			"atk": 20,
 			"def": 20,
 			"spa": 25,
@@ -7800,7 +7800,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Water"
 		],
 		"baseStats": {
-			"hp": 50,
+			"hp": 45,
 			"atk": 145,
 			"def": 135,
 			"spa": 145,
