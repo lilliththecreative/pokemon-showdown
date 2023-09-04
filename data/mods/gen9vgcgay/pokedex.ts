@@ -4540,7 +4540,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Dark"
 		],
 		"baseStats": {
-			"hp": 75,
+			"hp": 80,
 			"atk": 95,
 			"def": 115,
 			"spa": 60,
@@ -4639,7 +4639,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		],
 		"baseStats": {
 			"hp": 75,
-			"atk": 125,
+			"atk": 130,
 			"def": 65,
 			"spa": 45,
 			"spd": 85,
@@ -6875,7 +6875,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"spe": 106
 		},
 		"abilities": {
-			"0": "Rivalry",
+			"0": "Intimidate",
 			"1": "Unnerve",
 			"H": "Moxie"
 		},
@@ -10615,7 +10615,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Steel"
 		],
 		"baseStats": {
-			"hp": 70,
+			"hp": 75,
 			"atk": 85,
 			"def": 145,
 			"spa": 60,

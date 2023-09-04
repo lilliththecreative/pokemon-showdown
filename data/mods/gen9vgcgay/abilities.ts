@@ -1308,6 +1308,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		onModifyMove(move, pokemon, target) {
 			if (move.category === "Status" && move.target === "normal" && !target?.isAlly(pokemon)) {
 				move.target = "allAdjacentFoes";
+				pokemon.deductPP(move.id, 3);
 			}
 		},
 	},

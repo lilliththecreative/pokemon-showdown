@@ -17,16 +17,16 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	hypnosis: {
 		inherit: true,
-		pp: 10,
+		pp: 5,
 	},
 	sleeppowder: {
 		inherit: true,
-		pp: 10,
+		pp: 5,
 	},
 	sing: {
 		inherit: true,
 		accuracy: 60,
-		pp: 10,
+		pp: 5,
 	},
 	// Sleeping Moves
 	snore: {
@@ -514,6 +514,36 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		basePower: 70,
 		accuracy: 100,
 	},
+	dragonrush: {
+		inherit: true,
+		accuracy: 80,
+	},
+	snatch: {
+		inherit: true,
+		isNonstandard: null,
+		shortDesc: "User steals certain support moves for it and allies to use.",
+		condition: {
+			duration: 1,
+			onStart(pokemon) {
+				this.add('-singleturn', pokemon, 'Snatch');
+			},
+			onAnyPrepareHitPriority: -1,
+			onAnyPrepareHit(source, target, move) {
+				const snatchUser = this.effectState.source;
+				if (snatchUser.isSkyDropped()) return;
+				if (!move || move.isZ || move.isMax || !move.flags['snatch'] || move.sourceEffect === 'snatch') {
+					return;
+				}
+				snatchUser.removeVolatile('snatch');
+				this.add('-activate', snatchUser, 'move: Snatch', '[of] ' + source);
+				this.actions.useMove(move.id, snatchUser);
+				for (const ally of (snatchUser as Pokemon).adjacentAllies()) {
+					this.actions.useMove(move.id, ally);
+				}
+				return null;
+			},
+		},
+	},
 	// Fang Buff
 	hyperfang: {
 		inherit: true,
@@ -538,26 +568,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			{chance: 10, volatileStatus: 'flinch'},
 		],
 	},
-	// Some signature Moves
-	wickedblow: {
-		inherit: true,
-		basePower: 69
-	},
-	surgingstrikes: {
-		inherit: true,
-		basePower: 23,
-	},
-	technoblast: {
-		inherit: true,
-		isNonstandard: null,
-		basePower: 100,
-		onModifyType(move, pokemon) {
-			if (pokemon.ignoringItem()) return;
-			const item = pokemon.getItem();
-			if (!item.onDrive) return;
-			move.type = item.onDrive;
-		}
-	},
+	// Near Signaure Moves
 	wringout: {
 		inherit: true,
 		isNonstandard: null,
@@ -591,6 +602,120 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			chance: 30,
 			boosts: {spe: -1},
 		},
+	},
+	present: {
+		inherit: true,
+		shortDesc: "80, 110, 140 power, if target ally, heals 50%.",
+		accuracy: 100,
+		onTryHit(target, source, move) {
+			if (source.isAlly(target)) {
+				move.basePower = 0;
+				move.infiltrates = true;
+			}
+		},
+		onHit(target, source) {
+			if (source.isAlly(target)) {
+				if (!this.heal(Math.floor(target.baseMaxhp * 0.5))) {
+					this.add('-immune', target);
+					return this.NOT_FAIL;
+				}
+			}
+		},
+		onModifyMove(move, pokemon, target) {
+			const rand = this.random(3);
+			if (rand < 1) {
+				move.basePower = 80;
+			} else if (rand < 2) {
+				move.basePower = 110;
+			} else {
+				move.basePower = 140;
+			}
+		},
+	},
+	furycutter: {
+		inherit: true,
+		accuracy: 100,
+		shortDesc: "Power doubles with each hit, up to 640.",
+		basePowerCallback(pokemon, target, move) {
+			if (!pokemon.volatiles['furycutter'] || move.hit === 1) {
+				pokemon.addVolatile('furycutter');
+			}
+			const bp = this.clampIntRange(move.basePower * pokemon.volatiles['furycutter'].multiplier, 1, 640);
+			this.debug('BP: ' + bp);
+			return bp;
+		},
+	},
+	meditate: {
+		inherit: true,
+		isNonstandard: null,
+		shortDesc: "Boosts Atk and SpDef by 1",
+		boosts: {
+			atk: 1,
+			spd: 1
+		},
+	},
+	charge: {
+		inherit: true,
+		isNonstandard: null,
+		shortDesc: "Doubles next Electric attack and heals 33%",
+		heal: [1, 3],
+		boosts: null,
+	},
+	smellingsalts: {
+		inherit: true,
+		isNonstandard: null,
+		shortDesc: "Power doubles if target is paralyzed, Does not Cure.",
+		onHit(target) {
+		},
+	},
+	psychoshift: {
+		inherit: true,
+		isNonstandard: null,
+		shortDesc: "Transfers user's status to the target. Cures Ally Status.",
+		onTryHit(target, source, move) {
+			if (!source.status) return false;
+			move.status = source.status;
+		},
+		self: {
+			onHit(pokemon) {
+				pokemon.cureStatus();
+				for (const allyActive of pokemon.adjacentAllies()) {
+					allyActive.cureStatus();
+				}
+			},
+		},
+	},
+	// Some signature Moves
+	wickedblow: {
+		inherit: true,
+		basePower: 69
+	},
+	sparklingaria: {
+		inherit: true,
+		isNonstandard: null,
+		shortDesc: "Target is immune and cured if burned.",
+		basePower: 100,
+		onTryHit(target, source, move) {
+			if (source.status === 'brn') {
+				this.add('-immune', target, '[from] move: Sparkling Aria');
+				return null;
+			}
+		},
+	},
+	surgingstrikes: {
+		inherit: true,
+		basePower: 23,
+	},
+	technoblast: {
+		inherit: true,
+		isNonstandard: null,
+		basePower: 100,
+		onModifyType(move, pokemon) {
+			if (pokemon.ignoringItem()) return;
+			const item = pokemon.getItem();
+			if (!item.onDrive) return;
+			move.type = item.onDrive;
+		}
 	},
 	headcharge: {
 		inherit: true,
@@ -775,35 +900,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		basePower: 95,
 	},
-	present: {
-		inherit: true,
-		shortDesc: "80, 110, 140 power, if target ally, heals 50%.",
-		accuracy: 100,
-		onTryHit(target, source, move) {
-			if (source.isAlly(target)) {
-				move.basePower = 0;
-				move.infiltrates = true;
-			}
-		},
-		onHit(target, source) {
-			if (source.isAlly(target)) {
-				if (!this.heal(Math.floor(target.baseMaxhp * 0.5))) {
-					this.add('-immune', target);
-					return this.NOT_FAIL;
-				}
-			}
-		},
-		onModifyMove(move, pokemon, target) {
-			const rand = this.random(3);
-			if (rand < 1) {
-				move.basePower = 80;
-			} else if (rand < 2) {
-				move.basePower = 110;
-			} else {
-				move.basePower = 140;
-			}
-		},
-	},
 	revelationdance: {
 		inherit: true,
 		basePower: 100,
@@ -843,22 +939,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		basePower: 110
 	},
-	meditate: {
-		inherit: true,
-		isNonstandard: null,
-		shortDesc: "Boosts Atk and SpDef by 1",
-		boosts: {
-			atk: 1,
-			spd: 1
-		},
-	},
-	charge: {
-		inherit: true,
-		isNonstandard: null,
-		shortDesc: "Doubles next Electric attack and heals 33%",
-		heal: [1, 3],
-		boosts: null,
-	},
 	steamroller: {
 		inherit: true,
 		isNonstandard: null,
@@ -878,32 +958,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		// 		foe.addSideCondition('stickyweb');
 		// 	}
 		// },
-	},
-	snatch: {
-		inherit: true,
-		isNonstandard: null,
-		shortDesc: "User steals certain support moves for it and allies to use.",
-		condition: {
-			duration: 1,
-			onStart(pokemon) {
-				this.add('-singleturn', pokemon, 'Snatch');
-			},
-			onAnyPrepareHitPriority: -1,
-			onAnyPrepareHit(source, target, move) {
-				const snatchUser = this.effectState.source;
-				if (snatchUser.isSkyDropped()) return;
-				if (!move || move.isZ || move.isMax || !move.flags['snatch'] || move.sourceEffect === 'snatch') {
-					return;
-				}
-				snatchUser.removeVolatile('snatch');
-				this.add('-activate', snatchUser, 'move: Snatch', '[of] ' + source);
-				this.actions.useMove(move.id, snatchUser);
-				for (const ally of (snatchUser as Pokemon).adjacentAllies()) {
-					this.actions.useMove(move.id, ally);
-				}
-				return null;
-			},
-		},
 	},
 	octolock: {
 		inherit: true,
@@ -930,19 +984,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			},
 		},
 	},
-	furycutter: {
-		inherit: true,
-		accuracy: 100,
-		shortDesc: "Power doubles with each hit, up to 640.",
-		basePowerCallback(pokemon, target, move) {
-			if (!pokemon.volatiles['furycutter'] || move.hit === 1) {
-				pokemon.addVolatile('furycutter');
-			}
-			const bp = this.clampIntRange(move.basePower * pokemon.volatiles['furycutter'].multiplier, 1, 640);
-			this.debug('BP: ' + bp);
-			return bp;
-		},
-	},
 	filletaway: {
 		inherit: true,
 		shortDesc: "+2 Atk, SpAtk, Spe for 1/3 user HP, Ally Heals 1/3.",
@@ -954,34 +995,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			for (const allyActive of pokemon.adjacentAllies()) {
 				this.heal(allyActive.baseMaxhp / 3, allyActive, pokemon);
 			}
-		},
-	},
-	dragonrush: {
-		inherit: true,
-		accuracy: 80,
-	},
-	smellingsalts: {
-		inherit: true,
-		isNonstandard: null,
-		shortDesc: "Power doubles if target is paralyzed, Does not Cure.",
-		onHit(target) {
-		},
-	},
-	psychoshift: {
-		inherit: true,
-		isNonstandard: null,
-		shortDesc: "Transfers user's status to the target. Cures Ally Status.",
-		onTryHit(target, source, move) {
-			if (!source.status) return false;
-			move.status = source.status;
-		},
-		self: {
-			onHit(pokemon) {
-				pokemon.cureStatus();
-				for (const allyActive of pokemon.adjacentAllies()) {
-					allyActive.cureStatus();
-				}
-			},
 		},
 	},
 	fairylock: {
@@ -1793,10 +1806,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 	},
 	dragonhammer: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	sparklingaria: {
 		inherit: true,
 		isNonstandard: null,
 	},
