@@ -32850,6 +32850,12 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"dazzlinggleam": [
 				"9M"
+			],
+			"playrough": [
+				"9M"
+			],
+			"wickedblow": [
+				"9M"
 			]
 		}
 	},
@@ -41491,6 +41497,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"terablast": [
 				"9M"
+			],
+			"gmaxreplenish": [
+				"9M"
 			]
 		}
 	},
@@ -42126,6 +42135,12 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"whirlwind": [
 				"7V"
+			],
+			"bleakwindstorm": [
+				"9M"
+			],
+			"flashfreeze": [
+				"9M"
 			]
 		}
 	},
@@ -42360,6 +42375,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"8M"
 			],
 			"hiddenpower": [
+				"9M"
+			],
+			"bleakwindstorm": [
 				"9M"
 			]
 		}
@@ -42736,6 +42754,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"4M",
 				"3M"
 			],
+			"risingvoltage": [
+				"8T"
+			],
 			"roar": [
 				"7M",
 				"7V",
@@ -43000,6 +43021,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"7V",
 				"6L1",
 				"5L92"
+			],
+			"wildboltstorm": [
+				"9M"
 			]
 		}
 	},
@@ -43240,6 +43264,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"8M"
 			],
 			"hiddenpower": [
+				"9M"
+			],
+			"wildboltstorm": [
 				"9M"
 			]
 		}
@@ -43868,6 +43895,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"5L1",
 				"4L1",
 				"3L1"
+			],
+			"springtidestorm": [
+				"9M"
 			]
 		}
 	},
@@ -44087,6 +44117,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"8L15"
 			],
 			"hiddenpower": [
+				"9M"
+			],
+			"springtidestorm": [
 				"9M"
 			]
 		}
@@ -124238,9 +124271,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"5S0",
 				"4M"
 			],
-			"skillswap": [
-				"9M"
-			],
 			"sleeptalk": [
 				"9M",
 				"8M",
@@ -140448,7 +140478,7 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"5T",
 				"4T"
 			],
-			"fluercannon": [
+			"fleurcannon": [
 				"9M"
 			],
 			"ancientpower": [
@@ -190846,6 +190876,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"wringout": [
 				"9M"
+			],
+			"skyuppercut": [
+				"9M"
 			]
 		}
 	},
@@ -193055,6 +193088,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"watersport": [
 				"7L1"
+			],
+			"hiddenpower": [
+				"9M"
 			],
 			"allyswitch": [
 				"9M"
@@ -201069,6 +201105,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"8M"
 			],
 			"hiddenpower": [
+				"9M"
+			],
+			"gmaxreplenish": [
 				"9M"
 			]
 		}

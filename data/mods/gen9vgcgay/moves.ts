@@ -42,6 +42,36 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 					source.status === 'slp' || source.hasAbility('comatose');
 		},
 	},
+	// Genie moves
+	bleakwindstorm: {
+		inherit: true,
+		basePower: 95,
+		accuracy: 85,
+		onModifyMove(move, pokemon, target) {
+			if (this.field.isWeather(['hail', 'snow'])) move.accuracy = true;
+		},
+	},
+	sandsearstorm: {
+		inherit: true,
+		basePower: 95,
+		accuracy: 85,
+		onModifyMove(move, pokemon, target) {
+			if (this.field.isWeather('sandstorm')) move.accuracy = true;
+		},
+	},
+	springtidestorm: {
+		inherit: true,
+		basePower: 95,
+		accuracy: 85,
+		onModifyMove(move, pokemon, target) {
+			if (target && ['sunnyday', 'desolateland'].includes(target.effectiveWeather())) move.accuracy = true;
+		},
+	},
+	wildboltstorm: {
+		inherit: true,
+		basePower: 95,
+		accuracy: 85,
+	},
 	// Omniboost moves
 	ominouswind: {
 		inherit: true,
@@ -237,6 +267,15 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			this.debug('BP doubled');
 			return 100;
 		},
+	},
+	gastroacid: {
+		inherit: true,
+		target: "allAdjacent",
+	},
+	lick: {
+		inherit: true,
+		shortDesc: "50% chance to paralyze the target.",
+		secondary: { chance: 50, status: 'par'},
 	},
 	growth: {
 		inherit: true,
@@ -500,9 +539,18 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		],
 	},
 	// Some signature Moves
+	wickedblow: {
+		inherit: true,
+		basePower: 69
+	},
+	surgingstrikes: {
+		inherit: true,
+		basePower: 23,
+	},
 	technoblast: {
 		inherit: true,
 		isNonstandard: null,
+		basePower: 100,
 		onModifyType(move, pokemon) {
 			if (pokemon.ignoringItem()) return;
 			const item = pokemon.getItem();
@@ -1239,6 +1287,26 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		}
 	},
 	// Max Moves
+	gmaxreplenish: {
+		inherit: true,
+		isNonstandard: null,
+		isMax: false,
+		flags: {protect: 1, mirror: 1},
+		basePower: 80,
+		shortDesc: "Restores berry on attack.",
+		self: {
+			onHit(source) {
+				// if (this.random(2) === 0) return;
+				if (source.item) return;
+				if (source.lastItem && this.dex.items.get(source.lastItem).isBerry) {
+					const item = source.lastItem;
+					source.lastItem = '';
+					this.add('-item', source, this.dex.items.get(item), '[from] move: G-Max Replenish');
+					source.setItem(item);
+				}
+			},
+		},
+	},
 	gmaxmalodor: {
 		inherit: true,
 		isNonstandard: null,
@@ -1319,7 +1387,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	// Freeze -> Frostbite
 	blizzard: {
 		inherit: true,
-		shortDesc: "15% chance to frostbite foes. Can't miss in Snow",
+		shortDesc: "15% chance to frostbite foes. Can't miss in Snow.",
 		secondary: {chance: 15, status: 'fst'},
 	},
 	icebeam: {
@@ -1783,6 +1851,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	searingshot: {
 		inherit: true,
 		isNonstandard: null,
+		target: "normal",
 	},
 	shellsidearm: {
 		inherit: true,

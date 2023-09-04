@@ -2332,4 +2332,9 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "Traps Target and -1 evasion on contact.",
 		shortDesc: "Traps Target and -1 evasion on contact.",
 	},
+	moltendown: {
+		name: "Molten Down",
+		desc: "This Pokemon is healed 1/4 by Fire, 1/8 by Sun; is hurt 1.25x by Water, 1/8 by Rain.",
+		shortDesc: "This Pokemon is healed 1/4 by Fire, 1/8 by Sun; is hurt 1.25x by Water, 1/8 by Rain.",
+	},
 };

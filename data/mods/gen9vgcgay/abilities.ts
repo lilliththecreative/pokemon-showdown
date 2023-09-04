@@ -392,6 +392,15 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			if (move?.type === 'Flying' && pokemon.hp >= pokemon.maxhp / 2) return priority + 1;
 		},
 	},
+	liquidvoice: {
+		inherit: true,
+		shortDesc: "Sound moves become water and 1.2x power.",
+		onBasePower(basePower, attacker, defender, move) {
+			if (move.flags['sound']) {
+				return this.chainModify([6,5]);
+			}
+		},
+	},
 	truant: {
 		inherit: true,
 		shortDesc: "This Pokemon heals 25% every other turn instead of using a move.",
@@ -406,18 +415,31 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	flowergift: {
 		inherit: true,
-		shortDesc: "If Sunny Day active, it and allies' Atk, SpA, Def, and SpDef are 1.5x",
+		shortDesc: "If Sunny Day active, it and allies' Atk, SpA, Def, and SpDef are 1.3x",
 		onAllyModifySpAPriority: 3,
 		onAllyModifySpA(atk, pokemon) {
 			if (this.effectState.target.baseSpecies.baseSpecies !== 'Cherrim') return;
 			if (['sunnyday', 'desolateland'].includes(pokemon.effectiveWeather())) {
-				return this.chainModify(1.5);
+				return this.chainModify(1.3);
 			}
 		},
 		onAllyModifyDef(spd, pokemon) {
 			if (this.effectState.target.baseSpecies.baseSpecies !== 'Cherrim') return;
 			if (['sunnyday', 'desolateland'].includes(pokemon.effectiveWeather())) {
-				return this.chainModify(1.5);
+				return this.chainModify(1.3);
+			}
+		},
+		onAllyModifyAtk(atk, pokemon) {
+			if (this.effectState.target.baseSpecies.baseSpecies !== 'Cherrim') return;
+			if (['sunnyday', 'desolateland'].includes(pokemon.effectiveWeather())) {
+				return this.chainModify(1.3);
+			}
+		},
+		onAllyModifySpDPriority: 4,
+		onAllyModifySpD(spd, pokemon) {
+			if (this.effectState.target.baseSpecies.baseSpecies !== 'Cherrim') return;
+			if (['sunnyday', 'desolateland'].includes(pokemon.effectiveWeather())) {
+				return this.chainModify(1.3);
 			}
 		},
 	},
@@ -433,7 +455,8 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	colorchange: {
 		inherit: true,
-		shortDesc: "Changes type to be perfect offensive and defensive type once per turn",
+		isPermanent: true,
+		shortDesc: "Changes type to be perfect offensive and defensive type once per turn.",
 		onResidualOrder: 29,
 		onResidual(pokemon) {
 			this.effectState.colorChange = false;
@@ -720,7 +743,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	powerofalchemy: {
 		inherit: true,
-		shortDesc: "Inherits ability and gains +1 Atk and SpA when ally faints.",
+		// shortDesc: "Inherits ability and gains +1 Atk and SpA when ally faints.",
 		onAllyFaint(target) {
 			if (!this.effectState.target.hp) return;
 			const ability = target.getAbility();
@@ -729,7 +752,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			];
 			if (target.getAbility().isPermanent || additionalBannedAbilities.includes(target.ability)) return;
 			if (this.effectState.target.setAbility(ability)) {
-				this.boost({atk: 1, spa: 1}, this.effectState.target, this.effectState.target);
+				// this.boost({atk: 1, spa: 1}, this.effectState.target, this.effectState.target);
 				this.add('-ability', this.effectState.target, ability, '[from] ability: Power of Alchemy', '[of] ' + target);
 			}
 		},
@@ -1191,6 +1214,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	cloakchange: {
 		inherit: true,
 		isNonstandard: null,
+		isPermanent: true,
 		onModifyMovePriority: 1,
 		onModifyMove(move, attacker, defender) {
 			if (attacker.species.baseSpecies !== 'Wormadam' || attacker.transformed) return;
@@ -1198,7 +1222,6 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			if (move.category === 'Physical') attacker.formeChange('Wormadam-Sandy');
 			if (move.category === 'Special') attacker.formeChange('Wormadam');
 		},
-		isPermanent: true,
 	},
 	bigballs: {
 		inherit: true,
@@ -1281,6 +1304,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	wideeyed: {
 		inherit: true,
 		isNonstandard: null,
+		// TODO: 4x PP
 		onModifyMove(move, pokemon, target) {
 			if (move.category === "Status" && move.target === "normal" && !target?.isAlly(pokemon)) {
 				move.target = "allAdjacentFoes";
