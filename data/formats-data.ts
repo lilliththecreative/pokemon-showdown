@@ -184,7 +184,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 	},
 	pikachu: {
-		tier: "SU",
+		tier: "SUBL",
 		doublesTier: "NFE",
 		natDexTier: "RU",
 	},
@@ -1715,7 +1715,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		natDexTier: "RU",
 	},
 	stantler: {
-		tier: "SU",
+		tier: "SUBL",
 	},
 	wyrdeer: {
 		tier: "PU",
@@ -1995,7 +1995,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "ZUBL",
 	},
 	slaking: {
-		tier: "SU",
+		tier: "SUBL",
 		doublesTier: "(DUU)",
 		natDexTier: "RU",
 	},
@@ -3067,7 +3067,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "LC",
 	},
 	dewott: {
-		tier: "SU",
+		tier: "SUBL",
 	},
 	samurott: {
 		tier: "NU",
@@ -5632,7 +5632,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		natDexTier: "OU",
 	},
 	glimmet: {
-		tier: "LC",
+		tier: "ZU",
 	},
 	glimmora: {
 		tier: "OU",

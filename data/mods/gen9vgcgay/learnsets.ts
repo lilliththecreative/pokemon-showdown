@@ -29484,11 +29484,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"4M",
 				"3M"
 			],
-			"seismictoss": [
-				"8V",
-				"7V",
-				"3T"
-			],
 			"shadowball": [
 				"8M",
 				"8V",

@@ -721,7 +721,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "8U",
 	},
 	granbull: {
-		tier: "SU",
+		tier: "SUBL",
 	},
 	qwilfish: {
 		tier: "UU",
