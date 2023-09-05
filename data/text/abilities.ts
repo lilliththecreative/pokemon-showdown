@@ -2214,8 +2214,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	wideeyed: {
 		name: "Wide Eyed",
-		shortDesc: "All Status moves this pokemon uses on an enemy will hit both opponents.",
-		desc: "All Status moves this pokemon uses on an enemy will hit both opponents.",
+		shortDesc: "All Status moves used on an enemy will hit both opponents, but costs 4PP.",
+		desc: "All Status moves used on an enemy will hit both opponents, but costs 4PP.",
 	},
 	constrictor: {
 		name: "Constrictor",

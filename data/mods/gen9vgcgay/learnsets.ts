@@ -10125,6 +10125,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"helpinghand": [
 				"9M"
+			],
+			"dazzlinggleam": [
+				"9M"
 			]
 		}
 	},
@@ -108384,6 +108387,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"quarry": [
 				"9M"
+			],
+			"wideguard": [
+				"9M"
 			]
 		}
 	},
@@ -143783,11 +143789,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"7M",
 				"6M"
 			],
-			"confuseray": [
-				"7L1",
-				"6L20",
-				"5L20"
-			],
 			"covet": [
 				"7T",
 				"6T",
@@ -144069,11 +144070,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"5T",
 				"5L22"
 			],
-			"swagger": [
-				"7M",
-				"6M",
-				"5M"
-			],
 			"swordsdance": [
 				"7M",
 				"6M",
@@ -144119,6 +144115,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"5T"
 			],
 			"terablast": [
+				"9M"
+			],
+			"supersonic": [
 				"9M"
 			]
 		}
@@ -162281,6 +162280,12 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"cometpunch": [
+				"9M"
+			],
+			"hydropump": [
+				"9M"
+			],
+			"weatherball": [
 				"9M"
 			]
 		}
@@ -200370,6 +200375,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"hiddenpower": [
 				"9M"
+			],
+			"return": [
+				"9M"
 			]
 		}
 	},
@@ -200643,6 +200651,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"hiddenpower": [
 				"9M"
+			],
+			"return": [
+				"9M"
 			]
 		}
 	},
@@ -200889,6 +200900,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"hiddenpower": [
 				"9M"
+			],
+			"return": [
+				"9M"
 			]
 		}
 	},
@@ -201105,6 +201119,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"8M"
 			],
 			"hiddenpower": [
+				"9M"
+			],
+			"return": [
 				"9M"
 			],
 			"gmaxreplenish": [
@@ -201348,6 +201365,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"hiddenpower": [
 				"9M"
+			],
+			"return": [
+				"9M"
 			]
 		}
 	},
@@ -201527,6 +201547,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"terablast": [
 				"9M"
 			],
+			"return": [
+				"9M"
+			],
 			"gmaxgravitas": [
 				"9M"
 			],
@@ -201689,6 +201712,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"terablast": [
 				"9M"
 			],
+			"return": [
+				"9M"
+			],
 			"stalacbite": [
 				"9M"
 			],
@@ -201822,6 +201848,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"terablast": [
 				"9M"
+			],
+			"return": [
+				"9M"
 			]
 		}
 	},
@@ -201948,6 +201977,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"terablast": [
+				"9M"
+			],
+			"return": [
 				"9M"
 			]
 		}
@@ -202225,6 +202257,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"hiddenpower": [
 				"9M"
 			],
+			"return": [
+				"9M"
+			],
 			"stalacbite": [
 				"9M"
 			]
@@ -202371,6 +202406,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"terablast": [
+				"9M"
+			],
+			"return": [
 				"9M"
 			],
 			"icefang": [
@@ -202617,6 +202655,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"hiddenpower": [
 				"9M"
+			],
+			"return": [
+				"9M"
 			]
 		}
 	},
@@ -202827,6 +202868,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"8L1"
 			],
 			"hiddenpower": [
+				"9M"
+			],
+			"return": [
 				"9M"
 			]
 		}
@@ -203066,6 +203110,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"hiddenpower": [
 				"9M"
+			],
+			"return": [
+				"9M"
 			]
 		}
 	},
@@ -203274,6 +203321,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"hiddenpower": [
 				"9M"
+			],
+			"return": [
+				"9M"
 			]
 		}
 	},
@@ -203440,6 +203490,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"terablast": [
+				"9M"
+			],
+			"return": [
 				"9M"
 			]
 		}
@@ -203628,6 +203681,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"8M"
 			],
 			"hiddenpower": [
+				"9M"
+			],
+			"return": [
 				"9M"
 			]
 		}
@@ -203930,6 +203986,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"hiddenpower": [
 				"9M"
+			],
+			"return": [
+				"9M"
 			]
 		}
 	},
@@ -204080,6 +204139,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"terablast": [
+				"9M"
+			],
+			"return": [
 				"9M"
 			]
 		}
@@ -204246,6 +204308,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"terablast": [
+				"9M"
+			],
+			"return": [
 				"9M"
 			]
 		}
@@ -204453,6 +204518,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"8M"
 			],
 			"hiddenpower": [
+				"9M"
+			],
+			"return": [
 				"9M"
 			],
 			"cosmicpower": [
@@ -204699,6 +204767,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"8M"
 			],
 			"hiddenpower": [
+				"9M"
+			],
+			"return": [
 				"9M"
 			],
 			"moonblast": [
@@ -204999,6 +205070,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"hiddenpower": [
 				"9M"
 			],
+			"return": [
+				"9M"
+			],
 			"nightmare": [
 				"9M"
 			],
@@ -205262,6 +205336,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"terablast": [
+				"9M"
+			],
+			"return": [
 				"9M"
 			]
 		}
@@ -205548,6 +205625,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"hiddenpower": [
 				"9M"
+			],
+			"return": [
+				"9M"
 			]
 		}
 	},
@@ -205768,6 +205848,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"terablast": [
 				"9M"
+			],
+			"return": [
+				"9M"
 			]
 		}
 	},
@@ -205920,6 +206003,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"terablast": [
+				"9M"
+			],
+			"return": [
 				"9M"
 			]
 		}
@@ -206141,6 +206227,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"terablast": [
 				"9M"
 			],
+			"return": [
+				"9M"
+			],
 			"ancientpower": [
 				"9M"
 			],
@@ -206301,6 +206390,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"terablast": [
+				"9M"
+			],
+			"return": [
 				"9M"
 			],
 			"gmaxfinale": [
@@ -206514,6 +206606,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"8M"
 			],
 			"hiddenpower": [
+				"9M"
+			],
+			"return": [
 				"9M"
 			]
 		}
@@ -206731,6 +206826,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"8L50"
 			],
 			"hiddenpower": [
+				"9M"
+			],
+			"return": [
 				"9M"
 			]
 		}
@@ -206954,6 +207052,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"hiddenpower": [
 				"9M"
+			],
+			"return": [
+				"9M"
 			]
 		}
 	},
@@ -207156,6 +207257,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"8M"
 			],
 			"hiddenpower": [
+				"9M"
+			],
+			"return": [
 				"9M"
 			]
 		}
@@ -207369,6 +207473,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"8M"
 			],
 			"hiddenpower": [
+				"9M"
+			],
+			"return": [
 				"9M"
 			],
 			"iceshard": [
@@ -207599,6 +207706,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"hiddenpower": [
 				"9M"
+			],
+			"return": [
+				"9M"
 			]
 		}
 	},
@@ -207823,6 +207933,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"hiddenpower": [
 				"9M"
+			],
+			"return": [
+				"9M"
 			]
 		}
 	},
@@ -208028,6 +208141,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"terablast": [
+				"9M"
+			],
+			"return": [
 				"9M"
 			]
 		}
@@ -208264,6 +208380,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"hiddenpower": [
 				"9M"
 			],
+			"return": [
+				"9M"
+			],
 			"headlongrush": [
 				"9M"
 			],
@@ -208458,6 +208577,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"terablast": [
 				"9M"
+			],
+			"return": [
+				"9M"
 			]
 		}
 	},
@@ -208636,6 +208758,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"terablast": [
 				"9M"
+			],
+			"return": [
+				"9M"
 			]
 		}
 	},
@@ -208808,6 +208933,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"terablast": [
 				"9M"
+			],
+			"return": [
+				"9M"
 			]
 		}
 	},
@@ -208960,6 +209088,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"terablast": [
+				"9M"
+			],
+			"return": [
 				"9M"
 			]
 		}
@@ -209138,6 +209269,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"terablast": [
+				"9M"
+			],
+			"return": [
 				"9M"
 			],
 			"gmaxdepletion": [
@@ -209412,6 +209546,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"8M"
 			],
 			"hiddenpower": [
+				"9M"
+			],
+			"return": [
 				"9M"
 			]
 		}
@@ -209706,6 +209843,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"hiddenpower": [
 				"9M"
+			],
+			"return": [
+				"9M"
 			]
 		}
 	},
@@ -209991,6 +210131,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"hiddenpower": [
 				"9M"
+			],
+			"return": [
+				"9M"
 			]
 		}
 	},
@@ -210180,6 +210323,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"hiddenpower": [
 				"9M"
+			],
+			"return": [
+				"9M"
 			]
 		}
 	},
@@ -210356,6 +210502,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"8L1"
 			],
 			"hiddenpower": [
+				"9M"
+			],
+			"return": [
 				"9M"
 			],
 			"dragondarts": [
@@ -210604,6 +210753,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"hiddenpower": [
 				"9M"
+			],
+			"return": [
+				"9M"
 			]
 		}
 	},
@@ -210803,6 +210955,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"hiddenpower": [
 				"9M"
+			],
+			"return": [
+				"9M"
 			]
 		}
 	},
@@ -210978,6 +211133,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"hiddenpower": [
 				"9M"
+			],
+			"return": [
+				"9M"
 			]
 		}
 	},
@@ -211137,6 +211295,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9L40"
 			],
 			"hiddenpower": [
+				"9M"
+			],
+			"return": [
 				"9M"
 			]
 		}
@@ -211345,6 +211506,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"hiddenpower": [
 				"9M"
+			],
+			"return": [
+				"9M"
 			]
 		}
 	},
@@ -211498,6 +211662,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9L44"
 			],
 			"hiddenpower": [
+				"9M"
+			],
+			"return": [
 				"9M"
 			]
 		}
@@ -211683,6 +211850,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"hiddenpower": [
 				"9M"
 			],
+			"return": [
+				"9M"
+			],
 			"punishment": [
 				"9M"
 			]
@@ -211846,6 +212016,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"hiddenpower": [
 				"9M"
+			],
+			"return": [
+				"9M"
 			]
 		}
 	},
@@ -212000,6 +212173,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"hiddenpower": [
 				"9M"
+			],
+			"return": [
+				"9M"
 			]
 		}
 	},
@@ -212153,6 +212329,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"hiddenpower": [
+				"9M"
+			],
+			"return": [
 				"9M"
 			]
 		}
@@ -212367,6 +212546,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"hiddenpower": [
 				"9M"
+			],
+			"return": [
+				"9M"
 			]
 		}
 	},
@@ -212548,6 +212730,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"hiddenpower": [
+				"9M"
+			],
+			"return": [
 				"9M"
 			]
 		}
@@ -212734,6 +212919,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"hiddenpower": [
 				"9M"
+			],
+			"return": [
+				"9M"
 			]
 		}
 	},
@@ -212872,6 +213060,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"hiddenpower": [
+				"9M"
+			],
+			"return": [
 				"9M"
 			],
 			"jumpkick": [
@@ -213039,6 +213230,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"hiddenpower": [
 				"9M"
 			],
+			"return": [
+				"9M"
+			],
 			"pursuit": [
 				"9M"
 			],
@@ -213193,6 +213387,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"hiddenpower": [
+				"9M"
+			],
+			"return": [
 				"9M"
 			],
 			"knockoff": [
@@ -213405,6 +213602,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"hiddenpower": [
 				"9M"
+			],
+			"return": [
+				"9M"
 			]
 		}
 	},
@@ -213563,6 +213763,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"hiddenpower": [
 				"9M"
+			],
+			"return": [
+				"9M"
 			]
 		}
 	},
@@ -213709,6 +213912,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9L22"
 			],
 			"hiddenpower": [
+				"9M"
+			],
+			"return": [
 				"9M"
 			]
 		}
@@ -213858,6 +214064,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"hiddenpower": [
 				"9M"
 			],
+			"return": [
+				"9M"
+			],
 			"seedflare": [
 				"9M"
 			]
@@ -214002,6 +214211,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"hiddenpower": [
+				"9M"
+			],
+			"return": [
 				"9M"
 			]
 		}
@@ -214172,6 +214384,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"hiddenpower": [
+				"9M"
+			],
+			"return": [
 				"9M"
 			]
 		}
@@ -214347,6 +214562,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"hiddenpower": [
 				"9M"
+			],
+			"return": [
+				"9M"
 			]
 		}
 	},
@@ -214518,6 +214736,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"hiddenpower": [
 				"9M"
+			],
+			"return": [
+				"9M"
 			]
 		}
 	},
@@ -214645,6 +214866,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9L50"
 			],
 			"hiddenpower": [
+				"9M"
+			],
+			"return": [
 				"9M"
 			]
 		}
@@ -214780,6 +215004,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"hiddenpower": [
+				"9M"
+			],
+			"return": [
 				"9M"
 			],
 			"eggbomb": [
@@ -214934,6 +215161,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"hiddenpower": [
+				"9M"
+			],
+			"return": [
 				"9M"
 			],
 			"stalacbite": [
@@ -215097,6 +215327,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"hiddenpower": [
 				"9M"
 			],
+			"return": [
+				"9M"
+			],
 			"sketch": [
 				"9M"
 			]
@@ -215224,6 +215457,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"hiddenpower": [
+				"9M"
+			],
+			"return": [
 				"9M"
 			]
 		}
@@ -215388,6 +215624,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9L1"
 			],
 			"hiddenpower": [
+				"9M"
+			],
+			"return": [
 				"9M"
 			]
 		}
@@ -215558,6 +215797,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"hiddenpower": [
 				"9M"
+			],
+			"return": [
+				"9M"
 			]
 		}
 	},
@@ -215697,6 +215939,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9L28"
 			],
 			"hiddenpower": [
+				"9M"
+			],
+			"return": [
 				"9M"
 			],
 			"chloroblast": [
@@ -215903,6 +216148,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"hiddenpower": [
 				"9M"
+			],
+			"return": [
+				"9M"
 			]
 		}
 	},
@@ -216093,6 +216341,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"hiddenpower": [
 				"9M"
+			],
+			"return": [
+				"9M"
 			]
 		}
 	},
@@ -216241,6 +216492,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"hiddenpower": [
 				"9M"
 			],
+			"return": [
+				"9M"
+			],
 			"dragonhammer": [
 				"9M"
 			],
@@ -216377,6 +216631,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9L1"
 			],
 			"hiddenpower": [
+				"9M"
+			],
+			"return": [
 				"9M"
 			]
 		}
@@ -216560,6 +216817,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9S0"
 			],
 			"hiddenpower": [
+				"9M"
+			],
+			"return": [
 				"9M"
 			],
 			"eggbomb": [
@@ -216747,6 +217007,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"hiddenpower": [
 				"9M"
+			],
+			"return": [
+				"9M"
 			]
 		}
 	},
@@ -216890,6 +217153,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"hiddenpower": [
+				"9M"
+			],
+			"return": [
 				"9M"
 			],
 			"blazingtorque": [
@@ -217072,6 +217338,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"hiddenpower": [
 				"9M"
 			],
+			"return": [
+				"9M"
+			],
 			"gearup": [
 				"9M"
 			]
@@ -217215,6 +217484,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9S0"
 			],
 			"hiddenpower": [
+				"9M"
+			],
+			"return": [
 				"9M"
 			]
 		}
@@ -217362,6 +217634,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9L22"
 			],
 			"hiddenpower": [
+				"9M"
+			],
+			"return": [
 				"9M"
 			]
 		}
@@ -217515,6 +217790,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"hiddenpower": [
+				"9M"
+			],
+			"return": [
 				"9M"
 			],
 			"stalacbite": [
@@ -217674,6 +217952,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"hiddenpower": [
 				"9M"
+			],
+			"return": [
+				"9M"
 			]
 		}
 	},
@@ -217812,6 +218093,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"hiddenpower": [
 				"9M"
+			],
+			"return": [
+				"9M"
 			]
 		}
 	},
@@ -217948,6 +218232,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"hiddenpower": [
+				"9M"
+			],
+			"return": [
 				"9M"
 			]
 		}
@@ -218100,6 +218387,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"hiddenpower": [
 				"9M"
+			],
+			"return": [
+				"9M"
 			]
 		}
 	},
@@ -218216,6 +218506,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9L17"
 			],
 			"hiddenpower": [
+				"9M"
+			],
+			"return": [
 				"9M"
 			]
 		}
@@ -218431,6 +218724,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"hiddenpower": [
 				"9M"
+			],
+			"return": [
+				"9M"
 			]
 		}
 	},
@@ -218603,6 +218899,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"hiddenpower": [
+				"9M"
+			],
+			"return": [
 				"9M"
 			]
 		}
@@ -218807,6 +219106,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"hiddenpower": [
 				"9M"
+			],
+			"return": [
+				"9M"
 			]
 		}
 	},
@@ -218985,6 +219287,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"hiddenpower": [
 				"9M"
+			],
+			"return": [
+				"9M"
 			]
 		}
 	},
@@ -219161,6 +219466,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"hiddenpower": [
+				"9M"
+			],
+			"return": [
 				"9M"
 			]
 		}
@@ -219401,6 +219709,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"hiddenpower": [
 				"9M"
 			],
+			"return": [
+				"9M"
+			],
 			"echoedvoice": [
 				"9M"
 			],
@@ -219569,6 +219880,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"hiddenpower": [
 				"9M"
 			],
+			"return": [
+				"9M"
+			],
 			"punishment": [
 				"9M"
 			]
@@ -219734,6 +220048,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9S0"
 			],
 			"hiddenpower": [
+				"9M"
+			],
+			"return": [
 				"9M"
 			]
 		}
@@ -219905,6 +220222,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"hiddenpower": [
 				"9M"
+			],
+			"return": [
+				"9M"
 			]
 		}
 	},
@@ -220068,6 +220388,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"hiddenpower": [
 				"9M"
+			],
+			"return": [
+				"9M"
 			]
 		}
 	},
@@ -220227,6 +220550,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"hiddenpower": [
 				"9M"
+			],
+			"return": [
+				"9M"
 			]
 		}
 	},
@@ -220369,6 +220695,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9L14"
 			],
 			"hiddenpower": [
+				"9M"
+			],
+			"return": [
 				"9M"
 			],
 			"flashfreeze": [
@@ -220549,6 +220878,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"hiddenpower": [
 				"9M"
+			],
+			"return": [
+				"9M"
 			]
 		}
 	},
@@ -220717,6 +221049,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"hiddenpower": [
+				"9M"
+			],
+			"return": [
 				"9M"
 			]
 		}
@@ -220887,6 +221222,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9L1"
 			],
 			"hiddenpower": [
+				"9M"
+			],
+			"return": [
 				"9M"
 			]
 		}
@@ -221111,6 +221449,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"hiddenpower": [
 				"9M"
+			],
+			"return": [
+				"9M"
 			]
 		}
 	},
@@ -221271,6 +221612,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"hiddenpower": [
 				"9M"
+			],
+			"return": [
+				"9M"
 			]
 		}
 	},
@@ -221413,6 +221757,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"hiddenpower": [
+				"9M"
+			],
+			"return": [
 				"9M"
 			]
 		}
@@ -221582,6 +221929,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"hiddenpower": [
 				"9M"
 			],
+			"return": [
+				"9M"
+			],
 			"junglehealing": [
 				"9M"
 			]
@@ -221731,6 +222081,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9L70"
 			],
 			"hiddenpower": [
+				"9M"
+			],
+			"return": [
 				"9M"
 			]
 		}
@@ -221883,6 +222236,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"hiddenpower": [
 				"9M"
+			],
+			"return": [
+				"9M"
 			]
 		}
 	},
@@ -222029,6 +222385,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"hiddenpower": [
+				"9M"
+			],
+			"return": [
 				"9M"
 			]
 		}
@@ -222240,6 +222599,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9S0"
 			],
 			"hiddenpower": [
+				"9M"
+			],
+			"return": [
 				"9M"
 			],
 			"lunge": [
@@ -222485,6 +222847,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"hiddenpower": [
 				"9M"
 			],
+			"return": [
+				"9M"
+			],
 			"workup": [
 				"9M"
 			],
@@ -222645,6 +223010,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9L14"
 			],
 			"hiddenpower": [
+				"9M"
+			],
+			"return": [
 				"9M"
 			]
 		}
@@ -222819,6 +223187,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"hiddenpower": [
+				"9M"
+			],
+			"return": [
 				"9M"
 			]
 		}
@@ -228425,6 +228796,315 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"workup": [
 				"7M",
 				"5M"
+			]
+		}
+	},
+	"patrat": {
+		"inherit": true,
+		"learnset": {
+			"afteryou": [
+				"7T",
+				"7L23",
+				"6T",
+				"6L23",
+				"5T",
+				"5L23"
+			],
+			"aquatail": [
+				"7T",
+				"6T",
+				"5T"
+			],
+			"assurance": [
+				"7E",
+				"6E",
+				"5E"
+			],
+			"attract": [
+				"7M",
+				"6M",
+				"5M"
+			],
+			"batonpass": [
+				"7L38",
+				"6L33",
+				"5L33"
+			],
+			"bide": [
+				"7L8",
+				"6L8",
+				"5L8"
+			],
+			"bite": [
+				"7L6",
+				"6L6",
+				"5L6"
+			],
+			"bulletseed": [
+				"7E"
+			],
+			"confide": [
+				"7M",
+				"6M"
+			],
+			"covet": [
+				"7T",
+				"6T",
+				"5T"
+			],
+			"crunch": [
+				"7L16",
+				"6L16",
+				"5L16"
+			],
+			"cut": [
+				"6M",
+				"5M"
+			],
+			"detect": [
+				"7L11",
+				"6L11",
+				"5L11"
+			],
+			"dig": [
+				"6M",
+				"5M"
+			],
+			"doubleteam": [
+				"7M",
+				"6M",
+				"5M"
+			],
+			"endeavor": [
+				"7T",
+				"6T",
+				"5T"
+			],
+			"facade": [
+				"7M",
+				"6M",
+				"5M"
+			],
+			"flail": [
+				"7E",
+				"6E",
+				"5E"
+			],
+			"fling": [
+				"7M",
+				"6M",
+				"5M"
+			],
+			"focusenergy": [
+				"7L26"
+			],
+			"foresight": [
+				"7E",
+				"6E",
+				"5E"
+			],
+			"frustration": [
+				"7M",
+				"6M",
+				"5M"
+			],
+			"grassknot": [
+				"7M",
+				"6M",
+				"5M"
+			],
+			"gunkshot": [
+				"7T",
+				"6T",
+				"5T"
+			],
+			"helpinghand": [
+				"7T",
+				"6T",
+				"5T"
+			],
+			"hiddenpower": [
+				"7M",
+				"6M",
+				"5M"
+			],
+			"hyperfang": [
+				"7L31",
+				"6L28",
+				"5L28"
+			],
+			"hypnosis": [
+				"7L18",
+				"6L18",
+				"5L18"
+			],
+			"irontail": [
+				"7T",
+				"7E",
+				"6T",
+				"6E",
+				"5T",
+				"5E"
+			],
+			"laserfocus": [
+				"7T"
+			],
+			"lastresort": [
+				"7T",
+				"6T",
+				"5T"
+			],
+			"leer": [
+				"7L3",
+				"6L3",
+				"5L3"
+			],
+			"lowkick": [
+				"7T",
+				"6T",
+				"5T"
+			],
+			"meanlook": [
+				"7L36",
+				"6L31",
+				"5L31"
+			],
+			"nastyplot": [
+				"7L33"
+			],
+			"protect": [
+				"7M",
+				"6M",
+				"5M"
+			],
+			"pursuit": [
+				"7E",
+				"6E",
+				"5E"
+			],
+			"raindance": [
+				"7M",
+				"6M",
+				"5M"
+			],
+			"rest": [
+				"7M",
+				"6M",
+				"5M"
+			],
+			"retaliate": [
+				"6M",
+				"5M"
+			],
+			"return": [
+				"7M",
+				"6M",
+				"5M"
+			],
+			"revenge": [
+				"7E",
+				"6E",
+				"5E"
+			],
+			"round": [
+				"7M",
+				"6M",
+				"5M"
+			],
+			"sandattack": [
+				"7L13",
+				"6L13",
+				"5L13"
+			],
+			"screech": [
+				"7E",
+				"6E",
+				"5E"
+			],
+			"secretpower": [
+				"6M"
+			],
+			"seedbomb": [
+				"7T",
+				"6T",
+				"5T"
+			],
+			"shadowball": [
+				"7M",
+				"6M",
+				"5M"
+			],
+			"shockwave": [
+				"7T",
+				"6T"
+			],
+			"slam": [
+				"7L41",
+				"6L36",
+				"5L36"
+			],
+			"sleeptalk": [
+				"7M",
+				"6M",
+				"5T"
+			],
+			"snore": [
+				"7T",
+				"6T",
+				"5T"
+			],
+			"substitute": [
+				"7M",
+				"6M",
+				"5M"
+			],
+			"sunnyday": [
+				"7M",
+				"6M",
+				"5M"
+			],
+			"superfang": [
+				"7T",
+				"7L21",
+				"6T",
+				"6L21",
+				"5T",
+				"5L21"
+			],
+			"swordsdance": [
+				"7M",
+				"6M",
+				"5M"
+			],
+			"tackle": [
+				"7L1",
+				"6L1",
+				"5L1"
+			],
+			"tearfullook": [
+				"7E"
+			],
+			"thunderbolt": [
+				"7M",
+				"6M",
+				"5M"
+			],
+			"toxic": [
+				"7M",
+				"6M",
+				"5M"
+			],
+			"workup": [
+				"7M",
+				"7L28",
+				"6L26",
+				"5M",
+				"5L26"
+			],
+			"zenheadbutt": [
+				"7T",
+				"6T",
+				"5T"
 			]
 		}
 	}

@@ -1,25 +1,26 @@
 export const Abilities: {[k: string]: ModdedAbilityData} = {
-	// slowstart: {
-	// 	inherit: true,
-	// 	condition: {
-	// 		duration: 3,
-	// 		onResidualOrder: 28,
-	// 		onResidualSubOrder: 2,
-	// 		onStart(target) {
-	// 			this.add('-start', target, 'ability: Slow Start');
-	// 		},
-	// 		onModifyAtkPriority: 5,
-	// 		onModifyAtk(atk, pokemon) {
-	// 			return this.chainModify(0.5);
-	// 		},
-	// 		onModifySpe(spe, pokemon) {
-	// 			return this.chainModify(0.5);
-	// 		},
-	// 		onEnd(target) {
-	// 			this.add('-end', target, 'Slow Start');
-	// 		},
-	// 	},
-	// },
+	slowstart: {
+		inherit: true,
+		shortDesc: "On switch-in, this Pokemon's Attack and Speed are halved for 3 turns.",
+		condition: {
+			duration: 3,
+			onResidualOrder: 28,
+			onResidualSubOrder: 2,
+			onStart(target) {
+				this.add('-start', target, 'ability: Slow Start');
+			},
+			onModifyAtkPriority: 5,
+			onModifyAtk(atk, pokemon) {
+				return this.chainModify(0.5);
+			},
+			onModifySpe(spe, pokemon) {
+				return this.chainModify(0.5);
+			},
+			onEnd(target) {
+				this.add('-end', target, 'Slow Start');
+			},
+		},
+	},
 	reckless: {
 		inherit: true,
 		shortDesc: "This Pokemon's attacks with recoil or crash damage have 1.3x power; not Struggle.",
@@ -397,7 +398,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		shortDesc: "Sound moves become water and 1.2x power.",
 		onBasePower(basePower, attacker, defender, move) {
 			if (move.flags['sound']) {
-				return this.chainModify([6,5]);
+				return this.chainModify([6, 5]);
 			}
 		},
 	},

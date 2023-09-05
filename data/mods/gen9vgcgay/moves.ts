@@ -275,7 +275,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	lick: {
 		inherit: true,
 		shortDesc: "50% chance to paralyze the target.",
-		secondary: { chance: 50, status: 'par'},
+		secondary: {chance: 50, status: 'par'},
 	},
 	growth: {
 		inherit: true,
@@ -327,6 +327,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		basePowerCallback(pokemon) {
 			return Math.min(1000, 25 + 25 * pokemon.timesAttacked);
 		},
+		self: {},
 	},
 	punishment: {
 		inherit: true,
@@ -777,6 +778,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	mountaingale: {
 		inherit: true,
 		shortDesc: "Hits both opponents. 20% chance to frostbite.",
+		target: "allAdjacentFoes",
 		isNonstandard: null,
 		accuracy: 90,
 		secondary: {chance: 20, status: 'fst'},
@@ -882,6 +884,8 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		shortDesc: "Hits both in sandstorm, 50% raise defense by 1",
 		target: "normal",
 		category: "Special",
+		basePower: 95,
+		accuracy: 100,
 		onModifyMove(move, source, target) {
 			if (this.field.isWeather('sandstorm')) {
 				move.target = 'allAdjacentFoes';
