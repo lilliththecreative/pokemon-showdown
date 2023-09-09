@@ -37287,6 +37287,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"yawn": [
 				"8V"
+			],
+			"lifedew": [
+				"9M"
 			]
 		}
 	},
@@ -38598,6 +38601,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"zapcannon": [
 				"7V"
+			],
+			"stompingtantrum": [
+				"9M"
 			]
 		}
 	},
@@ -62640,6 +62646,12 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"terablast": [
 				"9M"
+			],
+			"steameruption": [
+				"9M"
+			],
+			"searingshot": [
+				"9M"
 			]
 		}
 	},
@@ -81838,6 +81850,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"coaching": [
+				"9M"
+			],
+			"visegrip": [
 				"9M"
 			]
 		}
@@ -126736,6 +126751,12 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"stalacbite": [
 				"9M"
+			],
+			"visegrip": [
+				"9M"
+			],
+			"focusenergy": [
+				"9M"
 			]
 		}
 	},
@@ -132284,6 +132305,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"throatchop": [
 				"9M"
+			],
+			"closecombat": [
+				"9M"
 			]
 		}
 	},
@@ -132783,6 +132807,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"armorcannon": [
+				"9M"
+			],
+			"scald": [
 				"9M"
 			]
 		}
@@ -134800,6 +134827,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"8M",
 				"7M",
 				"5M"
+			],
+			"flashfreeze": [
+				"9M"
 			]
 		}
 	},
@@ -137543,6 +137573,15 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"4L61"
 			],
 			"terablast": [
+				"9M"
+			],
+			"steelbeam": [
+				"9M"
+			],
+			"metalsound": [
+				"9M"
+			],
+			"heavyslam": [
 				"9M"
 			]
 		}
@@ -162278,6 +162317,12 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"hydropump": [
+				"9M"
+			],
+			"surf": [
+				"9M"
+			],
+			"leechlife": [
 				"9M"
 			],
 			"weatherball": [
@@ -214063,6 +214108,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"seedflare": [
+				"9M"
+			],
+			"worryseed": [
 				"9M"
 			]
 		}

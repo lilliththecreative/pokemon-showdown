@@ -268,6 +268,25 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			return 100;
 		},
 	},
+	visegrip: {
+		inherit: true,
+		basePower: 80,
+		shortDesc: "Does 2x damage if it crits.",
+		onBasePower(basePower, source, target, move) {
+			if (target.getMoveHitData(move).crit) {
+				return this.chainModify(2);
+			}
+		},
+	},
+	holdhands: {
+		inherit: true,
+		boosts: {atk: 1, spa: 1},
+		shortDesc: "Inspire each other, boosting both Pokemon Atk/SpA by 1.",
+		onHit(target, source, move) {
+			this.boost({atk: 1, spa: 1}, target, source, move, false, true)
+			this.boost({atk: 1, spa: 1}, source, source, move, false, true)
+		},
+	},
 	gastroacid: {
 		inherit: true,
 		target: "allAdjacent",

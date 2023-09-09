@@ -263,7 +263,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	bigpecks: {
 		inherit: true,
-		shortDesc: "Immune to defense lowering, Omniboost if intimidated",
+		shortDesc: "Immune to defense lowering, +1 Atk/SpA/Spe if intimidated.",
 		onTryBoost(boost, target, source, effect) {
 			if (source && target === source) return;
 			if (boost.def && boost.def < 0) {
@@ -275,9 +275,9 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			if (effect.name === 'Intimidate' && boost.atk) {
 				this.add('-fail', target, 'unboost', 'Attack', '[from] ability: Big Pecks', '[of] ' + target);
 				boost.atk = 1;
-				boost.def = 1;
+				// boost.def = 1;
 				boost.spa = 1;
-				boost.spd = 1;
+				// boost.spd = 1;
 				boost.spe = 1;
 			}
 		},
@@ -712,6 +712,15 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			if (this.field.isTerrain('grassyterrain')) return this.chainModify(1.5);
 		},
 	},
+	myceliummight: {
+		inherit: true,
+		shortDesc: "Status moves ignore abilities. Powder moves go last in their priority bracket.",
+		onFractionalPriority(priority, pokemon, target, move) {
+			if (move.flags['powder']) {
+				return -0.1;
+			}
+		},
+	},
 	battlebond: {
 		inherit: true,
 		shortDesc: "After KOing a Pokemon: becomes Ash-Greninja, Water Shuriken: 20 power, hits 3x.",
@@ -758,22 +767,22 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 		},
 	},
-	transistor: {
-		inherit: true,
-		shortDesc: "This Pokemon's offensive stat is 1.2x while using an Electric-type attack.",
-		onModifyAtk(atk, attacker, defender, move) {
-			if (move.type === 'Electric') {
-				this.debug('Transistor boost');
-				return this.chainModify([6, 5]);
-			}
-		},
-		onModifySpA(atk, attacker, defender, move) {
-			if (move.type === 'Electric') {
-				this.debug('Transistor boost');
-				return this.chainModify([6, 5]);
-			}
-		},
-	},
+	// transistor: {
+	// 	inherit: true,
+	// 	shortDesc: "This Pokemon's offensive stat is 1.2x while using an Electric-type attack.",
+	// 	onModifyAtk(atk, attacker, defender, move) {
+	// 		if (move.type === 'Electric') {
+	// 			this.debug('Transistor boost');
+	// 			return this.chainModify([6, 5]);
+	// 		}
+	// 	},
+	// 	onModifySpA(atk, attacker, defender, move) {
+	// 		if (move.type === 'Electric') {
+	// 			this.debug('Transistor boost');
+	// 			return this.chainModify([6, 5]);
+	// 		}
+	// 	},
+	// },
 	supremeoverlord: {
 		inherit: true,
 		shortDesc: "20% more power per fainted ally, Max 60%",
@@ -994,6 +1003,11 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		},
 	},
 	angershell: {
+		inherit: true,
+		shortDesc: "Once per turn, if user gets hit, +1 Atk/SpA/Spe and -1 Def/SpD.",
+		onResidual(pokemon) {
+			this.effectState.angerShell = false;
+		},
 		onDamage(damage, target, source, effect) {
 		},
 		onTryEatItem(item) {
@@ -1001,13 +1015,11 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		onAfterMoveSecondary(target, source, move) {
 		},
 		onDamagingHit(damage, target, source, move) {
-			if (move.type === 'Water') {
+			if (!this.effectState.angerShell) {
 				this.boost({atk: 1, spa: 1, spe: 1, def: -1, spd: -1}, target, target);
+				this.effectState.angerShell = true;
 			}
 		},
-		name: "Anger Shell",
-		rating: 3,
-		num: 271,
 	},
 	curiousmedicine: {
 		inherit: true,
