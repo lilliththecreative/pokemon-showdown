@@ -75,7 +75,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "10U",
 	},
 	pichuspikyeared: {
-		tier: "9U",
+		tier: "10U",
 	},
 	pikachu: {
 		tier: "SU",

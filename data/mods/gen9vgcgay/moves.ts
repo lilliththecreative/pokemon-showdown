@@ -47,6 +47,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		basePower: 95,
 		accuracy: 85,
+		shortDesc: "30% to lower foe(s) Speed by 1. Hail: can't miss.",
 		onModifyMove(move, pokemon, target) {
 			if (this.field.isWeather(['hail', 'snow'])) move.accuracy = true;
 		},
@@ -55,6 +56,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		basePower: 95,
 		accuracy: 85,
+		shortDesc: "20% chance to burn foe(s). Sand: can't miss.",
 		onModifyMove(move, pokemon, target) {
 			if (this.field.isWeather('sandstorm')) move.accuracy = true;
 		},
@@ -63,6 +65,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		basePower: 95,
 		accuracy: 85,
+		shortDesc: "20% chance to lower foe(s) Atk by 1. Sun: can't miss.",
 		onModifyMove(move, pokemon, target) {
 			if (target && ['sunnyday', 'desolateland'].includes(target.effectiveWeather())) move.accuracy = true;
 		},
@@ -268,6 +271,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			return 100;
 		},
 	},
+	zenheadbutt: {
+		inherit: true,
+		accuracy: 95,
+	},
 	visegrip: {
 		inherit: true,
 		basePower: 80,
@@ -283,8 +290,8 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		boosts: {atk: 1, spa: 1},
 		shortDesc: "Inspire each other, boosting both Pokemon Atk/SpA by 1.",
 		onHit(target, source, move) {
-			this.boost({atk: 1, spa: 1}, target, source, move, false, true)
-			this.boost({atk: 1, spa: 1}, source, source, move, false, true)
+			this.boost({atk: 1, spa: 1}, target, source, move, false, true);
+			this.boost({atk: 1, spa: 1}, source, source, move, false, true);
 		},
 	},
 	gastroacid: {
@@ -593,7 +600,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 		category: "Physical",
-		shortDesc: "More power the more %HP the target has, Max 141BP.",
+		shortDesc: "More power the more %HP target has, Max 141BP.",
 		basePowerCallback(pokemon, target, move) {
 			const hp = target.hp;
 			const maxHP = target.maxhp;
@@ -1703,6 +1710,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	"hiddenpowerpoison": {
 		"inherit": true,
+		"category": "Physical",
 		"isNonstandard": null,
 	},
 	"hiddenpowerpsychic": {

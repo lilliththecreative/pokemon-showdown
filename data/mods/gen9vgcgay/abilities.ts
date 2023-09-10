@@ -457,6 +457,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	colorchange: {
 		inherit: true,
 		isPermanent: true,
+		isBreakable: true,
 		shortDesc: "Changes type to be perfect offensive and defensive type once per turn.",
 		onResidualOrder: 29,
 		onResidual(pokemon) {
@@ -1171,11 +1172,12 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			if (move.self?.chance) move.self.chance *= 0.5;
 			if (!move.multihit && move.basePower > 0) {
 				move.multihit = 3;
+				move.basePower = move.basePower * 0.4;
 			}
 		},
-		onBasePower(basePower, attacker, defender, move) {
-			return this.chainModify([4, 10]);
-		},
+		// onBasePower(basePower, attacker, defender, move) {
+		// 	return this.chainModify([4, 10]);
+		// },
 	},
 	mindsurfer: {
 		inherit: true,
