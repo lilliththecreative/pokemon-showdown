@@ -65,7 +65,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		basePower: 95,
 		accuracy: 85,
-		shortDesc: "20% chance to lower foe(s) Atk by 1. Sun: can't miss.",
+		shortDesc: "20% to lower foe(s) Atk by 1. Sun: can't miss.",
 		onModifyMove(move, pokemon, target) {
 			if (target && ['sunnyday', 'desolateland'].includes(target.effectiveWeather())) move.accuracy = true;
 		},
@@ -315,8 +315,8 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	acupressure: {
 		inherit: true,
-		basePower: 10,
-		category: 'Physical',
+		// basePower: 10,
+		// category: 'Physical',
 		shortDesc: "Raises a non-acc random stat of the user/ally by 2.",
 		onHit(target) {
 			const stats: BoostID[] = [];
@@ -992,7 +992,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	octolock: {
 		inherit: true,
 		isNonstandard: null,
-		shortDesc: "Traps target, lowers Def and SpD by 1, 1/6 dmg each turn.",
+		shortDesc: "Traps target, -1 Def/SpD and 1/6 dmg each turn.",
 		condition: {
 			onStart(pokemon, source) {
 				this.add('-start', pokemon, 'move: Octolock', '[of] ' + source);
@@ -1894,6 +1894,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		target: "normal",
 	},
 	shellsidearm: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	autotomize: {
 		inherit: true,
 		isNonstandard: null,
 	},

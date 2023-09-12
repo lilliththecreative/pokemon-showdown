@@ -225,7 +225,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "OU",
 	},
 	bellsprout: {
-		tier: "10U",
+		tier: "9U",
 	},
 	weepinbell: {
 		tier: "7U",
@@ -321,7 +321,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "NU",
 	},
 	krabby: {
-		tier: "10U",
+		tier: "9U",
 	},
 	kingler: {
 		tier: "PU",
@@ -1075,7 +1075,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "OU",
 	},
 	cacnea: {
-		tier: "10U",
+		tier: "9U",
 	},
 	cacturne: {
 		tier: "NU",

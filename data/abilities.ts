@@ -5434,6 +5434,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: -36,
 	},
 	shadowtagged: {
+		isNonstandard: "CAP",
 		onDamagingHit(damage, target, source, move) {
 			if (this.checkMoveMakesContact(move, source, target, true)) {
 				this.add('-ability', target, 'Shadow Tagged');
@@ -5446,6 +5447,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 221,
 	},
 	moltendown: {
+		isNonstandard: "CAP",
 		onTryHit(target, source, move) {
 			if (target !== source && move.type === 'Fire') {
 				if (!this.heal(target.baseMaxhp / 4)) {
@@ -5471,6 +5473,16 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		isBreakable: true,
 		name: "Molten Down",
 		rating: 3,
-		num: 87,
+		num: -38,
+	},
+	resolve: {
+		isNonstandard: "CAP",
+		name: "Resolve",
+		onBasePower(relayVar, source, target, move) {
+			const percent = 100 * source.hp / source.maxhp;
+			this.chainModify([200 - percent, 100]);
+		},
+		rating: 3,
+		num: -39,
 	},
 };

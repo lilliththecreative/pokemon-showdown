@@ -2337,4 +2337,9 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "This Pokemon is healed 1/4 by Fire, 1/8 by Sun; is hurt 1.25x by Water, 1/8 by Rain.",
 		shortDesc: "This Pokemon is healed 1/4 by Fire, 1/8 by Sun; is hurt 1.25x by Water, 1/8 by Rain.",
 	},
+	resolve: {
+		name: "Resolve",
+		desc: "Deals +1% bonus damage for each 1% of HP missing",
+		shortDesc: "Deals +1% bonus damage for each 1% of HP missing",
+	},
 };

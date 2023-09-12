@@ -889,7 +889,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"hp": 55,
 			"atk": 135,
 			"def": 58,
-			"spa": 35,
+			"spa": 50,
 			"spd": 115,
 			"spe": 87
 		},
@@ -905,15 +905,15 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Fighting"
 		],
 		"baseStats": {
-			"hp": 55,
+			"hp": 80,
 			"atk": 115,
-			"def": 89,
-			"spa": 35,
+			"def": 94,
+			"spa": 20,
 			"spd": 115,
 			"spe": 76
 		},
 		"abilities": {
-			"0": "Keen Eye",
+			"0": "Resolve",
 			"1": "Iron Fist",
 			"H": "Inner Focus"
 		},
@@ -1381,8 +1381,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		"baseStats": {
 			"hp": 160,
 			"atk": 110,
-			"def": 65,
-			"spa": 65,
+			"def": 60,
+			"spa": 60,
 			"spd": 110,
 			"spe": 30
 		},
@@ -2161,29 +2161,10 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"inherit": true
 	},
-	"corsola": {
-		"types": [
-			"Water",
-			"Rock"
-		],
-		"baseStats": {
-			"hp": 90,
-			"atk": 85,
-			"def": 110,
-			"spa": 90,
-			"spd": 110,
-			"spe": 40
-		},
-		"abilities": {
-			"0": "Hustle",
-			"1": "Skill Link",
-			"H": "Regenerator"
-		},
-		"inherit": true
-	},
 	"corsolagalar": {
 		"types": [
-			"Ghost"
+			"Ghost",
+			"Rock"
 		],
 		"baseStats": {
 			"hp": 70,
@@ -2381,10 +2362,10 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Fighting"
 		],
 		"baseStats": {
-			"hp": 55,
+			"hp": 60,
 			"atk": 95,
 			"def": 95,
-			"spa": 55,
+			"spa": 65,
 			"spd": 115,
 			"spe": 70
 		},
@@ -3850,7 +3831,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"abilities": {
 			"0": "Clear Body",
-			"1": "Battle Armor",
+			"1": "Mirror Armor",
 			"H": "Homophobia"
 		},
 		"inherit": true
@@ -5150,7 +5131,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"abilities": {
 			"0": "Levitate",
-			"H": "Supreme Overlord"
+			"H": "Resolve"
 		},
 		"inherit": true
 	},
@@ -7239,7 +7220,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"abilities": {
 			"0": "Cheek Pouch",
-			"1": "Pickup",
+			"1": "Prankster",
 			"H": "Telepathy"
 		},
 		"inherit": true
@@ -8067,9 +8048,9 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		],
 		"baseStats": {
 			"hp": 90,
-			"atk": 220,
+			"atk": 230,
 			"def": 130,
-			"spa": 25,
+			"spa": 15,
 			"spd": 130,
 			"spe": 5
 		},
@@ -8426,12 +8407,12 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Normal"
 		],
 		"baseStats": {
-			"hp": 75,
-			"atk": 115,
+			"hp": 80,
+			"atk": 120,
 			"def": 70,
 			"spa": 75,
 			"spd": 100,
-			"spe": 65
+			"spe": 70
 		},
 		"abilities": {
 			"0": "Comatose"
@@ -8447,7 +8428,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"hp": 70,
 			"atk": 78,
 			"def": 140,
-			"spa": 96,
+			"spa": 116,
 			"spd": 90,
 			"spe": 36
 		},
@@ -9036,11 +9017,11 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		],
 		"baseStats": {
 			"hp": 79,
-			"atk": 105,
+			"atk": 110,
 			"def": 60,
-			"spa": 105,
+			"spa": 110,
 			"spd": 60,
-			"spe": 121
+			"spe": 131
 		},
 		"abilities": {
 			"0": "Strong Jaw",

@@ -1739,5 +1739,21 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 				this.heal(source.baseMaxhp / 2);
 			}
 		},
-	}
+	},
+	vantage: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	shadowtagged: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	moltendown: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	resolve: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
