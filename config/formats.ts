@@ -127,7 +127,7 @@ export const Formats: FormatList = [
 		tournamentShow: false,
 		ruleset: ['Standard', '!Evasion Items Clause', 'Item Clause'],
 		banlist: [
-			'Moody', 'Shadow Tag', 'Toxic Debris', 'Regenerator>1', "OU",
+			'Moody', 'Shadow Tag', 'Toxic Debris', 'Regenerator>1', "Uber", "OU",
 		],
 		onValidateSet(set) {
 			if (set.moves.length !== 1 || this.dex.moves.get(set.moves[0]).id !== 'metronome') {
@@ -143,7 +143,7 @@ export const Formats: FormatList = [
 		tournamentShow: false,
 		ruleset: ['Standard', '!Evasion Items Clause', 'Item Clause'],
 		banlist: [
-			'Moody', 'Shadow Tag', 'Toxic Debris', 'Regenerator>1', "OU", "UU",
+			'Moody', 'Shadow Tag', 'Toxic Debris', 'Regenerator>1', "Uber", "OU", "UU",
 		],
 		onValidateSet(set) {
 			if (set.moves.length !== 1 || this.dex.moves.get(set.moves[0]).id !== 'metronome') {
