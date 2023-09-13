@@ -1,4 +1,12 @@
 export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
+	"clefairy": {
+		"isNonstandard": null,
+		"tier": "NFE"
+	},
+	"clefable": {
+		"isNonstandard": null,
+		"tier": "OU"
+	},
 	"jigglypuff": {
 		"isNonstandard": null,
 		"tier": "NFE"
@@ -27,6 +35,34 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"isNonstandard": null,
 		"tier": "UU"
 	},
+	"poliwhirl": {
+		"isNonstandard": null,
+		"tier": "NFE"
+	},
+	"poliwrath": {
+		"isNonstandard": null,
+		"tier": "OU"
+	},
+	"geodude": {
+		"isNonstandard": null,
+		"tier": "LC"
+	},	
+	"graveler": {
+		"isNonstandard": null,
+		"tier": "NFE"
+	},	
+	"graveleralola": {
+		"isNonstandard": null,
+		"tier": "NFE"
+	},
+	"golem": {
+		"isNonstandard": null,
+		"tier": "OU"
+	},	
+	"golemalola": {
+		"isNonstandard": null,
+		"tier": "OU"
+	},
 	"slowbro": {
 		"isNonstandard": null,
 		"tier": "OU"
@@ -37,7 +73,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	},
 	"grimer": {
 		"isNonstandard": null,
-		"tier": "LC"
+		"tier": "RU"
 	},
 	"grimeralola": {
 		"isNonstandard": null,
@@ -71,6 +107,10 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"isNonstandard": null,
 		"tier": "UU"
 	},
+	"snorlax": {
+		"isNonstandard": null,
+		"tier": "OU"
+	},
 	"dragonite": {
 		"isNonstandard": null,
 		"tier": "UU"
@@ -82,6 +122,18 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	"mew": {
 		"isNonstandard": null,
 		"tier": "UU"
+	},
+	"cleffa": {
+		"isNonstandard": null,
+		"tier": "LC"
+	},	
+	"politoed": {
+		"isNonstandard": null,
+		"tier": "OU"
+	},
+	"aipom": {
+		"isNonstandard": null,
+		"natDexTier": "LC"
 	},
 	"marill": {
 		"isNonstandard": null,
@@ -111,6 +163,14 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"isNonstandard": null,
 		"tier": "UU"
 	},
+	"lombre": {
+		"isNonstandard": null,
+		"tier": "NFE"
+	},
+	"ludicolo": {
+		"isNonstandard": null,
+		"tier": "OU"
+	},	
 	"ralts": {
 		"isNonstandard": null,
 		"tier": "LC"
@@ -155,6 +215,14 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"isNonstandard": null,
 		"tier": "RU"
 	},
+	"volbeat": {
+		"isNonstandard": null,
+		"tier": "OU"
+	},
+	"illumise": {
+		"isNonstandard": null,
+		"tier": "OU"
+	},
 	"swalot": {
 		"isNonstandard": null,
 		"tier": "UU"
@@ -171,13 +239,37 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"isNonstandard": null,
 		"tier": "UU"
 	},
+	"dusclops": {
+		"isNonstandard": null,
+		"tier": "Uber"
+	},
+	"chimchar": {
+		"isNonstandard": null,
+		"tier": "LC"
+	},
+	"monferno": {
+		"isNonstandard": null,
+		"tier": "NFE"
+	},
+	"infernape": {
+		"isNonstandard": null,
+		"tier": "OU"
+	},
 	"floatzel": {
 		"isNonstandard": null,
 		"tier": "RU"
 	},
+	"ambipom": {
+		"isNonstandard": null,
+		"tier": "OU"
+	},
 	"happiny": {
 		"isNonstandard": null,
 		"tier": "LC"
+	},
+	"munchlax": {
+		"isNonstandard": null,
+		"tier": "NFE"
 	},
 	"lucario": {
 		"isNonstandard": null,
@@ -190,6 +282,10 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	"gallade": {
 		"isNonstandard": null,
 		"tier": "RU"
+	},
+	"dusknoir": {
+		"isNonstandard": null,
+		"tier": "Uber"
 	},
 	"uxie": {
 		"isNonstandard": null,
@@ -257,11 +353,11 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	},
 	"sinistea": {
 		"isNonstandard": null,
-		"tier": "LC"
+		"tier": "RU"
 	},
 	"sinisteaantique": {
 		"isNonstandard": null,
-		"tier": "LC"
+		"tier": "RU"
 	},
 	"polteageist": {
 		"isNonstandard": null,
@@ -345,7 +441,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	},
 	"tinkatuff": {
 		"isNonstandard": null,
-		"tier": "NFE"
+		"tier": "RU"
 	},
 	"tinkaton": {
 		"isNonstandard": null,
@@ -367,28 +463,9 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"isNonstandard": null,
 		"tier": "UU"
 	},
-
+	//Munkidori should be tagged as OU once Showdown implements it.
 	
-	"clefairy": {
-		"isNonstandard": "Past",
-		"tier": "Illegal",
-		"natDexTier": "NFE"
-	},
-	"clefable": {
-		"isNonstandard": "Past",
-		"tier": "Illegal",
-		"natDexTier": "OU"
-	},
-	"poliwhirl": {
-		"isNonstandard": "Past",
-		"tier": "Illegal",
-		"natDexTier": "NFE"
-	},
-	"poliwrath": {
-		"isNonstandard": "Past",
-		"tier": "Illegal",
-		"natDexTier": "OU"
-	},
+
 	"abra": {
 		"isNonstandard": "Past",
 		"tier": "Illegal",
@@ -420,21 +497,6 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"natDexTier": "NFE"
 	},
 	"machamp": {
-		"isNonstandard": "Past",
-		"tier": "Illegal",
-		"natDexTier": "OU"
-	},	
-	"geodude": {
-		"isNonstandard": "Past",
-		"tier": "Illegal",
-		"natDexTier": "LC"
-	},	
-	"graveler": {
-		"isNonstandard": "Past",
-		"tier": "Illegal",
-		"natDexTier": "NFE"
-	},	
-	"golem": {
 		"isNonstandard": "Past",
 		"tier": "Illegal",
 		"natDexTier": "OU"
@@ -479,11 +541,6 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"tier": "Illegal",
 		"natDexTier": "NFE"
 	},
-	"snorlax": {
-		"isNonstandard": "Past",
-		"tier": "Illegal",
-		"natDexTier": "OU"
-	},
 	"mewtwomegax": {
 		"isNonstandard": "Past",
 		"tier": "Illegal",
@@ -494,11 +551,6 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"tier": "Illegal",
 		"natDexTier": "Uber"
 	},
-	"cleffa": {
-		"isNonstandard": "Past",
-		"tier": "Illegal",
-		"natDexTier": "LC"
-	},	
 	"togepi": {
 		"isNonstandard": "Past",
 		"tier": "Illegal",
@@ -509,16 +561,6 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"tier": "Illegal",
 		"natDexTier": "NFE"
 	},	
-	"politoed": {
-		"isNonstandard": "Past",
-		"tier": "Illegal",
-		"natDexTier": "OU"
-	},
-	"aipom": {
-		"isNonstandard": "Past",
-		"tier": "Illegal",
-		"natDexTier": "LC"
-	},
 	"snubbull": {
 		"isNonstandard": "Past",
 		"tier": "Illegal",
@@ -544,11 +586,6 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"tier": "Illegal",
 		"natDexTier": "OU"
 	},
-	"ludicolo": {
-		"isNonstandard": "Past",
-		"tier": "Illegal",
-		"natDexTier": "OU"
-	},	
 	"gardevoirmega": {
 		"isNonstandard": "Past",
 		"tier": "Illegal",
@@ -574,16 +611,6 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"tier": "Illegal",
 		"natDexTier": "OU"
 	},
-	"volbeat": {
-		"isNonstandard": "Past",
-		"tier": "Illegal",
-		"natDexTier": "OU"
-	},
-	"illumise": {
-		"isNonstandard": "Past",
-		"tier": "Illegal",
-		"natDexTier": "OU"
-	},
 	"spinda": {
 		"isNonstandard": "Past",
 		"tier": "Illegal",
@@ -599,25 +626,10 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"tier": "Illegal",
 		"natDexTier": "OU"
 	},
-	"dusclops": {
-		"isNonstandard": "Past",
-		"tier": "Illegal",
-		"natDexTier": "Uber"
-	},
 	"jirachi": {
 		"isNonstandard": "Past",
 		"tier": "Illegal",
 		"natDexTier": "OU"
-	},
-	"ambipom": {
-		"isNonstandard": "Past",
-		"tier": "Illegal",
-		"natDexTier": "OU"
-	},
-	"munchlax": {
-		"isNonstandard": "Past",
-		"tier": "Illegal",
-		"natDexTier": "NFE"
 	},
 	"lucariomega": {
 		"isNonstandard": "Past",
@@ -643,11 +655,6 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"isNonstandard": "Past",
 		"tier": "Illegal",
 		"natDexTier": "OU"
-	},
-	"dusknoir": {
-		"isNonstandard": "Past",
-		"tier": "Illegal",
-		"natDexTier": "Uber"
 	},
 	"aromatisse": {
 		"isNonstandard": "Past",
@@ -1073,14 +1080,6 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"tier": "Illegal"
 	},
 	"geodudealola": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
-	},
-	"graveleralola": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
-	},
-	"golemalola": {
 		"isNonstandard": "Past",
 		"tier": "Illegal"
 	},
@@ -1900,10 +1899,6 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"isNonstandard": "Past",
 		"tier": "Illegal"
 	},
-	"lombre": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
-	},
 	"seedot": {
 		"isNonstandard": "Past",
 		"tier": "Illegal"
@@ -2361,18 +2356,6 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"tier": "Illegal"
 	},
 	"torterra": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
-	},
-	"chimchar": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
-	},
-	"monferno": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
-	},
-	"infernape": {
 		"isNonstandard": "Past",
 		"tier": "Illegal"
 	},
