@@ -3470,7 +3470,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "SU",
 	},
 	zoroark: {
-		tier: "NU",
+		tier: "NUBL",
 		doublesTier: "(DUU)",
 		natDexTier: "RU",
 	},
@@ -3814,7 +3814,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	tornadustherian: {
 		tier: "UU",
 		doublesTier: "(DUU)",
-		natDexTier: "UU",
+		natDexTier: "UUBL",
 	},
 	thundurus: {
 		tier: "RU",
@@ -3870,7 +3870,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		isNonstandard: "Past",
 	},
 	meloetta: {
-		tier: "NU",
+		tier: "NUBL",
 		doublesTier: "(DUU)",
 		natDexTier: "RU",
 	},
@@ -3917,7 +3917,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "SU",
 	},
 	delphox: {
-		tier: "NU",
+		tier: "NUBL",
 		doublesTier: "(DUU)",
 		natDexTier: "RU",
 	},
@@ -5609,7 +5609,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		natDexTier: "RU",
 	},
 	flamigo: {
-		tier: "NU",
+		tier: "NUBL",
 		doublesTier: "(DUU)",
 		natDexTier: "RU",
 	},

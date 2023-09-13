@@ -1216,6 +1216,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 		shortDesc: "Charges, +Ghost to target's type, omniboost turn 2.",
+		pp: 1,
 		flags: {charge: 1, protect: 1, reflectable: 1, mirror: 1, allyanim: 1},
 		onTryMove(attacker, defender, move) {
 			if (attacker.removeVolatile(move.id)) {
@@ -1235,6 +1236,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 		shortDesc: "Charges, +Grass to target's type, omniboost turn 2.",
+		pp: 1,
 		flags: {charge: 1, protect: 1, reflectable: 1, mirror: 1, allyanim: 1},
 		onTryMove(attacker, defender, move) {
 			if (attacker.removeVolatile(move.id)) {
@@ -1253,6 +1255,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	conversion: {
 		inherit: true,
 		isNonstandard: null,
+		pp: 1,
 		shortDesc: "Charges, User's type to first move, Omniboost turn 2.",
 		boosts: {atk: 1, def: 1, spa: 1, spd: 1, spe: 1},
 		flags: {charge: 1, nonsky: 1, nosleeptalk: 1, failinstruct: 1},
