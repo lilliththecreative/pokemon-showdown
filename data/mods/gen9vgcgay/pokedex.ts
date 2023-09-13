@@ -453,11 +453,11 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Psychic"
 		],
 		"baseStats": {
-			"hp": 95,
+			"hp": 90,
 			"atk": 87,
-			"def": 83,
+			"def": 88,
 			"spa": 110,
-			"spd": 85,
+			"spd": 90,
 			"spe": 95
 		},
 		"abilities": {
@@ -1812,7 +1812,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Water"
 		],
 		"baseStats": {
-			"hp": 90,
+			"hp": 95,
 			"atk": 75,
 			"def": 75,
 			"spa": 90,
@@ -1833,9 +1833,9 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		],
 		"baseStats": {
 			"hp": 80,
-			"atk": 55,
+			"atk": 60,
 			"def": 70,
-			"spa": 55,
+			"spa": 60,
 			"spd": 95,
 			"spe": 130
 		},
@@ -2730,10 +2730,10 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Water"
 		],
 		"baseStats": {
-			"hp": 80,
+			"hp": 85,
 			"atk": 65,
 			"def": 67,
-			"spa": 105,
+			"spa": 110,
 			"spd": 87,
 			"spe": 90
 		},
@@ -3097,7 +3097,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Water"
 		],
 		"baseStats": {
-			"hp": 160,
+			"hp": 170,
 			"atk": 90,
 			"def": 45,
 			"spa": 90,
@@ -3670,7 +3670,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"hp": 45,
 			"atk": 64,
 			"def": 95,
-			"spa": 124,
+			"spa": 129,
 			"spd": 70,
 			"spe": 32
 		},
@@ -5969,7 +5969,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"def": 73,
 			"spa": 117,
 			"spd": 73,
-			"spe": 103
+			"spe": 108
 		},
 		"abilities": {
 			"0": "Large Wingspan",
@@ -7542,12 +7542,12 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Normal"
 		],
 		"baseStats": {
-			"hp": 98,
-			"atk": 120,
+			"hp": 103,
+			"atk": 130,
 			"def": 75,
-			"spa": 55,
+			"spa": 60,
 			"spd": 75,
-			"spe": 45
+			"spe": 50
 		},
 		"abilities": {
 			"0": "Stakeout",
@@ -10298,7 +10298,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"def": 60,
 			"spa": 110,
 			"spd": 60,
-			"spe": 125
+			"spe": 130
 		},
 		"abilities": {
 			"0": "Wind Power",
@@ -10486,7 +10486,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		],
 		"baseStats": {
 			"hp": 30,
-			"atk": 100,
+			"atk": 95,
 			"def": 50,
 			"spa": 50,
 			"spd": 70,

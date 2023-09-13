@@ -99054,6 +99054,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"terablast": [
 				"9M"
+			],
+			"pinmissile": [
+				"9M"
 			]
 		}
 	},
