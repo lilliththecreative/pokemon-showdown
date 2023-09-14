@@ -189,7 +189,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	},
 	"vigoroth": {
 		"isNonstandard": null,
-		"tier": "NFE"
+		"tier": "RU"
 	},
 	"slaking": {
 		"isNonstandard": null,
@@ -217,11 +217,11 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	},
 	"volbeat": {
 		"isNonstandard": null,
-		"tier": "OU"
+		"tier": "RU"
 	},
 	"illumise": {
 		"isNonstandard": null,
-		"tier": "OU"
+		"tier": "RU"
 	},
 	"swalot": {
 		"isNonstandard": null,
@@ -242,6 +242,10 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	"dusclops": {
 		"isNonstandard": null,
 		"tier": "Uber"
+	},
+	"jirachi": {
+		"isNonstandard": null,
+		"tier": "OU"
 	},
 	"chimchar": {
 		"isNonstandard": null,
@@ -385,7 +389,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	},
 	"morgrem": {
 		"isNonstandard": null,
-		"tier": "NFE"
+		"tier": "RU"
 	},
 	"grimmsnarl": {
 		"isNonstandard": null,
@@ -463,8 +467,11 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"isNonstandard": null,
 		"tier": "UU"
 	},
-	//Munkidori should be tagged as OU once Showdown implements it.
-	
+	"munkidori": {
+		"isNonstandard": null,
+		"tier": "OU"
+	},	
+
 
 	"abra": {
 		"isNonstandard": "Past",
@@ -622,11 +629,6 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"natDexTier": "OU"
 	},
 	"banettemega": {
-		"isNonstandard": "Past",
-		"tier": "Illegal",
-		"natDexTier": "OU"
-	},
-	"jirachi": {
 		"isNonstandard": "Past",
 		"tier": "Illegal",
 		"natDexTier": "OU"
