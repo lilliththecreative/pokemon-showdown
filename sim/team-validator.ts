@@ -620,6 +620,9 @@ export class TeamValidator {
 				set.hpType = type.name;
 			}
 		}
+		if (species.forceTeraType) {
+			set.teraType = species.forceTeraType;
+		}
 		if (set.teraType) {
 			const type = dex.types.get(set.teraType);
 			if (!type.exists) {
