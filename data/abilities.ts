@@ -1107,6 +1107,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	embodyaspectcornerstone: {
 		onStart(pokemon) {
+			if (pokemon.species.baseSpecies !== "Ogerpon") return;
 			this.boost({def: 1}, pokemon);
 		},
 		name: "Embody Aspect (Cornerstone)",
@@ -1115,6 +1116,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	embodyaspecthearthflame: {
 		onStart(pokemon) {
+			if (pokemon.species.baseSpecies !== "Ogerpon") return;
 			this.boost({atk: 1}, pokemon);
 		},
 		name: "Embody Aspect (Hearthflame)",
@@ -1123,6 +1125,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	embodyaspectteal: {
 		onStart(pokemon) {
+			if (pokemon.species.baseSpecies !== "Ogerpon") return;
 			this.boost({spe: 1}, pokemon);
 		},
 		name: "Embody Aspect (Teal)",
@@ -1131,6 +1134,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	embodyaspectwellspring: {
 		onStart(pokemon) {
+			if (pokemon.species.baseSpecies !== "Ogerpon") return;
 			this.boost({spd: 1}, pokemon);
 		},
 		name: "Embody Aspect (Wellspring)",
@@ -1683,9 +1687,17 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 131,
 	},
 	heatproof: {
-		onSourceBasePowerPriority: 18,
-		onSourceBasePower(basePower, attacker, defender, move) {
+		onSourceModifyAtkPriority: 6,
+		onSourceModifyAtk(atk, attacker, defender, move) {
 			if (move.type === 'Fire') {
+				this.debug('Heatproof Atk weaken');
+				return this.chainModify(0.5);
+			}
+		},
+		onSourceModifySpAPriority: 5,
+		onSourceModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Fire') {
+				this.debug('Heatproof SpA weaken');
 				return this.chainModify(0.5);
 			}
 		},
