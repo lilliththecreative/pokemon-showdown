@@ -37,7 +37,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	},
 	"grimer": {
 		"isNonstandard": null,
-		"tier": "LC"
+		"tier": "RU"
 	},
 	"grimeralola": {
 		"isNonstandard": null,
@@ -345,7 +345,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	},
 	"tinkatuff": {
 		"isNonstandard": null,
-		"tier": "NFE"
+		"tier": "RU"
 	},
 	"tinkaton": {
 		"isNonstandard": null,
@@ -377,15 +377,15 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	},
 	"volbeat": {
 		"isNonstandard": null,
-		"tier": "OU"
+		"tier": "RU"
 	},
 	"illumise": {
 		"isNonstandard": null,
-		"tier": "OU"
+		"tier": "RU"
 	},
 	"aipom": {
 		"isNonstandard": null,
-		"tier": "OU"
+		"tier": "LC"
 	},
 	"ambipom": {
 		"isNonstandard": null,
@@ -393,19 +393,19 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	},
 	"dusclops": {
 		"isNonstandard": null,
-		"tier": "OU"
+		"tier": "Uber"
 	},
 	"dusknoir": {
 		"isNonstandard": null,
-		"tier": "OU"
+		"tier": "Uber"
 	},
 	"cleffa": {
 		"isNonstandard": null,
-		"tier": "OU"
+		"tier": "LC"
 	},
 	"clefairy": {
 		"isNonstandard": null,
-		"tier": "OU"
+		"tier": "NFE"
 	},
 	"clefable": {
 		"isNonstandard": null,
@@ -413,11 +413,11 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	},
 	"geodude": {
 		"isNonstandard": null,
-		"tier": "OU"
+		"tier": "LC"
 	},
 	"graveler": {
 		"isNonstandard": null,
-		"tier": "OU"
+		"tier": "NFE"
 	},
 	"golem": {
 		"isNonstandard": null,
@@ -425,7 +425,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	},
 	"graveleralola": {
 		"isNonstandard": null,
-		"tier": "OU"
+		"tier": "NFE"
 	},
 	"golemalola": {
 		"isNonstandard": null,
@@ -433,11 +433,11 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	},
 	"chimchar": {
 		"isNonstandard": null,
-		"tier": "OU"
+		"tier": "LC"
 	},
 	"monferno": {
 		"isNonstandard": null,
-		"tier": "OU"
+		"tier": "NFE"
 	},
 	"infernape": {
 		"isNonstandard": null,
@@ -445,13 +445,29 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	},
 	"poliwhirl": {
 		"isNonstandard": null,
-		"tier": "OU"
+		"tier": "NFE"
 	},
 	"poliwrath": {
 		"isNonstandard": null,
 		"tier": "OU"
 	},
 	"politoed": {
+		"isNonstandard": null,
+		"tier": "OU"
+	},
+	"lombre": {
+		"isNonstandard": null,
+		"tier": "NFE"
+	},
+	"ludicolo": {
+		"isNonstandard": null,
+		"tier": "OU"
+	},
+	"munchlax": {
+		"isNonstandard": null,
+		"tier": "LC"
+	},
+	"snorlax": {
 		"isNonstandard": null,
 		"tier": "OU"
 	},
@@ -1343,14 +1359,6 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"isNonstandard": "Past",
 		"tier": "Illegal"
 	},
-	"munchlax": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
-	},
-	"snorlax": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
-	},
 	"snorlaxgmax": {
 		"isNonstandard": "Past",
 		"tier": "Illegal"
@@ -1900,14 +1908,6 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"tier": "Illegal"
 	},
 	"lotad": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
-	},
-	"lombre": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
-	},
-	"ludicolo": {
 		"isNonstandard": "Past",
 		"tier": "Illegal"
 	},
