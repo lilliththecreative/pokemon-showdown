@@ -294,9 +294,14 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			this.boost({atk: 1, spa: 1}, source, source, move, false, true);
 		},
 	},
+	grassyglide: {
+		inherit: true,
+		basePower: 60,
+	},
 	gastroacid: {
 		inherit: true,
 		target: "allAdjacent",
+		shortDesc: "Nullifies the ability of all other pokemon.",
 	},
 	lick: {
 		inherit: true,
@@ -315,8 +320,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	acupressure: {
 		inherit: true,
-		// basePower: 10,
-		// category: 'Physical',
 		shortDesc: "Raises a non-acc random stat of the user/ally by 2.",
 		onHit(target) {
 			const stats: BoostID[] = [];
@@ -505,7 +508,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	doublekick: {
 		inherit: true,
-		basePower: 40,
+		basePower: 35,
 	},
 	shadowpunch: {
 		inherit: true,

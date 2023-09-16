@@ -3215,7 +3215,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Dark"
 		],
 		"baseStats": {
-			"hp": 75,
+			"hp": 70,
 			"atk": 130,
 			"def": 65,
 			"spa": 130,
@@ -3255,10 +3255,10 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		],
 		"baseStats": {
 			"hp": 83,
-			"atk": 125,
-			"def": 70,
-			"spa": 80,
-			"spd": 70,
+			"atk": 130,
+			"def": 75,
+			"spa": 70,
+			"spd": 75,
 			"spe": 100
 		},
 		"abilities": {
@@ -3278,7 +3278,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"def": 70,
 			"spa": 120,
 			"spd": 70,
-			"spe": 65
+			"spe": 70
 		},
 		"abilities": {
 			"0": "Shed Skin",
@@ -3928,7 +3928,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		"abilities": {
 			"0": "Torrent",
 			"1": "Sinnohan Grit",
-			"H": "Defiant"
+			"H": "Competitive"
 		},
 		"inherit": true
 	},
@@ -4365,7 +4365,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		],
 		"baseStats": {
 			"hp": 81,
-			"atk": 97,
+			"atk": 87,
 			"def": 74,
 			"spa": 74,
 			"spd": 69,
@@ -8408,11 +8408,11 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		],
 		"baseStats": {
 			"hp": 80,
-			"atk": 120,
+			"atk": 125,
 			"def": 70,
-			"spa": 75,
+			"spa": 80,
 			"spd": 100,
-			"spe": 70
+			"spe": 75
 		},
 		"abilities": {
 			"0": "Comatose"
@@ -11253,6 +11253,259 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		"abilities": {
 			"0": "Quark Drive",
 			"H": "Justified"
+		},
+		"inherit": true
+	},
+	"ursalunabloodmoon": {
+		"types": [
+			"Normal",
+			"Ground"
+		],
+		"baseStats": {
+			"hp": 113,
+			"atk": 70,
+			"def": 120,
+			"spa": 135,
+			"spd": 65,
+			"spe": 52
+		},
+		"abilities": {
+			"0": "Mind's Eye"
+		},
+		"inherit": true
+	},
+	"dipplin": {
+		"types": [
+			"Grass",
+			"Dragon"
+		],
+		"baseStats": {
+			"hp": 85,
+			"atk": 80,
+			"def": 110,
+			"spa": 95,
+			"spd": 80,
+			"spe": 40
+		},
+		"abilities": {
+			"0": "Supersweet Syrup",
+			"1": "Gluttony",
+			"H": "Sticky Hold"
+		},
+		"inherit": true
+	},
+	"sinistcha": {
+		"types": [
+			"Grass",
+			"Ghost"
+		],
+		"baseStats": {
+			"hp": 81,
+			"atk": 60,
+			"def": 106,
+			"spa": 126,
+			"spd": 80,
+			"spe": 70
+		},
+		"abilities": {
+			"0": "Hospitality",
+			"H": "Heatproof"
+		},
+		"inherit": true
+	},
+	"okidogi": {
+		"types": [
+			"Grass"
+		],
+		"baseStats": {
+			"hp": 88,
+			"atk": 128,
+			"def": 115,
+			"spa": 58,
+			"spd": 86,
+			"spe": 80
+		},
+		"abilities": {
+			"0": "Toxic Chain",
+			"H": "Defiant"
+		},
+		"inherit": true
+	},
+	"munkidori": {
+		"types": [
+			"Grass"
+		],
+		"baseStats": {
+			"hp": 88,
+			"atk": 75,
+			"def": 66,
+			"spa": 130,
+			"spd": 90,
+			"spe": 106
+		},
+		"abilities": {
+			"0": "Toxic Chain",
+			"H": "Frisk"
+		},
+		"inherit": true
+	},
+	"fezandipiti": {
+		"types": [
+			"Grass"
+		],
+		"baseStats": {
+			"hp": 88,
+			"atk": 91,
+			"def": 82,
+			"spa": 70,
+			"spd": 125,
+			"spe": 99
+		},
+		"abilities": {
+			"0": "Toxic Chain",
+			"H": "Technician"
+		},
+		"inherit": true
+	},
+	"ogerpon": {
+		"types": [
+			"Grass"
+		],
+		"baseStats": {
+			"hp": 80,
+			"atk": 110,
+			"def": 84,
+			"spa": 60,
+			"spd": 96,
+			"spe": 110
+		},
+		"abilities": {
+			"0": "Defiant"
+		},
+		"inherit": true
+	},
+	"ogerponwellspring": {
+		"types": [
+			"Grass",
+			"Water"
+		],
+		"baseStats": {
+			"hp": 80,
+			"atk": 110,
+			"def": 84,
+			"spa": 60,
+			"spd": 96,
+			"spe": 110
+		},
+		"abilities": {
+			"0": "Water Absorb"
+		},
+		"inherit": true
+	},
+	"ogerponhearthflame": {
+		"types": [
+			"Grass",
+			"Fire"
+		],
+		"baseStats": {
+			"hp": 80,
+			"atk": 110,
+			"def": 84,
+			"spa": 60,
+			"spd": 96,
+			"spe": 110
+		},
+		"abilities": {
+			"0": "Mold Breaker"
+		},
+		"inherit": true
+	},
+	"ogerponcornerstone": {
+		"types": [
+			"Grass",
+			"Rock"
+		],
+		"baseStats": {
+			"hp": 80,
+			"atk": 110,
+			"def": 84,
+			"spa": 60,
+			"spd": 96,
+			"spe": 110
+		},
+		"abilities": {
+			"0": "Sturdy"
+		},
+		"inherit": true
+	},
+	"ogerpontealtera": {
+		"types": [
+			"Grass"
+		],
+		"baseStats": {
+			"hp": 80,
+			"atk": 110,
+			"def": 84,
+			"spa": 60,
+			"spd": 96,
+			"spe": 110
+		},
+		"abilities": {
+			"0": "Embody Aspect (Teal)"
+		},
+		"inherit": true
+	},
+	"ogerponwellspringtera": {
+		"types": [
+			"Grass",
+			"Water"
+		],
+		"baseStats": {
+			"hp": 80,
+			"atk": 110,
+			"def": 84,
+			"spa": 60,
+			"spd": 96,
+			"spe": 110
+		},
+		"abilities": {
+			"0": "Embody Aspect (Wellspring)"
+		},
+		"inherit": true
+	},
+	"ogerponhearthflametera": {
+		"types": [
+			"Grass",
+			"Fire"
+		],
+		"baseStats": {
+			"hp": 80,
+			"atk": 110,
+			"def": 84,
+			"spa": 60,
+			"spd": 96,
+			"spe": 110
+		},
+		"abilities": {
+			"0": "Embody Aspect (Hearthflame)"
+		},
+		"inherit": true
+	},
+	"ogerponcornerstonetera": {
+		"types": [
+			"Grass",
+			"Rock"
+		],
+		"baseStats": {
+			"hp": 80,
+			"atk": 110,
+			"def": 84,
+			"spa": 60,
+			"spd": 96,
+			"spe": 110
+		},
+		"abilities": {
+			"0": "Embody Aspect (Cornerstone)"
 		},
 		"inherit": true
 	}

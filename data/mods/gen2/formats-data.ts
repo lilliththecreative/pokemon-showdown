@@ -21,7 +21,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "7U",
 	},
 	wartortle: {
-		tier: "PU",
+		tier: "ZUBL",
 	},
 	blastoise: {
 		tier: "UU",
@@ -192,7 +192,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "UU",
 	},
 	poliwag: {
-		tier: "PU",
+		tier: "ZUBL",
 	},
 	poliwhirl: {
 		tier: "PU",
@@ -522,7 +522,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "7U",
 	},
 	quilava: {
-		tier: "PU",
+		tier: "ZUBL",
 	},
 	typhlosion: {
 		tier: "UUBL",
