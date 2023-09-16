@@ -386,6 +386,27 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		},
 	},
 	// Signature Ability Buffs
+	supersweetsyrup: {
+		shortDesc: "On switch-in, this Pokemon lowers the evasiveness of opponents 1 stage.",
+		onStart(pokemon) {
+			this.add('-ability', pokemon, 'Supersweet Syrup');
+			let activated = false;
+			for (const target of pokemon.adjacentFoes()) {
+				if (!activated) {
+					this.add('-ability', pokemon, 'Supersweet Syrup', 'boost');
+					activated = true;
+				}
+				if (target.volatiles['substitute']) {
+					this.add('-immune', target);
+				} else {
+					this.boost({evasion: -1}, target, pokemon, null, true);
+				}
+			}
+		},
+		name: "Supersweet Syrup",
+		rating: 1.5,
+		num: 306,
+	},
 	galewings: {
 		inherit: true,
 		shortDesc: "If Pokemon's HP is >= 50%, Flying moves have priority increased by 1.",

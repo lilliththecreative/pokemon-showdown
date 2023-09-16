@@ -2,12 +2,14 @@ export const Items: {[k: string]: ModdedItemData} = {
 	berserkgene: {
 		inherit: true,
 		desc: "On switch-in, raises holder's Attack by 1 and confuses it. Single use.",
+		shortDesc: "On switch-in, raises holder's Attack by 1 and confuses it. Single use.",
 		boosts: {atk: 1},
 		isNonstandard: null,
 	},
 	shellbell: {
 		inherit: true,
 		desc: "After an attack, holder gains 1/4 of the damage in HP dealt to other Pokemon.",
+		shortDesc: "After an attack, holder gains 1/4 of the damage in HP dealt to other Pokemon.",
 		onAfterMoveSecondarySelf(pokemon, target, move) {
 			if (move.totalDamage && !pokemon.forceSwitchFlag) {
 				this.heal(move.totalDamage / 4, pokemon);

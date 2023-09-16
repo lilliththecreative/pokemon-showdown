@@ -840,7 +840,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	stormthrow: {
 		inherit: true,
 		isNonstandard: null,
-		basePower: 75,
+		basePower: 70,
 	},
 	healorder: {
 		inherit: true,
