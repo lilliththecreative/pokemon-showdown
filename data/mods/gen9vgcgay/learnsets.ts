@@ -1781,14 +1781,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"5M",
 				"4M"
 			],
-			"hail": [
-				"8M",
-				"7M",
-				"6M",
-				"5M",
-				"4M",
-				"3M"
-			],
 			"headbutt": [
 				"8V",
 				"7V",
@@ -2231,6 +2223,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"6T",
 				"5T",
 				"4T"
+			],
+			"snowscape": [
+				"9M"
 			],
 			"terablast": [
 				"9M"
@@ -6876,11 +6871,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"8L1",
 				"7M"
 			],
-			"hail": [
-				"8M",
-				"8L1",
-				"7M"
-			],
 			"headbutt": [
 				"8V"
 			],
@@ -7057,8 +7047,7 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"7T"
 			],
 			"snowscape": [
-				"9M",
-				"9L1"
+				"9M"
 			],
 			"spikes": [
 				"9M",
@@ -10646,10 +10635,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"grudge": [
 				"8L1"
-			],
-			"hail": [
-				"8M",
-				"7M"
 			],
 			"headbutt": [
 				"8V"
@@ -14750,14 +14735,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"grassknot": [
 				"9M"
 			],
-			"hail": [
-				"8M",
-				"7M",
-				"6M",
-				"5M",
-				"4M",
-				"3M"
-			],
 			"haze": [
 				"9M"
 			],
@@ -15284,6 +15261,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"5L50",
 				"4T",
 				"4L44"
+			],
+			"snowscape": [
+				"9M"
 			]
 		}
 	},
@@ -16531,14 +16511,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"5M",
 				"4M"
 			],
-			"hail": [
-				"8M",
-				"7M",
-				"6M",
-				"5M",
-				"4M",
-				"3M"
-			],
 			"haze": [
 				"9M",
 				"8V"
@@ -16985,6 +16957,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"8M",
 				"7M",
 				"5M"
+			],
+			"snowscape": [
+				"9M"
 			],
 			"surgingstrikes": [
 				"9M"
@@ -19115,14 +19090,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"5M",
 				"4M"
 			],
-			"hail": [
-				"8M",
-				"7M",
-				"6M",
-				"5M",
-				"4M",
-				"3M"
-			],
 			"haze": [
 				"8V"
 			],
@@ -19495,6 +19462,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"6L1",
 				"5L61",
 				"4L55"
+			],
+			"snowscape": [
+				"9M"
 			],
 			"terablast": [
 				"9M"
@@ -20453,9 +20423,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"gunkshot": [
 				"9M"
 			],
-			"hail": [
-				"8M"
-			],
 			"haze": [
 				"9M"
 			],
@@ -21335,16 +21302,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"4L1",
 				"3L1"
 			],
-			"hail": [
-				"7M",
-				"7L65",
-				"6M",
-				"6L65",
-				"5M",
-				"5L65",
-				"4M",
-				"3M"
-			],
 			"headbutt": [
 				"8V",
 				"7L1",
@@ -21611,6 +21568,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"whirlpool": [
 				"7V",
 				"4M"
+			],
+			"snowscape": [
+				"9M"
 			],
 			"terablast": [
 				"9M"
@@ -22135,14 +22095,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"6M",
 				"5M",
 				"4M"
-			],
-			"hail": [
-				"8M",
-				"7M",
-				"6M",
-				"5M",
-				"4M",
-				"3M"
 			],
 			"headbutt": [
 				"8V"
@@ -24411,14 +24363,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"4L37",
 				"3L38"
 			],
-			"hail": [
-				"8M",
-				"7M",
-				"6M",
-				"5M",
-				"4M",
-				"3M"
-			],
 			"hammerarm": [
 				"8L1"
 			],
@@ -24786,6 +24730,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"6M",
 				"5M",
 				"4M"
+			],
+			"snowscape": [
+				"9M"
 			],
 			"terablast": [
 				"9M"
@@ -28993,14 +28940,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"3L1",
 				"3S1"
 			],
-			"hail": [
-				"8M",
-				"7M",
-				"6M",
-				"5M",
-				"4M",
-				"3M"
-			],
 			"headbutt": [
 				"8V",
 				"7V",
@@ -30052,14 +29991,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"growl": [
 				"8L4"
 			],
-			"hail": [
-				"8M",
-				"7M",
-				"6M",
-				"5M",
-				"4M",
-				"3M"
-			],
 			"hammerarm": [
 				"8E",
 				"7E",
@@ -30570,6 +30501,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"zapcannon": [
 				"7V"
 			],
+			"snowscape": [
+				"9M"
+			],
 			"terablast": [
 				"9M"
 			]
@@ -30727,14 +30661,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"6M",
 				"5M",
 				"4M"
-			],
-			"hail": [
-				"8M",
-				"7M",
-				"6M",
-				"5M",
-				"4M",
-				"3M"
 			],
 			"headbutt": [
 				"8V"
@@ -31068,6 +30994,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"8M",
 				"4M"
 			],
+			"snowscape": [
+				"9M"
+			],
 			"terablast": [
 				"9M"
 			],
@@ -31250,14 +31179,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"6M",
 				"5M",
 				"4M"
-			],
-			"hail": [
-				"8M",
-				"7M",
-				"6M",
-				"5M",
-				"4M",
-				"3M"
 			],
 			"harden": [
 				"8L1",
@@ -31679,6 +31600,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"zapcannon": [
 				"7V"
+			],
+			"snowscape": [
+				"9M"
 			],
 			"terablast": [
 				"9M"
@@ -32723,9 +32647,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"guardswap": [
 				"8M"
 			],
-			"hail": [
-				"8M"
-			],
 			"helpinghand": [
 				"8M"
 			],
@@ -32910,6 +32831,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"zenheadbutt": [
 				"8M"
+			],
+			"snowscape": [
+				"9M"
 			],
 			"hiddenpower": [
 				"9M"
@@ -33182,14 +33106,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"6M",
 				"5M",
 				"4M"
-			],
-			"hail": [
-				"8M",
-				"7M",
-				"6M",
-				"5M",
-				"4M",
-				"3M"
 			],
 			"headbutt": [
 				"8V",
@@ -33686,6 +33602,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"6T",
 				"5T",
 				"4T"
+			],
+			"snowscape": [
+				"9M"
 			],
 			"terablast": [
 				"9M"
@@ -35645,14 +35564,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"5M",
 				"4M"
 			],
-			"hail": [
-				"8M",
-				"7M",
-				"6M",
-				"5M",
-				"4M",
-				"3M"
-			],
 			"headbutt": [
 				"8V",
 				"7V",
@@ -36124,6 +36035,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"zapcannon": [
 				"7V"
+			],
+			"snowscape": [
+				"9M"
 			]
 		}
 	},
@@ -36381,14 +36295,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"5L1",
 				"4L1",
 				"3L1"
-			],
-			"hail": [
-				"8M",
-				"7M",
-				"6M",
-				"5M",
-				"4M",
-				"3M"
 			],
 			"headbutt": [
 				"8V",
@@ -36850,6 +36756,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"6T",
 				"5T",
 				"4T"
+			],
+			"snowscape": [
+				"9M"
 			],
 			"terablast": [
 				"9M"
@@ -37704,14 +37613,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"8L1",
 				"8V"
 			],
-			"hail": [
-				"8M",
-				"7M",
-				"6M",
-				"5M",
-				"4M",
-				"3M"
-			],
 			"haze": [
 				"9M",
 				"9L20",
@@ -38171,6 +38072,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"yawn": [
 				"8V"
+			],
+			"snowscape": [
+				"9M"
 			],
 			"lifedew": [
 				"9M"
@@ -39654,14 +39558,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"5M",
 				"4M"
 			],
-			"hail": [
-				"8M",
-				"7M",
-				"6M",
-				"5M",
-				"4M",
-				"3M"
-			],
 			"headbutt": [
 				"8V",
 				"7V",
@@ -40072,6 +39968,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"4L1",
 				"3L1"
 			],
+			"snowscape": [
+				"9M"
+			],
 			"terablast": [
 				"9M"
 			]
@@ -40282,14 +40181,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"6M",
 				"5M",
 				"4M"
-			],
-			"hail": [
-				"8M",
-				"7M",
-				"6M",
-				"5M",
-				"4M",
-				"3M"
 			],
 			"harden": [
 				"8L1",
@@ -40753,6 +40644,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"6M",
 				"5M",
 				"4M"
+			],
+			"snowscape": [
+				"9M"
 			],
 			"terablast": [
 				"9M"
@@ -42677,22 +42571,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"4L1",
 				"3L1"
 			],
-			"hail": [
-				"8M",
-				"8L50",
-				"7M",
-				"7L57",
-				"7S7",
-				"6M",
-				"6L57",
-				"6S5",
-				"6S6",
-				"5M",
-				"5L85",
-				"4M",
-				"4L85",
-				"3M"
-			],
 			"haze": [
 				"9M",
 				"9L60",
@@ -43022,8 +42900,7 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"3T"
 			],
 			"snowscape": [
-				"9M",
-				"9L50"
+				"9M"
 			],
 			"steelwing": [
 				"8M",
@@ -43591,9 +43468,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"5M",
 				"4M"
 			],
-			"hail": [
-				"8M"
-			],
 			"headbutt": [
 				"8V"
 			],
@@ -44023,6 +43897,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"7V",
 				"6L1",
 				"5L92"
+			],
+			"snowscape": [
+				"9M"
 			],
 			"wildboltstorm": [
 				"9M"
@@ -45528,14 +45405,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"6M",
 				"5M",
 				"4M"
-			],
-			"hail": [
-				"8M",
-				"7M",
-				"6M",
-				"5M",
-				"4M",
-				"3M"
 			],
 			"haze": [
 				"9M"
@@ -47069,13 +46938,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"5M",
 				"4M"
 			],
-			"hail": [
-				"7M",
-				"6M",
-				"5M",
-				"4M",
-				"3M"
-			],
 			"headbutt": [
 				"7V",
 				"4T"
@@ -47440,6 +47302,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"workup": [
 				"7M"
+			],
+			"snowscape": [
+				"9M"
 			],
 			"terablast": [
 				"9M"
@@ -50419,14 +50284,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"5M",
 				"4M"
 			],
-			"hail": [
-				"8M",
-				"7M",
-				"6M",
-				"5M",
-				"4M",
-				"3M"
-			],
 			"healbell": [
 				"7T",
 				"6T",
@@ -50734,6 +50591,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"zapcannon": [
 				"7V"
+			],
+			"snowscape": [
+				"9M"
 			],
 			"terablast": [
 				"9M"
@@ -52623,14 +52483,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"5M",
 				"4M"
 			],
-			"hail": [
-				"8M",
-				"7M",
-				"6M",
-				"5M",
-				"4M",
-				"3M"
-			],
 			"headbutt": [
 				"7V",
 				"4T"
@@ -53975,14 +53827,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"5M",
 				"4M"
 			],
-			"hail": [
-				"8M",
-				"7M",
-				"6M",
-				"5M",
-				"4M",
-				"3M"
-			],
 			"haze": [
 				"9M"
 			],
@@ -54340,6 +54184,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"8M",
 				"7V",
 				"4M"
+			],
+			"snowscape": [
+				"9M"
 			]
 		}
 	},
@@ -56810,9 +56657,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"gunkshot": [
 				"9M"
-			],
-			"hail": [
-				"8M"
 			],
 			"headbutt": [
 				"9L21",
@@ -60172,14 +60016,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"5M",
 				"4M"
 			],
-			"hail": [
-				"8M",
-				"7M",
-				"6M",
-				"5M",
-				"4M",
-				"3M"
-			],
 			"harden": [
 				"9L4",
 				"8L4",
@@ -60667,6 +60503,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"8M",
 				"7V",
 				"4M"
+			],
+			"snowscape": [
+				"9M"
 			],
 			"knockoff": [
 				"9M"
@@ -63456,9 +63295,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"grudge": [
 				"8L50"
 			],
-			"hail": [
-				"8M"
-			],
 			"harden": [
 				"8L1"
 			],
@@ -63600,6 +63436,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"willowisp": [
 				"8M"
+			],
+			"snowscape": [
+				"9M"
 			],
 			"hiddenpower": [
 				"9M"
@@ -64417,14 +64256,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"5T",
 				"4T"
 			],
-			"hail": [
-				"8M",
-				"7M",
-				"6M",
-				"5M",
-				"4M",
-				"3M"
-			],
 			"happyhour": [
 				"6S1"
 			],
@@ -64979,14 +64810,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"5T",
 				"4T"
 			],
-			"hail": [
-				"8M",
-				"7M",
-				"6M",
-				"5M",
-				"4M",
-				"3M"
-			],
 			"haze": [
 				"8E",
 				"7E",
@@ -65367,6 +65190,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"5L22",
 				"4L22",
 				"3L36"
+			],
+			"snowscape": [
+				"9M"
 			],
 			"terablast": [
 				"9M"
@@ -66728,14 +66554,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"5M",
 				"4M"
 			],
-			"hail": [
-				"8M",
-				"7M",
-				"6M",
-				"5M",
-				"4M",
-				"3M"
-			],
 			"headbutt": [
 				"7V",
 				"4T"
@@ -67005,6 +66823,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"6L1",
 				"5L1",
 				"4L1"
+			],
+			"snowscape": [
+				"9M"
 			],
 			"terablast": [
 				"9M"
@@ -69765,14 +69586,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"4L1",
 				"3L1"
 			],
-			"hail": [
-				"8M",
-				"7M",
-				"6M",
-				"5M",
-				"4M",
-				"3M"
-			],
 			"headbutt": [
 				"7V",
 				"4T"
@@ -71672,14 +71485,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"3S0",
 				"3S1"
 			],
-			"hail": [
-				"8M",
-				"7M",
-				"6M",
-				"5M",
-				"4M",
-				"3M"
-			],
 			"headbutt": [
 				"7V",
 				"4T"
@@ -72044,6 +71849,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"8M",
 				"7V",
 				"4M"
+			],
+			"snowscape": [
+				"9M"
 			],
 			"terablast": [
 				"9M"
@@ -74579,14 +74387,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"4L1",
 				"3L1"
 			],
-			"hail": [
-				"8M",
-				"7M",
-				"6M",
-				"5M",
-				"4M",
-				"3M"
-			],
 			"hammerarm": [
 				"8L1",
 				"7L1",
@@ -74978,6 +74778,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"workup": [
 				"8M",
 				"7M"
+			],
+			"snowscape": [
+				"9M"
 			],
 			"terablast": [
 				"9M"
@@ -77023,14 +76826,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"4L1",
 				"3L1"
 			],
-			"hail": [
-				"8M",
-				"7M",
-				"6M",
-				"5M",
-				"4M",
-				"3M"
-			],
 			"headbutt": [
 				"4T"
 			],
@@ -77407,6 +77202,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"6T",
 				"5T",
 				"4T"
+			],
+			"snowscape": [
+				"9M"
 			]
 		}
 	},
@@ -78659,14 +78457,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"6T",
 				"5T",
 				"4T"
-			],
-			"hail": [
-				"8M",
-				"7M",
-				"6M",
-				"5M",
-				"4M",
-				"3M"
 			],
 			"helpinghand": [
 				"9M"
@@ -90530,14 +90320,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"5M",
 				"4M"
 			],
-			"hail": [
-				"8M",
-				"7M",
-				"6M",
-				"5M",
-				"4M",
-				"3M"
-			],
 			"hiddenpower": [
 				"9M"
 			],
@@ -90893,6 +90675,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"5T",
 				"4T"
 			],
+			"snowscape": [
+				"9M"
+			],
 			"terablast": [
 				"9M"
 			],
@@ -91062,14 +90847,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"5L1",
 				"4L1",
 				"3L1"
-			],
-			"hail": [
-				"8M",
-				"7M",
-				"6M",
-				"5M",
-				"4M",
-				"3M"
 			],
 			"headbutt": [
 				"4T"
@@ -91368,6 +91145,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"7T",
 				"6T",
 				"5T"
+			],
+			"snowscape": [
+				"9M"
 			],
 			"terablast": [
 				"9M"
@@ -97344,9 +97124,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"5M",
 				"4M"
 			],
-			"hail": [
-				"8M"
-			],
 			"harden": [
 				"8L1",
 				"7L1",
@@ -97763,6 +97540,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"6T",
 				"5T",
 				"4T"
+			],
+			"snowscape": [
+				"9M"
 			],
 			"terablast": [
 				"9M"
@@ -98613,14 +98393,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"4M",
 				"4S0"
 			],
-			"hail": [
-				"8M",
-				"7M",
-				"6M",
-				"5M",
-				"4M",
-				"3M"
-			],
 			"headbutt": [
 				"4T"
 			],
@@ -98988,6 +98760,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"4T",
 				"4L1",
 				"4S0"
+			],
+			"snowscape": [
+				"9M"
 			]
 		}
 	},
@@ -99211,14 +98986,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"4L65",
 				"3L52",
 				"3S0"
-			],
-			"hail": [
-				"8M",
-				"7M",
-				"6M",
-				"5M",
-				"4M",
-				"3M"
 			],
 			"harden": [
 				"9L1",
@@ -99636,6 +99403,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"6M",
 				"5M",
 				"4M"
+			],
+			"snowscape": [
+				"9M"
 			],
 			"wavecrash": [
 				"9M"
@@ -100261,6 +100031,15 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"4T"
 			],
 			"terablast": [
+				"9M"
+			],
+			"doomdesire": [
+				"9M"
+			],
+			"miracleeye": [
+				"9M"
+			],
+			"scaryface": [
 				"9M"
 			]
 		}
@@ -101462,14 +101241,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"5M",
 				"4M"
 			],
-			"hail": [
-				"8M",
-				"7M",
-				"6M",
-				"5M",
-				"4M",
-				"3M"
-			],
 			"haze": [
 				"9M"
 			],
@@ -101841,6 +101612,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"4L1",
 				"3L5"
 			],
+			"snowscape": [
+				"9M"
+			],
 			"dazzlinggleam": [
 				"9M"
 			],
@@ -101984,18 +101758,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"guardswap": [
 				"7E",
 				"6E"
-			],
-			"hail": [
-				"7M",
-				"7L20",
-				"6M",
-				"6L20",
-				"5M",
-				"5L30",
-				"4M",
-				"4L20",
-				"3M",
-				"3L20"
 			],
 			"headbutt": [
 				"7L15",
@@ -102278,6 +102040,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"workup": [
 				"7M",
 				"5M"
+			],
+			"snowscape": [
+				"9M"
 			],
 			"terablast": [
 				"9M"
@@ -105744,14 +105509,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"5M",
 				"4M"
 			],
-			"hail": [
-				"8M",
-				"7M",
-				"6M",
-				"5M",
-				"4M",
-				"3M"
-			],
 			"headbutt": [
 				"4T"
 			],
@@ -106281,6 +106038,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"4T",
 				"4E"
 			],
+			"snowscape": [
+				"9M"
+			],
 			"terablast": [
 				"9M"
 			],
@@ -106485,20 +106245,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"6M",
 				"5M",
 				"4M"
-			],
-			"hail": [
-				"8M",
-				"8L47",
-				"7M",
-				"7L54",
-				"6M",
-				"6L40",
-				"5M",
-				"5L40",
-				"4M",
-				"4L40",
-				"3M",
-				"3L42"
 			],
 			"headbutt": [
 				"9L1",
@@ -106746,8 +106492,7 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"3T"
 			],
 			"snowscape": [
-				"9M",
-				"9L47"
+				"9M"
 			],
 			"spikes": [
 				"9M",
@@ -107010,21 +106755,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"5L1",
 				"4L1",
 				"3L1"
-			],
-			"hail": [
-				"8M",
-				"8L64",
-				"7M",
-				"7L38",
-				"6M",
-				"6L31",
-				"5M",
-				"5L31",
-				"5S0",
-				"4M",
-				"4L31",
-				"3M",
-				"3L31"
 			],
 			"headbutt": [
 				"4T"
@@ -107322,6 +107052,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"8M",
 				"4M"
 			],
+			"snowscape": [
+				"9M"
+			],
 			"terablast": [
 				"9M"
 			],
@@ -107428,13 +107161,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"3M"
 			],
 			"frustration": [
-				"7M",
-				"6M",
-				"5M",
-				"4M",
-				"3M"
-			],
-			"hail": [
 				"7M",
 				"6M",
 				"5M",
@@ -107624,6 +107350,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"4L1",
 				"3L1"
 			],
+			"snowscape": [
+				"9M"
+			],
 			"terablast": [
 				"9M"
 			],
@@ -107772,13 +107501,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"6M",
 				"5M",
 				"4M"
-			],
-			"hail": [
-				"7M",
-				"6M",
-				"5M",
-				"4M",
-				"3M"
 			],
 			"hiddenpower": [
 				"9M"
@@ -107982,6 +107704,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"4L1",
 				"3L1"
 			],
+			"snowscape": [
+				"9M"
+			],
 			"terablast": [
 				"9M"
 			]
@@ -108150,14 +107875,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"6M",
 				"5M",
 				"4M"
-			],
-			"hail": [
-				"8M",
-				"7M",
-				"6M",
-				"5M",
-				"4M",
-				"3M"
 			],
 			"harden": [
 				"8L1",
@@ -108536,6 +108253,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"5T",
 				"5E"
 			],
+			"snowscape": [
+				"9M"
+			],
 			"terablast": [
 				"9M"
 			],
@@ -108690,13 +108410,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"frustration": [
-				"7M",
-				"6M",
-				"5M",
-				"4M",
-				"3M"
-			],
-			"hail": [
 				"7M",
 				"6M",
 				"5M",
@@ -111047,15 +110760,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"5T",
 				"4T"
 			],
-			"hail": [
-				"8M",
-				"7M",
-				"6M",
-				"6S5",
-				"5M",
-				"4M",
-				"3M"
-			],
 			"hammerarm": [
 				"8L42",
 				"7L49",
@@ -111395,6 +111099,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"5S3",
 				"4L65",
 				"3L49"
+			],
+			"snowscape": [
+				"9M"
 			],
 			"terablast": [
 				"9M"
@@ -114891,12 +114598,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"6L1",
 				"5L1",
 				"4L1"
-			],
-			"hail": [
-				"7M",
-				"6M",
-				"5M",
-				"4M"
 			],
 			"haze": [
 				"9M"
@@ -121127,12 +120828,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"5L1",
 				"4L1"
 			],
-			"hail": [
-				"7M",
-				"6M",
-				"5M",
-				"4M"
-			],
 			"headbutt": [
 				"4T"
 			],
@@ -121434,6 +121129,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"5L39",
 				"4M",
 				"4L39"
+			],
+			"snowscape": [
+				"9M"
 			]
 		}
 	},
@@ -121899,13 +121597,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"gigaimpact": [
 				"9M",
-				"8M",
-				"7M",
-				"6M",
-				"5M",
-				"4M"
-			],
-			"hail": [
 				"8M",
 				"7M",
 				"6M",
@@ -130939,12 +130630,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"5L17",
 				"4L17"
 			],
-			"hail": [
-				"7M",
-				"6M",
-				"5M",
-				"4M"
-			],
 			"helpinghand": [
 				"9M"
 			],
@@ -131186,6 +130871,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"4M",
 				"4L42"
 			],
+			"snowscape": [
+				"9M"
+			],
 			"hurricane": [
 				"9M"
 			],
@@ -131382,13 +131070,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"grassyglide": [
 				"9M",
 				"8T"
-			],
-			"hail": [
-				"8M",
-				"7M",
-				"6M",
-				"5M",
-				"4M"
 			],
 			"headbutt": [
 				"4T"
@@ -131988,13 +131669,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"gigaimpact": [
 				"9M",
-				"8M",
-				"7M",
-				"6M",
-				"5M",
-				"4M"
-			],
-			"hail": [
 				"8M",
 				"7M",
 				"6M",
@@ -137542,19 +137216,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9L1",
 				"8L1"
 			],
-			"hail": [
-				"8M",
-				"8L35",
-				"7M",
-				"7L37",
-				"7S2",
-				"6M",
-				"6L37",
-				"5M",
-				"5L64",
-				"4M",
-				"4L64"
-			],
 			"haze": [
 				"9M"
 			],
@@ -137794,8 +137455,7 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"4T"
 			],
 			"snowscape": [
-				"9M",
-				"9L35"
+				"9M"
 			],
 			"storedpower": [
 				"9M",
@@ -138633,18 +138293,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"6M",
 				"5M",
 				"4M"
-			],
-			"hail": [
-				"8M",
-				"7M",
-				"7L21",
-				"6M",
-				"6L21",
-				"5M",
-				"5L25",
-				"5S0",
-				"4M",
-				"4L25"
 			],
 			"haze": [
 				"9M"
@@ -141755,18 +141403,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"5M",
 				"4M"
 			],
-			"hail": [
-				"8M",
-				"8L40",
-				"7M",
-				"7L54",
-				"6M",
-				"6L40",
-				"5M",
-				"5L40",
-				"4M",
-				"4L40"
-			],
 			"haze": [
 				"9M"
 			],
@@ -142028,8 +141664,7 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"4T"
 			],
 			"snowscape": [
-				"9M",
-				"9L40"
+				"9M"
 			],
 			"spikes": [
 				"9M",
@@ -149152,11 +148787,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"6T",
 				"5T"
 			],
-			"hail": [
-				"7M",
-				"6M",
-				"5M"
-			],
 			"helpinghand": [
 				"7T",
 				"6T",
@@ -149365,6 +148995,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"workup": [
 				"7M",
 				"5M"
+			],
+			"snowscape": [
+				"9M"
 			],
 			"terablast": [
 				"9M"
@@ -152747,12 +152380,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"6L1",
 				"5L1"
 			],
-			"hail": [
-				"8M",
-				"7M",
-				"6M",
-				"5M"
-			],
 			"hiddenpower": [
 				"9M"
 			],
@@ -153003,6 +152630,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"weatherball": [
 				"8M"
+			],
+			"snowscape": [
+				"9M"
 			],
 			"terablast": [
 				"9M"
@@ -160498,6 +160128,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"tidyup": [
 				"9M"
+			],
+			"cometpunch": [
+				"9M"
 			]
 		}
 	},
@@ -161670,11 +161303,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"6M",
 				"5M"
 			],
-			"hail": [
-				"7M",
-				"6M",
-				"5M"
-			],
 			"helpinghand": [
 				"9M"
 			],
@@ -161862,6 +161490,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"7L1",
 				"6L1",
 				"5L1"
+			],
+			"snowscape": [
+				"9M"
 			]
 		}
 	},
@@ -161959,16 +161590,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"7M",
 				"6M",
 				"5M"
-			],
-			"hail": [
-				"8M",
-				"8L20",
-				"7M",
-				"7L42",
-				"6M",
-				"6L42",
-				"5M",
-				"5L42"
 			],
 			"harden": [
 				"8L1",
@@ -162164,6 +161785,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"7L1",
 				"6L1",
 				"5L1"
+			],
+			"snowscape": [
+				"9M"
 			],
 			"terablast": [
 				"9M"
@@ -163800,12 +163424,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"6M",
 				"5M"
 			],
-			"hail": [
-				"8M",
-				"7M",
-				"6M",
-				"5M"
-			],
 			"hex": [
 				"8M",
 				"8L20",
@@ -164065,6 +163683,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"6L1",
 				"5L61"
 			],
+			"snowscape": [
+				"9M"
+			],
 			"terablast": [
 				"9M"
 			],
@@ -164171,11 +163792,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"gigaimpact": [
 				"9M"
-			],
-			"hail": [
-				"7M",
-				"6M",
-				"5M"
 			],
 			"healingwish": [
 				"9L29",
@@ -167690,16 +167306,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"6L1",
 				"5L1"
 			],
-			"hail": [
-				"8M",
-				"8L30",
-				"7M",
-				"7L53",
-				"6M",
-				"6L53",
-				"5M",
-				"5L53"
-			],
 			"heavyslam": [
 				"9M",
 				"8M"
@@ -167914,8 +167520,7 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"5T"
 			],
 			"snowscape": [
-				"9M",
-				"9L30"
+				"9M"
 			],
 			"stoneedge": [
 				"9M",
@@ -168143,12 +167748,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"gigaimpact": [
 				"9M"
-			],
-			"hail": [
-				"8M",
-				"7M",
-				"6M",
-				"5M"
 			],
 			"haze": [
 				"9M",
@@ -183169,11 +182768,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"7T",
 				"6T"
 			],
-			"hail": [
-				"8M",
-				"7M",
-				"6M"
-			],
 			"haze": [
 				"9M"
 			],
@@ -184650,14 +184244,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"7L1",
 				"6L1"
 			],
-			"hail": [
-				"8M",
-				"8L54",
-				"7M",
-				"7L38",
-				"6M",
-				"6L38"
-			],
 			"hiddenpower": [
 				"9M"
 			],
@@ -184896,6 +184482,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"8M",
 				"7T",
 				"6T"
+			],
+			"snowscape": [
+				"9M"
 			],
 			"terablast": [
 				"9M"
@@ -186378,11 +185967,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"7M",
 				"6M"
 			],
-			"hail": [
-				"8M",
-				"7M",
-				"6M"
-			],
 			"harden": [
 				"9L1",
 				"8L1",
@@ -186643,6 +186227,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"7T",
 				"6T"
 			],
+			"snowscape": [
+				"9M"
+			],
 			"diamondstorm": [
 				"9M"
 			],
@@ -186830,11 +186417,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"gigaimpact": [
 				"9M",
-				"8M",
-				"7M",
-				"6M"
-			],
-			"hail": [
 				"8M",
 				"7M",
 				"6M"
@@ -187078,6 +186660,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"weatherball": [
 				"9M",
 				"8M"
+			],
+			"snowscape": [
+				"9M"
 			]
 		}
 	},
@@ -190060,10 +189645,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"8L1",
 				"7L1"
 			],
-			"hail": [
-				"8M",
-				"7M"
-			],
 			"helpinghand": [
 				"8M",
 				"7T"
@@ -190245,6 +189826,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"workup": [
 				"8M",
 				"7M"
+			],
+			"snowscape": [
+				"9M"
 			],
 			"terablast": [
 				"9M"
@@ -191394,9 +190978,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"gunkshot": [
 				"9M"
-			],
-			"hail": [
-				"7M"
 			],
 			"helpinghand": [
 				"9M"
@@ -193308,10 +192889,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"8L1",
 				"7L1"
 			],
-			"hail": [
-				"8M",
-				"7M"
-			],
 			"helpinghand": [
 				"8M",
 				"8L4",
@@ -193436,6 +193013,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"8M",
 				"7E"
 			],
+			"snowscape": [
+				"9M"
+			],
 			"terablast": [
 				"9M"
 			],
@@ -193522,10 +193102,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M",
 				"8M",
 				"7T"
-			],
-			"hail": [
-				"8M",
-				"7M"
 			],
 			"haze": [
 				"9M"
@@ -193747,6 +193323,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9L1",
 				"8L1",
 				"7L17"
+			],
+			"snowscape": [
+				"9M"
 			]
 		}
 	},
@@ -196983,10 +196562,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"8M",
 				"7M"
 			],
-			"hail": [
-				"8M",
-				"7M"
-			],
 			"hiddenpower": [
 				"9M"
 			],
@@ -197192,6 +196767,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"xscissor": [
 				"8M",
 				"7M"
+			],
+			"snowscape": [
+				"9M"
 			],
 			"terablast": [
 				"9M"
@@ -197554,10 +197132,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"7T",
 				"7L29"
 			],
-			"hail": [
-				"8M",
-				"7M"
-			],
 			"harden": [
 				"8L1",
 				"7L1"
@@ -197672,6 +197246,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"watersport": [
 				"7L1"
 			],
+			"snowscape": [
+				"9M"
+			],
 			"hiddenpower": [
 				"9M"
 			],
@@ -197780,10 +197357,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"grasspledge": [
 				"8T",
 				"7T"
-			],
-			"hail": [
-				"8M",
-				"7M"
 			],
 			"healblock": [
 				"7L1"
@@ -198028,6 +197601,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"zenheadbutt": [
 				"8M",
 				"7T"
+			],
+			"snowscape": [
+				"9M"
 			],
 			"terablast": [
 				"9M"
@@ -205620,6 +205196,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"return": [
 				"9M"
+			],
+			"razorwind": [
+				"9M"
 			]
 		}
 	},
@@ -210559,9 +210138,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"grudge": [
 				"8L50"
 			],
-			"hail": [
-				"8M"
-			],
 			"harden": [
 				"8L1"
 			],
@@ -210707,6 +210283,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"willowisp": [
 				"8M"
+			],
+			"snowscape": [
+				"9M"
 			],
 			"hiddenpower": [
 				"9M"
@@ -211790,10 +211369,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M",
 				"8M"
 			],
-			"hail": [
-				"8M",
-				"8L28"
-			],
 			"helpinghand": [
 				"9M",
 				"9L1",
@@ -211892,8 +211467,7 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"8M"
 			],
 			"snowscape": [
-				"9M",
-				"9L28"
+				"9M"
 			],
 			"strugglebug": [
 				"9M",
@@ -212232,10 +211806,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"gigaimpact": [
 				"9M"
 			],
-			"hail": [
-				"8M",
-				"8L42"
-			],
 			"headbutt": [
 				"9L24",
 				"8L24"
@@ -212326,8 +211896,7 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"8M"
 			],
 			"snowscape": [
-				"9M",
-				"9L42"
+				"9M"
 			],
 			"soak": [
 				"9E",
@@ -213625,9 +213194,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"gigaimpact": [
 				"8M"
 			],
-			"hail": [
-				"8M"
-			],
 			"hydropump": [
 				"8M"
 			],
@@ -213746,6 +213312,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"wildcharge": [
 				"8M"
+			],
+			"snowscape": [
+				"9M"
 			],
 			"hiddenpower": [
 				"9M"
@@ -213983,9 +213552,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"gigaimpact": [
 				"8M"
 			],
-			"hail": [
-				"8M"
-			],
 			"hydropump": [
 				"8M"
 			],
@@ -214080,6 +213646,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"zenheadbutt": [
 				"8M"
+			],
+			"snowscape": [
+				"9M"
 			],
 			"hiddenpower": [
 				"9M"
@@ -215604,9 +215173,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"gigaimpact": [
 				"9M",
-				"8M"
-			],
-			"hail": [
 				"8M"
 			],
 			"heavyslam": [
@@ -228824,6 +228390,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"return": [
 				"9M"
+			],
+			"leechseed": [
+				"9M"
 			]
 		}
 	},
@@ -233488,14 +233057,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"5M",
 				"4M"
 			],
-			"hail": [
-				"8M",
-				"7M",
-				"6M",
-				"5M",
-				"4M",
-				"3M"
-			],
 			"haze": [
 				"8E",
 				"7E",
@@ -233955,6 +233516,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"6T",
 				"5T",
 				"4T"
+			],
+			"snowscape": [
+				"9M"
 			]
 		}
 	},
@@ -234142,14 +233706,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"6M",
 				"5M",
 				"4M"
-			],
-			"hail": [
-				"8M",
-				"7M",
-				"6M",
-				"5M",
-				"4M",
-				"3M"
 			],
 			"headbutt": [
 				"8V",
@@ -234533,6 +234089,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"6T",
 				"5T",
 				"4T"
+			],
+			"snowscape": [
+				"9M"
 			]
 		}
 	},

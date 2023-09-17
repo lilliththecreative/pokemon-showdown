@@ -3372,9 +3372,9 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		],
 		"baseStats": {
 			"hp": 70,
-			"atk": 70,
+			"atk": 75,
 			"def": 105,
-			"spa": 70,
+			"spa": 80,
 			"spd": 120,
 			"spe": 75
 		},
@@ -3687,7 +3687,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		"baseStats": {
 			"hp": 65,
 			"atk": 114,
-			"def": 105,
+			"def": 110,
 			"spa": 114,
 			"spd": 80,
 			"spe": 62
@@ -3812,7 +3812,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"abilities": {
 			"0": "Clear Body",
-			"1": "Heat Sink",
+			"1": "Filter",
 			"H": "Ice Body"
 		},
 		"inherit": true
@@ -3831,7 +3831,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"abilities": {
 			"0": "Clear Body",
-			"1": "Mirror Armor",
+			"1": "Prism Armor",
 			"H": "Homophobia"
 		},
 		"inherit": true
@@ -4545,7 +4545,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"hp": 88,
 			"atk": 106,
 			"def": 65,
-			"spa": 121,
+			"spa": 126,
 			"spd": 65,
 			"spe": 90
 		},
@@ -5542,11 +5542,11 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Fighting"
 		],
 		"baseStats": {
-			"hp": 120,
-			"atk": 100,
-			"def": 90,
+			"hp": 125,
+			"atk": 110,
+			"def": 95,
 			"spa": 30,
-			"spd": 90,
+			"spd": 95,
 			"spe": 45
 		},
 		"abilities": {
@@ -5905,7 +5905,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Normal"
 		],
 		"baseStats": {
-			"hp": 80,
+			"hp": 85,
 			"atk": 95,
 			"def": 65,
 			"spa": 65,
@@ -10100,12 +10100,12 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Dark"
 		],
 		"baseStats": {
-			"hp": 76,
-			"atk": 117,
+			"hp": 81,
+			"atk": 122,
 			"def": 78,
 			"spa": 52,
 			"spd": 55,
-			"spe": 92
+			"spe": 97
 		},
 		"abilities": {
 			"0": "Swarm",
@@ -10157,9 +10157,9 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Fairy"
 		],
 		"baseStats": {
-			"hp": 67,
-			"atk": 80,
-			"def": 120,
+			"hp": 72,
+			"atk": 85,
+			"def": 125,
 			"spa": 50,
 			"spd": 85,
 			"spe": 100
@@ -11315,7 +11315,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	},
 	"okidogi": {
 		"types": [
-			"Grass"
+			"Poison",
+			"Fighting"
 		],
 		"baseStats": {
 			"hp": 88,
@@ -11333,7 +11334,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	},
 	"munkidori": {
 		"types": [
-			"Grass"
+			"Poison",
+			"Psychic"
 		],
 		"baseStats": {
 			"hp": 88,
@@ -11351,7 +11353,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	},
 	"fezandipiti": {
 		"types": [
-			"Grass"
+			"Poison",
+			"Fairy"
 		],
 		"baseStats": {
 			"hp": 88,

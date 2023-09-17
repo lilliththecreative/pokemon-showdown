@@ -205,29 +205,15 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	stickyhold: {
 		inherit: true,
-		shortDesc: "Contact moves the attacker's items sticky and unusable",
-		// onModifyMove(move) {
-		// 	move.secondaries?.push({
-		// 		chance: 100,
-		// 		onHit(target, source, move) {
-		// 			if (!target.item || target.itemState.knockedOff) return;
-		// 			if (target.ability === 'multitype') return;
-		// 			if (move.flags['contact']) {
-		// 				const item = target.getItem();
-		// 				if (this.runEvent('TakeItem', target, null, move, item)) {
-		// 					target.itemState.knockedOff = true;
-		// 					this.add('-enditem', target, item.name, '[from] ability: Sticky Hold');
-		// 				}
-		// 			}
-		// 		}
-		// 	})
-		// },
+		shortDesc: "Contact moves make the attacker's items sticky and unusable.",
 		onDamagingHit(damage, target, source, move) {
 			if (this.checkMoveMakesContact(move, target, source)) {
 				const item = source.getItem();
 				if (this.runEvent('TakeItem', source, null, move, item)) {
-					source.itemState.knockedOff = true;
-					this.add('-enditem', source, item.name, '[from] ability: Sticky Hold');
+					if (!source.itemState.knockedOff) {
+						source.itemState.knockedOff = true;
+						this.add('-enditem', source, item.name, '[from] ability: Sticky Hold');
+					}
 				}
 			}
 		},
@@ -1049,7 +1035,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		onStart(source) {
 			for (const pokemon of this.getAllActive()) {
 				pokemon.clearBoosts();
-				this.add('-clearboost', pokemon, '[from] ability: Curious Medicine', '[of] ' + pokemon);
+				this.add('-clearboost', pokemon, '[from] ability: Curious Medicine', '[of] ' + source);
 			}
 		},
 	},
@@ -1340,9 +1326,8 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	wideeyed: {
 		inherit: true,
 		isNonstandard: null,
-		// TODO: 4x PP
 		onModifyMove(move, pokemon, target) {
-			if (move.category === "Status" && move.target === "normal" && !target?.isAlly(pokemon)) {
+			if (move.category === "Status" && ['normal', 'any'].includes(move.target) && !target?.isAlly(pokemon)) {
 				move.target = "allAdjacentFoes";
 				pokemon.deductPP(move.id, 3);
 			}
@@ -1486,7 +1471,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 		onAnyModifyPriority(relayVar, source, target, move) {
-			if (move.priority >= -2) {
+			if (move.priority >= -2 && move.priority <= 3) {
 				return 0;
 			}
 		},
@@ -1529,7 +1514,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 		onModifyMove(move, source, target) {
-			if (move.type === "Flying" && move.target === "normal" && !target?.isAlly(source)) {
+			if (move.type === "Flying" && ['normal', 'any'].includes(move.target) && !target?.isAlly(source)) {
 				move.target = 'allAdjacentFoes';
 			}
 		},

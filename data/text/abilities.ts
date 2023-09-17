@@ -2301,7 +2301,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	singularity: {
 		name: "Singularity",
-		desc: "All Moves >= -2 Priority used while this pokemon is active have 0 priority.",
+		desc: "All Moves +3 >= Priority >= -2 used while this pokemon is active have 0 priority.",
 		shortDesc: "All Moves >= -2 Priority used while this pokemon is active have 0 priority.",
 	},
 	catscradle: {

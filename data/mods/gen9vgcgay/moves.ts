@@ -720,6 +720,17 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		basePower: 69
 	},
+	syrupbomb: {
+		inherit: true,
+		basePower: 80,
+		accuracy: 100
+	},
+	searingshot: {
+		inherit: true,
+		isNonstandard: null,
+		target: "normal",
+		shortDesc: "30% chance to burn the target.",
+	},
 	sparklingaria: {
 		inherit: true,
 		isNonstandard: null,
@@ -1894,11 +1905,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	luckychant: {
 		inherit: true,
 		isNonstandard: null,
-	},
-	searingshot: {
-		inherit: true,
-		isNonstandard: null,
-		target: "normal",
 	},
 	shellsidearm: {
 		inherit: true,
