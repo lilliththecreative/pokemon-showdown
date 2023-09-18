@@ -1914,4 +1914,22 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	magneticflux: {
+		shortDesc: "Burns all other Steel types on field",
+		onHitField(target, source) {
+			const targets: Pokemon[] = [];
+			for (const pokemon of this.getAllActive()) {
+				if (pokemon.hasType('Steel') && pokemon !== source) {
+					// This move affects every Steel-type Pokemon in play.
+					targets.push(pokemon);
+				}
+			}
+			if (!targets.length) return false; // Fails when there are no Steel types
+			for (const pokemon of targets) {
+				source.trySetStatus('brn', pokemon);
+			}
+		},
+		inherit: true,
+		isNonstandard: null,
+	},
 };
