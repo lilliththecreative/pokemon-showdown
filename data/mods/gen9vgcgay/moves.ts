@@ -1652,7 +1652,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	aeroblast: {
 		inherit: true,
 		isNonstandard: null,
-		basePower: 95
+		basePower: 90
 	},
 	aurawheel: {
 		inherit: true,

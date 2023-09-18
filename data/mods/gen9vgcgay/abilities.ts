@@ -371,7 +371,33 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 		},
 	},
+	heavymetal: {
+		inherit: true,
+		shortDesc: "This Pokemon's weight is doubled, 1.1x Def and SpDef.",
+		onModifyDefPriority: 6,
+		onModifyDef(def, pokemon) {
+			return this.chainModify([11, 10]);
+		},
+		onModifySpDPriority: 6,
+		onModifySpD(spd, pokemon) {
+			return this.chainModify([11, 10]);
+		}
+	},
 	// Signature Ability Buffs
+	waterbubble: {
+		inherit: true,
+		shortDesc: "This Pokemon's Water power is 1.5x; it can't be burned; Fire power against it is halved.",
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Water') {
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Water') {
+				return this.chainModify(1.5);
+			}
+		},
+	},
 	supersweetsyrup: {
 		shortDesc: "On switch-in, this Pokemon lowers the evasiveness of opponents 1 stage.",
 		onStart(pokemon) {

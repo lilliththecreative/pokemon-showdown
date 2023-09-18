@@ -208,7 +208,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"spe": 110
 		},
 		"abilities": {
-			"0": "Surge Surfer"
+			"0": "Surge Surfer",
+			"H": "Levitate"
 		},
 		"inherit": true
 	},
@@ -1321,7 +1322,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		],
 		"baseStats": {
 			"hp": 75,
-			"atk": 60,
+			"atk": 65,
 			"def": 125,
 			"spa": 120,
 			"spd": 70,
@@ -1340,7 +1341,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Water"
 		],
 		"baseStats": {
-			"hp": 65,
+			"hp": 70,
 			"atk": 120,
 			"def": 105,
 			"spa": 65,
@@ -1595,11 +1596,11 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Normal"
 		],
 		"baseStats": {
-			"hp": 95,
-			"atk": 86,
+			"hp": 90,
+			"atk": 101,
 			"def": 69,
 			"spa": 55,
-			"spd": 65,
+			"spd": 60,
 			"spe": 95
 		},
 		"abilities": {
@@ -2038,29 +2039,6 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"inherit": true
 	},
-	"qwilfish": {
-		"types": [
-			"Water",
-			"Poison"
-		],
-		"baseStats": {
-			"hp": 85,
-			"atk": 95,
-			"def": 90,
-			"spa": 55,
-			"spd": 75,
-			"spe": 85
-		},
-		"abilities": {
-			"0": "Poison Point",
-			"1": "Swift Swim",
-			"H": "Intimidate"
-		},
-		"inherit": true,
-		"evos": [
-			"Overqwil"
-		]
-	},
 	"qwilfishhisui": {
 		"types": [
 			"Dark",
@@ -2097,7 +2075,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		"abilities": {
 			"0": "Swarm",
 			"1": "Technician",
-			"H": "Light Metal"
+			"H": "Heavy Metal"
 		},
 		"inherit": true
 	},
@@ -3812,7 +3790,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"abilities": {
 			"0": "Clear Body",
-			"1": "Filter",
+			"1": "Prism Armor",
 			"H": "Ice Body"
 		},
 		"inherit": true
@@ -3831,7 +3809,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"abilities": {
 			"0": "Clear Body",
-			"1": "Prism Armor",
+			"1": "Heavy Metal",
 			"H": "Homophobia"
 		},
 		"inherit": true
@@ -3850,7 +3828,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"spe": 110
 		},
 		"abilities": {
-			"0": "Levitate"
+			"0": "Levitate",
+			"H": "Nueroforce"
 		},
 		"inherit": true
 	},
@@ -3868,7 +3847,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"spe": 110
 		},
 		"abilities": {
-			"0": "Levitate"
+			"0": "Levitate",
+			"H": "Prism Armor"
 		},
 		"inherit": true
 	},
@@ -4065,7 +4045,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		"abilities": {
 			"0": "Sturdy",
 			"1": "Solid Rock",
-			"H": "Soundproof"
+			"H": "Heavy Metal"
 		},
 		"inherit": true
 	},
@@ -6927,7 +6907,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		"baseStats": {
 			"hp": 80,
 			"atk": 80,
-			"def": 60,
+			"def": 65,
 			"spa": 65,
 			"spd": 95,
 			"spe": 107
@@ -7103,7 +7083,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"spe": 59
 		},
 		"abilities": {
-			"0": "Mega Launcher"
+			"0": "Mega Launcher",
+			"H": "Tough Claws"
 		},
 		"inherit": true
 	},
@@ -7588,7 +7569,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"spe": 43
 		},
 		"abilities": {
-			"0": "Levitate"
+			"0": "Levitate",
+			"H": "Wind Power"
 		},
 		"inherit": true
 	},
@@ -7839,9 +7821,9 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		],
 		"baseStats": {
 			"hp": 78,
-			"atk": 70,
+			"atk": 110,
 			"def": 92,
-			"spa": 50,
+			"spa": 90,
 			"spd": 132,
 			"spe": 42
 		},
@@ -8530,7 +8512,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"spe": 40
 		},
 		"abilities": {
-			"0": "Steelworker"
+			"0": "Steelworker",
+			"H": "Water Bubble"
 		},
 		"inherit": true
 	},
@@ -9994,7 +9977,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"spe": 46
 		},
 		"abilities": {
-			"0": "Overcoat"
+			"0": "Overcoat",
+			"H": "Rampage"
 		},
 		"inherit": true
 	},

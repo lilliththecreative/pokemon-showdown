@@ -5172,7 +5172,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "LC",
 	},
 	drakloak: {
-		tier: "SU",
+		tier: "ZU",
 	},
 	dragapult: {
 		tier: "OU",
