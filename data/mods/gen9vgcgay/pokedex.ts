@@ -221,7 +221,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		"baseStats": {
 			"hp": 85,
 			"atk": 115,
-			"def": 120,
+			"def": 125,
 			"spa": 25,
 			"spd": 70,
 			"spe": 70
@@ -7934,10 +7934,10 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Fairy"
 		],
 		"baseStats": {
-			"hp": 51,
+			"hp": 56,
 			"atk": 52,
 			"def": 90,
-			"spa": 82,
+			"spa": 87,
 			"spd": 110,
 			"spe": 100
 		},
@@ -9193,7 +9193,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		"baseStats": {
 			"hp": 100,
 			"atk": 115,
-			"def": 65,
+			"def": 70,
 			"spa": 90,
 			"spd": 90,
 			"spe": 65
@@ -9289,12 +9289,12 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Normal"
 		],
 		"baseStats": {
-			"hp": 93,
-			"atk": 110,
+			"hp": 98,
+			"atk": 105,
 			"def": 101,
 			"spa": 60,
 			"spd": 81,
-			"spe": 95
+			"spe": 100
 		},
 		"abilities": {
 			"0": "Reckless",
@@ -9402,8 +9402,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Fighting"
 		],
 		"baseStats": {
-			"hp": 65,
-			"atk": 100,
+			"hp": 70,
+			"atk": 105,
 			"def": 100,
 			"spa": 70,
 			"spd": 60,
@@ -9479,7 +9479,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"hp": 85,
 			"atk": 85,
 			"def": 115,
-			"spa": 85,
+			"spa": 80,
 			"spd": 95,
 			"spe": 50
 		},
@@ -9496,7 +9496,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"hp": 85,
 			"atk": 85,
 			"def": 70,
-			"spa": 85,
+			"spa": 80,
 			"spd": 50,
 			"spe": 140
 		},
@@ -11266,9 +11266,9 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		"baseStats": {
 			"hp": 85,
 			"atk": 80,
-			"def": 110,
+			"def": 115,
 			"spa": 95,
-			"spd": 80,
+			"spd": 85,
 			"spe": 40
 		},
 		"abilities": {
@@ -11284,7 +11284,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Ghost"
 		],
 		"baseStats": {
-			"hp": 81,
+			"hp": 76,
 			"atk": 60,
 			"def": 106,
 			"spa": 126,

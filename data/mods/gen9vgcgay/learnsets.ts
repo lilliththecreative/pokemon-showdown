@@ -61247,6 +61247,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"terablast": [
 				"9M"
+			],
+			"trickroom": [
+				"9M"
 			]
 		}
 	},
@@ -101821,17 +101824,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"4M",
 				"3M"
 			],
-			"skillswap": [
-				"7T",
-				"7E",
-				"6T",
-				"6E",
-				"5T",
-				"5E",
-				"5D",
-				"4M",
-				"3M"
-			],
 			"slash": [
 				"7L25",
 				"6L25",
@@ -101988,12 +101980,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"4T",
 				"4E",
 				"3E"
-			],
-			"trickroom": [
-				"7M",
-				"6M",
-				"5M",
-				"4M"
 			],
 			"waterpulse": [
 				"7T",

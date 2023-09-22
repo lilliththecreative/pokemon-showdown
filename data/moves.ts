@@ -21889,6 +21889,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 				this.heal(pokemon.baseMaxhp / 8);
 			},
 		},
+		onPrepareHit(target, source, move) {
+			this.attrLastMove('[still]');
+			this.add('-anim', source, "Rock Polish", target);
+		},
 		secondary: null,
 		target: "self",
 		type: "Rock",
@@ -21914,6 +21918,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 			onResidual(pokemon) {
 				this.heal(pokemon.baseMaxhp / 8);
 			},
+		},
+		onPrepareHit(target, source, move) {
+			this.attrLastMove('[still]');
+			this.add('-anim', source, "Acid Armor", target);
 		},
 		secondary: null,
 		target: "self",
@@ -21941,6 +21949,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 				this.heal(pokemon.baseMaxhp / 8);
 			},
 		},
+		onPrepareHit(target, source, move) {
+			this.attrLastMove('[still]');
+			this.add('-anim', source, "Aurora Veil", target);
+		},
 		secondary: null,
 		target: "self",
 		type: "Ice",
@@ -21958,6 +21970,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
 		status: 'fst',
+		onPrepareHit(target, source, move) {
+			this.attrLastMove('[still]');
+			this.add('-anim', source, "Sheer Cold", target);
+		},
 		secondary: null,
 		target: "normal",
 		type: "Ice",

@@ -248,7 +248,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "LC",
 	},
 	machoke: {
-		tier: "NFE",
+		tier: "ZUBL",
 	},
 	machamp: {
 		tier: "UU",
@@ -592,7 +592,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		doublesTier: "DUU",
 	},
 	omanyte: {
-		tier: "LC",
+		tier: "ZUBL",
 	},
 	omastar: {
 		tier: "RU",
@@ -632,7 +632,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "LC",
 	},
 	dragonair: {
-		tier: "NFE",
+		tier: "PU",
 	},
 	dragonite: {
 		tier: "OU",
@@ -2121,7 +2121,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		doublesTier: "DUU",
 	},
 	trubbish: {
-		tier: "LC",
+		tier: "ZUBL",
 	},
 	garbodor: {
 		tier: "NU",

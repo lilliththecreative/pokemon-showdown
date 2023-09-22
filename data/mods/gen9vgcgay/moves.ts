@@ -277,8 +277,9 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	visegrip: {
 		inherit: true,
-		basePower: 80,
-		shortDesc: "Does 2x damage if it crits.",
+		basePower: 70,
+		shortDesc: "High Crit. Does 2x damage if it crits.",
+		critRatio: 2,
 		onBasePower(basePower, source, target, move) {
 			if (target.getMoveHitData(move).crit) {
 				return this.chainModify(2);
@@ -1352,7 +1353,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 		isMax: false,
 		flags: {protect: 1, mirror: 1},
-		basePower: 80,
+		basePower: 70,
 		shortDesc: "Restores berry on attack.",
 		self: {
 			onHit(source) {

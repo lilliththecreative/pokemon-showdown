@@ -384,6 +384,14 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		}
 	},
 	// Signature Ability Buffs
+	quarkdrive: {
+		inherit: true,
+		isPermanent: false,
+	},
+	protosynthesis: {
+		inherit: true,
+		isPermanent: false,
+	},
 	waterbubble: {
 		inherit: true,
 		shortDesc: "This Pokemon's Water power is 1.5x; it can't be burned; Fire power against it is halved.",
@@ -1365,7 +1373,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		onAfterMoveSecondary(target, source, move) {
 			if (move.flags['contact']) {
 				this.add('-ability', target, 'Constrictor');
-				target.addVolatile('trapped', target, move, 'trapper');
+				target.addVolatile('partiallytrapped', target, move, 'trapper');
 			}
 		},
 	},

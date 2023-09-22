@@ -2219,8 +2219,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	// GAY
 	triplethreat: {
 		name: "Triple Threat",
-		desc: "Moves hit 3 times at 40% power.",
-		shortDesc: "Moves hit 3 times at 40% power.",
+		desc: "Moves hit 3 times at 40% power and halved effects.",
+		shortDesc: "Moves hit 3 times at 40% power and halved effects.",
 	},
 	mindsurfer: {
 		name: "Mind Surfer",
@@ -2251,6 +2251,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Big Balls",
 		shortDesc: "All non-priority moves used by and on target will crit.",
 		desc: "All non-priority moves used by and on target will crit.",
+		start: "  [POKEMON] has BIG BALLS!",
 	},
 	oddkeystone: {
 		name: "Odd Keystone",
@@ -2269,8 +2270,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	constrictor: {
 		name: "Constrictor",
-		shortDesc: "All contact moves this pokemon use will trap the opponent.",
-		desc: "All contact moves this pokemon use will trap the opponent.",
+		shortDesc: "All contact moves trap the opponent dealing 1/16 each turn.",
+		desc: "All contact moves trap the opponent dealing 1/16 each turn.",
 	},
 	heatsink: {
 		name: "Heat Sink",
