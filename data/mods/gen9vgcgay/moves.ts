@@ -1716,7 +1716,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		onModifyMove(move, pokemon, target) {
 			const physTypes = ['Normal', 'Bug', 'Fighting', 'Flying', 'Ghost', 'Poison', 'Rock', 'Steel', 'Ground'];
 			if (physTypes.includes(move.type)) {
-				move.category = "Physical"
+				move.category = "Physical";
 			}
 		},
 	},

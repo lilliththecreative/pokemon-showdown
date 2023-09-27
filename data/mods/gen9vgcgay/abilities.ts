@@ -1,5 +1,3 @@
-import { PassThrough } from "stream";
-
 export const Abilities: {[k: string]: ModdedAbilityData} = {
 	slowstart: {
 		inherit: true,
