@@ -432,13 +432,16 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	eggbomb: {
 		inherit: true,
+		isNonstandard: null,
 		accuracy: 100,
+		basePower: 90,
 		type: "Fire",
-		isNonstandard: null
 	},
 	aurorabeam: {
 		inherit: true,
-		basePower: 80,
+		shortDesc: "20% to lower target's Attack by 1",
+		basePower: 75,
+		secondary: {chance: 20, boosts: {atk: -1}},
 	},
 	powder: {
 		inherit: true,
@@ -720,6 +723,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	wickedblow: {
 		inherit: true,
 		basePower: 69
+	},
+	chloroblast: {
+		inherit: true,
+		accuracy: 100
 	},
 	syrupbomb: {
 		inherit: true,
@@ -1230,7 +1237,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	trickortreat: {
 		inherit: true,
 		isNonstandard: null,
-		shortDesc: "Charges, +Ghost to target's type, omniboost turn 2.",
+		shortDesc: "Charges, +Ghost to target type, omniboost turn 2.",
 		pp: 1,
 		flags: {charge: 1, protect: 1, reflectable: 1, mirror: 1, allyanim: 1},
 		onTryMove(attacker, defender, move) {
@@ -1250,7 +1257,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	forestscurse: {
 		inherit: true,
 		isNonstandard: null,
-		shortDesc: "Charges, +Grass to target's type, omniboost turn 2.",
+		shortDesc: "Charges, +Grass to target type, omniboost turn 2.",
 		pp: 1,
 		flags: {charge: 1, protect: 1, reflectable: 1, mirror: 1, allyanim: 1},
 		onTryMove(attacker, defender, move) {
@@ -1587,6 +1594,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	trumpcard: {
 		inherit: true,
 		isNonstandard: null,
+		category: "Physical",
 		pp: 2
 	},
 	// Making Standard
@@ -1682,6 +1690,21 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	hiddenpower: {
 		inherit: true,
 		isNonstandard: null,
+		onModifyMove(move, pokemon, target) {
+			const physTypes = ['Normal', 'Bug', 'Fighting', 'Flying', 'Ghost', 'Poison', 'Rock', 'Steel', 'Ground'];
+			if (physTypes.includes(move.type)) {
+				move.category = "Physical"
+			}
+		},
+	},
+	"hiddenpowernormal": {
+		"inherit": true,
+		"category": "Physical",
+		"isNonstandard": null,
+	},
+	"hiddenpowerfairy": {
+		"inherit": true,
+		"isNonstandard": null,
 	},
 	"hiddenpowerbug": {
 		"inherit": true,

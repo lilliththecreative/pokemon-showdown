@@ -2270,8 +2270,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	constrictor: {
 		name: "Constrictor",
-		shortDesc: "All contact moves trap the opponent dealing 1/16 each turn.",
-		desc: "All contact moves trap the opponent dealing 1/16 each turn.",
+		shortDesc: "All contact moves trap the opponent dealing 1/8 each turn.",
+		desc: "All contact moves trap the opponent dealing 1/8 each turn.",
 	},
 	heatsink: {
 		name: "Heat Sink",
@@ -2287,11 +2287,13 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Transphobia",
 		shortDesc: "Does 1.3x damage to gender unknown Pokemon.",
 		desc: "Does 1.3x damage to gender unknown Pokemon.",
+		start: "  [POKEMON] is spewing transphobic hate!",
 	},
 	homophobia: {
 		name: "Homophobia",
 		shortDesc: "Does 1.3x damage if both enemy pokemon are the same gender.",
 		desc: "Does 1.3x damage if both enemy pokemon are the same gender.",
+		start: "  [POKEMON] is homophobic!",
 	},
 	ilvaticano: {
 		name: "Il Vaticano",
@@ -2311,7 +2313,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	singularity: {
 		name: "Singularity",
 		desc: "All Moves +3 >= Priority >= -2 used while this pokemon is active have 0 priority.",
-		shortDesc: "All Moves >= -2 Priority used while this pokemon is active have 0 priority.",
+		shortDesc: "All Moves +3 >= Priority >= -2 used while this pokemon is active have 0 priority.",
 	},
 	catscradle: {
 		name: "Cat's Cradle",

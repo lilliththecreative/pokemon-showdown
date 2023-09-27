@@ -145536,6 +145536,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"dracometeor": [
 				"9M"
+			],
+			"scaleshot": [
+				"9M"
 			]
 		}
 	},
@@ -148943,6 +148946,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"focusblast": [
+				"9M"
+			],
+			"blazekick": [
 				"9M"
 			]
 		}
@@ -209036,6 +209042,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"return": [
 				"9M"
+			],
+			"suckerpunch": [
+				"9M"
 			]
 		}
 	},
@@ -220665,6 +220674,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"punishment": [
 				"9M"
+			],
+			"workup": [
+				"9M"
 			]
 		}
 	},
@@ -228353,6 +228365,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"return": [
+				"9M"
+			],
+			"furyattack": [
 				"9M"
 			]
 		}

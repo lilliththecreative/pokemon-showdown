@@ -70,7 +70,7 @@ export const Formats: FormatList = [
 		searchShow: true,
 		mod: 'gen9vgcgay',
 		gameType: 'doubles',
-		ruleset: ['Flat Rules', '!! Adjust Level = 50'],
+		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Tera Type Preview'],
 		unbanlist: ['Greninja-Bond'],
 	},
 	{

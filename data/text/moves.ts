@@ -7465,6 +7465,13 @@ export const MovesText: {[k: string]: MoveText} = {
 			shortDesc: "Nearly always goes first. Always crits.",
 		},
 	},
+	// Start Gay Moves
+	hiddenpowernormal: {
+		name: "Hidden Power Normal",
+	},
+	hiddenpowerfairy: {
+		name: "Hidden Power Fairy",
+	},
 	purifyingwater: {
 		name: "Purifying Water",
 		shortDesc: "50% chance to Frostbite.",
@@ -7477,8 +7484,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	firewall: {
 		name: "Firewall",
-		shortDesc: "Protects from damaging attacks. Contact: Burn",
-		desc: "Protects from damaging attacks. Contact: Burn",
+		shortDesc: "Protects from damaging attacks. Contact: Burn.",
+		desc: "Protects from damaging attacks. Contact: Burn.",
 	},
 	stalacbite: {
 		name: "Stalacbite",

@@ -1,3 +1,5 @@
+import { PassThrough } from "stream";
+
 export const Abilities: {[k: string]: ModdedAbilityData} = {
 	slowstart: {
 		inherit: true,
@@ -280,6 +282,10 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	illuminate: {
 		inherit: true,
 		shortDesc: "On switch-in, this Pokemon lowers the Evasion of opponents by 1 stage.",
+		onTryBoost(boost, target, source, effect) {
+		},
+		onModifyMove(move) {
+		},
 		onStart(pokemon) {
 			let activated = false;
 			for (const target of pokemon.adjacentFoes()) {
@@ -384,6 +390,20 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		}
 	},
 	// Signature Ability Buffs
+	toxicboost: {
+		inherit: true,
+		shortDesc: "While Pokemon is poisoned, physical attacks have 1.3x power and 1.5x speed.",
+		onBasePower(basePower, attacker, defender, move) {
+			if ((attacker.status === 'psn' || attacker.status === 'tox') && move.category === 'Physical') {
+				return this.chainModify(1.3);
+			}
+		},
+		onModifySpe(spe, pokemon) {
+			if ((pokemon.status === 'psn' || pokemon.status === 'tox')) {
+				return this.chainModify(1.5);
+			}
+		},
+	},
 	quarkdrive: {
 		inherit: true,
 		isPermanent: false,
@@ -550,7 +570,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 				type = 'Normal';
 				break;
 			case 'Steel':
-				type = 'Electric';
+				type = 'Steel';
 				break;
 			case 'Fire':
 				type = 'Fire';
@@ -574,7 +594,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 				type = 'Fairy';
 				break;
 			case 'Dark':
-				type = 'Fighting';
+				type = 'Dark';
 				break;
 			case 'Fairy':
 				type = 'Poison';
@@ -583,7 +603,10 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			if (move.pranksterBoosted) {
 				type = 'Dark';
 			}
-			target.setType(type);
+			if (move.flags['powder']) {
+				type = 'Grass';
+			}
+			if (!target.setType(type)) return;
 			this.effectState.colorChange = true;
 			this.add('-start', target, 'typechange', type, '[from] ability: Color Change');
 		},
@@ -837,7 +860,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	magician: {
 		inherit: true,
-		shortDesc: "Sets Magic Room on entrance, steals item with attack",
+		shortDesc: "Sets Magic Room on entrance, steals item with attack.",
 		onStart(source) {
 			this.field.addPseudoWeather('magicroom');
 		},
@@ -857,9 +880,15 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	emergencyexit: {
 		inherit: true,
-		shortDesc: "When reaches >= 50% HP, Immediately attacks and then switches out",
+		shortDesc: "When reaches >= 50% HP, Immediately attacks and then switches out.",
 		onEmergencyExit(target) {
 			if (!this.canSwitch(target.side) || target.forceSwitchFlag || target.switchFlag) return;
+			for (const side of this.sides) {
+				for (const active of side.active) {
+					active.switchFlag = false;
+				}
+			}
+			target.switchFlag = true;
 			for (const action of this.queue.list as MoveAction[]) {
 				if (
 					!action.move || !action.pokemon?.isActive ||
@@ -871,12 +900,8 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 					this.add('-activate', target, 'ability: Emergency Exit');
 					this.queue.prioritizeAction(action);
 					(action.move.selfSwitch as boolean) = true;
+					target.switchFlag = false;
 					break;
-				}
-			}
-			for (const side of this.sides) {
-				for (const active of side.active) {
-					active.switchFlag = false;
 				}
 			}
 		},
@@ -1067,9 +1092,10 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		shortDesc: "On switch-in, all pokemon have their stat stages reset to 0.",
 		onStart(source) {
+			this.add('-ability', source, 'Curious Medicine');
+			this.add('-clearallboost');
 			for (const pokemon of this.getAllActive()) {
 				pokemon.clearBoosts();
-				this.add('-clearboost', pokemon, '[from] ability: Curious Medicine', '[of] ' + source);
 			}
 		},
 	},
@@ -1328,7 +1354,6 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 				// Fails unless ability is being ignored (these events will not run), no PP lost.
 				this.addMove('move', pokemon, move.name);
 				this.attrLastMove('[still]');
-				this.debug("Disabled by Gorilla Tactics");
 				this.add('-fail', pokemon);
 				return false;
 			}
@@ -1370,10 +1395,10 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	constrictor: {
 		inherit: true,
 		isNonstandard: null,
-		onAfterMoveSecondary(target, source, move) {
+		onAfterMoveSecondarySelf(source, target, move) {
 			if (move.flags['contact']) {
-				this.add('-ability', target, 'Constrictor');
-				target.addVolatile('partiallytrapped', target, move, 'trapper');
+				this.add('-ability', source, 'Constrictor');
+				target.addVolatile('partiallytrapped', source);
 			}
 		},
 	},
@@ -1383,7 +1408,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		onTryHit(target, source, move) {
 			if (target !== source && move.type === 'Fire') {
 				if (!this.boost({spa: 1})) {
-					this.add('-immune', target, '[from] ability: Storm Drain');
+					this.add('-immune', target, '[from] ability: Heat Sink');
 				}
 				return null;
 			}
@@ -1403,16 +1428,6 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	captivatingsong: {
 		inherit: true,
 		isNonstandard: null,
-		// onHit(target, source, move) {
-		// 	this.add('-ability', target, 'Captivating Song');
-		// 	if (source.isActive) {
-		// 		target.addVolatile('trapped', source, move, 'trapper');
-		// 	}
-		// },
-		// onAfterMoveSecondarySelf(source, target, move) {
-		// onAfterMove(source, target, move) {
-		// onTryHit(source, target, move) {
-		// onTryMove(source, target, move) {
 		onAnyTryHit(target, source, move) {
 			// Hack to get around the fact that perish song doesnt hit
 			if (move.id === "perishsong") {
@@ -1429,17 +1444,6 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 				return target.addVolatile('trapped', source, move, 'trapper');
 			}
 		},
-		// onModifyMove(move) {
-		// 	move.secondaries?.push({
-		// 		chance: 100,
-		// 		onHit(target, source, move) {
-		// 			if (move.flags['sound']) {
-		// 				this.add('-ability', source, 'Captivating Song');
-		// 				return target.addVolatile('trapped', source, move, 'trapper');
-		// 			}
-		// 		}
-		// 	})
-		// },
 	},
 	transphobia: {
 		inherit: true,
@@ -1496,7 +1500,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		isNonstandard: null,
 		// Implemented in Aurora Veil
 		onBasePower(relayVar, source, target, move) {
-			if (move.id === 'auroraveil') {
+			if (move.id === 'aurorabeam') {
 				this.chainModify([3, 2]);
 			}
 		},

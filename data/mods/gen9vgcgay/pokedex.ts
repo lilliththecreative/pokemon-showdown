@@ -2520,7 +2520,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"abilities": {
 			"0": "Torrent",
-			"1": "Swift Swim",
+			"1": "Hydration",
 			"H": "Regenerator"
 		},
 		"inherit": true
@@ -3240,7 +3240,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"spe": 100
 		},
 		"abilities": {
-			"0": "Immunity",
+			"0": "Tough Claws",
 			"1": "Quick Feet",
 			"H": "Toxic Boost"
 		},
@@ -7036,8 +7036,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Water"
 		],
 		"baseStats": {
-			"hp": 72,
-			"atk": 105,
+			"hp": 77,
+			"atk": 110,
 			"def": 115,
 			"spa": 54,
 			"spd": 86,
@@ -9152,9 +9152,9 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		],
 		"baseStats": {
 			"hp": 61,
-			"atk": 123,
+			"atk": 128,
 			"def": 60,
-			"spa": 60,
+			"spa": 65,
 			"spd": 50,
 			"spe": 136
 		},

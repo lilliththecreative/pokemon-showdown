@@ -853,7 +853,12 @@ export class BattleActions {
 					targetHits = this.battle.sample([2, 2, 2, 3, 3, 3, 4, 5]);
 				}
 			} else {
-				targetHits = this.battle.random(targetHits[0], targetHits[1] + 1);
+				// Hardcoded for VGC Gay Tail Slap
+				if (pokemon.hasItem('loadeddice')) {
+					targetHits = targetHits[1] - this.battle.random(2);
+				} else {
+					targetHits = this.battle.random(targetHits[0], targetHits[1] + 1);
+				}
 			}
 		}
 		if (targetHits === 10 && pokemon.hasItem('loadeddice')) targetHits -= this.battle.random(7);

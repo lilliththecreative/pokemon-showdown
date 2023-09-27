@@ -21689,6 +21689,38 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	// VGC Gay moves
+	hiddenpowernormal: {
+		num: 237,
+		accuracy: 100,
+		basePower: 60,
+		category: "Special",
+		realMove: "Hidden Power",
+		isNonstandard: "CAP",
+		name: "Hidden Power Normal",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Normal",
+		contestType: "Clever",
+	},
+	hiddenpowerfairy: {
+		num: 237,
+		accuracy: 100,
+		basePower: 60,
+		category: "Special",
+		realMove: "Hidden Power",
+		isNonstandard: "CAP",
+		name: "Hidden Power Fairy",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Fairy",
+		contestType: "Clever",
+	},
 	purifyingwater: {
 		num: 0,
 		basePower: 100,
@@ -21723,7 +21755,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {protect: 1, mirror: 1},
 		secondary: {
 			chance: 50,
-			status: 'prz',
+			status: 'par',
 		},
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');

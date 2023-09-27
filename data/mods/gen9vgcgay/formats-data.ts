@@ -1188,8 +1188,8 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"tier": "OU"
 	},
 	"qwilfish": {
-		"isNonstandard": null,
-		"tier": "OU"
+		"isNonstandard": "Past",
+		"tier": "Illegal"
 	},
 	"qwilfishhisui": {
 		"isNonstandard": null,
