@@ -390,17 +390,32 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		}
 	},
 	// Signature Ability Buffs
-	toxicboost: {
+	orichalcumpulse: {
 		inherit: true,
-		shortDesc: "While Pokemon is poisoned, physical attacks have 1.3x power and 1.5x speed.",
-		onBasePower(basePower, attacker, defender, move) {
-			if ((attacker.status === 'psn' || attacker.status === 'tox') && move.category === 'Physical') {
-				return this.chainModify(1.3);
+		shortDesc: "During Sunny Day, Atk and SpA is 1.3333x.",
+		onStart(pokemon) {
+		},
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, pokemon) {
+			if (['sunnyday', 'desolateland'].includes(pokemon.effectiveWeather())) {
+				this.debug('Orichalcum boost');
+				return this.chainModify([5461, 4096]);
 			}
 		},
-		onModifySpe(spe, pokemon) {
-			if ((pokemon.status === 'psn' || pokemon.status === 'tox')) {
-				return this.chainModify(1.5);
+		onModifySpAPriority: 5,
+		onModifySpA(spa, pokemon) {
+			if (['sunnyday', 'desolateland'].includes(pokemon.effectiveWeather())) {
+				this.debug('Orichalcum boost');
+				return this.chainModify([5461, 4096]);
+			}
+		},
+	},
+	toxicboost: {
+		inherit: true,
+		shortDesc: "While Pokemon is poisoned, its physical attacks have 1.5x power, Immune to psn dmg.",
+		onDamage(damage, target, source, effect) {
+			if (effect.name === 'psn' || effect.name === 'tox') {
+				return false;
 			}
 		},
 	},

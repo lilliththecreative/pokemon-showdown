@@ -1337,7 +1337,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	},
 	"kabutops": {
 		"types": [
-			"Rock",
+			"Bug",
 			"Water"
 		],
 		"baseStats": {
@@ -4465,7 +4465,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		],
 		"baseStats": {
 			"hp": 70,
-			"atk": 110,
+			"atk": 115,
 			"def": 70,
 			"spa": 115,
 			"spd": 70,
@@ -7076,7 +7076,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		],
 		"baseStats": {
 			"hp": 71,
-			"atk": 73,
+			"atk": 78,
 			"def": 88,
 			"spa": 120,
 			"spd": 89,

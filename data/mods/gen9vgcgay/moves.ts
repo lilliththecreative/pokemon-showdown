@@ -603,6 +603,29 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		],
 	},
 	// Near Signaure Moves
+	razorshell: {
+		inherit: true,
+		shortDesc: "100% chance to lower the target's Defense by 1.",
+		secondary: {chance: 100, boosts: {def: -1}},
+	},
+	magneticflux: {
+		shortDesc: "Burns all other Steel types on field",
+		onHitField(target, source) {
+			const targets: Pokemon[] = [];
+			for (const pokemon of this.getAllActive()) {
+				if (pokemon.hasType('Steel') && pokemon !== source) {
+					// This move affects every Steel-type Pokemon in play.
+					targets.push(pokemon);
+				}
+			}
+			if (!targets.length) return false; // Fails when there are no Steel types
+			for (const pokemon of targets) {
+				source.trySetStatus('brn', pokemon);
+			}
+		},
+		inherit: true,
+		isNonstandard: null,
+	},
 	wringout: {
 		inherit: true,
 		isNonstandard: null,
@@ -1935,24 +1958,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 	},
 	autotomize: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	magneticflux: {
-		shortDesc: "Burns all other Steel types on field",
-		onHitField(target, source) {
-			const targets: Pokemon[] = [];
-			for (const pokemon of this.getAllActive()) {
-				if (pokemon.hasType('Steel') && pokemon !== source) {
-					// This move affects every Steel-type Pokemon in play.
-					targets.push(pokemon);
-				}
-			}
-			if (!targets.length) return false; // Fails when there are no Steel types
-			for (const pokemon of targets) {
-				source.trySetStatus('brn', pokemon);
-			}
-		},
 		inherit: true,
 		isNonstandard: null,
 	},
