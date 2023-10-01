@@ -2376,8 +2376,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	lifetaker: {
 		name: "Lifetaker",
-		desc: "This Pokemon's restores 50% HP if it attacks and KOes another Pokemon.",
-		shortDesc: "This Pokemon's restores 50% HP if it attacks and KOes another Pokemon.",
+		desc: "This Pokemon's restores 33% HP if it attacks and KOes another Pokemon.",
+		shortDesc: "This Pokemon's restores 33% HP if it attacks and KOes another Pokemon.",
 	},
 	vantage: {
 		name: "Vantage",

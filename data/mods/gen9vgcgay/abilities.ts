@@ -1776,8 +1776,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		isNonstandard: null,
 		onSourceAfterFaint(length, target, source, effect) {
 			if (effect && effect.effectType === 'Move') {
-				this.add('-activate', source, 'ability: Lifetaker');
-				this.heal(source.baseMaxhp / 2);
+				this.heal(source.baseMaxhp / 3, source);
 			}
 		},
 	},
