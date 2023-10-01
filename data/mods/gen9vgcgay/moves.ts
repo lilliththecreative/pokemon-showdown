@@ -1316,42 +1316,42 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			return null;
 		}
 	},
-	sinisterarrowraid: {
-		inherit: true,
-		isNonstandard: null,
-		isZ: false,
-		flags: {protect: 1, mirror: 1, charge: 1},
-		shortDesc: "Charges, uses move turn 2",
-		onTryMove(attacker, defender, move) {
-			if (attacker.removeVolatile(move.id)) {
-				return;
-			}
-			this.add('-prepare', attacker, move.name);
-			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
-				return;
-			}
-			attacker.addVolatile('twoturnmove', defender);
-			return null;
-		}
-	},
-	splinteredstormshards: {
-		inherit: true,
-		isNonstandard: null,
-		isZ: false,
-		flags: {protect: 1, mirror: 1, charge: 1},
-		shortDesc: "Charges, uses move turn 2, ends terrain",
-		onTryMove(attacker, defender, move) {
-			if (attacker.removeVolatile(move.id)) {
-				return;
-			}
-			this.add('-prepare', attacker, move.name);
-			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
-				return;
-			}
-			attacker.addVolatile('twoturnmove', defender);
-			return null;
-		}
-	},
+	// sinisterarrowraid: {
+	// 	inherit: true,
+	// 	isNonstandard: null,
+	// 	isZ: false,
+	// 	flags: {protect: 1, mirror: 1, charge: 1},
+	// 	shortDesc: "Charges, uses move turn 2",
+	// 	onTryMove(attacker, defender, move) {
+	// 		if (attacker.removeVolatile(move.id)) {
+	// 			return;
+	// 		}
+	// 		this.add('-prepare', attacker, move.name);
+	// 		if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+	// 			return;
+	// 		}
+	// 		attacker.addVolatile('twoturnmove', defender);
+	// 		return null;
+	// 	}
+	// },
+	// splinteredstormshards: {
+	// 	inherit: true,
+	// 	isNonstandard: null,
+	// 	isZ: false,
+	// 	flags: {protect: 1, mirror: 1, charge: 1},
+	// 	shortDesc: "Charges, uses move turn 2, ends terrain",
+	// 	onTryMove(attacker, defender, move) {
+	// 		if (attacker.removeVolatile(move.id)) {
+	// 			return;
+	// 		}
+	// 		this.add('-prepare', attacker, move.name);
+	// 		if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+	// 			return;
+	// 		}
+	// 		attacker.addVolatile('twoturnmove', defender);
+	// 		return null;
+	// 	}
+	// },
 	extremeevoboost: {
 		inherit: true,
 		isNonstandard: null,
@@ -1403,7 +1403,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 		isMax: false,
 		flags: {protect: 1, mirror: 1},
-		basePower: 90,
+		basePower: 80,
 		shortDesc: "Poisons both foes after successful use.",
 	},
 	gmaxsteelsurge: {

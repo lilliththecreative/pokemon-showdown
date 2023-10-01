@@ -5616,4 +5616,23 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 3,
 		num: -39,
 	},
+	fightingspirit: {
+		isNonstandard: "CAP",
+		name: "Fighting Spirit",
+		onAfterMoveSecondary(target, source, move) {
+			if (!this.effectState.usedSpirit) {
+				if (!source || source === target || !target.hp || !move.totalDamage) return;
+				const lastAttackedBy = target.getLastAttackedBy();
+				if (!lastAttackedBy) return;
+				const damage = move.multihit ? move.totalDamage : lastAttackedBy.damage;
+				if (target.hp <= target.maxhp / 2 && target.hp + damage > target.maxhp / 2) {
+					this.boost({atk: 1}, target, target);
+					this.heal(target.baseMaxhp);
+					this.effectState.usedSpirit = true;
+				}
+			}
+		},
+		rating: 3,
+		num: -40,
+	},
 };

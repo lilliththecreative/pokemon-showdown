@@ -704,8 +704,8 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"tier": "OU"
 	},
 	"chansey": {
-		"isNonstandard": null,
-		"tier": "OU"
+		"isNonstandard": "Past",
+		"tier": "Illegal"
 	},
 	"tangela": {
 		"isNonstandard": "Past",
@@ -3712,8 +3712,8 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"tier": "Illegal"
 	},
 	"decidueye": {
-		"isNonstandard": null,
-		"tier": "OU"
+		"isNonstandard": "Past",
+		"tier": "Illegal"
 	},
 	"decidueyehisui": {
 		"isNonstandard": null,

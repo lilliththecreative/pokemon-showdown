@@ -45,7 +45,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	},
 	"muk": {
 		"isNonstandard": null,
-		"tier": "OU"
+		"tier": "UU"
 	},
 	"mukalola": {
 		"isNonstandard": null,
@@ -181,7 +181,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	},
 	"lucario": {
 		"isNonstandard": null,
-		"tier": "OU"
+		"tier": "UU"
 	},
 	"weavile": {
 		"isNonstandard": null,
@@ -197,7 +197,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	},
 	"mesprit": {
 		"isNonstandard": null,
-		"tier": "OU"
+		"tier": "UU"
 	},
 	"azelf": {
 		"isNonstandard": null,
@@ -229,7 +229,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	},
 	"delphox": {
 		"isNonstandard": null,
-		"tier": "OU"
+		"tier": "UU"
 	},
 	"floette": {
 		"isNonstandard": null,
@@ -389,7 +389,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	},
 	"ambipom": {
 		"isNonstandard": null,
-		"tier": "OU"
+		"tier": "RU"
 	},
 	"dusclops": {
 		"isNonstandard": null,
@@ -421,7 +421,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	},
 	"golem": {
 		"isNonstandard": null,
-		"tier": "OU"
+		"tier": "UU"
 	},
 	"graveleralola": {
 		"isNonstandard": null,
@@ -429,7 +429,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	},
 	"golemalola": {
 		"isNonstandard": null,
-		"tier": "OU"
+		"tier": "UU"
 	},
 	"chimchar": {
 		"isNonstandard": null,
@@ -441,7 +441,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	},
 	"infernape": {
 		"isNonstandard": null,
-		"tier": "OU"
+		"tier": "UU"
 	},
 	"poliwhirl": {
 		"isNonstandard": null,
@@ -449,7 +449,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	},
 	"poliwrath": {
 		"isNonstandard": null,
-		"tier": "OU"
+		"tier": "UU"
 	},
 	"politoed": {
 		"isNonstandard": null,

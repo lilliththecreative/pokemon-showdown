@@ -2399,4 +2399,9 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "Deals +1% bonus damage for each 1% of HP missing",
 		shortDesc: "Deals +1% bonus damage for each 1% of HP missing",
 	},
+	fightingspirit: {
+		name: "Fighting Spirit",
+		desc: "Once per battle, Fully heals and +1 Atk when below 25% HP.",
+		shortDesc: "Once per battle, Fully heals and +1 Atk when below 25% HP.",
+	},
 };
