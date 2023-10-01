@@ -9662,10 +9662,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"1": "Rampage",
 			"H": "Stalwart"
 		},
-		"inherit": true,
-		"evos": [
-			"Duraludon"
-		]
+		"inherit": true
 	},
 	"dragapult": {
 		"types": [
