@@ -70,7 +70,7 @@ export const TeamsHandler = new class {
 		if (search.gen) {
 			where.push(`format LIKE 'gen${search.gen}%'`);
 		}
-		if (!includePrivate) where.push('private IS NOT NULL');
+		if (!includePrivate) where.push('private IS NULL');
 
 		const result = await this.query<StoredTeam>(
 			`SELECT * FROM teams${where.length ? ` WHERE ${where.join(' AND ')}` : ''} LIMIT ${count}`,
@@ -277,13 +277,13 @@ export const TeamsHandler = new class {
 		buf += `<small>Format: ${Dex.formats.get(teamData.format).name}</small><br />`;
 		buf += `<small>Views: ${teamData.views}</small>`;
 		const team = Teams.unpack(teamData.team)!;
-		buf += `<br />`;
-		buf += team.map(set => `<psicon pokemon="${set.species}" />`).join(' ');
 		let link = `view-team-${teamData.teamid}`;
 		if (teamData.private) {
 			link += `-${teamData.private}`;
 		}
-		buf += `<br /><a href="/${link}">${isFull ? 'View full team' : 'Shareable link to team'}</a>`;
+		buf += `<br /><a class="subtle" href="/${link}">`;
+		buf += team.map(set => `<psicon pokemon="${set.species}" />`).join(' ');
+		buf += `</a><br />${isFull ? 'View full team' : 'Shareable link to team'}</a>`;
 		buf += ` <small>(or copy/paste <code>&lt;&lt;${link}&gt;&gt;</code> in chat to share!)</small>`;
 
 		if (user && (teamData.ownerid === user.id || user.can('rangeban'))) {
@@ -481,7 +481,7 @@ export const commands: Chat.ChatCommands = {
 		`/teams setprivacy [team id], [privacy] - Set the privacy of the team matching the [teamid].`,
 		`/teams delete [team id] - Delete the team matching the [teamid].`,
 		`/teams search - Opens the page to search your teams`,
-		`/teams mostviews - Views your teams sorted by most views.`,
+		`/teams mostviews - Views public teams, sorted by most views.`,
 		`/teams view [team ID] - View the team matching the given [team ID]`,
 		`/teams browse - Opens a list of public teams uploaded by other users.`,
 	],
@@ -587,7 +587,7 @@ export const pages: Chat.PageTable = {
 			buf += `<input name="name" /><br />`;
 
 			buf += `<strong>What's the team's format?</strong><br />`;
-			buf += `<input name="format" /><br />`;
+			buf += `<formatselect name="format" value="gen${Dex.gen}ou">[Gen ${Dex.gen} OU]</formatselect><br />`;
 
 			buf += `<strong>Should the team be private? (yes/no)</strong><br />`;
 			buf += `<select name="privacy" /><option value="1">Yes</option><option value="0">No</option></select><br />`;
@@ -618,7 +618,8 @@ export const pages: Chat.PageTable = {
 			buf += `<input name="name" value="${data.title || `Untitled ${teamID}`}" /><br />`;
 
 			buf += `<strong>Team format</strong><br />`;
-			buf += `<input name="format" value="${data.format}" /><br />`;
+			buf += `<formatselect name="format" value="${data.format}">`;
+			buf += `${Dex.formats.get(data.format).name}</formatselect><br />`;
 
 			buf += `<strong>Team privacy</strong><br />`;
 			const privacy = ['1', '0'];
@@ -652,7 +653,7 @@ export const pages: Chat.PageTable = {
 				buf += `<strong>Search metadata:</strong><br />`;
 				buf += `<span style="display: ${isPersonal ? 'none' : ""}">`;
 				buf += `<Team owner: <input name="owner" /></span><br />`;
-				buf += `Team format: <input name="tier" /><br /><br />`;
+				buf += `Team format: <formatselect name="tier">[Gen ${Dex.gen}] OU</formatselect><br /><br />`;
 				buf += `<strong>Search in team:</strong> (separate different searches with commas)<br />`;
 				buf += `Generation: <input name="gen" /><br />`;
 				buf += `Pokemon: <input name="pokemon" /><br />`;
