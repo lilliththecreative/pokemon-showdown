@@ -909,12 +909,12 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"hp": 75,
 			"atk": 110,
 			"def": 94,
-			"spa": 30,
-			"spd": 115,
+			"spa": 35,
+			"spd": 110,
 			"spe": 76
 		},
 		"abilities": {
-			"0": "Spirit",
+			"0": "Fighting Spirit",
 			"1": "Iron Fist",
 			"H": "Inner Focus"
 		},
@@ -4448,7 +4448,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"hp": 70,
 			"atk": 115,
 			"def": 70,
-			"spa": 115,
+			"spa": 120,
 			"spd": 70,
 			"spe": 90
 		},

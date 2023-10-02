@@ -54801,7 +54801,7 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"cosmicpower": [
 				"9M"
 			],
-			"psystrike": [
+			"synchronoise": [
 				"9M"
 			]
 		}

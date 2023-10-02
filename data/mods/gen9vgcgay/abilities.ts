@@ -847,7 +847,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	supremeoverlord: {
 		inherit: true,
-		shortDesc: "15% more power per fainted ally, Max 45%",
+		shortDesc: "15% more power per fainted ally, Max 45%.",
 		onBasePower(basePower, attacker, defender, move) {
 			if (this.effectState.fallen) {
 				const powMod = [20, 23, 26, 29, 29, 29];
