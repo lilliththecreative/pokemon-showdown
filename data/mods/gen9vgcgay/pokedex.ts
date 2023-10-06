@@ -5349,7 +5349,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"hp": 85,
 			"atk": 115,
 			"def": 85,
-			"spa": 105,
+			"spa": 100,
 			"spd": 60,
 			"spe": 103
 		},

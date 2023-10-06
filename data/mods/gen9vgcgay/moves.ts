@@ -806,7 +806,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	spicyextract: {
 		inherit: true,
-		shortDesc: "Raises target's Atk by 2 and lowers its Def by 2.",
+		shortDesc: "Raises target's Atk by 3 and lowers its Def by 3.",
 		boosts: {atk: 3, def: -3},
 	},
 	mysticalpower: {
@@ -986,7 +986,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	tripledive: {
 		inherit: true,
 		isNonstandard: null,
+		shortDesc: "Hits 3 times. Each hit can miss.",
+		multiaccuracy: true,
 		basePower: 80,
+		accuracy: 90,
 	},
 	geargrind: {
 		inherit: true,
@@ -1597,6 +1600,17 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			}
 		},
 	},
+	roaroftime: {
+		inherit: true,
+		isNonstandard: null,
+		self: null,
+		shortDesc: "User cannot move next turn if it fails to KO.",
+		onHit(target, source) {
+			if (target.hp) {
+				source.addVolatile('mustrecharge');
+			}
+		},
+	},
 	// pp changes
 	flamethrower: {
 		inherit: true,
@@ -1961,4 +1975,25 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	barrier: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	// Move Deletions
+	slam: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	bubblebeam: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	psybeam: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	hornattack: {
+		inherit: true,
+		isNonstandard: "CAP",
+	}
 };
