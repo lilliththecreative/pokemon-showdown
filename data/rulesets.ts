@@ -1855,6 +1855,11 @@ export const Rulesets: {[k: string]: FormatData} = {
 		desc: "Maximum team size (number of pokemon) that can be brought into Team Preview (or into the battle, in formats without Team Preview)",
 		hasValue: 'positive-integer',
 		// hardcoded in sim/team-validator
+		onValidateRule(value) {
+			if (this.format.id.endsWith('computergeneratedteams')) {
+				throw new Error(`${this.format.name} does not support Max Team Size.`);
+			}
+		},
 	},
 	maxmovecount: {
 		effectType: 'ValidatorRule',
