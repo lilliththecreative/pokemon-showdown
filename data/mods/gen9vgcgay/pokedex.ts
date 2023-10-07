@@ -1108,11 +1108,11 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		],
 		"baseStats": {
 			"hp": 75,
-			"atk": 100,
+			"atk": 105,
 			"def": 95,
 			"spa": 80,
 			"spd": 80,
-			"spe": 110
+			"spe": 115
 		},
 		"abilities": {
 			"0": "Intimidate",

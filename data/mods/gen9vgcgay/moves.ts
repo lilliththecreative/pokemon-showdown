@@ -114,7 +114,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		"inherit": true,
 		"accuracy": 100,
 		"basePower": 25,
-		"category": "Physical",
 		"type": "Psychic",
 		"isNonstandard": null,
 	},
@@ -122,7 +121,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		"inherit": true,
 		"accuracy": 100,
 		"basePower": 25,
-		"category": "Physical",
 		"type": "Fairy",
 		"isNonstandard": null,
 	},
@@ -131,7 +129,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		"accuracy": 100,
 		"basePower": 25,
 		multihit: [2, 5],
-		"category": "Physical",
 		"type": "Steel",
 		"isNonstandard": null,
 	},
@@ -140,7 +137,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		"accuracy": 100,
 		"basePower": 25,
 		multihit: [2, 5],
-		"category": "Physical",
 		"type": "Flying",
 		"isNonstandard": null,
 	},
@@ -650,7 +646,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	needlearm: {
 		inherit: true,
 		isNonstandard: null,
-		basePower: 80
+		basePower: 90
 	},
 	crabhammer: {
 		inherit: true,
@@ -743,6 +739,11 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		},
 	},
 	// Some signature Moves
+	aeroblast: {
+		inherit: true,
+		isNonstandard: null,
+		basePower: 90
+	},
 	wickedblow: {
 		inherit: true,
 		basePower: 69
@@ -971,10 +972,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		basePower: 130
 	},
-	spiritshackle: {
-		inherit: true,
-		basePower: 95,
-	},
 	revelationdance: {
 		inherit: true,
 		basePower: 100,
@@ -994,7 +991,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	geargrind: {
 		inherit: true,
 		isNonstandard: null,
-		basePower: 50,
 		accuracy: 90
 	},
 	gearup: {
@@ -1135,6 +1131,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	attackorder: {
 		inherit: true,
+		shortDesc: "High Crit, Does not check accuracy.",
 		accuracy: true,
 	},
 	// Moves edited for abilities
@@ -1634,96 +1631,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		category: "Physical",
 		pp: 2
 	},
-	// Making Standard
-	flashfreeze: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	icerink: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	quarry: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	smeltery: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	firewall: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	stalacbite: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	divebomb: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	psychout: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	purifyingwater: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	divinesmite: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	sacredfire: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	sketch: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	lightofruin: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	dualchop: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	tailglow: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	aeroblast: {
-		inherit: true,
-		isNonstandard: null,
-		basePower: 90
-	},
-	aurawheel: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	poweruppunch: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	dizzypunch: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	electrify: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	topsyturvy: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	return: {
-		inherit: true,
-		isNonstandard: null,
-	},
+	// Hidden Powers
 	hiddenpower: {
 		inherit: true,
 		isNonstandard: null,
@@ -1814,6 +1722,91 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		"inherit": true,
 		"category": "Physical",
 		"isNonstandard": null,
+	},
+	// Making Standard
+	flashfreeze: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	icerink: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	quarry: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	smeltery: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	firewall: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	stalacbite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	divebomb: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	psychout: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	purifyingwater: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	divinesmite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	sacredfire: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	sketch: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	lightofruin: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	dualchop: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	tailglow: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	aurawheel: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	poweruppunch: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	dizzypunch: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	electrify: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	topsyturvy: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	return: {
+		inherit: true,
+		isNonstandard: null,
 	},
 	mindblown: {
 		inherit: true,

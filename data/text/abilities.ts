@@ -2321,8 +2321,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	catscradle: {
 		name: "Cat's Cradle",
-		desc: "If the opponent tries to switch out, this pokemon attacks immediately at 2x power",
-		shortDesc: "If the opponent tries to switch out, this pokemon attacks immediately at 2x power",
+		desc: "If the opponent tries to switch out, this pokemon attacks immediately at 2x power.",
+		shortDesc: "If the opponent tries to switch out, this pokemon attacks immediately at 2x power.",
 	},
 	superduperluck: {
 		name: "Super Duper Luck",
@@ -2331,8 +2331,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	largewingspan: {
 		name: "Large Wingspan",
-		desc: "This pokemon's Flying moves hit both opponents",
-		shortDesc: "This pokemon's Flying moves hit both opponents",
+		desc: "This pokemon's Flying moves hit both opponents.",
+		shortDesc: "This pokemon's Flying moves hit both opponents.",
 	},
 	theflock: {
 		name: "The Flock",

@@ -366,7 +366,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	icebody: {
 		inherit: true,
-		shortDesc: "Heals 1/16 in Snow. 30% to frostbite on contact",
+		shortDesc: "Heals 1/16 in Snow. 30% to frostbite on contact.",
 		onDamagingHit(damage, target, source, move) {
 			if (this.checkMoveMakesContact(move, source, target)) {
 				if (this.randomChance(3, 10)) {
@@ -680,15 +680,36 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 		},
 	},
-	longreach: {
-		inherit: true,
-		shortDesc: "Moves no longer make contact, Arrow moves do 1.5x",
-		onBasePower(basePower, attacker, defender, move) {
-			if (['Triple Arrows', 'Thousand Arrows', 'Spirit Shackle'].includes(move.name)) {
-				this.debug('Long Reach boost');
-				return this.chainModify([3, 2]);
+	// longreach: {
+	// 	inherit: true,
+	// 	shortDesc: "Moves no longer make contact, Arrow moves do 1.5x",
+	// 	onBasePower(basePower, attacker, defender, move) {
+	// 		if (['Triple Arrows', 'Thousand Arrows', 'Spirit Shackle'].includes(move.name)) {
+	// 			this.debug('Long Reach boost');
+	// 			return this.chainModify([3, 2]);
+	// 		}
+	// 	},
+	// },
+	wonderguard: {
+		shortDesc: "This Pokemon can only be damaged by supereffective moves and indirect damage if not Terad.",
+		onTryHit(target, source, move) {
+			if (target === source || move.category === 'Status' || move.type === '???' || move.id === 'struggle') return;
+			if (target.terastallized) return;
+			if (move.id === 'skydrop' && !source.volatiles['skydrop']) return;
+			this.debug('Wonder Guard immunity: ' + move.id);
+			if (target.runEffectiveness(move) <= 0) {
+				if (move.smartTarget) {
+					move.smartTarget = false;
+				} else {
+					this.add('-immune', target, '[from] ability: Wonder Guard');
+				}
+				return null;
 			}
 		},
+		isBreakable: true,
+		name: "Wonder Guard",
+		rating: 5,
+		num: 25,
 	},
 	punkrock: {
 		inherit: true,
