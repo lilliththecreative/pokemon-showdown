@@ -150,7 +150,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "NU",
 	},
 	paras: {
-		tier: "7U",
+		tier: "8U",
 	},
 	parasect: {
 		tier: "SU",
@@ -276,7 +276,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "UUBL",
 	},
 	seel: {
-		tier: "7U",
+		tier: "SU",
 	},
 	dewgong: {
 		tier: "NU",
@@ -603,7 +603,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "LC",
 	},
 	skiploom: {
-		tier: "SU",
+		tier: "7U",
 	},
 	jumpluff: {
 		tier: "UU",
@@ -954,7 +954,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "PU",
 	},
 	carvanha: {
-		tier: "SU",
+		tier: "7U",
 	},
 	sharpedo: {
 		tier: "UU",
