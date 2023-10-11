@@ -1360,11 +1360,7 @@ export const commands: Chat.ChatCommands = {
 		const type = cmd.includes('name') ? 'NAMELOCK' : 'LOCK';
 		Punishments.punishRange(ip, reason, time, type);
 
-		if (year) {
-			this.addGlobalModAction(`${user.name} year-${type.toLowerCase()}ed the ${ipDesc}: ${reason}`);
-		} else {
-			this.addGlobalModAction(`${user.name} hour-${type.toLowerCase()}ed the ${ipDesc}: ${reason}`);
-		}
+		this.addGlobalModAction(`${user.name} ${year ? 'year' : 'hour'}-${type.toLowerCase()}ed the ${ipDesc}: ${reason}`);
 		this.globalModlog(
 			`${year ? 'YEAR' : 'RANGE'}${type}`,
 			null,
