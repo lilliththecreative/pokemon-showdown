@@ -33,7 +33,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "11U",
 	},
 	butterfree: {
-		tier: "ZU",
+		tier: "SU",
 	},
 	weedle: {
 		tier: "11U",
@@ -63,7 +63,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "9U",
 	},
 	fearow: {
-		tier: "SU",
+		tier: "ZU",
 	},
 	ekans: {
 		tier: "10U",
@@ -300,7 +300,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "UU",
 	},
 	gastly: {
-		tier: "ZU",
+		tier: "SU",
 	},
 	haunter: {
 		tier: "NU",
@@ -408,7 +408,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "9U",
 	},
 	seaking: {
-		tier: "SU",
+		tier: "7U",
 	},
 	staryu: {
 		tier: "7U",
@@ -943,7 +943,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "SU",
 	},
 	slaking: {
-		tier: "ZU",
+		tier: "SUBL",
 	},
 	nincada: {
 		tier: "10U",
@@ -1069,7 +1069,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "SU",
 	},
 	vibrava: {
-		tier: "ZU",
+		tier: "SU",
 	},
 	flygon: {
 		tier: "OU",
@@ -1207,7 +1207,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "8U",
 	},
 	shelgon: {
-		tier: "ZU",
+		tier: "SU",
 	},
 	salamence: {
 		tier: "Uber",

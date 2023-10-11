@@ -336,7 +336,7 @@ function toPokemonSet(
 	// To simplify things, during validation we mutate the input set to correct for HP mismatches
 	const hp = set.moves && set.moves.find(m => m.startsWith('Hidden Power'));
 	let fill = dex.gen === 2 ? 30 : 31;
-	if (hp) {
+	if (hp && dex.gen < 9) {
 		const type = hp.slice(13);
 		if (type && dex.getHiddenPower(fillStats(set.ivs, fill)).type !== type) {
 			if (!set.ivs || (dex.gen >= 7 && (!set.level || set.level === 100))) {

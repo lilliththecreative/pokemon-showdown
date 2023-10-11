@@ -388,6 +388,27 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		}
 	},
 	// Signature Ability Buffs
+	heatproof: {
+		inherit: true,
+		shortDesc: "Fire damage against this Pokemon is dealt with 1/4 offensive stat; 1/4 burn damage.",
+		onSourceModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Fire') {
+				this.debug('Heatproof Atk weaken');
+				return this.chainModify(0.25);
+			}
+		},
+		onSourceModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Fire') {
+				this.debug('Heatproof SpA weaken');
+				return this.chainModify(0.25);
+			}
+		},
+		onDamage(damage, target, source, effect) {
+			if (effect && effect.id === 'brn') {
+				return damage / 4;
+			}
+		},
+	},
 	orichalcumpulse: {
 		inherit: true,
 		shortDesc: "During Sunny Day, Atk and SpA is 1.3333x.",
@@ -1070,6 +1091,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	schooling: {
 		inherit: true,
+		shortDesc: "Heals 1/16th each turn. Changes to School Form if it has > 1/4 max HP, else Solo Form.",
 		onResidual(pokemon) {
 			if (
 				pokemon.baseSpecies.baseSpecies !== 'Wishiwashi' || pokemon.level < 20 ||

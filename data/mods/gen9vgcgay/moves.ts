@@ -1135,6 +1135,44 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		accuracy: true,
 	},
 	// Moves edited for abilities
+	worryseed: {
+		inherit: true,
+		onTryImmunity(target) {
+			// Insomnia (Truant removed) have special treatment; they fail before
+			// checking accuracy and will double Stomping Tantrum's BP
+			if (target.ability === 'insomnia') {
+				return false;
+			}
+		},
+	},
+	simplebeam: {
+		inherit: true,
+		onTryHit(target) {
+			// Truant removed
+			if (target.getAbility().isPermanent || target.ability === 'simple') {
+				return false;
+			}
+		},
+	},
+	entrainment: {
+		inherit: true,
+		onTryHit(target, source) {
+			if (target === source || target.volatiles['dynamax']) return false;
+
+			const additionalBannedSourceAbilities = [
+				// Zen Mode included here for compatability with Gen 5-6
+				'commander', 'flowergift', 'forecast', 'hungerswitch', 'illusion', 'imposter', 'neutralizinggas', 'powerofalchemy', 'receiver', 'trace', 'zenmode',
+			];
+			// Remove Truant
+			if (
+				target.ability === source.ability ||
+				target.getAbility().isPermanent ||
+				source.getAbility().isPermanent || additionalBannedSourceAbilities.includes(source.ability)
+			) {
+				return false;
+			}
+		},
+	},
 	auroraveil: {
 		inherit: true,
 		onTry(source) {
@@ -1260,22 +1298,22 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	trickortreat: {
 		inherit: true,
 		isNonstandard: null,
-		shortDesc: "Charges, +Ghost to target type, omniboost turn 2.",
-		pp: 1,
-		flags: {charge: 1, protect: 1, reflectable: 1, mirror: 1, allyanim: 1},
-		onTryMove(attacker, defender, move) {
-			if (attacker.removeVolatile(move.id)) {
-				this.boost({atk: 1, def: 1, spa: 1, spd: 1, spe: 1}, attacker, attacker, move);
-				return;
-			}
-			this.add('-prepare', attacker, move.name);
-			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
-				this.boost({atk: 1, def: 1, spa: 1, spd: 1, spe: 1}, attacker, attacker, move);
-				return;
-			}
-			attacker.addVolatile('twoturnmove', defender);
-			return null;
-		}
+		// shortDesc: "Charges, +Ghost to target type, omniboost turn 2.",
+		// pp: 1,
+		// flags: {charge: 1, protect: 1, reflectable: 1, mirror: 1, allyanim: 1},
+		// onTryMove(attacker, defender, move) {
+		// 	if (attacker.removeVolatile(move.id)) {
+		// 		this.boost({atk: 1, def: 1, spa: 1, spd: 1, spe: 1}, attacker, attacker, move);
+		// 		return;
+		// 	}
+		// 	this.add('-prepare', attacker, move.name);
+		// 	if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+		// 		this.boost({atk: 1, def: 1, spa: 1, spd: 1, spe: 1}, attacker, attacker, move);
+		// 		return;
+		// 	}
+		// 	attacker.addVolatile('twoturnmove', defender);
+		// 	return null;
+		// }
 	},
 	forestscurse: {
 		inherit: true,
@@ -1642,11 +1680,11 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			}
 		},
 	},
-	"hiddenpowernormal": {
-		"inherit": true,
-		"category": "Physical",
-		"isNonstandard": null,
-	},
+	// "hiddenpowernormal": {
+	// 	"inherit": true,
+	// 	"category": "Physical",
+	// 	"isNonstandard": null,
+	// },
 	"hiddenpowerfairy": {
 		"inherit": true,
 		"isNonstandard": null,
