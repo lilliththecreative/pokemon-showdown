@@ -5648,28 +5648,19 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		shortDesc: "User and Ally avoid all ground attacks.",
 		onAllyTryHit(source, target, move) {
 			if (target !== source && move.type === 'Ground') {
-				this.add('-immune', target, '[from] ability: Tremor Sense');
+				let tremorHaver = source;
+				for (const pokemon of source.allies()) {
+					if (pokemon.hasAbility('Tremor Sense')) { tremorHaver = pokemon; }
+				}
+				this.add('-immune', source, '[from] ability: Tremor Sense', '[of] ' + tremorHaver);
 				return null;
 			}
 		},
 		onTryHit(source, target, move) {
 			if (target !== source && move.type === 'Ground') {
-				this.add('-immune', target, '[from] ability: Tremor Sense');
+				this.add('-immune', source, '[from] ability: Tremor Sense');
 				return null;
 			}
 		},
-		// onAnyTryHit(source, target, move) {
-		// 	if (source === target) return false;
-		// 	var sensed = false;
-		// 	for (const poke of target.alliesAndSelf()) {
-		// 		if (poke.hasAbility('Tremor Sense')) {
-		// 			sensed = true;
-		// 		}
-		// 	}
-		// 	if (sensed) {
-		// 		this.add('-immune', target, '[from] ability: Tremor Sense');
-		// 		return null;
-		// 	}
-		// },
 	}
 };

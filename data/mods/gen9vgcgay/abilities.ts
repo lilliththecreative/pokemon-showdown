@@ -1844,4 +1844,8 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	tremorsense: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
