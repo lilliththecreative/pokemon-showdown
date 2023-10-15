@@ -865,7 +865,7 @@ export const Aliases: {[alias: string]: string} = {
 	hpbug: "Hidden Power Bug",
 	hpdark: "Hidden Power Dark",
 	hpdragon: "Hidden Power Dragon",
-	hpelectric: "Hidden Power electric",
+	hpelectric: "Hidden Power Electric",
 	hpfighting: "Hidden Power Fighting",
 	hpfire: "Hidden Power Fire",
 	hpflying: "Hidden Power Flying",

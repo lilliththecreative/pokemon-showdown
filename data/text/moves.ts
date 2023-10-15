@@ -7466,9 +7466,9 @@ export const MovesText: {[k: string]: MoveText} = {
 		},
 	},
 	// Start Gay Moves
-	hiddenpowernormal: {
-		name: "Hidden Power Normal",
-	},
+	// hiddenpowernormal: {
+	// 	name: "Hidden Power Normal",
+	// },
 	hiddenpowerfairy: {
 		name: "Hidden Power Fairy",
 	},

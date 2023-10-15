@@ -2404,4 +2404,9 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "Once per battle, Fully heals and +1 Atk when below 25% HP.",
 		shortDesc: "Once per battle, Fully heals and +1 Atk when below 25% HP.",
 	},
+	tremorsense: {
+		name: "Tremor Sense",
+		shortDesc: "User and Ally avoid all ground attacks.",
+		desc: "User and Ally avoid all ground attacks.",
+	},
 };

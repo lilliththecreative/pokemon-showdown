@@ -257,6 +257,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		"basePower": 275
 	},
 	// Regular Moves
+	round: {
+		inherit: true,
+		basePower: 70,
+	},
 	payback: {
 		inherit: true,
 		basePowerCallback(pokemon, target) {
@@ -358,7 +362,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	punishment: {
 		inherit: true,
 		isNonstandard: null,
-		shortDesc: "60 power +20 for each of target's boosts, Max: 300BP.",
+		shortDesc: "60 power +20 each target boost, Max: 300BP.",
 		basePowerCallback(pokemon, target) {
 			let power = 60 + 20 * target.positiveBoosts();
 			if (power > 300) power = 300;
@@ -626,7 +630,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 		category: "Physical",
-		shortDesc: "More power the more %HP target has, Max 141BP.",
+		shortDesc: "More power the more %HP target has, Max 140BP.",
 		basePowerCallback(pokemon, target, move) {
 			const hp = target.hp;
 			const maxHP = target.maxhp;

@@ -120156,6 +120156,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"whirlpool": [
 				"8M",
 				"4M"
+			],
+			"lifedew": [
+				"9M"
 			]
 		}
 	},

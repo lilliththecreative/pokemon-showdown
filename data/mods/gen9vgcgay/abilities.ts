@@ -1722,6 +1722,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		onResidual(pokemon) {
 			this.effectState.rampage = false;
 		},
+		onDamagePriority: -101,
 		onAnyDamage(damage, target, source, effect) {
 			if (source && source.ability === "rampage" && damage >= target.hp) {
 				this.effectState.rampage = true;

@@ -5634,7 +5634,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				const damage = move.multihit ? move.totalDamage : lastAttackedBy.damage;
 				if (target.hp <= target.maxhp / 2 && target.hp + damage > target.maxhp / 2) {
 					this.boost({atk: 1}, target, target);
-					this.heal(target.baseMaxhp);
+					this.heal(target.baseMaxhp, target, target);
 					this.effectState.usedSpirit = true;
 				}
 			}
@@ -5642,4 +5642,34 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 3,
 		num: -40,
 	},
+	tremorsense: {
+		isNonstandard: "CAP",
+		name: "Tremor Sense",
+		shortDesc: "User and Ally avoid all ground attacks.",
+		onAllyTryHit(source, target, move) {
+			if (target !== source && move.type === 'Ground') {
+				this.add('-immune', target, '[from] ability: Tremor Sense');
+				return null;
+			}
+		},
+		onTryHit(source, target, move) {
+			if (target !== source && move.type === 'Ground') {
+				this.add('-immune', target, '[from] ability: Tremor Sense');
+				return null;
+			}
+		},
+		// onAnyTryHit(source, target, move) {
+		// 	if (source === target) return false;
+		// 	var sensed = false;
+		// 	for (const poke of target.alliesAndSelf()) {
+		// 		if (poke.hasAbility('Tremor Sense')) {
+		// 			sensed = true;
+		// 		}
+		// 	}
+		// 	if (sensed) {
+		// 		this.add('-immune', target, '[from] ability: Tremor Sense');
+		// 		return null;
+		// 	}
+		// },
+	}
 };
