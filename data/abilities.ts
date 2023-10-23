@@ -5662,5 +5662,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				return null;
 			}
 		},
+		rating: 4,
+		num: -41,
 	}
 };

@@ -156,7 +156,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "9U",
 	},
 	parasect: {
-		tier: "7U",
+		tier: "SU",
 	},
 	venonat: {
 		tier: "8U",
@@ -228,7 +228,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "9U",
 	},
 	weepinbell: {
-		tier: "7U",
+		tier: "SU",
 	},
 	victreebel: {
 		tier: "PU",
@@ -597,7 +597,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "10U",
 	},
 	ariados: {
-		tier: "7U",
+		tier: "SU",
 	},
 	chinchou: {
 		tier: "7U",

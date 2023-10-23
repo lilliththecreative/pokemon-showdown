@@ -4623,7 +4623,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "LC",
 	},
 	hakamoo: {
-		tier: "SU",
+		tier: "SUBL",
 	},
 	kommoo: {
 		tier: "UUBL",
