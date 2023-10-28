@@ -26,6 +26,23 @@ export const Formats: FormatList = [
 		section: "Custom Modes",
 	},
 	{
+		name: "[Gen 9] VGC Gay",
+		searchShow: true,
+		mod: 'gen9vgcgay',
+		gameType: 'doubles',
+		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Tera Type Preview', 'Sketch Post-Gen 7 Moves'],
+		unbanlist: ['Greninja-Bond'],
+	},
+	{
+		name: "[Gen 9] VGC Gay Random Battle",
+		searchShow: true,
+		mod: 'gen9vgcgay',
+		team: 'random',
+		gameType: 'doubles',
+		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Tera Type Preview', 'Sketch Post-Gen 7 Moves'],
+		unbanlist: ['Greninja-Bond'],
+	},
+	{
 		name: "[Gen 9] VGC Plat",
 		searchShow: true,
 		threads: [
@@ -66,12 +83,7 @@ export const Formats: FormatList = [
 		banlist: ['Huge Power', 'Pure Power', 'Wonder Guard', 'Imposter', 'Shadow Tag', 'Arena Trap', 'Ice Scales', 'Fur Coat', 'No Guard', 'Magic Bounce'],
 	},
 	{
-		name: "[Gen 9] VGC Gay",
-		searchShow: true,
-		mod: 'gen9vgcgay',
-		gameType: 'doubles',
-		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Tera Type Preview', 'Sketch Post-Gen 7 Moves'],
-		unbanlist: ['Greninja-Bond'],
+		section: "Free For All",
 	},
 	{
 		name: "[Gen 9] Free-For-All NatDex",

@@ -1,6 +1,6 @@
 export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	bulbasaur: {
-		tier: "7U",
+		tier: "IU",
 	},
 	ivysaur: {
 		tier: "ZU",
@@ -18,7 +18,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "UUBL",
 	},
 	squirtle: {
-		tier: "7U",
+		tier: "IU",
 	},
 	wartortle: {
 		tier: "ZUBL",
@@ -54,13 +54,13 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "NU",
 	},
 	rattata: {
-		tier: "7U",
+		tier: "IU",
 	},
 	raticate: {
 		tier: "NU",
 	},
 	spearow: {
-		tier: "7U",
+		tier: "IU",
 	},
 	fearow: {
 		tier: "NU",
@@ -114,7 +114,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "UUBL",
 	},
 	vulpix: {
-		tier: "7U",
+		tier: "IU",
 	},
 	ninetales: {
 		tier: "NU",
@@ -156,7 +156,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "ZU",
 	},
 	venonat: {
-		tier: "7U",
+		tier: "IU",
 	},
 	venomoth: {
 		tier: "PU",
@@ -174,7 +174,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "NU",
 	},
 	psyduck: {
-		tier: "7U",
+		tier: "IU",
 	},
 	golduck: {
 		tier: "NUBL",
@@ -288,7 +288,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "UUBL",
 	},
 	shellder: {
-		tier: "7U",
+		tier: "IU",
 	},
 	cloyster: {
 		tier: "OU",
@@ -315,7 +315,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "UU",
 	},
 	krabby: {
-		tier: "7U",
+		tier: "IU",
 	},
 	kingler: {
 		tier: "NU",
@@ -387,7 +387,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "UUBL",
 	},
 	goldeen: {
-		tier: "7U",
+		tier: "IU",
 	},
 	seaking: {
 		tier: "PU",
@@ -510,7 +510,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "Uber",
 	},
 	chikorita: {
-		tier: "7U",
+		tier: "IU",
 	},
 	bayleef: {
 		tier: "ZU",
@@ -519,7 +519,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "UUBL",
 	},
 	cyndaquil: {
-		tier: "7U",
+		tier: "IU",
 	},
 	quilava: {
 		tier: "ZUBL",
@@ -555,7 +555,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "NU",
 	},
 	spinarak: {
-		tier: "7U",
+		tier: "IU",
 	},
 	ariados: {
 		tier: "PU",
@@ -690,7 +690,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "PU",
 	},
 	remoraid: {
-		tier: "7U",
+		tier: "IU",
 	},
 	octillery: {
 		tier: "NU",
