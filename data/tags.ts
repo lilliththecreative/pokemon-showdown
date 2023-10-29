@@ -184,6 +184,14 @@ export const Tags: {[id: string]: TagData} = {
 		name: "SUBL",
 		speciesFilter: species => species.tier === 'SUBL',
 	},
+	"iu": {
+		name: "IU",
+		speciesFilter: species => species.tier === 'IU',
+	},
+	"iubl": {
+		name: "IUBL",
+		speciesFilter: species => species.tier === 'IUBL',
+	},
 	"6ubl": {
 		name: "6UBL",
 		speciesFilter: species => species.tier === '6UBL',

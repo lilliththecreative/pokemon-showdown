@@ -243,7 +243,7 @@ export const Formats: FormatList = [
 		name: "[Gen 2] IU",
 		mod: 'gen2',
 		searchShow: true,
-		ruleset: ['[Gen 2] IU'],
+		ruleset: ['[Gen 2] SU'],
 		unbanlist: ['Swagger'],
 		banlist: ['SU', 'IUBL'],
 	},
