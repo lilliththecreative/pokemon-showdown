@@ -1,11 +1,4 @@
-import {Dex, toID} from '../../../sim/dex';
-import {Utils} from '../../../lib';
-import {PRNG, PRNGSeed} from '../../../sim/prng';
-import {RuleTable} from '../../../sim/dex-formats';
-import {Tags} from './../../tags';
 import {RandomTeams, MoveCounter} from './../../random-teams';
-import { shuffle } from '../../../lib/utils';
-
 
 // Always useful items
 const USEFUL_ITEMS = [
@@ -16,7 +9,7 @@ const USEFUL_ITEMS = [
 export class RandomGayTeams extends RandomTeams {
 	randomSets: {[species: string]: RandomTeamsTypes.RandomSpeciesData} = require('./random-doubles-sets.json');
 	randomDoublesSets: {[species: string]: RandomTeamsTypes.RandomSpeciesData} = require('./random-doubles-sets.json');
-	items: string[] = []
+	items: string[] = [];
 
 	protected enforceNoDirectCustomBanlistChanges() {
 		console.log(this.format.gameType);
@@ -38,12 +31,12 @@ export class RandomGayTeams extends RandomTeams {
 		teraType: string,
 		role: RandomTeamsTypes.Role,
 	): string {
-		return "Covert Cloak"
+		return "Covert Cloak";
 	}
 
 	randomTeam() {
 		this.items = [];
-		return super.randomTeam()
+		return super.randomTeam();
 	}
 	randomSet(
 		species: string | Species,
@@ -62,9 +55,9 @@ export class RandomGayTeams extends RandomTeams {
 		// 	forme = this.sample([species.name].concat(species.cosmeticFormes));
 		// }
 		const sets = (this as any)[`random${isDoubles ? 'Doubles' : ''}Sets`][species.id]["sets"];
-		const possibleSets = [];
+		// const possibleSets = [];
 
-		const ruleTable = this.dex.formats.getRuleTable(this.format);
+		// const ruleTable = this.dex.formats.getRuleTable(this.format);
 
 		// for (const set of sets) {
 		// 	// Prevent Tera Blast user if the team already has one, or if Terastallizion is prevented.
@@ -94,19 +87,19 @@ export class RandomGayTeams extends RandomTeams {
 
 		// Get moves
 		const moves = this.randomMoveset(types, abilities, teamDetails, species, isLead, isDoubles, movePool, teraType, role);
-		const counter = this.queryMoves(moves, species, teraType, abilities);
+		// const counter = this.queryMoves(moves, species, teraType, abilities);
 
 		// Get ability
 		// ability = this.getAbility(types, moves, abilities, counter, teamDetails, species, isLead, isDoubles, teraType, role);
-		ability = set["ability"]
+		ability = set["ability"];
 
 		// Get items
 		// First, the priority items
-		item = this.sampleIfArray(set["items"])
+		item = this.sampleIfArray(set["items"]);
 		if (this.items.includes(item)) {
-			item = this.sample(USEFUL_ITEMS.concat(set["items"]).filter(i => this.items.indexOf(i) < 0))
+			item = this.sample(USEFUL_ITEMS.concat(set["items"]).filter(i => !this.items.includes(i)));
 		}
-		this.items.push(item)
+		this.items.push(item);
 		// item = this.getPriorityItem(ability, types, moves, counter, teamDetails, species, isLead, isDoubles, teraType, role);
 		// if (item === undefined) {
 		// 	if (isDoubles) {
