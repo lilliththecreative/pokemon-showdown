@@ -1095,7 +1095,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "NU",
 	},
 	spheal: {
-		tier: "LC",
+		tier: "IU",
 	},
 	sealeo: {
 		tier: "PU",
