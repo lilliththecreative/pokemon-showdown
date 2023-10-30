@@ -388,6 +388,17 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		}
 	},
 	// Signature Ability Buffs
+	toxicchain: {
+		inherit: true,
+		shortDesc: "This Pokemon's moves have a 40% chance of badly poisoning.",
+		onSourceDamagingHit(damage, target, source, move) {
+			// Despite not being a secondary, Shield Dust / Covert Cloak block Toxic Chain's effect
+			if (target.hasAbility('shielddust') || target.hasItem('covertcloak')) return;
+			if (this.randomChance(4, 10)) {
+				target.trySetStatus('tox', source);
+			}
+		},
+	},
 	heatproof: {
 		inherit: true,
 		shortDesc: "Fire damage against this Pokemon is dealt with 1/4 offensive stat; 1/4 burn damage.",

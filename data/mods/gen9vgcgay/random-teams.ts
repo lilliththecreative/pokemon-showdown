@@ -1,10 +1,55 @@
-import {RandomTeams, MoveCounter} from './../../random-teams';
+import {RandomTeams} from './../../random-teams';
 
 // Always useful items
 const USEFUL_ITEMS = [
-	'Sitrus Berry', 'Covert Cloak', 'Leftovers', 'Rocky Helmet', 'Lum Berry'
+	'Sitrus Berry', 'Covert Cloak', 'Leftovers', 'Rocky Helmet', 'Lum Berry', 'Iapapa Berry', 'Focus Sash'
+];
+const NICHE_POKEMON = [
+	// Niche Strat
+	'Orbeetle', 'Slaking', 'Regigigas', 'Bombirdier', 'Spinda', 'Tatusgiri', 'Spidops',
+	// Weather/Terrain Abuser
+	'Seaking', 'Lumineon', 'Dewgong', 'Sudowoodo', 'Sunflora', 'Cherrim', 'Gogoat', 'Hypno', 'Raichu-Alola',
+	// Meme Mon
+	'Clamperl', 'Unown', 'Pyukumuku', 'Dipplin', 'Shedinja',
 ];
 
+const KINDA_NICHE_POKEMON = [
+	// Sun
+	'Victreebel', 'Exeggutor', 'Leafeon', 'Scovillian', 'Heliolisk', 'Charizard', 'Leavanny',
+	// Rain
+	 'Barraskewda', 'Floatzel', 'Poliwrath', 'Masquerain', 'Kabutops', 'Relicanth', 'Seismitoad', 'Gorebyss',
+	// Hail
+	'Beartic', 'Arctozolt', 'Cetitan', 'Glaceon', 'Sandslash-Alola',
+	// Sand
+	'Lycanroc', 'Houndstone',
+	// Requires Specific Support but decent
+	'Flamigo', 'Dachsbun', 'Kricketune', 'Slurpuff', 'Castform', 'Linoone',
+	// Unoptimized Sets
+	'Eelektross', 'Wyrdeer', 'Lurantis',
+	// Blobs
+	'Bastiodon', 'Vaporeon', 'Probopass', 'Shuckle',
+];
+
+const HARD_TO_USE = [
+	// REquire TR
+	'Marowak', 'Cursola', 'Arboliva', 'Vikavolt',
+	// Super frail
+	'Ninjask', 'Wugtrio', 'Eevee', 'Squawkabilly', 'Pikachu', 'Flapple', 'Raticate',
+	// Require Enemy
+	'Brambleghast', 'Shiftry', 'Klawf',
+];
+
+const CONSISTENT = [
+	'Heatran', 'Latios', 'Latias', 'Blissey', 'Iron Hands',
+	// Tailwind
+	'Whimsicott', 'Volbeat', 'Illumise', 'Tornadus',
+	// Follow Me
+	'Blastoise', 'Indeedee-F', 'Maushold', 'Magmortar',
+];
+
+const BITCHES = [
+	'Porygon2', 'Registeel', 'Goodra-Hisui', 'Kecleon', 'Tropius', 'Greedent'
+];
 
 export class RandomGayTeams extends RandomTeams {
 	randomSets: {[species: string]: RandomTeamsTypes.RandomSpeciesData} = require('./random-doubles-sets.json');
@@ -12,26 +57,24 @@ export class RandomGayTeams extends RandomTeams {
 	items: string[] = [];
 
 	protected enforceNoDirectCustomBanlistChanges() {
-		console.log(this.format.gameType);
 	}
 	getLevel(
 		species: Species,
 		isDoubles: boolean,
 	): number {
-		return 50;
-	}
-	getDoublesItem(
-		ability: string,
-		types: string[],
-		moves: Set<string>,
-		counter: MoveCounter,
-		teamDetails: RandomTeamsTypes.TeamDetails,
-		species: Species,
-		isLead: boolean,
-		teraType: string,
-		role: RandomTeamsTypes.Role,
-	): string {
-		return "Covert Cloak";
+		if (NICHE_POKEMON.includes(species.name)) {
+			return 54;
+		} else if (KINDA_NICHE_POKEMON.includes(species.name)) {
+			return 52;
+		} else if (HARD_TO_USE.includes(species.name)) {
+			return 51;
+		} else if (CONSISTENT.includes(species.name)) {
+			return 49;
+		} else if (BITCHES.includes(species.name)) {
+			return 48;
+		} else {
+			return 50;
+		}
 	}
 
 	randomTeam() {
@@ -94,12 +137,12 @@ export class RandomGayTeams extends RandomTeams {
 		ability = set["ability"];
 
 		// Get items
-		// First, the priority items
 		item = this.sampleIfArray(set["items"]);
 		if (this.items.includes(item)) {
 			item = this.sample(USEFUL_ITEMS.concat(set["items"]).filter(i => !this.items.includes(i)));
 		}
 		this.items.push(item);
+		// First, the priority items
 		// item = this.getPriorityItem(ability, types, moves, counter, teamDetails, species, isLead, isDoubles, teraType, role);
 		// if (item === undefined) {
 		// 	if (isDoubles) {

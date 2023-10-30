@@ -92509,6 +92509,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"quiverdance": [
 				"9M"
+			],
+			"skittersmack": [
+				"9M"
 			]
 		}
 	},
@@ -180891,6 +180894,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"knockoff": [
 				"9M"
+			],
+			"aquajet": [
+				"9M"
 			]
 		}
 	},
@@ -185936,6 +185942,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"8M",
 				"7M",
 				"6M"
+			],
+			"junglehealing": [
+				"9M"
 			]
 		}
 	},
@@ -206244,6 +206253,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"return": [
+				"9M"
+			],
+			"focuspunch": [
 				"9M"
 			]
 		}
