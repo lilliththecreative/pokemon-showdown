@@ -141,7 +141,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "LC",
 	},
 	gloom: {
-		tier: "PU",
+		tier: "ZUBL",
 	},
 	vileplume: {
 		tier: "UU",
@@ -522,7 +522,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "ZU",
 	},
 	quilava: {
-		tier: "PU",
+		tier: "ZUBL",
 	},
 	typhlosion: {
 		tier: "UUBL",

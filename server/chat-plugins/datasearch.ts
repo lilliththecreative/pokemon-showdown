@@ -624,12 +624,17 @@ function runDexsearch(target: string, cmd: string, canAll: boolean, message: str
 		uubl: 'UUBL', uu: 'UU',
 		rubl: 'RUBL', ru: 'RU',
 		nubl: 'NUBL', nu: 'NU',
-		publ: 'PUBL', pu: 'PU', zu: 'zu',
+		publ: 'PUBL', pu: 'PU',
+		zubl: 'ZUBL', zu: 'ZU',
 		'su': 'SU', '6u': '6U', '7u': '7U', '8u': '8U', '9u': '9U', '10u': '10U', '11u': '11U',
 		nfe: 'NFE',
 		lc: 'LC',
 		cap: 'CAP', caplc: 'CAP LC', capnfe: 'CAP NFE',
 	});
+	if (mod.gen === 3) {
+		allTiers.zu = 'ZU';
+		allTiers.zubl = 'ZUBL';
+	}
 	const allDoublesTiers: {[k: string]: TierTypes.Singles | TierTypes.Other} = Object.assign(Object.create(null), {
 		doublesubers: 'DUber', doublesuber: 'DUber', duber: 'DUber', dubers: 'DUber',
 		doublesou: 'DOU', dou: 'DOU',
@@ -1124,7 +1129,8 @@ function runDexsearch(target: string, cmd: string, canAll: boolean, message: str
 			if (alts.tiers && Object.keys(alts.tiers).length) {
 				let tier = dex[mon].tier;
 				if (nationalSearch) tier = dex[mon].natDexTier;
-				if (tier.startsWith('(') && tier !== '(PU)') tier = tier.slice(1, -1) as TierTypes.Singles;
+				if (tier === '(PU)') tier = 'ZU';
+				if (tier.startsWith('(')) tier = tier.slice(1, -1) as TierTypes.Singles;
 				// if (tier === 'New') tier = 'OU';
 				if (alts.tiers[tier]) continue;
 				if (Object.values(alts.tiers).includes(false) && alts.tiers[tier] !== false) continue;
