@@ -272,13 +272,6 @@ export const Formats: FormatList = [
 		section: "Gen 3 Lower Tiers",
 	},
 	{
-		name: "[Gen 3] ZU",
-		mod: 'gen3',
-		searchShow: true,
-		ruleset: ['[Gen 3] PU'],
-		banlist: ['PU'],
-	},
-	{
 		name: "[Gen 3] SU",
 		mod: 'gen3',
 		searchShow: true,
