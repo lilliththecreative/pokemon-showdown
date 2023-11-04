@@ -1650,7 +1650,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			}
 		},
 	},
-	//Thick Fat makes weight-based moves deal maximum damage
+	// Thick Fat makes weight-based moves deal maximum damage
 	heatcrash: {
 		inherit: true,
 		isNonstandard: null,

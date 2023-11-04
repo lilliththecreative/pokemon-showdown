@@ -62,6 +62,7 @@ export class RandomGayTeams extends RandomTeams {
 		species: Species,
 		isDoubles: boolean,
 	): number {
+		if (this.adjustLevel) return this.adjustLevel;
 		if (NICHE_POKEMON.includes(species.name)) {
 			return 54;
 		} else if (KINDA_NICHE_POKEMON.includes(species.name)) {

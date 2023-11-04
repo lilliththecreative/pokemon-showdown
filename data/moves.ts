@@ -22021,6 +22021,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		num: 0,
 		accuracy: 100,
 		basePower: 0,
+		isNonstandard: "CAP",
 		basePowerCallback(pokemon, target) {
 			const targetWeight = target.getWeight();
 			const pokemonWeight = pokemon.getWeight();
