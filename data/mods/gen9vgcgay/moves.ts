@@ -1650,6 +1650,51 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			}
 		},
 	},
+	//Thick Fat makes weight-based moves deal maximum damage
+	heatcrash: {
+		inherit: true,
+		isNonstandard: null,
+		basePowerCallback(pokemon, target) {
+			const targetWeight = target.getWeight();
+			const pokemonWeight = pokemon.getWeight();
+			let bp;
+			if ((pokemonWeight >= targetWeight * 5) || pokemon.hasAbility('thickfat')) {
+				bp = 120;
+			} else if (pokemonWeight >= targetWeight * 4) {
+				bp = 100;
+			} else if (pokemonWeight >= targetWeight * 3) {
+				bp = 80;
+			} else if (pokemonWeight >= targetWeight * 2) {
+				bp = 60;
+			} else {
+				bp = 40;
+			}
+			this.debug('BP: ' + bp);
+			return bp;
+		},
+	},
+	heavyslam: {
+		inherit: true,
+		isNonstandard: null,
+		basePowerCallback(pokemon, target) {
+			const targetWeight = target.getWeight();
+			const pokemonWeight = pokemon.getWeight();
+			let bp;
+			if ((pokemonWeight >= targetWeight * 5) || pokemon.hasAbility('thickfat')) {
+				bp = 120;
+			} else if (pokemonWeight >= targetWeight * 4) {
+				bp = 100;
+			} else if (pokemonWeight >= targetWeight * 3) {
+				bp = 80;
+			} else if (pokemonWeight >= targetWeight * 2) {
+				bp = 60;
+			} else {
+				bp = 40;
+			}
+			this.debug('BP: ' + bp);
+			return bp;
+		},
+	},
 	// pp changes
 	flamethrower: {
 		inherit: true,
@@ -1769,6 +1814,28 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	flashfreeze: {
 		inherit: true,
 		isNonstandard: null,
+	},
+	slushcrush: {
+		inherit: true,
+		isNonstandard: null,
+		basePowerCallback(pokemon, target) {
+			const targetWeight = target.getWeight();
+			const pokemonWeight = pokemon.getWeight();
+			let bp;
+			if ((pokemonWeight >= targetWeight * 5) || pokemon.hasAbility('thickfat')) {
+				bp = 120;
+			} else if (pokemonWeight >= targetWeight * 4) {
+				bp = 100;
+			} else if (pokemonWeight >= targetWeight * 3) {
+				bp = 80;
+			} else if (pokemonWeight >= targetWeight * 2) {
+				bp = 60;
+			} else {
+				bp = 40;
+			}
+			this.debug('BP: ' + bp);
+			return bp;
+		},
 	},
 	icerink: {
 		inherit: true,

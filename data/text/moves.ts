@@ -7526,4 +7526,12 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Frostbites the target, halving SpA and doing 1/16th each turn.",
 		shortDesc: "Frostbites the target.",
 	},
+	slushcrush: {
+		name: "Slush Crush",
+		desc: "The power of this move depends on (user's weight / target's weight), rounded down. Power is equal to 120 if the result is 5 or more, 100 if 4, 80 if 3, 60 if 2, and 40 if 1 or less. Damage doubles and no accuracy check is done if the target has used Minimize while active.",
+		shortDesc: "More power the heavier the user than the target.",
+		gen5: {
+			desc: "The power of this move depends on (user's weight / target's weight), rounded down. Power is equal to 120 if the result is 5 or more, 100 if 4, 80 if 3, 60 if 2, and 40 if 1 or less.",
+		},
+	},
 };
