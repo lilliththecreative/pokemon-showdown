@@ -2418,7 +2418,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	putridstench: {
 		name: "Putrid Stench",
 		desc: "While this Pokemon is active, it prevents opposing Pokemon from using their Berries or Leftovers. This Ability activates before hazards and other Abilities take effect.",
-		shortDesc: "While Pokemon is active, it prevents opposing Pokemon from eating Berries or Leftovers.",
+		shortDesc: "While Pokemon is active, it prevents opposing Pokemon from eating Berries or Lefties.",
 		start: "  [TEAM] is too nervous to eat Food!",
 	},
 	windchime: {

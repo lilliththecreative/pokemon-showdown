@@ -347,7 +347,7 @@ export class BattleActions {
 			}
 		}
 		// Chimecho's Gay Ability
-		if (move.flags['sound'] && moveDidSomething && !move.isExternal) {
+		if (move.flags['wind'] && moveDidSomething && !move.isExternal) {
 			const dancers = [];
 			for (const currentPoke of this.battle.getAllActive()) {
 				if (pokemon === currentPoke) continue;

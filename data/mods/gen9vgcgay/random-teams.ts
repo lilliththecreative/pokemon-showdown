@@ -24,16 +24,16 @@ const KINDA_NICHE_POKEMON = [
 	// Sand
 	'Lycanroc', 'Houndstone',
 	// Requires Specific Support but decent
-	'Flamigo', 'Dachsbun', 'Kricketune', 'Slurpuff', 'Castform', 'Linoone', 'Hitmonlee',
+	'Flamigo', 'Dachsbun', 'Kricketune', 'Slurpuff', 'Castform', 'Linoone', 'Hitmonlee', 'Hawlucha',
 	// Unoptimized Sets
-	'Eelektross', 'Wyrdeer', 'Lurantis', 'Sawsbuck', 'Machamp', 'Delphox',
+	'Eelektross', 'Wyrdeer', 'Lurantis', 'Sawsbuck', 'Machamp', 'Delphox', 'Skuntank',
 	// Blobs
-	'Bastiodon', 'Vaporeon', 'Probopass', 'Shuckle',
+	'Bastiodon', 'Vaporeon', 'Probopass', 'Shuckle', 'Walrein',
 ];
 
 const HARD_TO_USE = [
 	// Require TR
-	'Marowak-Alola', 'Cursola', 'Arboliva', 'Vikavolt',
+	'Marowak-Alola', 'Cursola', 'Arboliva', 'Vikavolt', 'Camerupt',
 	// Super frail
 	'Ninjask', 'Wugtrio', 'Eevee', 'Squawkabilly', 'Pikachu', 'Flapple', 'Raticate',
 	// Require Enemy

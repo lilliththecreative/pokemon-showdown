@@ -722,7 +722,7 @@
 	"chandelure": {
 		"sets": [
 			{
-				"role": "Scarf",
+				"role": "Sash",
 				"movepool": [
 					"Shadow Ball",
 					"Fire Blast",
@@ -730,9 +730,25 @@
 					"Protect"
 				],
 				"items": [
-					"Choice Scarf"
+					"Focus Sash"
 				],
 				"ability": "Shadow Tagged",
+				"teraTypes": [
+					"Grass"
+				]
+			},
+			{
+				"role": "Scarf",
+				"movepool": [
+					"Shadow Ball",
+					"Overheat",
+					"Energy Ball",
+					"Heat Wave"
+				],
+				"items": [
+					"Choice Scarf"
+				],
+				"ability": "Flash Fire",
 				"teraTypes": [
 					"Grass"
 				]
@@ -1522,17 +1538,17 @@
 	"chimecho": {
 		"sets": [
 			{
-				"role": "TR setter",
+				"role": "TR Chimer",
 				"movepool": [
 					"Trick Room",
 					"Psychic",
-					"Yawn",
+					"Dazzling Gleam",
 					"Taunt"
 				],
 				"items": [
-					"Leftovers"
+					"Figy Berry"
 				],
-				"ability": "Levitate",
+				"ability": "Wind Chime",
 				"teraTypes": [
 					"Fire"
 				]
@@ -1602,12 +1618,28 @@
 	"slowkinggalar": {
 		"sets": [
 			{
-				"role": "TR Setter",
+				"role": "Bulky TR",
 				"movepool": [
 					"Eerie Spell",
 					"Trick Room",
 					"Sludge Bomb",
 					"Slack Off"
+				],
+				"items": [
+					"Wiki Berry"
+				],
+				"ability": "Regal Majesty",
+				"teraTypes": [
+					"Fairy"
+				]
+			},
+			{
+				"role": "Offensive TR",
+				"movepool": [
+					"Eerie Spell",
+					"Trick Room",
+					"Sludge Bomb",
+					"Calm Mind"
 				],
 				"items": [
 					"Wiki Berry"
@@ -4594,7 +4626,7 @@
 				"movepool": [
 					"Stone Edge",
 					"Dragon Dance",
-					"Tera Blast",
+					"High Horsepower",
 					"Knock Off"
 				],
 				"items": [
@@ -8746,6 +8778,22 @@
 				"teraTypes": [
 					"Steel"
 				]
+			},
+			{
+				"role": "Anti-Item",
+				"movepool": [
+					"Knock Off",
+					"Gunk Shot",
+					"Protect",
+					"Taunt"
+				],
+				"items": [
+					"Shuca Berry"
+				],
+				"ability": "Putrid Stench",
+				"teraTypes": [
+					"Steel"
+				]
 			}
 		]
 	},
@@ -9630,7 +9678,7 @@
 				"items": [
 					"Wide Lens"
 				],
-				"ability": "Queenly Majesty",
+				"ability": "Regal Majesty",
 				"teraTypes": [
 					"Grass"
 				]
@@ -10228,19 +10276,35 @@
 	"walrein": {
 		"sets": [
 			{
-				"role": "Bulky Sheer Cold",
+				"role": "Anti-Prio Supp",
 				"movepool": [
 					"Flash Freeze",
 					"Super Fang",
-					"Sheer Cold",
-					"Brine"
+					"Ice Beam",
+					"Slack Off"
 				],
 				"items": [
 					"Leftovers"
 				],
-				"ability": "Thick Fat",
+				"ability": "Regal Majesty",
 				"teraTypes": [
 					"Flying"
+				]
+			},
+			{
+				"role": "Curse",
+				"movepool": [
+					"Curse",
+					"Slush Crush",
+					"Liquidation",
+					"Slack Off"
+				],
+				"items": [
+					"Leftovers"
+				],
+				"ability": "Regal Majesty",
+				"teraTypes": [
+					"Grass"
 				]
 			}
 		]
