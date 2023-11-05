@@ -17721,6 +17721,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"aurasphere": [
 				"9M"
+			],
+			"psystrike": [
+				"9M"
 			]
 		}
 	},
@@ -21579,6 +21582,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"flashfreeze": [
+				"9M"
+			],
+			"slushcrush": [
 				"9M"
 			]
 		}
@@ -37701,6 +37707,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"zapcannon": [
 				"7V"
+			],
+			"spikyshield": [
+				"9M"
 			]
 		}
 	},
@@ -55460,7 +55469,7 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"zapcannon": [
 				"7V"
 			],
-			"partingshot": [
+			"powertrip": [
 				"9M"
 			],
 			"nightdaze": [
@@ -60208,6 +60217,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"trickroom": [
+				"9M"
+			],
+			"recycle": [
 				"9M"
 			]
 		}
@@ -88934,6 +88946,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"jawlock": [
 				"9M"
+			],
+			"wavecrash": [
+				"9M"
 			]
 		}
 	},
@@ -92505,9 +92520,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"megahorn": [
-				"9M"
-			],
-			"quiverdance": [
 				"9M"
 			],
 			"skittersmack": [
@@ -105289,6 +105301,18 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"flashfreeze": [
+				"9M"
+			],
+			"hyperfang": [
+				"9M"
+			],
+			"wideguard": [
+				"9M"
+			],
+			"slackoff": [
+				"9M"
+			],
+			"slushcrush": [
 				"9M"
 			]
 		}
@@ -136881,6 +136905,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"headlongrush": [
+				"9M"
+			],
+			"slushcrush": [
 				"9M"
 			]
 		}
@@ -186479,6 +186506,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"firefang": [
 				"9M"
+			],
+			"slushcrush": [
+				"9M"
 			]
 		}
 	},
@@ -220600,6 +220630,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"return": [
+				"9M"
+			],
+			"slushcrush": [
 				"9M"
 			]
 		}

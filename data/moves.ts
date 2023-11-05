@@ -21772,7 +21772,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		isNonstandard: "CAP",
 		category: "Status",
 		name: "Firewall",
-		pp: 10,
+		pp: 5,
 		priority: 4,
 		flags: {noassist: 1, failcopycat: 1},
 		stallingMove: true,
@@ -21998,8 +21998,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	flashfreeze: {
 		num: 0,
-		accuracy: 85,
 		isNonstandard: "CAP",
+		accuracy: 85,
 		basePower: 0,
 		category: "Status",
 		name: "Flash Freeze",
@@ -22019,9 +22019,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	slushcrush: {
 		num: 0,
+		isNonstandard: "CAP",
 		accuracy: 100,
 		basePower: 0,
-		isNonstandard: "CAP",
 		basePowerCallback(pokemon, target) {
 			const targetWeight = target.getWeight();
 			const pokemonWeight = pokemon.getWeight();
@@ -22051,6 +22051,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 				this.attrLastMove('[still]');
 				return null;
 			}
+		},
+		onPrepareHit(target, source, move) {
+			this.attrLastMove('[still]');
+			this.add('-anim', source, "Heavy Slam", target);
 		},
 		secondary: null,
 		target: "normal",

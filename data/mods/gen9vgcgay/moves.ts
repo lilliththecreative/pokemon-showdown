@@ -47,7 +47,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		basePower: 95,
 		accuracy: 85,
-		shortDesc: "30% to lower foe(s) Speed by 1. Hail: can't miss.",
+		shortDesc: "30% to lower foe(s) Speed by 1. Snow: can't miss.",
 		onModifyMove(move, pokemon, target) {
 			if (this.field.isWeather(['hail', 'snow'])) move.accuracy = true;
 		},
@@ -609,7 +609,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		secondary: {chance: 100, boosts: {def: -1}},
 	},
 	magneticflux: {
-		shortDesc: "Burns all other Steel types on field",
+		shortDesc: "Burns all other Steel types on field.",
 		onHitField(target, source) {
 			const targets: Pokemon[] = [];
 			for (const pokemon of this.getAllActive()) {
@@ -2072,12 +2072,21 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	shellsidearm: {
 		inherit: true,
 		isNonstandard: null,
+		flags: {protect: 1, mirror: 1, bullet: 1},
 	},
 	autotomize: {
 		inherit: true,
 		isNonstandard: null,
 	},
 	barrier: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	iceball: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	healblock: {
 		inherit: true,
 		isNonstandard: null,
 	},

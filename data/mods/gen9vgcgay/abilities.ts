@@ -387,6 +387,42 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			return this.chainModify([11, 10]);
 		}
 	},
+	hypercutter: {
+		inherit: true,
+		shortDesc: "Prevents this Pokemon's attack from ever being lowered.",
+		onTryBoost(boost, target, source, effect) {
+			if (boost.atk && boost.atk < 0) {
+				delete boost.atk;
+				if (!(effect as ActiveMove).secondaries) {
+					this.add("-fail", target, "unboost", "Attack", "[from] ability: Hyper Cutter", "[of] " + target);
+				}
+			}
+		},
+	},
+	unnerve: {
+		inherit: true,
+		shortDesc: "On switch-in, lowers the Special Attack of opponents by 1 stage.",
+		onPreStart(pokemon) {
+		},
+		onStart(pokemon) {
+			let activated = false;
+			for (const target of pokemon.adjacentFoes()) {
+				if (!activated) {
+					this.add('-ability', pokemon, 'Unnerve', 'boost');
+					activated = true;
+				}
+				if (target.volatiles['substitute']) {
+					this.add('-immune', target);
+				} else {
+					this.boost({spa: -1}, target, pokemon, null, true);
+				}
+			}
+		},
+		onEnd() {
+		},
+		onFoeTryEatItem() {
+		},
+	},
 	// Signature Ability Buffs
 	toxicchain: {
 		inherit: true,
@@ -552,9 +588,10 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	quickdraw: {
 		inherit: true,
-		shortDesc: "This Pokemon has a 50% chance to move first in its priority bracket with attacking move.",
+		shortDesc: "30% chance to move first in priority bracket with attack, 60% if Bullet Move.",
 		onFractionalPriority(priority, pokemon, target, move) {
-			if (move.category !== "Status" && this.randomChance(5, 10)) {
+			const numerator = (move.flags['bullet']) ? 6 : 3;
+			if (move.category !== "Status" && this.randomChance(numerator, 10)) {
 				this.add('-activate', pokemon, 'ability: Quick Draw');
 				return 0.1;
 			}
@@ -1856,6 +1893,18 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		isNonstandard: null,
 	},
 	tremorsense: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	regalmajesty: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	putridstench: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	windchime: {
 		inherit: true,
 		isNonstandard: null,
 	},

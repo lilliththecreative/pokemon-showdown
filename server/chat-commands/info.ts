@@ -865,6 +865,32 @@ export const commands: Chat.ChatCommands = {
 			`<code>!details [Pok\u00e9mon/item/move/ability/nature]</code>: show everyone these details. Requires: + % @ # &`
 		);
 	},
+	colorchange: 'colorchangeshower',
+	colorchangeshower(target, room, user) {
+		const buffer = [];
+		buffer.push(`${`Type attacked with: Type turned into`}`);
+		buffer.push(`${`Normal: Ghost`}`);
+		buffer.push(`${`Fighting: Ghost`}`);
+		buffer.push(`${`Flying: Rock`}`);
+		buffer.push(`${`Poison: Steel`}`);
+		buffer.push(`${`Ground: Flying`}`);
+		buffer.push(`${`Rock: Fighting`}`);
+		buffer.push(`${`Bug: Fire`}`);
+		buffer.push(`${`Ghost: Normal`}`);
+		buffer.push(`${`Steel: Steel`}`);
+		buffer.push(`${`Fire: Fire`}`);
+		buffer.push(`${`Water: Water`}`);
+		buffer.push(`${`Grass: Grass`}`);
+		buffer.push(`${`Electric: Ground`}`);
+		buffer.push(`${`Psychic: Dark`}`);
+		buffer.push(`${`Ice: Ice`}`);
+		buffer.push(`${`Dragon: Fairy`}`);
+		buffer.push(`${`Dark: Dark`}`);
+		buffer.push(`${`Fairy: Poison`}`);
+		buffer.push(`${`Prankster: Dark`}`);
+		buffer.push(`${`Powder: Grass`}`);
+		this.sendReplyBox(buffer.join('<br />'));
+	},
 
 	weaknesses: 'weakness',
 	weak: 'weakness',

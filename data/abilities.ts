@@ -5668,5 +5668,58 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		rating: 4,
 		num: -41,
-	}
+	},
+	regalmajesty: {
+		onFoeTryMove(target, source, move) {
+			const targetAllExceptions = ['perishsong', 'flowershield', 'rototiller'];
+			if (move.target === 'foeSide' || (move.target === 'all' && !targetAllExceptions.includes(move.id))) {
+				return;
+			}
+
+			const dazzlingHolder = this.effectState.target;
+			if ((source.isAlly(dazzlingHolder) || move.target === 'all') && move.priority > 0.1) {
+				this.attrLastMove('[still]');
+				this.add('cant', dazzlingHolder, 'ability: Queenly Majesty', move, '[of] ' + target);
+				return false;
+			}
+		},
+		isBreakable: true,
+		name: "Regal Majesty",
+		isNonstandard: "CAP",
+		rating: 2.5,
+		num: -42,
+	},
+	putridstench: {
+		onPreStart(pokemon) {
+			this.add('-ability', pokemon, 'Putrid Stench');
+			this.effectState.unnerved = true;
+		},
+		onStart(pokemon) {
+			if (this.effectState.unnerved) return;
+			this.add('-ability', pokemon, 'Putrid Stench');
+			this.effectState.unnerved = true;
+		},
+		onEnd() {
+			this.effectState.unnerved = false;
+		},
+		onFoeTryEatItem() {
+			return !this.effectState.unnerved;
+		},
+		onFoeTryHeal(relayVar, target, source, effect) {
+			if (this.effectState.unnerved && effect.name === "Leftovers") {
+				return false;
+			}
+		},
+		name: "Putrid Stench",
+		isNonstandard: "CAP",
+		rating: 1,
+		num: -43,
+	},
+	windchime: {
+		name: "Wind Chime",
+		isNonstandard: "CAP",
+		// implemented in runMove in battle-actions.ts
+		rating: 1.5,
+		num: -44,
+	},
 };

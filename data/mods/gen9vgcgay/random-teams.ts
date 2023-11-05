@@ -1,4 +1,5 @@
 import {RandomTeams} from './../../random-teams';
+import {ZeroAttackHPIVs} from './../../mods/gen7/random-teams';
 
 // Always useful items
 const USEFUL_ITEMS = [
@@ -23,16 +24,16 @@ const KINDA_NICHE_POKEMON = [
 	// Sand
 	'Lycanroc', 'Houndstone',
 	// Requires Specific Support but decent
-	'Flamigo', 'Dachsbun', 'Kricketune', 'Slurpuff', 'Castform', 'Linoone',
+	'Flamigo', 'Dachsbun', 'Kricketune', 'Slurpuff', 'Castform', 'Linoone', 'Hitmonlee',
 	// Unoptimized Sets
-	'Eelektross', 'Wyrdeer', 'Lurantis',
+	'Eelektross', 'Wyrdeer', 'Lurantis', 'Sawsbuck', 'Machamp', 'Delphox',
 	// Blobs
 	'Bastiodon', 'Vaporeon', 'Probopass', 'Shuckle',
 ];
 
 const HARD_TO_USE = [
-	// REquire TR
-	'Marowak', 'Cursola', 'Arboliva', 'Vikavolt',
+	// Require TR
+	'Marowak-Alola', 'Cursola', 'Arboliva', 'Vikavolt',
 	// Super frail
 	'Ninjask', 'Wugtrio', 'Eevee', 'Squawkabilly', 'Pikachu', 'Flapple', 'Raticate',
 	// Require Enemy
@@ -42,9 +43,11 @@ const HARD_TO_USE = [
 const CONSISTENT = [
 	'Heatran', 'Latios', 'Latias', 'Blissey', 'Iron Hands',
 	// Tailwind
-	'Whimsicott', 'Volbeat', 'Illumise', 'Tornadus',
+	'Whimsicott', 'Volbeat', 'Illumise', 'Tornadus', 'Aerodactyl',
 	// Follow Me
-	'Blastoise', 'Indeedee-F', 'Maushold', 'Magmortar',
+	'Blastoise', 'Indeedee-F', 'Maushold', 'Magmortar', 'Furret', 'Furfrou', 'Togekiss',
+	// Fake Out
+	'Lopunny', 'Hitmontop', 'Hitmonchan', 'Mr. Mime', 'Mr. Mime-Galar',
 ];
 
 const BITCHES = [
@@ -114,7 +117,11 @@ export class RandomGayTeams extends RandomTeams {
 		const role = set.role;
 		const movePool: string[] = [];
 		for (const movename of set.movepool) {
-			movePool.push(this.dex.moves.get(movename).id);
+			if (movename.startsWith("Hidden Power")) {
+				movePool.push("hiddenpower" + movename.substr(13).toLowerCase());
+			} else {
+				movePool.push(this.dex.moves.get(movename).id);
+			}
 		}
 		const teraTypes = set.teraTypes;
 		const teraType = this.sampleIfArray(teraTypes);
@@ -125,17 +132,44 @@ export class RandomGayTeams extends RandomTeams {
 		const evs = {hp: 85, atk: 85, def: 85, spa: 85, spd: 85, spe: 85};
 		const ivs = {hp: 31, atk: 31, def: 31, spa: 31, spd: 31, spe: 31};
 
-		const types = species.types;
-		const abilities = new Set(Object.values(species.abilities));
-		if (species.unreleasedHidden) abilities.delete(species.abilities.H);
+		// const types = species.types;
+		// const abilities = new Set(Object.values(species.abilities));
+		// if (species.unreleasedHidden) abilities.delete(species.abilities.H);
 
 		// Get moves
-		const moves = this.randomMoveset(types, abilities, teamDetails, species, isLead, isDoubles, movePool, teraType, role);
+		// const moves = this.randomMoveset(types, abilities, teamDetails, species, isLead, isDoubles, movePool, teraType, role);
+		const moves = new Set<string>();
+		for (const moveid of movePool) {
+			moves.add(moveid);
+		}
+		// moves = set["movepool"];
 		// const counter = this.queryMoves(moves, species, teraType, abilities);
+
+		// Shouldn't need to do this?
+		let hasHiddenPower = false;
+		for (const move of moves) {
+			if (move.startsWith('hiddenpower')) {
+				hasHiddenPower = true;
+			}
+		}
+		// Fix IVs for non-Bottle Cap-able sets
+		if (hasHiddenPower) {
+			let hpType;
+			for (const move of moves) {
+				if (move.startsWith('hiddenpower')) hpType = move.substr(11);
+			}
+			if (!hpType) throw new Error(`hasHiddenPower is true, but no Hidden Power move was found.`);
+			const HPivs = ivs.atk === 0 ? ZeroAttackHPIVs[hpType] : this.dex.types.get(hpType).HPivs;
+			let iv: StatID;
+			for (iv in HPivs) {
+				ivs[iv] = HPivs[iv]!;
+			}
+		}
 
 		// Get ability
 		// ability = this.getAbility(types, moves, abilities, counter, teamDetails, species, isLead, isDoubles, teraType, role);
 		ability = set["ability"];
+		if (ability === "Commander") ability = "Storm Drain";
 
 		// Get items
 		item = this.sampleIfArray(set["items"]);

@@ -901,7 +901,11 @@ export class RoomBattle extends RoomGames.RoomGame<RoomBattlePlayer> {
 		}
 		Chat.runHandlers('onBattleEnd', this, winnerid, [p1id, p2id, this.p3?.id, this.p4?.id].filter(Boolean));
 		const id = this.room.getReplayData().id.split("-")[1];
-		const link = "http://73.191.22.186:8001/replays/" + this.format + "/" + id + "_" + p1id + "_vs_" + p2id;
+		let format = this.format;
+		if (format.includes('@')) {
+			format = format.split('@')[0];
+		}
+		const link = "http://73.191.22.186:8001/replays/" + format + "/" + id + "_" + p1id + "_vs_" + p2id;
 		if (this.room.rated && !this.options.isSubBattle) {
 			this.room.rated = 0;
 			winner = Users.get(winnerid);

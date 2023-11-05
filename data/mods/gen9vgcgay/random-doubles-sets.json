@@ -529,9 +529,9 @@
 				"role": "Conversion Sweeper",
 				"movepool": [
 					"Conversion",
-					"Ice Beam",
+					"Thunderbolt",
 					"Techno Blast",
-					"Thunderbolt"
+					"Ice Beam"
 				],
 				"items": [
 					"Power Herb"
@@ -591,7 +591,7 @@
 					"Trick Room",
 					"Moonblast",
 					"Lunar Blessing",
-					"Helping Hand"
+					"Calm Mind"
 				],
 				"items": [
 					"Leftovers"
@@ -4168,6 +4168,22 @@
 				"teraTypes": [
 					"Steel"
 				]
+			},
+			{
+				"role": "Body Press",
+				"movepool": [
+					"Iron Defense",
+					"Body Press",
+					"Iron Head",
+					"Drain Punch"
+				],
+				"items": [
+					"Leftovers"
+				],
+				"ability": "Soundproof",
+				"teraTypes": [
+					"Steel"
+				]
 			}
 		]
 	},
@@ -4197,8 +4213,8 @@
 				"role": "Healer",
 				"movepool": [
 					"Heal Pulse",
-					"Aqua Ring",
-					"Light Screen",
+					"Protect",
+					"Scald",
 					"Wish"
 				],
 				"items": [
@@ -4571,6 +4587,22 @@
 				"ability": "Sand Stream",
 				"teraTypes": [
 					"Flying"
+				]
+			},
+			{
+				"role": "Dragon Dance",
+				"movepool": [
+					"Stone Edge",
+					"Dragon Dance",
+					"Tera Blast",
+					"Knock Off"
+				],
+				"items": [
+					"Sitrus Berry"
+				],
+				"ability": "Unnerve",
+				"teraTypes": [
+					"Ghost"
 				]
 			}
 		]
@@ -6652,6 +6684,22 @@
 				"teraTypes": [
 					"Normal"
 				]
+			},
+			{
+				"role": "Band",
+				"movepool": [
+					"Extreme Speed",
+					"Giga Impact",
+					"Stomping Tantrum",
+					"Play Rough"
+				],
+				"items": [
+					"Choice Band"
+				],
+				"ability": "Quick Feet",
+				"teraTypes": [
+					"Normal"
+				]
 			}
 		]
 	},
@@ -7420,7 +7468,7 @@
 				"items": [
 					"Air Balloon"
 				],
-				"ability": "Lava Crust",
+				"ability": "Water Compaction",
 				"teraTypes": [
 					"Fire"
 				]
@@ -7649,7 +7697,7 @@
 				"role": "Offensive",
 				"movepool": [
 					"Protect",
-					"Psychic",
+					"Psystrike",
 					"Focus Blast",
 					"Dazzling Gleam"
 				],
@@ -9439,7 +9487,7 @@
 				"role": "Offensive Sash",
 				"movepool": [
 					"Close Combat",
-					"Mach Punch",
+					"Fake Out",
 					"Endure",
 					"Rock Slide"
 				],
@@ -9972,7 +10020,7 @@
 					"Morning Sun"
 				],
 				"items": [
-					"Safety Goggles"
+					"Covert Cloak"
 				],
 				"ability": "Flame Body",
 				"teraTypes": [
@@ -10319,16 +10367,16 @@
 				"role": "Entrainment",
 				"movepool": [
 					"Entrainment",
-					"Baton Pass",
-					"Substitute",
+					"Iron Head",
+					"X-Scissor",
 					"Endeavor"
 				],
 				"items": [
-					"Occa Berry"
+					"Focus Sash"
 				],
 				"ability": "Truant",
 				"teraTypes": [
-					"Water"
+					"Ghost"
 				]
 			},
 			{
@@ -10681,6 +10729,22 @@
 				],
 				"items": [
 					"Assault Vest"
+				],
+				"ability": "Sinnohan Grit",
+				"teraTypes": [
+					"Rock"
+				]
+			},
+			{
+				"role": "Shell Smash",
+				"movepool": [
+					"Shell Smash",
+					"Wood Hammer",
+					"Headlong Rush",
+					"Rock Slide"
+				],
+				"items": [
+					"Sitrus Berry"
 				],
 				"ability": "Sinnohan Grit",
 				"teraTypes": [

@@ -1015,7 +1015,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		"abilities": {
 			"0": "Illuminate",
 			"1": "Natural Cure",
-			"H": "Analytic"
+			"H": "Victory Star"
 		},
 		"inherit": true
 	},
@@ -1128,11 +1128,11 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		],
 		"baseStats": {
 			"hp": 80,
-			"atk": 115,
+			"atk": 120,
 			"def": 105,
 			"spa": 30,
 			"spd": 70,
-			"spe": 100
+			"spe": 105
 		},
 		"abilities": {
 			"0": "Intimidate",
@@ -1148,11 +1148,11 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		],
 		"baseStats": {
 			"hp": 80,
-			"atk": 115,
+			"atk": 120,
 			"def": 105,
 			"spa": 30,
 			"spd": 70,
-			"spe": 100
+			"spe": 105
 		},
 		"abilities": {
 			"0": "Intimidate",
@@ -1253,7 +1253,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"abilities": {
 			"0": "Water Absorb",
-			"1": "Clear Body",
+			"1": "Sticky Hold",
 			"H": "Hydration"
 		},
 		"inherit": true
@@ -1264,10 +1264,10 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		],
 		"baseStats": {
 			"hp": 70,
-			"atk": 65,
-			"def": 60,
+			"atk": 60,
+			"def": 100,
 			"spa": 115,
-			"spd": 100,
+			"spd": 65,
 			"spe": 135
 		},
 		"abilities": {
@@ -1351,8 +1351,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"abilities": {
 			"0": "Rock Head",
-			"1": "Tough Claws",
-			"H": "Unnerve"
+			"1": "Pressure",
+			"H": "Tough Claws"
 		},
 		"inherit": true
 	},
@@ -1606,7 +1606,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"abilities": {
 			"0": "Insomnia",
-			"1": "Keen Eye",
+			"1": "Mind's Eye",
 			"H": "Tinted Lens"
 		},
 		"inherit": true
@@ -1637,12 +1637,12 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Poison"
 		],
 		"baseStats": {
-			"hp": 90,
+			"hp": 100,
 			"atk": 110,
 			"def": 90,
 			"spa": 80,
 			"spd": 90,
-			"spe": 50
+			"spe": 70
 		},
 		"abilities": {
 			"0": "Swarm",
@@ -1901,7 +1901,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"abilities": {
 			"0": "Curious Medicine",
-			"1": "Own Tempo",
+			"1": "Regal Majesty",
 			"H": "Regenerator"
 		},
 		"inherit": true
@@ -2359,11 +2359,11 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Normal"
 		],
 		"baseStats": {
-			"hp": 210,
+			"hp": 255,
 			"atk": 120,
-			"def": 105,
+			"def": 80,
 			"spa": 40,
-			"spd": 35,
+			"spd": 20,
 			"spe": 60
 		},
 		"abilities": {
@@ -2766,7 +2766,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		],
 		"baseStats": {
 			"hp": 1,
-			"atk": 100,
+			"atk": 110,
 			"def": 45,
 			"spa": 30,
 			"spd": 30,
@@ -2845,9 +2845,9 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"hp": 50,
 			"atk": 85,
 			"def": 105,
-			"spa": 40,
+			"spa": 45,
 			"spd": 95,
-			"spe": 20
+			"spe": 25
 		},
 		"abilities": {
 			"0": "Keen Eye",
@@ -2864,9 +2864,9 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		"baseStats": {
 			"hp": 50,
 			"atk": 80,
-			"def": 95,
+			"def": 100,
 			"spa": 55,
-			"spd": 65,
+			"spd": 70,
 			"spe": 50
 		},
 		"abilities": {
@@ -3547,19 +3547,18 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	},
 	"chimecho": {
 		"types": [
-			"Psychic",
-			"Steel"
+			"Psychic"
 		],
 		"baseStats": {
 			"hp": 100,
 			"atk": 55,
-			"def": 95,
-			"spa": 105,
-			"spd": 105,
+			"def": 90,
+			"spa": 100,
+			"spd": 100,
 			"spe": 70
 		},
 		"abilities": {
-			"0": "Levitate"
+			"0": "Wind Chime"
 		},
 		"inherit": true
 	},
@@ -3607,17 +3606,17 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Water"
 		],
 		"baseStats": {
-			"hp": 110,
-			"atk": 80,
+			"hp": 120,
+			"atk": 85,
 			"def": 90,
 			"spa": 95,
 			"spd": 90,
-			"spe": 65
+			"spe": 60
 		},
 		"abilities": {
 			"0": "Thick Fat",
 			"1": "Ice Body",
-			"H": "Oblivious"
+			"H": "Regal Majesty"
 		},
 		"inherit": true
 	},
@@ -4353,7 +4352,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"spe": 84
 		},
 		"abilities": {
-			"0": "Stench",
+			"0": "Putrid Stench",
 			"1": "Aftermath",
 			"H": "Neutralizing Gas"
 		},
@@ -5165,6 +5164,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"abilities": {
 			"0": "Overgrow",
+			"1": "Regal Magesty",
 			"H": "Contrary"
 		},
 		"inherit": true
@@ -5184,6 +5184,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"abilities": {
 			"0": "Blaze",
+			"1": "Thick Fat",
 			"H": "Reckless"
 		},
 		"inherit": true
@@ -5203,6 +5204,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"abilities": {
 			"0": "Torrent",
+			"1": "Shell Armor",
 			"H": "Sharpness"
 		},
 		"inherit": true
@@ -5765,7 +5767,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"spe": 30
 		},
 		"abilities": {
-			"0": "Mummy"
+			"0": "Mummy",
+			"H": "Good As Gold"
 		},
 		"inherit": true
 	},
@@ -5820,7 +5823,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"spe": 86
 		},
 		"abilities": {
-			"0": "Stench",
+			"0": "Putrid Stench",
 			"1": "Poison Touch",
 			"H": "Aftermath"
 		},
@@ -6366,7 +6369,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	},
 	"bouffalant": {
 		"types": [
-			"Normal"
+			"Normal",
+			"Rock"
 		],
 		"baseStats": {
 			"hp": 105,
@@ -7369,8 +7373,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Rock"
 		],
 		"baseStats": {
-			"hp": 100,
-			"atk": 137,
+			"hp": 95,
+			"atk": 132,
 			"def": 184,
 			"spa": 34,
 			"spd": 36,
@@ -7888,7 +7892,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"abilities": {
 			"0": "Leaf Guard",
-			"1": "Queenly Majesty",
+			"1": "Regal Majesty",
 			"H": "Sweet Veil"
 		},
 		"inherit": true
@@ -9830,8 +9834,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	},
 	"ursaluna": {
 		"types": [
-			"Ground",
-			"Normal"
+			"Normal",
+			"Ground"
 		],
 		"baseStats": {
 			"hp": 130,
@@ -9844,7 +9848,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		"abilities": {
 			"0": "Guts",
 			"1": "Bulletproof",
-			"H": "Unnerve"
+			"H": "Honey Gather"
 		},
 		"inherit": true
 	},

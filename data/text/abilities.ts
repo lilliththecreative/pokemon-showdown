@@ -2409,4 +2409,21 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		shortDesc: "User and Ally avoid all ground attacks.",
 		desc: "User and Ally avoid all ground attacks.",
 	},
+	regalmajesty: {
+		name: "Regal Majesty",
+		desc: "Priority moves used by opposing Pokemon targeting this Pokemon or its allies are prevented from having an effect.",
+		shortDesc: "This Pokemon and its allies are protected from opposing priority moves.",
+		block: "#damp",
+	},
+	putridstench: {
+		name: "Putrid Stench",
+		desc: "While this Pokemon is active, it prevents opposing Pokemon from using their Berries or Leftovers. This Ability activates before hazards and other Abilities take effect.",
+		shortDesc: "While Pokemon is active, it prevents opposing Pokemon from eating Berries or Leftovers.",
+		start: "  [TEAM] is too nervous to eat Food!",
+	},
+	windchime: {
+		name: "Wind Chime",
+		desc: "When any pokemon uses a Wind move, this pokemon uses Echoed Voice.",
+		shortDesc: "When any pokemon uses a Wind move, this pokemon uses Echoed Voice.",
+	},
 };
