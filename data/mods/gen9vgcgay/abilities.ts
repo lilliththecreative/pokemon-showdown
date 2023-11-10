@@ -299,13 +299,13 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 		},
 	},
-	cheekpouch: {
-		inherit: true,
-		shortDesc: "If this Pokemon eats a Berry, it restores 1/2 of its max HP after the Berry's effect.",
-		onEatItem(item, pokemon) {
-			this.heal(pokemon.baseMaxhp / 2);
-		},
-	},
+	// cheekpouch: {
+	// 	inherit: true,
+	// 	shortDesc: "If this Pokemon eats a Berry, it restores 1/2 of its max HP after the Berry's effect.",
+	// 	onEatItem(item, pokemon) {
+	// 		this.heal(pokemon.baseMaxhp / 2);
+	// 	},
+	// },
 	justified: {
 		inherit: true,
 		shortDesc: "Immune to Intimidate, +1 Atk, SpA after damaged by a Dark-type move.",
@@ -1205,7 +1205,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	defeatist: {
 		inherit: true,
-		shortDesc: "While this Pokemon has > 1/3 max HP, its Attack and Sp. Atk are halved.",
+		shortDesc: "While this Pokemon has <= 1/3 max HP, its Attack and Sp. Atk are halved.",
 		onModifyAtk(atk, pokemon) {
 			if (pokemon.hp <= pokemon.maxhp / 3) {
 				return this.chainModify(0.5);

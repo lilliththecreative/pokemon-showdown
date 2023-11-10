@@ -2363,8 +2363,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"atk": 120,
 			"def": 80,
 			"spa": 40,
-			"spd": 20,
-			"spe": 60
+			"spd": 15,
+			"spe": 55
 		},
 		"abilities": {
 			"0": "Scrappy",
@@ -3550,10 +3550,10 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Psychic"
 		],
 		"baseStats": {
-			"hp": 100,
+			"hp": 85,
 			"atk": 55,
 			"def": 90,
-			"spa": 100,
+			"spa": 95,
 			"spd": 100,
 			"spe": 70
 		},
@@ -4893,7 +4893,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Ghost"
 		],
 		"baseStats": {
-			"hp": 50,
+			"hp": 45,
 			"atk": 110,
 			"def": 135,
 			"spa": 65,
@@ -5164,7 +5164,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"abilities": {
 			"0": "Overgrow",
-			"1": "Regal Magesty",
+			"1": "Regal Majesty",
 			"H": "Contrary"
 		},
 		"inherit": true
@@ -5768,7 +5768,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"abilities": {
 			"0": "Mummy",
-			"H": "Good As Gold"
+			"H": "Frisk"
 		},
 		"inherit": true
 	},
@@ -6189,7 +6189,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"abilities": {
 			"0": "Flash Fire",
-			"1": "Flame Body",
+			"1": "Shadow Tagged",
 			"H": "Infiltrator"
 		},
 		"inherit": true

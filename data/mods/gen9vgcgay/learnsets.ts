@@ -49067,6 +49067,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"focusenergy": [
 				"9M"
+			],
+			"aeroblast": [
+				"9M"
 			]
 		}
 	},
@@ -74479,6 +74482,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"thunder": [
+				"9M"
+			],
+			"aeroblast": [
 				"9M"
 			]
 		}
@@ -117864,6 +117870,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"fly": [
 				"9M"
+			],
+			"aeroblast": [
+				"9M"
 			]
 		}
 	},
@@ -121311,6 +121320,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"hurricane": [
+				"9M"
+			],
+			"bleakwindstorm": [
 				"9M"
 			]
 		}
@@ -124774,6 +124786,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"hurricane": [
+				"9M"
+			],
+			"aeroblast": [
 				"9M"
 			]
 		}
@@ -170825,6 +170840,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"stalacbite": [
 				"9M"
+			],
+			"leechlife": [
+				"9M"
 			]
 		}
 	},
@@ -186955,6 +186973,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"6M"
 			],
 			"aurasphere": [
+				"9M"
+			],
+			"bleakwindstorm": [
 				"9M"
 			]
 		}
