@@ -24,18 +24,20 @@ const KINDA_NICHE_POKEMON = [
 	// Sand
 	'Lycanroc', 'Houndstone',
 	// Requires Specific Support but decent
-	'Flamigo', 'Dachsbun', 'Kricketune', 'Slurpuff', 'Castform', 'Linoone', 'Hitmonlee', 'Hawlucha',
+	'Flamigo', 'Dachsbun', 'Kricketune', 'Slurpuff', 'Castform', 'Linoone', 'Hitmonlee', 'Hawlucha', 'Oinkologne',
+	// Specific Support
+	'Weezing-Galar', 'Skuntank', 'Charjabug', 'Espathra',
 	// Unoptimized Sets
-	'Eelektross', 'Wyrdeer', 'Lurantis', 'Sawsbuck', 'Machamp', 'Delphox', 'Skuntank',
+	'Eelektross', 'Wyrdeer', 'Lurantis', 'Sawsbuck', 'Machamp',
 	// Blobs
 	'Bastiodon', 'Vaporeon', 'Probopass', 'Shuckle', 'Walrein',
 ];
 
 const HARD_TO_USE = [
 	// Require TR
-	'Marowak-Alola', 'Cursola', 'Arboliva', 'Vikavolt', 'Camerupt',
+	'Marowak-Alola', 'Cursola', 'Arboliva', 'Vikavolt', 'Camerupt', 'Exeggutor-Alola',
 	// Super frail
-	'Ninjask', 'Wugtrio', 'Eevee', 'Squawkabilly', 'Pikachu', 'Flapple', 'Raticate',
+	'Ninjask', 'Wugtrio', 'Eevee', 'Squawkabilly', 'Pikachu', 'Flapple', 'Raticate', 'Dugtrio-Alola',
 	// Require Enemy
 	'Brambleghast', 'Shiftry', 'Klawf',
 ];
@@ -47,7 +49,7 @@ const CONSISTENT = [
 	// Follow Me
 	'Blastoise', 'Indeedee-F', 'Maushold', 'Magmortar', 'Furret', 'Furfrou', 'Togekiss',
 	// Fake Out
-	'Lopunny', 'Hitmontop', 'Hitmonchan', 'Mr. Mime', 'Mr. Mime-Galar',
+	'Lopunny', 'Hitmontop', 'Hitmonchan', 'Mr. Mime', 'Mr. Mime-Galar', 'Accelgor',
 ];
 
 const BITCHES = [
@@ -102,18 +104,25 @@ export class RandomGayTeams extends RandomTeams {
 		// 	forme = this.sample([species.name].concat(species.cosmeticFormes));
 		// }
 		const sets = (this as any)[`random${isDoubles ? 'Doubles' : ''}Sets`][species.id]["sets"];
-		// const possibleSets = [];
+		let possibleSets = [];
 
 		// const ruleTable = this.dex.formats.getRuleTable(this.format);
 
-		// for (const set of sets) {
-		// 	// Prevent Tera Blast user if the team already has one, or if Terastallizion is prevented.
-		// 	if ((teamDetails.teraBlast || ruleTable.has('terastalclause')) && set.role === 'Tera Blast user') {
-		// 		continue;
-		// 	}
-		// 	possibleSets.push(set);
-		// }
-		const set = this.sampleIfArray(sets);
+		for (const set of sets) {
+			// Prevent Tera Blast user if the team already has one, or if Terastallizion is prevented.
+			// if ((teamDetails.teraBlast || ruleTable.has('terastalclause')) && set.role === 'Tera Blast user') {
+			// 	continue;
+			// }
+			// Try to get set with unused item, else default
+			if (this.items.includes(set["items"][0])) {
+				continue;
+			}
+			possibleSets.push(set);
+		}
+		if (possibleSets.length === 0) {
+			possibleSets = sets;
+		}
+		const set = this.sampleIfArray(possibleSets);
 		const role = set.role;
 		const movePool: string[] = [];
 		for (const movename of set.movepool) {

@@ -940,7 +940,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "10U",
 	},
 	vigoroth: {
-		tier: "SU",
+		tier: "SUBL",
 	},
 	slaking: {
 		tier: "SUBL",
@@ -1009,7 +1009,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "NU",
 	},
 	plusle: {
-		tier: "SU",
+		tier: "SUBL",
 	},
 	minun: {
 		tier: "SU",
@@ -1207,7 +1207,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "8U",
 	},
 	shelgon: {
-		tier: "SU",
+		tier: "SUBL",
 	},
 	salamence: {
 		tier: "Uber",
