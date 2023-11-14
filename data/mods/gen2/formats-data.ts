@@ -333,7 +333,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "OU",
 	},
 	cubone: {
-		tier: "NU",
+		tier: "PU",
 	},
 	marowak: {
 		tier: "OU",
