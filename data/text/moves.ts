@@ -264,8 +264,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		start: "  [POKEMON] fell in love!",
 		startFromItem: "  [POKEMON] fell in love because of the [ITEM]!",
 		end: "  [POKEMON] got over its infatuation!",
-		// endFromItem: "  [POKEMON] cured its infatuation using its [ITEM]!",
-		endFromItem: "  [POKEMON] got broken up with using her [ITEM]!",
+		endFromItem: "  [POKEMON] cured its infatuation using its [ITEM]!",
 		activate: "  [POKEMON] is in love with [TARGET]!",
 		cant: "[POKEMON] is immobilized by love!",
 	},
@@ -7530,5 +7529,16 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Slush Crush",
 		desc: "The power of this move depends on (user's weight / target's weight), rounded down. Power is equal to 120 if the result is 5 or more, 100 if 4, 80 if 3, 60 if 2, and 40 if 1 or less. Damage doubles and no accuracy check is done if the target has used Minimize while active.",
 		shortDesc: "More power the heavier the user than the target.",
+	},
+	proposition: {
+		name: "Proposition",
+		desc: "Causes the target to become infatuated, making it unable to attack 50% of the time, regardless of gender. Fails if the target is already infatuated. The effect ends when either the user or the target is no longer active. Pokemon with the Oblivious Ability or protected by the Aroma Veil Ability are immune.",
+		shortDesc: "A target of the any gender gets infatuated.",
+
+		start: "  [POKEMON] accepts the proposition!",
+		end: "  [POKEMON] got over its infatuation!",
+		endFromItem: "  [POKEMON] cured its infatuation using its [ITEM]!",
+		activate: "  [POKEMON] is considering the proposition with [TARGET]!",
+		cant: "[POKEMON] is taking the proposition!",
 	},
 };

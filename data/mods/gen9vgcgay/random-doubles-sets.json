@@ -368,6 +368,21 @@
 				"teraTypes": [
 					"Flying"
 				]
+			},
+			{
+				"role": "Calm Mind",
+				"movepool": [
+					"Calm Mind",
+					"Protect",
+					"Hurricane"
+				],
+				"items": [
+					"Leftovers"
+				],
+				"ability": "Simple",
+				"teraTypes": [
+					"Fairy"
+				]
 			}
 		]
 	},
@@ -515,6 +530,22 @@
 				],
 				"items": [
 					"Choice Band"
+				],
+				"ability": "Hustle",
+				"teraTypes": [
+					"Ice"
+				]
+			},
+			{
+				"role": "Physical Sash",
+				"movepool": [
+					"Brave Bird",
+					"Ice Shard",
+					"Ice Spinner",
+					"Fake Out"
+				],
+				"items": [
+					"Focus Sash"
 				],
 				"ability": "Hustle",
 				"teraTypes": [
@@ -1551,6 +1582,22 @@
 				"ability": "Wind Chime",
 				"teraTypes": [
 					"Fire"
+				]
+			},
+			{
+				"role": "Calm Mind",
+				"movepool": [
+					"Calm Mind",
+					"Stored Power",
+					"Dazzling Gleam",
+					"Iron Defense"
+				],
+				"items": [
+					"Leftovers"
+				],
+				"ability": "Wind Chime",
+				"teraTypes": [
+					"Fairy"
 				]
 			}
 		]
@@ -6164,6 +6211,22 @@
 				"teraTypes": [
 					"Normal"
 				]
+			},
+			{
+				"role": "Calm Mind",
+				"movepool": [
+					"Calm Mind",
+					"Protect",
+					"Moonblast",
+					"Fire Blast"
+				],
+				"items": [
+					"Leftovers"
+				],
+				"ability": "Friend Guard",
+				"teraTypes": [
+					"Fire"
+				]
 			}
 		]
 	},
@@ -6966,7 +7029,7 @@
 				],
 				"ability": "Chlorophyll",
 				"teraTypes": [
-					"Ground"
+					"Electric"
 				]
 			}
 		]
@@ -8473,22 +8536,22 @@
 			}
 		]
 	},
-	"specialdelphox": {
+	"delphox": {
 		"sets": [
 			{
-				"role": "Standard",
+				"role": "Special LO",
 				"movepool": [
 					"Overheat",
 					"Psychic",
-					"Will-O-Wisp",
-					"Focus Blast"
+					"Dazzling Gleam",
+					"Protect"
 				],
 				"items": [
-					"None"
+					"Life Orb"
 				],
-				"ability": "Magician",
+				"ability": "Magic Guard",
 				"teraTypes": [
-					"Fire"
+					"Fairy"
 				]
 			}
 		]
@@ -8764,7 +8827,7 @@
 	"skuntank": {
 		"sets": [
 			{
-				"role": "Support",
+				"role": "Anti-Ability",
 				"movepool": [
 					"Feint",
 					"Gunk Shot",
@@ -8926,9 +8989,9 @@
 				"items": [
 					"Mystic Water"
 				],
-				"ability": "Psychic Surge",
+				"ability": "Dazzling",
 				"teraTypes": [
-					"Water"
+					"Grass"
 				]
 			}
 		]
@@ -9027,6 +9090,22 @@
 					"Choice Band"
 				],
 				"ability": "Sand Rush",
+				"teraTypes": [
+					"Water"
+				]
+			},
+			{
+				"role": "Scarf Jaw",
+				"movepool": [
+					"Fishious Rend",
+					"Psychic Fangs",
+					"Dragon Rush",
+					"Sleep Talk"
+				],
+				"items": [
+					"Choice Scarf"
+				],
+				"ability": "Strong Jaw",
 				"teraTypes": [
 					"Water"
 				]
@@ -9316,9 +9395,9 @@
 	"ariados": {
 		"sets": [
 			{
-				"role": "Toxic Spread",
+				"role": "Special Threader",
 				"movepool": [
-					"Electroweb",
+					"Tera Blast",
 					"Toxic Thread",
 					"Venoshock",
 					"Bug Buzz"
@@ -9328,7 +9407,23 @@
 				],
 				"ability": "Merciless",
 				"teraTypes": [
-					"Bug"
+					"Ground"
+				]
+			},
+			{
+				"role": "Physical Threader",
+				"movepool": [
+					"Megahorn",
+					"Toxic Thread",
+					"Stomping Tantrum",
+					"Protect"
+				],
+				"items": [
+					"Sitrus Berry"
+				],
+				"ability": "Merciless",
+				"teraTypes": [
+					"Ground"
 				]
 			}
 		]
@@ -9898,6 +9993,22 @@
 				"teraTypes": [
 					"Fire"
 				]
+			},
+			{
+				"role": "Physical",
+				"movepool": [
+					"Swords Dance",
+					"Flare Blitz",
+					"Outrage",
+					"Headlong Rush"
+				],
+				"items": [
+					"Life Orb"
+				],
+				"ability": "Tough Claws",
+				"teraTypes": [
+					"Ground"
+				]
 			}
 		]
 	},
@@ -10038,6 +10149,22 @@
 				"teraTypes": [
 					"Electric"
 				]
+			},
+			{
+				"role": "Specs",
+				"movepool": [
+					"Steel Beam",
+					"Draco Meteor",
+					"G-Max Depletion",
+					"Thunderbolt"
+				],
+				"items": [
+					"Choice Specs"
+				],
+				"ability": "Rampage",
+				"teraTypes": [
+					"Dragon"
+				]
 			}
 		]
 	},
@@ -10156,7 +10283,7 @@
 				]
 			},
 			{
-				"role": "Special",
+				"role": "Special LO",
 				"movepool": [
 					"Focus Blast",
 					"Moonblast",
@@ -10164,7 +10291,7 @@
 					"Wide Guard"
 				],
 				"items": [
-					"Focus Sash"
+					"Life Orb"
 				],
 				"ability": "Quark Drive",
 				"teraTypes": [
@@ -10386,6 +10513,22 @@
 				"teraTypes": [
 					"Dark"
 				]
+			},
+			{
+				"role": "Physical Sash",
+				"movepool": [
+					"Wave Crash",
+					"Close Combat",
+					"Crunch",
+					"Protect"
+				],
+				"items": [
+					"Life Orb"
+				],
+				"ability": "Speed Boost",
+				"teraTypes": [
+					"Dark"
+				]
 			}
 		]
 	},
@@ -10513,6 +10656,22 @@
 				],
 				"items": [
 					"Choice Scarf"
+				],
+				"ability": "Scrappy",
+				"teraTypes": [
+					"Ghost"
+				]
+			},
+			{
+				"role": "Bulky LO",
+				"movepool": [
+					"Triple Arrows",
+					"Spirit Shackle",
+					"Thousand Arrows",
+					"Protect"
+				],
+				"items": [
+					"Life Orb"
 				],
 				"ability": "Scrappy",
 				"teraTypes": [
@@ -11379,6 +11538,22 @@
 					"Sitrus Berry"
 				],
 				"ability": "Sand Rush",
+				"teraTypes": [
+					"Fairy"
+				]
+			},
+			{
+				"role": "Bulky Support",
+				"movepool": [
+					"Last Respects",
+					"Will-O-Wisp",
+					"Howl",
+					"Play Rough"
+				],
+				"items": [
+					"Sitrus Berry"
+				],
+				"ability": "Fluffy",
 				"teraTypes": [
 					"Fairy"
 				]
@@ -12442,6 +12617,22 @@
 				"teraTypes": [
 					"Ghost"
 				]
+			},
+			{
+				"role": "Swords Dance",
+				"movepool": [
+					"Swords Dance",
+					"Poltergeist",
+					"Shadow Sneak",
+					"Flame Charge"
+				],
+				"items": [
+					"Life Orb"
+				],
+				"ability": "Disguise",
+				"teraTypes": [
+					"Ghost"
+				]
 			}
 		]
 	},
@@ -12517,6 +12708,22 @@
 				],
 				"items": [
 					"Sitrus Berry"
+				],
+				"ability": "Huge Power",
+				"teraTypes": [
+					"Water"
+				]
+			},
+			{
+				"role": "Band",
+				"movepool": [
+					"Aqua Jet",
+					"Play Rough",
+					"Liquidation",
+					"Superpower"
+				],
+				"items": [
+					"Choice Band"
 				],
 				"ability": "Huge Power",
 				"teraTypes": [
@@ -12669,6 +12876,22 @@
 				],
 				"items": [
 					"Life Orb"
+				],
+				"ability": "Dry Skin",
+				"teraTypes": [
+					"Fighting"
+				]
+			},
+			{
+				"role": "Sash Lead",
+				"movepool": [
+					"Vacuum Wave",
+					"Sludge Bomb",
+					"Taunt",
+					"Fake Out"
+				],
+				"items": [
+					"Focus Sash"
 				],
 				"ability": "Poison Touch",
 				"teraTypes": [

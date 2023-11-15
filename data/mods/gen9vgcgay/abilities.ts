@@ -834,33 +834,31 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		shortDesc: "This pokemon and its allies cannot be statused, cure on switch in.",
 		onStart(pokemon) {
 			for (const ally of pokemon.alliesAndSelf()) {
-				if (['psn', 'tox', 'brn', 'slp', 'fst'].includes(ally.status)) {
+				if (ally.status) {
 					this.add('-activate', pokemon, 'ability: Pastel Veil');
 					ally.cureStatus();
 				}
 			}
 		},
 		onUpdate(pokemon) {
-			if (['psn', 'tox', 'brn', 'slp', 'fst'].includes(pokemon.status)) {
+			if (pokemon.status) {
 				this.add('-activate', pokemon, 'ability: Pastel Veil');
 				pokemon.cureStatus();
 			}
 		},
 		onAllySwitchIn(pokemon) {
-			if (['psn', 'tox', 'brn', 'slp', 'fst'].includes(pokemon.status)) {
+			if (pokemon.status) {
 				this.add('-activate', this.effectState.target, 'ability: Pastel Veil');
 				pokemon.cureStatus();
 			}
 		},
 		onSetStatus(status, target, source, effect) {
-			if (!['psn', 'tox', 'brn', 'slp', 'fst'].includes(status.id)) return;
 			if ((effect as Move)?.status) {
 				this.add('-immune', target, '[from] ability: Pastel Veil');
 			}
 			return false;
 		},
 		onAllySetStatus(status, target, source, effect) {
-			if (!['psn', 'tox', 'brn', 'slp', 'fst'].includes(status.id)) return;
 			if ((effect as Move)?.status) {
 				const effectHolder = this.effectState.target;
 				this.add('-block', target, 'ability: Pastel Veil', '[of] ' + effectHolder);

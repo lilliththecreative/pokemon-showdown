@@ -462,7 +462,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"spe": 95
 		},
 		"abilities": {
-			"0": "Damp",
+			"0": "Mind Surfer",
 			"1": "Cloud Nine",
 			"H": "Swift Swim"
 		},
@@ -789,11 +789,11 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Water"
 		],
 		"baseStats": {
-			"hp": 65,
+			"hp": 60,
 			"atk": 130,
-			"def": 115,
+			"def": 120,
 			"spa": 50,
-			"spd": 50,
+			"spd": 55,
 			"spe": 75
 		},
 		"abilities": {
@@ -1593,7 +1593,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	},
 	"noctowl": {
 		"types": [
-			"Normal",
+			"Dark",
 			"Flying"
 		],
 		"baseStats": {
@@ -6124,7 +6124,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Steel"
 		],
 		"baseStats": {
-			"hp": 70,
+			"hp": 65,
 			"atk": 105,
 			"def": 120,
 			"spa": 70,
