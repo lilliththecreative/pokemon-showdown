@@ -552,32 +552,32 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		accuracy: 80,
 	},
-	snatch: {
-		inherit: true,
-		isNonstandard: null,
-		shortDesc: "User steals certain support moves for it and allies to use.",
-		condition: {
-			duration: 1,
-			onStart(pokemon) {
-				this.add('-singleturn', pokemon, 'Snatch');
-			},
-			onAnyPrepareHitPriority: -1,
-			onAnyPrepareHit(source, target, move) {
-				const snatchUser = this.effectState.source;
-				if (snatchUser.isSkyDropped()) return;
-				if (!move || move.isZ || move.isMax || !move.flags['snatch'] || move.sourceEffect === 'snatch') {
-					return;
-				}
-				snatchUser.removeVolatile('snatch');
-				this.add('-activate', snatchUser, 'move: Snatch', '[of] ' + source);
-				this.actions.useMove(move.id, snatchUser);
-				for (const ally of (snatchUser as Pokemon).adjacentAllies()) {
-					this.actions.useMove(move.id, ally);
-				}
-				return null;
-			},
-		},
-	},
+	// snatch: {
+	// 	inherit: true,
+	// 	isNonstandard: null,
+	// 	shortDesc: "User steals certain support moves for it and allies to use.",
+	// 	condition: {
+	// 		duration: 1,
+	// 		onStart(pokemon) {
+	// 			this.add('-singleturn', pokemon, 'Snatch');
+	// 		},
+	// 		onAnyPrepareHitPriority: -1,
+	// 		onAnyPrepareHit(source, target, move) {
+	// 			const snatchUser = this.effectState.source;
+	// 			if (snatchUser.isSkyDropped()) return;
+	// 			if (!move || move.isZ || move.isMax || !move.flags['snatch'] || move.sourceEffect === 'snatch') {
+	// 				return;
+	// 			}
+	// 			snatchUser.removeVolatile('snatch');
+	// 			this.add('-activate', snatchUser, 'move: Snatch', '[of] ' + source);
+	// 			this.actions.useMove(move.id, snatchUser);
+	// 			for (const ally of (snatchUser as Pokemon).adjacentAllies()) {
+	// 				this.actions.useMove(move.id, ally);
+	// 			}
+	// 			return null;
+	// 		},
+	// 	},
+	// },
 	// Fang Buff
 	hyperfang: {
 		inherit: true,
@@ -1849,10 +1849,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	firewall: {
-		inherit: true,
-		isNonstandard: null,
-	},
+	// firewall: {
+	// 	inherit: true,
+	// 	isNonstandard: null,
+	// },
 	stalacbite: {
 		inherit: true,
 		isNonstandard: null,

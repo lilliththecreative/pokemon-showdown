@@ -2427,9 +2427,9 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		shortDesc: "When any pokemon uses a Wind move, this pokemon uses Echoed Voice.",
 	},
 	machinelearning: {
-		name: "",
-		desc: "On switch-in, this Pokemon's Attack or Special Attack is raised by 1 stage based on the weaker combined defensive stat of all opposing Pokemon. Attack is raised if their Defense is lower, and Special Attack is raised if their Special Defense is the same or lower.",
-		shortDesc: "On switch-in, Attack or Sp. Atk is raised 1 stage based on the foes' weaker Defense.",
+		name: "Machine Learning",
+		desc: "Boosts Def on physical damage, boosts SpD on special damage. Resets on new hit.",
+		shortDesc: "Boosts Def on physical damage, boosts SpD on special damage.",
 		// boost: "  [POKEMON] learned to boost [STAT]!",
 		// unboost: "  [POKEMON] forgot how to boost [STAT]!",
 	},

@@ -5731,13 +5731,17 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				if (this.effectState.lastBoost === 'P') {
 					this.boost({def: -1});
 				}
-				this.boost({spd: 1});
+				if (this.effectState.lastBoost !== 'S') {
+					this.boost({spd: 1});
+				}
 				this.effectState.lastBoost = "S";
 			} else if (move.category === "Physical") {
 				if (this.effectState.lastBoost === 'S') {
 					this.boost({spd: -1});
 				}
-				this.boost({def: 1});
+				if (this.effectState.lastBoost !== 'P') {
+					this.boost({spd: 1});
+				}
 				this.effectState.lastBoost = "P";
 			}
 		},

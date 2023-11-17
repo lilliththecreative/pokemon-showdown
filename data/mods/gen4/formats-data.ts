@@ -228,7 +228,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "9U",
 	},
 	weepinbell: {
-		tier: "SU",
+		tier: "IU",
 	},
 	victreebel: {
 		tier: "PU",
