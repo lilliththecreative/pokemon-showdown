@@ -306,14 +306,14 @@ export const Formats: FormatList = [
 		banlist: ['ZU', 'SUBL'],
 	},
 	{
-		name: "[Gen 4] 7U",
+		name: "[Gen 4] IU",
 		threads: [
 			`&bullet; <a href="https://docs.google.com/document/d/1Ff5EmG9LQvwO3iQINTgz00YVbdlnz8MJFcISNdePo0U">DPP 7U</a>`,
 		],
 		mod: 'gen4',
 		searchShow: true,
 		ruleset: ['[Gen 4] SU'],
-		banlist: ['SU', '7UBL'],
+		banlist: ['SU', 'IUBL'],
 		unbanlist: ['Damp Rock'],
 	},
 	{
@@ -323,8 +323,8 @@ export const Formats: FormatList = [
 		],
 		mod: 'gen4',
 		searchShow: true,
-		ruleset: ['[Gen 4] 7U'],
-		banlist: ['7U', '8UBL'],
+		ruleset: ['[Gen 4] IU'],
+		banlist: ['IU', '8UBL'],
 	},
 	{
 		name: "[Gen 4] 9U",

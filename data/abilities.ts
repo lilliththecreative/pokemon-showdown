@@ -5722,4 +5722,28 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 1.5,
 		num: -44,
 	},
+	machinelearning: {
+		onSwitchIn(pokemon) {
+			this.effectState.lastBoost = 'N';
+		},
+		onDamagingHit(damage, target, source, move) {
+			if (move.category === "Special") {
+				if (this.effectState.lastBoost === 'P') {
+					this.boost({def: -1});
+				}
+				this.boost({spd: 1});
+				this.effectState.lastBoost = "S";
+			} else if (move.category === "Physical") {
+				if (this.effectState.lastBoost === 'S') {
+					this.boost({spd: -1});
+				}
+				this.boost({def: 1});
+				this.effectState.lastBoost = "P";
+			}
+		},
+		name: "Machine Learning",
+		isNonstandard: "CAP",
+		rating: 3.5,
+		num: -45,
+	},
 };

@@ -1906,4 +1906,8 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	machinelearning: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

@@ -1678,8 +1678,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		],
 		"baseStats": {
 			"hp": 125,
-			"atk": 68,
-			"def": 68,
+			"atk": 63,
+			"def": 63,
 			"spa": 86,
 			"spd": 86,
 			"spe": 67
@@ -2293,7 +2293,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		"abilities": {
 			"0": "Trace",
 			"1": "Download",
-			"H": "Analytic"
+			"H": "Machine Learning"
 		},
 		"inherit": true
 	},
@@ -2611,11 +2611,11 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		],
 		"baseStats": {
 			"hp": 95,
-			"atk": 105,
+			"atk": 110,
 			"def": 60,
 			"spa": 90,
 			"spd": 60,
-			"spe": 80
+			"spe": 85
 		},
 		"abilities": {
 			"0": "Chlorophyll",
@@ -4844,7 +4844,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		"abilities": {
 			"0": "Adaptability",
 			"1": "Download",
-			"H": "Analytic"
+			"H": "Protean"
 		},
 		"inherit": true
 	},
@@ -10305,7 +10305,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		],
 		"baseStats": {
 			"hp": 60,
-			"atk": 115,
+			"atk": 120,
 			"def": 70,
 			"spa": 80,
 			"spd": 70,
@@ -10606,8 +10606,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Fighting"
 		],
 		"baseStats": {
-			"hp": 82,
-			"atk": 115,
+			"hp": 87,
+			"atk": 120,
 			"def": 74,
 			"spa": 75,
 			"spd": 64,
@@ -10781,7 +10781,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Steel"
 		],
 		"baseStats": {
-			"hp": 100,
+			"hp": 95,
 			"atk": 130,
 			"def": 120,
 			"spa": 60,

@@ -1114,8 +1114,8 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	lusterpurge: {
 		inherit: true,
 		isNonstandard: null,
-		shortDesc: "100% chance to reduce SpDef by 1",
-		basePower: 80,
+		shortDesc: "100% chance to reduce SpDef by 1.",
+		basePower: 75,
 		secondary: {
 			chance: 100, boosts: {spd: -1},
 		},
@@ -1123,8 +1123,8 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	mistball: {
 		inherit: true,
 		isNonstandard: null,
-		shortDesc: "100% chance to reduce SpA by 1",
-		basePower: 80,
+		shortDesc: "100% chance to reduce SpA by 1.",
+		basePower: 75,
 		secondary: {
 			chance: 100, boosts: {spa: -1},
 		},
@@ -2090,6 +2090,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	oblivionwing: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	// Move Deletions
 	slam: {
 		inherit: true,
@@ -2104,6 +2108,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: "CAP",
 	},
 	hornattack: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	powdersnow: {
 		inherit: true,
 		isNonstandard: "CAP",
 	}
