@@ -22064,11 +22064,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	proposition: {
-		num: 213,
+		num: 0,
 		accuracy: 100,
 		basePower: 0,
 		category: "Status",
 		name: "Proposition",
+		isNonstandard: "CAP",
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1, bypasssub: 1},

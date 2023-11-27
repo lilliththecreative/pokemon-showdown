@@ -313,8 +313,8 @@ export const Formats: FormatList = [
 		mod: 'gen4',
 		searchShow: true,
 		ruleset: ['[Gen 4] SU'],
-		banlist: ['SU', 'IUBL'],
-		unbanlist: ['Damp Rock'],
+		banlist: ['SU', 'IUBL', 'Heat Rock'],
+		// unbanlist: ['Damp Rock'],
 	},
 	{
 		name: "[Gen 4] 8U",

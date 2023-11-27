@@ -41,14 +41,14 @@
 				"role": "TR Setter",
 				"movepool": [
 					"Recover",
-					"Firewall",
+					"Eerie Impulse",
 					"Trick Room",
 					"Foul Play"
 				],
 				"items": [
 					"Eviolite"
 				],
-				"ability": "Trace",
+				"ability": "Machine Learning",
 				"teraTypes": [
 					"Ghost"
 				]
@@ -57,7 +57,7 @@
 				"role": "Offensive",
 				"movepool": [
 					"Tri Attack",
-					"Firewall",
+					"Protect",
 					"Trick Room",
 					"Ice Beam"
 				],
@@ -2541,7 +2541,23 @@
 				"items": [
 					"Pixie Plate"
 				],
-				"ability": "Infiltrator",
+				"ability": "Cursed Body",
+				"teraTypes": [
+					"Fairy"
+				]
+			},
+			{
+				"role": "Speed Booster",
+				"movepool": [
+					"Moonblast",
+					"Shadow Ball",
+					"Dazzling Gleam",
+					"Protect"
+				],
+				"items": [
+					"Booster Energy"
+				],
+				"ability": "Protosynthesis",
 				"teraTypes": [
 					"Fairy"
 				]
@@ -2555,7 +2571,7 @@
 				"movepool": [
 					"Final Gambit",
 					"Close Combat",
-					"Brave Bird",
+					"Dive Bomb",
 					"U-turn"
 				],
 				"items": [
@@ -2569,7 +2585,7 @@
 			{
 				"role": "Choice Band",
 				"movepool": [
-					"Final Gambit",
+					"Double-Edge",
 					"Close Combat",
 					"Brave Bird",
 					"U-turn"
@@ -2627,7 +2643,7 @@
 	"qwilfishhisui": {
 		"sets": [
 			{
-				"role": "Toxic Spikes support",
+				"role": "Toxic Spikes Supp",
 				"movepool": [
 					"Barb Barrage",
 					"Taunt",
@@ -2758,6 +2774,22 @@
 					"Throat Spray"
 				],
 				"ability": "Punk Rock",
+				"teraTypes": [
+					"Normal"
+				]
+			},
+			{
+				"role": "EncoreDisable",
+				"movepool": [
+					"Encore",
+					"Disable",
+					"Protect",
+					"Eerie Spell"
+				],
+				"items": [
+					"Booster Energy"
+				],
+				"ability": "Protosynthesis",
 				"teraTypes": [
 					"Fairy"
 				]
@@ -2946,7 +2978,7 @@
 				"role": "Poison Abuser",
 				"movepool": [
 					"Venoshock",
-					"Air Slash",
+					"Aeroblast",
 					"Heat Wave",
 					"Poison Fang"
 				],
@@ -3405,6 +3437,22 @@
 				"teraTypes": [
 					"Water"
 				]
+			},
+			{
+				"role": "Cotton Down",
+				"movepool": [
+					"Rage Powder",
+					"Pollen Puff",
+					"Sleep Powder",
+					"Synthesis"
+				],
+				"items": [
+					"Sitrus Berry"
+				],
+				"ability": "Cotton Down",
+				"teraTypes": [
+					"Water"
+				]
 			}
 		]
 	},
@@ -3627,7 +3675,7 @@
 	"tentacruel": {
 		"sets": [
 			{
-				"role": "Bulky Nuetralizer",
+				"role": "Bulky Neutralizer",
 				"movepool": [
 					"Icy Wind",
 					"Hydro Pump",
@@ -3927,11 +3975,27 @@
 				"movepool": [
 					"Quiver Dance",
 					"Bug Buzz",
-					"Air Slash",
-					"U-turn"
+					"Aeroblast",
+					"Tera Blast"
 				],
 				"items": [
 					"Focus Sash"
+				],
+				"ability": "Tinted Lens",
+				"teraTypes": [
+					"Ground"
+				]
+			},
+			{
+				"role": "Mixed LO",
+				"movepool": [
+					"Aeroblast",
+					"Bug Buzz",
+					"Hidden Power Ground",
+					"U-turn"
+				],
+				"items": [
+					"Life Orb"
 				],
 				"ability": "Tinted Lens",
 				"teraTypes": [
@@ -5009,11 +5073,27 @@
 				"movepool": [
 					"Bug Buzz",
 					"Air Cutter",
-					"Electroweb",
-					"Hurricane"
+					"Thunderbolt",
+					"Aeroblast"
 				],
 				"items": [
 					"Choice Specs"
+				],
+				"ability": "Rivalry",
+				"teraTypes": [
+					"Flying"
+				]
+			},
+			{
+				"role": "Rain QD",
+				"movepool": [
+					"Quiver Dance",
+					"Hurricane",
+					"Thunder",
+					"Protect"
+				],
+				"items": [
+					"Life Orb"
 				],
 				"ability": "Rivalry",
 				"teraTypes": [
@@ -5886,7 +5966,7 @@
 					"Will-O-Wisp",
 					"Tailwind",
 					"Thunderbolt",
-					"Shadow Ball"
+					"Bleakwind Storm"
 				],
 				"items": [
 					"Focus Sash"
@@ -5894,6 +5974,22 @@
 				"ability": "Wind Power",
 				"teraTypes": [
 					"Electric"
+				]
+			},
+			{
+				"role": "Electric Seed",
+				"movepool": [
+					"Bleakwind Storm",
+					"Shadow Ball",
+					"Tailwind",
+					"Will-O-Wisp"
+				],
+				"items": [
+					"Electric Seed"
+				],
+				"ability": "Unburden",
+				"teraTypes": [
+					"Ground"
 				]
 			}
 		]
@@ -7376,7 +7472,7 @@
 				"role": "PoA Sweeper",
 				"movepool": [
 					"Poison Jab",
-					"Explosion",
+					"Protect",
 					"Knock Off",
 					"Drain Punch"
 				],
@@ -7387,6 +7483,22 @@
 				"teraTypes": [
 					"Steel"
 				]
+			},
+			{
+				"role": "Bulky Attacker",
+				"movepool": [
+					"Gunk Shot",
+					"Explosion",
+					"Knock Off",
+					"Protect"
+				],
+				"items": [
+					"Aguav Berry"
+				],
+				"ability": "Gluttony",
+				"teraTypes": [
+					"Normal"
+				]
 			}
 		]
 	},
@@ -7396,7 +7508,7 @@
 				"role": "Calm Mind",
 				"movepool": [
 					"Shell Side Arm",
-					"Psyshock",
+					"Mist Ball",
 					"Fire Blast",
 					"Calm Mind"
 				],
@@ -7659,9 +7771,25 @@
 				"items": [
 					"Leftovers"
 				],
-				"ability": "Sturdy",
+				"ability": "Heavy Metal",
 				"teraTypes": [
-					"Rock"
+					"Fighting"
+				]
+			},
+			{
+				"role": "Full Support",
+				"movepool": [
+					"Wide Guard",
+					"Heavy Slam",
+					"Super Fang",
+					"Rest"
+				],
+				"items": [
+					"Chesto Berry"
+				],
+				"ability": "Solid Rock",
+				"teraTypes": [
+					"Ghost"
 				]
 			}
 		]
@@ -7669,10 +7797,10 @@
 	"sigilyph": {
 		"sets": [
 			{
-				"role": "TR Support",
+				"role": "Offensive Support",
 				"movepool": [
 					"Psycho Shift",
-					"Trick Room",
+					"Tailwind",
 					"Heat Wave",
 					"Psychic"
 				],
@@ -7682,6 +7810,22 @@
 				"ability": "Magic Guard",
 				"teraTypes": [
 					"Dragon"
+				]
+			},
+			{
+				"role": "TR Setter",
+				"movepool": [
+					"Trick Room",
+					"Hypnosis",
+					"Heat Wave",
+					"Psychic"
+				],
+				"items": [
+					"Covert Cloak"
+				],
+				"ability": "Wonder Skin",
+				"teraTypes": [
+					"Fairy"
 				]
 			}
 		]
@@ -8776,6 +8920,22 @@
 				],
 				"items": [
 					"Mystic Water"
+				],
+				"ability": "Zero to Hero",
+				"teraTypes": [
+					"Water"
+				]
+			},
+			{
+				"role": "Bulk Up",
+				"movepool": [
+					"Flip Turn",
+					"Wave Crash",
+					"Bulk Up",
+					"Close Combat"
+				],
+				"items": [
+					"Sitrus Berry"
 				],
 				"ability": "Zero to Hero",
 				"teraTypes": [
@@ -9956,26 +10116,6 @@
 			}
 		]
 	},
-	"slowking": {
-		"sets": [
-			{
-				"role": "Phys Def",
-				"movepool": [
-					"Chilly Reception",
-					"Trick Room",
-					"Scald",
-					"Slack Off"
-				],
-				"items": [
-					"Covert Cloak"
-				],
-				"ability": "Regenerator",
-				"teraTypes": [
-					"Fairy"
-				]
-			}
-		]
-	},
 	"charizard": {
 		"sets": [
 			{
@@ -10106,6 +10246,22 @@
 					"Choice Scarf"
 				],
 				"ability": "Tough Claws",
+				"teraTypes": [
+					"Dark"
+				]
+			},
+			{
+				"role": "Lifetaker",
+				"movepool": [
+					"Flare Blitz",
+					"Sucker Punch",
+					"Knock Off",
+					"Protect"
+				],
+				"items": [
+					"Sitrus Berry"
+				],
+				"ability": "Lifetaker",
 				"teraTypes": [
 					"Dark"
 				]
@@ -10797,6 +10953,22 @@
 				"teraTypes": [
 					"Grass"
 				]
+			},
+			{
+				"role": "LO Surfer",
+				"movepool": [
+					"Hydro Pump",
+					"Psychic",
+					"Focus Blast",
+					"Protect"
+				],
+				"items": [
+					"Life Orb"
+				],
+				"ability": "Mind Surfer",
+				"teraTypes": [
+					"Grass"
+				]
 			}
 		]
 	},
@@ -11241,6 +11413,22 @@
 				"items": [
 					"Choice Band"
 				],
+				"ability": "Infiltrator",
+				"teraTypes": [
+					"Ground"
+				]
+			},
+			{
+				"role": "Baton Passer",
+				"movepool": [
+					"Protect",
+					"Swords Dance",
+					"Dive Bomb",
+					"Baton Pass"
+				],
+				"items": [
+					"Focus Sash"
+				],
 				"ability": "Speed Boost",
 				"teraTypes": [
 					"Ground"
@@ -11597,6 +11785,22 @@
 				"teraTypes": [
 					"Rock"
 				]
+			},
+			{
+				"role": "LO Sun",
+				"movepool": [
+					"High Jump Kick",
+					"Blaze Kick",
+					"Giga Impact",
+					"Horn Leech"
+				],
+				"items": [
+					"Life Orb"
+				],
+				"ability": "Chlorophyll",
+				"teraTypes": [
+					"Fighting"
+				]
 			}
 		]
 	},
@@ -11733,6 +11937,22 @@
 				"teraTypes": [
 					"Ice"
 				]
+			},
+			{
+				"role": "Snow Support",
+				"movepool": [
+					"Blizzard",
+					"Aurora Veil",
+					"Taunt",
+					"Flash Freeze"
+				],
+				"items": [
+					"Sitrus Berry"
+				],
+				"ability": "Snow Cloak",
+				"teraTypes": [
+					"Ice"
+				]
 			}
 		]
 	},
@@ -11748,6 +11968,22 @@
 				],
 				"items": [
 					"Choice Scarf"
+				],
+				"ability": "Moxie",
+				"teraTypes": [
+					"Flying"
+				]
+			},
+			{
+				"role": "Moxie Sweeper",
+				"movepool": [
+					"Aqua Step",
+					"Close Combat",
+					"Detect",
+					"Brave Bird"
+				],
+				"items": [
+					"Clear Amulet"
 				],
 				"ability": "Moxie",
 				"teraTypes": [
@@ -12163,7 +12399,7 @@
 				"movepool": [
 					"Boomburst",
 					"Protect",
-					"Hurricane",
+					"Aeroblast",
 					"Heat Wave"
 				],
 				"items": [

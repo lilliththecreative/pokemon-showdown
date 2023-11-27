@@ -695,7 +695,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	normalize: {
 		inherit: true,
-		shortDesc: "All moves are normal, but are 1.2x power and ignore immunities and resistances",
+		shortDesc: "All moves are normal, but are 1.2x power and ignore immunities and resistances.",
 		onModifyMove(move) {
 			if (!move.ignoreImmunity) move.ignoreImmunity = {};
 			if (move.ignoreImmunity !== true) {

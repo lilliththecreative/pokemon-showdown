@@ -408,7 +408,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "9U",
 	},
 	seaking: {
-		tier: "IU",
+		tier: "IUBL",
 	},
 	staryu: {
 		tier: "IU",
@@ -579,7 +579,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "10U",
 	},
 	furret: {
-		tier: "IU",
+		tier: "IUBL",
 	},
 	hoothoot: {
 		tier: "10U",

@@ -50813,6 +50813,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"bodypress": [
 				"9M"
+			],
+			"defog": [
+				"9M"
 			]
 		}
 	},
@@ -116175,6 +116178,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"bodypress": [
+				"9M"
+			],
+			"superfang": [
 				"9M"
 			]
 		}
