@@ -250,11 +250,11 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	"explosion": {
 		inherit: true,
-		"basePower": 350
+		"basePower": 325
 	},
 	"selfdestruct": {
 		inherit: true,
-		"basePower": 275
+		"basePower": 250
 	},
 	// Regular Moves
 	round: {

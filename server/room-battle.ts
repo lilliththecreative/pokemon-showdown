@@ -905,7 +905,7 @@ export class RoomBattle extends RoomGames.RoomGame<RoomBattlePlayer> {
 		if (format.includes('@')) {
 			format = format.split('@')[0];
 		}
-		const link = "http://73.191.22.186:8001/replays/" + format + "/" + id + "_" + p1id + "_vs_" + p2id;
+		const link = "http://staraptorshowdown.com/replays/" + format + "/" + id + "_" + p1id + "_vs_" + p2id;
 		if (this.room.rated && !this.options.isSubBattle) {
 			this.room.rated = 0;
 			winner = Users.get(winnerid);
