@@ -1618,14 +1618,14 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		],
 		"baseStats": {
 			"hp": 70,
-			"atk": 115,
+			"atk": 35,
 			"def": 55,
-			"spa": 70,
+			"spa": 120,
 			"spd": 125,
 			"spe": 95
 		},
 		"abilities": {
-			"0": "Swarm",
+			"0": "Mystic Fist",
 			"1": "Early Bird",
 			"H": "Iron Fist"
 		},

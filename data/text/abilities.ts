@@ -2433,4 +2433,9 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		// boost: "  [POKEMON] learned to boost [STAT]!",
 		// unboost: "  [POKEMON] forgot how to boost [STAT]!",
 	},
+	mysticfist: {
+		name: "Mystic Fist",
+		desc: "This Pokemon's punch attacks have 1.1x power and special, Sucker Punch is not changed.",
+		shortDesc: "This Pokemon's punch attacks have 1.1x power and special.",
+	},
 };

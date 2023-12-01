@@ -5766,4 +5766,21 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 3.5,
 		num: -45,
 	},
+	mysticfist: {
+		onModifyMove(move, pokemon, target) {
+			if (move.flags['punch']) {
+				move.category = 'Special';
+			}
+		},
+		onBasePowerPriority: 23,
+		onBasePower(basePower, attacker, defender, move) {
+			if (move.flags['punch']) {
+				return this.chainModify([4506, 4096]);
+			}
+		},
+		name: "Mystic Fist",
+		isNonstandard: "CAP",
+		rating: 4,
+		num: -46,
+	},
 };
