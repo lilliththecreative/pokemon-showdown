@@ -279,23 +279,15 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	illuminate: {
 		inherit: true,
-		shortDesc: "On switch-in, this Pokemon lowers the Evasion of opponents by 1 stage.",
+		shortDesc: "While this Pokemon is active, all moves has 1.2x accuracy.",
 		onTryBoost(boost, target, source, effect) {
 		},
 		onModifyMove(move) {
 		},
-		onStart(pokemon) {
-			let activated = false;
-			for (const target of pokemon.adjacentFoes()) {
-				if (!activated) {
-					this.add('-ability', pokemon, 'Illuminate', 'boost');
-					activated = true;
-				}
-				if (target.volatiles['substitute']) {
-					this.add('-immune', target);
-				} else {
-					this.boost({evasion: -1}, target, pokemon, null, true);
-				}
+		onAnyModifyAccuracyPriority: -1,
+		onAnyModifyAccuracy(accuracy, target, source) {
+			if (typeof accuracy === 'number') {
+				return this.chainModify([4915, 4096]);
 			}
 		},
 	},

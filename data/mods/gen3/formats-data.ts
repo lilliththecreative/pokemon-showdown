@@ -156,7 +156,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "SU",
 	},
 	venonat: {
-		tier: "8U",
+		tier: "IU",
 	},
 	venomoth: {
 		tier: "NU",
@@ -444,7 +444,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "11U",
 	},
 	eevee: {
-		tier: "8U",
+		tier: "IU",
 	},
 	vaporeon: {
 		tier: "UUBL",
@@ -885,7 +885,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "LC",
 	},
 	loudred: {
-		tier: "8U",
+		tier: "IU",
 	},
 	exploud: {
 		tier: "UU",

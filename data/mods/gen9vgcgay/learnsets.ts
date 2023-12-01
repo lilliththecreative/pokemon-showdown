@@ -55836,9 +55836,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"sludgewave": [
 				"8M"
 			],
-			"snarl": [
-				"9M"
-			],
 			"snore": [
 				"8M"
 			],
@@ -55952,9 +55949,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"return": [
-				"9M"
-			],
-			"lusterpurge": [
 				"9M"
 			]
 		}
@@ -159525,6 +159519,12 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"aurasphere": [
 				"9M"
+			],
+			"submission": [
+				"9M"
+			],
+			"shadowpunch": [
+				"9M"
 			]
 		}
 	},
@@ -219756,6 +219756,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"gearup": [
+				"9M"
+			],
+			"uturn": [
 				"9M"
 			]
 		}

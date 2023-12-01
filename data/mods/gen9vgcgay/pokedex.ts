@@ -7373,7 +7373,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Rock"
 		],
 		"baseStats": {
-			"hp": 95,
+			"hp": 100,
 			"atk": 132,
 			"def": 184,
 			"spa": 34,
@@ -7382,7 +7382,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"abilities": {
 			"0": "Strong Jaw",
-			"1": "Ice Scales",
+			"1": "Solid Rock",
 			"H": "Sturdy"
 		},
 		"inherit": true
@@ -10584,14 +10584,15 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	},
 	"houndstone": {
 		"types": [
-			"Ghost"
+			"Ghost",
+			"Normal"
 		],
 		"baseStats": {
-			"hp": 82,
+			"hp": 77,
 			"atk": 101,
-			"def": 105,
+			"def": 100,
 			"spa": 50,
-			"spd": 102,
+			"spd": 97,
 			"spe": 68
 		},
 		"abilities": {
