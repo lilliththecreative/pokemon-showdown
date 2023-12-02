@@ -87314,6 +87314,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"eerieimpulse": [
 				"9M"
+			],
+			"victorydance": [
+				"9M"
 			]
 		}
 	},

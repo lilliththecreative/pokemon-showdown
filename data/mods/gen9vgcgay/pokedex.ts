@@ -759,7 +759,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"spe": 110
 		},
 		"abilities": {
-			"0": "Cursed Body",
+			"0": "Mystic Fist",
 			"1": "Shadow Tagged",
 			"H": "Levitate"
 		},
@@ -1025,8 +1025,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Fairy"
 		],
 		"baseStats": {
-			"hp": 45,
-			"atk": 50,
+			"hp": 40,
+			"atk": 55,
 			"def": 65,
 			"spa": 110,
 			"spd": 120,
@@ -1227,9 +1227,9 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		"baseStats": {
 			"hp": 60,
 			"atk": 65,
-			"def": 60,
+			"def": 55,
 			"spa": 55,
-			"spd": 75,
+			"spd": 70,
 			"spe": 65
 		},
 		"abilities": {
@@ -1620,14 +1620,14 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"hp": 70,
 			"atk": 35,
 			"def": 55,
-			"spa": 120,
+			"spa": 125,
 			"spd": 125,
 			"spe": 95
 		},
 		"abilities": {
-			"0": "Mystic Fist",
+			"0": "Swarm",
 			"1": "Early Bird",
-			"H": "Iron Fist"
+			"H": "Mystic Fist"
 		},
 		"inherit": true
 	},
@@ -2978,9 +2978,9 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Electric"
 		],
 		"baseStats": {
-			"hp": 80,
+			"hp": 70,
 			"atk": 103,
-			"def": 80,
+			"def": 75,
 			"spa": 47,
 			"spd": 90,
 			"spe": 95
@@ -2998,9 +2998,9 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Fairy"
 		],
 		"baseStats": {
-			"hp": 80,
+			"hp": 70,
 			"atk": 47,
-			"def": 80,
+			"def": 75,
 			"spa": 103,
 			"spd": 90,
 			"spe": 95
@@ -5890,7 +5890,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		],
 		"baseStats": {
 			"hp": 70,
-			"atk": 55,
+			"atk": 60,
 			"def": 95,
 			"spa": 95,
 			"spd": 110,
@@ -5908,15 +5908,15 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Psychic"
 		],
 		"baseStats": {
-			"hp": 115,
+			"hp": 110,
 			"atk": 65,
 			"def": 75,
-			"spa": 135,
+			"spa": 130,
 			"spd": 85,
 			"spe": 30
 		},
 		"abilities": {
-			"0": "Overcoat",
+			"0": "Mystic Fist",
 			"1": "Magic Guard",
 			"H": "Regenerator"
 		},
