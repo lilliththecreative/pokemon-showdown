@@ -2159,6 +2159,8 @@ export const Rulesets: {[k: string]: FormatData} = {
 				nu: 25,
 				publ: 25,
 				pu: 30,
+				zubl: 30,
+				zu: 30,
 				nfe: 30,
 				lc: 30,
 			};
@@ -2168,6 +2170,8 @@ export const Rulesets: {[k: string]: FormatData} = {
 			// Non-Pokemon bans in lower tiers
 			if (target) {
 				if (this.toID(target.set.item) === 'lightclay') tier = 'rubl';
+				if (this.toID(target.set.item) === 'damprock') tier = 'publ';
+				if (this.toID(target.set.item) === 'heatrock') tier = 'publ';
 			}
 			const pokemon = this.dex.deepClone(species);
 			pokemon.bst = pokemon.baseStats['hp'];
