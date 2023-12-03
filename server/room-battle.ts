@@ -894,6 +894,9 @@ export class RoomBattle extends RoomGames.RoomGame<RoomBattlePlayer> {
 		const p2name = this.p2.name;
 		const p1id = toID(p1name);
 		const p2id = toID(p2name);
+
+		const p1Cap = ('' + p1name).toLowerCase().replace(/[^a-z0-9]+/g, '') as ID;
+		const p2Cap = ('' + p1name).toLowerCase().replace(/[^a-z0-9]+/g, '') as ID;
 		if (winnerid === p1id) {
 			p1score = 1;
 		} else if (winnerid === p2id) {
@@ -905,7 +908,7 @@ export class RoomBattle extends RoomGames.RoomGame<RoomBattlePlayer> {
 		if (format.includes('@')) {
 			format = format.split('@')[0];
 		}
-		const link = "http://staraptorshowdown.com/replays/" + format + "/" + id + "_" + p1id + "_vs_" + p2id;
+		const link = "http://staraptorshowdown.com/replays/" + format + "/" + id + "_" + p1Cap + "_vs_" + p2Cap + ".html";
 		if (this.room.rated && !this.options.isSubBattle) {
 			this.room.rated = 0;
 			winner = Users.get(winnerid);

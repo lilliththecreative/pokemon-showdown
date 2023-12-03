@@ -541,7 +541,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"abilities": {
 			"0": "Trace",
-			"1": "Inner Focus",
+			"1": "Mystic Fist",
 			"H": "Magic Guard"
 		},
 		"inherit": true
@@ -7063,7 +7063,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"hp": 71,
 			"atk": 78,
 			"def": 88,
-			"spa": 120,
+			"spa": 125,
 			"spd": 89,
 			"spe": 59
 		},
@@ -7950,6 +7950,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"abilities": {
 			"0": "Receiver",
+			"1": "Ballin'",
 			"H": "Defiant"
 		},
 		"inherit": true
@@ -8804,6 +8805,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"abilities": {
 			"0": "Blaze",
+			"1": "Ballin'",
 			"H": "Libero"
 		},
 		"inherit": true
@@ -8822,6 +8824,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"abilities": {
 			"0": "Torrent",
+			"1": "Stakeout",
 			"H": "Sniper"
 		},
 		"inherit": true
@@ -8840,6 +8843,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"abilities": {
 			"0": "Cheek Pouch",
+			"1": "Gorilla Tactics",
 			"H": "Gluttony"
 		},
 		"inherit": true
@@ -8976,7 +8980,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"abilities": {
 			"0": "Strong Jaw",
-			"1": "Ball Fetch",
+			"1": "Ballin'",
 			"H": "Competitive"
 		},
 		"inherit": true
@@ -10585,14 +10589,14 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	"houndstone": {
 		"types": [
 			"Ghost",
-			"Normal"
+			"Rock"
 		],
 		"baseStats": {
-			"hp": 77,
+			"hp": 82,
 			"atk": 101,
-			"def": 100,
+			"def": 105,
 			"spa": 50,
-			"spd": 97,
+			"spd": 102,
 			"spe": 68
 		},
 		"abilities": {

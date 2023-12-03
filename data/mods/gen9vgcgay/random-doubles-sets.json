@@ -1021,8 +1021,8 @@
 				"movepool": [
 					"Spore",
 					"Fake Out",
-					"Firewall",
-					"Present"
+					"Present",
+					"Spiky Shield"
 				],
 				"items": [
 					"Focus Sash"
@@ -1166,6 +1166,22 @@
 				],
 				"items": [
 					"Light Clay"
+				],
+				"ability": "Prankster",
+				"teraTypes": [
+					"Ghost"
+				]
+			},
+			{
+				"role": "Victory Dance",
+				"movepool": [
+					"Victory Dance",
+					"Wild Charge",
+					"Lunge",
+					"Baton Pass"
+				],
+				"items": [
+					"Leftovers"
 				],
 				"ability": "Prankster",
 				"teraTypes": [
@@ -1723,7 +1739,7 @@
 			{
 				"role": "Bulky Regen",
 				"movepool": [
-					"Earthquake",
+					"Hydro Cannon",
 					"High Horsepower",
 					"Flip Turn",
 					"Wide Guard"
@@ -1937,7 +1953,7 @@
 				]
 			},
 			{
-				"role": "Mixed Wall",
+				"role": "Defensive Support",
 				"movepool": [
 					"Mountain Gale",
 					"Stone Edge",
@@ -1947,9 +1963,9 @@
 				"items": [
 					"Leftovers"
 				],
-				"ability": "Ice Scales",
+				"ability": "Solid Rock",
 				"teraTypes": [
-					"Electric"
+					"Ghost"
 				]
 			}
 		]
@@ -2635,7 +2651,7 @@
 				],
 				"ability": "Prankster",
 				"teraTypes": [
-					"Fire"
+					"Grass"
 				]
 			}
 		]
@@ -2967,7 +2983,7 @@
 				],
 				"ability": "Wonder Guard",
 				"teraTypes": [
-					"Electric"
+					"Ghost"
 				]
 			}
 		]
@@ -4126,7 +4142,7 @@
 					"Fire Blast",
 					"Draco Meteor",
 					"Heat Wave",
-					"Firewall"
+					"Wide Guard"
 				],
 				"items": [
 					"Rocky Helmet"
@@ -5729,7 +5745,7 @@
 				"movepool": [
 					"Parting Shot",
 					"Mat Block",
-					"Firewall",
+					"Destiny Bond",
 					"Milk Drink"
 				],
 				"items": [
@@ -6927,9 +6943,9 @@
 				"items": [
 					"Assault Vest"
 				],
-				"ability": "Aerilate",
+				"ability": "Regenerator",
 				"teraTypes": [
-					"Flying"
+					"Fire"
 				]
 			}
 		]
@@ -8607,17 +8623,17 @@
 	"reuniclus": {
 		"sets": [
 			{
-				"role": "Calm Mind",
+				"role": "Mystic Fist",
 				"movepool": [
+					"Hammer Arm",
 					"Trick Room",
-					"Psychic",
-					"Calm Mind",
-					"Focus Blast"
+					"Shadow Punch",
+					"Psychic"
 				],
 				"items": [
-					"Sitrus Berry"
+					"Expert Belt"
 				],
-				"ability": "Overcoat",
+				"ability": "Mystic Fist",
 				"teraTypes": [
 					"Fighting"
 				]
@@ -9409,6 +9425,22 @@
 				"teraTypes": [
 					"Rock"
 				]
+			},
+			{
+				"role": "Life Orb",
+				"movepool": [
+					"High Jump Kick",
+					"Stone Edge",
+					"Knock Off",
+					"Fake Out"
+				],
+				"items": [
+					"Life Orb"
+				],
+				"ability": "Reckless",
+				"teraTypes": [
+					"Rock"
+				]
 			}
 		]
 	},
@@ -9547,7 +9579,7 @@
 				],
 				"ability": "Telepathy",
 				"teraTypes": [
-					"Bug"
+					"Water"
 				]
 			}
 		]
@@ -11015,17 +11047,17 @@
 	"ledian": {
 		"sets": [
 			{
-				"role": "Physical LO",
+				"role": "Special LO",
 				"movepool": [
 					"Jet Punch",
 					"Drain Punch",
-					"Comet Punch",
-					"Mega Punch"
+					"Ice Punch",
+					"Bug Buzz"
 				],
 				"items": [
 					"Life Orb"
 				],
-				"ability": "Iron Fist",
+				"ability": "Mystic Fist",
 				"teraTypes": [
 					"Water"
 				]

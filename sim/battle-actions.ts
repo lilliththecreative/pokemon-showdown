@@ -374,7 +374,7 @@ export class BattleActions {
 				this.runMove("echoedvoice", dancer, dancersTargetLoc, this.dex.abilities.get('windchime'), undefined, true);
 			}
 		}
-		//Passimian's Gay Ability
+		// Passimian's Gay Ability
 		if (move.flags['bullet'] && moveDidSomething && !move.isExternal) {
 			const dancers = [];
 			for (const currentPoke of this.battle.getAllActive()) {
@@ -394,7 +394,7 @@ export class BattleActions {
 			for (const dancer of dancers) {
 				if (this.battle.faintMessages()) break;
 				if (dancer.fainted) continue;
-				this.battle.add('-activate', dancer, 'ability: Wind Chime');
+				this.battle.add('-activate', dancer, "ability: Ballin'");
 				const dancersTarget = !targetOf1stDance.isAlly(dancer) && pokemon.isAlly(dancer) ?
 					targetOf1stDance :
 					pokemon;

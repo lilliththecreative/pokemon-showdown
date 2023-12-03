@@ -220413,6 +220413,12 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"stalacbite": [
 				"9M"
+			],
+			"rockslide": [
+				"9M"
+			],
+			"rocktomb": [
+				"9M"
 			]
 		}
 	},

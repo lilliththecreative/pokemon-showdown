@@ -5784,11 +5784,12 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: -46,
 	},
 	ballin: {
+		// Rest implemented in runMove in battle-actions.ts
 		onModifyMove(move, pokemon, target) {
 			if (move.flags['bullet']) {
 				const atk = pokemon.getStat('atk', false, true);
 				const spa = pokemon.getStat('spa', false, true);
-				if(atk > spa) {
+				if (atk > spa) {
 					move.category = 'Physical';
 				} else if (spa > atk) {
 					move.category = 'Special';

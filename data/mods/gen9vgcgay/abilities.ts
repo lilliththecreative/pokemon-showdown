@@ -56,10 +56,10 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	megalauncher: {
 		inherit: true,
-		shortDesc: "Pulse and Cannon moves have 1.5x Power.",
+		shortDesc: "Pulse, Cannon, and Bullet moves have 1.3x Power.",
 		onBasePower(basePower, attacker, defender, move) {
-			if (move.flags['pulse'] || move.name.toLowerCase().includes("cannon")) {
-				return this.chainModify(1.5);
+			if (move.flags['pulse'] || move.flags['bullet'] || move.name.toLowerCase().includes("cannon")) {
+				return this.chainModify(1.3);
 			}
 		},
 	},
@@ -752,7 +752,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	// 	},
 	// },
 	wonderguard: {
-		shortDesc: "This Pokemon can only be damaged by supereffective moves and indirect damage if not Terad.",
+		shortDesc: "If not Terad, then can only be damaged by supereffective moves and indirect damage.",
 		onTryHit(target, source, move) {
 			if (target === source || move.category === 'Status' || move.type === '???' || move.id === 'struggle') return;
 			if (target.terastallized) return;

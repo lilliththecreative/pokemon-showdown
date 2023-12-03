@@ -17,7 +17,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	},
 	"meowthgalar": {
 		"isNonstandard": null,
-		"tier": "LC"
+		"tier": "NU"
 	},
 	"psyduck": {
 		"isNonstandard": null,
@@ -53,11 +53,11 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	},
 	"graveleralola": {
 		"isNonstandard": null,
-		"tier": "NFE"
+		"tier": "NU"
 	},
 	"golem": {
 		"isNonstandard": null,
-		"tier": "RU"
+		"tier": "NU"
 	},
 	"golemalola": {
 		"isNonstandard": null,
@@ -73,7 +73,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	},
 	"grimer": {
 		"isNonstandard": null,
-		"tier": "RU"
+		"tier": "NU"
 	},
 	"grimeralola": {
 		"isNonstandard": null,
@@ -125,7 +125,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	},
 	"cleffa": {
 		"isNonstandard": null,
-		"tier": "LC"
+		"tier": "NU"
 	},
 	"marill": {
 		"isNonstandard": null,
@@ -165,7 +165,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	},
 	"lombre": {
 		"isNonstandard": null,
-		"tier": "NFE"
+		"tier": "NU"
 	},
 	"ludicolo": {
 		"isNonstandard": null,
@@ -177,7 +177,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	},
 	"kirlia": {
 		"isNonstandard": null,
-		"tier": "NFE"
+		"tier": "NU"
 	},
 	"gardevoir": {
 		"isNonstandard": null,
@@ -189,7 +189,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	},
 	"vigoroth": {
 		"isNonstandard": null,
-		"tier": "NFE"
+		"tier": "NU"
 	},
 	"slaking": {
 		"isNonstandard": null,
@@ -205,7 +205,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	},
 	"sableye": {
 		"isNonstandard": null,
-		"tier": "RU"
+		"tier": "NU"
 	},
 	"meditite": {
 		"isNonstandard": null,
@@ -221,7 +221,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	},
 	"illumise": {
 		"isNonstandard": null,
-		"tier": "RU"
+		"tier": "NU"
 	},
 	"swalot": {
 		"isNonstandard": null,
@@ -229,7 +229,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	},
 	"grumpig": {
 		"isNonstandard": null,
-		"tier": "RU"
+		"tier": "NU"
 	},
 	"shuppet": {
 		"isNonstandard": null,
@@ -265,7 +265,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	},
 	"ambipom": {
 		"isNonstandard": null,
-		"tier": "RU"
+		"tier": "NU"
 	},
 	"happiny": {
 		"isNonstandard": null,
@@ -333,7 +333,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	},
 	"floette": {
 		"isNonstandard": null,
-		"tier": "NFE"
+		"tier": "NU"
 	},
 	"florges": {
 		"isNonstandard": null,
@@ -389,7 +389,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	},
 	"morgrem": {
 		"isNonstandard": null,
-		"tier": "NFE"
+		"tier": "NU"
 	},
 	"grimmsnarl": {
 		"isNonstandard": null,
@@ -401,15 +401,15 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	},
 	"indeedee": {
 		"isNonstandard": null,
-		"tier": "RU"
+		"tier": "NU"
 	},
 	"indeedeef": {
 		"isNonstandard": null,
-		"tier": "RU"
+		"tier": "NU"
 	},
 	"calyrex": {
 		"isNonstandard": null,
-		"tier": "RU"
+		"tier": "NU"
 	},
 	"calyrexice": {
 		"isNonstandard": null,
@@ -433,7 +433,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	},
 	"shroodle": {
 		"isNonstandard": null,
-		"tier": "LC"
+		"tier": "NU"
 	},
 	"grafaiai": {
 		"isNonstandard": null,

@@ -31,6 +31,7 @@ export const Formats: FormatList = [
 		mod: 'gen9vgcgay',
 		gameType: 'doubles',
 		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Tera Type Preview', 'Sketch Post-Gen 7 Moves'],
+		bestOfDefault: true,
 		unbanlist: ['Greninja-Bond'],
 	},
 	{
@@ -40,6 +41,7 @@ export const Formats: FormatList = [
 		team: 'random',
 		gameType: 'doubles',
 		ruleset: ['Flat Rules', 'Tera Type Preview', 'Sketch Post-Gen 7 Moves'],
+		bestOfDefault: true,
 		unbanlist: ['Greninja-Bond'],
 	},
 	{
