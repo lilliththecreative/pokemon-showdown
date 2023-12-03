@@ -1557,7 +1557,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "LC",
 	},
 	cradily: {
-		tier: "IU",
+		tier: "ZU",
 		doublesTier: "(DUU)",
 	},
 	anorith: {
@@ -1611,7 +1611,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		doublesTier: "(DUU)",
 	},
 	tropius: {
-		tier: "ZU",
+		tier: "IU",
 		doublesTier: "(DUU)",
 	},
 	chingling: {

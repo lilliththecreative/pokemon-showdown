@@ -123,15 +123,8 @@ export const Formats: FormatList = [
 		gameType: 'freeforall',
 		rated: false,
 		tournamentShow: false,
-		ruleset: ['Standard', '!Evasion Items Clause', 'Item Clause'],
-		banlist: [
-			'Moody', 'Shadow Tag', 'Toxic Debris', 'Regenerator>1', 'Uber'
-		],
-		onValidateSet(set) {
-			if (set.moves.length !== 1 || this.dex.moves.get(set.moves[0]).id !== 'metronome') {
-				return [`${set.name || set.species} has illegal moves.`, `(Pok\u00e9mon can only have one Metronome in their moveset)`];
-			}
-		},
+		ruleset: ['[Gen 9] Metronome FFA Ubers'],
+		banlist: ['Ubers'],
 	},
 	{
 		name: "[Gen 9] Metronome FFA UU",
@@ -139,15 +132,8 @@ export const Formats: FormatList = [
 		gameType: 'freeforall',
 		rated: false,
 		tournamentShow: false,
-		ruleset: ['Standard', '!Evasion Items Clause', 'Item Clause'],
-		banlist: [
-			'Moody', 'Shadow Tag', 'Toxic Debris', 'Regenerator>1', "OU",
-		],
-		onValidateSet(set) {
-			if (set.moves.length !== 1 || this.dex.moves.get(set.moves[0]).id !== 'metronome') {
-				return [`${set.name || set.species} has illegal moves.`, `(Pok\u00e9mon can only have one Metronome in their moveset)`];
-			}
-		},
+		ruleset: ['[Gen 9] Metronome FFA OU'],
+		banlist: ['OU'],
 	},
 	{
 		name: "[Gen 9] Metronome FFA RU",
@@ -155,15 +141,17 @@ export const Formats: FormatList = [
 		gameType: 'freeforall',
 		rated: false,
 		tournamentShow: false,
-		ruleset: ['Standard', '!Evasion Items Clause', 'Item Clause'],
-		banlist: [
-			'Moody', 'Shadow Tag', 'Toxic Debris', 'Regenerator>1', "OU", "UU",
-		],
-		onValidateSet(set) {
-			if (set.moves.length !== 1 || this.dex.moves.get(set.moves[0]).id !== 'metronome') {
-				return [`${set.name || set.species} has illegal moves.`, `(Pok\u00e9mon can only have one Metronome in their moveset)`];
-			}
-		},
+		ruleset: ['[Gen 9] Metronome FFA UU'],
+		banlist: ['UU'],
+	},
+	{
+		name: "[Gen 9] Metronome FFA NU",
+		mod: 'gen9metronome',
+		gameType: 'freeforall',
+		rated: false,
+		tournamentShow: false,
+		ruleset: ['[Gen 9] Metronome FFA RU'],
+		banlist: ['RU'],
 	},
 	{
 		section: "Gen 1 Lower Tiers",
@@ -385,6 +373,13 @@ export const Formats: FormatList = [
 		searchShow: true,
 		ruleset: ['[Gen 7] ZU'],
 		banlist: ['ZU', 'SUBL', 'Damp Rock'],
+	},
+	{
+		name: "[Gen 7] IU",
+		mod: 'gen7',
+		searchShow: true,
+		ruleset: ['[Gen 7] SU'],
+		banlist: ['SU', 'IUBL'],
 	},
 	{
 		name: "[Gen 8] SU",

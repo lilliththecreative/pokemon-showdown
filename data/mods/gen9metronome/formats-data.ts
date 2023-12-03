@@ -25,7 +25,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	},
 	"golduck": {
 		"isNonstandard": null,
-		"tier": "RU"
+		"tier": "NU"
 	},
 	"mankey": {
 		"isNonstandard": null,
@@ -101,7 +101,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	},
 	"hypno": {
 		"isNonstandard": null,
-		"tier": "RU"
+		"tier": "NU"
 	},
 	"chansey": {
 		"isNonstandard": null,
@@ -217,7 +217,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	},
 	"volbeat": {
 		"isNonstandard": null,
-		"tier": "RU"
+		"tier": "NU"
 	},
 	"illumise": {
 		"isNonstandard": null,
@@ -261,7 +261,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	},
 	"floatzel": {
 		"isNonstandard": null,
-		"tier": "RU"
+		"tier": "NU"
 	},
 	"ambipom": {
 		"isNonstandard": null,
@@ -305,7 +305,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	},
 	"lilliganthisui": {
 		"isNonstandard": null,
-		"tier": "RU"
+		"tier": "NU"
 	},
 	"gothorita": {
 		"isNonstandard": null,
