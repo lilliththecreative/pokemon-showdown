@@ -5783,4 +5783,21 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 4,
 		num: -46,
 	},
+	ballin: {
+		onModifyMove(move, pokemon, target) {
+			if (move.flags['bullet']) {
+				const atk = pokemon.getStat('atk', false, true);
+				const spa = pokemon.getStat('spa', false, true);
+				if(atk > spa) {
+					move.category = 'Physical';
+				} else if (spa > atk) {
+					move.category = 'Special';
+				}
+			}
+		},
+		name: "Ballin'",
+		isNonstandard: "CAP",
+		rating: 4,
+		num: -47,
+	},
 };
