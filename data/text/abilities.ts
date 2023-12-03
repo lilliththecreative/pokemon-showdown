@@ -2438,4 +2438,9 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "This Pokemon's punch attacks have 1.1x power and special, Sucker Punch is not changed.",
 		shortDesc: "This Pokemon's punch attacks have 1.1x power and special.",
 	},
+	ballin: {
+		name: "Ballin'",
+		desc: "After another Pokemon uses a ball move, this Pokemon uses the same move. The copied move is subject to all effects that can prevent a move from being executed. A move used through this Ability cannot be copied again by other Pokemon with this Ability.",
+		shortDesc: "After another Pokemon uses a ball move, this Pokemon uses the same move.",
+	},
 };

@@ -374,6 +374,34 @@ export class BattleActions {
 				this.runMove("echoedvoice", dancer, dancersTargetLoc, this.dex.abilities.get('windchime'), undefined, true);
 			}
 		}
+		//Passimian's Gay Ability
+		if (move.flags['bullet'] && moveDidSomething && !move.isExternal) {
+			const dancers = [];
+			for (const currentPoke of this.battle.getAllActive()) {
+				if (pokemon === currentPoke) continue;
+				if (currentPoke.hasAbility('ballin') && !currentPoke.isSemiInvulnerable()) {
+					dancers.push(currentPoke);
+				}
+			}
+			// Dancer activates in order of lowest speed stat to highest
+			// Note that the speed stat used is after any volatile replacements like Speed Swap,
+			// but before any multipliers like Agility or Choice Scarf
+			// Ties go to whichever Pokemon has had the ability for the least amount of time
+			dancers.sort(
+				(a, b) => -(b.storedStats['spe'] - a.storedStats['spe']) || b.abilityOrder - a.abilityOrder
+			);
+			const targetOf1stDance = this.battle.activeTarget!;
+			for (const dancer of dancers) {
+				if (this.battle.faintMessages()) break;
+				if (dancer.fainted) continue;
+				this.battle.add('-activate', dancer, 'ability: Wind Chime');
+				const dancersTarget = !targetOf1stDance.isAlly(dancer) && pokemon.isAlly(dancer) ?
+					targetOf1stDance :
+					pokemon;
+				const dancersTargetLoc = dancer.getLocOf(dancersTarget);
+				this.runMove(move.id, dancer, dancersTargetLoc, this.dex.abilities.get('ballin'), undefined, true);
+			}
+		}
 		if (noLock && pokemon.volatiles['lockedmove']) delete pokemon.volatiles['lockedmove'];
 		this.battle.faintMessages();
 		this.battle.checkWin();
