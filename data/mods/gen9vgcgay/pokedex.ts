@@ -660,7 +660,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"abilities": {
 			"0": "Quick Draw",
-			"1": "Own Tempo",
+			"1": "Mega Launcher",
 			"H": "Regenerator"
 		},
 		"inherit": true
@@ -4648,7 +4648,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"spe": 40
 		},
 		"abilities": {
-			"0": "Lightning Rod",
+			"0": "Mega Launcher",
 			"1": "Solid Rock",
 			"H": "Just the Tip"
 		},

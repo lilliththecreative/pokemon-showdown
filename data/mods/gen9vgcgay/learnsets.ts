@@ -20719,6 +20719,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"mistball": [
 				"9M"
+			],
+			"barrage": [
+				"9M"
 			]
 		}
 	},
