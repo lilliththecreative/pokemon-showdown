@@ -895,8 +895,8 @@ export class RoomBattle extends RoomGames.RoomGame<RoomBattlePlayer> {
 		const p1id = toID(p1name);
 		const p2id = toID(p2name);
 
-		const p1Cap = ('' + p1name).replace(/[^a-z0-9]+/g, '') as ID;
-		const p2Cap = ('' + p2name).replace(/[^a-z0-9]+/g, '') as ID;
+		const p1Cap = ('' + p1name).replace(/[^a-zA-Z0-9]+/g, '') as ID;
+		const p2Cap = ('' + p2name).replace(/[^a-zA-Z0-9]+/g, '') as ID;
 		if (winnerid === p1id) {
 			p1score = 1;
 		} else if (winnerid === p2id) {

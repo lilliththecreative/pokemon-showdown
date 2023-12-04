@@ -124,7 +124,7 @@ export const Formats: FormatList = [
 		rated: false,
 		tournamentShow: false,
 		ruleset: ['[Gen 9] Metronome FFA Ubers'],
-		banlist: ['Ubers'],
+		banlist: ['Uber'],
 	},
 	{
 		name: "[Gen 9] Metronome FFA UU",
