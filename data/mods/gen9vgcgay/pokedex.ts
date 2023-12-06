@@ -1614,7 +1614,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	"ledian": {
 		"types": [
 			"Bug",
-			"Flying"
+			"Fighting"
 		],
 		"baseStats": {
 			"hp": 70,
@@ -3253,9 +3253,9 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		],
 		"baseStats": {
 			"hp": 90,
-			"atk": 55,
+			"atk": 60,
 			"def": 65,
-			"spa": 95,
+			"spa": 90,
 			"spd": 85,
 			"spe": 70
 		},
@@ -3272,9 +3272,9 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		],
 		"baseStats": {
 			"hp": 90,
-			"atk": 95,
+			"atk": 100,
 			"def": 85,
-			"spa": 55,
+			"spa": 50,
 			"spd": 65,
 			"spe": 70
 		},
@@ -7427,21 +7427,21 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"inherit": true
 	},
-	"torracat": {
+	"incineroar": {
 		"types": [
-			"Fire"
+			"Fire",
+			"Dark"
 		],
 		"baseStats": {
-			"hp": 70,
-			"atk": 85,
-			"def": 55,
+			"hp": 95,
+			"atk": 115,
+			"def": 90,
 			"spa": 80,
-			"spd": 55,
-			"spe": 90
+			"spd": 90,
+			"spe": 60
 		},
 		"abilities": {
 			"0": "Blaze",
-			"1": "Prankster",
 			"H": "Intimidate"
 		},
 		"inherit": true
@@ -8779,14 +8779,15 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		],
 		"baseStats": {
 			"hp": 100,
-			"atk": 120,
-			"def": 90,
-			"spa": 60,
-			"spd": 70,
+			"atk": 110,
+			"def": 95,
+			"spa": 65,
+			"spd": 75,
 			"spe": 85
 		},
 		"abilities": {
 			"0": "Overgrow",
+			"1": "Gorilla Tactics",
 			"H": "Grassy Surge"
 		},
 		"inherit": true
@@ -8843,7 +8844,6 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"abilities": {
 			"0": "Cheek Pouch",
-			"1": "Gorilla Tactics",
 			"H": "Gluttony"
 		},
 		"inherit": true
@@ -9969,6 +9969,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"abilities": {
 			"0": "Overgrow",
+			"1": "Magician",
 			"H": "Protean"
 		},
 		"inherit": true
@@ -9988,6 +9989,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"abilities": {
 			"0": "Blaze",
+			"1": "Symbiosis",
 			"H": "Unaware"
 		},
 		"inherit": true
@@ -10697,6 +10699,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"abilities": {
 			"0": "Commander",
+			"1": "Symbiosis",
 			"H": "Storm Drain"
 		},
 		"inherit": true

@@ -304,7 +304,7 @@ export const Formats: FormatList = [
 		searchShow: true,
 		ruleset: ['[Gen 4] SU'],
 		banlist: ['SU', 'IUBL', 'Heat Rock'],
-		// unbanlist: ['Damp Rock'],
+		unbanlist: ['Damp Rock'],
 	},
 	{
 		name: "[Gen 4] 8U",
@@ -315,6 +315,7 @@ export const Formats: FormatList = [
 		searchShow: true,
 		ruleset: ['[Gen 4] IU'],
 		banlist: ['IU', '8UBL'],
+		unbanlist: ['Heat Rock'],
 	},
 	{
 		name: "[Gen 4] 9U",
@@ -372,7 +373,7 @@ export const Formats: FormatList = [
 		mod: 'gen7',
 		searchShow: true,
 		ruleset: ['[Gen 7] ZU'],
-		banlist: ['ZU', 'SUBL', 'Damp Rock'],
+		banlist: ['ZU', 'SUBL', 'Damp Rock', 'Light Clay'],
 	},
 	{
 		name: "[Gen 7] IU",

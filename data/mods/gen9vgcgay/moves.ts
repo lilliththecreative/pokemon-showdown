@@ -295,10 +295,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			this.boost({atk: 1, spa: 1}, source, source, move, false, true);
 		},
 	},
-	grassyglide: {
-		inherit: true,
-		basePower: 60,
-	},
+	// grassyglide: {
+	// 	inherit: true,
+	// 	basePower: 60,
+	// },
 	gastroacid: {
 		inherit: true,
 		target: "allAdjacent",
