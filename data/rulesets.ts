@@ -2161,8 +2161,10 @@ export const Rulesets: {[k: string]: FormatData} = {
 				pu: 30,
 				zubl: 30,
 				zu: 30,
-				nfe: 30,
-				lc: 30,
+				su: 35,
+				ur: 40,
+				nfe: 40,
+				lc: 40,
 			};
 			const isNatDex: boolean = this.ruleTable.has("standardnatdex");
 			let tier: string = this.toID(isNatDex ? species.natDexTier : species.tier);

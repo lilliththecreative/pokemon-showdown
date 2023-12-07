@@ -3724,12 +3724,12 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"tier": "Illegal"
 	},
 	"torracat": {
-		"isNonstandard": null,
-		"tier": "OU"
-	},
-	"incineroar": {
 		"isNonstandard": "Past",
 		"tier": "Illegal"
+	},
+	"incineroar": {
+		"isNonstandard": null,
+		"tier": "OU"
 	},
 	"popplio": {
 		"isNonstandard": "Past",

@@ -619,7 +619,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"spe": 50
 		},
 		"abilities": {
-			"0": "Surge Surfer",
+			"0": "Big Balls",
 			"1": "Sturdy",
 			"H": "Galvanize"
 		},
@@ -2361,7 +2361,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		"baseStats": {
 			"hp": 255,
 			"atk": 120,
-			"def": 80,
+			"def": 75,
 			"spa": 40,
 			"spd": 15,
 			"spe": 55
@@ -4679,10 +4679,10 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		],
 		"baseStats": {
 			"hp": 75,
-			"atk": 123,
+			"atk": 125,
 			"def": 67,
 			"spa": 95,
-			"spd": 85,
+			"spd": 83,
 			"spe": 95
 		},
 		"abilities": {
@@ -4701,8 +4701,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"atk": 95,
 			"def": 67,
 			"spa": 125,
-			"spd": 95,
-			"spe": 83
+			"spd": 83,
+			"spe": 95
 		},
 		"abilities": {
 			"0": "Flame Body",
