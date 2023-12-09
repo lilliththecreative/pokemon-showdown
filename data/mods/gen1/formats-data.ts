@@ -1,6 +1,6 @@
 export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	bulbasaur: {
-		tier: "8U",
+		tier: "IU",
 	},
 	ivysaur: {
 		tier: "SU",
@@ -9,7 +9,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "UU",
 	},
 	charmander: {
-		tier: "8U",
+		tier: "IU",
 	},
 	charmeleon: {
 		tier: "SU",
@@ -291,7 +291,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "UUBL",
 	},
 	krabby: {
-		tier: "IU",
+		tier: "8U",
 	},
 	kingler: {
 		tier: "NU",
@@ -324,7 +324,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "SU",
 	},
 	koffing: {
-		tier: "IU",
+		tier: "8U",
 	},
 	weezing: {
 		tier: "SU",

@@ -5,9 +5,9 @@
 				"role": "Defensive",
 				"movepool": [
 					"Protect",
-					"Follow Me",
-					"Clear Smog",
-					"Lava Plume"
+					"Helping Hand",
+					"Armor Cannon",
+					"Taunt"
 				],
 				"items": [
 					"Sitrus Berry"
@@ -21,7 +21,7 @@
 				"role": "Offensive",
 				"movepool": [
 					"Heat Wave",
-					"Follow Me",
+					"Protect",
 					"Tera Blast",
 					"Armor Cannon"
 				],
@@ -1675,6 +1675,22 @@
 				"teraTypes": [
 					"Grass"
 				]
+			},
+			{
+				"role": "TR Nuke",
+				"movepool": [
+					"Rock Wrecker",
+					"Megahorn",
+					"Protect",
+					"Headlong Rush"
+				],
+				"items": [
+					"Life Orb"
+				],
+				"ability": "Mega Launcher",
+				"teraTypes": [
+					"Bug"
+				]
 			}
 		]
 	},
@@ -2636,26 +2652,6 @@
 			}
 		]
 	},
-	"torracat": {
-		"sets": [
-			{
-				"role": "Prankster Support",
-				"movepool": [
-					"Parting Shot",
-					"Will-O-Wisp",
-					"Fake Out",
-					"Taunt"
-				],
-				"items": [
-					"Eviolite"
-				],
-				"ability": "Prankster",
-				"teraTypes": [
-					"Grass"
-				]
-			}
-		]
-	},
 	"qwilfishhisui": {
 		"sets": [
 			{
@@ -3175,7 +3171,7 @@
 				],
 				"ability": "Molten Down",
 				"teraTypes": [
-					"Fire"
+					"Fairy"
 				]
 			}
 		]
@@ -3195,7 +3191,7 @@
 				],
 				"ability": "Guts",
 				"teraTypes": [
-					"Ground"
+					"Normal"
 				]
 			}
 		]
@@ -3564,6 +3560,22 @@
 				"ability": "Receiver",
 				"teraTypes": [
 					"Ghost"
+				]
+			},
+			{
+				"role": "He Ballin",
+				"movepool": [
+					"Energy Ball",
+					"Close Combat",
+					"Knock Off",
+					"Protect"
+				],
+				"items": [
+					"Expert Belt"
+				],
+				"ability": "Ballin'",
+				"teraTypes": [
+					"Fighting"
 				]
 			}
 		]
@@ -6811,6 +6823,22 @@
 				"teraTypes": [
 					"Water"
 				]
+			},
+			{
+				"role": "Life Orb",
+				"movepool": [
+					"Liquidation",
+					"Crunch",
+					"Ice Punch",
+					"Superpower"
+				],
+				"items": [
+					"Life Orb"
+				],
+				"ability": "Sheer Force",
+				"teraTypes": [
+					"Water"
+				]
 			}
 		]
 	},
@@ -7192,7 +7220,7 @@
 				"role": "Physical AV",
 				"movepool": [
 					"Fake Out",
-					"U-turn",
+					"Grassy Glide",
 					"Wood Hammer",
 					"High Horsepower"
 				],
@@ -7200,6 +7228,22 @@
 					"Assault Vest"
 				],
 				"ability": "Grassy Surge",
+				"teraTypes": [
+					"Water"
+				]
+			},
+			{
+				"role": "Band Tactics",
+				"movepool": [
+					"Knock Off",
+					"Superpower",
+					"Wood Hammer",
+					"High Horsepower"
+				],
+				"items": [
+					"Choice Band"
+				],
+				"ability": "Gorilla Tactics",
 				"teraTypes": [
 					"Grass"
 				]
@@ -7532,6 +7576,22 @@
 					"Quick Claw"
 				],
 				"ability": "Quick Draw",
+				"teraTypes": [
+					"Poison"
+				]
+			},
+			{
+				"role": "Physical Dice",
+				"movepool": [
+					"Shell Side Arm",
+					"Rock Blast",
+					"Barrage",
+					"Slack Off"
+				],
+				"items": [
+					"Loaded Dice"
+				],
+				"ability": "Mega Launcher",
 				"teraTypes": [
 					"Poison"
 				]
@@ -8002,6 +8062,22 @@
 				"ability": "Libero",
 				"teraTypes": [
 					"Fire"
+				]
+			},
+			{
+				"role": "Shock n Ball Torture",
+				"movepool": [
+					"Pyro Ball",
+					"Electro Ball",
+					"Shadow Ball",
+					"High Jump Kick"
+				],
+				"items": [
+					"Life Orb"
+				],
+				"ability": "Ballin'",
+				"teraTypes": [
+					"Electric"
 				]
 			}
 		]
@@ -13244,6 +13320,46 @@
 				"ability": "Dancer",
 				"teraTypes": [
 					"Fighting"
+				]
+			}
+		]
+	},
+	"golemalola": {
+		"sets": [
+			{
+				"role": "Custap",
+				"movepool": [
+					"Explosion",
+					"Endure",
+					"Stone Edge",
+					"Giga Impact"
+				],
+				"items": [
+					"Custap Berry"
+				],
+				"ability": "Galvanize",
+				"teraTypes": [
+					"Flying"
+				]
+			}
+		]
+	},
+	"incineroar": {
+		"sets": [
+			{
+				"role": "Assault Vest",
+				"movepool": [
+					"Fake Out",
+					"U-turn",
+					"Flare Blitz",
+					"Darkest Lariat"
+				],
+				"items": [
+					"Assault Vest"
+				],
+				"ability": "Intimidate",
+				"teraTypes": [
+					"Fire"
 				]
 			}
 		]
