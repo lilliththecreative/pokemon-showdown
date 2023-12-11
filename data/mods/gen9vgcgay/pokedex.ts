@@ -790,7 +790,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		],
 		"baseStats": {
 			"hp": 60,
-			"atk": 130,
+			"atk": 135,
 			"def": 120,
 			"spa": 50,
 			"spd": 55,
@@ -3310,7 +3310,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Dark"
 		],
 		"baseStats": {
-			"hp": 73,
+			"hp": 63,
 			"atk": 130,
 			"def": 90,
 			"spa": 90,
@@ -5798,15 +5798,15 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Flying"
 		],
 		"baseStats": {
-			"hp": 100,
-			"atk": 150,
-			"def": 70,
-			"spa": 132,
-			"spd": 70,
-			"spe": 120
+			"hp": 83,
+			"atk": 145,
+			"def": 65,
+			"spa": 127,
+			"spd": 65,
+			"spe": 115
 		},
 		"abilities": {
-			"0": "Defeatist"
+			"0": "Running Start"
 		},
 		"inherit": true
 	},

@@ -1910,4 +1910,8 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	runningstart: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

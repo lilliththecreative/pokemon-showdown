@@ -7987,6 +7987,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"proposition": [
 				"9M"
+			],
+			"headsmash": [
+				"9M"
 			]
 		}
 	},
@@ -8842,9 +8845,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"proposition": [
-				"9M"
-			],
-			"headsmash": [
 				"9M"
 			]
 		}
@@ -66829,6 +66829,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"topsyturvy": [
+				"9M"
+			],
+			"spinout": [
 				"9M"
 			]
 		}
@@ -198144,6 +198147,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"terablast": [
 				"9M"
+			],
+			"spinout": [
+				"9M"
 			]
 		}
 	},
@@ -222335,6 +222341,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"return": [
 				"9M"
+			],
+			"weatherball": [
+				"9M"
 			]
 		}
 	},
@@ -222592,6 +222601,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"eeriespell": [
 				"9M"
+			],
+			"weatherball": [
+				"9M"
 			]
 		}
 	},
@@ -222763,6 +222775,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"punishment": [
 				"9M"
+			],
+			"weatherball": [
+				"9M"
 			]
 		}
 	},
@@ -222933,6 +222948,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"return": [
+				"9M"
+			],
+			"weatherball": [
 				"9M"
 			]
 		}
@@ -223116,6 +223134,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"return": [
 				"9M"
+			],
+			"weatherball": [
+				"9M"
 			]
 		}
 	},
@@ -223292,6 +223313,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"return": [
 				"9M"
+			],
+			"weatherball": [
+				"9M"
 			]
 		}
 	},
@@ -223464,6 +223488,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"return": [
 				"9M"
+			],
+			"terrainpulse": [
+				"9M"
 			]
 		}
 	},
@@ -223613,6 +223640,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"flashfreeze": [
+				"9M"
+			],
+			"terrainpulse": [
 				"9M"
 			]
 		}
@@ -223795,6 +223825,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"return": [
 				"9M"
+			],
+			"terrainpulse": [
+				"9M"
 			]
 		}
 	},
@@ -223975,6 +224008,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"return": [
 				"9M"
+			],
+			"terrainpulse": [
+				"9M"
 			]
 		}
 	},
@@ -224151,6 +224187,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"return": [
+				"9M"
+			],
+			"terrainpulse": [
 				"9M"
 			]
 		}
@@ -224390,6 +224429,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"return": [
+				"9M"
+			],
+			"terrainpulse": [
 				"9M"
 			]
 		}

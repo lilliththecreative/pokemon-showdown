@@ -14,7 +14,7 @@ interface StoneDeltas {
 	type?: string;
 }
 
-type TierShiftTiers = 'UU' | 'RUBL' | 'RU' | 'NUBL' | 'NU' | 'PUBL' | 'PU' | 'ZUBL' | 'ZU' | 'SUBL' | 'SU' | 'UR' | 'NFE' | 'LC';
+type TierShiftTiers = 'UU' | 'RUBL' | 'RU' | 'NUBL' | 'NU' | 'PUBL' | 'PU' | 'ZUBL' | 'ZU' | 'SUBL' | 'SU' | 'UR' | 'NFE' | 'LC' | 'IU' | '8U' | '9U' | '10U' | '10UBL';
 
 function getMegaStone(stone: string, mod = 'gen9'): Item | null {
 	let dex = Dex;
@@ -399,7 +399,7 @@ export const commands: Chat.ChatCommands = {
 			const additionalReason = species.gen > dex.gen ? ` in Generation ${dex.gen}` : ``;
 			throw new Chat.ErrorMessage(`Error: Pok\u00e9mon '${monName}' not found${additionalReason}.`);
 		}
-		const boosts: {[tier in TierShiftTiers]: number} = {
+		let boosts: {[tier in TierShiftTiers]: number} = {
 			UU: 15,
 			RUBL: 15,
 			RU: 20,
@@ -412,14 +412,43 @@ export const commands: Chat.ChatCommands = {
 			SUBL: 30,
 			SU: 35,
 			UR: 40,
+			IU: 40,
 			NFE: 40,
 			LC: 40,
+			"8U": 35, 
+			"9U": 40,
+			"10UBL": 40,
+			"10U": 45,
+		};
+		const gen1boosts: {[tier in TierShiftTiers]: number} = {
+			RUBL: 0,
+			RU: 0,
+			UR: 0,
+			NFE: 0,
+			LC: 0,
+			UU: 5,
+			NUBL: 5,
+			NU: 10,
+			PUBL: 10,
+			PU: 15,
+			ZUBL: 15,
+			ZU: 20,
+			SUBL: 20,
+			SU: 25,
+			IU: 30,
+			"8U": 35, 
+			"9U": 40,
+			"10UBL": 40,
+			"10U": 45,
 		};
 		if (dex.gen < 9) {
 			boosts['UU'] = boosts['RUBL'] = 10;
 			boosts['RU'] = boosts['NUBL'] = 20;
 			boosts['NU'] = boosts['PUBL'] = 30;
 			boosts['PU'] = boosts['NFE'] = boosts['LC'] = 40;
+		}
+		if (dex.gen === 1) {
+			boosts = gen1boosts;
 		}
 		let tier = species.tier;
 		if (tier[0] === '(') tier = tier.slice(1, -1);

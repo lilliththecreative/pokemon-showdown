@@ -5695,7 +5695,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			const dazzlingHolder = this.effectState.target;
 			if ((source.isAlly(dazzlingHolder) || move.target === 'all') && move.priority > 0.1) {
 				this.attrLastMove('[still]');
-				this.add('cant', dazzlingHolder, 'ability: Queenly Majesty', move, '[of] ' + target);
+				this.add('cant', dazzlingHolder, 'ability: Regal Majesty', move, '[of] ' + target);
 				return false;
 			}
 		},
@@ -5800,5 +5800,23 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		isNonstandard: "CAP",
 		rating: 4,
 		num: -47,
+	},
+	runningstart: {
+		onStart(pokemon) {
+			this.effectState.runningStart = true;
+		},
+		onBeforeMovePriority: 9,
+		onBeforeMove(pokemon, target, move) {
+			if (this.effectState.runningStart) {
+				if (move.type === "Flying") {
+					this.add('cant', pokemon, 'ability: Running Start');
+				}
+			}
+			this.effectState.runningStart = false;
+		},
+		name: "Running Start",
+		isNonstandard: "CAP",
+		rating: -1,
+		num: -48,
 	},
 };

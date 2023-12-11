@@ -2137,6 +2137,53 @@ export const Rulesets: {[k: string]: FormatData} = {
 			this.lose(target.side);
 		},
 	},
+	gen1tiershiftmod: {
+		effectType: "Rule",
+		name: "Gen 1 Tier Shift Mod",
+		desc: `Pok&eacute;mon below OU get their stats, excluding HP, boosted. +5 per tier down to 10u.`,
+		ruleset: ['Overflow Stat Mod'],
+		onBegin() {
+			this.add('rule', 'Tier Shift Mod: Pok\u00e9mon get stat buffs depending on their tier, excluding HP.');
+		},
+		onModifySpecies(species, target, source, effect) {
+			if (!species.baseStats) return;
+			const boosts: {[tier: string]: number} = {
+				uu: 5,
+				nubl: 5,
+				nu: 10,
+				publ: 10,
+				pu: 15,
+				zubl: 15,
+				zu: 20,
+				subl: 20,
+				su: 25,
+				iu: 30,
+				"8u": 35, 
+				"9u": 40,
+				"10ubl": 40,
+				"10u": 45,
+			};
+			const isNatDex: boolean = this.ruleTable.has("standardnatdex");
+			let tier: string = this.toID(isNatDex ? species.natDexTier : species.tier);
+			if (!(tier in boosts)) return;
+			// Non-Pokemon bans in lower tiers
+			if (target) {
+				if (this.toID(target.set.item) === 'lightclay') tier = 'rubl';
+				if (this.toID(target.set.item) === 'damprock') tier = 'publ';
+				if (this.toID(target.set.item) === 'heatrock') tier = 'publ';
+			}
+			const pokemon = this.dex.deepClone(species);
+			pokemon.bst = pokemon.baseStats['hp'];
+			const boost = boosts[tier];
+			let statName: StatID;
+			for (statName in pokemon.baseStats as StatsTable) {
+				if (statName === 'hp') continue;
+				pokemon.baseStats[statName] = this.clampIntRange(pokemon.baseStats[statName] + boost, 1, 255);
+				pokemon.bst += pokemon.baseStats[statName];
+			}
+			return pokemon;
+		},
+	},
 	tiershiftmod: {
 		effectType: "Rule",
 		name: "Tier Shift Mod",

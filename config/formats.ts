@@ -157,6 +157,13 @@ export const Formats: FormatList = [
 		section: "Gen 1 Lower Tiers",
 	},
 	{
+		name: "[Gen 1] Tier Shift",
+		mod: 'gen1',
+		ruleset: ['Standard', 'Gen 1 Tier Shift Mod'],
+		banlist: ['Uber'],
+		searchShow: true,
+	},
+	{
 		name: "[Gen 1] ZU",
 		mod: 'gen1',
 		searchShow: true,
@@ -366,7 +373,7 @@ export const Formats: FormatList = [
 		banlist: ['SU', 'IUBL'],
 	},
 	{
-		section: "Alt Lower Tiers",
+		section: "Gen 7 Lower Tiers",
 	},
 	{
 		name: "[Gen 7] SU",
@@ -383,11 +390,24 @@ export const Formats: FormatList = [
 		banlist: ['SU', 'IUBL'],
 	},
 	{
+		section: "Gen 8 Lower Tiers",
+	},
+	{
 		name: "[Gen 8] SU",
 		mod: 'gen8',
 		searchShow: true,
 		ruleset: ['[Gen 8] ZU'],
 		banlist: ['ZU', 'SUBL'],
+	},
+	{
+		name: "[Gen 8] IU",
+		mod: 'gen8',
+		searchShow: true,
+		ruleset: ['[Gen 8] SU'],
+		banlist: ['SU', 'IUBL'],
+	},
+	{
+		section: "Gen 9 Lower Tiers",
 	},
 	{
 		name: "[Gen 9] SU",

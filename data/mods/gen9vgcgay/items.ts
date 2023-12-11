@@ -1,4 +1,5 @@
 export const Items: {[k: string]: ModdedItemData} = {
+	// Edited Items
 	berserkgene: {
 		inherit: true,
 		desc: "On switch-in, raises holder's Attack by 1 and confuses it. Single use.",
@@ -16,6 +17,16 @@ export const Items: {[k: string]: ModdedItemData} = {
 			}
 		},
 	},
+	// Making Illegal
+	focusband: {
+		"inherit": true,
+		isNonstandard: "Past",
+	},
+	brightpowder: {
+		"inherit": true,
+		isNonstandard: "Past",
+	},
+	// Making Illegal
 	thickclub: {
 		"inherit": true,
 		isNonstandard: null,
