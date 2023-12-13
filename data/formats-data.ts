@@ -620,7 +620,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		natDexTier: "RU",
 	},
 	slowbrogalar: {
-		tier: "NU",
+		tier: "NUBL",
 		doublesTier: "(DUU)",
 		natDexTier: "RU",
 	},
@@ -1609,7 +1609,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	mamoswine: {
 		tier: "UU",
 		doublesTier: "(DUU)",
-		natDexTier: "RU",
+		natDexTier: "RUBL",
 	},
 	corsola: {
 		isNonstandard: "Past",
@@ -4292,7 +4292,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		natDexTier: "RU",
 	},
 	oricoriopompom: {
-		tier: "NU",
+		tier: "NUBL",
 		doublesTier: "(DUU)",
 		natDexTier: "RU",
 	},
@@ -5619,7 +5619,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		natDexTier: "UU",
 	},
 	ironhands: {
-		tier: "UU",
+		tier: "UUBL",
 		doublesTier: "DOU",
 		natDexTier: "UU",
 	},
@@ -5773,7 +5773,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	ogerponcornerstone: {
 		tier: "OU",
 		doublesTier: "DUU",
-		natDexTier: "UU",
+		natDexTier: "UUBL",
 	},
 	missingno: {
 		isNonstandard: "Custom",
