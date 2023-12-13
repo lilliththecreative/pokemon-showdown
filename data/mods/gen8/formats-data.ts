@@ -254,7 +254,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		natDexTier: "(Uber)",
 	},
 	pikachuworld: {
-		tier: "SU",
+		tier: "IU",
 		doublesTier: "(DUU)",
 		natDexTier: "RU",
 	},
@@ -4266,7 +4266,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	wishiwashischool: {
 	},
 	mareanie: {
-		tier: "LC",
+		tier: "SU",
 	},
 	toxapex: {
 		tier: "OU",
@@ -5202,7 +5202,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		natDexTier: "Uber",
 	},
 	calyrex: {
-		tier: "SU",
+		tier: "IU",
 		doublesTier: "(DUU)",
 		natDexTier: "RU",
 	},

@@ -2443,4 +2443,9 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "After another Pokemon uses a ball/bullet move, this Pokemon uses the same move. The copied move is subject to all effects that can prevent a move from being executed. A move used through this Ability cannot be copied again by other Pokemon with this Ability.",
 		shortDesc: "After another uses a ball/bullet move, this Pokemon uses with higher attack stat.",
 	},
+	runningstart: {
+		name: "Running Start",
+		desc: "This pokemon cannot use flying moves on its first attack.",
+		shortDesc: "This pokemon cannot use flying moves on its first attack.",
+	},
 };

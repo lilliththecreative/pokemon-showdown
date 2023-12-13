@@ -2,10 +2,10 @@ export const Items: {[k: string]: ModdedItemData} = {
 	// Edited Items
 	berserkgene: {
 		inherit: true,
+		isNonstandard: null,
 		desc: "On switch-in, raises holder's Attack by 1 and confuses it. Single use.",
 		shortDesc: "On switch-in, raises holder's Attack by 1 and confuses it. Single use.",
 		boosts: {atk: 1},
-		isNonstandard: null,
 	},
 	shellbell: {
 		inherit: true,
@@ -16,6 +16,18 @@ export const Items: {[k: string]: ModdedItemData} = {
 				this.heal(move.totalDamage / 4, pokemon);
 			}
 		},
+	},
+	luckypunch: {
+		inherit: true,
+		isNonstandard: null,
+		shortDesc: "If held by a Chansey/Ledian, its critical hit ratio is raised by 2 stages.",
+		desc: "If held by a Chansey/Ledian, its critical hit ratio is raised by 2 stages.",
+		onModifyCritRatio(critRatio, user) {
+			if (user.baseSpecies.name === 'Chansey' || user.baseSpecies.name === 'Ledian') {
+				return critRatio + 2;
+			}
+		},
+		itemUser: ["Chansey", "Ledian"],
 	},
 	// Making Illegal
 	focusband: {

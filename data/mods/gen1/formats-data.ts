@@ -81,7 +81,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "SU",
 	},
 	sandslash: {
-		tier: "ZUBL",
+		tier: "ZU",
 	},
 	nidoranf: {
 		tier: "9U",
@@ -132,7 +132,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "SU",
 	},
 	vileplume: {
-		tier: "ZU",
+		tier: "PU",
 	},
 	paras: {
 		tier: "9U",
@@ -174,7 +174,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "9U",
 	},
 	arcanine: {
-		tier: "ZUBL",
+		tier: "PU",
 	},
 	poliwag: {
 		tier: "ZU",
@@ -186,7 +186,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "NUBL",
 	},
 	abra: {
-		tier: "PU",
+		tier: "ZU",
 	},
 	kadabra: {
 		tier: "UU",
@@ -366,7 +366,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "NU",
 	},
 	scyther: {
-		tier: "ZU",
+		tier: "PU",
 	},
 	jynx: {
 		tier: "OU",
@@ -375,7 +375,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "UU",
 	},
 	magmar: {
-		tier: "ZU",
+		tier: "PU",
 	},
 	pinsir: {
 		tier: "PU",

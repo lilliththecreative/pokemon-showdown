@@ -2264,17 +2264,17 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Ground"
 		],
 		"baseStats": {
-			"hp": 110,
-			"atk": 120,
+			"hp": 90,
+			"atk": 125,
 			"def": 125,
 			"spa": 60,
 			"spd": 60,
-			"spe": 95
+			"spe": 60
 		},
 		"abilities": {
 			"0": "Sturdy",
-			"1": "Rampage",
-			"H": "Sand Force"
+			"1": "Speed Boost",
+			"H": "Sand Veil"
 		},
 		"inherit": true
 	},
@@ -3532,9 +3532,9 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		],
 		"baseStats": {
 			"hp": 114,
-			"atk": 100,
+			"atk": 98,
 			"def": 103,
-			"spa": 100,
+			"spa": 102,
 			"spd": 112,
 			"spe": 71
 		},

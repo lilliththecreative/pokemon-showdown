@@ -48082,6 +48082,12 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"shadowpunch": [
 				"9M"
+			],
+			"meteormash": [
+				"9M"
+			],
+			"calmmind": [
+				"9M"
 			]
 		}
 	},
@@ -52624,6 +52630,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"6L1",
 				"5L1",
 				"4L1"
+			],
+			"meditate": [
+				"9M"
 			]
 		}
 	},

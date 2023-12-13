@@ -14,7 +14,8 @@ interface StoneDeltas {
 	type?: string;
 }
 
-type TierShiftTiers = 'UU' | 'RUBL' | 'RU' | 'NUBL' | 'NU' | 'PUBL' | 'PU' | 'ZUBL' | 'ZU' | 'SUBL' | 'SU' | 'UR' | 'NFE' | 'LC' | 'IU' | '8U' | '9U' | '10U' | '10UBL';
+type TierShiftTiers = 'UU' | 'RUBL' | 'RU' | 'NUBL' | 'NU' | 'PUBL' | 'PU' | 'ZUBL' | 'ZU' |
+'SUBL' | 'SU' | 'UR' | 'NFE' | 'LC' | 'IU' | '8U' | '9U' | '10U' | '10UBL';
 
 function getMegaStone(stone: string, mod = 'gen9'): Item | null {
 	let dex = Dex;
@@ -415,7 +416,7 @@ export const commands: Chat.ChatCommands = {
 			IU: 40,
 			NFE: 40,
 			LC: 40,
-			"8U": 35, 
+			"8U": 35,
 			"9U": 40,
 			"10UBL": 40,
 			"10U": 45,
@@ -436,7 +437,7 @@ export const commands: Chat.ChatCommands = {
 			SUBL: 20,
 			SU: 25,
 			IU: 30,
-			"8U": 35, 
+			"8U": 35,
 			"9U": 40,
 			"10UBL": 40,
 			"10U": 45,

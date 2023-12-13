@@ -1013,6 +1013,7 @@ export const commands: Chat.ChatCommands = {
 	 * Battle commands
 	 *********************************************************/
 
+	ff: 'forfeit',
 	forfeit(target, room, user) {
 		room = this.requireRoom();
 		if (!room.game) return this.errorReply(this.tr`This room doesn't have an active game.`);

@@ -2158,7 +2158,7 @@ export const Rulesets: {[k: string]: FormatData} = {
 				subl: 20,
 				su: 25,
 				iu: 30,
-				"8u": 35, 
+				"8u": 35,
 				"9u": 40,
 				"10ubl": 40,
 				"10u": 45,
