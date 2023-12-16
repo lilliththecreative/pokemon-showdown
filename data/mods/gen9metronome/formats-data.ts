@@ -471,6 +471,50 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"isNonstandard": null,
 		"tier": "OU"
 	},
+	"hitmonlee": {
+		"isNonstandard": null,
+		"tier": "OU"
+	},
+	"hitmonchan": {
+		"isNonstandard": null,
+		"tier": "OU"
+	},
+	"magmar": {
+		"isNonstandard": null,
+		"tier": "NU"
+	},
+	"magmortar": {
+		"isNonstandard": null,
+		"tier": "OU"
+	},
+	"electabuzz": {
+		"isNonstandard": null,
+		"tier": "NU"
+	},
+	"electivire": {
+		"isNonstandard": null,
+		"tier": "OU"
+	},
+	"snubbull": {
+		"isNonstandard": null,
+		"tier": "LC"
+	},
+	"granbull": {
+		"isNonstandard": null,
+		"tier": "OU"
+	},
+	"alcremie": {
+		"isNonstandard": null,
+		"tier": "OU"
+	},
+	"smeargle": {
+		"isNonstandard": null,
+		"tier": "OU"
+	},
+	"scrafty": {
+		"isNonstandard": null,
+		"tier": "OU"
+	},
 	"bulbasaur": {
 		"isNonstandard": "Past",
 		"tier": "Illegal"
@@ -1079,14 +1123,6 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"isNonstandard": "Past",
 		"tier": "Illegal"
 	},
-	"hitmonlee": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
-	},
-	"hitmonchan": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
-	},
 	"hitmontop": {
 		"isNonstandard": "Past",
 		"tier": "Illegal"
@@ -1211,23 +1247,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"isNonstandard": "Past",
 		"tier": "Illegal"
 	},
-	"electabuzz": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
-	},
-	"electivire": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
-	},
 	"magby": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
-	},
-	"magmar": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
-	},
-	"magmortar": {
 		"isNonstandard": "Past",
 		"tier": "Illegal"
 	},
@@ -1631,14 +1651,6 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"isNonstandard": "Past",
 		"tier": "Illegal"
 	},
-	"snubbull": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
-	},
-	"granbull": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
-	},
 	"qwilfish": {
 		"isNonstandard": "Past",
 		"tier": "Illegal"
@@ -1760,10 +1772,6 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"tier": "Illegal"
 	},
 	"wyrdeer": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
-	},
-	"smeargle": {
 		"isNonstandard": "Past",
 		"tier": "Illegal"
 	},
@@ -3052,10 +3060,6 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"tier": "Illegal"
 	},
 	"scraggy": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
-	},
-	"scrafty": {
 		"isNonstandard": "Past",
 		"tier": "Illegal"
 	},
@@ -4548,10 +4552,6 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"tier": "Illegal"
 	},
 	"milcery": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
-	},
-	"alcremie": {
 		"isNonstandard": "Past",
 		"tier": "Illegal"
 	},

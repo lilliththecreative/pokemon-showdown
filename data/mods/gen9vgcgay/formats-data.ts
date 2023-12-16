@@ -4616,8 +4616,8 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"tier": "OU"
 	},
 	"duraludon": {
-		"isNonstandard": null,
-		"tier": "OU"
+		"isNonstandard": "Past",
+		"tier": "Illegal"
 	},
 	"duraludongmax": {
 		"isNonstandard": "Past",
@@ -5208,8 +5208,8 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"tier": "OU"
 	},
 	"dipplin": {
-		"isNonstandard": null,
-		"tier": "OU"
+		"isNonstandard": "Past",
+		"tier": "Illegal"
 	},
 	"poltchageist": {
 		"isNonstandard": "Past",
@@ -5270,6 +5270,46 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	"ogerponcornerstonetera": {
 		"isNonstandard": null,
 		"tier": "OU"
+	},
+	"archaludon": {
+		"isNonstandard": null,
+		"tier": "OU"
+	},
+	"hydrapple": {
+		"isNonstandard": null,
+		"tier": "OU"
+	},
+	"gougingfire": {
+		"isNonstandard": null,
+		"tier": "OU"
+	},
+	"ragingbolt": {
+		"isNonstandard": null,
+		"tier": "OU"
+	},
+	"ironboulder": {
+		"isNonstandard": null,
+		"tier": "OU"
+	},
+	"ironcrown": {
+		"isNonstandard": null,
+		"tier": "OU"
+	},
+	"terapagos": {
+		"isNonstandard": "Past",
+		"tier": "Illegal"
+	},
+	"terapagosterastal": {
+		"isNonstandard": "Past",
+		"tier": "Illegal"
+	},
+	"terapagosstellar": {
+		"isNonstandard": "Past",
+		"tier": "Illegal"
+	},
+	"pecharunt": {
+		"isNonstandard": "Past",
+		"tier": "Illegal"
 	},
 	"missingno": {
 		"isNonstandard": "Past",
@@ -5564,6 +5604,10 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"tier": "Illegal"
 	},
 	"hemogoblin": {
+		"isNonstandard": "Past",
+		"tier": "Illegal"
+	},
+	"cresceidon": {
 		"isNonstandard": "Past",
 		"tier": "Illegal"
 	},

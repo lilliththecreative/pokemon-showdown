@@ -64,10 +64,10 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Flying"
 		],
 		"baseStats": {
-			"hp": 65,
+			"hp": 70,
 			"atk": 55,
 			"def": 60,
-			"spa": 105,
+			"spa": 110,
 			"spd": 90,
 			"spe": 75
 		},
@@ -83,10 +83,10 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Poison"
 		],
 		"baseStats": {
-			"hp": 65,
+			"hp": 70,
 			"atk": 130,
 			"def": 40,
-			"spa": 15,
+			"spa": 20,
 			"spd": 75,
 			"spe": 125
 		},
@@ -3732,7 +3732,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"abilities": {
 			"0": "Clear Body",
-			"1": "Tough Claws",
+			"1": "Machine Learning",
 			"H": "Analytic"
 		},
 		"inherit": true
@@ -6794,11 +6794,11 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Flying"
 		],
 		"baseStats": {
-			"hp": 90,
+			"hp": 95,
 			"atk": 57,
-			"def": 60,
+			"def": 65,
 			"spa": 95,
-			"spd": 60,
+			"spd": 65,
 			"spe": 94
 		},
 		"abilities": {
@@ -7442,6 +7442,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"abilities": {
 			"0": "Blaze",
+			"1": "Big Pecks",
 			"H": "Intimidate"
 		},
 		"inherit": true
@@ -9652,26 +9653,6 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"inherit": true
 	},
-	"duraludon": {
-		"types": [
-			"Steel",
-			"Dragon"
-		],
-		"baseStats": {
-			"hp": 70,
-			"atk": 95,
-			"def": 115,
-			"spa": 120,
-			"spd": 50,
-			"spe": 85
-		},
-		"abilities": {
-			"0": "Pressure",
-			"1": "Rampage",
-			"H": "Stalwart"
-		},
-		"inherit": true
-	},
 	"dragapult": {
 		"types": [
 			"Dragon",
@@ -11234,26 +11215,6 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"inherit": true
 	},
-	"dipplin": {
-		"types": [
-			"Grass",
-			"Dragon"
-		],
-		"baseStats": {
-			"hp": 85,
-			"atk": 80,
-			"def": 115,
-			"spa": 95,
-			"spd": 85,
-			"spe": 40
-		},
-		"abilities": {
-			"0": "Supersweet Syrup",
-			"1": "Gluttony",
-			"H": "Sticky Hold"
-		},
-		"inherit": true
-	},
 	"sinistcha": {
 		"types": [
 			"Grass",
@@ -11469,6 +11430,122 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"abilities": {
 			"0": "Embody Aspect (Cornerstone)"
+		},
+		"inherit": true
+	},
+	"archaludon": {
+		"types": [
+			"Steel",
+			"Dragon"
+		],
+		"baseStats": {
+			"hp": 90,
+			"atk": 105,
+			"def": 130,
+			"spa": 125,
+			"spd": 65,
+			"spe": 85
+		},
+		"abilities": {
+			"0": "Stamina",
+			"1": "Sturdy",
+			"H": "Stalwart"
+		},
+		"inherit": true
+	},
+	"hydrapple": {
+		"types": [
+			"Grass",
+			"Dragon"
+		],
+		"baseStats": {
+			"hp": 106,
+			"atk": 80,
+			"def": 110,
+			"spa": 120,
+			"spd": 80,
+			"spe": 44
+		},
+		"abilities": {
+			"0": "Supersweet Syrup",
+			"1": "Regenerator",
+			"H": "Sticky Hold"
+		},
+		"inherit": true
+	},
+	"gougingfire": {
+		"types": [
+			"Fire",
+			"Dragon"
+		],
+		"baseStats": {
+			"hp": 105,
+			"atk": 115,
+			"def": 121,
+			"spa": 65,
+			"spd": 93,
+			"spe": 91
+		},
+		"abilities": {
+			"0": "Protosynthesis",
+			"H": "Inner Focus"
+		},
+		"inherit": true
+	},
+	"ragingbolt": {
+		"types": [
+			"Electric",
+			"Dragon"
+		],
+		"baseStats": {
+			"hp": 125,
+			"atk": 73,
+			"def": 91,
+			"spa": 137,
+			"spd": 89,
+			"spe": 75
+		},
+		"abilities": {
+			"0": "Protosynthesis",
+			"H": "Inner Focus"
+		},
+		"inherit": true
+	},
+	"ironboulder": {
+		"types": [
+			"Rock",
+			"Psychic"
+		],
+		"baseStats": {
+			"hp": 90,
+			"atk": 120,
+			"def": 80,
+			"spa": 68,
+			"spd": 108,
+			"spe": 124
+		},
+		"abilities": {
+			"0": "Quark Drive",
+			"H": "Justified"
+		},
+		"inherit": true
+	},
+	"ironcrown": {
+		"types": [
+			"Steel",
+			"Psychic"
+		],
+		"baseStats": {
+			"hp": 90,
+			"atk": 72,
+			"def": 100,
+			"spa": 122,
+			"spd": 108,
+			"spe": 98
+		},
+		"abilities": {
+			"0": "Quark Drive",
+			"H": "Justified"
 		},
 		"inherit": true
 	}

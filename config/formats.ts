@@ -108,9 +108,7 @@ export const Formats: FormatList = [
 		rated: false,
 		tournamentShow: false,
 		ruleset: ['Standard', '!Evasion Items Clause', 'Item Clause'],
-		banlist: [
-			'Moody', 'Shadow Tag', 'Toxic Debris', 'Regenerator>1'
-		],
+		banlist: ['Toxic Debris', 'Regenerator>1'],
 		onValidateSet(set) {
 			if (set.moves.length !== 1 || this.dex.moves.get(set.moves[0]).id !== 'metronome') {
 				return [`${set.name || set.species} has illegal moves.`, `(Pok\u00e9mon can only have one Metronome in their moveset)`];
