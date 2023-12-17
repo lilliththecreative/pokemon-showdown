@@ -46906,6 +46906,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"vacuumwave": [
 				"9M"
+			],
+			"upperhand": [
+				"9M"
 			]
 		}
 	},
@@ -51563,6 +51566,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"junglehealing": [
+				"9M"
+			],
+			"woodhammer": [
 				"9M"
 			]
 		}
@@ -87082,6 +87088,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"flareblitz": [
 				"9M"
+			],
+			"dragoncheer": [
+				"9M"
 			]
 		}
 	},
@@ -106553,6 +106562,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"flameburst": [
 				"9M"
+			],
+			"dragoncheer": [
+				"9M"
 			]
 		}
 	},
@@ -107607,6 +107619,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"aurasphere": [
+				"9M"
+			],
+			"dragoncheer": [
 				"9M"
 			]
 		}
@@ -129311,6 +129326,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"return": [
 				"9M"
 			],
+			"ancientpower": [
+				"9M"
+			],
 			"weatherball": [
 				"9M"
 			]
@@ -129565,6 +129583,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"return": [
 				"9M"
 			],
+			"ancientpower": [
+				"9M"
+			],
 			"echoedvoice": [
 				"9M"
 			],
@@ -129738,6 +129759,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"return": [
 				"9M"
 			],
+			"ancientpower": [
+				"9M"
+			],
 			"punishment": [
 				"9M"
 			],
@@ -129900,6 +129924,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"return": [
+				"9M"
+			],
+			"ancientpower": [
 				"9M"
 			],
 			"weatherball": [
@@ -130087,6 +130114,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"return": [
 				"9M"
 			],
+			"ancientpower": [
+				"9M"
+			],
 			"weatherball": [
 				"9M"
 			]
@@ -130261,6 +130291,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"return": [
+				"9M"
+			],
+			"ancientpower": [
 				"9M"
 			],
 			"weatherball": [
@@ -132925,6 +132958,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"return": [
+				"9M"
+			],
+			"ancientpower": [
 				"9M"
 			]
 		}

@@ -548,6 +548,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		basePower: 70,
 		accuracy: 100,
 	},
+	meteorbeam: {
+		inherit: true,
+		accuracy: 100,
+	},
 	dragonrush: {
 		inherit: true,
 		accuracy: 80,
@@ -1127,6 +1131,16 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		basePower: 75,
 		secondary: {
 			chance: 100, boosts: {spa: -1},
+		},
+	},
+	ficklebeam: {
+		inherit: true,
+		shortDesc: "50% chance for this move's power is doubled.",
+		onBasePower(basePower, pokemon) {
+			if (this.randomChance(5, 10)) {
+				this.add('-activate', pokemon, 'move: Fickle Beam');
+				return this.chainModify(2);
+			}
 		},
 	},
 	accelerock: {

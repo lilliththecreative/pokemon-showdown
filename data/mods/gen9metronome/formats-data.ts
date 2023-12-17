@@ -5115,6 +5115,46 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"isNonstandard": "Past",
 		"tier": "Illegal"
 	},
+	"archaludon": {
+		"isNonstandard": null,
+		"tier": "Illegal"
+	},
+	"hydrapple": {
+		"isNonstandard": null,
+		"tier": "Illegal"
+	},
+	"gougingfire": {
+		"isNonstandard": null,
+		"tier": "Illegal"
+	},
+	"ragingbolt": {
+		"isNonstandard": null,
+		"tier": "Illegal"
+	},
+	"ironboulder": {
+		"isNonstandard": null,
+		"tier": "Illegal"
+	},
+	"ironcrown": {
+		"isNonstandard": null,
+		"tier": "Illegal"
+	},
+	"terapagos": {
+		"isNonstandard": "Past",
+		"tier": "Illegal"
+	},
+	"terapagosterastal": {
+		"isNonstandard": "Past",
+		"tier": "Illegal"
+	},
+	"terapagosstellar": {
+		"isNonstandard": "Past",
+		"tier": "Illegal"
+	},
+	"pecharunt": {
+		"isNonstandard": "Past",
+		"tier": "Illegal"
+	},
 	"missingno": {
 		"isNonstandard": "Past",
 		"tier": "Illegal"
