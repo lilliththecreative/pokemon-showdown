@@ -838,6 +838,8 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	rhydon: {
 		tier: "ZUBL",
+		doublesTier: "NFE",
+		natDexTier: "NFE",
 	},
 	rhyperior: {
 		tier: "OU",
@@ -1093,6 +1095,8 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	porygon2: {
 		tier: "ZUBL",
+		doublesTier: "NFE",
+		natDexTier: "NFE",
 	},
 	porygonz: {
 		tier: "OU",
@@ -4969,7 +4973,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		natDexTier: "RU",
 	},
 	indeedee: {
-		tier: "PU",
+		tier: "PUBL",
 		doublesTier: "(DUU)",
 		natDexTier: "RU",
 	},
@@ -5016,7 +5020,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		natDexTier: "RU",
 	},
 	duraludon: {
-		tier: "ZUBL",
+		tier: "PUBL",
 		doublesTier: "NFE",
 		natDexTier: "RU",
 	},
@@ -5662,19 +5666,9 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		natDexTier: "OU",
 	},
 	terapagos: {
-		tier: "OU",
-		doublesTier: "DOU",
-		natDexTier: "OU",
-	},
-	terapagosterastal: {
-		tier: "OU",
-		doublesTier: "DOU",
-		natDexTier: "OU",
-	},
-	terapagosstellar: {
-		tier: "OU",
-		doublesTier: "DOU",
-		natDexTier: "OU",
+		tier: "Uber",
+		doublesTier: "DUber",
+		natDexTier: "Uber",
 	},
 	pecharunt: {
 		isNonstandard: "Unobtainable",
