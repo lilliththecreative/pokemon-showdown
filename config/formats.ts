@@ -279,6 +279,7 @@ export const Formats: FormatList = [
 		searchShow: true,
 		ruleset: ['[Gen 3] SU'],
 		banlist: ['SU', 'IUBL'],
+		unbanlist: ['Baton Pass + Substitute']
 	},
 	{
 		name: "[Gen 3] Lol",

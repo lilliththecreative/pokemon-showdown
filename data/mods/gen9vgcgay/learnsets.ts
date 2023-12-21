@@ -10184,6 +10184,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"bulldoze": [
 				"9M"
+			],
+			"return": [
+				"9M"
 			]
 		}
 	},
@@ -10524,6 +10527,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"barrage": [
+				"9M"
+			],
+			"return": [
 				"9M"
 			]
 		}
@@ -14331,12 +14337,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"workup": [
 				"9M"
-			],
-			"twineedle": [
-				"9M"
-			],
-			"acrobatics": [
-				"9M"
 			]
 		}
 	},
@@ -17689,6 +17689,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"hiddenpower": [
 				"9M"
+			],
+			"return": [
+				"9M"
 			]
 		}
 	},
@@ -17858,6 +17861,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"hiddenpower": [
+				"9M"
+			],
+			"return": [
 				"9M"
 			]
 		}
@@ -44968,6 +44974,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"terablast": [
 				"9M"
+			],
+			"wavecrash": [
+				"9M"
 			]
 		}
 	},
@@ -51305,9 +51314,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"bulletseed": [
-				"9M"
-			],
-			"calmmind": [
 				"9M"
 			],
 			"captivate": [
@@ -85875,9 +85881,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"xscissor": [
 				"9M"
-			],
-			"slushcrush": [
-				"9M"
 			]
 		}
 	},
@@ -96117,6 +96120,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"stalacbite": [
+				"9M"
+			],
+			"temperflare": [
 				"9M"
 			]
 		}

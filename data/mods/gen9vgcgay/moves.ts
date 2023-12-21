@@ -1726,6 +1726,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		pp: 5,
 	},
+	burningbulwark: {
+		inherit: true,
+		pp: 5,
+	},
 	trumpcard: {
 		inherit: true,
 		isNonstandard: null,
@@ -1743,11 +1747,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			}
 		},
 	},
-	// "hiddenpowernormal": {
-	// 	"inherit": true,
-	// 	"category": "Physical",
-	// 	"isNonstandard": null,
-	// },
 	"hiddenpowerfairy": {
 		"inherit": true,
 		"isNonstandard": null,
@@ -1825,6 +1824,38 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		"isNonstandard": null,
 	},
 	// Making Standard
+	purifyingwater: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	divinesmite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	stalacbite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	divebomb: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	psychout: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	quarry: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	smeltery: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	icerink: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	flashfreeze: {
 		inherit: true,
 		isNonstandard: null,
@@ -1851,47 +1882,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			return bp;
 		},
 	},
-	icerink: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	quarry: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	smeltery: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	// firewall: {
-	// 	inherit: true,
-	// 	isNonstandard: null,
-	// },
-	stalacbite: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	divebomb: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	psychout: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	purifyingwater: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	divinesmite: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	sacredfire: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	sketch: {
+	proposition: {
 		inherit: true,
 		isNonstandard: null,
 	},

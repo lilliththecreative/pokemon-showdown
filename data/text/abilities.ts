@@ -2337,8 +2337,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	singularity: {
 		name: "Singularity",
-		desc: "All Moves +3 >= Priority >= -2 used while this pokemon is active have 0 priority.",
-		shortDesc: "All Moves +3 >= Priority >= -2 used while this pokemon is active have 0 priority.",
+		desc: "All Moves -2 <= Priority <= +3 used while this pokemon is active have 0 priority.",
+		shortDesc: "All Moves -2 <= Priority <= +3 used while this pokemon is active have 0 priority.",
 	},
 	catscradle: {
 		name: "Cat's Cradle",
@@ -2450,7 +2450,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	machinelearning: {
 		name: "Machine Learning",
 		desc: "Boosts Def on physical damage, boosts SpD on special damage. Resets on new hit.",
-		shortDesc: "Boosts Def on physical damage, boosts SpD on special damage.",
+		shortDesc: "Boosts Def on physical damage, boosts SpD on special damage. Resets on new hit.",
 		// boost: "  [POKEMON] learned to boost [STAT]!",
 		// unboost: "  [POKEMON] forgot how to boost [STAT]!",
 	},
@@ -2468,5 +2468,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Running Start",
 		desc: "This pokemon cannot use flying moves on its first attack.",
 		shortDesc: "This pokemon cannot use flying moves on its first attack.",
+		start: "  [POKEMON] can't get off the ground!",
+		end: "  [POKEMON] took flight!",
 	},
 };

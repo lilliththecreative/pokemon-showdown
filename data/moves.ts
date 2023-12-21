@@ -22040,22 +22040,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	// VGC Gay moves
-	// hiddenpowernormal: {
-	// 	num: 237,
-	// 	accuracy: 100,
-	// 	basePower: 60,
-	// 	category: "Special",
-	// 	realMove: "Hidden Power",
-	// 	isNonstandard: "CAP",
-	// 	name: "Hidden Power Normal",
-	// 	pp: 15,
-	// 	priority: 0,
-	// 	flags: {protect: 1, mirror: 1},
-	// 	secondary: null,
-	// 	target: "normal",
-	// 	type: "Normal",
-	// 	contestType: "Clever",
-	// },
 	hiddenpowerfairy: {
 		num: 237,
 		accuracy: 100,
@@ -22115,67 +22099,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Electric",
 		contestType: "Cool",
-	},
-	firewall: {
-		num: 0,
-		accuracy: true,
-		basePower: 0,
-		isNonstandard: "CAP",
-		category: "Status",
-		name: "Firewall",
-		pp: 5,
-		priority: 4,
-		flags: {noassist: 1, failcopycat: 1},
-		stallingMove: true,
-		volatileStatus: 'firewall',
-		onPrepareHit(pokemon) {
-			this.attrLastMove('[still]');
-			this.add('-anim', pokemon, "Spiky Shield", pokemon);
-			return !!this.queue.willAct() && this.runEvent('StallMove', pokemon);
-		},
-		onHit(pokemon) {
-			pokemon.addVolatile('stall');
-		},
-		condition: {
-			duration: 1,
-			onStart(target) {
-				this.add('-singleturn', target, 'move: Protect');
-			},
-			onTryHitPriority: 3,
-			onTryHit(target, source, move) {
-				if (!move.flags['protect']) {
-					if (['gmaxoneblow', 'gmaxrapidflow'].includes(move.id)) return;
-					if (move.isZ || move.isMax) target.getMoveHitData(move).zBrokeProtect = true;
-					return;
-				}
-				if (move.smartTarget) {
-					move.smartTarget = false;
-				} else {
-					this.add('-activate', target, 'move: Protect');
-				}
-				const lockedmove = source.getVolatile('lockedmove');
-				if (lockedmove) {
-					// Outrage counter is reset
-					if (source.volatiles['lockedmove'].duration === 2) {
-						delete source.volatiles['lockedmove'];
-					}
-				}
-				if (this.checkMoveMakesContact(move, source, target)) {
-					source.trySetStatus('brn', target, move);
-				}
-				return this.NOT_FAIL;
-			},
-			onHit(target, source, move) {
-				if (move.isZOrMaxPowered && this.checkMoveMakesContact(move, source, target)) {
-					source.trySetStatus('brn', target, move);
-				}
-			},
-		},
-		secondary: null,
-		target: "self",
-		type: "Fire",
-		zMove: {boost: {def: 1}},
-		contestType: "Tough",
 	},
 	stalacbite: {
 		num: 0,

@@ -1025,8 +1025,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Fairy"
 		],
 		"baseStats": {
-			"hp": 40,
-			"atk": 55,
+			"hp": 45,
+			"atk": 50,
 			"def": 65,
 			"spa": 110,
 			"spd": 120,
@@ -2194,7 +2194,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"abilities": {
 			"0": "Swift Swim",
-			"1": "Water Absorb",
+			"1": "Symbiosis",
 			"H": "Hydration"
 		},
 		"inherit": true
@@ -7079,7 +7079,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Normal"
 		],
 		"baseStats": {
-			"hp": 67,
+			"hp": 72,
 			"atk": 60,
 			"def": 57,
 			"spa": 114,

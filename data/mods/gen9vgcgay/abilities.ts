@@ -190,7 +190,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	liquidooze: {
 		inherit: true,
-		shortDesc: "Deals damage instead of draining, Replaces foods with Black Sludges on hit",
+		shortDesc: "Deals damage instead of draining, Replaces foods with Black Sludges on hit.",
 		onModifyMove(move) {
 			move.secondaries?.push({
 				chance: 100,
@@ -205,7 +205,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	stickyhold: {
 		inherit: true,
-		shortDesc: "Contact moves make the attacker's items sticky and unusable.",
+		shortDesc: "Contact moves make the attacker's items sticky and unusable. Prevents item loss.",
 		onDamagingHit(damage, target, source, move) {
 			if (this.checkMoveMakesContact(move, target, source)) {
 				const item = source.getItem();
@@ -237,7 +237,6 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		onResidual(pokemon) {
 			for (const allyActive of pokemon.adjacentAllies()) {
 				if (allyActive.maxhp > allyActive.hp) {
-					this.add('-activate', pokemon, 'ability: Healer');
 					this.heal(allyActive.baseMaxhp / 16, allyActive, pokemon);
 				}
 				if (allyActive.status && this.randomChance(3, 10)) {
@@ -614,7 +613,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		onAfterMoveSecondary(target, source, move) {
 			return;
 		},
-		onSourceBeforeMove(source, target, move) {
+		onTryHit(target, source, move) {
 			if (this.effectState.colorChange) return;
 			if (source === target) return;
 			let type = move.type;
@@ -680,9 +679,11 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			if (move.flags['powder']) {
 				type = 'Grass';
 			}
-			if (!target.setType(type)) return;
-			this.effectState.colorChange = true;
-			this.add('-start', target, 'typechange', type, '[from] ability: Color Change');
+			if (type && type !== '???' && target.getTypes().join() !== type) {
+				if (!target.setType(type)) return;
+				this.effectState.colorChange = true;
+				this.add('-start', target, 'typechange', type, '[from] ability: Color Change');
+			}
 		},
 	},
 	normalize: {
@@ -957,7 +958,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	emergencyexit: {
 		inherit: true,
-		shortDesc: "When reaches >= 50% HP, Immediately attacks and then switches out.",
+		shortDesc: "When reaches <= 50% HP, Immediately attacks and then switches out.",
 		onEmergencyExit(target) {
 			if (!this.canSwitch(target.side) || target.forceSwitchFlag || target.switchFlag) return;
 			for (const side of this.sides) {
@@ -1185,7 +1186,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			for (const pokemon of this.getAllActive()) {
 				if (pokemon === target || pokemon.fainted) continue;
 				if (!activated) {
-					this.add('-ability', target, 'Cotton Down');
+					// this.add('-ability', target, 'Cotton Down');
 					this.boost({def: 1}, target, target);
 					activated = true;
 				}
@@ -1193,21 +1194,21 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 		},
 	},
-	defeatist: {
-		inherit: true,
-		shortDesc: "While this Pokemon has <= 1/3 max HP, its Attack and Sp. Atk are halved.",
-		onModifyAtk(atk, pokemon) {
-			if (pokemon.hp <= pokemon.maxhp / 3) {
-				return this.chainModify(0.5);
-			}
-		},
-		onModifySpAPriority: 5,
-		onModifySpA(atk, pokemon) {
-			if (pokemon.hp <= pokemon.maxhp / 3) {
-				return this.chainModify(0.5);
-			}
-		},
-	},
+	// defeatist: {
+	// 	inherit: true,
+	// 	shortDesc: "While this Pokemon has <= 1/3 max HP, its Attack and Sp. Atk are halved.",
+	// 	onModifyAtk(atk, pokemon) {
+	// 		if (pokemon.hp <= pokemon.maxhp / 3) {
+	// 			return this.chainModify(0.5);
+	// 		}
+	// 	},
+	// 	onModifySpAPriority: 5,
+	// 	onModifySpA(atk, pokemon) {
+	// 		if (pokemon.hp <= pokemon.maxhp / 3) {
+	// 			return this.chainModify(0.5);
+	// 		}
+	// 	},
+	// },
 	stancechange: {
 		inherit: true,
 		onModifyMove(move, attacker, defender) {
@@ -1266,43 +1267,6 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			return this.chainModify(0.8);
 		},
 	},
-	// Weather Nerf
-	// swiftswim: {
-	// 	inherit: true,
-	// 	shortDesc: "1.5x speed in Rain",
-	// 	onModifySpe(spe, pokemon) {
-	// 		if (['raindance', 'primordialsea'].includes(pokemon.effectiveWeather())) {
-	// 			return this.chainModify(1.5);
-	// 		}
-	// 	},
-	// },
-	// chlorophyll: {
-	// 	inherit: true,
-	// 	shortDesc: "1.5x speed in Sun",
-	// 	onModifySpe(spe, pokemon) {
-	// 		if (['sunnyday', 'desolateland'].includes(pokemon.effectiveWeather())) {
-	// 			return this.chainModify(1.5);
-	// 		}
-	// 	},
-	// },
-	// slushrush: {
-	// 	inherit: true,
-	// 	shortDesc: "1.5x speed in Hail/Snow",
-	// 	onModifySpe(spe, pokemon) {
-	// 		if (this.field.isWeather(['hail', 'snow'])) {
-	// 			return this.chainModify(1.5);
-	// 		}
-	// 	},
-	// },
-	// sandrush: {
-	// 	inherit: true,
-	// 	shortDesc: "1.5x speed in Sand",
-	// 	onModifySpe(spe, pokemon) {
-	// 		if (this.field.isWeather('sandstorm')) {
-	// 			return this.chainModify(1.5);
-	// 		}
-	// 	},
-	// },
 	// New Abilities
 	triplethreat: {
 		inherit: true,
@@ -1320,9 +1284,6 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 				move.basePower = move.basePower * 0.4;
 			}
 		},
-		// onBasePower(basePower, attacker, defender, move) {
-		// 	return this.chainModify([4, 10]);
-		// },
 	},
 	mindsurfer: {
 		inherit: true,

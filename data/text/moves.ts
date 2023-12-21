@@ -7544,9 +7544,6 @@ export const MovesText: {[k: string]: MoveText} = {
 		},
 	},
 	// Start Gay Moves
-	// hiddenpowernormal: {
-	// 	name: "Hidden Power Normal",
-	// },
 	hiddenpowerfairy: {
 		name: "Hidden Power Fairy",
 	},
@@ -7559,11 +7556,6 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Divine Smite",
 		shortDesc: "50% chance to Paralyze.",
 		desc: "50% chance to Paralyze.",
-	},
-	firewall: {
-		name: "Firewall",
-		shortDesc: "Protects from damaging attacks. Contact: Burn.",
-		desc: "Protects from damaging attacks. Contact: Burn.",
 	},
 	stalacbite: {
 		name: "Stalacbite",

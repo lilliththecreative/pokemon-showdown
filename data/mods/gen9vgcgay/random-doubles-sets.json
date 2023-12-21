@@ -117,12 +117,28 @@
 				"role": "Life Orb",
 				"movepool": [
 					"Hydro Steam",
-					"Dragon Pulse",
+					"Flamethrower",
 					"Draco Meteor",
 					"Protect"
 				],
 				"items": [
 					"Life Orb"
+				],
+				"ability": "Protosynthesis",
+				"teraTypes": [
+					"Water"
+				]
+			},
+			{
+				"role": "Specs Sun",
+				"movepool": [
+					"Hydro Steam",
+					"Flamethrower",
+					"Draco Meteor",
+					"Flip Turn"
+				],
+				"items": [
+					"Choice Specs"
 				],
 				"ability": "Protosynthesis",
 				"teraTypes": [
@@ -5413,7 +5429,7 @@
 				],
 				"ability": "Shield Dust",
 				"teraTypes": [
-					"Bug"
+					"Water"
 				]
 			}
 		]
@@ -7454,7 +7470,7 @@
 					"Hyper Voice",
 					"Shadow Ball",
 					"Volt Switch",
-					"Ominous Wind"
+					"Trick"
 				],
 				"items": [
 					"Choice Specs"
@@ -7462,6 +7478,22 @@
 				"ability": "Galvanize",
 				"teraTypes": [
 					"Electric"
+				]
+			},
+			{
+				"role": "Support Sash",
+				"movepool": [
+					"Electroweb",
+					"Eerie Impulse",
+					"Will-O-Wisp",
+					"Hex"
+				],
+				"items": [
+					"Focus Sash"
+				],
+				"ability": "Levitate",
+				"teraTypes": [
+					"Steel"
 				]
 			}
 		]
@@ -8671,7 +8703,7 @@
 				],
 				"ability": "Multiscale",
 				"teraTypes": [
-					"Dragon"
+					"Normal"
 				]
 			}
 		]
@@ -10671,7 +10703,7 @@
 				"movepool": [
 					"Flash Freeze",
 					"Super Fang",
-					"Ice Beam",
+					"Slush Crush",
 					"Slack Off"
 				],
 				"items": [
@@ -13360,6 +13392,158 @@
 				"ability": "Intimidate",
 				"teraTypes": [
 					"Fire"
+				]
+			}
+		]
+	},
+	"ragingbolt": {
+		"sets": [
+			{
+				"role": "Calm Mind",
+				"movepool": [
+					"Dragon Pulse",
+					"Thunderclap",
+					"Thunderbolt",
+					"Calm Mind"
+				],
+				"items": [
+					"Sitrus Berry"
+				],
+				"ability": "Protosynthesis",
+				"teraTypes": [
+					"Electric"
+				]
+			}
+		]
+	},
+	"gougingfire": {
+		"sets": [
+			{
+				"role": "Life Orb",
+				"movepool": [
+					"Burning Bulwark",
+					"Outrage",
+					"Flare Blitz",
+					"Stone Edge"
+				],
+				"items": [
+					"Life Orb"
+				],
+				"ability": "Protosynthesis",
+				"teraTypes": [
+					"Fire"
+				]
+			}
+		]
+	},
+	"hydrapple": {
+		"sets": [
+			{
+				"role": "Eject Pack",
+				"movepool": [
+					"Draco Meteor",
+					"Leaf Storm",
+					"Hydro Pump",
+					"Protect"
+				],
+				"items": [
+					"Eject Pack"
+				],
+				"ability": "Regenerator",
+				"teraTypes": [
+					"Grass"
+				]
+			}
+		]
+	},
+	"archaludon": {
+		"sets": [
+			{
+				"role": "Power Herb",
+				"movepool": [
+					"Draco Meteor",
+					"Electro Shot",
+					"Steel Beam",
+					"Protect"
+				],
+				"items": [
+					"Power Herb"
+				],
+				"ability": "Stamina",
+				"teraTypes": [
+					"Flying"
+				]
+			},
+			{
+				"role": "Rain AV",
+				"movepool": [
+					"Body Press",
+					"Electro Shot",
+					"Dragon Pulse",
+					"Draco Meteor"
+				],
+				"items": [
+					"Assault Vest"
+				],
+				"ability": "Stamina",
+				"teraTypes": [
+					"Electric"
+				]
+			}
+		]
+	},
+	"ironcrown": {
+		"sets": [
+			{
+				"role": "Special Attacker",
+				"movepool": [
+					"Tachyon Cutter",
+					"Psychic",
+					"Volt Switch",
+					"Protect"
+				],
+				"items": [
+					"Sitrus Berry"
+				],
+				"ability": "Quark Drive",
+				"teraTypes": [
+					"Steel"
+				]
+			},
+			{
+				"role": "Speed Booster",
+				"movepool": [
+					"Tachyon Cutter",
+					"Psychic",
+					"Focus Blast",
+					"Protect"
+				],
+				"items": [
+					"Booster Energy"
+				],
+				"ability": "Quark Drive",
+				"teraTypes": [
+					"Steel"
+				]
+			}
+		]
+	},
+	"ironboulder": {
+		"sets": [
+			{
+				"role": "Speed Booster",
+				"movepool": [
+					"Protect",
+					"Mighty Cleave",
+					"Zen Headbutt",
+					"Close Combat"
+				],
+				"items": [
+					"Booster Energy"
+				],
+				"ability": "Quark Drive",
+				"teraTypes": [
+					"Rock"
 				]
 			}
 		]

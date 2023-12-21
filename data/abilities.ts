@@ -5857,16 +5857,42 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	runningstart: {
 		onStart(pokemon) {
-			this.effectState.runningStart = true;
+			pokemon.addVolatile('runningstart');
 		},
-		onBeforeMovePriority: 9,
-		onBeforeMove(pokemon, target, move) {
-			if (this.effectState.runningStart) {
+		onEnd(pokemon) {
+			delete pokemon.volatiles['runningstart'];
+			// this.add('-end', pokemon, 'Running Start', '[silent]');
+			this.add('-end', pokemon, 'Running Start');
+		},
+		condition: {
+			duration: 1,
+			onResidualOrder: 28,
+			onResidualSubOrder: 2,
+			onStart(target) {
+				if (!target.terastallized) {
+					this.add('-singleturn', target, 'move: Roost');
+					// this.add('-start', target, 'ability: Running Start');
+					// this.add('-singleturn', target, 'ability: Running Start');
+				} else if (target.terastallized === "Flying") {
+					this.add('-hint', "If a Flying Terastallized Pokemon uses Roost, it remains Flying-type.");
+				}
+			},
+			onTypePriority: -1,
+			onType(types, pokemon) {
+				this.effectState.typeWas = types;
+				return types.filter(type => type !== 'Flying');
+			},
+			onBeforeMovePriority: 9,
+			onBeforeMove(pokemon, target, move) {
 				if (move.type === "Flying") {
 					this.add('cant', pokemon, 'ability: Running Start');
+					return false;
 				}
-			}
-			this.effectState.runningStart = false;
+			},
+			onEnd(target) {
+				// this.add('-end', target, 'Running Start');
+				this.add('-end', target, 'Running Start', '[silent]');
+			},
 		},
 		name: "Running Start",
 		isNonstandard: "CAP",
