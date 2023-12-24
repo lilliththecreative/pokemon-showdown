@@ -3475,11 +3475,11 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Normal"
 		],
 		"baseStats": {
-			"hp": 60,
+			"hp": 50,
 			"atk": 90,
-			"def": 65,
+			"def": 70,
 			"spa": 70,
-			"spd": 115,
+			"spd": 120,
 			"spe": 40
 		},
 		"abilities": {
@@ -5972,7 +5972,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"def": 75,
 			"spa": 65,
 			"spd": 75,
-			"spe": 115
+			"spe": 110
 		},
 		"abilities": {
 			"0": "Chlorophyll",
@@ -7257,9 +7257,9 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		],
 		"baseStats": {
 			"hp": 62,
-			"atk": 80,
+			"atk": 85,
 			"def": 91,
-			"spa": 80,
+			"spa": 85,
 			"spd": 87,
 			"spe": 75
 		},
@@ -9357,7 +9357,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Fairy"
 		],
 		"baseStats": {
-			"hp": 80,
+			"hp": 75,
 			"atk": 60,
 			"def": 80,
 			"spa": 110,

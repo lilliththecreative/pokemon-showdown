@@ -51663,9 +51663,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"energyball": [
 				"9M"
 			],
-			"expandingforce": [
-				"9M"
-			],
 			"extrasensory": [
 				"9M"
 			],
@@ -100770,6 +100767,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"razorwind": [
 				"9M"
+			],
+			"electroshot": [
+				"9M"
 			]
 		}
 	},
@@ -117169,6 +117169,12 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"spikecannon": [
+				"9M"
+			],
+			"spikyshield": [
+				"9M"
+			],
+			"nuzzle": [
 				"9M"
 			]
 		}
