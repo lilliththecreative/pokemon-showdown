@@ -903,7 +903,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "8U",
 	},
 	delcatty: {
-		tier: "ZU",
+		tier: "ZUBL",
 	},
 	sableye: {
 		tier: "NU",
