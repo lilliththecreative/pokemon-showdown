@@ -707,9 +707,9 @@ export const Rulesets: {[k: string]: FormatData} = {
 	drafttimer: {
 		effectType: 'Rule',
 		name: 'Draft Timer',
-		desc: "VGC's timer: 240 second Team Preview, 20 minutes Your Time, 3 minute per turn",
+		desc: "VGC's timer: 240 second Team Preview, 14 minutes Your Time, 2 minute per turn",
 		timer: {
-			starting: 18 * 60, addPerTurn: 0, maxPerTurn: 150, maxFirstTurn: 240,
+			starting: 14 * 60, addPerTurn: 0, maxPerTurn: 120, maxFirstTurn: 240,
 			grace: 90, timeoutAutoChoose: true, dcTimerBank: false,
 		},
 	},

@@ -2068,6 +2068,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	corrosivegas: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	// Move Deletions
 	slam: {
 		inherit: true,

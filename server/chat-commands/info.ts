@@ -1137,7 +1137,7 @@ export const commands: Chat.ChatCommands = {
 			}
 		}
 		if (sources.length === 0) return this.errorReply("No moves using a type table for determining damage were specified.");
-		if (sources.length > 4) return this.errorReply("Specify a maximum of 4 moves or types.");
+		if (sources.length > 8) return this.errorReply("Specify a maximum of 8 moves or types.");
 
 		// converts to fractional effectiveness, 0 for immune
 		for (const type in bestCoverage) {

@@ -30,7 +30,7 @@ export const Formats: FormatList = [
 		searchShow: true,
 		mod: 'gen9vgcgay',
 		gameType: 'doubles',
-		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Tera Type Preview', 'Sketch Post-Gen 7 Moves'],
+		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Tera Type Preview', 'Sketch Post-Gen 7 Moves', 'Draft Timer'],
 		bestOfDefault: true,
 		unbanlist: ['Greninja-Bond'],
 	},
@@ -232,7 +232,7 @@ export const Formats: FormatList = [
 		mod: 'gen2',
 		searchShow: true,
 		ruleset: ['[Gen 2] ZU'],
-		banlist: ['ZU', 'SUBL', 'Swagger'],
+		banlist: ['ZU', 'SUBL'],
 	},
 	{
 		name: "[Gen 2] IU",

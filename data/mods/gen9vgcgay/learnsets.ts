@@ -10187,6 +10187,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"return": [
 				"9M"
+			],
+			"earthquake": [
+				"9M"
 			]
 		}
 	},
@@ -24258,6 +24261,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"honeclaws": [
+				"9M"
+			],
+			"foulplay": [
 				"9M"
 			]
 		}
@@ -58077,6 +58083,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"flareblitz": [
 				"9M"
+			],
+			"powertrick": [
+				"9M"
 			]
 		}
 	},
@@ -73349,6 +73358,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"axekick": [
 				"9M"
+			],
+			"supercellslam": [
+				"9M"
 			]
 		}
 	},
@@ -75074,6 +75086,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"aromaticmist": [
+				"9M"
+			],
+			"mistyterrain": [
 				"9M"
 			]
 		}
@@ -106563,7 +106578,7 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"terablast": [
 				"9M"
 			],
-			"firewall": [
+			"burningbulwark": [
 				"9M"
 			],
 			"flameburst": [
