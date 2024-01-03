@@ -1221,7 +1221,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	// Ruin Nerf
 	swordofruin: {
 		inherit: true,
-		shortDesc: "Active Pokemon without this ability have their Def multiplied by .8",
+		shortDesc: "Active Pokemon without this ability have their Def multiplied by 0.8.",
 		onAnyModifyDef(def, target, source, move) {
 			const abilityHolder = this.effectState.target;
 			if (target.hasAbility('Sword of Ruin')) return;
@@ -1233,7 +1233,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	tabletsofruin: {
 		inherit: true,
-		shortDesc: "Active Pokemon without this ability have their Atk multiplied by .8",
+		shortDesc: "Active Pokemon without this ability have their Atk multiplied by 0.8.",
 		onAnyModifyAtk(atk, source, target, move) {
 			const abilityHolder = this.effectState.target;
 			if (source.hasAbility('Tablets of Ruin')) return;
@@ -1245,7 +1245,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	vesselofruin: {
 		inherit: true,
-		shortDesc: "Active Pokemon without this ability have their SpAtk multiplied by .8",
+		shortDesc: "Active Pokemon without this ability have their SpAtk multiplied by 0.8.",
 		onAnyModifySpA(spa, source, target, move) {
 			const abilityHolder = this.effectState.target;
 			if (source.hasAbility('Vessel of Ruin')) return;
@@ -1257,7 +1257,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	beadsofruin: {
 		inherit: true,
-		shortDesc: "Active Pokemon without this ability have their SpDef multiplied by .8",
+		shortDesc: "Active Pokemon without this ability have their SpDef multiplied by 0.8.",
 		onAnyModifySpD(spd, target, source, move) {
 			const abilityHolder = this.effectState.target;
 			if (target.hasAbility('Beads of Ruin')) return;

@@ -87,7 +87,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "UU",
 	},
 	nidoranf: {
-		tier: "9U",
+		tier: "8U",
 	},
 	nidorina: {
 		tier: "ZU",
@@ -96,7 +96,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "UU",
 	},
 	nidoranm: {
-		tier: "8U",
+		tier: "9U",
 	},
 	nidorino: {
 		tier: "ZU",
@@ -633,7 +633,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "9U",
 	},
 	wobbuffet: {
-		tier: "9U",
+		tier: "10U",
 	},
 	girafarig: {
 		tier: "UU",

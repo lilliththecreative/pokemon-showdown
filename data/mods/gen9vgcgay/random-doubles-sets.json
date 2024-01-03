@@ -20,7 +20,7 @@
 			{
 				"role": "Offensive",
 				"movepool": [
-					"Heat Wave",
+					"Thunderbolt",
 					"Protect",
 					"Tera Blast",
 					"Armor Cannon"
@@ -83,6 +83,22 @@
 				],
 				"items": [
 					"Assault Vest"
+				],
+				"ability": "Color Change",
+				"teraTypes": [
+					"Dark"
+				]
+			},
+			{
+				"role": "Nasty Plot",
+				"movepool": [
+					"Nasty Plot",
+					"Thunderbolt",
+					"Ice Beam",
+					"Protect"
+				],
+				"items": [
+					"Sitrus Berry"
 				],
 				"ability": "Color Change",
 				"teraTypes": [
@@ -301,6 +317,22 @@
 					"Pixie Plate"
 				],
 				"ability": "Soul-Heart",
+				"teraTypes": [
+					"Fairy"
+				]
+			},
+			{
+				"role": "Specs Rain",
+				"movepool": [
+					"Ice Beam",
+					"Hydro Pump",
+					"Flip Turn",
+					"Fleur Cannon"
+				],
+				"items": [
+					"Choice Specs"
+				],
+				"ability": "Swift Swim",
 				"teraTypes": [
 					"Fairy"
 				]
@@ -575,15 +607,19 @@
 			{
 				"role": "Conversion Sweeper",
 				"movepool": [
-					"Conversion",
 					"Thunderbolt",
+					"Conversion",
+					"Techno Blast",
+					"Ice BeamLO Protean(Porygon-Z) @ Life Orb",
+					"Thunderbolt",
+					"Overheat",
 					"Techno Blast",
 					"Ice Beam"
 				],
 				"items": [
 					"Power Herb"
 				],
-				"ability": "Adaptability",
+				"ability": "Protean",
 				"teraTypes": [
 					"Normal"
 				]
@@ -1018,14 +1054,14 @@
 					"Explosion",
 					"Wild Charge",
 					"Hidden Power Ground",
-					"Tera Blast"
+					"Extreme Speed"
 				],
 				"items": [
 					"Choice Band"
 				],
 				"ability": "Transistor",
 				"teraTypes": [
-					"Ice"
+					"Normal"
 				]
 			}
 		]
@@ -1044,6 +1080,22 @@
 					"Focus Sash"
 				],
 				"ability": "Mold Breaker",
+				"teraTypes": [
+					"Ghost"
+				]
+			},
+			{
+				"role": "Sash Boomer",
+				"movepool": [
+					"Spore",
+					"Explosion",
+					"Fake Out",
+					"Burning Bulwark"
+				],
+				"items": [
+					"Focus Sash"
+				],
+				"ability": "Trace",
 				"teraTypes": [
 					"Ghost"
 				]
@@ -1164,6 +1216,22 @@
 					"Leftovers"
 				],
 				"ability": "Big Balls",
+				"teraTypes": [
+					"Dark"
+				]
+			},
+			{
+				"role": "Swords Dance",
+				"movepool": [
+					"Iron Head",
+					"Knock Off",
+					"Swords Dance",
+					"Sucker Punch"
+				],
+				"items": [
+					"Leftovers"
+				],
+				"ability": "Defiant",
 				"teraTypes": [
 					"Dark"
 				]
@@ -1414,6 +1482,22 @@
 				"ability": "Scrappy",
 				"teraTypes": [
 					"Normal"
+				]
+			},
+			{
+				"role": "Assault Vest",
+				"movepool": [
+					"Explosion",
+					"Drain Punch",
+					"Double-Edge",
+					"Wild Charge"
+				],
+				"items": [
+					"Assault Vest"
+				],
+				"ability": "Scrappy",
+				"teraTypes": [
+					"Ghost"
 				]
 			}
 		]
@@ -2275,7 +2359,7 @@
 	"mrmime": {
 		"sets": [
 			{
-				"role": "Offensive",
+				"role": "Offensive Sash",
 				"movepool": [
 					"Psych Out",
 					"Draining Kiss",
@@ -2283,7 +2367,7 @@
 					"Hidden Power Fire"
 				],
 				"items": [
-					"Eviolite"
+					"Focus Sash"
 				],
 				"ability": "Technician",
 				"teraTypes": [
@@ -2291,7 +2375,7 @@
 				]
 			},
 			{
-				"role": "Specially Defensive",
+				"role": "Supportive",
 				"movepool": [
 					"Psych Out",
 					"Follow Me",
@@ -2299,11 +2383,11 @@
 					"Wide Guard"
 				],
 				"items": [
-					"Eviolite"
+					"Covert Cloak"
 				],
-				"ability": "Filter",
+				"ability": "Technician",
 				"teraTypes": [
-					"Normal"
+					"Steel"
 				]
 			}
 		]
@@ -2572,6 +2656,22 @@
 				"ability": "Intimidate",
 				"teraTypes": [
 					"Fighting"
+				]
+			},
+			{
+				"role": "TR Imprison",
+				"movepool": [
+					"Trick Room",
+					"Imprison",
+					"Psyshield Bash",
+					"Return"
+				],
+				"items": [
+					"Covert Cloak"
+				],
+				"ability": "Intimidate",
+				"teraTypes": [
+					"Fairy"
 				]
 			}
 		]
@@ -2877,7 +2977,7 @@
 				"items": [
 					"Assault Vest"
 				],
-				"ability": "Tough Claws",
+				"ability": "Clear Body",
 				"teraTypes": [
 					"Steel"
 				]
@@ -3639,7 +3739,23 @@
 	"azelf": {
 		"sets": [
 			{
-				"role": "Scarf Cleaner",
+				"role": "Scarf Boomer",
+				"movepool": [
+					"Explosion",
+					"U-turn",
+					"Play Rough",
+					"Knock Off"
+				],
+				"items": [
+					"Choice Scarf"
+				],
+				"ability": "Supreme Overlord",
+				"teraTypes": [
+					"Normal"
+				]
+			},
+			{
+				"role": "Special Cleaner",
 				"movepool": [
 					"Fire Blast",
 					"Dazzling Gleam",
@@ -3647,11 +3763,11 @@
 					"Thunderbolt"
 				],
 				"items": [
-					"Choice Scarf"
+					"Life Orb"
 				],
 				"ability": "Supreme Overlord",
 				"teraTypes": [
-					"Psychic"
+					"Fire"
 				]
 			}
 		]
@@ -3752,6 +3868,22 @@
 				"ability": "Prankster",
 				"teraTypes": [
 					"Water"
+				]
+			},
+			{
+				"role": "Tail Glow Pass",
+				"movepool": [
+					"Tailwind",
+					"Moonblast",
+					"Tail Glow",
+					"Baton Pass"
+				],
+				"items": [
+					"Sitrus Berry"
+				],
+				"ability": "Prankster",
+				"teraTypes": [
+					"Ghost"
 				]
 			}
 		]
@@ -4170,7 +4302,7 @@
 					"Fire Blast",
 					"Draco Meteor",
 					"Heat Wave",
-					"Wide Guard"
+					"Burning Bulwark"
 				],
 				"items": [
 					"Rocky Helmet"
@@ -4334,6 +4466,22 @@
 				"ability": "Guard Dog",
 				"teraTypes": [
 					"Steel"
+				]
+			},
+			{
+				"role": "Band Dog",
+				"movepool": [
+					"Protect",
+					"Fire Fang",
+					"Play Rough",
+					"Crunch"
+				],
+				"items": [
+					"Choice Band"
+				],
+				"ability": "Guard Dog",
+				"teraTypes": [
+					"Fairy"
 				]
 			}
 		]
@@ -5077,28 +5225,28 @@
 	"tropius": {
 		"sets": [
 			{
-				"role": "Chlorophyll",
+				"role": "Physical Chlorophyll",
 				"movepool": [
-					"Synthesis",
-					"Air Slash",
-					"Solar Beam",
-					"Hidden Power Fire"
+					"Dual Wingbeat",
+					"Solar Blade",
+					"Swords Dance",
+					"Synthesis"
 				],
 				"items": [
-					"Leftovers"
+					"Life Orb"
 				],
 				"ability": "Chlorophyll",
 				"teraTypes": [
-					"Fire"
+					"Grass"
 				]
 			},
 			{
-				"role": "CM Harvest",
+				"role": "Leech Seed",
 				"movepool": [
-					"Calm Mind",
-					"Giga Drain",
 					"Leech Seed",
-					"Air Cutter"
+					"Substitute",
+					"Giga Drain",
+					"Tailwind"
 				],
 				"items": [
 					"Sitrus Berry"
@@ -5228,22 +5376,6 @@
 	},
 	"abomasnow": {
 		"sets": [
-			{
-				"role": "Physical",
-				"movepool": [
-					"Mountain Gale",
-					"Wood Hammer",
-					"Aurora Veil",
-					"Protect"
-				],
-				"items": [
-					"Sitrus Berry"
-				],
-				"ability": "Snow Warning",
-				"teraTypes": [
-					"Grass"
-				]
-			},
 			{
 				"role": "Physical",
 				"movepool": [
@@ -7096,12 +7228,12 @@
 				"role": "Special",
 				"movepool": [
 					"Bug Buzz",
-					"Thunderbolt",
+					"Electro Shot",
 					"Discharge",
-					"Volt Switch"
+					"Tera Blast"
 				],
 				"items": [
-					"Sitrus Berry"
+					"Power Herb"
 				],
 				"ability": "Levitate",
 				"teraTypes": [
@@ -7302,6 +7434,22 @@
 				"ability": "Volt Absorb",
 				"teraTypes": [
 					"Electric"
+				]
+			},
+			{
+				"role": "Nasty Plot",
+				"movepool": [
+					"Wildbolt Storm",
+					"Focus Blast",
+					"Tera Blast",
+					"Nasty Plot"
+				],
+				"items": [
+					"Life Orb"
+				],
+				"ability": "Volt Absorb",
+				"teraTypes": [
+					"Ice"
 				]
 			}
 		]
@@ -7983,17 +8131,17 @@
 			{
 				"role": "Special Attacker",
 				"movepool": [
-					"Protect",
+					"Detect",
 					"Draco Meteor",
 					"Bug Buzz",
-					"Psych Up"
+					"Tera Blast"
 				],
 				"items": [
 					"Throat Spray"
 				],
 				"ability": "Speed Boost",
 				"teraTypes": [
-					"Bug"
+					"Fire"
 				]
 			}
 		]
@@ -9647,7 +9795,7 @@
 				],
 				"ability": "Speed Boost",
 				"teraTypes": [
-					"Bug"
+					"Ground"
 				]
 			}
 		]
@@ -9762,6 +9910,22 @@
 					"Leek"
 				],
 				"ability": "Super Luck",
+				"teraTypes": [
+					"Flying"
+				]
+			},
+			{
+				"role": "Band",
+				"movepool": [
+					"Meteor Assault",
+					"Knock Off",
+					"Brave Bird",
+					"First Impression"
+				],
+				"items": [
+					"Choice Band"
+				],
+				"ability": "Scrappy",
 				"teraTypes": [
 					"Flying"
 				]
@@ -10035,7 +10199,7 @@
 				],
 				"ability": "Defiant",
 				"teraTypes": [
-					"Fire"
+					"Steel"
 				]
 			}
 		]
@@ -10087,6 +10251,22 @@
 				"movepool": [
 					"Earthquake",
 					"Curse",
+					"Gunk Shot",
+					"Recover"
+				],
+				"items": [
+					"Leftovers"
+				],
+				"ability": "Friend Guard",
+				"teraTypes": [
+					"Flying"
+				]
+			},
+			{
+				"role": "Full Support",
+				"movepool": [
+					"Earthquake",
+					"Yawn",
 					"Gunk Shot",
 					"Recover"
 				],
@@ -10173,7 +10353,7 @@
 				"items": [
 					"Focus Sash"
 				],
-				"ability": "Chlorophyll",
+				"ability": "Lawn Surfer",
 				"teraTypes": [
 					"Fire"
 				]
@@ -10532,6 +10712,38 @@
 				],
 				"items": [
 					"Focus Sash"
+				],
+				"ability": "Corrosion",
+				"teraTypes": [
+					"Flying"
+				]
+			},
+			{
+				"role": "Sash Debris",
+				"movepool": [
+					"Mortal Spin",
+					"Spiky Shield",
+					"Earth Power",
+					"Power Gem"
+				],
+				"items": [
+					"Focus Sash"
+				],
+				"ability": "Toxic Debris",
+				"teraTypes": [
+					"Flying"
+				]
+			},
+			{
+				"role": "Bulky Corrosion",
+				"movepool": [
+					"Mortal Spin",
+					"Spiky Shield",
+					"Sludge Bomb",
+					"Power Gem"
+				],
+				"items": [
+					"Covert Cloak"
 				],
 				"ability": "Corrosion",
 				"teraTypes": [
@@ -11896,10 +12108,26 @@
 					"Rising Voltage",
 					"Scald",
 					"Recover",
-					"Thunder Wave"
+					"Nuzzle"
 				],
 				"items": [
 					"Rocky Helmet"
+				],
+				"ability": "Electric Surge",
+				"teraTypes": [
+					"Water"
+				]
+			},
+			{
+				"role": "Offensive",
+				"movepool": [
+					"Rising Voltage",
+					"Hydro Pump",
+					"Spiky Shield",
+					"Recover"
+				],
+				"items": [
+					"Terrain Extender"
 				],
 				"ability": "Electric Surge",
 				"teraTypes": [
@@ -12227,7 +12455,7 @@
 				],
 				"ability": "Levitate",
 				"teraTypes": [
-					"Ghost"
+					"Steel"
 				]
 			}
 		]
@@ -12248,6 +12476,22 @@
 				"ability": "Sharpness",
 				"teraTypes": [
 					"Grass"
+				]
+			},
+			{
+				"role": "Swords Dance",
+				"movepool": [
+					"Bitter Blade",
+					"Swords Dance",
+					"Shadow Sneak",
+					"Poltergeist"
+				],
+				"items": [
+					"Sitrus Berry"
+				],
+				"ability": "Sharpness",
+				"teraTypes": [
+					"Ghost"
 				]
 			}
 		]
@@ -12275,7 +12519,7 @@
 	"barraskewda": {
 		"sets": [
 			{
-				"role": "Physical LO",
+				"role": "Physical Sash",
 				"movepool": [
 					"Liquidation",
 					"Psychic Fangs",
@@ -12395,7 +12639,7 @@
 	"noctowl": {
 		"sets": [
 			{
-				"role": "Tailroom",
+				"role": "TailRoom",
 				"movepool": [
 					"Tailwind",
 					"Trick Room",
@@ -12675,7 +12919,7 @@
 				"movepool": [
 					"Brave Bird",
 					"Swords Dance",
-					"Tera Blast",
+					"Drill Run",
 					"Detect"
 				],
 				"items": [
@@ -12817,6 +13061,22 @@
 				"teraTypes": [
 					"Rock"
 				]
+			},
+			{
+				"role": "Omnibooster",
+				"movepool": [
+					"Judgment",
+					"Flamethrower",
+					"Roost",
+					"Ancient Power"
+				],
+				"items": [
+					"Eviolite"
+				],
+				"ability": "Serene Grace",
+				"teraTypes": [
+					"Fire"
+				]
 			}
 		]
 	},
@@ -12868,7 +13128,7 @@
 					"Stone Edge",
 					"Endure",
 					"Crabhammer",
-					"Fling"
+					"Knock Off"
 				],
 				"items": [
 					"Liechi Berry"
@@ -12917,6 +13177,22 @@
 				"teraTypes": [
 					"Water"
 				]
+			},
+			{
+				"role": "Sun Sweeper",
+				"movepool": [
+					"Overheat",
+					"Solar Beam",
+					"Will-O-Wisp",
+					"Chloroblast"
+				],
+				"items": [
+					"Life Orb"
+				],
+				"ability": "Chlorophyll",
+				"teraTypes": [
+					"Water"
+				]
 			}
 		]
 	},
@@ -12942,22 +13218,6 @@
 	},
 	"escavalier": {
 		"sets": [
-			{
-				"role": "Band",
-				"movepool": [
-					"Close Combat",
-					"Megahorn",
-					"Double-Edge",
-					"Drill Run"
-				],
-				"items": [
-					"Choice Band"
-				],
-				"ability": "Overcoat",
-				"teraTypes": [
-					"Bug"
-				]
-			},
 			{
 				"role": "Physical AV",
 				"movepool": [
@@ -13115,7 +13375,7 @@
 				"movepool": [
 					"Mystical Fire",
 					"Tailwind",
-					"Helping Hand",
+					"Mist Ball",
 					"Draco Meteor"
 				],
 				"items": [
@@ -13451,7 +13711,7 @@
 				],
 				"ability": "Regenerator",
 				"teraTypes": [
-					"Grass"
+					"Water"
 				]
 			}
 		]

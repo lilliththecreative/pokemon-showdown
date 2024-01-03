@@ -5811,7 +5811,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 					this.boost({spd: -1});
 				}
 				if (this.effectState.lastBoost !== 'P') {
-					this.boost({spd: 1});
+					this.boost({def: 1});
 				}
 				this.effectState.lastBoost = "P";
 			}
