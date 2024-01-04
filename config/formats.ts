@@ -588,27 +588,9 @@ export const Formats: FormatList = [
 		banlist: ['Crucibellite'],
 	},
 	{
-		name: "[Gen 9] Battle Stadium Singles Regulation D",
-
-		mod: 'gen9predlc',
-		searchShow: false,
-		bestOfDefault: true,
-		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Min Source Gen = 9', 'VGC Timer'],
-		banlist: ['Walking Wake', 'Iron Leaves'],
-	},
-	{
-		name: "[Gen 9] Battle Stadium Singles Regulation E",
-
-		mod: 'gen9dlc1',
-		bestOfDefault: true,
-		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Min Source Gen = 9', 'VGC Timer'],
-		banlist: ['Walking Wake', 'Iron Leaves'],
-	},
-	{
 		name: "[Gen 9] BSS Reg F",
 
 		mod: 'gen9',
-		searchShow: false,
 		bestOfDefault: true,
 		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Min Source Gen = 9', 'VGC Timer'],
 		banlist: [],
@@ -669,7 +651,7 @@ export const Formats: FormatList = [
 		mod: 'gen9',
 		gameType: 'doubles',
 		team: 'random',
-		ruleset: ['PotD', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Illusion Level Mod'],
+		ruleset: ['PotD', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Illusion Level Mod', 'Sleep Clause Mod'],
 	},
 	{
 		name: "[Gen 9] Doubles OU",
@@ -716,20 +698,11 @@ export const Formats: FormatList = [
 		banlist: ['Basculin-White-Striped', 'Dunsparce', 'Gligar', 'Murkrow', 'Qwilfish-Hisui', 'Scyther', 'Sneasel', 'Sneasel-Hisui', 'Vulpix', 'Vulpix-Alola', 'Yanma'],
 	},
 	{
-		name: "[Gen 9] VGC 2023 Regulation D",
+		name: "[Gen 9] VGC 2023 Reg D",
 
 		mod: 'gen9predlc',
 		gameType: 'doubles',
 		searchShow: false,
-		bestOfDefault: true,
-		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Min Source Gen = 9', 'VGC Timer', 'Open Team Sheets'],
-		banlist: ['Walking Wake', 'Iron Leaves'],
-	},
-	{
-		name: "[Gen 9] VGC 2023 Regulation E",
-
-		mod: 'gen9dlc1',
-		gameType: 'doubles',
 		bestOfDefault: true,
 		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Min Source Gen = 9', 'VGC Timer', 'Open Team Sheets'],
 		banlist: ['Walking Wake', 'Iron Leaves'],
@@ -1725,14 +1698,14 @@ export const Formats: FormatList = [
 			if (ally && ally.ability !== pokemon.ability) {
 				if (!pokemon.m.innate && !BAD_ABILITIES.includes(this.toID(ally.ability))) {
 					pokemon.m.innate = 'ability:' + ally.ability;
-					if (!ngas || ally.getAbility().isPermanent || pokemon.hasItem('Ability Shield')) {
+					if (!ngas || ally.getAbility().flags['cantsuppress'] || pokemon.hasItem('Ability Shield')) {
 						pokemon.volatiles[pokemon.m.innate] = {id: pokemon.m.innate, target: pokemon};
 						pokemon.m.startVolatile = true;
 					}
 				}
 				if (!ally.m.innate && !BAD_ABILITIES.includes(this.toID(pokemon.ability))) {
 					ally.m.innate = 'ability:' + pokemon.ability;
-					if (!ngas || pokemon.getAbility().isPermanent || ally.hasItem('Ability Shield')) {
+					if (!ngas || pokemon.getAbility().flags['cantsuppress'] || ally.hasItem('Ability Shield')) {
 						ally.volatiles[ally.m.innate] = {id: ally.m.innate, target: ally};
 						ally.m.startVolatile = true;
 					}
