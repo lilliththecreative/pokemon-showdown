@@ -69,15 +69,15 @@ export class RandomGayTeams extends RandomTeams {
 	): number {
 		if (this.adjustLevel) return this.adjustLevel;
 		if (NICHE_POKEMON.includes(species.name)) {
-			return 54;
+			return 50;
 		} else if (KINDA_NICHE_POKEMON.includes(species.name)) {
-			return 52;
+			return 50;
 		} else if (HARD_TO_USE.includes(species.name)) {
-			return 51;
+			return 50;
 		} else if (CONSISTENT.includes(species.name)) {
-			return 49;
+			return 50;
 		} else if (BITCHES.includes(species.name)) {
-			return 48;
+			return 49;
 		} else {
 			return 50;
 		}

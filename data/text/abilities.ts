@@ -2411,20 +2411,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		shortDesc: "When hit by water move or Rain is set up, Attacks and switches.",
 		desc: "When hit by water move or Rain is set up, Attacks and switches.",
 	},
-	lavacrust: {
-		name: "Lava Crust",
-		desc: "This Pokemon's Defense is raised by 1 if hit by a Water move; Water immunity.",
-		shortDesc: "This Pokemon's Defense is raised by 1 if hit by a Water move; Water immunity.",
-	},
 	lifetaker: {
 		name: "Lifetaker",
 		desc: "This Pokemon's restores 33% HP if it attacks and KOes another Pokemon.",
 		shortDesc: "This Pokemon's restores 33% HP if it attacks and KOes another Pokemon.",
-	},
-	vantage: {
-		name: "Vantage",
-		desc: "If <50% HP, attacks right before first attack targetted at user.",
-		shortDesc: "If <50% HP, attacks right before first attack targetted at user.",
 	},
 	shadowtagged: {
 		name: "Shadow Tagged",
@@ -2435,11 +2425,6 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Molten Down",
 		desc: "This Pokemon is healed 1/4 by Fire, 1/8 by Sun; is hurt 1.25x by Water, 1/8 by Rain.",
 		shortDesc: "This Pokemon is healed 1/4 by Fire, 1/8 by Sun; is hurt 1.25x by Water, 1/8 by Rain.",
-	},
-	resolve: {
-		name: "Resolve",
-		desc: "Deals +1% bonus damage for each 1% of HP missing",
-		shortDesc: "Deals +1% bonus damage for each 1% of HP missing",
 	},
 	fightingspirit: {
 		name: "Fighting Spirit",
@@ -2482,8 +2467,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	ballin: {
 		name: "Ballin'",
-		desc: "After another Pokemon uses a ball/bullet move, this Pokemon uses the same move. The copied move is subject to all effects that can prevent a move from being executed. A move used through this Ability cannot be copied again by other Pokemon with this Ability.",
-		shortDesc: "After another uses a ball/bullet move, this Pokemon uses with higher attack stat.",
+		desc: "Uses highest attacking stats on all ball/bullet moves. After another Pokemon uses a ball/bullet move, this Pokemon uses the same move. The copied move is subject to all effects that can prevent a move from being executed. A move used through this Ability cannot be copied again by other Pokemon with this Ability.",
+		shortDesc: "Ball/Bullet moves use highest attacking stat. Copies Ball/Bullet Moves."
 	},
 	runningstart: {
 		name: "Running Start",

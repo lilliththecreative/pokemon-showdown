@@ -164,15 +164,6 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 		},
 	},
-	// tangledfeet: {
-	// 	inherit: true,
-	// 	shortDesc: "Doubles Speed if confused",
-	// 	onModifySpe(spe, pokemon) {
-	// 		if (pokemon?.volatiles['confusion']) {
-	// 			return this.chainModify(2);
-	// 		}
-	// 	},
-	// },
 	flamebody: {
 		inherit: true,
 		shortDesc: "30% to burn on any contact",
@@ -218,19 +209,6 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 		},
 	},
-	// quickfeet: {
-	// 	inherit: true,
-	// 	shortDesc: "1.5x speed if statused or has stat drops",
-	// 	onModifySpe(spe, pokemon) {
-	// 		if (pokemon.status) {
-	// 			return this.chainModify(1.5);
-	// 		}
-	// 		let boost: BoostID;
-	// 		for (boost in pokemon.boosts) {
-	// 			if (pokemon.boosts[boost] < 0) return this.chainModify(1.5);
-	// 		}
-	// 	},
-	// },
 	healer: {
 		inherit: true,
 		shortDesc: "Heals ally by 1/16th, Also 30% to heal ally status",
@@ -290,13 +268,6 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 		},
 	},
-	// cheekpouch: {
-	// 	inherit: true,
-	// 	shortDesc: "If this Pokemon eats a Berry, it restores 1/2 of its max HP after the Berry's effect.",
-	// 	onEatItem(item, pokemon) {
-	// 		this.heal(pokemon.baseMaxhp / 2);
-	// 	},
-	// },
 	justified: {
 		inherit: true,
 		shortDesc: "Immune to Intimidate, +1 Atk, SpA after damaged by a Dark-type move.",
@@ -478,11 +449,11 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	quarkdrive: {
 		inherit: true,
-		isPermanent: false,
+		flags: {},
 	},
 	protosynthesis: {
 		inherit: true,
-		isPermanent: false,
+		flags: {},
 	},
 	waterbubble: {
 		inherit: true,
@@ -590,8 +561,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	colorchange: {
 		inherit: true,
-		isPermanent: true,
-		isBreakable: true,
+		flags: {failroleplay: 1, noreceiver: 1, noentrain: 1, failskillswap: 1, breakable: 1},
 		shortDesc: "Changes type to be perfect offensive and defensive type once per turn.",
 		onResidualOrder: 29,
 		onResidual(pokemon) {
@@ -768,7 +738,6 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 				return null;
 			}
 		},
-		isBreakable: true,
 		name: "Wonder Guard",
 		rating: 5,
 		num: 25,
@@ -897,32 +866,13 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	receiver: {
 		inherit: true,
 		shortDesc: "Inherits ability and boosts when ally faints.",
-		onAllyFaint(target, source, effect) {
-			if (!this.effectState.target.hp) return;
-			const ability = target.getAbility();
-			const additionalBannedAbilities = [
-				'noability', 'flowergift', 'forecast', 'hungerswitch', 'illusion', 'imposter', 'neutralizinggas', 'powerofalchemy', 'receiver', 'trace', 'wonderguard', 'colorchange', 'doubledown'
-			];
-			if (target.getAbility().isPermanent || additionalBannedAbilities.includes(target.ability)) return;
-			if (this.effectState.target.setAbility(ability)) {
-				this.boost(target.boosts, this.effectState.target, this.effectState.target);
-				this.add('-ability', this.effectState.target, ability, '[from] ability: Receiver', '[of] ' + target);
-			}
-		},
-	},
-	powerofalchemy: {
-		inherit: true,
-		// shortDesc: "Inherits ability and gains +1 Atk and SpA when ally faints.",
 		onAllyFaint(target) {
 			if (!this.effectState.target.hp) return;
 			const ability = target.getAbility();
-			const additionalBannedAbilities = [
-				'noability', 'flowergift', 'forecast', 'hungerswitch', 'illusion', 'imposter', 'neutralizinggas', 'powerofalchemy', 'receiver', 'trace', 'wonderguard', 'colorchange', 'doubledown'
-			];
-			if (target.getAbility().isPermanent || additionalBannedAbilities.includes(target.ability)) return;
+			if (ability.flags['noreceiver'] || ability.id === 'noability') return;
 			if (this.effectState.target.setAbility(ability)) {
-				// this.boost({atk: 1, spa: 1}, this.effectState.target, this.effectState.target);
-				this.add('-ability', this.effectState.target, ability, '[from] ability: Power of Alchemy', '[of] ' + target);
+				this.boost(target.boosts, this.effectState.target, this.effectState.target);
+				this.add('-ability', this.effectState.target, ability, '[from] ability: Receiver', '[of] ' + target);
 			}
 		},
 	},
@@ -954,7 +904,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 				return null;
 			}
 		},
-		isBreakable: true,
+		flags: {breakable: 1},
 	},
 	emergencyexit: {
 		inherit: true,
@@ -1194,21 +1144,6 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 		},
 	},
-	// defeatist: {
-	// 	inherit: true,
-	// 	shortDesc: "While this Pokemon has <= 1/3 max HP, its Attack and Sp. Atk are halved.",
-	// 	onModifyAtk(atk, pokemon) {
-	// 		if (pokemon.hp <= pokemon.maxhp / 3) {
-	// 			return this.chainModify(0.5);
-	// 		}
-	// 	},
-	// 	onModifySpAPriority: 5,
-	// 	onModifySpA(atk, pokemon) {
-	// 		if (pokemon.hp <= pokemon.maxhp / 3) {
-	// 			return this.chainModify(0.5);
-	// 		}
-	// 	},
-	// },
 	stancechange: {
 		inherit: true,
 		onModifyMove(move, attacker, defender) {
@@ -1335,7 +1270,6 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	cloakchange: {
 		inherit: true,
 		isNonstandard: null,
-		isPermanent: true,
 		onModifyMovePriority: 1,
 		onModifyMove(move, attacker, defender) {
 			if (attacker.species.baseSpecies !== 'Wormadam' || attacker.transformed) return;
@@ -1367,7 +1301,6 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	oddkeystone: {
 		inherit: true,
 		isNonstandard: null,
-		isBreakable: true,
 		onSwitchIn(pokemon) {
 			this.effectState.oddKeystone = true;
 		},
@@ -1664,7 +1597,6 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			pokemon.maxhp = newMaxHP;
 			this.add('-heal', pokemon, pokemon.getHealth, '[silent]');
 		},
-		isPermanent: true,
 	},
 	doubledown: {
 		inherit: true,
@@ -1676,7 +1608,6 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 				boost[i]! *= -2;
 			}
 		},
-		isBreakable: true,
 	},
 	sinnohangrit: {
 		inherit: true,
@@ -1801,19 +1732,6 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 		},
 	},
-	lavacrust: {
-		inherit: true,
-		isNonstandard: null,
-		onTryHit(target, source, move) {
-			if (target !== source && move.type === 'Water') {
-				if (!this.boost({def: 1})) {
-					this.add('-immune', target, '[from] ability: Lava Crust');
-				}
-				return null;
-			}
-		},
-		isBreakable: true,
-	},
 	lifetaker: {
 		inherit: true,
 		isNonstandard: null,
@@ -1823,19 +1741,11 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 		},
 	},
-	vantage: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	shadowtagged: {
 		inherit: true,
 		isNonstandard: null,
 	},
 	moltendown: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	resolve: {
 		inherit: true,
 		isNonstandard: null,
 	},

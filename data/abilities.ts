@@ -5655,12 +5655,14 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	arcticrush: {
 		isNonstandard: "CAP",
 		name: "Arctic Rush",
+		flags: {breakable: 1},
 		rating: 3,
 		num: -9,
 	},
 	cloakchange: {
 		isNonstandard: "CAP",
 		name: "Cloak Change",
+		flags: {failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1, failskillswap: 1, cantsuppress: 1},
 		rating: 4,
 		num: -10,
 	},
@@ -5673,6 +5675,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	oddkeystone: {
 		isNonstandard: "CAP",
 		name: "Odd Keystone",
+		flags: {breakable: 1},
 		rating: 4,
 		num: -12,
 	},
@@ -5685,6 +5688,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	wideeyed: {
 		isNonstandard: "CAP",
 		name: "Wide Eyed",
+		flags: {failroleplay: 1, noreceiver: 1, noentrain: 1, failskillswap: 1},
 		rating: 4,
 		num: -14,
 	},
@@ -5697,6 +5701,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	heatsink: {
 		isNonstandard: "CAP",
 		name: "Heat Sink",
+		flags: {breakable: 1},
 		rating: 4,
 		num: -16,
 	},
@@ -5769,13 +5774,14 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	growingpumpkin: {
 		isNonstandard: "CAP",
 		name: "Growing Pumpkin",
-		isPermanent: true,
+		flags: {failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1, failskillswap: 1, cantsuppress: 1},
 		rating: 4,
 		num: -28,
 	},
 	doubledown: {
 		isNonstandard: "CAP",
 		name: "Double Down",
+		flags: {failroleplay: 1, noreceiver: 1, noentrain: 1, failskillswap: 1, breakable: 1},
 		rating: 4,
 		num: -29,
 	},
@@ -5803,40 +5809,11 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 3,
 		num: -33,
 	},
-	lavacrust: {
-		isNonstandard: "CAP",
-		name: "Lava Crust",
-		rating: 3,
-		num: -34,
-	},
 	lifetaker: {
 		isNonstandard: "CAP",
 		name: "Lifetaker",
 		rating: 3,
 		num: -35,
-	},
-	vantage: {
-		isNonstandard: "CAP",
-		name: "Vantage",
-		onFoeBeforeMove(source, target, move) {
-			if (target.ability === "Vantage" && source.side !== target.side) {
-				for (const action of this.queue.list as MoveAction[]) {
-					if (
-						!action.move || !action.pokemon?.isActive ||
-						action.pokemon.fainted || action.maxMove || action.zmove
-					) {
-						continue;
-					}
-					if (action.pokemon === target) {
-						this.add('-activate', target, 'ability: Vantage');
-						this.queue.prioritizeAction(action);
-						break;
-					}
-				}
-			}
-		},
-		rating: 3,
-		num: -36,
 	},
 	shadowtagged: {
 		isNonstandard: "CAP",
@@ -5875,20 +5852,10 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				this.damage(target.baseMaxhp / 8, target, target);
 			}
 		},
-		isBreakable: true,
 		name: "Molten Down",
+		flags: {breakable: 1},
 		rating: 3,
 		num: -38,
-	},
-	resolve: {
-		isNonstandard: "CAP",
-		name: "Resolve",
-		onBasePower(relayVar, source, target, move) {
-			const percent = 100 * source.hp / source.maxhp;
-			this.chainModify([200 - percent, 100]);
-		},
-		rating: 3,
-		num: -39,
 	},
 	fightingspirit: {
 		isNonstandard: "CAP",
@@ -5929,6 +5896,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				return null;
 			}
 		},
+		flags: {breakable: 1},
 		rating: 4,
 		num: -41,
 	},
@@ -5946,7 +5914,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				return false;
 			}
 		},
-		isBreakable: true,
+		flags: {breakable: 1},
 		name: "Regal Majesty",
 		isNonstandard: "CAP",
 		rating: 2.5,
@@ -6054,7 +6022,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		onEnd(pokemon) {
 			delete pokemon.volatiles['runningstart'];
-			// this.add('-end', pokemon, 'Running Start', '[silent]');
 			this.add('-end', pokemon, 'Running Start');
 		},
 		condition: {
@@ -6064,8 +6031,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			onStart(target) {
 				if (!target.terastallized) {
 					this.add('-singleturn', target, 'move: Roost');
-					// this.add('-start', target, 'ability: Running Start');
-					// this.add('-singleturn', target, 'ability: Running Start');
 				} else if (target.terastallized === "Flying") {
 					this.add('-hint', "If a Flying Terastallized Pokemon uses Roost, it remains Flying-type.");
 				}
@@ -6083,7 +6048,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				}
 			},
 			onEnd(target) {
-				// this.add('-end', target, 'Running Start');
 				this.add('-end', target, 'Running Start', '[silent]');
 			},
 		},

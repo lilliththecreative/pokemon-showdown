@@ -631,6 +631,18 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	hardpress: {
+		inherit: true,
+		isNonstandard: null,
+		shortDesc: "More power the more %HP target has, Max 120BP.",
+		basePowerCallback(pokemon, target, move) {
+			const hp = target.hp;
+			const maxHP = target.maxhp;
+			const bp = Math.floor(Math.floor((120 * (100 * Math.floor(hp * 4096 / maxHP)) + 2048 - 1) / 4096) / 100) || 1;
+			this.debug('BP for ' + hp + '/' + maxHP + " HP: " + bp);
+			return bp;
+		},
+	},
 	wringout: {
 		inherit: true,
 		isNonstandard: null,
@@ -1172,8 +1184,8 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	simplebeam: {
 		inherit: true,
 		onTryHit(target) {
-			// Truant removed
-			if (target.getAbility().isPermanent || target.ability === 'simple') {
+			// Remove truant
+			if (target.getAbility().flags['cantsuppress'] || target.ability === 'simple') {
 				return false;
 			}
 		},
@@ -1182,16 +1194,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		onTryHit(target, source) {
 			if (target === source || target.volatiles['dynamax']) return false;
-
-			const additionalBannedSourceAbilities = [
-				// Zen Mode included here for compatability with Gen 5-6
-				'commander', 'flowergift', 'forecast', 'hungerswitch', 'illusion', 'imposter', 'neutralizinggas', 'powerofalchemy', 'receiver', 'trace', 'zenmode',
-			];
-			// Remove Truant
 			if (
 				target.ability === source.ability ||
-				target.getAbility().isPermanent ||
-				source.getAbility().isPermanent || additionalBannedSourceAbilities.includes(source.ability)
+				target.getAbility().flags['cantsuppress'] ||
+				source.getAbility().flags['noentrain']
 			) {
 				return false;
 			}
