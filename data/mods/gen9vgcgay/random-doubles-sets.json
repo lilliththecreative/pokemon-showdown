@@ -7,7 +7,7 @@
 					"Protect",
 					"Helping Hand",
 					"Armor Cannon",
-					"Taunt"
+					"Follow Me"
 				],
 				"items": [
 					"Sitrus Berry"
@@ -610,14 +610,26 @@
 					"Thunderbolt",
 					"Conversion",
 					"Techno Blast",
-					"Ice BeamLO Protean(Porygon-Z) @ Life Orb",
+					"Ice Beam"
+				],
+				"items": [
+					"Power Herb"
+				],
+				"ability": "Adaptability",
+				"teraTypes": [
+					"Normal"
+				]
+			},
+			{
+				"role": "LO Protean",
+				"movepool": [
 					"Thunderbolt",
 					"Overheat",
 					"Techno Blast",
 					"Ice Beam"
 				],
 				"items": [
-					"Power Herb"
+					"Life Orb"
 				],
 				"ability": "Protean",
 				"teraTypes": [
@@ -1023,7 +1035,7 @@
 				"items": [
 					"Sitrus Berry"
 				],
-				"ability": "Defeatist",
+				"ability": "Running Start",
 				"teraTypes": [
 					"Rock"
 				]
@@ -2679,17 +2691,17 @@
 	"fluttermane": {
 		"sets": [
 			{
-				"role": "Pixie Attacker",
+				"role": "Specs",
 				"movepool": [
 					"Moonblast",
 					"Shadow Ball",
 					"Dazzling Gleam",
-					"Protect"
+					"Thunderbolt"
 				],
 				"items": [
-					"Pixie Plate"
+					"Choice Specs"
 				],
-				"ability": "Cursed Body",
+				"ability": "Protosynthesis",
 				"teraTypes": [
 					"Fairy"
 				]
@@ -2883,7 +2895,7 @@
 				],
 				"ability": "Intimidate",
 				"teraTypes": [
-					"Dark"
+					"Poison"
 				]
 			}
 		]
@@ -3347,7 +3359,7 @@
 				],
 				"ability": "Merciless",
 				"teraTypes": [
-					"Poison"
+					"Fire"
 				]
 			}
 		]
@@ -4016,14 +4028,14 @@
 					"Draco Meteor",
 					"Muddy Water",
 					"Icy Wind",
-					"Tera Blast"
+					"Hydro Pump"
 				],
 				"items": [
 					"Choice Specs"
 				],
 				"ability": "Commander",
 				"teraTypes": [
-					"Ice"
+					"Water"
 				]
 			}
 		]
@@ -4745,7 +4757,7 @@
 				],
 				"ability": "Pixilate",
 				"teraTypes": [
-					"Psychic"
+					"Fairy"
 				]
 			}
 		]
@@ -5505,7 +5517,7 @@
 				],
 				"ability": "Solid Rock",
 				"teraTypes": [
-					"Rock"
+					"Grass"
 				]
 			}
 		]
@@ -9340,7 +9352,7 @@
 					"High Horsepower",
 					"Iron Head",
 					"Protect",
-					"Earthquake"
+					"Rock Slide"
 				],
 				"items": [
 					"Life Orb"
@@ -12303,14 +12315,14 @@
 				],
 				"ability": "Infiltrator",
 				"teraTypes": [
-					"Ice"
+					"Ghost"
 				]
 			},
 			{
 				"role": "Snow Support",
 				"movepool": [
 					"Blizzard",
-					"Aurora Veil",
+					"Snowscape",
 					"Taunt",
 					"Flash Freeze"
 				],
@@ -13373,7 +13385,7 @@
 			{
 				"role": "Defensive Support",
 				"movepool": [
-					"Mystical Fire",
+					"Charm",
 					"Tailwind",
 					"Mist Ball",
 					"Draco Meteor"
@@ -13383,7 +13395,7 @@
 				],
 				"ability": "Prism Armor",
 				"teraTypes": [
-					"Fire"
+					"Fairy"
 				]
 			}
 		]
@@ -13803,7 +13815,7 @@
 				],
 				"ability": "Quark Drive",
 				"teraTypes": [
-					"Rock"
+					"Fighting"
 				]
 			}
 		]

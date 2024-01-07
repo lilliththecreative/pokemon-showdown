@@ -2083,6 +2083,14 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	lovelykiss: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	naturesmadness: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	// Move Deletions
 	slam: {
 		inherit: true,

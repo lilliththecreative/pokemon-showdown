@@ -53,7 +53,7 @@ const CONSISTENT = [
 ];
 
 const BITCHES = [
-	'Porygon2', 'Registeel', 'Goodra-Hisui', 'Kecleon', 'Tropius', 'Greedent'
+	'Registeel', 'Goodra-Hisui', 'Kecleon', 'Tropius', 'Greedent'
 ];
 
 export class RandomGayTeams extends RandomTeams {
