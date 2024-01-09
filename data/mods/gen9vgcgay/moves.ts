@@ -295,14 +295,24 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			this.boost({atk: 1, spa: 1}, source, source, move, false, true);
 		},
 	},
-	// grassyglide: {
-	// 	inherit: true,
-	// 	basePower: 60,
-	// },
 	gastroacid: {
 		inherit: true,
 		target: "allAdjacent",
 		shortDesc: "Nullifies the ability of all other pokemon.",
+		flags: {protect: 1, reflectable: 1, mirror: 1, distance: 1},
+		condition: {
+			onStart(pokemon) {
+				if (pokemon.getAbility().flags['cantsuppress']) return false;
+				if (pokemon.hasItem('Ability Shield')) return false;
+				this.add('-endability', pokemon);
+				this.singleEvent('End', pokemon.getAbility(), pokemon.abilityState, pokemon, pokemon, 'gastroacid');
+			},
+			onCopy(pokemon) {
+				if (pokemon.getAbility().flags['cantsuppress']) pokemon.removeVolatile('gastroacid');
+			},
+		},
+		onTryHit(){
+		},
 	},
 	lick: {
 		inherit: true,
@@ -556,32 +566,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		accuracy: 80,
 	},
-	// snatch: {
-	// 	inherit: true,
-	// 	isNonstandard: null,
-	// 	shortDesc: "User steals certain support moves for it and allies to use.",
-	// 	condition: {
-	// 		duration: 1,
-	// 		onStart(pokemon) {
-	// 			this.add('-singleturn', pokemon, 'Snatch');
-	// 		},
-	// 		onAnyPrepareHitPriority: -1,
-	// 		onAnyPrepareHit(source, target, move) {
-	// 			const snatchUser = this.effectState.source;
-	// 			if (snatchUser.isSkyDropped()) return;
-	// 			if (!move || move.isZ || move.isMax || !move.flags['snatch'] || move.sourceEffect === 'snatch') {
-	// 				return;
-	// 			}
-	// 			snatchUser.removeVolatile('snatch');
-	// 			this.add('-activate', snatchUser, 'move: Snatch', '[of] ' + source);
-	// 			this.actions.useMove(move.id, snatchUser);
-	// 			for (const ally of (snatchUser as Pokemon).adjacentAllies()) {
-	// 				this.actions.useMove(move.id, ally);
-	// 			}
-	// 			return null;
-	// 		},
-	// 	},
-	// },
 	// Fang Buff
 	hyperfang: {
 		inherit: true,
@@ -615,7 +599,8 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	magneticflux: {
 		shortDesc: "Burns all other Steel types on field.",
 		target: "all",
-		onHitField(source) {
+		flags: {distance: 1},
+		onHitField(t, source, move) {
 			const targets: Pokemon[] = [];
 			for (const pokemon of this.getAllActive()) {
 				if (pokemon.hasType('Steel') && pokemon !== source && !pokemon.status) {
@@ -623,10 +608,11 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 					targets.push(pokemon);
 				}
 			}
-			if (!targets.length) return false; // Fails when there are no Steel types
-			for (const pokemon of targets) {
-				pokemon.trySetStatus('brn', source);
+			let success = false;
+			for (const target of targets) {
+				success = target.trySetStatus('brn', source) || success;
 			}
+			return success;
 		},
 		inherit: true,
 		isNonstandard: null,
@@ -1520,7 +1506,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	freezedry: {
 		inherit: true,
-		shortDesc: "10% chance to frostbite.",
+		shortDesc: "10% chance to frostbite. Super effective on Water.",
 		secondary: {chance: 10, status: 'fst'},
 	},
 	icepunch: {
@@ -1554,7 +1540,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	frenzyplant: {
 		inherit: true,
 		self: null,
-		shortDesc: "User recharges doesn't KO. Physical if user's Atk > SpA.",
+		shortDesc: "User recharges doesn't KO. Physical if Atk > SpA.",
 		basePower: 140,
 		onHit(target, source, move) {
 			if (target.hp) {
@@ -1572,7 +1558,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	hydrocannon: {
 		inherit: true,
 		self: null,
-		shortDesc: "User recharges doesn't KO. Physical if user's Atk > SpA.",
+		shortDesc: "User recharges doesn't KO. Physical if Atk > SpA.",
 		basePower: 140,
 		onHit(target, source, move) {
 			if (target.hp) {
@@ -1590,7 +1576,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	blastburn: {
 		inherit: true,
 		self: null,
-		shortDesc: "User recharges doesn't KO. Physical if user's Atk > SpA.",
+		shortDesc: "User recharges doesn't KO. Physical if Atk > SpA.",
 		basePower: 140,
 		onHit(target, source, move) {
 			if (target.hp) {

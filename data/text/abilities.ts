@@ -2280,7 +2280,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	justthetip: {
 		name: "Just the Tip",
-		desc: "Drill moves do 1.5x damage.",
+		desc: "Moves containing the string, Drill, do 1.5x damage.",
 		shortDesc: "Drill moves do 1.5x damage.",
 	},
 	arcticrush: {
@@ -2457,8 +2457,6 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Machine Learning",
 		desc: "Boosts Def on physical damage, boosts SpD on special damage. Resets on new hit.",
 		shortDesc: "Boosts Def on physical damage, boosts SpD on special damage. Resets on new hit.",
-		// boost: "  [POKEMON] learned to boost [STAT]!",
-		// unboost: "  [POKEMON] forgot how to boost [STAT]!",
 	},
 	mysticfist: {
 		name: "Mystic Fist",
@@ -2472,8 +2470,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	runningstart: {
 		name: "Running Start",
-		desc: "This pokemon cannot use flying moves on its first attack.",
-		shortDesc: "This pokemon cannot use flying moves on its first attack.",
+		desc: "This pokemon is grounded (loses flying typing) and cannot use flying moves on its first attack.",
+		shortDesc: "This pokemon is grounded and cannot use flying moves on its first attack.",
 		start: "  [POKEMON] can't get off the ground!",
 		end: "  [POKEMON] took flight!",
 	},
