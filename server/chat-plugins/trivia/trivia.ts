@@ -1842,8 +1842,10 @@ const triviaCommands: Chat.ChatCommands = {
 		if (toID(target) === 'all') {
 			if (isAccepting) await database.addQuestions(submissions);
 			await database.clearSubmissions();
-			this.modlog(`TRIVIAQUESTION`, null, `${(isAccepting ? "added" : "removed")} all questions from the submission database.`);
-			return this.privateModAction(`${user.name} ${(isAccepting ? " added " : " removed ")} all questions from the submission database.`);
+			const questionText = submissions.map(q => `"${q.question}"`).join(', ');
+			const message = `${(isAccepting ? "added" : "removed")} all questions (${questionText}) from the submission database.`;
+			this.modlog(`TRIVIAQUESTION`, null, message);
+			return this.privateModAction(`${user.name} ${message}`);
 		}
 
 		if (/\d+(?:-\d+)?(?:, ?\d+(?:-\d+)?)*$/.test(target)) {
@@ -1893,8 +1895,10 @@ const triviaCommands: Chat.ChatCommands = {
 				await database.deleteSubmissions(questions);
 			}
 
-			this.modlog('TRIVIAQUESTION', null, `${(isAccepting ? "added " : "removed ")}submission number${(indicesLen > 1 ? "s " : " ")}${target}`);
-			return this.privateModAction(`${user.name} ${(isAccepting ? "added " : "removed ")}submission number${(indicesLen > 1 ? "s " : " ")}${target} from the submission database.`);
+			const questionText = questions.map(q => `"${q}"`).join(', ');
+			const message = `${(isAccepting ? "added " : "removed ")}submission number${(indicesLen > 1 ? "s " : " ")}${target} (${questionText})`;
+			this.modlog('TRIVIAQUESTION', null, message);
+			return this.privateModAction(`${user.name} ${message} from the submission database.`);
 		}
 
 		this.errorReply(this.tr`'${target}' is an invalid argument. View /trivia help questions for more information.`);
@@ -2145,12 +2149,20 @@ const triviaCommands: Chat.ChatCommands = {
 
 	cssearch: 'search',
 	casesensitivesearch: 'search',
+	doublespacesearch: 'search',
 	async search(target, room, user, connection, cmd) {
 		room = this.requireRoom('questionworkshop' as RoomID);
 		this.checkCan('show', null, room);
-		if (!target.includes(',')) return this.errorReply(this.tr`No valid search arguments entered.`);
 
-		let [type, ...query] = target.split(',');
+		let type, query;
+		if (cmd === 'doublespacesearch') {
+			query = ['  '];
+			type = target;
+		} else {
+			[type, ...query] = target.split(',');
+			if (!target.includes(',')) return this.errorReply(this.tr`No valid search arguments entered.`);
+		}
+
 		type = toID(type);
 		let options;
 
@@ -2164,7 +2176,8 @@ const triviaCommands: Chat.ChatCommands = {
 			);
 		}
 
-		const queryString = query.join(',').trim();
+		let queryString = query.join(',');
+		if (cmd !== 'doublespacesearch') queryString = queryString.trim();
 		if (!queryString) return this.errorReply(this.tr`No valid search query was entered.`);
 
 		const results = await database.searchQuestions(queryString, options);
@@ -2182,6 +2195,7 @@ const triviaCommands: Chat.ChatCommands = {
 	searchhelp: [
 		`/trivia search [type], [query] - Searches for questions based on their type and their query. This command is case-insensitive. Valid types: submissions, subs, questions, qs. Requires: + % @ * &`,
 		`/trivia casesensitivesearch [type], [query] - Like /trivia search, but is case sensitive (capital letters matter). Requires: + % @ * &`,
+		`/trivia doublespacesearch [type] — Searches for questions with back-to-back space characters. Requires: + % @ * &`,
 	],
 
 	async moveusedevent(target, room, user) {
@@ -2698,5 +2712,5 @@ export const commands: Chat.ChatCommands = {
 };
 
 process.nextTick(() => {
-	Chat.multiLinePattern.register('/trivia add ', '/trivia submit ');
+	Chat.multiLinePattern.register('/trivia add ', '/trivia submit ', '/trivia move ');
 });

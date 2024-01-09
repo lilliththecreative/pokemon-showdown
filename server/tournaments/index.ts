@@ -4,6 +4,7 @@ import {RoundRobin} from './generator-round-robin';
 import {Utils} from '../../lib';
 import {SampleTeams, teamData} from '../chat-plugins/sample-teams';
 import {PRNG} from '../../sim/prng';
+import type {BestOfGame} from '../room-battle';
 
 export interface TournamentRoomSettings {
 	allowModjoin?: boolean;
@@ -1071,29 +1072,30 @@ export class Tournament extends Rooms.RoomGame<TournamentPlayer> {
 		const room = Rooms.createBattle({
 			format: this.fullFormat,
 			isPrivate: this.room.settings.isPrivate,
-			p1: {
+			players: [{
 				user: from,
 				team: challenge.team,
 				hidden: challenge.hidden,
 				inviteOnly: challenge.inviteOnly,
-			},
-			p2: {
+			}, {
 				user,
 				team: ready.settings.team,
 				hidden: ready.settings.hidden,
 				inviteOnly: ready.settings.inviteOnly,
-			},
+			}],
 			rated: !Ladders.disabled && this.isRated,
 			challengeType: ready.challengeType,
 			tour: this,
 			parentid: this.roomid,
 		});
-		if (!room?.game) throw new Error(`Failed to create battle in ${room}`);
 
 		challenge.from.pendingChallenge = null;
 		player.pendingChallenge = null;
 		from.sendTo(this.room, '|tournament|update|{"challenging":null}');
 		user.sendTo(this.room, '|tournament|update|{"challenged":null}');
+
+		// server lockdown
+		if (!room) return;
 
 		challenge.from.inProgressMatch = {to: player, room};
 		this.room.add(`|tournament|battlestart|${from.name}|${user.name}|${room.roomid}`).update();
@@ -1152,7 +1154,7 @@ export class Tournament extends Rooms.RoomGame<TournamentPlayer> {
 		const p1 = this.playerTable[room.p1.id];
 		const p2 = this.playerTable[room.p2.id];
 		const winner = this.playerTable[winnerid];
-		const score = (room.game as any).score || [0, 0];
+		const score = (room.game as RoomBattle | BestOfGame).score || [0, 0];
 
 		let result: 'win' | 'loss' | 'draw' = 'draw';
 		if (p1 === winner) {
