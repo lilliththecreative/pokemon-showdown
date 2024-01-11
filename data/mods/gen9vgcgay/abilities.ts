@@ -1480,6 +1480,10 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	singularity: {
 		inherit: true,
 		isNonstandard: null,
+		onStart(pokemon) {
+			if (this.suppressingAbility(pokemon)) return;
+			this.add('-ability', pokemon, 'Singularity');
+		},
 		onAnyModifyPriority(relayVar, source, target, move) {
 			if (move.priority >= -2 && move.priority <= 3) {
 				return 0;

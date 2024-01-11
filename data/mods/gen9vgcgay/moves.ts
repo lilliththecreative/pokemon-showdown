@@ -311,7 +311,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 				if (pokemon.getAbility().flags['cantsuppress']) pokemon.removeVolatile('gastroacid');
 			},
 		},
-		onTryHit(){
+		onTryHit() {
 		},
 	},
 	lick: {
