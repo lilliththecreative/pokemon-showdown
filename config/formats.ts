@@ -265,6 +265,7 @@ export const Formats: FormatList = [
 		searchShow: true,
 		ruleset: ['[Gen 3] ZU'],
 		banlist: ['ZU', 'SUBL'],
+		unbanlist: ['Baton Pass + Substitute']
 	},
 	{
 		name: "[Gen 3] IU",
@@ -272,7 +273,13 @@ export const Formats: FormatList = [
 		searchShow: true,
 		ruleset: ['[Gen 3] SU'],
 		banlist: ['SU', 'IUBL'],
-		unbanlist: ['Baton Pass + Substitute']
+	},
+	{
+		name: "[Gen 3] 8U",
+		mod: 'gen3',
+		searchShow: true,
+		ruleset: ['[Gen 3] IU'],
+		banlist: ['IU', '8UBL'],
 	},
 	{
 		name: "[Gen 3] Lol",

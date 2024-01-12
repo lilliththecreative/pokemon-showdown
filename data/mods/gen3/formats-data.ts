@@ -444,7 +444,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "11U",
 	},
 	eevee: {
-		tier: "LC",
+		tier: "8UBL",
 	},
 	vaporeon: {
 		tier: "UUBL",
