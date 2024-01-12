@@ -265,14 +265,14 @@ export const Formats: FormatList = [
 		searchShow: true,
 		ruleset: ['[Gen 3] ZU'],
 		banlist: ['ZU', 'SUBL'],
-		unbanlist: ['Baton Pass + Substitute']
 	},
 	{
 		name: "[Gen 3] IU",
 		mod: 'gen3',
 		searchShow: true,
-		ruleset: ['[Gen 3] SU'],
+		ruleset: ['[Gen 3] SU', '!Baton Pass Stat Clause'],
 		banlist: ['SU', 'IUBL'],
+		unbanlist: ['Baton Pass + Substitute']
 	},
 	{
 		name: "[Gen 3] 8U",
