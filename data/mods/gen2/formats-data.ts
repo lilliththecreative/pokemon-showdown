@@ -540,7 +540,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "9U",
 	},
 	furret: {
-		tier: "PU",
+		tier: "PUBL",
 	},
 	hoothoot: {
 		tier: "8U",
