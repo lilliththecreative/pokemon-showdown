@@ -853,13 +853,19 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		shortDesc: "After KOing a Pokemon: becomes Ash-Greninja, Water Shuriken: 20 power, hits 3x.",
 		onSourceAfterFaint(length, target, source, effect) {
-			if (effect?.effectType !== 'Move') return;
-			if (source.abilityState.battleBondTriggered) return;
+			if (effect?.effectType !== 'Move') {
+				return;
+			}
 			if (source.species.id === 'greninjabond' && source.hp && !source.transformed && source.side.foePokemonLeft()) {
-				// this.boost({atk: 1, spa: 1, spe: 1}, source, source, this.effect);
-				source.formeChange('Greninja-Ash', this.effect, true);
 				this.add('-activate', source, 'ability: Battle Bond');
-				source.abilityState.battleBondTriggered = true;
+				source.formeChange('Greninja-Ash', this.effect, true);
+			}
+		},
+		onModifyMovePriority: -1,
+		onModifyMove(move, attacker) {
+			if (move.id === 'watershuriken' && attacker.species.name === 'Greninja-Ash' &&
+				!attacker.transformed) {
+				move.multihit = 3;
 			}
 		},
 	},

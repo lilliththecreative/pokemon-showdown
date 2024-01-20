@@ -379,6 +379,7 @@ export class BattleActions {
 			const dancers = [];
 			for (const currentPoke of this.battle.getAllActive()) {
 				if (pokemon === currentPoke) continue;
+				if (pokemon.hasAbility('ballin')) continue;
 				if (currentPoke.hasAbility('ballin') && !currentPoke.isSemiInvulnerable()) {
 					dancers.push(currentPoke);
 				}

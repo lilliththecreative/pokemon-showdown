@@ -54,7 +54,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "NU",
 	},
 	rattata: {
-		tier: "IU",
+		tier: "IUBL",
 	},
 	raticate: {
 		tier: "NU",
@@ -90,7 +90,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "LC",
 	},
 	nidorina: {
-		tier: "IU",
+		tier: "IUBL",
 	},
 	nidoqueen: {
 		tier: "UU",

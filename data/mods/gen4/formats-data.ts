@@ -93,7 +93,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "10U",
 	},
 	nidorina: {
-		tier: "IU",
+		tier: "8U",
 	},
 	nidoqueen: {
 		tier: "NU",
@@ -198,7 +198,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "10U",
 	},
 	poliwhirl: {
-		tier: "IU",
+		tier: "8U",
 	},
 	poliwrath: {
 		tier: "NU",
@@ -216,7 +216,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "UU",
 	},
 	machop: {
-		tier: "8U",
+		tier: "IU",
 	},
 	machoke: {
 		tier: "PU",
@@ -294,7 +294,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "PU",
 	},
 	shellder: {
-		tier: "IU",
+		tier: "8U",
 	},
 	cloyster: {
 		tier: "UU",
@@ -327,7 +327,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "PU",
 	},
 	voltorb: {
-		tier: "IU",
+		tier: "8U",
 	},
 	electrode: {
 		tier: "NU",
@@ -339,7 +339,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "UU",
 	},
 	cubone: {
-		tier: "IU",
+		tier: "8U",
 	},
 	marowak: {
 		tier: "PU",
@@ -357,7 +357,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "UU",
 	},
 	lickitung: {
-		tier: "IU",
+		tier: "8U",
 	},
 	lickilicky: {
 		tier: "NU",
@@ -510,7 +510,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "UU",
 	},
 	kabuto: {
-		tier: "IU",
+		tier: "8U",
 	},
 	kabutops: {
 		tier: "UU",
@@ -552,7 +552,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "9U",
 	},
 	bayleef: {
-		tier: "IU",
+		tier: "8U",
 	},
 	meganium: {
 		tier: "NU",
@@ -600,7 +600,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "IU",
 	},
 	chinchou: {
-		tier: "IU",
+		tier: "8U",
 	},
 	lanturn: {
 		tier: "UU",
@@ -633,7 +633,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "9U",
 	},
 	marill: {
-		tier: "IU",
+		tier: "8U",
 	},
 	azumarill: {
 		tier: "UU",
@@ -727,7 +727,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "UU",
 	},
 	shuckle: {
-		tier: "IU",
+		tier: "8U",
 	},
 	heracross: {
 		tier: "UUBL",
@@ -769,7 +769,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "SU",
 	},
 	delibird: {
-		tier: "IU",
+		tier: "8U",
 	},
 	mantyke: {
 		tier: "8U",
@@ -895,13 +895,13 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "9U",
 	},
 	nuzleaf: {
-		tier: "IU",
+		tier: "8U",
 	},
 	shiftry: {
 		tier: "NU",
 	},
 	taillow: {
-		tier: "IU",
+		tier: "8U",
 	},
 	swellow: {
 		tier: "UU",
@@ -970,7 +970,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "UU",
 	},
 	nosepass: {
-		tier: "IU",
+		tier: "8U",
 	},
 	probopass: {
 		tier: "ZU",
@@ -1015,7 +1015,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "SU",
 	},
 	volbeat: {
-		tier: "8U",
+		tier: "IU",
 	},
 	illumise: {
 		tier: "IU",
@@ -1066,7 +1066,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "9U",
 	},
 	trapinch: {
-		tier: "IU",
+		tier: "8U",
 	},
 	vibrava: {
 		tier: "SU",
@@ -1111,7 +1111,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "ZU",
 	},
 	baltoy: {
-		tier: "IU",
+		tier: "8U",
 	},
 	claydol: {
 		tier: "UU",
@@ -1135,7 +1135,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "UU",
 	},
 	castform: {
-		tier: "IU",
+		tier: "8U",
 	},
 	castformsunny: {},
 	castformrainy: {},
@@ -1171,7 +1171,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "UU",
 	},
 	snorunt: {
-		tier: "IU",
+		tier: "8U",
 	},
 	glalie: {
 		tier: "PU",
@@ -1348,10 +1348,10 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "11UBL",
 	},
 	vespiquen: {
-		tier: "IU",
+		tier: "8U",
 	},
 	pachirisu: {
-		tier: "IU",
+		tier: "8U",
 	},
 	buizel: {
 		tier: "8U",

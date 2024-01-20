@@ -388,7 +388,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		basePower: 30,
 		multihit: 3,
-		shortDesc: "Attacks 3 times, 10% chance to burn/para/freeze each.",
+		shortDesc: "Hits 3x, 10% chance to burn/para/frostbite each.",
 		secondary: {
 			chance: 10,
 			onHit(target, source) {

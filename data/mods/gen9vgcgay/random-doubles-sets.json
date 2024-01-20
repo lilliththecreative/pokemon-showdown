@@ -4,7 +4,7 @@
 			{
 				"role": "Defensive",
 				"movepool": [
-					"Protect",
+					"Clear Smog",
 					"Helping Hand",
 					"Armor Cannon",
 					"Follow Me"
@@ -422,7 +422,8 @@
 				"movepool": [
 					"Calm Mind",
 					"Protect",
-					"Hurricane"
+					"Hurricane",
+					"Psychic"
 				],
 				"items": [
 					"Leftovers"
@@ -1169,7 +1170,7 @@
 				],
 				"ability": "Tangling Hair",
 				"teraTypes": [
-					"Grass"
+					"Water"
 				]
 			}
 		]
@@ -3991,7 +3992,7 @@
 					"Protect"
 				],
 				"items": [
-					"Focus Sash"
+					"White Herb"
 				],
 				"ability": "Shields Down",
 				"teraTypes": [
@@ -4321,7 +4322,7 @@
 				],
 				"ability": "Magma Armor",
 				"teraTypes": [
-					"Fire"
+					"Fairy"
 				]
 			}
 		]
@@ -6141,7 +6142,7 @@
 				],
 				"ability": "Sheer Force",
 				"teraTypes": [
-					"Fire"
+					"Grass"
 				]
 			}
 		]
@@ -6549,7 +6550,7 @@
 				],
 				"ability": "Quark Drive",
 				"teraTypes": [
-					"Fire"
+					"Grass"
 				]
 			},
 			{
@@ -7425,7 +7426,7 @@
 				],
 				"ability": "Prankster",
 				"teraTypes": [
-					"Dark"
+					"Steel"
 				]
 			}
 		]
@@ -7617,7 +7618,7 @@
 				],
 				"ability": "Drizzle",
 				"teraTypes": [
-					"Water"
+					"Grass"
 				]
 			}
 		]
@@ -7905,7 +7906,7 @@
 				],
 				"ability": "Sand Stream",
 				"teraTypes": [
-					"Rock"
+					"Fighting"
 				]
 			}
 		]
@@ -8795,7 +8796,7 @@
 				"movepool": [
 					"Focus Blast",
 					"Blast Burn",
-					"Scorching Sands",
+					"Vacuum Wave",
 					"Protect"
 				],
 				"items": [
@@ -8855,13 +8856,13 @@
 				"movepool": [
 					"Extreme Speed",
 					"Outrage",
-					"Fly",
+					"Dual Wingbeat",
 					"Earthquake"
 				],
 				"items": [
 					"Choice Band"
 				],
-				"ability": "Multiscale",
+				"ability": "Inner Focus",
 				"teraTypes": [
 					"Normal"
 				]
