@@ -3953,7 +3953,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	"luxray": {
 		"types": [
 			"Electric",
-			"Fairy"
+			"Normal"
 		],
 		"baseStats": {
 			"hp": 90,

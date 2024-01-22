@@ -156,7 +156,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "9U",
 	},
 	parasect: {
-		tier: "SU",
+		tier: "IU",
 	},
 	venonat: {
 		tier: "8U",
@@ -561,7 +561,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "8U",
 	},
 	quilava: {
-		tier: "SU",
+		tier: "IU",
 	},
 	typhlosion: {
 		tier: "NU",
@@ -666,7 +666,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "8U",
 	},
 	yanma: {
-		tier: "SU",
+		tier: "IU",
 	},
 	yanmega: {
 		tier: "UUBL",
@@ -997,7 +997,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "UU",
 	},
 	meditite: {
-		tier: "SU",
+		tier: "IU",
 	},
 	medicham: {
 		tier: "NU",

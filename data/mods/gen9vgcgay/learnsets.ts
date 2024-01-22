@@ -28446,6 +28446,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"secretpower": [
 				"9M"
+			],
+			"protect": [
+				"9M"
 			]
 		}
 	},
@@ -43934,6 +43937,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"victorydance": [
 				"9M"
+			],
+			"electricterrain": [
+				"9M"
 			]
 		}
 	},
@@ -44232,6 +44238,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"tailglow": [
+				"9M"
+			],
+			"mistyterrain": [
 				"9M"
 			]
 		}
@@ -57552,7 +57561,10 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"wildcharge": [
 				"9M"
 			],
-			"dazzlinggleam": [
+			"glare": [
+				"9M"
+			],
+			"feint": [
 				"9M"
 			]
 		}
@@ -134993,9 +135005,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"rest": [
-				"9M"
-			],
-			"risingvoltage": [
 				"9M"
 			],
 			"roar": [
