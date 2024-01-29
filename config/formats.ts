@@ -348,11 +348,11 @@ export const Formats: FormatList = [
 		banlist: ['ZU', 'SUBL', 'Heat Rock'],
 	},
 	{
-		name: "[Gen 5] 8U",
+		name: "[Gen 5] IU",
 		mod: 'gen5',
 		searchShow: true,
 		ruleset: ['[Gen 5] SU'],
-		banlist: ['SU', '8UBL'],
+		banlist: ['SU', 'IUBL'],
 	},
 	{
 		section: "Gen 6 Lower Tiers",
@@ -396,7 +396,7 @@ export const Formats: FormatList = [
 		mod: 'gen8',
 		searchShow: true,
 		ruleset: ['[Gen 8] ZU'],
-		banlist: ['ZU', 'SUBL'],
+		banlist: ['ZU', 'SUBL', 'Electric Seed', 'Heat Rock'],
 	},
 	{
 		name: "[Gen 8] IU",

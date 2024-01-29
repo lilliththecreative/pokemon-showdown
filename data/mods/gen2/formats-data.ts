@@ -168,7 +168,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "NU",
 	},
 	meowth: {
-		tier: "SU",
+		tier: "ZU",
 	},
 	persian: {
 		tier: "NU",
