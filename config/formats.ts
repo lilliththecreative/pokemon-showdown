@@ -172,7 +172,7 @@ export const Formats: FormatList = [
 		name: "[Gen 1] SU",
 		mod: 'gen1',
 		searchShow: true,
-		ruleset: ['[Gen 1] ZU', 'APT Clause'],
+		ruleset: ['[Gen 1] ZU'],
 		banlist: ['ZU', 'SUBL', 'Confuse Ray'],
 	},
 	{
@@ -188,6 +188,7 @@ export const Formats: FormatList = [
 		searchShow: true,
 		ruleset: ['[Gen 1] IU'],
 		banlist: ['IU', '8UBL'],
+		unbanlist: ['Confuse Ray'],
 	},
 	{
 		name: "[Gen 1] 9U",
@@ -195,7 +196,6 @@ export const Formats: FormatList = [
 		searchShow: true,
 		ruleset: ['[Gen 1] 8U'],
 		banlist: ['8U', '9UBL'],
-		unbanlist: ['Confuse Ray'],
 	},
 	{
 		name: "[Gen 1] 10U",
@@ -260,6 +260,15 @@ export const Formats: FormatList = [
 		section: "Gen 3 Lower Tiers",
 	},
 	{
+		name: "[Gen 3] RU",
+		threads: [
+			`&bullet; <a href="https://www.smogon.com/forums/threads/3731043/">ADV RU</a>`,
+		],
+		mod: 'gen3',
+		ruleset: ['[Gen 3] UU'],
+		banlist: ['UU', 'RUBL'],
+	},
+	{
 		name: "[Gen 3] SU",
 		mod: 'gen3',
 		searchShow: true,
@@ -293,9 +302,6 @@ export const Formats: FormatList = [
 	},
 	{
 		name: "[Gen 4] SU",
-		threads: [
-			`&bullet; <a href="https://docs.google.com/document/d/12yUO1jg2NGDvVynDbc3oUupXx7K0i0jwRmfRJ76f_Jg">DPP 6U</a>`,
-		],
 		mod: 'gen4',
 		searchShow: true,
 		ruleset: ['[Gen 4] ZU'],
@@ -303,9 +309,6 @@ export const Formats: FormatList = [
 	},
 	{
 		name: "[Gen 4] IU",
-		threads: [
-			`&bullet; <a href="https://docs.google.com/document/d/1Ff5EmG9LQvwO3iQINTgz00YVbdlnz8MJFcISNdePo0U">DPP 7U</a>`,
-		],
 		mod: 'gen4',
 		searchShow: true,
 		ruleset: ['[Gen 4] SU'],
@@ -314,9 +317,6 @@ export const Formats: FormatList = [
 	},
 	{
 		name: "[Gen 4] 8U",
-		threads: [
-			`&bullet; <a href="https://docs.google.com/document/d/1QIoxXWKK8nMM28qwzDvn-V0eY-BRnPkXpZPuHL-6wqI/edit?usp=sharing">DPP 8U</a>`,
-		],
 		mod: 'gen4',
 		searchShow: true,
 		ruleset: ['[Gen 4] IU'],
