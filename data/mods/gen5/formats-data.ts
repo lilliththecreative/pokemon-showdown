@@ -444,7 +444,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		doublesTier: "NFE",
 	},
 	blissey: {
-		tier: "(OU)",
+		tier: "OU",
 		doublesTier: "DUU",
 	},
 	tangela: {
@@ -1700,7 +1700,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "ZU",
 	},
 	hippowdon: {
-		tier: "(OU)",
+		tier: "OU",
 		doublesTier: "DUU",
 	},
 	skorupi: {
