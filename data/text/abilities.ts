@@ -2467,8 +2467,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	ballin: {
 		name: "Ballin'",
-		desc: "Uses highest attacking stats on all ball/bullet moves. After another Pokemon uses a ball/bullet move, this Pokemon uses the same move. The copied move is subject to all effects that can prevent a move from being executed. A move used through this Ability cannot be copied again by other Pokemon with this Ability.",
-		shortDesc: "Ball/Bullet moves use highest attacking stat. Copies Ball/Bullet Moves."
+		desc: "Uses highest attacking stats on all ball/bullet moves. After another enemy Pokemon uses a ball/bullet move, this Pokemon uses the same move. The copied move is subject to all effects that can prevent a move from being executed. A move used through this Ability cannot be copied again by other Pokemon with this Ability.",
+		shortDesc: "Ball/Bullet moves use highest attacking stat. Copies ENEMY Ball/Bullet Moves."
 	},
 	runningstart: {
 		name: "Running Start",

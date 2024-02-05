@@ -45,7 +45,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "IU",
 	},
 	pidgey: {
-		tier: "10UBL",
+		tier: "9U",
 	},
 	pidgeotto: {
 		tier: "8U",
@@ -66,7 +66,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "PU",
 	},
 	ekans: {
-		tier: "9U",
+		tier: "8U",
 	},
 	arbok: {
 		tier: "ZU",
@@ -93,7 +93,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "PU",
 	},
 	nidoranm: {
-		tier: "8U",
+		tier: "9U",
 	},
 	nidorino: {
 		tier: "SU",
@@ -114,7 +114,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "NU",
 	},
 	jigglypuff: {
-		tier: "9U",
+		tier: "8U",
 	},
 	wigglytuff: {
 		tier: "NU",
@@ -171,7 +171,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "ZU",
 	},
 	growlithe: {
-		tier: "9U",
+		tier: "8U",
 	},
 	arcanine: {
 		tier: "PU",
@@ -396,7 +396,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "10U",
 	},
 	eevee: {
-		tier: "9U",
+		tier: "8U",
 	},
 	vaporeon: {
 		tier: "UU",
