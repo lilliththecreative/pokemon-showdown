@@ -1296,13 +1296,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 				move.willCrit = true;
 			}
 		},
-		onFoeModifyCritRatio(relayVar, source, target, move) {
-			if (target.ability === 'bigballs') {
-				if (move.priority === 0) {
-					move.willCrit = true;
-				}
-			}
-		},
+		// Rest implemented in battle-actions:1688
 	},
 	oddkeystone: {
 		inherit: true,
