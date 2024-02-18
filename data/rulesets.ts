@@ -550,6 +550,51 @@ export const Rulesets: {[k: string]: FormatData} = {
 			}
 		},
 	},
+	forcemonocolor: {
+		effectType: 'ValidatorRule',
+		name: 'Force Monocolor',
+		desc: `Forces all teams to have Pok&eacute;mon of the same color. Usage: Force Monocolor = [Color], e.g. "Force Monocolor = Blue"`,
+		hasValue: true,
+		onValidateRule(value) {
+			const validColors = ["Black", "Blue", "Brown", "Gray", "Green", "Pink", "Purple", "Red", "White", "Yellow"];
+			if (!validColors.map(this.dex.toID).includes(this.dex.toID(value))) {
+				throw new Error(`Invalid color "${value}"`);
+			}
+		},
+		onValidateSet(set) {
+			const color = this.toID(this.ruleTable.valueRules.get('forcemonocolor'));
+			let dex = this.dex;
+			if (dex.gen < 5) {
+				dex = dex.forGen(5);
+			}
+			const species = dex.species.get(set.species);
+			if (this.toID(species.color) !== color) {
+				return [`${set.species} must be the color ${color}.`];
+			}
+		},
+	},
+	forceteratype: {
+		effectType: 'ValidatorRule',
+		name: 'Force Tera Type',
+		desc: `Forces all Pok&eacute;mon to have the same Tera Type. Usage: Force Tera Type = [Type], e.g. "Force Tera Type = Dragon"`,
+		hasValue: true,
+		onValidateRule(value) {
+			if (this.dex.gen !== 9) {
+				throw new Error(`Terastallization doesn't exist outside of Generation 9.`);
+			}
+			const type = this.dex.types.get(value);
+			if (!type.exists) throw new Error(`Misspelled type "${value}"`);
+			if (type.isNonstandard) {
+				throw new Error(`Invalid type "${type.name}" in Generation ${this.dex.gen}.`);
+			}
+		},
+		onValidateSet(set) {
+			const type = this.dex.types.get(this.ruleTable.valueRules.get('forceteratype')!);
+			if (this.toID(set.teraType) !== type.id) {
+				return [`${set.species} must have its Tera Type set to ${type.name}.`];
+			}
+		},
+	},
 	forceselect: {
 		effectType: 'ValidatorRule',
 		name: 'Force Select',
@@ -2117,7 +2162,7 @@ export const Rulesets: {[k: string]: FormatData} = {
 	chimera1v1rule: {
 		effectType: 'Rule',
 		name: 'Chimera 1v1 Rule',
-		desc: "Validation and battle effects for Chimera 1v1.",
+		desc: "Merges a team of six into a single Pok\u00e9mon depending on the order chosen at team preview: It gains the typing of the first, item of the second, ability of the third, stats of the fourth, the first two moves of the fifth, and the last two moves of the sixth.",
 		ruleset: ['Team Preview', 'Picked Team Size = 6'],
 		onValidateSet(set) {
 			if (!set.item) return;
