@@ -173,14 +173,14 @@ export const Formats: FormatList = [
 		mod: 'gen1',
 		searchShow: true,
 		ruleset: ['[Gen 1] ZU'],
-		banlist: ['ZU', 'SUBL', 'Confuse Ray'],
+		banlist: ['ZU', 'SUBL'],
 	},
 	{
 		name: "[Gen 1] IU",
 		mod: 'gen1',
 		searchShow: true,
 		ruleset: ['[Gen 1] SU'],
-		banlist: ['SU', 'IUBL'],
+		banlist: ['SU', 'IUBL', 'Confuse Ray'],
 	},
 	{
 		name: "[Gen 1] 8U",

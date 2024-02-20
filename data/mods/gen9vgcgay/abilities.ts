@@ -511,7 +511,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		shortDesc: "This Pokemon heals 25% every other turn instead of using a move.",
 		onBeforeMove(pokemon) {
 			if (pokemon.removeVolatile('truant')) {
-				this.heal(pokemon.baseMaxhp / 4);
+				this.heal(pokemon.baseMaxhp / 4, pokemon, pokemon);
 				this.add('cant', pokemon, 'ability: Truant');
 				return false;
 			}
