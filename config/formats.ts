@@ -301,6 +301,13 @@ export const Formats: FormatList = [
 		section: "Gen 4 Lower Tiers",
 	},
 	{
+		name: "[Gen 4] Tier Shift",
+		mod: 'gen4',
+		ruleset: ['Standard', 'Gen 4 Tier Shift Mod'],
+		banlist: ['Uber'],
+		searchShow: true,
+	},
+	{
 		name: "[Gen 4] SU",
 		mod: 'gen4',
 		searchShow: true,

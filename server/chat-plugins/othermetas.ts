@@ -15,7 +15,8 @@ interface StoneDeltas {
 }
 
 type TierShiftTiers = 'UU' | 'RUBL' | 'RU' | 'NUBL' | 'NU' | 'PUBL' | 'PU' | 'ZUBL' | 'ZU' |
-'SUBL' | 'SU' | 'UR' | 'NFE' | 'LC' | 'IU' | '8U' | '9U' | '10U' | '10UBL';
+'SUBL' | 'SU' | 'UR' | 'NFE' | 'LC' | 'IU' | '8U' | '9U' | '10U' |
+'IUBL' | '8UBL' | '9UBL' | '10UBL';
 
 function getMegaStone(stone: string, mod = 'gen9'): Item | null {
 	let dex = Dex;
@@ -409,17 +410,20 @@ export const commands: Chat.ChatCommands = {
 			PUBL: 25,
 			PU: 30,
 			ZUBL: 30,
-			ZU: 30,
-			SUBL: 30,
-			SU: 35,
-			UR: 40,
-			IU: 40,
-			NFE: 40,
-			LC: 40,
-			"8U": 35,
-			"9U": 40,
-			"10UBL": 40,
-			"10U": 45,
+			ZU: 35,
+			SUBL: 35,
+			SU: 40,
+			IUBL: 40,
+			UR: 45,
+			NFE: 45,
+			LC: 45,
+			IU: 45,
+			"8UBL": 45,
+			"8U": 50,
+			"9UBL": 50,
+			"9U": 55,
+			"10UBL": 55,
+			"10U": 60,
 		};
 		const gen1boosts: {[tier in TierShiftTiers]: number} = {
 			RUBL: 0,
@@ -436,11 +440,38 @@ export const commands: Chat.ChatCommands = {
 			ZU: 20,
 			SUBL: 20,
 			SU: 25,
+			IUBL: 25,
 			IU: 30,
+			"8UBL": 30,
 			"8U": 35,
+			"9UBL": 35,
 			"9U": 40,
 			"10UBL": 40,
 			"10U": 45,
+		};
+		const gen4boosts: {[tier in TierShiftTiers]: number} = {
+			RUBL: 0,
+			RU: 0,
+			UR: 0,
+			NFE: 0,
+			LC: 0,
+			UU: 10,
+			NUBL: 10,
+			NU: 15,
+			PUBL: 15,
+			PU: 20,
+			ZUBL: 20,
+			ZU: 25,
+			SUBL: 25,
+			SU: 30,
+			IUBL: 30,
+			IU: 35,
+			"8UBL": 35,
+			"8U": 40,
+			"9UBL": 40,
+			"9U": 45,
+			"10UBL": 45,
+			"10U": 50,
 		};
 		if (dex.gen < 9) {
 			boosts['UU'] = boosts['RUBL'] = 10;
@@ -450,6 +481,9 @@ export const commands: Chat.ChatCommands = {
 		}
 		if (dex.gen === 1) {
 			boosts = gen1boosts;
+		}
+		if (dex.gen === 4) {
+			boosts = gen4boosts;
 		}
 		let tier = species.tier;
 		if (tier[0] === '(') tier = tier.slice(1, -1);

@@ -2287,6 +2287,56 @@ export const Rulesets: {[k: string]: FormatData} = {
 			return pokemon;
 		},
 	},
+	gen4tiershiftmod: {
+		effectType: "Rule",
+		name: "Gen 4 Tier Shift Mod",
+		desc: `Pok&eacute;mon below OU get their stats, excluding HP, boosted. +5 per tier down to 10u.`,
+		ruleset: ['Overflow Stat Mod'],
+		onBegin() {
+			this.add('rule', 'Tier Shift Mod: Pok\u00e9mon get stat buffs depending on their tier, excluding HP.');
+		},
+		onModifySpecies(species, target, source, effect) {
+			if (!species.baseStats) return;
+			const boosts: {[tier: string]: number} = {
+				uu: 10,
+				nubl: 10,
+				nu: 15,
+				publ: 15,
+				pu: 20,
+				zubl: 20,
+				zu: 25,
+				subl: 25,
+				su: 30,
+				iubl: 30,
+				iu: 35,
+				"8ubl": 35,
+				"8u": 40,
+				"9ubl": 40,
+				"9u": 45,
+				"10ubl": 45,
+				"10u": 50,
+			};
+			const isNatDex: boolean = this.ruleTable.has("standardnatdex");
+			let tier: string = this.toID(isNatDex ? species.natDexTier : species.tier);
+			if (!(tier in boosts)) return;
+			// Non-Pokemon bans in lower tiers
+			if (target) {
+				if (this.toID(target.set.item) === 'lightclay') tier = 'rubl';
+				if (this.toID(target.set.item) === 'damprock') tier = 'publ';
+				if (this.toID(target.set.item) === 'heatrock') tier = 'publ';
+			}
+			const pokemon = this.dex.deepClone(species);
+			pokemon.bst = pokemon.baseStats['hp'];
+			const boost = boosts[tier];
+			let statName: StatID;
+			for (statName in pokemon.baseStats as StatsTable) {
+				if (statName === 'hp') continue;
+				pokemon.baseStats[statName] = this.clampIntRange(pokemon.baseStats[statName] + boost, 1, 255);
+				pokemon.bst += pokemon.baseStats[statName];
+			}
+			return pokemon;
+		},
+	},
 	tiershiftmod: {
 		effectType: "Rule",
 		name: "Tier Shift Mod",
@@ -2306,11 +2356,20 @@ export const Rulesets: {[k: string]: FormatData} = {
 				publ: 25,
 				pu: 30,
 				zubl: 30,
-				zu: 30,
-				su: 35,
-				ur: 40,
-				nfe: 40,
-				lc: 40,
+				zu: 35,
+				subl: 35,
+				su: 40,
+				iubl: 40,
+				ur: 45,
+				nfe: 45,
+				lc: 45,
+				iu: 45,
+				"8ubl": 45,
+				"8u": 50,
+				"9ubl": 50,
+				"9u": 55,
+				"10ubl": 55,
+				"10u": 60,
 			};
 			const isNatDex: boolean = this.ruleTable.has("standardnatdex");
 			let tier: string = this.toID(isNatDex ? species.natDexTier : species.tier);
