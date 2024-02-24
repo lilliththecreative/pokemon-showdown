@@ -4676,7 +4676,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	cinderace: {
 		tier: "OU",
 		doublesTier: "(DUU)",
-		natDexTier: "UU",
+		natDexTier: "UUBL",
 	},
 	cinderacegmax: {
 		isNonstandard: "Past",
@@ -5381,7 +5381,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		natDexTier: "NFE",
 	},
 	garganacl: {
-		tier: "UU",
+		tier: "UUBL",
 		doublesTier: "DUU",
 		natDexTier: "OU",
 	},
