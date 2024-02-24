@@ -473,17 +473,15 @@ export const commands: Chat.ChatCommands = {
 			"10UBL": 45,
 			"10U": 50,
 		};
-		if (dex.gen < 9) {
+		if (dex.gen === 1) {
+			boosts = gen1boosts;
+		} else if (dex.gen === 4) {
+			boosts = gen4boosts;
+		} else if (dex.gen < 9) {
 			boosts['UU'] = boosts['RUBL'] = 10;
 			boosts['RU'] = boosts['NUBL'] = 20;
 			boosts['NU'] = boosts['PUBL'] = 30;
 			boosts['PU'] = boosts['NFE'] = boosts['LC'] = 40;
-		}
-		if (dex.gen === 1) {
-			boosts = gen1boosts;
-		}
-		if (dex.gen === 4) {
-			boosts = gen4boosts;
 		}
 		let tier = species.tier;
 		if (tier[0] === '(') tier = tier.slice(1, -1);
