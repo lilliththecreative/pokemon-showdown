@@ -157,8 +157,7 @@ export const Formats: FormatList = [
 	{
 		name: "[Gen 1] Tier Shift",
 		mod: 'gen1',
-		ruleset: ['Standard', 'Gen 1 Tier Shift Mod'],
-		banlist: ['Uber'],
+		ruleset: ['[Gen 1] OU', 'Pre RU Tier Shift Mod'],
 		searchShow: true,
 	},
 	{
@@ -303,8 +302,7 @@ export const Formats: FormatList = [
 	{
 		name: "[Gen 4] Tier Shift",
 		mod: 'gen4',
-		ruleset: ['Standard', 'Gen 4 Tier Shift Mod'],
-		banlist: ['Uber'],
+		ruleset: ['[Gen 4] OU', 'Pre RU Tier Shift Mod'],
 		searchShow: true,
 	},
 	{

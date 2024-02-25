@@ -425,63 +425,32 @@ export const commands: Chat.ChatCommands = {
 			"10UBL": 55,
 			"10U": 60,
 		};
-		const gen1boosts: {[tier in TierShiftTiers]: number} = {
+		const preRuBoosts: {[tier in TierShiftTiers]: number} = {
 			RUBL: 0,
 			RU: 0,
 			UR: 0,
 			NFE: 0,
 			LC: 0,
-			UU: 5,
-			NUBL: 5,
-			NU: 10,
-			PUBL: 10,
-			PU: 15,
-			ZUBL: 15,
-			ZU: 20,
-			SUBL: 20,
-			SU: 25,
-			IUBL: 25,
-			IU: 30,
-			"8UBL": 30,
-			"8U": 35,
-			"9UBL": 35,
-			"9U": 40,
-			"10UBL": 40,
-			"10U": 45,
+			UU: 15,
+			NUBL: 15,
+			NU: 20,
+			PUBL: 20,
+			PU: 25,
+			ZUBL: 25,
+			ZU: 30,
+			SUBL: 30,
+			SU: 35,
+			IUBL: 35,
+			IU: 40,
+			"8UBL": 40,
+			"8U": 45,
+			"9UBL": 45,
+			"9U": 50,
+			"10UBL": 50,
+			"10U": 55,
 		};
-		const gen4boosts: {[tier in TierShiftTiers]: number} = {
-			RUBL: 0,
-			RU: 0,
-			UR: 0,
-			NFE: 0,
-			LC: 0,
-			UU: 10,
-			NUBL: 10,
-			NU: 15,
-			PUBL: 15,
-			PU: 20,
-			ZUBL: 20,
-			ZU: 25,
-			SUBL: 25,
-			SU: 30,
-			IUBL: 30,
-			IU: 35,
-			"8UBL": 35,
-			"8U": 40,
-			"9UBL": 40,
-			"9U": 45,
-			"10UBL": 45,
-			"10U": 50,
-		};
-		if (dex.gen === 1) {
-			boosts = gen1boosts;
-		} else if (dex.gen === 4) {
-			boosts = gen4boosts;
-		} else if (dex.gen < 9) {
-			boosts['UU'] = boosts['RUBL'] = 10;
-			boosts['RU'] = boosts['NUBL'] = 20;
-			boosts['NU'] = boosts['PUBL'] = 30;
-			boosts['PU'] = boosts['NFE'] = boosts['LC'] = 40;
+		if (dex.gen < 5) {
+			boosts = preRuBoosts;
 		}
 		let tier = species.tier;
 		if (tier[0] === '(') tier = tier.slice(1, -1);

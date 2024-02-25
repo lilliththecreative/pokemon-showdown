@@ -2240,9 +2240,9 @@ export const Rulesets: {[k: string]: FormatData} = {
 			this.lose(target.side);
 		},
 	},
-	gen1tiershiftmod: {
+	prerutiershiftmod: {
 		effectType: "Rule",
-		name: "Gen 1 Tier Shift Mod",
+		name: "Pre RU Tier Shift Mod",
 		desc: `Pok&eacute;mon below OU get their stats, excluding HP, boosted. +5 per tier down to 10u.`,
 		ruleset: ['Overflow Stat Mod'],
 		onBegin() {
@@ -2251,70 +2251,23 @@ export const Rulesets: {[k: string]: FormatData} = {
 		onModifySpecies(species, target, source, effect) {
 			if (!species.baseStats) return;
 			const boosts: {[tier: string]: number} = {
-				uu: 5,
-				nubl: 5,
-				nu: 10,
-				publ: 10,
-				pu: 15,
-				zubl: 15,
-				zu: 20,
-				subl: 20,
-				su: 25,
-				iu: 30,
-				"8u": 35,
-				"9u": 40,
-				"10ubl": 40,
-				"10u": 45,
-			};
-			const isNatDex: boolean = this.ruleTable.has("standardnatdex");
-			let tier: string = this.toID(isNatDex ? species.natDexTier : species.tier);
-			if (!(tier in boosts)) return;
-			// Non-Pokemon bans in lower tiers
-			if (target) {
-				if (this.toID(target.set.item) === 'lightclay') tier = 'rubl';
-				if (this.toID(target.set.item) === 'damprock') tier = 'publ';
-				if (this.toID(target.set.item) === 'heatrock') tier = 'publ';
-			}
-			const pokemon = this.dex.deepClone(species);
-			pokemon.bst = pokemon.baseStats['hp'];
-			const boost = boosts[tier];
-			let statName: StatID;
-			for (statName in pokemon.baseStats as StatsTable) {
-				if (statName === 'hp') continue;
-				pokemon.baseStats[statName] = this.clampIntRange(pokemon.baseStats[statName] + boost, 1, 255);
-				pokemon.bst += pokemon.baseStats[statName];
-			}
-			return pokemon;
-		},
-	},
-	gen4tiershiftmod: {
-		effectType: "Rule",
-		name: "Gen 4 Tier Shift Mod",
-		desc: `Pok&eacute;mon below OU get their stats, excluding HP, boosted. +5 per tier down to 10u.`,
-		ruleset: ['Overflow Stat Mod'],
-		onBegin() {
-			this.add('rule', 'Tier Shift Mod: Pok\u00e9mon get stat buffs depending on their tier, excluding HP.');
-		},
-		onModifySpecies(species, target, source, effect) {
-			if (!species.baseStats) return;
-			const boosts: {[tier: string]: number} = {
-				uu: 10,
-				nubl: 10,
-				nu: 15,
-				publ: 15,
-				pu: 20,
-				zubl: 20,
-				zu: 25,
-				subl: 25,
-				su: 30,
-				iubl: 30,
-				iu: 35,
-				"8ubl": 35,
-				"8u": 40,
-				"9ubl": 40,
-				"9u": 45,
-				"10ubl": 45,
-				"10u": 50,
+				uu: 15,
+				nubl: 15,
+				nu: 20,
+				publ: 20,
+				pu: 25,
+				zubl: 25,
+				zu: 30,
+				subl: 30,
+				su: 35,
+				iubl: 35,
+				iu: 40,
+				"8ubl": 40,
+				"8u": 45,
+				"9ubl": 45,
+				"9u": 50,
+				"10ubl": 50,
+				"10u": 55,
 			};
 			const isNatDex: boolean = this.ruleTable.has("standardnatdex");
 			let tier: string = this.toID(isNatDex ? species.natDexTier : species.tier);

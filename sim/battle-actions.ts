@@ -1690,7 +1690,7 @@ export class BattleActions {
 		const moveHit = target.getMoveHitData(move);
 		moveHit.crit = move.willCrit || false;
 		if (move.willCrit === undefined) {
-			if (target.ability === 'bigballs') {
+			if (target.ability === 'bigballs' && move.priority <= 0) {
 				moveHit.crit = true;
 			} else if (critRatio) {
 				moveHit.crit = this.battle.randomChance(1, critMult[critRatio]);
