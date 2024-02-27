@@ -2268,6 +2268,8 @@ export const Rulesets: {[k: string]: FormatData} = {
 				"9u": 50,
 				"10ubl": 50,
 				"10u": 55,
+				"11ubl": 55,
+				"11u": 60,
 			};
 			const isNatDex: boolean = this.ruleTable.has("standardnatdex");
 			let tier: string = this.toID(isNatDex ? species.natDexTier : species.tier);
@@ -2323,6 +2325,8 @@ export const Rulesets: {[k: string]: FormatData} = {
 				"9u": 55,
 				"10ubl": 55,
 				"10u": 60,
+				"11ubl": 60,
+				"11u": 65,
 			};
 			const isNatDex: boolean = this.ruleTable.has("standardnatdex");
 			let tier: string = this.toID(isNatDex ? species.natDexTier : species.tier);
