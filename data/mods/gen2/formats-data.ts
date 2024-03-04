@@ -567,7 +567,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "UU",
 	},
 	togepi: {
-		tier: "8U",
+		tier: "IU",
 	},
 	togetic: {
 		tier: "ZU",
