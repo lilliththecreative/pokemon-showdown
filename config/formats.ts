@@ -213,6 +213,12 @@ export const Formats: FormatList = [
 		section: "Gen 2 Lower Tiers",
 	},
 	{
+		name: "[Gen 2] Tier Shift",
+		mod: 'gen2',
+		ruleset: ['[Gen 2] OU', 'Pre RU Tier Shift Mod'],
+		searchShow: true,
+	},
+	{
 		name: "[Gen 2] ZU",
 		mod: 'gen2',
 		searchShow: true,
@@ -257,6 +263,12 @@ export const Formats: FormatList = [
 	},
 	{
 		section: "Gen 3 Lower Tiers",
+	},
+	{
+		name: "[Gen 3] Tier Shift",
+		mod: 'gen3',
+		ruleset: ['[Gen 3] OU', 'Pre RU Tier Shift Mod'],
+		searchShow: true,
 	},
 	{
 		name: "[Gen 3] RU",
@@ -346,6 +358,12 @@ export const Formats: FormatList = [
 		section: "Gen 5 Lower Tiers",
 	},
 	{
+		name: "[Gen 5] Tier Shift",
+		mod: 'gen5',
+		ruleset: ['[Gen 5] OU', 'Tier Shift Mod'],
+		searchShow: true,
+	},
+	{
 		name: "[Gen 5] SU",
 		mod: 'gen5',
 		searchShow: true,
@@ -361,6 +379,13 @@ export const Formats: FormatList = [
 	},
 	{
 		section: "Gen 6 Lower Tiers",
+	},
+	{
+		name: "[Gen 6] Tier Shift",
+		mod: 'gen6',
+		ruleset: ['[Gen 6] OU', 'Tier Shift Mod', 'Evasion Clause'],
+		banlist: ['Eviolite', 'Frogadier', 'King\'s Rock', 'Razor Fang', 'Quick Claw'],
+		searchShow: true,
 	},
 	{
 		name: "[Gen 6] SU",
@@ -380,6 +405,12 @@ export const Formats: FormatList = [
 		section: "Gen 7 Lower Tiers",
 	},
 	{
+		name: "[Gen 7] Tier Shift",
+		mod: 'gen7',
+		ruleset: ['[Gen 7] OU', 'Tier Shift Mod'],
+		searchShow: true,
+	},
+	{
 		name: "[Gen 7] SU",
 		mod: 'gen7',
 		searchShow: true,
@@ -397,6 +428,12 @@ export const Formats: FormatList = [
 		section: "Gen 8 Lower Tiers",
 	},
 	{
+		name: "[Gen 8] Tier Shift",
+		mod: 'gen8',
+		ruleset: ['[Gen 8] OU', 'Tier Shift Mod'],
+		searchShow: true,
+	},
+	{
 		name: "[Gen 8] SU",
 		mod: 'gen8',
 		searchShow: true,
@@ -412,6 +449,12 @@ export const Formats: FormatList = [
 	},
 	{
 		section: "Gen 9 Lower Tiers",
+	},
+	{
+		name: "[Gen 9] Tier Shift",
+		mod: 'gen9',
+		ruleset: ['[Gen 9] OU', 'Tier Shift Mod'],
+		searchShow: true,
 	},
 	{
 		name: "[Gen 9] SU",

@@ -227,18 +227,18 @@ export class RandomGayTeams extends RandomTeams {
 		}
 
 		// Minimize confusion damage
-		const noAttackStatMoves = [...moves].every(m => {
-			const move = this.dex.moves.get(m);
-			if (move.damageCallback || move.damage) return true;
-			if (move.id === 'shellsidearm') return false;
-			// Magearna, though this can work well as a general rule
-			if (move.id === 'terablast' && moves.has('shiftgear')) return false;
-			return move.category !== 'Physical' || move.id === 'bodypress' || move.id === 'foulplay';
-		});
-		if (noAttackStatMoves && !moves.has('transform')) {
-			evs.atk = 0;
-			ivs.atk = 0;
-		}
+		// const noAttackStatMoves = [...moves].every(m => {
+		// 	const move = this.dex.moves.get(m);
+		// 	if (move.damageCallback || move.damage) return true;
+		// 	if (move.id === 'shellsidearm') return false;
+		// 	// Magearna, though this can work well as a general rule
+		// 	if (move.id === 'terablast' && moves.has('shiftgear')) return false;
+		// 	return move.category !== 'Physical' || move.id === 'bodypress' || move.id === 'foulplay';
+		// });
+		// if (noAttackStatMoves && !moves.has('transform')) {
+		// 	evs.atk = 0;
+		// 	ivs.atk = 0;
+		// }
 
 		if (moves.has('gyroball') || moves.has('trickroom')) {
 			evs.spe = 0;
@@ -252,7 +252,7 @@ export class RandomGayTeams extends RandomTeams {
 			name: species.baseSpecies,
 			species: forme,
 			gender: species.gender,
-			shiny: this.randomChance(1, 1024),
+			shiny: this.randomChance(1, 512),
 			level,
 			moves: shuffledMoves,
 			ability,
