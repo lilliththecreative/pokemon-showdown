@@ -2252,6 +2252,8 @@ export const Rulesets: {[k: string]: FormatData} = {
 			if (!species.baseStats) return;
 			const boosts: {[tier: string]: number} = {
 				uu: 15,
+				rubl: 15,
+				ru: 15,
 				nubl: 15,
 				nu: 20,
 				publ: 20,
@@ -2264,6 +2266,8 @@ export const Rulesets: {[k: string]: FormatData} = {
 				iu: 40,
 				"8ubl": 40,
 				"8u": 45,
+				nfe: 45,
+				lc: 45,
 				"9ubl": 45,
 				"9u": 50,
 				"10ubl": 50,

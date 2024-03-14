@@ -3,8 +3,8 @@ Pokémon Showdown
 
 Navigation: [Website][1] | **Server repository** | [Client repository][2] | [Dex repository][3]
 
-  [1]: http://pokemonshowdown.com/
-  [2]: https://github.com/smogon/pokemon-showdown-client
+  [1]: https://staraptorshowdown.com/
+  [2]: https://github.com/ShivaD173/pokemon-showdown-client
   [3]: https://github.com/Zarel/Pokemon-Showdown-Dex
 
 [![Build Status](https://github.com/smogon/pokemon-showdown/workflows/Node.js%20CI/badge.svg)](https://github.com/smogon/pokemon-showdown/actions?query=workflow%3A%22Node.js+CI%22)
