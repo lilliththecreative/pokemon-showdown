@@ -100,6 +100,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			this.eachEvent('WeatherChange', this.effect);
 		},
 		onEnd(pokemon) {
+			pokemon.abilityState.ending = true;
 			this.eachEvent('WeatherChange', this.effect);
 		},
 		suppressWeather: true,
@@ -544,6 +545,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			this.eachEvent('WeatherChange', this.effect);
 		},
 		onEnd(pokemon) {
+			pokemon.abilityState.ending = true;
 			this.eachEvent('WeatherChange', this.effect);
 		},
 		suppressWeather: true,
@@ -3423,7 +3425,8 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			// Protosynthesis is not affected by Utility Umbrella
 			if (this.field.isWeather('sunnyday')) {
 				pokemon.addVolatile('protosynthesis');
-			} else if (!pokemon.volatiles['protosynthesis']?.fromBooster) {
+			} else if (!pokemon.volatiles['protosynthesis']?.fromBooster && this.field.weather !== 'sunnyday') {
+				// Protosynthesis will not deactivite if Sun is suppressed, hence the direct ID check (isWeather respects supression)
 				pokemon.removeVolatile('protosynthesis');
 			}
 		},
@@ -3678,7 +3681,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			}
 		},
 		onAfterBoost(boost, target, source, effect) {
-			if (effect?.name === 'Intimidate') {
+			if (effect?.name === 'Intimidate' && boost.atk) {
 				this.boost({spe: 1});
 			}
 		},
