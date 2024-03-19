@@ -464,6 +464,13 @@ export const Formats: FormatList = [
 		banlist: ['ZU', 'SUBL', 'Heat Rock'],
 	},
 	{
+		name: "[Gen 9] IU",
+		mod: 'gen9',
+		searchShow: true,
+		ruleset: ['[Gen 9] SU'],
+		banlist: ['SU', 'IUBL'],
+	},
+	{
 		section: "S/V Singles",
 		column: 2,
 	},
