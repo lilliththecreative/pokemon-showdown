@@ -361,6 +361,7 @@ export const Formats: FormatList = [
 		name: "[Gen 5] Tier Shift",
 		mod: 'gen5',
 		ruleset: ['[Gen 5] OU', 'Tier Shift Mod'],
+		banlist: ['Drizzle', 'Drought', 'Eviolite'],
 		searchShow: true,
 	},
 	{
@@ -384,7 +385,7 @@ export const Formats: FormatList = [
 		name: "[Gen 6] Tier Shift",
 		mod: 'gen6',
 		ruleset: ['[Gen 6] OU', 'Tier Shift Mod', 'Evasion Clause'],
-		banlist: ['Eviolite', 'Frogadier', 'King\'s Rock', 'Razor Fang', 'Quick Claw'],
+		banlist: ['Drizzle', 'Eviolite', 'Frogadier', 'King\'s Rock', 'Razor Fang', 'Quick Claw'],
 		searchShow: true,
 	},
 	{
@@ -408,6 +409,7 @@ export const Formats: FormatList = [
 		name: "[Gen 7] Tier Shift",
 		mod: 'gen7',
 		ruleset: ['[Gen 7] OU', 'Tier Shift Mod'],
+		banlist: ['Politoed', 'Eviolite'],
 		searchShow: true,
 	},
 	{
@@ -431,6 +433,7 @@ export const Formats: FormatList = [
 		name: "[Gen 8] Tier Shift",
 		mod: 'gen8',
 		ruleset: ['[Gen 8] OU', 'Tier Shift Mod'],
+		banlist: ['Politoed', 'Eviolite'],
 		searchShow: true,
 	},
 	{
@@ -454,6 +457,7 @@ export const Formats: FormatList = [
 		name: "[Gen 9] Tier Shift",
 		mod: 'gen9',
 		ruleset: ['[Gen 9] OU', 'Tier Shift Mod'],
+		banlist: ['Politoed', 'Eviolite'],
 		searchShow: true,
 	},
 	{
