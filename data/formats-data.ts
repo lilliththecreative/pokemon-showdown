@@ -250,7 +250,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		natDexTier: "RU",
 	},
 	raichu: {
-		tier: "SU",
+		tier: "SUBL",
 		doublesTier: "(DUU)",
 		natDexTier: "RU",
 	},
@@ -1526,7 +1526,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "LC",
 	},
 	ursaring: {
-		tier: "SU",
+		tier: "SUBL",
 		doublesTier: "NFE",
 		natDexTier: "NFE",
 	},
@@ -2148,7 +2148,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		natDexTier: "RUBL",
 	},
 	zangoose: {
-		tier: "SU",
+		tier: "SUBL",
 		doublesTier: "(DUU)",
 		natDexTier: "RU",
 	},
@@ -2779,7 +2779,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		natDexTier: "UU",
 	},
 	rotomfrost: {
-		tier: "SU",
+		tier: "SUBL",
 		doublesTier: "(DUU)",
 		natDexTier: "RU",
 	},
@@ -3145,7 +3145,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "LC",
 	},
 	lilligant: {
-		tier: "SU",
+		tier: "SUBL",
 		doublesTier: "(DUU)",
 		natDexTier: "RU",
 	},
@@ -4210,7 +4210,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		natDexTier: "RU",
 	},
 	lycanrocmidnight: {
-		tier: "SU",
+		tier: "SUBL",
 		doublesTier: "(DUU)",
 		natDexTier: "RU",
 	},
@@ -4948,7 +4948,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 	},
 	falinks: {
-		tier: "SU",
+		tier: "SUBL",
 		doublesTier: "(DUU)",
 		natDexTier: "RU",
 	},
