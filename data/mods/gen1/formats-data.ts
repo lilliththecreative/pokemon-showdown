@@ -54,7 +54,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "ZU",
 	},
 	rattata: {
-		tier: "9U",
+		tier: "8U",
 	},
 	raticate: {
 		tier: "NU",
@@ -66,7 +66,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "PU",
 	},
 	ekans: {
-		tier: "8U",
+		tier: "9U",
 	},
 	arbok: {
 		tier: "ZU",
@@ -291,7 +291,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "UUBL",
 	},
 	krabby: {
-		tier: "8U",
+		tier: "9U",
 	},
 	kingler: {
 		tier: "NU",

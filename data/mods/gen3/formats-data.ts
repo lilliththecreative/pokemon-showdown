@@ -420,7 +420,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "UU",
 	},
 	magby: {
-		tier: "SU",
+		tier: "SUBL",
 	},
 	magmar: {
 		tier: "RU",

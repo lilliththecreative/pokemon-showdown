@@ -477,6 +477,15 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		basePower: 70,
 	},
+	supercellslam: {
+		inherit: true,
+		basePower: 110,
+	},
+	jumpkick: {
+		inherit: true,
+		isNonstandard: null,
+		basePower: 110,
+	},
 	poisontail: {
 		inherit: true,
 		target: "allAdjacentFoes",
@@ -719,6 +728,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 		shortDesc: "Doubles next Electric attack and heals 33%",
 		heal: [1, 3],
+		pp: 5,
 		boosts: null,
 	},
 	smellingsalts: {
@@ -906,21 +916,14 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	milkdrink: {
 		inherit: true,
-		isNonstandard: null,
-		shortDesc: "Heals Ally by 50% or self by 100%",
+		shortDesc: "Heals the user by 100% of its max HP.",
 		pp: 5,
-		heal: null,
-		onHit(target, source) {
-			let healAmt = Math.floor(target.baseMaxhp * 0.5);
-			if (target === source) {
-				healAmt = target.baseMaxhp;
-			}
-			if (!this.heal(healAmt)) {
-				this.add('-immune', target);
-				return this.NOT_FAIL;
-			}
-		},
-		target: "adjacentAllyOrSelf",
+		heal: [1, 1],
+		isNonstandard: null
+	},
+	tropkick: {
+		inherit: true,
+		basePower: 80,
 	},
 	originpulse: {
 		inherit: true,
@@ -1696,6 +1699,14 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		pp: 5,
 	},
+	strengthsap: {
+		inherit: true,
+		pp: 5,
+	},
+	wish: {
+		inherit: true,
+		pp: 5,
+	},
 	trumpcard: {
 		inherit: true,
 		isNonstandard: null,
@@ -1994,6 +2005,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	blazingtorque: {
 		inherit: true,
+		basePower: 100,
 		isNonstandard: null,
 	},
 	noxioustorque: {
@@ -2010,6 +2022,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	wickedtorque: {
 		inherit: true,
+		basePower: 100,
 		isNonstandard: null,
 	},
 	secretsword: {
@@ -2021,10 +2034,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 	},
 	bonemerang: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	jumpkick: {
 		inherit: true,
 		isNonstandard: null,
 	},
