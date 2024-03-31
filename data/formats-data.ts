@@ -2405,12 +2405,12 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	latios: {
 		tier: "UU",
 		doublesTier: "(DUU)",
-		natDexTier: "UU",
+		natDexTier: "UUBL",
 	},
 	latiosmega: {
 		isNonstandard: "Past",
 		tier: "Illegal",
-		natDexTier: "UU",
+		natDexTier: "UUBL",
 	},
 	kyogre: {
 		tier: "Uber",
@@ -2689,7 +2689,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "SU",
 	},
 	garchomp: {
-		tier: "UU",
+		tier: "UUBL",
 		doublesTier: "DUU",
 		natDexTier: "OU",
 	},
@@ -3633,7 +3633,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	thundurustherian: {
 		tier: "RU",
 		doublesTier: "(DUU)",
-		natDexTier: "UU",
+		natDexTier: "UUBL",
 	},
 	reshiram: {
 		tier: "Uber",
@@ -4073,7 +4073,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		natDexTier: "RU",
 	},
 	hoopaunbound: {
-		tier: "RU",
+		tier: "RUBL",
 		doublesTier: "(DUU)",
 		natDexTier: "OU",
 	},
