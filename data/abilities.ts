@@ -6023,6 +6023,12 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				}
 			}
 		},
+		onBasePower(basePower, attacker, defender, move) {
+			if (move.sourceEffect === "ballin'") {
+				this.debug('Ballin Debuff');
+				return this.chainModify([2048, 4096]);
+			}
+		},
 		name: "Ballin'",
 		isNonstandard: "CAP",
 		rating: 4,

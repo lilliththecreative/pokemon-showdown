@@ -1044,7 +1044,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "NFE",
 	},
 	dustox: {
-		tier: "SU",
+		tier: "SUBL",
 		doublesTier: "DUU",
 	},
 	lotad: {

@@ -355,10 +355,6 @@ export class BattleActions {
 					dancers.push(currentPoke);
 				}
 			}
-			// Dancer activates in order of lowest speed stat to highest
-			// Note that the speed stat used is after any volatile replacements like Speed Swap,
-			// but before any multipliers like Agility or Choice Scarf
-			// Ties go to whichever Pokemon has had the ability for the least amount of time
 			dancers.sort(
 				(a, b) => -(b.storedStats['spe'] - a.storedStats['spe']) || b.abilityOrder - a.abilityOrder
 			);
@@ -379,15 +375,10 @@ export class BattleActions {
 			const dancers = [];
 			for (const currentPoke of this.battle.getAllActive()) {
 				if (pokemon === currentPoke) continue;
-				if (pokemon.isAlly(currentPoke)) continue;
 				if (currentPoke.hasAbility('ballin') && !currentPoke.isSemiInvulnerable()) {
 					dancers.push(currentPoke);
 				}
 			}
-			// Dancer activates in order of lowest speed stat to highest
-			// Note that the speed stat used is after any volatile replacements like Speed Swap,
-			// but before any multipliers like Agility or Choice Scarf
-			// Ties go to whichever Pokemon has had the ability for the least amount of time
 			dancers.sort(
 				(a, b) => -(b.storedStats['spe'] - a.storedStats['spe']) || b.abilityOrder - a.abilityOrder
 			);
@@ -401,6 +392,52 @@ export class BattleActions {
 					pokemon;
 				const dancersTargetLoc = dancer.getLocOf(dancersTarget);
 				this.runMove(move.id, dancer, dancersTargetLoc, this.dex.abilities.get('ballin'), undefined, true);
+			}
+		}
+		if (pokemon.hasAbility("plus") && moveDidSomething && !move.isExternal) {
+			const dancers = [];
+			for (const currentPoke of this.battle.getAllActive()) {
+				// if (!pokemon.isAlly(currentPoke)) continue;
+				if (currentPoke.hasAbility('minus') && !currentPoke.isSemiInvulnerable()) {
+					dancers.push(currentPoke);
+				}
+			}
+			dancers.sort(
+				(a, b) => -(b.storedStats['spe'] - a.storedStats['spe']) || b.abilityOrder - a.abilityOrder
+			);
+			const targetOf1stDance = this.battle.activeTarget!;
+			for (const dancer of dancers) {
+				if (this.battle.faintMessages()) break;
+				if (dancer.fainted) continue;
+				this.battle.add('-activate', dancer, "ability: Minus");
+				const dancersTarget = !targetOf1stDance.isAlly(dancer) && pokemon.isAlly(dancer) ?
+					targetOf1stDance :
+					pokemon;
+				const dancersTargetLoc = dancer.getLocOf(dancersTarget);
+				this.runMove(move.id, dancer, dancersTargetLoc, this.dex.abilities.get('minus'), undefined, true);
+			}
+		}
+		if (pokemon.hasAbility("minus") && moveDidSomething && !move.isExternal) {
+			const dancers = [];
+			for (const currentPoke of this.battle.getAllActive()) {
+				// if (!pokemon.isAlly(currentPoke)) continue;
+				if (currentPoke.hasAbility('plus') && !currentPoke.isSemiInvulnerable()) {
+					dancers.push(currentPoke);
+				}
+			}
+			dancers.sort(
+				(a, b) => -(b.storedStats['spe'] - a.storedStats['spe']) || b.abilityOrder - a.abilityOrder
+			);
+			const targetOf1stDance = this.battle.activeTarget!;
+			for (const dancer of dancers) {
+				if (this.battle.faintMessages()) break;
+				if (dancer.fainted) continue;
+				this.battle.add('-activate', dancer, "ability: Plus");
+				const dancersTarget = !targetOf1stDance.isAlly(dancer) && pokemon.isAlly(dancer) ?
+					targetOf1stDance :
+					pokemon;
+				const dancersTargetLoc = dancer.getLocOf(dancersTarget);
+				this.runMove(move.id, dancer, dancersTargetLoc, this.dex.abilities.get('plus'), undefined, true);
 			}
 		}
 		if (noLock && pokemon.volatiles['lockedmove']) delete pokemon.volatiles['lockedmove'];

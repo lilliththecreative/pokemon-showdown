@@ -755,6 +755,17 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			},
 		},
 	},
+	upperhand: {
+		inherit: true,
+		shortDesc: "100% flinch. Fails unless target using priority (includes status).",
+		onTry(source, target) {
+			const action = this.queue.willMove(target);
+			const move = action?.choice === 'move' ? action.move : null;
+			if (!move || move.priority <= 0.1) {
+				return false;
+			}
+		},
+	},
 	// Some signature Moves
 	electroshot: {
 		inherit: true,
@@ -1426,6 +1437,21 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		flags: {protect: 1, mirror: 1},
 		basePower: 80,
 		shortDesc: "Poisons both foes after successful use.",
+	},
+	gmaxterror: {
+		inherit: true,
+		isNonstandard: null,
+		isMax: false,
+		flags: {protect: 1, mirror: 1},
+		basePower: 80,
+		category: "Special",
+		secondary: {
+			chance: 100,
+			onHit(target, source, move) {
+				if (source.isActive) target.addVolatile('trapped', source, move, 'trapper');
+			},
+		},
+		shortDesc: "Prevents the target from switching out.",
 	},
 	gmaxsteelsurge: {
 		inherit: true,

@@ -386,6 +386,20 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		},
 	},
 	// Signature Ability Buffs
+	plus: {
+		inherit: true,
+		shortDesc: "Copies all moves used by pokemon with Minus",
+		// Done in battle-actions.ts
+		onModifySpA(spa, pokemon) {
+		}
+	},
+	minus: {
+		inherit: true,
+		shortDesc: "Copies all moves used by pokemon with Plus",
+		// Done in battle-actions.ts
+		onModifySpA(spa, pokemon) {
+		}
+	},
 	toxicchain: {
 		inherit: true,
 		shortDesc: "This Pokemon's moves have a 40% chance of badly poisoning.",
