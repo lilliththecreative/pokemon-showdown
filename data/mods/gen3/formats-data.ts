@@ -48,7 +48,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "LC",
 	},
 	pidgeotto: {
-		tier: "SU",
+		tier: "IUBL",
 	},
 	pidgeot: {
 		tier: "NU",
@@ -90,7 +90,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "LC",
 	},
 	nidorina: {
-		tier: "SU",
+		tier: "IUBL",
 	},
 	nidoqueen: {
 		tier: "UU",
@@ -99,7 +99,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "LC",
 	},
 	nidorino: {
-		tier: "SU",
+		tier: "IUBL",
 	},
 	nidoking: {
 		tier: "UU",
@@ -153,7 +153,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "LC",
 	},
 	parasect: {
-		tier: "SU",
+		tier: "IUBL",
 	},
 	venonat: {
 		tier: "IU",
@@ -168,7 +168,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "OU",
 	},
 	meowth: {
-		tier: "SU",
+		tier: "IUBL",
 	},
 	persian: {
 		tier: "RU",
@@ -180,19 +180,19 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "UU",
 	},
 	mankey: {
-		tier: "SU",
+		tier: "IUBL",
 	},
 	primeape: {
 		tier: "RU",
 	},
 	growlithe: {
-		tier: "SU",
+		tier: "IUBL",
 	},
 	arcanine: {
 		tier: "UU",
 	},
 	poliwag: {
-		tier: "SU",
+		tier: "IUBL",
 	},
 	poliwhirl: {
 		tier: "ZUBL",
@@ -213,7 +213,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "UUBL",
 	},
 	machop: {
-		tier: "SU",
+		tier: "IUBL",
 	},
 	machoke: {
 		tier: "PUBL",
@@ -252,7 +252,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "RU",
 	},
 	slowpoke: {
-		tier: "SU",
+		tier: "IUBL",
 	},
 	slowbro: {
 		tier: "UUBL",
@@ -267,7 +267,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "OU",
 	},
 	farfetchd: {
-		tier: "SU",
+		tier: "IUBL",
 	},
 	doduo: {
 		tier: "ZU",
@@ -276,13 +276,13 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "UUBL",
 	},
 	seel: {
-		tier: "SU",
+		tier: "IUBL",
 	},
 	dewgong: {
 		tier: "NU",
 	},
 	grimer: {
-		tier: "SU",
+		tier: "IUBL",
 	},
 	muk: {
 		tier: "UU",
@@ -303,7 +303,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "OU",
 	},
 	onix: {
-		tier: "SU",
+		tier: "IUBL",
 	},
 	steelix: {
 		tier: "UUBL",
@@ -321,19 +321,19 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "PU",
 	},
 	voltorb: {
-		tier: "SU",
+		tier: "IUBL",
 	},
 	electrode: {
 		tier: "UU",
 	},
 	exeggcute: {
-		tier: "SU",
+		tier: "IUBL",
 	},
 	exeggutor: {
 		tier: "UUBL",
 	},
 	cubone: {
-		tier: "SU",
+		tier: "IUBL",
 	},
 	marowak: {
 		tier: "UUBL",
@@ -360,7 +360,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "UUBL",
 	},
 	rhyhorn: {
-		tier: "SU",
+		tier: "IUBL",
 	},
 	rhydon: {
 		tier: "UUBL",
@@ -378,7 +378,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "UU",
 	},
 	horsea: {
-		tier: "SU",
+		tier: "IUBL",
 	},
 	seadra: {
 		tier: "PU",
@@ -408,13 +408,13 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "UUBL",
 	},
 	smoochum: {
-		tier: "SU",
+		tier: "IUBL",
 	},
 	jynx: {
 		tier: "UUBL",
 	},
 	elekid: {
-		tier: "SU",
+		tier: "IUBL",
 	},
 	electabuzz: {
 		tier: "UU",
@@ -513,13 +513,13 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "IU",
 	},
 	bayleef: {
-		tier: "SU",
+		tier: "IUBL",
 	},
 	meganium: {
 		tier: "RU",
 	},
 	cyndaquil: {
-		tier: "SU",
+		tier: "IUBL",
 	},
 	quilava: {
 		tier: "ZU",
@@ -531,7 +531,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "LC",
 	},
 	croconaw: {
-		tier: "SU",
+		tier: "IUBL",
 	},
 	feraligatr: {
 		tier: "UU",
@@ -573,13 +573,13 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "PU",
 	},
 	natu: {
-		tier: "SU",
+		tier: "IUBL",
 	},
 	xatu: {
 		tier: "UU",
 	},
 	mareep: {
-		tier: "SU",
+		tier: "IUBL",
 	},
 	flaaffy: {
 		tier: "ZU",
@@ -615,7 +615,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "11UBL",
 	},
 	sunflora: {
-		tier: "SU",
+		tier: "IUBL",
 	},
 	yanma: {
 		tier: "PU",
@@ -657,7 +657,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "UU",
 	},
 	snubbull: {
-		tier: "SU",
+		tier: "IUBL",
 	},
 	granbull: {
 		tier: "UU",
@@ -702,7 +702,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "NU",
 	},
 	delibird: {
-		tier: "SU",
+		tier: "IUBL",
 	},
 	mantine: {
 		tier: "RU",
@@ -741,7 +741,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "OU",
 	},
 	larvitar: {
-		tier: "SU",
+		tier: "IUBL",
 	},
 	pupitar: {
 		tier: "NU",
@@ -768,7 +768,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "UUBL",
 	},
 	torchic: {
-		tier: "SU",
+		tier: "IUBL",
 	},
 	combusken: {
 		tier: "PU",
@@ -810,13 +810,13 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "11U",
 	},
 	dustox: {
-		tier: "SU",
+		tier: "IUBL",
 	},
 	lotad: {
 		tier: "LC",
 	},
 	lombre: {
-		tier: "SU",
+		tier: "IUBL",
 	},
 	ludicolo: {
 		tier: "UUBL",
@@ -825,13 +825,13 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "LC",
 	},
 	nuzleaf: {
-		tier: "SU",
+		tier: "IUBL",
 	},
 	shiftry: {
 		tier: "RU",
 	},
 	taillow: {
-		tier: "SU",
+		tier: "IUBL",
 	},
 	swellow: {
 		tier: "UUBL",
@@ -855,7 +855,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "LC",
 	},
 	masquerain: {
-		tier: "SU",
+		tier: "IUBL",
 	},
 	shroomish: {
 		tier: "IU",
@@ -885,7 +885,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "LC",
 	},
 	loudred: {
-		tier: "SU",
+		tier: "IUBL",
 	},
 	exploud: {
 		tier: "RU",
@@ -897,7 +897,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "UUBL",
 	},
 	nosepass: {
-		tier: "SU",
+		tier: "IUBL",
 	},
 	skitty: {
 		tier: "LC",
@@ -912,7 +912,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "PU",
 	},
 	aron: {
-		tier: "SU",
+		tier: "IUBL",
 	},
 	lairon: {
 		tier: "ZUBL",
@@ -927,7 +927,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "UUBL",
 	},
 	electrike: {
-		tier: "SU",
+		tier: "IUBL",
 	},
 	manectric: {
 		tier: "UU",
@@ -942,13 +942,13 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "ZU",
 	},
 	illumise: {
-		tier: "SU",
+		tier: "IUBL",
 	},
 	roselia: {
 		tier: "NU",
 	},
 	gulpin: {
-		tier: "SU",
+		tier: "IUBL",
 	},
 	swalot: {
 		tier: "PU",
@@ -966,7 +966,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "NU",
 	},
 	numel: {
-		tier: "SU",
+		tier: "IUBL",
 	},
 	camerupt: {
 		tier: "RU",
@@ -1029,7 +1029,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "NU",
 	},
 	baltoy: {
-		tier: "SU",
+		tier: "IUBL",
 	},
 	claydol: {
 		tier: "OU",
@@ -1068,7 +1068,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "NU",
 	},
 	shuppet: {
-		tier: "SU",
+		tier: "IUBL",
 	},
 	banette: {
 		tier: "RU",
@@ -1089,7 +1089,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "RU",
 	},
 	snorunt: {
-		tier: "SU",
+		tier: "IUBL",
 	},
 	glalie: {
 		tier: "NU",
@@ -1116,10 +1116,10 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "NU",
 	},
 	luvdisc: {
-		tier: "SU",
+		tier: "IUBL",
 	},
 	bagon: {
-		tier: "SU",
+		tier: "IUBL",
 	},
 	shelgon: {
 		tier: "PU",
