@@ -3,7 +3,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "IU",
 	},
 	ivysaur: {
-		tier: "IUBL",
+		tier: "SU",
 	},
 	venusaur: {
 		tier: "NU",
@@ -12,7 +12,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "IU",
 	},
 	charmeleon: {
-		tier: "IUBL",
+		tier: "SU",
 	},
 	charizard: {
 		tier: "NU",
@@ -21,7 +21,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "8U",
 	},
 	wartortle: {
-		tier: "IUBL",
+		tier: "SU",
 	},
 	blastoise: {
 		tier: "NU",
@@ -78,7 +78,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "UU",
 	},
 	sandshrew: {
-		tier: "IUBL",
+		tier: "SU",
 	},
 	sandslash: {
 		tier: "ZU",
@@ -96,7 +96,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "9U",
 	},
 	nidorino: {
-		tier: "IUBL",
+		tier: "SU",
 	},
 	nidoking: {
 		tier: "NU",
@@ -123,7 +123,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "9U",
 	},
 	golbat: {
-		tier: "IUBL",
+		tier: "SU",
 	},
 	oddish: {
 		tier: "8U",
@@ -153,7 +153,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "UU",
 	},
 	meowth: {
-		tier: "IUBL",
+		tier: "SU",
 	},
 	persian: {
 		tier: "UU",
@@ -228,7 +228,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "UU",
 	},
 	ponyta: {
-		tier: "IUBL",
+		tier: "SU",
 	},
 	rapidash: {
 		tier: "PU",
@@ -315,22 +315,22 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "ZU",
 	},
 	hitmonlee: {
-		tier: "IUBL",
+		tier: "SU",
 	},
 	hitmonchan: {
 		tier: "IU",
 	},
 	lickitung: {
-		tier: "IUBL",
+		tier: "SU",
 	},
 	koffing: {
 		tier: "8U",
 	},
 	weezing: {
-		tier: "IUBL",
+		tier: "SU",
 	},
 	rhyhorn: {
-		tier: "IUBL",
+		tier: "SU",
 	},
 	rhydon: {
 		tier: "OU",
@@ -438,7 +438,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "NU",
 	},
 	dratini: {
-		tier: "IUBL",
+		tier: "SU",
 	},
 	dragonair: {
 		tier: "PU",
