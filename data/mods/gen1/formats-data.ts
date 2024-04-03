@@ -66,7 +66,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "PU",
 	},
 	ekans: {
-		tier: "9U",
+		tier: "9UBL",
 	},
 	arbok: {
 		tier: "ZUBL",
