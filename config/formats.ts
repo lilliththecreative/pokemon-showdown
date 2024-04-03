@@ -807,8 +807,7 @@ export const Formats: FormatList = [
 		mod: 'gen9',
 		ruleset: [
 			'Picked Team Size = 1', 'Max Team Size = 3',
-			'Standard', 'Sleep Moves Clause', 'Accuracy Moves Clause', '!Sleep Clause Mod',
-			// 'Terastal Clause',
+			'Standard', 'Terastal Clause', 'Sleep Moves Clause', 'Accuracy Moves Clause', '!Sleep Clause Mod',
 		],
 		banlist: [
 			'Arceus', 'Calyrex-Ice', 'Calyrex-Shadow', 'Chi-Yu', 'Cinderace', 'Deoxys', 'Deoxys-Attack', 'Deoxys-Defense', 'Deoxys-Speed', 'Dialga',
@@ -1302,7 +1301,7 @@ export const Formats: FormatList = [
 			'Enamorus-Base', 'Eternatus', 'Flutter Mane', 'Giratina', 'Giratina-Origin', 'Groudon', 'Hoopa-Unbound', 'Ho-Oh', 'Iron Bundle', 'Iron Valiant',
 			'Koraidon', 'Kyogre', 'Kyurem-Black', 'Kyurem-White', 'Lugia', 'Lunala', 'Magearna', 'Mewtwo', 'Miraidon', 'Necrozma-Dawn-Wings', 'Necrozma-Dusk-Mane',
 			'Palkia', 'Palkia-Origin', 'Pecharunt', 'Rayquaza', 'Regieleki', 'Regigigas', 'Reshiram', 'Sableye', 'Samurott-Hisui', 'Scream Tail', 'Shaymin-Sky',
-			'Slaking', 'Smeargle', 'Solgaleo', 'Spectrier', 'Urshifu-Base', 'Weavile', 'Zacian', 'Zacian-Crowned', 'Zamazenta', 'Zamazenta-Crowned', 'Zekrom',
+			'Slaking', 'Smeargle', 'Solgaleo', 'Spectrier', 'Urshifu-Base', 'Ursaluna', 'Weavile', 'Zacian', 'Zacian-Crowned', 'Zamazenta', 'Zamazenta-Crowned', 'Zekrom',
 			'Arena Trap', 'Drizzle', 'Drought', 'Huge Power', 'Imposter', 'Magnet Pull', 'Moody', 'Poison Heal', 'Pure Power', 'Shadow Tag', 'Speed Boost',
 			'Stakeout', 'Water Bubble', 'King\'s Rock', 'Razor Fang', 'Baton Pass', 'Fillet Away', 'Last Respects', 'Rage Fist', 'Shed Tail', 'Shell Smash',
 		],
@@ -2753,7 +2752,7 @@ export const Formats: FormatList = [
 		mod: 'gen9',
 		ruleset: ['Standard NatDex', 'Same Type Clause', 'Terastal Clause', 'Species Clause', 'OHKO Clause', 'Evasion Clause', 'Sleep Clause Mod'],
 		banlist: [
-			'Annihilape', 'Arceus', 'Baxcalibur', 'Blastoise-Mega', 'Blaziken', 'Blaziken-Mega', 'Calyrex-Ice', 'Calyrex-Shadow', 'Chi-Yu', 'Staravia',
+			'Annihilape', 'Arceus', 'Baxcalibur', 'Blastoise-Mega', 'Blaziken', 'Blaziken-Mega', 'Calyrex-Ice', 'Calyrex-Shadow', 'Chi-Yu', 'Chien-Pao',
 			'Darkrai', 'Deoxys-Base', 'Deoxys-Attack', 'Dialga', 'Dracovish', 'Dragapult', 'Espathra', 'Eternatus', 'Flutter Mane', 'Genesect', 'Gengar-Mega',
 			'Giratina', 'Giratina-Origin', 'Gouging Fire', 'Groudon', 'Ho-Oh', 'Hoopa-Unbound', 'Iron Bundle', 'Kangaskhan-Mega', 'Kartana', 'Kingambit',
 			'Koraidon', 'Kyogre', 'Kyurem-Black', 'Kyurem-White', 'Lucario-Mega', 'Lugia', 'Lunala', 'Magearna', 'Marshadow', 'Mawile-Mega', 'Medicham-Mega',

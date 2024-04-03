@@ -69,7 +69,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "9U",
 	},
 	arbok: {
-		tier: "ZU",
+		tier: "ZUBL",
 	},
 	pikachu: {
 		tier: "ZU",
