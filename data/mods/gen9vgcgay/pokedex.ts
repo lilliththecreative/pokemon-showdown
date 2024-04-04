@@ -4609,7 +4609,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"abilities": {
 			"0": "Magnet Pull",
-			"1": "Sturdy",
+			"1": "Triple Threat",
 			"H": "Analytic"
 		},
 		"inherit": true
@@ -5372,10 +5372,10 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"def": 63,
 			"spa": 80,
 			"spd": 63,
-			"spe": 121
+			"spe": 126
 		},
 		"abilities": {
-			"0": "Galvanize",
+			"0": "Reckless",
 			"1": "Motor Drive",
 			"H": "Sap Sipper"
 		},
@@ -5826,23 +5826,6 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"0": "Putrid Stench",
 			"1": "Poison Touch",
 			"H": "Aftermath"
-		},
-		"inherit": true
-	},
-	"zoroark": {
-		"types": [
-			"Dark"
-		],
-		"baseStats": {
-			"hp": 60,
-			"atk": 105,
-			"def": 60,
-			"spa": 125,
-			"spd": 60,
-			"spe": 110
-		},
-		"abilities": {
-			"0": "Illusion"
 		},
 		"inherit": true
 	},
@@ -6334,7 +6317,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		],
 		"baseStats": {
 			"hp": 94,
-			"atk": 124,
+			"atk": 129,
 			"def": 80,
 			"spa": 55,
 			"spd": 80,
@@ -7550,14 +7533,14 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		],
 		"baseStats": {
 			"hp": 102,
-			"atk": 137,
+			"atk": 142,
 			"def": 77,
 			"spa": 62,
-			"spd": 67,
+			"spd": 62,
 			"spe": 43
 		},
 		"abilities": {
-			"0": "Fluffy",
+			"0": "Fur Coat",
 			"1": "Iron Fist",
 			"H": "Anger Point"
 		},
@@ -9153,7 +9136,6 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"abilities": {
 			"0": "Punk Rock",
-			"1": "Plus",
 			"H": "Technician"
 		},
 		"inherit": true
@@ -10311,11 +10293,11 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		],
 		"baseStats": {
 			"hp": 90,
-			"atk": 75,
+			"atk": 70,
 			"def": 70,
-			"spa": 90,
+			"spa": 105,
 			"spd": 125,
-			"spe": 105
+			"spe": 100
 		},
 		"abilities": {
 			"0": "Mycelium Might"
@@ -11174,7 +11156,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"abilities": {
 			"0": "Protosynthesis",
-			"H": "Inner Focus"
+			"H": "Pressure"
 		},
 		"inherit": true
 	},
@@ -11488,7 +11470,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"abilities": {
 			"0": "Protosynthesis",
-			"H": "Inner Focus"
+			"H": "Pressure"
 		},
 		"inherit": true
 	},
@@ -11507,7 +11489,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		"abilities": {
 			"0": "Protosynthesis",
-			"H": "Inner Focus"
+			"H": "Pressure"
 		},
 		"inherit": true
 	},

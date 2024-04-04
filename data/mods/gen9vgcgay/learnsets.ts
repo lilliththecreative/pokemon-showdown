@@ -11990,6 +11990,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"flashfreeze": [
 				"9M"
+			],
+			"gmaxterror": [
+				"9M"
 			]
 		}
 	},
@@ -51600,6 +51603,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"woodhammer": [
 				"9M"
+			],
+			"weatherball": [
+				"9M"
 			]
 		}
 	},
@@ -52263,6 +52269,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"sacredsword": [
+				"9M"
+			],
+			"powertrip": [
 				"9M"
 			]
 		}
@@ -60577,6 +60586,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"lifedew": [
+				"9M"
+			],
+			"gastroacid": [
 				"9M"
 			]
 		}
@@ -77250,6 +77262,12 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"terablast": [
 				"9M"
+			],
+			"meditate": [
+				"9M"
+			],
+			"upperhand": [
+				"9M"
 			]
 		}
 	},
@@ -77467,6 +77485,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"matblock": [
+				"9M"
+			],
+			"upperhand": [
 				"9M"
 			]
 		}
@@ -80834,296 +80855,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"gmaxmalodor": [
-				"9M"
-			]
-		}
-	},
-	"zoroark": {
-		"inherit": true,
-		"learnset": {
-			"aerialace": [
-				"9M"
-			],
-			"agility": [
-				"9M"
-			],
-			"assurance": [
-				"9M"
-			],
-			"attract": [
-				"9M"
-			],
-			"bodyslam": [
-				"9M"
-			],
-			"bounce": [
-				"9M"
-			],
-			"brickbreak": [
-				"9M"
-			],
-			"burningjealousy": [
-				"9M"
-			],
-			"calmmind": [
-				"9M"
-			],
-			"confide": [
-				"9M"
-			],
-			"confuseray": [
-				"9M"
-			],
-			"covet": [
-				"9M"
-			],
-			"crunch": [
-				"9M"
-			],
-			"cut": [
-				"9M"
-			],
-			"darkpulse": [
-				"9M"
-			],
-			"dig": [
-				"9M"
-			],
-			"doubleteam": [
-				"9M"
-			],
-			"embargo": [
-				"9M"
-			],
-			"encore": [
-				"9M"
-			],
-			"endure": [
-				"9M"
-			],
-			"facade": [
-				"9M"
-			],
-			"faketears": [
-				"9M"
-			],
-			"feintattack": [
-				"9M"
-			],
-			"flamethrower": [
-				"9M"
-			],
-			"fling": [
-				"9M"
-			],
-			"focusblast": [
-				"9M"
-			],
-			"foulplay": [
-				"9M"
-			],
-			"frustration": [
-				"9M"
-			],
-			"furyswipes": [
-				"9M"
-			],
-			"gigaimpact": [
-				"9M"
-			],
-			"grassknot": [
-				"9M"
-			],
-			"helpinghand": [
-				"9M"
-			],
-			"hex": [
-				"9M"
-			],
-			"hiddenpower": [
-				"9M"
-			],
-			"honeclaws": [
-				"9M"
-			],
-			"hyperbeam": [
-				"9M"
-			],
-			"hypervoice": [
-				"9M"
-			],
-			"imprison": [
-				"9M"
-			],
-			"incinerate": [
-				"9M"
-			],
-			"knockoff": [
-				"9M"
-			],
-			"laserfocus": [
-				"9M"
-			],
-			"lashout": [
-				"9M"
-			],
-			"leer": [
-				"9M"
-			],
-			"lowkick": [
-				"9M"
-			],
-			"lowsweep": [
-				"9M"
-			],
-			"megakick": [
-				"9M"
-			],
-			"megapunch": [
-				"9M"
-			],
-			"nastyplot": [
-				"9M"
-			],
-			"nightdaze": [
-				"9M"
-			],
-			"nightshade": [
-				"9M"
-			],
-			"nightslash": [
-				"9M"
-			],
-			"painsplit": [
-				"9M"
-			],
-			"payback": [
-				"9M"
-			],
-			"protect": [
-				"9M"
-			],
-			"psychic": [
-				"9M"
-			],
-			"psychup": [
-				"9M"
-			],
-			"punishment": [
-				"9M"
-			],
-			"pursuit": [
-				"9M"
-			],
-			"raindance": [
-				"9M"
-			],
-			"rest": [
-				"9M"
-			],
-			"retaliate": [
-				"9M"
-			],
-			"return": [
-				"9M"
-			],
-			"revenge": [
-				"9M"
-			],
-			"roar": [
-				"9M"
-			],
-			"rocksmash": [
-				"9M"
-			],
-			"round": [
-				"9M"
-			],
-			"scaryface": [
-				"9M"
-			],
-			"scratch": [
-				"9M"
-			],
-			"secretpower": [
-				"9M"
-			],
-			"shadowball": [
-				"9M"
-			],
-			"shadowclaw": [
-				"9M"
-			],
-			"skittersmack": [
-				"9M"
-			],
-			"sleeptalk": [
-				"9M"
-			],
-			"sludgebomb": [
-				"9M"
-			],
-			"snarl": [
-				"9M"
-			],
-			"snatch": [
-				"9M"
-			],
-			"snore": [
-				"9M"
-			],
-			"spite": [
-				"9M"
-			],
-			"substitute": [
-				"9M"
-			],
-			"suckerpunch": [
-				"9M"
-			],
-			"sunnyday": [
-				"9M"
-			],
-			"swagger": [
-				"9M"
-			],
-			"swift": [
-				"9M"
-			],
-			"swordsdance": [
-				"9M"
-			],
-			"takedown": [
-				"9M"
-			],
-			"taunt": [
-				"9M"
-			],
-			"terablast": [
-				"9M"
-			],
-			"thief": [
-				"9M"
-			],
-			"throatchop": [
-				"9M"
-			],
-			"torment": [
-				"9M"
-			],
-			"toxic": [
-				"9M"
-			],
-			"trick": [
-				"9M"
-			],
-			"uproar": [
-				"9M"
-			],
-			"uturn": [
-				"9M"
-			],
-			"aurasphere": [
 				"9M"
 			]
 		}
@@ -85349,6 +85080,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"willowisp": [
 				"9M"
+			],
+			"gmaxterror": [
+				"9M"
 			]
 		}
 	},
@@ -86352,6 +86086,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"quash": [
+				"9M"
+			],
+			"beatup": [
 				"9M"
 			]
 		}
@@ -92378,6 +92115,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"eggbomb": [
 				"9M"
+			],
+			"furyattack": [
+				"9M"
 			]
 		}
 	},
@@ -92811,6 +92551,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"afteryou": [
 				"9M"
 			],
+			"alluringvoice": [
+				"9M"
+			],
 			"allyswitch": [
 				"9M"
 			],
@@ -92820,7 +92563,16 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"attract": [
 				"9M"
 			],
+			"batonpass": [
+				"9M"
+			],
 			"calmmind": [
+				"9M"
+			],
+			"charm": [
+				"9M"
+			],
+			"chillingwater": [
 				"9M"
 			],
 			"confide": [
@@ -92832,13 +92584,22 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"dazzlinggleam": [
 				"9M"
 			],
+			"disarmingvoice": [
+				"9M"
+			],
 			"doubleteam": [
+				"9M"
+			],
+			"drainingkiss": [
 				"9M"
 			],
 			"echoedvoice": [
 				"9M"
 			],
 			"endeavor": [
+				"9M"
+			],
+			"endure": [
 				"9M"
 			],
 			"energyball": [
@@ -92874,7 +92635,7 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"hiddenpower": [
 				"9M"
 			],
-			"lightofruin": [
+			"lightscreen": [
 				"9M"
 			],
 			"luckychant": [
@@ -92884,6 +92645,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"magiccoat": [
+				"9M"
+			],
+			"metronome": [
 				"9M"
 			],
 			"mistyterrain": [
@@ -92899,6 +92663,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"petaldance": [
+				"9M"
+			],
+			"pollenpuff": [
 				"9M"
 			],
 			"protect": [
@@ -92931,6 +92698,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"seedbomb": [
 				"9M"
 			],
+			"skillswap": [
+				"9M"
+			],
 			"sleeptalk": [
 				"9M"
 			],
@@ -92938,6 +92708,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"solarbeam": [
+				"9M"
+			],
+			"storedpower": [
 				"9M"
 			],
 			"substitute": [
@@ -92949,13 +92722,25 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"swagger": [
 				"9M"
 			],
+			"swift": [
+				"9M"
+			],
 			"synthesis": [
 				"9M"
 			],
 			"tackle": [
 				"9M"
 			],
+			"terablast": [
+				"9M"
+			],
 			"toxic": [
+				"9M"
+			],
+			"trailblaze": [
+				"9M"
+			],
+			"trick": [
 				"9M"
 			],
 			"vinewhip": [
@@ -92965,9 +92750,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"worryseed": [
-				"9M"
-			],
-			"terablast": [
 				"9M"
 			]
 		}
@@ -102036,6 +101818,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"stalacbite": [
+				"9M"
+			],
+			"accelerock": [
 				"9M"
 			]
 		}
@@ -127768,6 +127553,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"return": [
 				"9M"
+			],
+			"focusblast": [
+				"9M"
 			]
 		}
 	},
@@ -130681,9 +130469,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"bulldoze": [
-				"9M"
-			],
-			"charge": [
 				"9M"
 			],
 			"closecombat": [
@@ -134932,9 +134717,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"calmmind": [
 				"9M"
 			],
-			"charge": [
-				"9M"
-			],
 			"chargebeam": [
 				"9M"
 			],
@@ -138641,6 +138423,1097 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"workup": [
+				"9M"
+			]
+		}
+	},
+	"magby": {
+		"inherit": true,
+		"learnset": {
+			"acidspray": [
+				"9M"
+			],
+			"attract": [
+				"9M"
+			],
+			"barrier": [
+				"9M"
+			],
+			"belch": [
+				"9M"
+			],
+			"bellydrum": [
+				"9M"
+			],
+			"bodyslam": [
+				"9M"
+			],
+			"brickbreak": [
+				"9M"
+			],
+			"burningjealousy": [
+				"9M"
+			],
+			"captivate": [
+				"9M"
+			],
+			"clearsmog": [
+				"9M"
+			],
+			"confide": [
+				"9M"
+			],
+			"confuseray": [
+				"9M"
+			],
+			"counter": [
+				"9M"
+			],
+			"covet": [
+				"9M"
+			],
+			"crosschop": [
+				"9M"
+			],
+			"curse": [
+				"9M"
+			],
+			"detect": [
+				"9M"
+			],
+			"doubleedge": [
+				"9M"
+			],
+			"doubleteam": [
+				"9M"
+			],
+			"dualchop": [
+				"9M"
+			],
+			"dynamicpunch": [
+				"9M"
+			],
+			"ember": [
+				"9M"
+			],
+			"endure": [
+				"9M"
+			],
+			"facade": [
+				"9M"
+			],
+			"feintattack": [
+				"9M"
+			],
+			"fireblast": [
+				"9M"
+			],
+			"firepunch": [
+				"9M"
+			],
+			"firespin": [
+				"9M"
+			],
+			"flameburst": [
+				"9M"
+			],
+			"flamecharge": [
+				"9M"
+			],
+			"flamethrower": [
+				"9M"
+			],
+			"flamewheel": [
+				"9M"
+			],
+			"flareblitz": [
+				"9M"
+			],
+			"fling": [
+				"9M"
+			],
+			"focusenergy": [
+				"9M"
+			],
+			"focuspunch": [
+				"9M"
+			],
+			"frustration": [
+				"9M"
+			],
+			"headbutt": [
+				"9M"
+			],
+			"heatwave": [
+				"9M"
+			],
+			"helpinghand": [
+				"9M"
+			],
+			"hiddenpower": [
+				"9M"
+			],
+			"incinerate": [
+				"9M"
+			],
+			"irontail": [
+				"9M"
+			],
+			"karatechop": [
+				"9M"
+			],
+			"lavaplume": [
+				"9M"
+			],
+			"leer": [
+				"9M"
+			],
+			"lowkick": [
+				"9M"
+			],
+			"machpunch": [
+				"9M"
+			],
+			"megakick": [
+				"9M"
+			],
+			"megapunch": [
+				"9M"
+			],
+			"mimic": [
+				"9M"
+			],
+			"mudslap": [
+				"9M"
+			],
+			"naturalgift": [
+				"9M"
+			],
+			"overheat": [
+				"9M"
+			],
+			"poisonjab": [
+				"9M"
+			],
+			"powerswap": [
+				"9M"
+			],
+			"poweruppunch": [
+				"9M"
+			],
+			"protect": [
+				"9M"
+			],
+			"psychic": [
+				"9M"
+			],
+			"rest": [
+				"9M"
+			],
+			"return": [
+				"9M"
+			],
+			"rocksmash": [
+				"9M"
+			],
+			"round": [
+				"9M"
+			],
+			"scaryface": [
+				"9M"
+			],
+			"screech": [
+				"9M"
+			],
+			"secretpower": [
+				"9M"
+			],
+			"seismictoss": [
+				"9M"
+			],
+			"sleeptalk": [
+				"9M"
+			],
+			"smog": [
+				"9M"
+			],
+			"smokescreen": [
+				"9M"
+			],
+			"snore": [
+				"9M"
+			],
+			"substitute": [
+				"9M"
+			],
+			"sunnyday": [
+				"9M"
+			],
+			"swagger": [
+				"9M"
+			],
+			"takedown": [
+				"9M"
+			],
+			"temperflare": [
+				"9M"
+			],
+			"terablast": [
+				"9M"
+			],
+			"thief": [
+				"9M"
+			],
+			"thunderpunch": [
+				"9M"
+			],
+			"toxic": [
+				"9M"
+			],
+			"uproar": [
+				"9M"
+			],
+			"willowisp": [
+				"9M"
+			]
+		}
+	},
+	"magmar": {
+		"inherit": true,
+		"learnset": {
+			"acidspray": [
+				"9M"
+			],
+			"attract": [
+				"9M"
+			],
+			"bide": [
+				"9M"
+			],
+			"bodyslam": [
+				"9M"
+			],
+			"brickbreak": [
+				"9M"
+			],
+			"burningjealousy": [
+				"9M"
+			],
+			"captivate": [
+				"9M"
+			],
+			"clearsmog": [
+				"9M"
+			],
+			"confide": [
+				"9M"
+			],
+			"confuseray": [
+				"9M"
+			],
+			"counter": [
+				"9M"
+			],
+			"covet": [
+				"9M"
+			],
+			"crosschop": [
+				"9M"
+			],
+			"curse": [
+				"9M"
+			],
+			"detect": [
+				"9M"
+			],
+			"doubleedge": [
+				"9M"
+			],
+			"doubleteam": [
+				"9M"
+			],
+			"dualchop": [
+				"9M"
+			],
+			"dynamicpunch": [
+				"9M"
+			],
+			"ember": [
+				"9M"
+			],
+			"endure": [
+				"9M"
+			],
+			"facade": [
+				"9M"
+			],
+			"feintattack": [
+				"9M"
+			],
+			"fireblast": [
+				"9M"
+			],
+			"firepunch": [
+				"9M"
+			],
+			"firespin": [
+				"9M"
+			],
+			"flameburst": [
+				"9M"
+			],
+			"flamecharge": [
+				"9M"
+			],
+			"flamethrower": [
+				"9M"
+			],
+			"flamewheel": [
+				"9M"
+			],
+			"flareblitz": [
+				"9M"
+			],
+			"fling": [
+				"9M"
+			],
+			"focusblast": [
+				"9M"
+			],
+			"focusenergy": [
+				"9M"
+			],
+			"focuspunch": [
+				"9M"
+			],
+			"frustration": [
+				"9M"
+			],
+			"gigaimpact": [
+				"9M"
+			],
+			"headbutt": [
+				"9M"
+			],
+			"heatcrash": [
+				"9M"
+			],
+			"heatwave": [
+				"9M"
+			],
+			"helpinghand": [
+				"9M"
+			],
+			"hiddenpower": [
+				"9M"
+			],
+			"hyperbeam": [
+				"9M"
+			],
+			"incinerate": [
+				"9M"
+			],
+			"irontail": [
+				"9M"
+			],
+			"knockoff": [
+				"9M"
+			],
+			"lavaplume": [
+				"9M"
+			],
+			"leer": [
+				"9M"
+			],
+			"lowkick": [
+				"9M"
+			],
+			"lowsweep": [
+				"9M"
+			],
+			"megakick": [
+				"9M"
+			],
+			"megapunch": [
+				"9M"
+			],
+			"metronome": [
+				"9M"
+			],
+			"mimic": [
+				"9M"
+			],
+			"mudslap": [
+				"9M"
+			],
+			"naturalgift": [
+				"9M"
+			],
+			"overheat": [
+				"9M"
+			],
+			"poisonjab": [
+				"9M"
+			],
+			"powerswap": [
+				"9M"
+			],
+			"poweruppunch": [
+				"9M"
+			],
+			"protect": [
+				"9M"
+			],
+			"psychic": [
+				"9M"
+			],
+			"psywave": [
+				"9M"
+			],
+			"rage": [
+				"9M"
+			],
+			"rest": [
+				"9M"
+			],
+			"return": [
+				"9M"
+			],
+			"roar": [
+				"9M"
+			],
+			"rockclimb": [
+				"9M"
+			],
+			"rocksmash": [
+				"9M"
+			],
+			"round": [
+				"9M"
+			],
+			"scaryface": [
+				"9M"
+			],
+			"scorchingsands": [
+				"9M"
+			],
+			"screech": [
+				"9M"
+			],
+			"secretpower": [
+				"9M"
+			],
+			"seismictoss": [
+				"9M"
+			],
+			"skullbash": [
+				"9M"
+			],
+			"sleeptalk": [
+				"9M"
+			],
+			"smog": [
+				"9M"
+			],
+			"smokescreen": [
+				"9M"
+			],
+			"snore": [
+				"9M"
+			],
+			"strength": [
+				"9M"
+			],
+			"submission": [
+				"9M"
+			],
+			"substitute": [
+				"9M"
+			],
+			"sunnyday": [
+				"9M"
+			],
+			"swagger": [
+				"9M"
+			],
+			"takedown": [
+				"9M"
+			],
+			"taunt": [
+				"9M"
+			],
+			"teleport": [
+				"9M"
+			],
+			"temperflare": [
+				"9M"
+			],
+			"terablast": [
+				"9M"
+			],
+			"thief": [
+				"9M"
+			],
+			"thunderpunch": [
+				"9M"
+			],
+			"toxic": [
+				"9M"
+			],
+			"uproar": [
+				"9M"
+			],
+			"willowisp": [
+				"9M"
+			]
+		}
+	},
+	"elekid": {
+		"inherit": true,
+		"learnset": {
+			"attract": [
+				"9M"
+			],
+			"barrier": [
+				"9M"
+			],
+			"bodyslam": [
+				"9M"
+			],
+			"brickbreak": [
+				"9M"
+			],
+			"captivate": [
+				"9M"
+			],
+			"charge": [
+				"9M"
+			],
+			"chargebeam": [
+				"9M"
+			],
+			"confide": [
+				"9M"
+			],
+			"counter": [
+				"9M"
+			],
+			"covet": [
+				"9M"
+			],
+			"crosschop": [
+				"9M"
+			],
+			"curse": [
+				"9M"
+			],
+			"detect": [
+				"9M"
+			],
+			"discharge": [
+				"9M"
+			],
+			"doubleedge": [
+				"9M"
+			],
+			"doubleteam": [
+				"9M"
+			],
+			"dualchop": [
+				"9M"
+			],
+			"dynamicpunch": [
+				"9M"
+			],
+			"eerieimpulse": [
+				"9M"
+			],
+			"electricterrain": [
+				"9M"
+			],
+			"electroball": [
+				"9M"
+			],
+			"electroweb": [
+				"9M"
+			],
+			"endure": [
+				"9M"
+			],
+			"facade": [
+				"9M"
+			],
+			"feint": [
+				"9M"
+			],
+			"firepunch": [
+				"9M"
+			],
+			"flash": [
+				"9M"
+			],
+			"fling": [
+				"9M"
+			],
+			"focusblast": [
+				"9M"
+			],
+			"focuspunch": [
+				"9M"
+			],
+			"frustration": [
+				"9M"
+			],
+			"hammerarm": [
+				"9M"
+			],
+			"headbutt": [
+				"9M"
+			],
+			"helpinghand": [
+				"9M"
+			],
+			"hiddenpower": [
+				"9M"
+			],
+			"icepunch": [
+				"9M"
+			],
+			"karatechop": [
+				"9M"
+			],
+			"knockoff": [
+				"9M"
+			],
+			"leer": [
+				"9M"
+			],
+			"lightscreen": [
+				"9M"
+			],
+			"lowkick": [
+				"9M"
+			],
+			"magnetrise": [
+				"9M"
+			],
+			"meditate": [
+				"9M"
+			],
+			"megakick": [
+				"9M"
+			],
+			"megapunch": [
+				"9M"
+			],
+			"metalsound": [
+				"9M"
+			],
+			"mimic": [
+				"9M"
+			],
+			"mudslap": [
+				"9M"
+			],
+			"naturalgift": [
+				"9M"
+			],
+			"poweruppunch": [
+				"9M"
+			],
+			"protect": [
+				"9M"
+			],
+			"psychic": [
+				"9M"
+			],
+			"quickattack": [
+				"9M"
+			],
+			"raindance": [
+				"9M"
+			],
+			"rest": [
+				"9M"
+			],
+			"return": [
+				"9M"
+			],
+			"rocksmash": [
+				"9M"
+			],
+			"rollingkick": [
+				"9M"
+			],
+			"round": [
+				"9M"
+			],
+			"screech": [
+				"9M"
+			],
+			"secretpower": [
+				"9M"
+			],
+			"seismictoss": [
+				"9M"
+			],
+			"shockwave": [
+				"9M"
+			],
+			"signalbeam": [
+				"9M"
+			],
+			"sleeptalk": [
+				"9M"
+			],
+			"snore": [
+				"9M"
+			],
+			"substitute": [
+				"9M"
+			],
+			"supercellslam": [
+				"9M"
+			],
+			"swagger": [
+				"9M"
+			],
+			"swift": [
+				"9M"
+			],
+			"takedown": [
+				"9M"
+			],
+			"taunt": [
+				"9M"
+			],
+			"terablast": [
+				"9M"
+			],
+			"thief": [
+				"9M"
+			],
+			"thunder": [
+				"9M"
+			],
+			"thunderbolt": [
+				"9M"
+			],
+			"thunderpunch": [
+				"9M"
+			],
+			"thundershock": [
+				"9M"
+			],
+			"thunderwave": [
+				"9M"
+			],
+			"toxic": [
+				"9M"
+			],
+			"trailblaze": [
+				"9M"
+			],
+			"uproar": [
+				"9M"
+			],
+			"voltswitch": [
+				"9M"
+			],
+			"wildcharge": [
+				"9M"
+			],
+			"zapcannon": [
+				"9M"
+			]
+		}
+	},
+	"electabuzz": {
+		"inherit": true,
+		"learnset": {
+			"attract": [
+				"9M"
+			],
+			"bide": [
+				"9M"
+			],
+			"bodyslam": [
+				"9M"
+			],
+			"brickbreak": [
+				"9M"
+			],
+			"bulkup": [
+				"9M"
+			],
+			"captivate": [
+				"9M"
+			],
+			"charge": [
+				"9M"
+			],
+			"chargebeam": [
+				"9M"
+			],
+			"confide": [
+				"9M"
+			],
+			"counter": [
+				"9M"
+			],
+			"covet": [
+				"9M"
+			],
+			"crosschop": [
+				"9M"
+			],
+			"curse": [
+				"9M"
+			],
+			"detect": [
+				"9M"
+			],
+			"discharge": [
+				"9M"
+			],
+			"doubleedge": [
+				"9M"
+			],
+			"doubleteam": [
+				"9M"
+			],
+			"dualchop": [
+				"9M"
+			],
+			"dynamicpunch": [
+				"9M"
+			],
+			"eerieimpulse": [
+				"9M"
+			],
+			"electricterrain": [
+				"9M"
+			],
+			"electroball": [
+				"9M"
+			],
+			"electroweb": [
+				"9M"
+			],
+			"endure": [
+				"9M"
+			],
+			"facade": [
+				"9M"
+			],
+			"firepunch": [
+				"9M"
+			],
+			"flash": [
+				"9M"
+			],
+			"fling": [
+				"9M"
+			],
+			"focusblast": [
+				"9M"
+			],
+			"focuspunch": [
+				"9M"
+			],
+			"frustration": [
+				"9M"
+			],
+			"gigaimpact": [
+				"9M"
+			],
+			"headbutt": [
+				"9M"
+			],
+			"helpinghand": [
+				"9M"
+			],
+			"hiddenpower": [
+				"9M"
+			],
+			"hyperbeam": [
+				"9M"
+			],
+			"icepunch": [
+				"9M"
+			],
+			"irontail": [
+				"9M"
+			],
+			"knockoff": [
+				"9M"
+			],
+			"leer": [
+				"9M"
+			],
+			"lightscreen": [
+				"9M"
+			],
+			"lowkick": [
+				"9M"
+			],
+			"lowsweep": [
+				"9M"
+			],
+			"magnetrise": [
+				"9M"
+			],
+			"megakick": [
+				"9M"
+			],
+			"megapunch": [
+				"9M"
+			],
+			"metalsound": [
+				"9M"
+			],
+			"metronome": [
+				"9M"
+			],
+			"mimic": [
+				"9M"
+			],
+			"mudslap": [
+				"9M"
+			],
+			"naturalgift": [
+				"9M"
+			],
+			"poweruppunch": [
+				"9M"
+			],
+			"protect": [
+				"9M"
+			],
+			"psychic": [
+				"9M"
+			],
+			"psywave": [
+				"9M"
+			],
+			"quickattack": [
+				"9M"
+			],
+			"rage": [
+				"9M"
+			],
+			"raindance": [
+				"9M"
+			],
+			"reflect": [
+				"9M"
+			],
+			"rest": [
+				"9M"
+			],
+			"return": [
+				"9M"
+			],
+			"risingvoltage": [
+				"9M"
+			],
+			"rockclimb": [
+				"9M"
+			],
+			"rocksmash": [
+				"9M"
+			],
+			"round": [
+				"9M"
+			],
+			"screech": [
+				"9M"
+			],
+			"secretpower": [
+				"9M"
+			],
+			"seismictoss": [
+				"9M"
+			],
+			"shockwave": [
+				"9M"
+			],
+			"signalbeam": [
+				"9M"
+			],
+			"skullbash": [
+				"9M"
+			],
+			"sleeptalk": [
+				"9M"
+			],
+			"snore": [
+				"9M"
+			],
+			"strength": [
+				"9M"
+			],
+			"submission": [
+				"9M"
+			],
+			"substitute": [
+				"9M"
+			],
+			"supercellslam": [
+				"9M"
+			],
+			"swagger": [
+				"9M"
+			],
+			"swift": [
+				"9M"
+			],
+			"takedown": [
+				"9M"
+			],
+			"taunt": [
+				"9M"
+			],
+			"teleport": [
+				"9M"
+			],
+			"terablast": [
+				"9M"
+			],
+			"thief": [
+				"9M"
+			],
+			"thunder": [
+				"9M"
+			],
+			"thunderbolt": [
+				"9M"
+			],
+			"thunderpunch": [
+				"9M"
+			],
+			"thundershock": [
+				"9M"
+			],
+			"thunderwave": [
+				"9M"
+			],
+			"toxic": [
+				"9M"
+			],
+			"trailblaze": [
+				"9M"
+			],
+			"uproar": [
+				"9M"
+			],
+			"voltswitch": [
+				"9M"
+			],
+			"wildcharge": [
+				"9M"
+			],
+			"zapcannon": [
 				"9M"
 			]
 		}

@@ -2960,8 +2960,8 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		"tier": "Illegal"
 	},
 	"zoroark": {
-		"isNonstandard": null,
-		"tier": "OU"
+		"isNonstandard": "Past",
+		"tier": "Illegal"
 	},
 	"zoroarkhisui": {
 		"isNonstandard": null,
