@@ -597,7 +597,7 @@ export const Formats: FormatList = [
 
 		mod: 'gen9',
 		ruleset: ['[Gen 9] NU'],
-		banlist: ['NU', 'PUBL', 'Drought'],
+		banlist: ['NU', 'PUBL'],
 	},
 	{
 		name: "[Gen 9] LC",
@@ -867,7 +867,7 @@ export const Formats: FormatList = [
 			'Kingambit', 'Koraidon', 'Kyogre', 'Kyurem-Black', 'Miraidon', 'Necrozma-Dusk-Mane', 'Rayquaza', 'Ribombee', 'Skeledirge',
 			'Ting-Lu', 'Zacian-Crowned',
 			// Ubers UUBL
-			'Arceus-Fire', 'Arceus-Flying', 'Arceus-Ghost', 'Arceus-Steel', 'Arceus-Water', 'Necrozma-Dawn-Wings', 'Shaymin-Sky', 'Zekrom',
+			'Arceus-Fire', 'Arceus-Flying', 'Arceus-Steel', 'Arceus-Water', 'Zekrom',
 		],
 	},
 	{
@@ -950,16 +950,16 @@ export const Formats: FormatList = [
 
 		mod: 'gen9',
 		ruleset: ['Standard NatDex', 'OHKO Clause', 'Evasion Moves Clause', 'Evasion Items Clause', 'Species Clause', 'Sleep Clause Mod', 'Terastal Clause', 'Z-Move Clause'],
-		banlist: ['Huge Power', 'Pure Power', 'Shadow Tag', 'Arena Trap', 'Baton Pass', 'Moody'],
+		banlist: ['Huge Power', 'Pure Power', 'Shadow Tag', 'Arena Trap', 'Baton Pass', 'Moody', 'Dewpider', 'Smeargle', 'Zigzagoon-Base', 'Flittle', 'Nidoran-M', 'Wingull', 'Wishiwashi'],
 		onBegin() {
 			this.add('-message', `Welcome to Do Not Use!`);
-			this.add('-message', `This is a metagame where only Pokemon with less than 280 BST are allowed!`);
+			this.add('-message', `This is a metagame where only Pokemon with less than 280 BST are allowed, plus Unown and Luvdisc!`);
 			this.add('-message', `You can find our thread and metagame resources here:`);
 			this.add('-message', `https://www.smogon.com/forums/threads/3734326/`);
 		},
 		onValidateSet(set) {
 			const species = this.dex.species.get(set.species);
-			if (species.bst > 280) {
+			if (species.bst > 280 && !['Luvdisc', 'Unown'].includes(species.baseSpecies)) {
 				return [`Only Pok\u00e9mon with a BST of 280 or lower are allowed.`, `(${species.name}'s BST is ${species.bst}.)`];
 			}
 		},
