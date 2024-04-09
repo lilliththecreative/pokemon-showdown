@@ -600,6 +600,18 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		],
 	},
 	// Near Signaure Moves
+	veeveevolley: {
+		inherit: true,
+		isNonstandard: null,
+		desc: "Power is equal to the greater of (user's Happiness * 2/5), rounded down, or 1. Can't Miss. Uses user's primary type. Becomes Special if user's spA is higher.",
+		shortDesc: "Max: 102 BP. Uses primary type and highest atk stat.",
+		onModifyMove(move, pokemon) {
+			if (pokemon.getStat('atk', false, true) < pokemon.getStat('spa', false, true)) move.category = 'Special';
+		},
+		onModifyType(move, pokemon) {
+			move.type = pokemon.baseTypes[0];
+		},
+	},
 	razorshell: {
 		inherit: true,
 		shortDesc: "100% chance to lower the target's Defense by 1.",
@@ -2109,6 +2121,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 	},
 	naturesmadness: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	pikapapow: {
 		inherit: true,
 		isNonstandard: null,
 	},

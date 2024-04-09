@@ -374,7 +374,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		natDexTier: "RU",
 	},
 	bellossom: {
-		tier: "SU",
+		tier: "SUBL",
 		doublesTier: "(DUU)",
 		natDexTier: "RU",
 	},
@@ -997,12 +997,12 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		natDexTier: "UUBL",
 	},
 	tauros: {
-		tier: "SU",
+		tier: "SUBL",
 		doublesTier: "(DUU)",
 		natDexTier: "RU",
 	},
 	taurospaldeacombat: {
-		tier: "SU",
+		tier: "SUBL",
 		doublesTier: "(DUU)",
 		natDexTier: "RU",
 	},
@@ -1631,7 +1631,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "NFE",
 	},
 	wyrdeer: {
-		tier: "SU",
+		tier: "SUBL",
 		doublesTier: "(DUU)",
 		natDexTier: "RU",
 	},
@@ -3780,7 +3780,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "LC",
 	},
 	pyroar: {
-		tier: "SU",
+		tier: "SUBL",
 		doublesTier: "(DUU)",
 		natDexTier: "RU",
 	},
@@ -4162,7 +4162,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "LC",
 	},
 	crabominable: {
-		tier: "SU",
+		tier: "SUBL",
 		doublesTier: "(DUU)",
 		natDexTier: "RU",
 	},
@@ -4177,7 +4177,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		natDexTier: "RU",
 	},
 	oricoriopau: {
-		tier: "SU",
+		tier: "SUBL",
 		doublesTier: "(DUU)",
 		natDexTier: "RU",
 	},
@@ -4948,7 +4948,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 	},
 	falinks: {
-		tier: "SUBL",
+		tier: "SU",
 		doublesTier: "(DUU)",
 		natDexTier: "RU",
 	},
@@ -5244,7 +5244,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		natDexTier: "UUBL",
 	},
 	veluza: {
-		tier: "SU",
+		tier: "SUBL",
 		doublesTier: "(DUU)",
 		natDexTier: "RU",
 	},

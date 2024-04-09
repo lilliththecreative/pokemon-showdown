@@ -465,7 +465,7 @@ export const Formats: FormatList = [
 		mod: 'gen9',
 		searchShow: true,
 		ruleset: ['[Gen 9] ZU'],
-		banlist: ['ZU', 'SUBL', 'Heat Rock', 'Damp Rock'],
+		banlist: ['ZU', 'SUBL', 'Heat Rock'],
 	},
 	{
 		name: "[Gen 9] IU",
