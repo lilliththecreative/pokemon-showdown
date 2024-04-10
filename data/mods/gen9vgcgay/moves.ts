@@ -767,17 +767,17 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			},
 		},
 	},
-	upperhand: {
-		inherit: true,
-		shortDesc: "100% flinch. Fails unless target using priority (includes status).",
-		onTry(source, target) {
-			const action = this.queue.willMove(target);
-			const move = action?.choice === 'move' ? action.move : null;
-			if (!move || move.priority <= 0.1) {
-				return false;
-			}
-		},
-	},
+	// upperhand: {
+	// 	inherit: true,
+	// 	shortDesc: "100% flinch. Fails unless target using priority (includes status).",
+	// 	onTry(source, target) {
+	// 		const action = this.queue.willMove(target);
+	// 		const move = action?.choice === 'move' ? action.move : null;
+	// 		if (!move || move.priority <= 0.1) {
+	// 			return false;
+	// 		}
+	// 	},
+	// },
 	// Some signature Moves
 	electroshot: {
 		inherit: true,

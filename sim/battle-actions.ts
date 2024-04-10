@@ -375,6 +375,8 @@ export class BattleActions {
 			const dancers = [];
 			for (const currentPoke of this.battle.getAllActive()) {
 				if (pokemon === currentPoke) continue;
+				// Enemy only check
+				if (pokemon.isAlly(currentPoke)) continue;
 				if (currentPoke.hasAbility('ballin') && !currentPoke.isSemiInvulnerable()) {
 					dancers.push(currentPoke);
 				}

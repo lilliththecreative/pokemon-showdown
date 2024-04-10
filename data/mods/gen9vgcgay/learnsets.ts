@@ -2914,6 +2914,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			],
 			"zapcannon": [
 				"9M"
+			],
+			"pikapapow": [
+				"9M"
 			]
 		}
 	},
@@ -9718,10 +9721,10 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			]
 		}
 	},
-	"golem": {
+	"golemalola": {
 		"inherit": true,
 		"learnset": {
-			"ancientpower": [
+			"allyswitch": [
 				"9M"
 			],
 			"attract": [
@@ -9742,16 +9745,19 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"brickbreak": [
 				"9M"
 			],
+			"brutalswing": [
+				"9M"
+			],
 			"bulldoze": [
 				"9M"
 			],
-			"captivate": [
+			"charge": [
+				"9M"
+			],
+			"chargebeam": [
 				"9M"
 			],
 			"confide": [
-				"9M"
-			],
-			"counter": [
 				"9M"
 			],
 			"curse": [
@@ -9763,19 +9769,28 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"dig": [
 				"9M"
 			],
+			"discharge": [
+				"9M"
+			],
 			"doubleedge": [
 				"9M"
 			],
 			"doubleteam": [
 				"9M"
 			],
-			"dynamicpunch": [
-				"9M"
-			],
 			"earthpower": [
 				"9M"
 			],
 			"earthquake": [
+				"9M"
+			],
+			"echoedvoice": [
+				"9M"
+			],
+			"electricterrain": [
+				"9M"
+			],
+			"electroweb": [
 				"9M"
 			],
 			"endure": [
@@ -9793,9 +9808,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"firepunch": [
 				"9M"
 			],
-			"fissure": [
-				"9M"
-			],
 			"flamethrower": [
 				"9M"
 			],
@@ -9811,16 +9823,10 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"frustration": [
 				"9M"
 			],
-			"furycutter": [
-				"9M"
-			],
 			"gigaimpact": [
 				"9M"
 			],
 			"gyroball": [
-				"9M"
-			],
-			"harden": [
 				"9M"
 			],
 			"hardpress": [
@@ -9835,13 +9841,7 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"hiddenpower": [
 				"9M"
 			],
-			"highhorsepower": [
-				"9M"
-			],
 			"hyperbeam": [
-				"9M"
-			],
-			"incinerate": [
 				"9M"
 			],
 			"irondefense": [
@@ -9850,19 +9850,16 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"ironhead": [
 				"9M"
 			],
-			"magnitude": [
-				"9M"
-			],
-			"megakick": [
+			"magnetrise": [
 				"9M"
 			],
 			"megapunch": [
 				"9M"
 			],
-			"metronome": [
+			"meteorbeam": [
 				"9M"
 			],
-			"mimic": [
+			"metronome": [
 				"9M"
 			],
 			"mudshot": [
@@ -9871,22 +9868,10 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"mudslap": [
 				"9M"
 			],
-			"mudsport": [
-				"9M"
-			],
-			"naturalgift": [
-				"9M"
-			],
 			"naturepower": [
 				"9M"
 			],
-			"poweruppunch": [
-				"9M"
-			],
 			"protect": [
-				"9M"
-			],
-			"rage": [
 				"9M"
 			],
 			"rest": [
@@ -9901,16 +9886,10 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"rockblast": [
 				"9M"
 			],
-			"rockclimb": [
-				"9M"
-			],
 			"rockpolish": [
 				"9M"
 			],
 			"rockslide": [
-				"9M"
-			],
-			"rocksmash": [
 				"9M"
 			],
 			"rockthrow": [
@@ -9919,13 +9898,7 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"rocktomb": [
 				"9M"
 			],
-			"rollout": [
-				"9M"
-			],
 			"round": [
-				"9M"
-			],
-			"sandattack": [
 				"9M"
 			],
 			"sandstorm": [
@@ -9934,13 +9907,13 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"scaryface": [
 				"9M"
 			],
-			"secretpower": [
-				"9M"
-			],
 			"seismictoss": [
 				"9M"
 			],
 			"selfdestruct": [
+				"9M"
+			],
+			"shockwave": [
 				"9M"
 			],
 			"sleeptalk": [
@@ -9950,6 +9923,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"snore": [
+				"9M"
+			],
+			"spark": [
 				"9M"
 			],
 			"stealthrock": [
@@ -9964,19 +9940,13 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"stoneedge": [
 				"9M"
 			],
-			"strength": [
-				"9M"
-			],
-			"submission": [
-				"9M"
-			],
 			"substitute": [
 				"9M"
 			],
-			"suckerpunch": [
+			"sunnyday": [
 				"9M"
 			],
-			"sunnyday": [
+			"supercellslam": [
 				"9M"
 			],
 			"superpower": [
@@ -9994,10 +9964,28 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			"terablast": [
 				"9M"
 			],
+			"thunder": [
+				"9M"
+			],
+			"thunderbolt": [
+				"9M"
+			],
 			"thunderpunch": [
 				"9M"
 			],
+			"thundershock": [
+				"9M"
+			],
+			"thunderwave": [
+				"9M"
+			],
 			"toxic": [
+				"9M"
+			],
+			"voltswitch": [
+				"9M"
+			],
+			"wildcharge": [
 				"9M"
 			]
 		}
@@ -12769,9 +12757,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"hiddenpower": [
-				"9M"
-			],
-			"sleeppowder": [
 				"9M"
 			],
 			"return": [
@@ -18766,6 +18751,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"extremeevoboost": [
+				"9M"
+			],
+			"veeveevolley": [
 				"9M"
 			]
 		}
@@ -40611,6 +40599,12 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"terablast": [
+				"9M"
+			],
+			"curse": [
+				"9M"
+			],
+			"uturn": [
 				"9M"
 			]
 		}
@@ -92750,6 +92744,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 				"9M"
 			],
 			"worryseed": [
+				"9M"
+			],
+			"lightofruin": [
 				"9M"
 			]
 		}
