@@ -1,4 +1,4 @@
-export const FormatsData: {[k: string]: ModdedSpeciesData} =
+export const Pokedex: {[k: string]: ModdedSpeciesData} =
 {
 	"venusaur": {
 		"types": [
