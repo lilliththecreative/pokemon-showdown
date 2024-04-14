@@ -2344,8 +2344,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	ilvaticano: {
 		name: "Il Vaticano",
-		shortDesc: "Does 1.4x damage when attacking diagonally across the field.",
-		desc: "Does 1.4x damage when attacking diagonally across the field.",
+		shortDesc: "Does 1.5x damage when attacking diagonally across the field.",
+		desc: "Does 1.5x damage when attacking diagonally across the field.",
 	},
 	lawnsurfer: {
 		name: "Lawn Surfer",
@@ -2467,10 +2467,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	ballin: {
 		name: "Ballin'",
-		desc: "Uses highest attacking stats on all ball/bullet moves. After another ENEMY Pokemon uses a ball/bullet move, this Pokemon uses the same move. The copied move is subject to all effects that can prevent a move from being executed. A move used through this Ability cannot be copied again by other Pokemon with this Ability.",
-		shortDesc: "Ball/Bullet moves use highest attacking stat. Copies ENEMY Ball/Bullet Moves."
-		// desc: "Uses highest attacking stats on all ball/bullet moves. After another Pokemon uses a ball/bullet move, this Pokemon uses the same move at half power. The copied move is subject to all effects that can prevent a move from being executed. A move used through this Ability cannot be copied again by other Pokemon with this Ability.",
-		// shortDesc: "Ball/Bullet moves use higher attacking stat. Copies Ball/Bullet Moves at half power."
+		desc: "Uses highest attacking stats on all ball/bullet moves. After another Pokemon uses a ball/bullet move, this Pokemon uses the same move at half power. The copied move is subject to all effects that can prevent a move from being executed. A move used through this Ability cannot be copied again by other Pokemon with this Ability.",
+		shortDesc: "Ball/Bullet moves use higher attacking stat. Copies Ball/Bullet Moves at half power."
 	},
 	runningstart: {
 		name: "Running Start",

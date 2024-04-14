@@ -385,17 +385,33 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		onFoeTryEatItem() {
 		},
 	},
+	swarm: {
+		inherit: true,
+		shortDesc: "This Pokemon's allies have the power of their bug moves multiplied by 1.5.",
+		desc: "This Pokemon's allies have the power of their bug moves multiplied by 1.5.",
+		onAllyBasePowerPriority: 22,
+		onAllyBasePower(basePower, attacker, defender, move) {
+			if (attacker !== this.effectState.target && move.type === 'Bug') {
+				this.debug('Swarm boost');
+				return this.chainModify([6144, 4096]);
+			}
+		},
+		onModifyAtk(atk, attacker, defender, move) {
+		},
+		onModifySpA(atk, attacker, defender, move) {
+		},
+	},
 	// Signature Ability Buffs
 	plus: {
 		inherit: true,
-		shortDesc: "Copies all moves used by pokemon with Minus",
+		shortDesc: "Copies all moves used by an ally with Minus.",
 		// Done in battle-actions.ts
 		onModifySpA(spa, pokemon) {
 		}
 	},
 	minus: {
 		inherit: true,
-		shortDesc: "Copies all moves used by pokemon with Plus",
+		shortDesc: "Copies all moves used by an ally with Plus.",
 		// Done in battle-actions.ts
 		onModifySpA(spa, pokemon) {
 		}
@@ -1469,7 +1485,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		onBasePower(basePower, attacker, defender, move) {
 			if (defender.position === attacker.position) {
 				this.add('-ability', attacker, 'Il Vaticano');
-				return this.chainModify(1.4);
+				return this.chainModify(1.5);
 			}
 		},
 	},

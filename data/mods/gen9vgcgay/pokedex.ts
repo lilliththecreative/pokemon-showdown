@@ -1,4 +1,5 @@
-export const Pokedex: {[k: string]: ModdedSpeciesData} = {
+export const FormatsData: {[k: string]: ModdedSpeciesData} =
+{
 	"venusaur": {
 		"types": [
 			"Grass",
@@ -6436,10 +6437,10 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		],
 		"baseStats": {
 			"hp": 68,
-			"atk": 114,
+			"atk": 119,
 			"def": 122,
-			"spa": 63,
-			"spd": 48,
+			"spa": 53,
+			"spd": 53,
 			"spe": 114
 		},
 		"abilities": {
@@ -7651,7 +7652,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"spe": 122
 		},
 		"abilities": {
-			"0": "Keen Eye",
+			"0": "Sand Force",
 			"1": "Sand Rush",
 			"H": "Steadfast"
 		},
@@ -8863,7 +8864,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"def": 110,
 			"spa": 85,
 			"spd": 120,
-			"spe": 95
+			"spe": 105
 		},
 		"abilities": {
 			"0": "Swarm",

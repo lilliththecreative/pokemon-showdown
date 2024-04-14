@@ -375,8 +375,6 @@ export class BattleActions {
 			const dancers = [];
 			for (const currentPoke of this.battle.getAllActive()) {
 				if (pokemon === currentPoke) continue;
-				// Enemy only check
-				if (pokemon.isAlly(currentPoke)) continue;
 				if (currentPoke.hasAbility('ballin') && !currentPoke.isSemiInvulnerable()) {
 					dancers.push(currentPoke);
 				}
@@ -400,7 +398,7 @@ export class BattleActions {
 			if (pokemon.hasAbility("plus") && moveDidSomething && !move.isExternal) {
 				const dancers = [];
 				for (const currentPoke of this.battle.getAllActive()) {
-					// if (!pokemon.isAlly(currentPoke)) continue;
+					if (!pokemon.isAlly(currentPoke)) continue;
 					if (currentPoke.hasAbility('minus') && !currentPoke.isSemiInvulnerable()) {
 						dancers.push(currentPoke);
 					}
@@ -424,7 +422,7 @@ export class BattleActions {
 			if (pokemon.hasAbility("minus") && moveDidSomething && !move.isExternal) {
 				const dancers = [];
 				for (const currentPoke of this.battle.getAllActive()) {
-					// if (!pokemon.isAlly(currentPoke)) continue;
+					if (!pokemon.isAlly(currentPoke)) continue;
 					if (currentPoke.hasAbility('plus') && !currentPoke.isSemiInvulnerable()) {
 						dancers.push(currentPoke);
 					}
