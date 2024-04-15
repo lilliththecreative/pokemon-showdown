@@ -460,6 +460,42 @@ export const Formats: FormatList = [
 		banlist: ['SU', 'IUBL'],
 	},
 	{
+		name: "[Gen 9] National Dex NU",
+		threads: [
+			`&bullet; <a href="https://www.smogon.com/forums/threads/3713801/">National Dex RU Metagame Discussion</a>`,
+			`&bullet; <a href="https://www.smogon.com/forums/threads/3721776/">National Dex RU Resources</a>`,
+		],
+
+		mod: 'gen9',
+		searchShow: true,
+		ruleset: ['[Gen 9] National Dex RU'],
+		banlist: ['ND RU', 'ND NUBL']
+	},
+	{
+		name: "[Gen 9] National Dex PU",
+		threads: [
+			`&bullet; <a href="https://www.smogon.com/forums/threads/3713801/">National Dex RU Metagame Discussion</a>`,
+			`&bullet; <a href="https://www.smogon.com/forums/threads/3721776/">National Dex RU Resources</a>`,
+		],
+
+		mod: 'gen9',
+		searchShow: true,
+		ruleset: ['[Gen 9] National Dex NU'],
+		banlist: ['ND NU', 'ND PUBL']
+	},
+	{
+		name: "[Gen 9] National Dex ZU",
+		threads: [
+			`&bullet; <a href="https://www.smogon.com/forums/threads/3713801/">National Dex RU Metagame Discussion</a>`,
+			`&bullet; <a href="https://www.smogon.com/forums/threads/3721776/">National Dex RU Resources</a>`,
+		],
+
+		mod: 'gen9',
+		searchShow: true,
+		ruleset: ['[Gen 9] National Dex PU'],
+		banlist: ['ND PU', 'ND ZUBL', 'Shell Smash']
+	},
+	{
 		section: "S/V Singles",
 		column: 2,
 	},

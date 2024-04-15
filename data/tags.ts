@@ -322,6 +322,30 @@ export const Tags: {[id: string]: TagData} = {
 		name: "ND RU",
 		speciesFilter: species => species.natDexTier === 'RU',
 	},
+	ndnubl: {
+		name: "ND NUBL",
+		speciesFilter: species => species.natDexTier === 'NUBL',
+	},
+	ndnu: {
+		name: "ND NU",
+		speciesFilter: species => species.natDexTier === 'NU',
+	},
+	ndpubl: {
+		name: "ND PUBL",
+		speciesFilter: species => species.natDexTier === 'PUBL',
+	},
+	ndpu: {
+		name: "ND PU",
+		speciesFilter: species => species.natDexTier === 'PU',
+	},
+	ndzubl: {
+		name: "ND ZUBL",
+		speciesFilter: species => species.natDexTier === 'ZUBL',
+	},
+	ndzu: {
+		name: "ND ZU",
+		speciesFilter: species => species.natDexTier === 'ZU',
+	},
 
 	// Legality tags
 	past: {
