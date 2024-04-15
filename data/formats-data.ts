@@ -4172,7 +4172,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		natDexTier: "ZU",
 	},
 	oricoriopompom: {
-		tier: "PU",
+		tier: "PUBL",
 		doublesTier: "(DUU)",
 		natDexTier: "PU",
 	},
