@@ -2317,8 +2317,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	constrictor: {
 		name: "Constrictor",
-		shortDesc: "All contact moves trap the opponent dealing 1/8 each turn.",
-		desc: "All contact moves trap the opponent dealing 1/8 each turn.",
+		shortDesc: "All single target contact moves trap the opponent dealing 1/8 each turn.",
+		desc: "All single target contact moves trap the opponent dealing 1/8 each turn.",
 	},
 	heatsink: {
 		name: "Heat Sink",

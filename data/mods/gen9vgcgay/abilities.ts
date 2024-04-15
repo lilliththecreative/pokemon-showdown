@@ -1399,7 +1399,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 		onAfterMoveSecondarySelf(source, target, move) {
-			if (move.flags['contact']) {
+			if (move.flags['contact'] && move.target === 'normal') {
 				this.add('-ability', source, 'Constrictor');
 				target.addVolatile('partiallytrapped', source);
 			}

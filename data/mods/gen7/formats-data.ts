@@ -2585,7 +2585,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		doublesTier: "(DUU)",
 	},
 	mienfoo: {
-		tier: "LC",
+		tier: "SU",
 	},
 	mienshao: {
 		tier: "RUBL",
