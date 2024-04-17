@@ -21,7 +21,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "8U",
 	},
 	wartortle: {
-		tier: "SU",
+		tier: "ZU",
 	},
 	blastoise: {
 		tier: "NU",
@@ -72,7 +72,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "ZUBL",
 	},
 	pikachu: {
-		tier: "ZU",
+		tier: "SU",
 	},
 	raichu: {
 		tier: "UU",
@@ -147,7 +147,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "NU",
 	},
 	diglett: {
-		tier: "ZU",
+		tier: "SU",
 	},
 	dugtrio: {
 		tier: "UU",
@@ -198,7 +198,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "8U",
 	},
 	machoke: {
-		tier: "ZU",
+		tier: "SU",
 	},
 	machamp: {
 		tier: "PU",
@@ -207,7 +207,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "IU",
 	},
 	weepinbell: {
-		tier: "ZU",
+		tier: "SU",
 	},
 	victreebel: {
 		tier: "NU",
@@ -228,7 +228,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "UU",
 	},
 	ponyta: {
-		tier: "SU",
+		tier: "ZU",
 	},
 	rapidash: {
 		tier: "PU",
@@ -243,7 +243,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "IU",
 	},
 	magneton: {
-		tier: "ZU",
+		tier: "SU",
 	},
 	farfetchd: {
 		tier: "IU",
@@ -264,7 +264,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "IU",
 	},
 	muk: {
-		tier: "ZU",
+		tier: "SU",
 	},
 	shellder: {
 		tier: "IU",
@@ -327,10 +327,10 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "8U",
 	},
 	weezing: {
-		tier: "SU",
+		tier: "ZU",
 	},
 	rhyhorn: {
-		tier: "SU",
+		tier: "ZU",
 	},
 	rhydon: {
 		tier: "OU",
@@ -417,7 +417,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "UU",
 	},
 	kabuto: {
-		tier: "ZU",
+		tier: "SU",
 	},
 	kabutops: {
 		tier: "NU",

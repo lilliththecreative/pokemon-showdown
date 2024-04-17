@@ -1455,7 +1455,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		natDexTier: "ZU",
 	},
 	gligar: {
-		tier: "PU",
+		tier: "RU",
 		doublesTier: "NFE",
 		natDexTier: "NFE",
 	},
@@ -3579,7 +3579,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	durant: {
 		isNonstandard: "Past",
 		tier: "Illegal",
-		natDexTier: "ZU",
+		natDexTier: "NUBL",
 	},
 	deino: {
 		tier: "LC",
@@ -4172,7 +4172,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		natDexTier: "ZU",
 	},
 	oricoriopompom: {
-		tier: "PUBL",
+		tier: "PU",
 		doublesTier: "(DUU)",
 		natDexTier: "PU",
 	},
